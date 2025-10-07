@@ -1,0 +1,126 @@
+@startuml OrderManagementUseCase
+
+left to right direction
+skinparam usecase {
+  BackgroundColor LightSkyBlue
+}
+
+actor "卖家" as Seller <<主要参与者>>
+actor "买家" as Buyer <<次要参与者>>
+actor "财务系统" as FinanceSystem <<外部系统>>
+actor "库存系统" as InventorySystem <<外部系统>>
+
+' 核心订单管理用况
+usecase "审核新订单" as ReviewNewOrder
+usecase "执行订单发货" as ExecuteOrderShipment
+usecase "处理售后服务" as ProcessAfterSales
+usecase "管理订单查询" as ManageOrderInquiry
+
+' 审核新订单的扩展用况
+usecase "处理库存不足" as HandleStockShortage
+usecase "验证服务可行性" as ValidateServiceFeasibility
+usecase "审核高风险订单" as ReviewHighRiskOrder
+usecase "联系买家确认" as ContactBuyerConfirmation
+
+' 执行订单发货的扩展用况
+usecase "安排物流配送" as ArrangeLogistics
+usecase "处理部分发货" as HandlePartialShipment
+usecase "处理订单修改" as HandleOrderModification
+usecase "处理加急订单" as HandleUrgentOrder
+
+' 处理售后服务的扩展用况
+usecase "处理退款申请" as ProcessRefundRequest
+usecase "处理换货申请" as ProcessExchangeRequest
+usecase "处理客户投诉" as HandleCustomerComplaint
+usecase "处理商品维修" as HandleProductRepair
+
+' 管理订单查询的扩展用况
+usecase "查询订单状态" as QueryOrderStatus
+usecase "追踪物流信息" as TrackLogisticsInfo
+usecase "查看订单历史" as ViewOrderHistory
+
+' 可复用功能（包含关系）
+usecase "发送通知" as SendNotification
+usecase "更新库存" as UpdateInventory
+usecase "记录操作日志" as RecordOperationLog
+
+' 参与者与核心用况关系
+Seller --> ReviewNewOrder
+Seller --> ExecuteOrderShipment
+Seller --> ProcessAfterSales
+Seller --> ManageOrderInquiry
+
+Buyer --> ManageOrderInquiry
+Buyer --> ProcessAfterSales
+
+FinanceSystem --> ProcessAfterSales
+InventorySystem --> ReviewNewOrder
+InventorySystem --> ExecuteOrderShipment
+
+' 审核新订单的扩展关系
+ReviewNewOrder <.. HandleStockShortage : <<extend>>\n当商品库存不足时
+ReviewNewOrder <.. ValidateServiceFeasibility : <<extend>>\n当有特殊服务要求时
+ReviewNewOrder <.. ReviewHighRiskOrder : <<extend>>\n当订单金额超过5000元时
+ReviewNewOrder <.. ContactBuyerConfirmation : <<extend>>\n当信息不完整或存疑时
+
+' 执行订单发货的扩展关系
+ExecuteOrderShipment <.. ArrangeLogistics : <<extend>>\n当订单审核通过时
+ExecuteOrderShipment <.. HandlePartialShipment : <<extend>>\n当商品部分有货时
+ExecuteOrderShipment <.. HandleOrderModification : <<extend>>\n当买家要求修改时
+ExecuteOrderShipment <.. HandleUrgentOrder : <<extend>>\n当标记为加急订单时
+
+' 处理售后服务的扩展关系
+ProcessAfterSales <.. ProcessRefundRequest : <<extend>>\n当客户申请退款时
+ProcessAfterSales <.. ProcessExchangeRequest : <<extend>>\n当客户要求换货时
+ProcessAfterSales <.. HandleCustomerComplaint : <<extend>>\n当收到客户投诉时
+ProcessAfterSales <.. HandleProductRepair : <<extend>>\n当商品需要维修时
+
+' 管理订单查询的扩展关系
+ManageOrderInquiry <.. QueryOrderStatus : <<extend>>\n当查询订单进度时
+ManageOrderInquiry <.. TrackLogisticsInfo : <<extend>>\n当追踪包裹位置时
+ManageOrderInquiry <.. ViewOrderHistory : <<extend>>\n当查看历史记录时
+
+' 包含关系（可复用功能）
+ReviewNewOrder ..> SendNotification : <<include>>
+ExecuteOrderShipment ..> SendNotification : <<include>>
+ProcessAfterSales ..> SendNotification : <<include>>
+
+ExecuteOrderShipment ..> UpdateInventory : <<include>>
+ProcessAfterSales ..> UpdateInventory : <<include>>
+
+ReviewNewOrder ..> RecordOperationLog : <<include>>
+ExecuteOrderShipment ..> RecordOperationLog : <<include>>
+ProcessAfterSales ..> RecordOperationLog : <<include>>
+
+note right of ReviewNewOrder
+**羽毛球专卖特色**
+• 穿线服务可行性评估
+• 球拍规格专业验证
+• 高价值商品风险控制
+• 定制要求技术确认
+end note
+
+note right of ExecuteOrderShipment
+**专业物流管理**
+• 球拍特殊包装处理
+• 比赛用品加急配送
+• 分批发货库存协调
+• 物流信息实时更新
+end note
+
+note right of ProcessAfterSales
+**专业售后服务**
+• 穿线质量争议处理
+• 球拍真伪鉴定支持
+• 专业维修服务协调
+• 使用问题技术指导
+end note
+
+legend right
+| 业务范围说明 |
+| 核心订单流程管理 |
+| 专业羽毛球器材特色 |
+| 实用的扩展场景处理 |
+endlegend
+
+@enduml

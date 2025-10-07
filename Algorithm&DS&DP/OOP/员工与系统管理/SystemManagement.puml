@@ -1,0 +1,87 @@
+@startuml
+left to right direction
+skinparam usecase {
+  BackgroundColor LightSkyBlue
+  BorderColor DarkSlateGray
+}
+
+actor 店长 as actor1
+actor 进货员 as actor2
+actor 前台 as actor3
+actor 修理 as actor4
+
+package  商品管理{
+    usecase 管理出入货物 as good3
+}
+
+package  订单交易管理{
+    usecase 支付 as order3
+}
+package  售后{
+    usecase 分配保修任务 as after_sales3
+}
+package  客户信息管理{
+    usecase VIP折扣  as guest2
+}
+package  系统管理{
+    usecase 注册员工账号 as system1
+    usecase 管理身份管理与权限 as system2
+    usecase  分发工资  as system3
+    usecase  发布任务流  as system4
+    usecase  发布保修任务流  as system4_1
+    usecase  发布进货任务流  as system4_2
+    usecase  发布前台招待任务流  as system4_3
+    usecase  排班  as system5
+    usecase  管理员工信息  as system6
+    usecase  班次交替  as system7
+    usecase 计算KPI as system8
+    usecase 计算出入货物KPI as system8_1
+    usecase 计算支付达成KPI as system8_2
+    usecase 计算保修完成KPI as system8_3
+    usecase 计算VIP注册KPI as system8_4
+    usecase 发布员工内部通讯  as system9
+}
+
+' 角色
+actor1--->system1
+actor1--->system3
+actor1--->system5
+actor1--->system9
+
+
+system4_3 <- actor3
+system4_2 <--- actor2
+system4_1 <--- actor4
+actor3 -> system7
+
+' 内部用况关系
+system1 ...> system6: <<include>>
+system5 ...> system6: <<include>>
+system3 ...> system6: <<include>>
+system7 ...> system6: <<include>>
+system6 ...> system8: <<include>>
+system6 ...> system2: <<include>>
+system1 ...> system2: <<include>>
+
+system9 ...> system4: <<include>>
+
+' 精化
+system4 <|... system4_1
+system4 <|... system4_2
+system4 <|... system4_3
+
+system8 <|... system8_1
+system8 <|... system8_2
+system8 <|... system8_3
+system8 <|... system8_4
+
+' 内部到外部用况
+system8_1 <... good3: <<include>>
+system8_2 <... order3: <<include>>
+system8_3 <... after_sales3: <<include>>
+system8_4 <... guest2: <<include>>
+
+after_sales3 ...> system4_1: <<include>>
+
+
+@enduml

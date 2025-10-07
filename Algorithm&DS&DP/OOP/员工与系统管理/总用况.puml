@@ -1,0 +1,83 @@
+@startuml
+left to right direction
+skinparam usecase {
+  BackgroundColor LightSkyBlue
+}
+actor 顾客 as guest
+rectangle 羽毛球专卖系统{
+    actor 店长 as actor1
+    actor 进货员 as actor2
+    actor 前台 as actor3
+    actor 修理 as actor4
+
+    guest-->actor3
+
+
+    package  商品管理{
+        usecase 管理上架商品与信息 as good1
+        usecase 管理进货渠道 as good2
+        usecase 管理出入货物 as good3
+    }
+
+    package  订单交易管理{
+        usecase 生成订单 as order1
+        usecase 发货 as order2
+        usecase 支付 as order3
+    }
+    package  售后{
+        usecase 处理退货请求 as after_sales1
+        usecase 处理保修请求 as after_sales2
+        usecase 保修任务分配 as after_sales3
+    }
+    package  客户信息管理{
+        usecase 管理客户信息 as guest1
+        usecase VIP折扣  as guest2
+        usecase 管理购买记录  as guest3
+    }
+    package  系统管理{
+        usecase 注册员工账号 as system1
+        usecase 管理身份与权限 as system2
+        usecase "分发(计算的)工资"  as system3
+        usecase  发布员工内部通讯与任务流  as system4
+    }
+
+    actor2--->good1
+    actor2--->good2
+
+    actor3--->order1
+
+    actor3--->after_sales1
+    actor4--->after_sales2
+
+    actor3 ---> guest1
+    actor3 ---> guest2
+
+    system1<--actor1
+    system3<--actor1
+
+    good1 ..>good3:<<include>>
+    good2 ..>good3:<<include>>
+
+    order1 ..>order2:<<include>>
+    good1 ..>order2:<<include>>
+    order1 ..>order3:<<include>>
+
+    guest1 ..> guest3:<<include>>
+    guest2 ..> guest3:<<include>>
+    order1 ..> guest3:<<include>>
+
+
+    after_sales2 ..> after_sales3:<<include>>
+    system4 ..> after_sales3:<<include>>
+
+
+    system1 ..> system2:<<include>>
+    system4 ..> system2:<<include>>
+
+     after_sales3 ...> system3 :<<include>>
+     order3  ...> system3 :<<include>>
+     guest2  ...> system3 :<<include>>
+     good3  ...> system3 :<<include>>
+
+}
+@enduml

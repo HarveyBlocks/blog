@@ -1,0 +1,62 @@
+<html>
+    <link href="css/#000" rel="" >
+    <head>
+        <title>
+            首页
+        </title>
+        <style>
+            h1 {
+                /* color: red; */
+                color: rgb(26, 42, 103);
+                /* color #eeeeeeem; */
+            }
+            /* 使用元素选择器  */
+            /* span {
+                color: rgba(128, 128, 128, 0.485);
+            } */
+            /* 使用类选择器 */
+            .cls{
+                color: rgba(128, 128, 128, 0.485);
+            }
+            /* ID选择器(唯一性) */
+            #小标题{
+                color: aquamarine;
+                font-size: 18px;/* 设置字体大小,也可以120%啥的 */
+            }
+            a{
+                color: #000;
+                text-decoration-line: none;
+            }
+        </style>
+    </head>
+    
+    
+    <body">
+        <h1>欢迎使用Html</h1>
+        <img height="100" width="100"  src="image\cat-cat-insect.jpg">
+        <img height="100" width="100" src="image\warma.jpg">
+        <p/>
+        <hr>
+            <!--span是没有语义的标签,仅仅把同一行的不同语义的元素分开,使其分开CSS -->
+            <span class="cls">2023.10.12</span>
+            <span id="小标题">Hello World</span>
+            <p/>
+            <a href="Text\114514.html" target="_blank" >前往114514</a>
+            <p/>
+            
+                <a href="https://www.baidu.com/" target="_blank" >前往百度</a>
+            
+            
+        </hr>
+        <!-- action = "服务端的URL" -->
+        <form  action="" method="post">
+            用户名:<input type="text" name = "username">
+            密码:<input type="password" name = "password">
+            <input type="submit" value ="提交">
+            <!-- 提交到何方?不指定,默认提交到当前页面,服务端的URL地址指定,就提交到服务端 -->
+            <!-- 指定action=服务端的URL,且GET,URL=域名/index.html/服务端的URL?username=二货age=19 -->
+            <!-- 不指定action且用GET,URL是这样的:域名/index.html?username=二货age=19 -->
+        </form>
+    </body>
+    <script src="testJS.js"></script>
+</html>

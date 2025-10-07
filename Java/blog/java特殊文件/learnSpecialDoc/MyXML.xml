@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- 上面是xml文件的"抬头声明",一定要写,否则出错 -->
+<!--这是注释 你好-->
+
+<users>
+    <Administrator id="1" employee = "2">
+        <name>Bob</name>
+        <age>18</age>
+        <sex>male</sex>
+        <!--  <check> 4<5 && 5<6 </check> ,这会报错-->
+    </Administrator>
+    <user id="2">
+        <name>Mike</name>
+        <age>17</age>
+        <sex>male</sex>
+        <check>  4&lt;5 &amp;&amp; 5&gt;6 </check>
+    </user>
+    <user id="3">
+        <name>Amy</name>
+        <age>18</age>
+        <sex>female</sex>
+        <check> <![CDATA[ 4<5 && 5<6 ]]> </check>
+    </user>
+</users>

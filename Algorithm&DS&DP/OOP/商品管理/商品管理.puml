@@ -1,0 +1,59 @@
+@startuml
+left to right direction
+skinparam usecase {
+  BackgroundColor LightSkyBlue
+}
+actor 卖家 as seller
+actor 店长 as manager
+
+rectangle 商品管理系统 {
+    usecase 添加新商品 as UC1
+    usecase 更新商品信息 as UC2
+    usecase 管理商品库存 as UC3
+    usecase 管理商品进销价格 as UC4
+    
+    usecase 设置库存预警 as EXT1
+    usecase 生成采购建议 as EXT2
+    usecase 价格审批流程 as EXT3
+    usecase 记录价格历史 as EXT4
+    usecase 批量价格操作 as EXT5
+
+    usecase "商品信息管理" as GMN1
+    usecase "库存操作管理" as GMN2
+    usecase "价格体系管理" as GMN3
+    usecase "审批权限管理" as GMN4
+}
+
+seller --> UC1
+seller --> UC2
+seller --> UC3
+seller --> UC4
+
+manager --> UC4
+manager --> EXT3
+
+UC3 ..> EXT1 : <<extend>>
+UC3 ..> EXT2 : <<extend>>
+
+UC4 ..> EXT3 : <<extend>>
+UC4 ..> EXT4 : <<extend>>
+UC4 ..> EXT5 : <<extend>>
+
+UC1 ..> GMN1 : <<include>>
+UC3 ..> GMN2 : <<include>>
+UC4 ..> GMN3 : <<include>>
+EXT3 ..> GMN4 : <<include>>
+
+note "商品信息包括基本信息、\n规格参数、\n服务选项和图片上传" as note1
+(UC1) .. note1
+
+note "支持采购入库、\n盘点调整、\n销毁登记等多种库存操作方式" as note2
+(UC3) .. note2
+
+note "建立多级价格体系，\n支持审批流程确保价格合理性" as note3
+(UC4) .. note3
+
+note "根据调整幅度设置不同的审批权限：\n±10%内：店员直接修改；\n±10-20%：店长审批；\n±20%以上：双重审批" as note4
+(EXT3) .. note4
+
+@enduml

@@ -1,0 +1,195 @@
+# @mixin和@include
+
+在整个样式表中重复使用的样式
+
+用`@mixin`定义样式集合, 用`@include`调用样式集合
+
+`@mixin`内部也可以`@include`
+
+## 语法
+
+```scss
+@mixin identifier [(<arguments...>)]{
+    // ...
+}
+```
+
+
+
+```scss
+@mixin style-set-inner {
+  margin: 0;
+}
+
+@mixin style-set-outer {
+  @include style-set-inner;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 2px;
+  }
+}
+
+nav ul {
+  @include style-set-outer;
+}
+```
+
+```css
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 2px;
+}
+```
+
+
+
+带参数的用法
+
+```scss
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  #{$property}: $ltr-value;
+
+  [dir=rtl] & {
+    #{$property}: $rtl-value;
+  }
+}
+
+.sidebar {
+  @include rtl(float, left, right);
+}
+```
+
+```css
+.sidebar {
+  float: left;
+}
+[dir=rtl] .sidebar {
+  float: right;
+}
+```
+
+## 参数
+
+### keyword参数
+
+在@mixin声明处指定默认值, 则可用形参名进行参数传递, 则可以
+
+```scss
+@mixin props($arg1, $arg2: 0,$arg3: 0) {
+  prop1: $arg1;
+  prop2: $arg2;
+  prop3: $arg3;
+}
+
+.avatar {
+  @include props(100px, $arg3: 4px);
+}
+```
+
+```css
+.avatar {
+  prop1: 100px;
+  prop2: 0;
+  prop3: 4px;
+}
+```
+
+
+
+### 变长参数
+
+```scss
+@mixin order($height, $selectors...) {
+  @for $i from 0 to length($selectors) {
+    #{nth($selectors, $i + 1)} {
+      height: $height;
+    }
+  }
+}
+
+@include order(150px, "input.name", "input.address", "input.zip");
+```
+
+```css
+input.name {
+  position: absolute;
+  height: 150px;
+  margin-top: 0px;
+}
+
+input.address {
+  position: absolute;
+  height: 150px;
+  margin-top: 150px;
+}
+
+input.zip {
+  position: absolute;
+  height: 150px;
+  margin-top: 300px;
+}
+```
+
+## @content块
+
+在include的时候, 接收一个`@content`块, 然后在@mixin的时候也可以选择content块应该在的位置
+
+```css
+@mixin hover-mixin {
+  &:hover {
+    @content;
+  }
+}
+
+.button {
+  border: 1px solid black;
+  @include hover-mixin {
+    border-width: 2px;
+  }
+}
+```
+
+```css
+.button {
+  border: 1px solid black;
+}
+.button:hover {
+  border-width: 2px;
+}
+```
+
+
+
+作为@content的实参部分, 是可以使用传入的形参的, @content就好像callback一样, 
+
+使用using来接收参数
+
+```scss
+@mixin do-proxy($types...) {
+  @each $type in $types {
+    data-#{$type} {
+      @content($type);
+    }
+  }
+}
+
+@include do-proxy(aaa, bbb) using ($type) {
+  prop: $type;
+}
+```
+
+```css
+data-aaa{
+    props: aaa
+}
+data-bbb{
+    props: bbb
+}
+```
+

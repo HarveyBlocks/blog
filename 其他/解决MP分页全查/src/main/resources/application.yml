@@ -1,0 +1,29 @@
+#data source configuration
+spring:
+  datasource:
+    password: "123456"
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    username: "root"
+    url: "jdbc:mysql://localhost:3306/company?rewriteBatchedStatements=true"
+
+# MP常用配置
+mybatis-plus:
+  # 扫包别名
+  type-aliases-package: com.example.demo.entityUser
+  # mapper目录,及其子目录下的所有xml文件都将作为mapper文件
+  # mapper-locations: 'classpath:/mapper/*.xml'
+  configuration:
+    # 是否开启下划线和驼峰的映射
+    map-underscore-to-camel-case: true
+    # 是否开启二级缓存
+    cache-enabled: false
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+  global-config:
+    db-config:
+      # 全局雪花生成id
+      id-type: auto
+      # 更新策略: 只更新非空字段
+      update-strategy: not_null
+      logic-delete-field: deleted # 全局逻辑删除的实体字段名,字段类型可以是boolean,Integer
+      logic-delete-value: 1 # 逻辑已删除值(默认为1)
+      logic-not-delete-value: 0 #逻辑未删除值(默认为0)

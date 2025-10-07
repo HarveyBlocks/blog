@@ -1,0 +1,35 @@
+# 直连数据库
+
+## 添加Jar包
+
+什么数据库, 就i添加什么数据库的JDBC的jar包
+
+![image-20240418142553288](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418142553288.png)
+
+
+
+## 添加JDBCRequest
+
+![image-20240418141735560](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418141735560.png)
+
+## 添加JDBC连接池
+
+![](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418141820483.png)
+
+![image-20240418142959411](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418142959411.png)
+
+
+
+![image-20240418143026758](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418143026758.png)
+
+
+
+## 与数据库进行连接
+
+![image-20240418142642791](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418142642791.png)
+
+Select表示读
+
+Update表示写操作(增删改)
+
+![image-20240418143059507](../../assets/Day02-%E7%9B%B4%E8%BF%9E%E6%95%B0%E6%8D%AE%E5%BA%93/image-20240418143059507.png)

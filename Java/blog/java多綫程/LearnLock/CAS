@@ -1,0 +1,30 @@
+```java
+//this 需要更改的数
+    //private static final long valueOffset;
+    //valueOffset = unsafe.objectFieldOffset(AtomicInteger.class.getDeclaredField("value")); <- 
+    public final int incrementAndGet() {
+    valueOffset = Unsafe.getUnsafe().objectFieldOffset(AtomicInteger.class.getDeclaredField("value"))
+        int var5;//期望值
+        do {
+            var5 = safeCount.getIntVolatile(this, valueOffset);//生成期望值
+        } while(!safeCount.compareAndSwapInt(safeCount, valueOffset, var5, var5 + 1));
+        return var5+1;
+    }
+
+
+​    
+​	compareAndSwapInt(this,valueOffset,var5,var5+1){
+​	
+	}
+
+public final native boolean compareAndSwapInt(Object o, long offset,
+                                                  int expected,
+                                                  int x)
+```
+
+
+
+此方法是Java的native方法，并不由Java语言实现。
+方法的作用是，读取传入对象o在内存中偏移量为offset位置的值与期望值expected作比较。
+相等就把x值赋值给offset位置的值。方法返回true。
+不相等，就取消赋值，方法返回false。
