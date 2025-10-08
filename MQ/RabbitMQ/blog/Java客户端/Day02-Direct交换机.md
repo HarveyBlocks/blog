@@ -4,13 +4,13 @@
 
 
 
-##需求的产生
+## 需求的产生
 
 不同的微服务想要收到不同的消息
 
 ![Final routing: putting it all together.](../../assert/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/python-four.png)
 
-##Direct交换机流程示意
+## Direct交换机流程示意
 
 -   Direct交换机会将接收到的消息**根据规则**路由到指定Queue
 

@@ -100,7 +100,7 @@ unlock方法
 
 
 
-####在Striped64的使用
+#### 在Striped64的使用
 
 在cells创建或扩容时执行加锁操作
 
@@ -130,7 +130,7 @@ static final class Cell {
 
 Striped64中用Cell数组存储多个计数单元
 
-####缓存行失效
+#### 缓存行失效
 
 CPU各核心的高速缓存中有多个缓存行, 一个缓存行64个字节
 
@@ -144,7 +144,7 @@ CPU为了保证数据的一致性,
 
 一个CPU的缓存行数据, 将因为别的CPU核心数据失效而整个失效, 不得不从内存中读取数据
 
-####@Contended填充与伪共享
+#### @Contended填充与伪共享
 
 >   Contended 竞争
 
@@ -154,7 +154,7 @@ CPU为了保证数据的一致性,
 
 以此防止一个缓存行容纳多个对象/字段的方式称为*伪共享*
 
-##源码
+## 源码
 
 LongAdder源码
 
@@ -164,7 +164,7 @@ LongAdder源码
 
 很简单, 略
 
-##Accumulator
+## Accumulator
 
 
 

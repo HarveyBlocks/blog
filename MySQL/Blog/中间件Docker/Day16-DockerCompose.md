@@ -13,7 +13,7 @@
 -   通过单独的**docker-compose.yml** **模板文件**定义一组相关联的应用容器
 -   用于帮助我们实现多个相互关联的Docer容器的快速部署
 
-###docker-compose.yml
+### docker-compose.yml
 
 -   **一个docker-compose.yml代表了一个项目**
 -   docker-compose.yml文件中的一个**服务(service)**代表了一个容器
@@ -59,7 +59,7 @@ net-work: #定义网络
     name: my-network #再次定义一个网络名
 ```
 
-###dockerCompose部署命令
+### dockerCompose部署命令
 
 ```bash
 docker compose [OPTION] [COMMAND] [-d]

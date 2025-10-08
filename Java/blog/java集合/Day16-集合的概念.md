@@ -9,7 +9,7 @@
 
 ## Interface Collection
 
-### Interface List 
+### Interface List
 
 有序，有下标，元素可重复
 

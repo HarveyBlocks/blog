@@ -1,4 +1,4 @@
-#Request&Response
+# Request&Response
 
 ![image-20231117180624023](../../../typora-user-images/Day39-请求和响应/image-20231117180624023.png)
 
@@ -26,7 +26,7 @@ public class Application extends HttpServlet {
 
 ![image-20231117181708837](../../../typora-user-images/Day39-请求和响应/image-20231117181708837.png)
 
-#Request
+# Request
 
 ## 继承体系
 
@@ -46,7 +46,7 @@ public class Application extends HttpServlet {
     -   请求头
     -   请求体
 
-###请求行
+### 请求行
 
 ```http
 GET/request-demo/req1?username=Mike HTTP/1.1
@@ -85,7 +85,7 @@ name=Mike
 
 
 
-###请求头(GET)
+### 请求头(GET)
 
 ```http
 GET/request-demo/req1?username=Mike HTTP/1.1
@@ -120,7 +120,7 @@ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
 
 
 
-###请求体(POST)
+### 请求体(POST)
 
 
 
@@ -147,7 +147,7 @@ protected void doPost(
 
 
 
-###通过统一的方式获取请求参数
+### 通过统一的方式获取请求参数
 
 -   GET和POST的获取参数方式不一样
 -   但是原理和数据处理全是拆字符串
@@ -193,7 +193,7 @@ Map<String,String[]>
 
 -   底层还是朴素的BufferedReader(POST)和QueryString(GET)
 
-###解决中文数据乱码
+### 解决中文数据乱码
 
 -   POST
 
@@ -240,7 +240,7 @@ Map<String,String[]>
 
     -   人家已经写了解码编码的该怎么办了啦
 
-##请求转发
+## 请求转发
 
 -   服务器内部的资源跳转的方式
 
@@ -285,7 +285,7 @@ Map<String,String[]>
 
 
 
-###共享资源
+### 共享资源
 
 ![image-20231118001306302](../../../typora-user-images/Day39-请求和响应/image-20231118001306302.png)
 

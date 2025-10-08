@@ -6,7 +6,7 @@
 -   HttpServletResponse
 -   Browser(浏览器)/Server(服务器)
 
-#Web项目结构
+# Web项目结构
 
 -   ![image-20231116190517288](../../../typora-user-images/Day38-TomCat/image-20231116190517288.png)
 
@@ -26,7 +26,7 @@ Idea集成Tomcat
 
 -   这么配,就可以直接打开index.html了
 
-#插件配置
+# 插件配置
 
 -   POM.xml
 

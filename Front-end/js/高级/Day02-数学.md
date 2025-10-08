@@ -2,7 +2,7 @@
 
 ## 特殊数值
 
-### NaN 
+### NaN
 
 ```js
 var x = 100 / "Apple";  // x 将是 NaN

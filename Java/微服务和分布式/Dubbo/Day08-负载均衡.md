@@ -4,7 +4,7 @@
 
 ![image-20240406220436331](../assert/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406220436331.png)
 
-###Random(Default)
+### Random(Default)
 
 $$
 p_i = \frac{weight_i}{\sum_{i=1}^{n}{weight_i}}
@@ -89,7 +89,7 @@ public class HelloController {
 21:56:49:030  INFO 11612 --- [nio-8082-exec-8] com.harvey.dubbo.web.HelloController     : [2, 13, 113]
 ```
 
-###RoundRobin(轮询)
+### RoundRobin(轮询)
 
 权重轮询
 

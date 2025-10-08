@@ -1,8 +1,8 @@
 # ByteBuffer
 
-##基本使用
+## 基本使用
 
-###Channel利用Buffer读
+### Channel利用Buffer读
 
 1.  从Channel写, 向buffer写入数据	
 
@@ -119,7 +119,7 @@ public void testByteBufferWrite() {
 
 
 
-###ByteBuffer的三种属性
+### ByteBuffer的三种属性
 
 * capacity容量
 * position现有位置
@@ -129,7 +129,7 @@ public void testByteBufferWrite() {
 
 "读模式"或"写模式"只是为了规范, 减少错误
 
-###初始
+### 初始
 
 一开始, 写模式
 
@@ -137,7 +137,7 @@ public void testByteBufferWrite() {
 
 写模式下，position 是写入位置，limit 等于容量
 
-###写模式
+### 写模式
 
 写入了 4 个字节后:
 
@@ -145,7 +145,7 @@ public void testByteBufferWrite() {
 
 -   Position指针时刻指向下一个写入的位置
 
-###flip切换
+### flip切换
 
 **flip 动作发生**后
 
@@ -155,13 +155,13 @@ public void testByteBufferWrite() {
 
 ![](../../assets/Day01-ByteBuffer%E7%9A%84%E4%BD%BF%E7%94%A8/0019.png)
 
-###读取
+### 读取
 
 读取 4 个字节后，状态
 
 ![](../../assets/Day01-ByteBuffer%E7%9A%84%E4%BD%BF%E7%94%A8/0020.png)
 
-###Clear切换
+### Clear切换
 
 clear 动作发生后
 
@@ -402,7 +402,7 @@ position: [2], limit: [10]
 +--------+-------------------------------------------------+----------------+
 ```
 
-##API
+## API
 
 ### 分配空间方法
 
@@ -425,7 +425,7 @@ private void testCreate() {
 -   读写效率较低, 多一次拷贝, (需要从操作系统拷贝到Java虚拟机)
 -   收到垃圾回收(GC)的影响(整理内存碎片), 数据会改变存储的位置
 
-####DirectByteBuffer
+#### DirectByteBuffer
 
 >   直接内存
 
@@ -435,7 +435,7 @@ private void testCreate() {
 -   分配内存较慢(需要调用操作系统的函数)
 -   使用不当可能造成内存泄漏
 
-###put()与get()
+### put()与get()
 
 
 
@@ -500,7 +500,7 @@ buffer.rewind();
 
 即`position = 0;`
 
-####reset()和mark和mark()
+#### reset()和mark和mark()
 
 mark和position一样是buffer的属性
 
@@ -571,7 +571,7 @@ private String testByteBuffer2String(ByteBuffer buffer,int newPosition,int newLi
 
 >   Scattering Reads
 
-####需求
+#### 需求
 
 一段文本文件`onetwothree`, 有三段信息, 已知长度分别是`3`,`3`,`5`
 
@@ -605,11 +605,11 @@ public void testScatteringReads(){
 }
 ```
 
-###集中读
+### 集中读
 
 >   Gathering Writes
 
-####需求
+#### 需求
 
 有三段Buffer
 
@@ -625,7 +625,7 @@ public void testScatteringReads(){
 
 
 
-####代码实现
+#### 代码实现
 
 ```java
 public void testGatheringWrites(){

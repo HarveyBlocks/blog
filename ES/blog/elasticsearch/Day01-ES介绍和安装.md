@@ -57,7 +57,7 @@
 
 -   与MySQL的正向索引对比所得
 
-###正向索引的不足
+### 正向索引的不足
 
 MySQL的根据ID形成B+树,然后根据搜索,很快
 
@@ -67,7 +67,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 
 >   面向文档存储
 
-####创建倒排索引原理
+#### 创建倒排索引原理
 
 1.  创建一张表(**new_table**)
     -   包含字段**词条(term)**, **文档(document)id**
@@ -80,7 +80,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 
 ![image-20231223130101074](../typora-user-images/Untitled/image-20231223130101074.png)
 
-####查询原理
+#### 查询原理
 
 1.  对用户的搜索内容进行**分词**( **分词n个词** )
 2.  将分词所成的词条去查询获得**n条文档ID**
@@ -141,7 +141,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 docker network create es-net
 ```
 
-##加载镜像
+## 加载镜像
 
 -   下载es镜像
 
@@ -163,7 +163,7 @@ docker network create es-net
 
 
 
-###运行
+### 运行
 
 -   运行dik,部署单点es
 
@@ -200,7 +200,7 @@ docker network create es-net
     
     
 
-###访问
+### 访问
 
 - 访问es
 
@@ -284,7 +284,7 @@ elasticsearch:
 
 
 
-###简单使用
+### 简单使用
 
 ![image-20231223232746611](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232746611.png)
 
@@ -312,7 +312,7 @@ Get /
 
 ![image-20231223233550917](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233550917.png)
 
-##安装ik分词器
+## 安装ik分词器
 
 -   帮助中文分词
 
@@ -580,7 +580,7 @@ docker volume inspect es-plugins
 
     nice
 
-###`ik_smart`和`ik_max_word`
+### `ik_smart`和`ik_max_word`
 
 -   `ik_smart`:最少切分
 -   `ik_max_word`:最细切分

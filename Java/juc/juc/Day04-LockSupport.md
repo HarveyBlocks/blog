@@ -46,7 +46,7 @@ log.info("<====================================>");
 
 
 
-####park->unpark
+#### park->unpark
 
 调用park
 
@@ -76,7 +76,7 @@ log.info("<====================================>");
 
 ![image-20240908203559200](../assets/Day04-LockSupport/image-20240908203559200.png)
 
-##`parkNanos(long)` 和`parkUntil(long millis)`
+## `parkNanos(long)` 和`parkUntil(long millis)`
 
 -   `LockSupport#parkNanos(long)` , 单位纳秒
 -   `LockSupport#parkUntil(long)` , 单位毫秒

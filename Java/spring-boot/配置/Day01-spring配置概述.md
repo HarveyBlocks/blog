@@ -44,6 +44,6 @@
 
 和[maven高级](..\maven\maven_blog\blog\Day01-maven高级.md)还不太一样?!
 
-##配置加载顺序
+## 配置加载顺序
 
 [配置加载顺序](\Day02-配置生效顺序.md)

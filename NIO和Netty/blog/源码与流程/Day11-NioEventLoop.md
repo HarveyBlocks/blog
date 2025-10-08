@@ -140,7 +140,7 @@ private void execute(Runnable task, boolean immediate) {
 
 ## select阻塞
 
-###select的定时阻塞
+### select的定时阻塞
 
 在原生的JDK的Select中, 为了防止空轮询占用CPU, Select选择阻塞, 直到有IO事件到来, 才唤醒线程
 
@@ -596,4 +596,4 @@ private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {
 }
 ```
 
-## 
+##

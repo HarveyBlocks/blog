@@ -412,7 +412,7 @@ Console.WriteLine((v3 with {
 }).Person.v);
 ```
 
-###Equals/GetHashCode方法
+### Equals/GetHashCode方法
 
 仅当同一匿名类型的两个实例的所有属性都相等时, Equals认为true, HashCode也一致
 

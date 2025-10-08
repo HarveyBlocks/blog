@@ -29,7 +29,7 @@
 
 
 
-##前后端分离部署
+## 前后端分离部署
 
 不用微服务啦啦啦(刚好没学)
 
@@ -96,7 +96,7 @@
 </dependency>
 ```
 
-###测试
+### 测试
 
 `com.harvey.review_system.controller.ShopTypeController`
 

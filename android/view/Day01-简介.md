@@ -244,7 +244,7 @@ Android Studio依照一般的项目结构整理后的展示样式
     }
     ```
 
-### AndroidManifest.xml 
+### AndroidManifest.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

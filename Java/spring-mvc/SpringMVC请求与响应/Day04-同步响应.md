@@ -135,11 +135,11 @@ public ModelAndView res3() {
 
 
 
-##@ResponseBody
+## @ResponseBody
 
 >   作用: 告诉SpringMVC但会的字符串不是是视图名,是以响应体的方式响应的数据
 
-###标注在方法上
+### 标注在方法上
 
 ```java
 //直接回写字符串

@@ -51,7 +51,7 @@ numberMap[0] = "0000"
 fmt.Println(numberMap) // map[0:0000 1:1 2:2 3:3 4:4]
 ```
 
-##使用
+## 使用
 
 ### 遍历
 

@@ -10,7 +10,7 @@
 
 replication-factor 1 表示一个分区
 
-##测试生产者
+## 测试生产者
 
 ```shell
 ./kafka-producer-perf-test.sh --topic benchmark --num-records 500000 --throughput -1 --record-size 1024 --producer-props bootstrap.servers=localhost:9092 acks=1

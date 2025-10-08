@@ -28,7 +28,7 @@
 
 ![image-20240413151620041](../assert/Day02-Protobuf/image-20240413151620041.png)
 
-##辅助代码
+## 辅助代码
 
 ### 版本设定
 
@@ -83,7 +83,7 @@ package com.harvey.protobuf;
 
 ## 数据结构
 
-###基本数据结构
+### 基本数据结构
 
 [proto3/dev](https://protobuf.dev/programming-guides/proto3/)
 
@@ -350,7 +350,7 @@ Ctrl+Alt+R=>Maven插件
 
 ### 优化编译步骤
 
-####两个命令一起运行
+#### 两个命令一起运行
 
 >   其实直接按compile就可以直接生成了
 
@@ -366,7 +366,7 @@ New Goal
 mvn protobuf:compile protobuf:compile-custom
 ```
 
-####生成目录
+#### 生成目录
 
 ```xml
 <configuration>
@@ -450,7 +450,7 @@ mvn protobuf:compile protobuf:compile-custom
 
 ## 使用生成API
 
-###结构
+### 结构
 
 ![image-20240413160133239](../assets/Day02-Protobuf/image-20240413160133239.png)
 
@@ -460,7 +460,7 @@ mvn protobuf:compile protobuf:compile-custom
 
 
 
-###[ServiceName]\[xxxx]Stub
+### [ServiceName]\[xxxx]Stub
 
 代理对象, 不同的Stub的区别在于网络通信的方式不同
 
@@ -468,5 +468,5 @@ mvn protobuf:compile protobuf:compile-custom
 -   `Blocking` 阻塞式
 -   `Future` 异步式
 
-###[ServiceName]\[xxxx]Supplier
+### [ServiceName]\[xxxx]Supplier
 

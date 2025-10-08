@@ -188,7 +188,7 @@ public class WhiteCareTaker {
 }
 ```
 
-### 
+###
 
 ### Demo
 

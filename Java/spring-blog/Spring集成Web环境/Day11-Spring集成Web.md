@@ -14,7 +14,7 @@
 
 
 
-##需求
+## 需求
 
 -   Spring管理Listener
 -   Spring提供返回 ApplicationContext的工具类
@@ -33,7 +33,7 @@
 
 -   然后记得注掉自己的Listener的@WebListener,吃了不少苦头qwq
 
-###XML配置
+### XML配置
 
 -   application-context.xml
 
@@ -66,7 +66,7 @@
 
 -   classpath:居然还是必须加的?!
 
-###核心配置类配置
+### 核心配置类配置
 
 -   你看上面的写死的contextConfigLocation是不是很怪?
 
@@ -120,7 +120,7 @@
 
     
 
-###Spring提供返回 ApplicationContext的工具类
+### Spring提供返回 ApplicationContext的工具类
 
 -   使用Spring提供的工具类替代自己的工具类
 

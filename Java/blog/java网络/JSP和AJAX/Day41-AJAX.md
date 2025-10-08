@@ -18,6 +18,6 @@
 
 ![image-20231119222447639](../../../typora-user-images/Day41-AJAX/image-20231119222447639.png)
 
-##Axios异步框架
+## Axios异步框架
 
 -   简化AJAX

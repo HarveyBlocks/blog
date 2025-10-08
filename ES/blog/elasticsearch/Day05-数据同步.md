@@ -49,9 +49,9 @@ MySQL的用于主从同步的Binlog, 每当MySQL做增删改时,都会改变Binl
 
 ## 利用MQ实现数据同步
 
-###交换机和队列
+### 交换机和队列
 
-####分析
+#### 分析
 
 >   对于ES来说. 增和改是一致的
 >
@@ -83,7 +83,7 @@ spring:
     virtual-host: /
 ```
 
-####客户端创建交换机和队列与接收消息
+#### 客户端创建交换机和队列与接收消息
 
 ```java
 @Component
@@ -168,7 +168,7 @@ rabbitTemplate.convertAndSend(
     restHighLevelClient.delete(request, RequestOptions.DEFAULT);
     ```
 
-####增/改
+#### 增/改
 
 1.  依据ID从数据库查询新数据
 

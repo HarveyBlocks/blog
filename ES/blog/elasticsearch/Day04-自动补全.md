@@ -122,7 +122,7 @@ POST /_analyze
 
 
 
-####创建自定义分词器
+#### 创建自定义分词器
 
 -   **要求在创建索引库时创建自定义分词器,  分词器只对当前索引器起效**
 
@@ -517,7 +517,7 @@ GET /test/_search
 
 ### 拼音和自动补全
 
-####DSL
+#### DSL
 
 1.  准备自己的包含拼音分词和中文分词的分词器
 
@@ -639,9 +639,9 @@ GET /test/_search
         
         
 
-####RestClient
+#### RestClient
 
-#####数据转移(新增suggestion字段)
+##### 数据转移(新增suggestion字段)
 
 1.  HotelDoc的实体类怎加suggest字段, 类型字符串数组还是集合都行
 

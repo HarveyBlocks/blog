@@ -1,6 +1,6 @@
 # 配置优化
 
-##`sendfile`
+## `sendfile`
 
 开启高效文件传输模式, 在`http`, `server`, `location`, 多在`http`
 

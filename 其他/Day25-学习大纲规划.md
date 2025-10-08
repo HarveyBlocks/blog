@@ -961,7 +961,7 @@ C:\USERS\27970\DESKTOP\BLOG
 -   网易
 -   酷狗
 
-#confusing
+# confusing
 
 1.  **Linux连不上主机**
 
@@ -1051,7 +1051,7 @@ C:\USERS\27970\DESKTOP\BLOG
 
 
 
-##未完成
+## 未完成
 
 
 
@@ -1073,11 +1073,11 @@ SpringCloude差集群和分布式
 
 
 
-#作业
+# 作业
 
 
 
-##第三次
+## 第三次
 
 1）基础支持
 
@@ -1087,11 +1087,11 @@ API调用
 
 
 
-##第四次
+## 第四次
 
-###Spring Framwork(完成)
+### Spring Framwork(完成)
 
-###Java Web(完成)
+### Java Web(完成)
 
 **Servlet基础**
 
@@ -1103,7 +1103,7 @@ JavaEE基础(JSP)
 
     JSP就类似于Java和Html结合
 
-###SpringMVC(完成)
+### SpringMVC(完成)
 
 SpringMVC（Web应用MVC）
 
@@ -1111,7 +1111,7 @@ SpringMVC（Web应用MVC）
 
 ![image-20231203220648273](typora-user-images/Day25-学习大纲规划/image-20231203220648273.png)
 
-###SpringBoot
+### SpringBoot
 
 简化开发众多
 
@@ -1119,7 +1119,7 @@ SpringMVC（Web应用MVC）
 
 
 
-###持久层
+### 持久层
 
 **MyBatisPlus** 5h
 
@@ -1138,7 +1138,7 @@ SpringMVC（Web应用MVC）
 
 
 
-###中间件
+### 中间件
 
 **MyCat**(完成)
 
@@ -1157,7 +1157,7 @@ Docker 3h(完成)
 
 
 
-###Spring安全*
+### Spring安全*
 
 SpringSecurity 8h(完成)
 
@@ -1167,7 +1167,7 @@ Shiro 4h(完成)
 
 
 
-###SpringBoot
+### SpringBoot
 
 简化开发众多
 
@@ -1177,7 +1177,7 @@ Shiro 4h(完成)
 
 文本全局搜索2h(完成)
 
-###Redis*
+### Redis*
 
 40h()
 
@@ -1189,7 +1189,7 @@ security/JWT->消息队列->ES->Redis->SpringCloud高级
 
 
 
-##第五次
+## 第五次
 
 Http协议(完成)
 
@@ -1261,7 +1261,7 @@ JWT(完成)
 
 ->OAuth2.0(难)
 
-##第六次
+## 第六次
 
 1. 对项目整合**OpenTracing**分布式链路追踪系统
     -   [Jaeger](https://github.com/jaegertracing/jaeger)
@@ -1334,7 +1334,7 @@ BASE、CAP理论 , (完成)
 
 
 
-##第七次
+## 第七次
 
 -   JVM虚拟机(30h)
 -   JUC并发编程(45h)
@@ -1356,7 +1356,7 @@ BASE、CAP理论 , (完成)
 
 
 
-#其余感兴趣的方向
+# 其余感兴趣的方向
 
 -   优先级依次降低
 

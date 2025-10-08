@@ -45,7 +45,7 @@ public class Balking implements Runnable {
 
 
 
-###错误
+### 错误
 
 ```java
 public void run() {
@@ -83,7 +83,7 @@ public void run() {
 
 对可见性和有序性的考虑见[volatile](../内存模型/Day05-volatile.md)
 
-###最终修正
+### 最终修正
 
 考虑之后的最终修正
 
@@ -123,7 +123,7 @@ public class Balking implements Runnable {
 }
 ```
 
-##用犹豫模式懒加载单例
+## 用犹豫模式懒加载单例
 
 ### 单例
 

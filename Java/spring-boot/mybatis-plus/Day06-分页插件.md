@@ -70,9 +70,9 @@
 >    	2. 总页数(为了形成分页条)
 >    	3. 这一页的数据集合
 
-###编写分页实体
+### 编写分页实体
 
-####总的分页请求
+#### 总的分页请求
 
 ```java
 public class PageQuery  {
@@ -85,7 +85,7 @@ public class PageQuery  {
 }
 ```
 
-#####User的查询请求
+##### User的查询请求
 
 -   继承分页请求
 
@@ -99,7 +99,7 @@ public class UserQuery extends PageQuery{
 }
 ```
 
-####分页结果
+#### 分页结果
 
 ```
 /**

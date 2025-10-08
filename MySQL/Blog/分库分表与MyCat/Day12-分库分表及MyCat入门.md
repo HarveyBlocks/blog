@@ -122,7 +122,7 @@ chmod 777 指定文件jar包
 
 
 
-##MyCat 入门
+## MyCat 入门
 
 ### 需求:
 
@@ -134,7 +134,7 @@ chmod 777 指定文件jar包
 
 -   水平拆分
 
-###环境准备
+### 环境准备
 
 MyCat中间件服务器
 
@@ -270,7 +270,7 @@ CREATE TABLE TB_ORDER(
 
 ### 基本配置
 
-####核心配置文件
+#### 核心配置文件
 
 核心配置文件/usr/local/mycact/conf/schema.xml
 
@@ -323,7 +323,7 @@ CREATE TABLE TB_ORDER(
 </mycat:schema>
 ```
 
-####用户权限配置
+#### 用户权限配置
 
 server.xml配置用户的用户权限
 

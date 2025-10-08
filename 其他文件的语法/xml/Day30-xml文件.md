@@ -276,7 +276,7 @@ public class ParseXml {
 
   ![image-20231004162355349](../assets/Day30-xml%E6%96%87%E4%BB%B6/image-20231004162355349.png)
   
-  ### Schema约束文档
+### Schema约束文档
 
 - 后缀必须是.xsd
 

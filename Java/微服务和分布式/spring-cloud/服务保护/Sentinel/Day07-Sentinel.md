@@ -12,9 +12,9 @@
     -   监控微服务内部的所有接口的运行情况
     -   限流规则, 熔断规则
 
-##安装
+## 安装
 
-###图形化界面
+### 图形化界面
 
 -   [jar包](https://github.com/alibaba/Sentinel/releases/download/1.8.6/sentinel-dashboard-1.8.6.jar)
 
@@ -30,7 +30,7 @@ java '-Dserver.port=8090' '-Dcsp.sentinel.dashboard.server=localhost:8090' '-Dpr
 
 账号密码`sentinel` `sentinel`
 
-###引入依赖
+### 引入依赖
 
 ```xml
 <!--sentinel-->
@@ -50,11 +50,11 @@ spring:
         dashboard: localhost:8090
 ```
 
-###测试
+### 测试
 
 ![image-20240116131800308](../../../assert/Day07-Sentinel/image-20240116131800308.png)
 
-##基本使用
+## 基本使用
 
 ### 簇点链路
 
@@ -107,7 +107,7 @@ spring:
 
 对业务做线程隔离
 
-###Open Feign整合Sentinel
+### Open Feign整合Sentinel
 
 在服务调用者
 
@@ -121,7 +121,7 @@ feign:
 
 
 
-###线程隔离规则
+### 线程隔离规则
 
 ![image-20240116135055174](../../../assert/Day07-Sentinel/image-20240116135055174.png)
 
@@ -136,7 +136,7 @@ feign:
 -   FallbackClass, 无法对远程调用的异常做处理
 -   FallbackFactory, 可以对远程调用的异常做处理
 
-###定义FallbackFactory
+### 定义FallbackFactory
 
 ```java
 @Slf4j
@@ -210,7 +210,7 @@ public class CartServiceApplication {
 
 ![image-20240116145714108](../../../assert/Day07-Sentinel/image-20240116145714108.png)
 
-##服务熔断
+## 服务熔断
 
 ### 要求
 
@@ -256,7 +256,7 @@ public class CartServiceApplication {
 
 依据Nacos的配置中心, 实现Sentinel的持久化配置
 
-###实现流程
+### 实现流程
 
 #### 引入依赖
 
@@ -305,7 +305,7 @@ public class CartServiceApplication {
 
     
 
-####配置(v.)Sentinel配置所在的(a.)数据源
+#### 配置(v.)Sentinel配置所在的(a.)数据源
 
 ```yaml
 spring:

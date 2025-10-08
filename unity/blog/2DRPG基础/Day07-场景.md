@@ -10,7 +10,7 @@
 
 拖动过去后场景发生了叠加, 将场景的Tilemap设置active为false
 
-##持久化场景
+## 持久化场景
 
 场景切换过程中, 只有地图在变化, 摄像机的边界在变化, 人物是没有变的, 敌人也是没有变的
 
@@ -26,7 +26,7 @@
 
 地图切换就是将不同的场景加载到和Persisten场景同级
 
-##加载和卸载场景
+## 加载和卸载场景
 
 Hierarchy->选中场景->右键选择UnloadSence
 
@@ -46,7 +46,7 @@ Hierarchy->选中场景->右键选择UnloadSence
 
 ## 场景转换
 
-###场景转换
+### 场景转换
 
 1.   安装插件`Addressable` Windows->pacage manager-> Unity Register
 
@@ -212,7 +212,7 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
 
 
 
-###场景渐入渐出
+### 场景渐入渐出
 
 1.   Create->Ui->Cavens创建UI画布对象FadeCavens 
 
@@ -281,7 +281,7 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
 
 
 
-##灯光效果
+## 灯光效果
 
 Hierarchy->右键->Light->Spot Light 2D 点光源
 

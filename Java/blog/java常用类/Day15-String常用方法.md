@@ -54,7 +54,7 @@ System.out.println("hide behind your back".length());//21
 | int      | indexOf(String str) | 查找str首次出现的下标。存在，则返回该下标；不存在，则返回-1  |
 | int      | lastIndexOf(String str) | 查找str最后一次出现的下标。存在，则返回该下标；不存在，则返回-1 |
 
-### indexOf(String str) 
+### indexOf(String str)
 
 ```java
 public int indexOf(String str) {
@@ -78,7 +78,7 @@ System.out.println("hide behind your back".indexOf("hi"));//0
 //------------------↑---------------------
 ```
 
-#### indexOf(String str, int fromIndex) 
+#### indexOf(String str, int fromIndex)
 
 ```java
 System.out.println("hide behind your back".indexOf("hi",4));//7
@@ -308,7 +308,7 @@ public class Main {
 
 
 
-### trim() 
+### trim()
 
 ```java
 public String trim() {
@@ -342,7 +342,7 @@ System.out.println("         hide behind your back        ".trim());
 
 
 
-### toUpperCase()/toLowerCase() 
+### toUpperCase()/toLowerCase()
 
 - 不会对原字符串做更改,而是返回一个新的字符串
 
@@ -395,7 +395,7 @@ System.out.println("hide behind your back".replace('h','H'));
 | boolean  | endsWith(String suffix)                                | 判断字符串是否以suffix结尾                                   |
 | boolean  | startsWith(String suffix)                              | 判断字符串是否以suffix开头                                   |
 
-### contains(CharSequence s) 
+### contains(CharSequence s)
 
 ```java
 public boolean contains(CharSequence s) {

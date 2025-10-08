@@ -9,7 +9,7 @@
 
 
 
-##声明
+## 声明
 
 重复创建好像也没什么问题
 
@@ -35,7 +35,7 @@
     -   可以new(看过了, 不如`BindingBuilder`的可读性)
     -   可以用`BindingBuilder`
 
-####创建
+#### 创建
 
 ```java
 package com.itheima.consumer.config;// 在消费者这里
@@ -95,7 +95,7 @@ public class RabbitConfig {
 
 ### 基于注解
 
-####有关注解
+#### 有关注解
 
 ```java
 @RabbitListener(bindings = @QueueBinding(

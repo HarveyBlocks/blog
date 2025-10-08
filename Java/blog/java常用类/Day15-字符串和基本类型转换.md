@@ -54,7 +54,7 @@ char ch = 'U';
 String str = ""+ch;
 ```
 
-#### 方法三：使用String.valueOf() 
+#### 方法三：使用String.valueOf()
 
 ```java
 char ch = 'U';
@@ -96,7 +96,7 @@ public class Main {
 }
 ```
 
- ## boolean类型与字符串的转换
+## boolean类型与字符串的转换
 
 boolean转换成字符类型的时候
 

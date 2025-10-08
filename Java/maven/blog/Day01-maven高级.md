@@ -1,4 +1,4 @@
-##工程模块与模块划分
+## 工程模块与模块划分
 
 -   从前
 
@@ -43,7 +43,7 @@
 -   所有工程做成独立的模块
 -   注意,模块里的依赖和类要与这个模块的作用紧密相关,不能把所有东西一股脑地往里面加
 
-###tomcat与maven
+### tomcat与maven
 
 我用tomcat7的插件强行运行tomcat9, 严重警告但是能运行
 
@@ -124,7 +124,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 ```
 
-###pojo
+### pojo
 
 -   domain一个包
 
@@ -174,9 +174,9 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 可以匹配applicationContext-dao.xml和applicationContext-service.xml这种
 
-##聚合
+## 聚合
 
-###多模块的构建维护
+### 多模块的构建维护
 
 如果Dao模块更新,重新install了一次,其他模块知道吗?
 
@@ -251,7 +251,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 ![image-20231203161555356](../Screenshots/Day01-maven高级/image-20231203161555356.png)
 
-###父工程与子工程
+### 父工程与子工程
 
 >   父工程引入的依赖子工程能用
 
@@ -343,7 +343,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 controller模块!!!!!!!!!!
 
-###继承和聚合
+### 继承和聚合
 
 可以在一个pom.xml也可以在两个
 
@@ -475,7 +475,7 @@ controller模块!!!!!!!!!!
 
 
 
-####工程版本号的约定
+#### 工程版本号的约定
 
 -   `<主版本>.<次版本>.<增量版本>.<里程碑版本>`
 
@@ -580,7 +580,7 @@ jdbc.url=${jdbc.url}
 -   开发环境
 -   测试环境
 
-####创建多环境
+#### 创建多环境
 
 ```xml
 <!--创建多环境-->
@@ -644,7 +644,7 @@ jdbc.url=${jdbc.url}
 
 
 
-###跳过测试
+### 跳过测试
 
 >   就是我明知道这个测试会报错, 可能是我没做完, 我只关系部分功能是否正确
 >
@@ -654,11 +654,11 @@ jdbc.url=${jdbc.url}
 
 
 
-####idea实现
+#### idea实现
 
 ![image-20231203195728412](../Screenshots/Day01-maven高级/image-20231203195728412.png)
 
-####指令实现
+#### 指令实现
 
 ```bash
 mvn -install -D skipTests
@@ -760,7 +760,7 @@ nexus /run 服务器名称
 
 `D:\IT_study\maven\nexus\nexus-3.62.0-01\bin\nexus /run nexux`
 
-####右上角登录
+#### 右上角登录
 
 ![image-20231203205327569](../Screenshots/Day01-maven高级/image-20231203205327569.png)
 
@@ -768,7 +768,7 @@ nexus /run 服务器名称
 
 
 
-####修改访问服务器的配置
+#### 修改访问服务器的配置
 
 [修改配置的配置文件](D:\IT_study\maven\nexus\nexus-3.62.0-01\etc\nexus-default.properties)
 
@@ -776,7 +776,7 @@ nexus /run 服务器名称
 
 ![image-20231203203852410](../Screenshots/Day01-maven高级/image-20231203203852410.png)
 
-####服务器的相关配置
+#### 服务器的相关配置
 
 [服务器的配置文件](D:\IT_study\maven\nexus\nexus-3.62.0-01\bin\nexus.vmoptions)
 
@@ -792,7 +792,7 @@ nexus /run 服务器名称
 
 ![image-20231203204356102](../Screenshots/Day01-maven高级/image-20231203204356102.png)
 
-####私服管理仓库
+#### 私服管理仓库
 
 拓展一下私服的功能
 
@@ -834,7 +834,7 @@ Idea能连接本地仓库, 我们需要让本地仓库连接私服
 
 598e0cd5-9ae2-482e-8877-57a0904167f8
 
-####本地仓库访问私服
+#### 本地仓库访问私服
 
 -   maven的setting.xml
 
@@ -863,7 +863,7 @@ Idea能连接本地仓库, 我们需要让本地仓库连接私服
 
 然后可以把阿里云的干掉了(也可以不干掉)
 
-####本地工程发布到私服
+#### 本地工程发布到私服
 
 pom.xml
 

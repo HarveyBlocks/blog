@@ -1,6 +1,6 @@
-#`RabbitTemplate` 代替 `OpenFeign`
+# `RabbitTemplate` 代替 `OpenFeign`
 
-##引入AMQP依赖
+## 引入AMQP依赖
 
 -   应为有SpringMVC了就不引`Jackson`了
 

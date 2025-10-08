@@ -72,7 +72,7 @@ worker_processes auto|具体数值;
 
 **只有的开启`master_processes`时候才能生效**
 
-##`daemon`
+## `daemon`
 
 >   设定Nginx是否以守护进程的方式启动
 

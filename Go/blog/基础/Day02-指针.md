@@ -6,7 +6,7 @@
 
 切片也是指针
 
-##使用
+## 使用
 
 ### 取地址
 
@@ -38,7 +38,7 @@ var pNum *[]int16 = &num // 取地址
 fmt.Println(*pNum)       // [1 2 3]
 ```
 
-###更改指向值
+### 更改指向值
 
 ```go
 var num int16 = 0x7763
@@ -50,7 +50,7 @@ fmt.Println(*pNum) // 30564
 fmt.Println(num)   // 30564
 ```
 
-##获取命令行参数
+## 获取命令行参数
 
 ```go
 package main

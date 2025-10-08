@@ -1,6 +1,6 @@
 # 异常
 
-##基本使用
+## 基本使用
 
 ```java
 #include <exception>

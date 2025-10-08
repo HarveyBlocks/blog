@@ -4,7 +4,7 @@
 
 Monitor锁, 即重量级锁
 
-##Java对象头
+## Java对象头
 
 Java对象头(*Object Header*), 以32位虚拟机为例
 

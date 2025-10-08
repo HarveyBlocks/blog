@@ -12,7 +12,7 @@
 
 重试次数用`retries`配置
 
-##failfast
+## failfast
 
 快速失败
 
@@ -22,7 +22,7 @@
 
 
 
-##failsafe
+## failsafe
 
 **直接忽略**, 不报异常, 返回空结构
 

@@ -1,4 +1,4 @@
-#Tomcat
+# Tomcat
 
 -   连接器 Connector
     -   对外交流沟通
@@ -49,7 +49,7 @@ cm--否-->p
 
 
 
-###异常处理机制
+### 异常处理机制
 
 如果总线程数达到MaxiumPoolSize
 

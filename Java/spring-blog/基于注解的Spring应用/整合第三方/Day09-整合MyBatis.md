@@ -2,7 +2,7 @@
 
 # MyBatis--启动!
 
-##前期准备
+## 前期准备
 
 ### org/test/JDBC.properties
 

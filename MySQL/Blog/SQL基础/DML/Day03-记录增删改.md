@@ -75,7 +75,7 @@ update 表名 set 字段1=值1,字段名2=值2,....[where 条件];
     -	判断相等`id='114514'`
     -	详见[where条件判断语句](../Day03-where条件判断语句.md)
 
-    ### 使用update用null替换删除某列的内容
+### 使用update用null替换删除某列的内容
 
 
 

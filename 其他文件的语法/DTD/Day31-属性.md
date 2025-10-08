@@ -42,7 +42,7 @@
 | NOTATION           | 此值是符号的名称, *未知*           |
 | xml:               | 值是一个预定义的 XML 值, *未知*    |
 
-###枚举
+### 枚举
 
 ```xml-dtd
 <!ELEMENT note (#PCDATA)>

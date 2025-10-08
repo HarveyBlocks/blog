@@ -6,7 +6,7 @@
 
 干脆用unsigned int, 差不多一个月
 
-##Redis设计
+## Redis设计
 
 -   key
     -   user:sign:用户:年:月
@@ -16,7 +16,7 @@
 
 -   在Spring的RedisTemplate里, BitMap的操作被封装到字符串的ValueOperations里去了
 
-###签到
+### 签到
 
 ```java
 @Override
@@ -29,7 +29,7 @@ public void sign(Long userId, LocalDateTime now) {
 }
 ```
 
-###连续签到数统计
+### 连续签到数统计
 
 -   问题: 上个月的要不要考虑到这个月的连续里去?
 

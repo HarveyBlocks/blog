@@ -1,4 +1,4 @@
-#@Transactional
+# @Transactional
 
 康康源码先
 
@@ -30,7 +30,7 @@ public @interface Transactional {
 
 
 
-##目标:替代xml文件
+## 目标:替代xml文件
 
 ```xml
 <bean id="transactionManager"
@@ -55,7 +55,7 @@ public @interface Transactional {
 </aop:config>
 ```
 
-###针对的对象
+### 针对的对象
 
 -   因为这个增强类是承上启下的,你细品
 
@@ -86,7 +86,7 @@ public @interface Transactional {
 3.  都配了的
     -   优先使用方法上的注解
 
-###注解配事务方法
+### 注解配事务方法
 
 ```java
 @Override
@@ -152,7 +152,7 @@ public void transMoney(String outAccountName, String inAccountName, int money) {
 
 
 
-##全注解(配置类)
+## 全注解(配置类)
 
 当下的任务:
 

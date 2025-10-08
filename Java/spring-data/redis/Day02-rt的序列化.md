@@ -118,7 +118,7 @@ public void serialize(Object object, OutputStream outputStream) throws IOExcepti
 
 ### 配置序列化器
 
-####选择序列化器
+#### 选择序列化器
 
 可选择的序列化器
 
@@ -128,7 +128,7 @@ public void serialize(Object object, OutputStream outputStream) throws IOExcepti
 
 **Value可能是Object. 用`GenericJackson2JsonRedisSerlizer`**
 
-####设置序列化器
+#### 设置序列化器
 
 ```java
 @Configuration
@@ -183,7 +183,7 @@ SpringMVC里头自带Jackson-databind依赖, 不需要在意这个
 
 ### 测试
 
-####对值是字符串的测试
+#### 对值是字符串的测试
 
 ```java
 @SpringBootTest

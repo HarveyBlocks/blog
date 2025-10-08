@@ -2,7 +2,7 @@
 
 使用自带模块`ngx_http_autoindex_module`
 
-##配置
+## 配置
 
 ### 开启
 
@@ -14,7 +14,7 @@ autoindex on|off;
 
 `http`, `server`, `location`
 
-###显示大小
+### 显示大小
 
 要不要展示对应文件的详细大小
 
@@ -28,7 +28,7 @@ autoindex_exact_size on|off;
 
 
 
-###显示格式
+### 显示格式
 
 设置目录列表(显示给用户的)的格式(1.7.9之后出现)
 
@@ -42,7 +42,7 @@ autoindex_format html|xml|json|jsonp;
 
 
 
-###显示时间
+### 显示时间
 
 在目录列表上显示的时间
 

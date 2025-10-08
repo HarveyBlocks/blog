@@ -16,7 +16,7 @@ Console.WriteLine(s1 == s2); // True
 
 
 
-##字符串连接
+## 字符串连接
 
 ```C#
 const int num = 1;
@@ -166,7 +166,7 @@ var msg = $"""
 Console.WriteLine(msg);
 ```
 
-###内插格式化
+### 内插格式化
 
 字符串内插还支持[格式化](#复合格式设置)
 

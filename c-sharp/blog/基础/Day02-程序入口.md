@@ -6,7 +6,7 @@ C# 程序中只能有一个入口点
 
 如果多个类包含 Main 方法，必须使用 [StartupObject](https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/compiler-options/advanced#mainentrypoint-or-startupobject) 来编译程序，以指定将哪个 Main 方法用作入口点
 
-###声明
+### 声明
 
 1.  Main 必须在类或结构中进行声明
 2.  可以是内部类class 可以是非公开的, 可以是static类
@@ -80,7 +80,7 @@ Console.WriteLine("Hello World!");
 
 顶级语句隐式位于全局命名空间中
 
-###命名空间和类型定义
+### 命名空间和类型定义
 
 命名空间和类型定义必须位于顶级语句之后
 

@@ -77,7 +77,7 @@ public interface ProducerConsumerRegistry<P> {
 }
 ```
 
-####实现
+#### 实现
 
 ```java
 public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry<P> {
@@ -155,7 +155,7 @@ public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry
 }
 ```
 
-##使用
+## 使用
 
 在消息队列的服务端, 各Producer生产消息, 然后发送给消息队列中间件
 
@@ -163,7 +163,7 @@ public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry
 
 故服务端和客户端都使用消息队列
 
-###注册生产者(服务端)
+### 注册生产者(服务端)
 
 ```java
 private static void registerProducer(
@@ -179,7 +179,7 @@ private static void registerProducer(
 }
 ```
 
-###组测消费者(服务端->客户端数据传输)
+### 组测消费者(服务端->客户端数据传输)
 
 ```java
 private static void registerCustomer(String customerName, ProducerConsumerRegistry<String> registry) {

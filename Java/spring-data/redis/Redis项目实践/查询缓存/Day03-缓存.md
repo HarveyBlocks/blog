@@ -110,7 +110,7 @@ public Shop queryById(Long id) throws JsonProcessingException {
 }
 ```
 
-####解决ObjectMapper来序列化LocalDateTime时的异常
+#### 解决ObjectMapper来序列化LocalDateTime时的异常
 
 使用Hutool工具包的JSON工具
 
@@ -119,7 +119,7 @@ shop = JSONUtil.toBean(json, Shop.class);
 shopJson = JSONUtil.toJsonStr(shop);
 ```
 
-###测试
+### 测试
 
 ![image-20240104015028762](../../../../typora-user-images/Day03-%E7%BC%93%E5%AD%98/image-20240104015028762.png)
 

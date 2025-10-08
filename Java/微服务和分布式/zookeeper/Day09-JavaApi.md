@@ -115,7 +115,7 @@ public void testCreate() throws Exception {
 }
 ```
 
-###获取节点信息
+### 获取节点信息
 
 ```java
 @Test
@@ -186,7 +186,7 @@ public void testDelete() throws Exception {
 
 
 
-##Watch事件监听机制
+## Watch事件监听机制
 
 ### 概念
 
@@ -407,7 +407,7 @@ private static void printType(TreeCacheEvent.Type type) {
 
 
 
-##分布式锁
+## 分布式锁
 
 Redis锁的不可靠性: Master节点挂掉之后, 其子节点可能让好多人都获取到锁
 

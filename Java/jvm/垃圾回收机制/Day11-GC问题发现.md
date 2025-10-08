@@ -104,7 +104,7 @@ GC Pressure
 
 ## GC日志及其分析
 
-###配置打开GC日志
+### 配置打开GC日志
 
 GC日志的打印配置
 
@@ -152,7 +152,7 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 
 
-##GC模式及分析
+## GC模式及分析
 
 ### 锯齿状
 

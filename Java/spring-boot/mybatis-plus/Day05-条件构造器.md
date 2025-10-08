@@ -51,9 +51,9 @@
 
     支持Lambda
 
-###QueryWrapper
+### QueryWrapper
 
-####案例一
+#### 案例一
 
 ##### 需求
 
@@ -61,7 +61,7 @@
 
 
 
-#####MySQL模拟
+##### MySQL模拟
 
 
 ```mysql
@@ -74,7 +74,7 @@ select from tb_user
 
 
 
-#####select方法查询
+##### select方法查询
 
 ```java
 /*List<T> selectList(@Param("ew") Wrapper<T> queryWrapper);*/
@@ -87,12 +87,12 @@ queryWrapper.select("id","name","age","gender")
 userMapper.selectList(queryWrapper).forEach(System.out::println);
 ```
 
-#####DEBUG的拼字符串
+##### DEBUG的拼字符串
 
 ==>  Preparing: SELECT id,name,age,gender FROM tb_user WHERE (name LIKE ? AND age >= ? AND gender = ?) 
 ==> Parameters: %o%(String), 64(Integer), 男(String) 
 
-####案例二
+#### 案例二
 
 ##### 需求与初步分析
 
@@ -100,14 +100,14 @@ userMapper.selectList(queryWrapper).forEach(System.out::println);
 
 -   虽然是更新,但是还是要用**查询条件构造器**
 
-#####MySQL模拟
+##### MySQL模拟
 
 
 ```mysql
 update tb_user set age = 36,gender='女' where name='JbquXjYjb9'
 ```
 
-#####update方法更新
+##### update方法更新
 
 ```java
 // 创建更新后的User对象
@@ -122,12 +122,12 @@ int update = userMapper.update(user, queryWrapper);
 System.out.println(update);
 ```
 
-#####DEBUG的拼字符串
+##### DEBUG的拼字符串
 
 ==> Preparing: UPDATE tb_user SET age=?, gender=? WHERE (name = ?) 
 ==> Parameters: 36(Integer), 女(String), JbquXjYjb9(String) 
 
-###UpdateWrapper
+### UpdateWrapper
 
 #### 需求
 
@@ -135,7 +135,7 @@ System.out.println(update);
 
 
 
-####MySQL模拟
+#### MySQL模拟
 
 
 ```mysql
@@ -145,7 +145,7 @@ update user set age = age + 5
 
 
 
-####select方法查询
+#### select方法查询
 
 ```java
 /*List<T> selectList(@Param("ew") Wrapper<T> queryWrapper);*/
@@ -158,7 +158,7 @@ queryWrapper.select("id","name","age","gender")
 userMapper.selectList(queryWrapper).forEach(System.out::println);
 ```
 
-####DEBUG的拼字符串
+#### DEBUG的拼字符串
 
 ==>  Preparing: UPDATE tb_user SET age = age +5 WHERE (id IN (?,?,?)) 
 ==> Parameters: 1(Integer), 2(Integer), 4(Integer) 
@@ -185,7 +185,7 @@ int update = userMapper.update(user, lambdaQueryWrapper);
 System.out.println(update);//3
 ```
 
-####DEBUG的拼字符串
+#### DEBUG的拼字符串
 
 ==>  Preparing: UPDATE tb_user SET age=?, gender=? WHERE (name = ?) 
 

@@ -16,7 +16,7 @@ pod提供服务, **service**访问pod 的服务
 
 ## 资源管理方式
 
-###介绍和举例
+### 介绍和举例
 
 -   命令式对象管理
 
@@ -49,7 +49,7 @@ pod提供服务, **service**访问pod 的服务
     -   仅用于`create`和`patch`资源
     -   apply: 如果有资源, 就更新资源; 如果没有资源就创建资源
 
-###比较
+### 比较
 
 | 类型           | 操作对象 | 适用环境 | 优点                                       | 缺点                             |
 | :------------- | :------- | :------- | :----------------------------------------- | :------------------------------- |
@@ -86,7 +86,7 @@ scp -r $HOME/.kube node1: $HOME/
 
 
 
-###Command
+### Command
 
 
 
@@ -123,7 +123,7 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 
 
 
-####CRUD命令
+#### CRUD命令
 
 | 命令    | 命令作用     |
 | :------ | :----------- |
@@ -138,7 +138,7 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 
 
 
-####运行和调试
+#### 运行和调试
 
 
 
@@ -211,7 +211,7 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 
 
 
-##命令式对象配置
+## 命令式对象配置
 
 
 

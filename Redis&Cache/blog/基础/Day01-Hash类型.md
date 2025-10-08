@@ -1,15 +1,15 @@
 # Hash类型
 
-##介绍
+## 介绍
 
 -   无序
 -   每个字段独立, 可对每个字段做curd
 
 ## Hash操作
 
-###增改查
+### 增改查
 
-####增改
+#### 增改
 
 添加一个hash
 
@@ -85,7 +85,7 @@ centos-redis:0>hget user:A age
 
 
 
-####多个key
+#### 多个key
 
  ```bash
 HMSet Object field1 Value1 field2 Value2 ..

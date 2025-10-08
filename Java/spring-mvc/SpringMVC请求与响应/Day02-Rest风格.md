@@ -1,6 +1,6 @@
-#Restful风格的数据接收
+# Restful风格的数据接收
 
-##Restful风格
+## Restful风格
 
 >   Rest(Representational State Transfer) 表象化状态转变 (表述性状态转变) , **基于Http,URI,xml,JSON**等标准和协议
 >
@@ -64,7 +64,7 @@
 
 ## 对请求的实践
 
-###使用@RestController
+### 使用@RestController
 
 1.  注解在类上
     -   这个类上的所有方法皆被管理
@@ -79,7 +79,7 @@
 
 
 
-###实践
+### 实践
 
 ```java
 //Get查

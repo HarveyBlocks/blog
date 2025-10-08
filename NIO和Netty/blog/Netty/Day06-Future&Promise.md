@@ -1,6 +1,6 @@
 # 异步
 
-##异步优势
+## 异步优势
 
 为什么采用异步
 
@@ -59,7 +59,7 @@ Netty的Future是JDK的Future的子类, Netty的Promise子类是Netty的Future�
     -   脱离了线程独立存在, 只作为两个线程间传递结果的容器
     -   有两个`set`方法设置成功结果和失败结果
 
-###部分API
+### 部分API
 
 | 功能/名称    | jdk Future                     | netty Future                                                 | Promise      |
 | ------------ | ------------------------------ | ------------------------------------------------------------ | ------------ |
@@ -85,7 +85,7 @@ ExecutorService executorService = Executors.newSingleThreadExecutor();
 Future<Integer> submit = executorService.submit(() -> 10);
 ```
 
-###Netty Future创建
+### Netty Future创建
 
 ```java
 Future<Integer> submit = new NioEventLoopGroup().next().submit(() -> 10);

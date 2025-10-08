@@ -1,6 +1,6 @@
 # Java客户端
 
-##需求
+## 需求
 
 1.  创建Stream类型的消息队列, 名为`stream.orders`
 2.  修改之前的秒杀下单Lua脚本, 认定有抢购资格后, 直接向`stream.orders`中添加消息, 内容包含`voucherId`,`userId`.`orderId`
@@ -20,7 +20,7 @@ xGroup Create stream.orders g1 0 MkStream
 
 ## 添加消息
 
-###修改Lua脚本
+### 修改Lua脚本
 
 1.  添加参数orderId
 
@@ -97,7 +97,7 @@ xGroup Create stream.orders g1 0 MkStream
 
 
 
-##获取消息
+## 获取消息
 
 ### 伪代码分析
 
@@ -158,7 +158,7 @@ private static final String GROUP_NAME = "g1";
 private static final String CONSUMER_NAME = "c1";
 ```
 
-### 
+###
 
 
 

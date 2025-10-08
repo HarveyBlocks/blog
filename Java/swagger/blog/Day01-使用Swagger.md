@@ -55,7 +55,7 @@ Swagger扫描的是@Controller, 以及其@XxxMapping的方法. 然后解析注�
 
 ## 基础配置
 
-###定制标题等
+### 定制标题等
 
 ![image-20240117155718480](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117155718480.png)
 
@@ -178,7 +178,7 @@ docket = docket.select()
 
 可方法, 可类型, 不生成帮助文档
 
-###@Api
+### @Api
 
 ```java
 @Api(tags = {"测试Controller","测试Swagger"},description = "描述API")
@@ -191,7 +191,7 @@ public class HelloController {...}
 
 -   就会有俩
 
-###@ApiOperation
+### @ApiOperation
 
 ```java
 @ApiOperation(value = "测试Post请求",notes = "post请求方法")

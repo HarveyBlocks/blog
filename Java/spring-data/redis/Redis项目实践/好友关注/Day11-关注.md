@@ -16,7 +16,7 @@
 
 ### 关注和取关
 
-####Redis Set设计
+#### Redis Set设计
 
 -   粉丝为键:Writer集合
 
@@ -90,7 +90,7 @@ public boolean isFollowed(Long writerId) {
 
 >   交集
 
-###Redis
+### Redis
 
 ```bash
 redis(pc2):0>sadd setKey1 0 1 3 4 5 6

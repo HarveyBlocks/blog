@@ -16,7 +16,7 @@
 
 ## 查询
 
-###完全基于文件IO
+### 完全基于文件IO
 
 ```java
 // 1、创建 searcher 对象
@@ -111,7 +111,7 @@ public class IpTool {
 
 
 
-###缓存整个文件
+### 缓存整个文件
 
 ```java
 import org.lionsoul.ip2region.xdb.Searcher;

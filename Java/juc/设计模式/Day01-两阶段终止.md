@@ -4,7 +4,7 @@
 
 线程B能在接收到终止指令后完成善后工作后再终止
 
-##stop(), interrupt()和System.exit(int)
+## stop(), interrupt()和System.exit(int)
 
 -   stop杀死线程, 如果stop被调用时线程占用了锁资源, 锁资源将永远得不到释放
 -   System.exit(int)终止程序, 而不是线程
@@ -128,9 +128,9 @@ java.lang.InterruptedException: sleep interrupted
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-##用volatile改进
+## 用volatile改进
 
-###接口
+### 接口
 
 ```java
 public interface TwoPhaseTermination extends Runnable {
@@ -148,7 +148,7 @@ public interface TwoPhaseTermination extends Runnable {
 }
 ```
 
-###实现
+### 实现
 
 ```java
 public abstract class AbstractVolatileTwoPhaseTermination implements TwoPhaseTermination {

@@ -18,7 +18,7 @@
 
 ## 命令
 
-###写
+### 写
 
 #### GeoAdd
 
@@ -35,7 +35,7 @@ redis(pc2):1>geoAdd geoKey 1 1 (1,1)号点
 
 
 
-###查
+### 查
 
 #### GeoDist
 
@@ -74,7 +74,7 @@ redis(pc2):1>geoPos geoKey (0,0)号点
 
 
 
-###范围查
+### 范围查
 
 #### ~~GeoRadius~~
 

@@ -45,11 +45,11 @@ public String getParam(@RequestBody String body) {
 
 
 
-##JSON类型的数据接收
+## JSON类型的数据接收
 
 [JSON(字符串)解析实体类](..\..\blog\java网络\JSP和AJAX\Day42-JSON.md)
 
-###FastJSON
+### FastJSON
 
 ```xml
 <dependency>
@@ -95,7 +95,7 @@ T com.alibaba.JSON.parseObject(String text, Class<T> clazz){...}
 
     
 
-###Jackson
+### Jackson
 
 >   也是一个解析JSON的包,是Spring里集成的是JacksonJson,而不是FastJSON
 
@@ -185,7 +185,7 @@ public enum Gender {
 
 
 
-###简化JSON的转换
+### 简化JSON的转换
 
 但是!
 
@@ -275,5 +275,5 @@ public String getParam2(@RequestBody User user) {
 User{username='张三', age=18, hobby=[足球,  篮球, java], birthday=Sun Nov 11 08:00:00 CST 2018, address=Address{city='霓虹', area='Tokyo'}}
 ```
 
-#### 
+####
 

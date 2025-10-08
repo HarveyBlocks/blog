@@ -1,7 +1,7 @@
 # 控制结构
 
 
-##顺序
+## 顺序
 
 ## 分支
 
@@ -85,13 +85,13 @@ private static bool WhenFunc(int a, int b) {
 
 只有在a,b都大于0时才会打印语句, 说明case guard 的执行逻辑在case之后
 
-###模式匹配
+### 模式匹配
 
 [模式](../高级/Day01-模式匹配)
 
 ## 循环
 
-###foreach
+### foreach
 
 对于迭代器可用的foreach
 

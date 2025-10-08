@@ -12,7 +12,7 @@
 
 
 
-##写
+## 写
 
 
 
@@ -37,7 +37,7 @@ redis(pc2):1>setBit bitMapKey 7 1
 
 
 
-##读
+## 读
 
 ### GetBit
 
@@ -71,7 +71,7 @@ redis(pc2):1>bitField bitMapKey Get i1 0
 
 
 
-###BitPos
+### BitPos
 
 >   查找bit数组中指定范围内第一个0/1出现的位置
 
@@ -84,7 +84,7 @@ redis(pc2):1>bitPos bitMapKey 1
 
 
 
-##运算
+## 运算
 
 ### BitOp
 

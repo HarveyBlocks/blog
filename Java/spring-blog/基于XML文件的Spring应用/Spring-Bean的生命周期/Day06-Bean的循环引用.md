@@ -19,7 +19,7 @@
 >
 >   在**DefaultListableBeanFactiry**的上四级父类**DefaultSinglentonBeanRegistry**中提供如下三个Map:
 
-#### DefaultSinglentonBeanRegistry的三个Map 
+#### DefaultSinglentonBeanRegistry的三个Map
 
 ```java
 public class 

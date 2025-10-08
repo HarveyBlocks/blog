@@ -54,7 +54,7 @@
 
 ## Spring Security整合JWT
 
-###导入依赖
+### 导入依赖
 
 ```xml
 <!--JWT 登录支持-->
@@ -65,7 +65,7 @@
 </dependency>
 ```
 
-###初期准备
+### 初期准备
 
 #### 添加JWT配置
 
@@ -399,7 +399,7 @@ public IgnoreUrlsConfig ignoreUrlsConfig(){
 }
 ```
 
-####修改Security配置
+#### 修改Security配置
 
 ```java
 @Configuration
@@ -468,7 +468,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-#### 
+####
 
 
 

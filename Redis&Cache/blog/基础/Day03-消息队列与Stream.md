@@ -348,7 +348,7 @@ redis(pc2):1>xadd 这是一个Steam的Key * 这是field2 这是value4
 -   可以被阻塞读取
 -   由消息漏读的风险
 
-##Consumer Group消费者组
+## Consumer Group消费者组
 
 >将消息划分到一个组中, 监听同一个队列
 
@@ -366,7 +366,7 @@ redis(pc2):1>xadd 这是一个Steam的Key * 这是field2 这是value4
     -   消费者获取消息后, 消息存储与`pending` (待处理) 状态, 并存入`pending-list`
     -   当处理完成后需要通过`XACK`来确认消息, 标记消息为已处理, 才会从`pending-list`移除
 
-###消费者写命令
+### 消费者写命令
 
 #### 创建消费者组
 
@@ -400,7 +400,7 @@ redis(pc2):1>XGroup Create 这是一个Steam的Key  myGroup 0
 
 
 
-####其他消费者和消费者组的写命令
+#### 其他消费者和消费者组的写命令
 
 ```bash
 # 删除指定消费者组
@@ -494,7 +494,7 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 NoACK Streams 这�
 
 ```
 
-###查看pending-list
+### 查看pending-list
 
 ```bash
 XPending streamKey groupName [[Idle minIdleTime] startId endId count [consumer]]
@@ -648,7 +648,7 @@ while(true){
 }
 ```
 
-##基于Group的Stream特点
+## 基于Group的Stream特点
 
 -   独立有JVM之外, 不受JVM内存的限制
 -   消息可回溯,消息被确认后不会被删除,**不同组的消费者**也可以获取
@@ -657,7 +657,7 @@ while(true){
 -   没有消息漏读的风险, 会标记上一次的消费记录
 -   有消息确认机制, 保证消息至少被消费一次
 
-###Redis消息队列
+### Redis消息队列
 
 ![image-20240127154611146](../../assets/Day09-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/image-20240127154611146.png)
 

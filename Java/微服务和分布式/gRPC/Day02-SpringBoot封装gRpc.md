@@ -1,6 +1,6 @@
 # SpringBoot集成gRPC
 
-##依赖
+## 依赖
 
 引入Spring依赖(当然protobuf解析的放在一个api模块)
 
@@ -34,7 +34,7 @@
 </dependency>
 ```
 
-##服务端
+## 服务端
 
 ### 配置
 

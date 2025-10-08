@@ -141,7 +141,7 @@ public class App
 
 ## SqlSessionFactory代码优化
 
-###存在问题
+### 存在问题
 
 ```java
 String resource = "mybatis-config.xml";//mybatis核心配置文件

@@ -8,7 +8,7 @@ window->PacageManager->Unity Registery
 
 搜索`Cinemachine`
 
-###添加摄像头
+### 添加摄像头
 
 <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028191021310.png" alt="image-20241028191021310" style="zoom:50%;" />
 

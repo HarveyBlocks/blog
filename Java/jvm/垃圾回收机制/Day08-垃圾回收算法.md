@@ -81,7 +81,7 @@
 
 
 
-##标记-整理算法
+## 标记-整理算法
 
 对标记-清理算法的内存空间碎片进行整理
 
@@ -95,7 +95,7 @@
 
 
 
-###优缺点
+### 优缺点
 
 -   优点
 
@@ -116,7 +116,7 @@ JDK8开启分代GC算法
 -XX:+UseServialGC
 ```
 
-###内存划分
+### 内存划分
 
 arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就是分代GC的有关内存区域
 
@@ -134,7 +134,7 @@ arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就�
 
 
 
-###内存分配配置
+### 内存分配配置
 
 ![image-20240520132606187](../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/image-20240520132606187.png)
 

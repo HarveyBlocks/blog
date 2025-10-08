@@ -1,8 +1,8 @@
 # 非阻塞模式
 
-##阻塞切换为非阻塞
+## 阻塞切换为非阻塞
 
-###将`SocketServerChannel#accept`切换为非阻塞模式
+### 将`SocketServerChannel#accept`切换为非阻塞模式
 
 ```java
 ssc.configureBlocking(false); // 默认true, 阻塞

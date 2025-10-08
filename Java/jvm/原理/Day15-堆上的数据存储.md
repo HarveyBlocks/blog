@@ -32,7 +32,7 @@ public class Student{
 
 原本两个指针之间的最小单位是1个字节, 现在可以按8字节寻址, 以8个字节为一个单位
 
-###存在问题
+### 存在问题
 
 Q: 如果有数据类型的占用空间小于8个字节, 则为之奈何?
 
@@ -66,7 +66,7 @@ A: 指针压缩技术会关闭, 好消极, 悲
 ClassLayout.parseInstance(obj).toPintable();
 ```
 
-###查看对象内存布局
+### 查看对象内存布局
 
 64为不开指针压缩
 
@@ -76,7 +76,7 @@ ClassLayout.parseInstance(obj).toPintable();
 
 ## 内存对齐
 
-###设计原因
+### 设计原因
 
 内存对齐为了解决并发条件下CPU缓存失效的问题
 
@@ -139,7 +139,7 @@ class C{
 
 ![image-20240601231829654](../asset/Day15-%E5%A0%86%E4%B8%8A%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/image-20240601231829654.png)
 
-##对象头
+## 对象头
 
 -   标记字段
     -   Mark World
@@ -173,7 +173,7 @@ class C{
 
 
 
-####HashCode
+#### HashCode
 
 ```java
 System.out.println(Integer.toBinaryString(student.hashCode()));
@@ -183,7 +183,7 @@ System.out.println(Integer.toBinaryString(student.hashCode()));
 111_1100_1100_0011_0101_0101_1011_1110
 ```
 
-###Klass Pointer
+### Klass Pointer
 
 利用JOL打印对象的Klass Pointer
 
@@ -197,7 +197,7 @@ System.out.println(Integer.toBinaryString(student.hashCode()));
 
 
 
-##对象数据
+## 对象数据
 
 -   实际字段
 -   内容对齐填充

@@ -23,7 +23,7 @@
 
 ## 数字识别
 
-###打开文件
+### 打开文件
 
 ```python
 # 一个撮（批次）的大小，64张图片
@@ -590,7 +590,7 @@ def show_image(class_name_ids, flower_id2name, data_loader):
 
 #### initialize_model函数
 
-#####官方
+##### 官方
 
 -   可选的比较多, resnet, 残差神经网络
 -   'resnet' 用的多
@@ -672,7 +672,7 @@ def initialize_model(model_name, num_classes, feature_extract, use_weights=True)
     return model_ft, input_size
 ```
 
-####resnet初始函数
+#### resnet初始函数
 
 本次我们的`model_name`是`'resnet'`
 
@@ -1096,7 +1096,7 @@ print(labels.device)
 
 
 
-###训练所有层
+### 训练所有层
 
 自己的全连接层只有一层, 进步空间有限
 

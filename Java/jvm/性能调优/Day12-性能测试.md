@@ -46,7 +46,7 @@ public void init(){
 
 
 
-####测试方法
+#### 测试方法
 
 ```java
 @Benchmark
@@ -86,9 +86,9 @@ public static void main(String[] args) throws RunnerException {
 }
 ```
 
-##死代码
+## 死代码
 
-###死代码问题
+### 死代码问题
 
 JIT会把那些没有被使用的代码从代码层面上消去, 以增加效率
 

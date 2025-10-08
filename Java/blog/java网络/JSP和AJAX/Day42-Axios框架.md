@@ -2,7 +2,7 @@
 
 >   对原生AJAX进行封装,简化书写
 
-##引入axios的js文件
+## 引入axios的js文件
 
 ```html
 <script src="js/axios=0.18.0.js"></script>

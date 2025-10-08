@@ -78,4 +78,4 @@ ifconfig
 
 ![image-20231231224329030](../shoot/Day05-%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%9B%BA%E5%AE%9AIP/image-20231231224329030.png)
 
-##Mac的富哥就自求多福吧
+## Mac的富哥就自求多福吧

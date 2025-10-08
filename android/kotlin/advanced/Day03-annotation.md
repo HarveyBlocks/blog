@@ -49,7 +49,7 @@ class MyClass
 
 描述注解的注解
 
-### `@Target` 
+### `@Target`
 
 指定允许该注解标注的目标元素类型
 

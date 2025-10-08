@@ -1,4 +1,4 @@
-#Netty的简单使用
+# Netty的简单使用
 
 ## 引入依赖
 
@@ -59,7 +59,7 @@ Event(事件)Loop(循环)
 server.group(new NioEventLoopGroup());
 ```
 
-###选择ServerSocketChannel
+### 选择ServerSocketChannel
 
 选择服务器的ServerSocketChannel实现,
 

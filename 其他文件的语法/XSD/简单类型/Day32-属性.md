@@ -41,7 +41,7 @@
 -   `required` 必须
 -   `prohibited` 禁止
 
-##使用
+## 使用
 
 XSD的声明
 

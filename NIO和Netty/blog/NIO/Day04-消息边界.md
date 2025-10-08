@@ -14,7 +14,7 @@
 
 ## 处理
 
-###思路
+### 思路
 
 * 客户端和服务器端固定消息长度，数据包大小一样，服务器按预定长度读取
     * 浪费带宽
@@ -49,7 +49,7 @@ private static void split(ByteBuffer source) {
 
 
 
-###扩容思路
+### 扩容思路
 
 
 
@@ -76,7 +76,7 @@ b2 ->> b2: 01234567890abcdef3333\r
 
 -   SocketChannel和Buffer形成了映射关系\~\~
 
-###附件
+### 附件
 
 >   attachment
 
@@ -120,7 +120,7 @@ private static ByteBuffer expansion(ByteBuffer buffer) {
 
 
 
-##ByteBuffer的大小分配
+## ByteBuffer的大小分配
 
 1.  扩容
     -   会有一次拷贝

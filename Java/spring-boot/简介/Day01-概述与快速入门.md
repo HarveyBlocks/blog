@@ -1,10 +1,10 @@
 SpringBoot-Spring Cloud-Spring Cloud Data Flow
 
-#SpringBoot
+# SpringBoot
 
 使用最小的配置快速启动SpringBoot
 
-##Spring的缺点
+## Spring的缺点
 
 -   写配置文件麻烦, 记不住
 -   依赖繁琐 ,spring全家桶里有好多,他们还互相嵌套,还有版本不兼容的问题
@@ -33,7 +33,7 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
 
 
 
-##快速入门
+## 快速入门
 
 1.  创建Maven项目
 2.  导入SpringBoot起步依赖
@@ -88,7 +88,7 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
 
 
 
-###定义Controller
+### 定义Controller
 
 
 
@@ -121,7 +121,7 @@ public class StartApplication {
 
 
 
-###测试运行
+### 测试运行
 
 ![image-20231204143804650](../../typora-user-images/Day11-快速入门/image-20231204143804650.png)
 

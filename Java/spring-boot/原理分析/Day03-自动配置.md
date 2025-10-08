@@ -173,7 +173,7 @@
 
     
 
-###动态的Condition
+### 动态的Condition
 
 ```java
 @Override
@@ -250,7 +250,7 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 
 
-###导入其他服务器的依赖
+### 导入其他服务器的依赖
 
 ```xml
 <dependency>
@@ -262,11 +262,11 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 
 
-##@Enable*
+## @Enable*
 
 >   以Enable开头的注解, 用于动态启动某些功能, 底层原理是使用@Import注解导入一些配置类,实现Bean的动态加载
 
-###获取其他工程中的Bean
+### 获取其他工程中的Bean
 
 -   SpringBoot工程是否可以直接获取jar包中定义的Bean?
 

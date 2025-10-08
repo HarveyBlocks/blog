@@ -46,7 +46,7 @@ word="hello"
 
 等号两边有空格
 
-####大小比较
+#### 大小比较
 
 `-eq` equal
 
@@ -102,7 +102,7 @@ word="hello"
 
 
 
-###if-elif-else
+### if-elif-else
 
 ```shell
 if ((1!=2)); then

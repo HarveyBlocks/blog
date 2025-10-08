@@ -30,7 +30,7 @@ log.debug("...");
 
 TimerTask不是函数式接口, 所以不能Lambda, 悲
 
-###串行执行
+### 串行执行
 
 只有一个线程来运行所有的任务(悲)
 
@@ -44,7 +44,7 @@ TimerTask不是函数式接口, 所以不能Lambda, 悲
 21:53:12.213 [Timer-0] DEBUG org.harvey.juc.juc.excutors.ScheduleExecutors -- finish 2
 ```
 
-###异常中断
+### 异常中断
 
 出现异常, 整个Timer会直接中断
 
@@ -215,7 +215,7 @@ pool.scheduleWithFixedDelay(() -> {
 
 从方法结束开始计时时间间隔
 
-###处理异常
+### 处理异常
 
 不会在控制台打印异常栈, 则为之奈何?
 

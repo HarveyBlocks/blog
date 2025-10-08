@@ -2,7 +2,7 @@
 
 [AMQP](https://www.rabbitmq.com/tutorials/tutorial-one-spring-amqp.html)
 
-##介绍
+## 介绍
 
 >   **A**dcanced **M**essage **Q**ueue **P**rotocol
 >
@@ -33,7 +33,7 @@ AMQP与语言无关, 任何语言都能用AMQP收发消息
 </dependency>
 ```
 
-###需求分析
+### 需求分析
 
 ![python-one.png (392×59)](../../assert/Day02-AMPQ/python-one.png)
 
@@ -42,7 +42,7 @@ AMQP与语言无关, 任何语言都能用AMQP收发消息
 -   在`publisher`服务中利用`SpringAMQP`直接向`simple.queue`发送消息
 -   在`consumer`服务中利用`SpringAMQP`从`simple.queue`监听消息
 
-###配置MQ
+### 配置MQ
 
 ```yaml
 spring:
@@ -54,7 +54,7 @@ spring:
     password: 123456
 ```
 
-###消息发送
+### 消息发送
 
 #### 代码编写
 

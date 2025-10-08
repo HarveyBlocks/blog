@@ -1,6 +1,6 @@
 # Channel
 
-##transferTo()
+## transferTo()
 
 >   以FileChannel为例
 
@@ -25,7 +25,7 @@ public void testFileChannel(){
 
 JDK中凡是涉及`transferTo`的都会采用操作系统的**零拷贝**进行优化
 
-###大量数据传输
+### 大量数据传输
 
 >   transferTo最多拷贝2G的数据 , 超过2G的数据怎么传输呢
 
@@ -43,7 +43,7 @@ JDK中凡是涉及`transferTo`的都会采用操作系统的**零拷贝**进行�
 
 ## 零拷贝
 
-###HeapByteBuffer
+### HeapByteBuffer
 
 ```mermaid
 graph LR
@@ -83,11 +83,11 @@ ByteBuffer buffer = ByteBuffer.allocateDirect(16);
 
 
 
-###操作系统的优化
+### 操作系统的优化
 
 >   以下皆是零拷贝, 指不需要把数据拷贝到Java的内存中了
 
-####零拷贝的特点
+#### 零拷贝的特点
 
 -   更少的**用户态**和**内核态**的切换
 
@@ -111,7 +111,7 @@ ByteBuffer buffer = ByteBuffer.allocateDirect(16);
     -   零拷贝把整个文件直接拷贝到缓冲区, 然后整个拷贝到网卡, 没有好好利用缓冲区
     -   大文件还是我们控制它**分批次地传输**的好
 
-####零拷贝的模型与原理
+#### 零拷贝的模型与原理
 
 -   linux2.1后采用sendFile方法, Java中对应channel调用transferTo/transfer
 

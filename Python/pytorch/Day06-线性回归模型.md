@@ -8,7 +8,7 @@ import torch
 
 ## 自动求导机制
 
-###启动自动求导机制
+### 启动自动求导机制
 
 ```python
 x = torch.rand((5,3))
@@ -114,7 +114,7 @@ print(x.grad) # 5
 -   当`retain_graph`为`False`时, 重复做`z.backward()`, 会报错, 除非再进行如`z = torch.sum(x + y)`的计算
 -   当`retain_graph`为`True`时, 反向传播的结果会累加, 即使没有进行计算
 
-##线性回归
+## 线性回归
 
 ```python
 from torch import nn
@@ -217,7 +217,7 @@ if __name__ == "__main__":
 
 ## 模型持久化
 
-###保存
+### 保存
 
 ```python
 module_file = "module.pkl"

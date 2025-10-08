@@ -6,7 +6,7 @@
 
 这些配置不分先后
 
-## id 
+## id
 
 **唯一标识**
 
@@ -218,6 +218,6 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
     23-10-30 14:23 [main] INFO  TestSpring - com.harvey.Impl.UserServiceImpl@971d0d8
     ```
 
-    ## factory-method和factory-bean
+## factory-method和factory-bean
     
      [Spring实例化的方式](Day02😘-Spring实例化的方式.md)

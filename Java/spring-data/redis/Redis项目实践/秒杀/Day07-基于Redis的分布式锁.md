@@ -1,4 +1,4 @@
-#基于Redis的分布式锁
+# 基于Redis的分布式锁
 
 ## 原理
 
@@ -108,9 +108,9 @@ public VoucherOrderController(StringRedisTemplate stringRedisTemplate) {
 
 ## 全局锁的问题
 
-###业务阻塞
+### 业务阻塞
 
-####锁在线程不知情的情况下被释放
+#### 锁在线程不知情的情况下被释放
 
 为了防止长久不释放锁, 我们设置了一个超时时长. 超过时长(TTL),锁被自动释放
 
@@ -338,7 +338,7 @@ private void unlock(@NonNull String lockKey, @NonNull String uniqueIdentificatio
 
 
 
- ### 不可重试
+### 不可重试
 
 >   获取锁只尝试一次就返回false, 没有重试机制
 
@@ -356,7 +356,7 @@ private void unlock(@NonNull String lockKey, @NonNull String uniqueIdentificatio
 >
 >   如果Redis提供了主从同步存在延时, 当主机宕机/或存在延时时, 如果从并同步主中的锁数据, 则会出现锁释放
 
-##Redisson
+## Redisson
 
 >   基于Redis的分布式锁框架
 >

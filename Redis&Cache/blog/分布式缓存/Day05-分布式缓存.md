@@ -39,7 +39,7 @@ bind 0.0.0.0
 requirepass 123456
 ```
 
-##分布式Redis
+## 分布式Redis
 
 Redis持久化
 

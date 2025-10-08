@@ -15,7 +15,7 @@ void testRabbitTemplate() {
 
 使用了JDK的序列化方式(Redis: 这该死的熟悉感)
 
-##消息序列化
+## 消息序列化
 
 ![image-20240112225409617](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112225409617.png)
 
@@ -108,9 +108,9 @@ public MessageConverter jackson2JsonMessageConverter(){
 }
 ```
 
-###运行测试
+### 运行测试
 
-####发送测试
+#### 发送测试
 
 ![image-20240112232458686](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112232458686.png)
 

@@ -6,7 +6,7 @@
 
 ## string
 
-###RAW
+### RAW
 
 -   最基本的编码方式是**RAW**, 基于简单字符串SDS实现, 存储上限是**512MB**
 
@@ -14,7 +14,7 @@
 
 ![image-20240405194438227](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405194438227.png)
 
-###EMBSTR
+### EMBSTR
 
 
 
@@ -41,7 +41,7 @@
 
 能不要超过44字节就不要超过44字节
 
-##List
+## List
 
 可以从双端访问
 
@@ -125,13 +125,13 @@ typedef struct zset{
 
 
 
-###HashTable+SkipList
+### HashTable+SkipList
 
 ![image-20240405211011738](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405211011738.png)
 
 数据重复存储, 肥肠臃肿内存占用很高
 
-###ZipList
+### ZipList
 
 当元素数量不多时, HashTable和SkipList的优势不明显, 因为遍历也不会慢多少
 

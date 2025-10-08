@@ -4,7 +4,7 @@
 
 spirng的监听机制实际上是对Java事件监听机制的封装
 
-##Java监听机制
+## Java监听机制
 
 Java中的事件监听机制定义了以下几个类:
 
@@ -109,13 +109,13 @@ Java中的事件监听机制定义了以下几个类:
 
     -   **项目启动后自动执行**
 
-###ApplicationRunner和CommandLineRunner
+### ApplicationRunner和CommandLineRunner
 
 同样是在项目启动后执行, 可以用来做数据库的预热工作(把数据库的数据放入内存)
 
 **其参数是命令行参数**
 
-###ApplicationContextInitializer
+### ApplicationContextInitializer
 
 -   需要在spirng.factories配置
 

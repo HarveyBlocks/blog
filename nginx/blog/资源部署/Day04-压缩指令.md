@@ -16,11 +16,11 @@ gzip
 
 ![image-20240420212915296](..\..\asset\Day04-压缩指令\image-20240420212915296.png)
 
-##压缩配置
+## 压缩配置
 
 `ngx_http_gzip_module`
 
-###`gzip` 
+### `gzip`
 
 ```nginx
 gzip on | off
@@ -198,7 +198,7 @@ gzip_min_length 20 ;
 
 
 
-###`gzip_proxied`
+### `gzip_proxied`
 
 是否对服务端返回的结果进行Gzip压缩
 
@@ -268,7 +268,7 @@ gzip需要放到nginx上, 做了处理, 再还给操作系统
 
 
 
-### 解决方法 
+### 解决方法
 
 在访问之前就把静态文件压缩
 

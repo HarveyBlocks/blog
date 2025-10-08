@@ -57,16 +57,16 @@ School school = schoolOpt.get();
 
 如果`schoolOpt`中存储的是null, 那么抛出异常`NoSuchElementException`
 
-###判断是否存有实例
+### 判断是否存有实例
 
-####isPresent
+#### isPresent
 
 ```java
 Optional<School> schoolOpt = Optional.ofNullable(new School());
 System.out.println(schoolOpt.isPresent());
 ```
 
-####ifPresent
+#### ifPresent
 
 或用链式编程直接决定各种情况下的行为
 
@@ -94,7 +94,7 @@ schoolOpt.ifPresentOrElse(consumer,  // 执行
 
 ### orElse
 
-####orElse
+#### orElse
 
 如果Optional中没有实例, 则返回other
 

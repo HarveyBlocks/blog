@@ -19,7 +19,7 @@ func TestFormatedNow(t *testing.T) {
 }
 ```
 
-##启动测试命令
+## 启动测试命令
 
 ```shell
 go test [-v]

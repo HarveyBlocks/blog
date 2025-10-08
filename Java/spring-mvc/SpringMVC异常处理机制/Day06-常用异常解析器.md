@@ -5,7 +5,7 @@
 -   Compose混合的
 -   **ExceptionHandlerExceptionResolver**
 
-##九大组件之一
+## 九大组件之一
 
 ![image-20231202144553680](../../typora-user-images/Day06-常用异常解析器/image-20231202144553680.png)
 

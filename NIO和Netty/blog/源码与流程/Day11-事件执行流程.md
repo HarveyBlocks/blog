@@ -1,4 +1,4 @@
-#事件执行流程
+# 事件执行流程
 
 ```java
 private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {
@@ -134,7 +134,7 @@ public static SocketChannel accept(final ServerSocketChannel serverSocketChannel
 
 ![image-20240403213323201](../../assets/Day11-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/image-20240403213323201.png)
 
-####将readBuf加入ServerSocketChannel流水线
+#### 将readBuf加入ServerSocketChannel流水线
 
 获取流水线`pipeline`
 
@@ -161,7 +161,7 @@ public void read() {
 }
 ```
 
-###将SocketChannel注册至selector
+### 将SocketChannel注册至selector
 
 由pipeline中的Accpetor(`ServerBootstrapAcceptor`)来处理连接并注册
 

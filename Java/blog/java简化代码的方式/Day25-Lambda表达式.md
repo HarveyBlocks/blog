@@ -121,7 +121,7 @@ public static void main(String[] args) {
 }
 ```
 
-###  TreeSet(Comparator<? super E> comparator) 
+###  TreeSet(Comparator<? super E> comparator)
 
 
 ```java
@@ -286,7 +286,7 @@ print(1, 0, tryLambda2);
 
 结果都是一样哒!
 
-##利用函数式接口写一个转化器
+## 利用函数式接口写一个转化器
 
 ```java
 public static <RESOURCE,TARGET> List<TARGET> convert(List<RESOURCE> resources,Function<RESOURCE,TARGET> convertor){

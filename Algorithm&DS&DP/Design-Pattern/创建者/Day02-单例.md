@@ -106,7 +106,7 @@ instance对象是随着类的加载而创建的。
 
 
 
-###代码清单
+### 代码清单
 
 ```java
 public class HungrySingletonObject {
@@ -299,7 +299,7 @@ enum是JVM底层实现的单例, 不会有破坏问题
 
 ### 序列化
 
-####破坏
+#### 破坏
 
 ```java
 public static boolean serializeBreakSingleton() {
@@ -361,7 +361,7 @@ public class XXXSingletonObject implements Serializable {
 
 ### 反射
 
-####破坏
+#### 破坏
 
 ```java
 public static boolean reflectBreakSingleton()
@@ -379,7 +379,7 @@ public static boolean reflectBreakSingleton()
 }
 ```
 
-####解决
+#### 解决
 
 用静态字段判断是否是多次调用构造函数
 

@@ -12,7 +12,7 @@
 
 
 
-##攻击动画
+## 攻击动画
 
 1.   制作动画Attack1, Attack2, critcal attack
 

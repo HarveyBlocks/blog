@@ -46,7 +46,7 @@ Dubbo对Java原生的SPI机制进行了增强
 
 ### DubboSPI
 
-####使用
+#### 使用
 
 1.  resources中创建`/META-INF/dubbo`目录
 
@@ -161,7 +161,7 @@ return instance;
 
 ## 服务注入
 
-###注入时机
+### 注入时机
 
 1.  Spring容器调用`ReferenceBean#afterPropertiesSet`方法时引用服务, 饿汉式
 2.  `ReferrenceBean`对应的服务被注入到其他类中时引用.懒汉式(默认)

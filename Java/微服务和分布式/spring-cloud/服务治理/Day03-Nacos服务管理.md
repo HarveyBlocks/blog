@@ -146,7 +146,7 @@ private URI getUri(String serviceName, Function<Integer, Integer> strategy) {
 
 负载算法均衡见MyCat
 
-####向服务发送请求
+#### 向服务发送请求
 
 ```java
 String placeholders = "ids";// 占位符
@@ -264,7 +264,7 @@ NacosRule优先本地, 然后随机, 如果本地的宕机了, 使用远程的�
 
 失败, 依旧是轮询
 
-##配置负载均衡权重
+## 配置负载均衡权重
 
 ![image-20240503142459283](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142459283.png)
 
@@ -310,7 +310,7 @@ end
     
         
 
-###新建
+### 新建
 
 ![image-20240503143234526](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143234526.png)
 
@@ -352,7 +352,7 @@ spring:
 
 对服务器压力比较大
 
-##配置
+## 配置
 
 ```yaml
 spring:

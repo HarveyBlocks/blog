@@ -32,7 +32,7 @@ Context Switch反复发生会影响性能
 -   有更高优先级的线程需要运行
 -   线程自己调用`sleep()`, `yueld()`, `wait()`, `join()` , `park()`, `synchronized()` , `lock`等方法时
 
-###切换流程
+### 切换流程
 
 当Context Switch发生
 

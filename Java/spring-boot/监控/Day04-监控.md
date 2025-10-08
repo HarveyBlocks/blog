@@ -42,7 +42,7 @@ info:
 
 ![image-20231207154750029](../../typora-user-images/Day04-监控/image-20231207154750029.png)
 
-###健康检查
+### 健康检查
 
 ```yaml
 management:
@@ -72,7 +72,7 @@ management:
 
     ![image-20231207154045448](../../typora-user-images/Day04-监控/image-20231207154045448.png)
 
-###把其他端点的监控暴露
+### 把其他端点的监控暴露
 
 ```yaml
 management:
@@ -134,7 +134,7 @@ Spring Boot Admin有客户端(Client)和服务端(Server)
 
 
 
-###admin-client使用步骤
+### admin-client使用步骤
 
 1.  创建admin-client模块
 
@@ -170,6 +170,6 @@ Spring Boot Admin有客户端(Client)和服务端(Server)
 
 ![image-20231207165145056](../../typora-user-images/Day04-监控/image-20231207165145056.png)
 
-##牛逼不过Idea
+## 牛逼不过Idea
 
 ![image-20231207165325705](../../typora-user-images/Day04-监控/image-20231207165325705.png)

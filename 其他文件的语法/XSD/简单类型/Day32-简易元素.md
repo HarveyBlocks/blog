@@ -49,13 +49,13 @@
 
 ## 默认值和固定值
 
-###default
+### default
 
 ```xml
 <xs:element name="color" type="xs:string" default="red"/>
 ```
 
-###fixed
+### fixed
 
 ```xml
 <xs:element name="color" type="xs:string" fixed="red"/>

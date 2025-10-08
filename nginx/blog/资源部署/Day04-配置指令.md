@@ -6,7 +6,7 @@
 
 `server`下
 
-###语法
+### 语法
 
 配置监听端口
 
@@ -36,7 +36,7 @@ listen 80;
 listen *:80;
 ```
 
-###`default_server`
+### `default_server`
 
 ```nginx
 server{
@@ -51,7 +51,7 @@ server{
 
 如果不指定, 采用的是第一个server
 
-##`server_name`
+## `server_name`
 
 用来设置虚拟主机的服务名, 可以是IP或域名
 
@@ -73,7 +73,7 @@ server_name localhost ;
 
 
 
-###通配符
+### 通配符
 
 `*`表0个或多个, 不能放在中段, 只可以放在`*.`或者`.*`
 
@@ -234,7 +234,7 @@ server {
 
 
 
-####`root`
+#### `root`
 
 设置请求的根目录, 可在`http` , `server` , `location`
 
@@ -325,7 +325,7 @@ location /source/ {
 
 
 
-###`index`
+### `index`
 
 设置网页的默认首页, 在 `http`, `server`, `location`
 
@@ -345,7 +345,7 @@ location view {
 
 
 
-###`error_page`
+### `error_page`
 
 设置网站错误页面, 可在`http` , `server`, `location`
 

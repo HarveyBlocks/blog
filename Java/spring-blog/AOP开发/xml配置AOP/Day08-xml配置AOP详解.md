@@ -1,4 +1,4 @@
-#切点表达式的配置方式
+# 切点表达式的配置方式
 
 -   配置可以配到外面,也可以里面
 
@@ -51,7 +51,7 @@ pointcut="execution(public * com.harvey.service..UserServiceImpl.*(..))"
 <aop:before method="before" pointcut="execution(* *..*.*(..))"/>
 ```
 
-#通知的类型(五种)
+# 通知的类型(五种)
 
 
 
@@ -225,7 +225,7 @@ after-returning
 
 -   会走,会在环绕后通知前走
 
-##连接点
+## 连接点
 
 ```java
 public Object around(ProceedingJoinPoint point) throws  Throwable{
@@ -238,7 +238,7 @@ public Object around(ProceedingJoinPoint point) throws  Throwable{
 
 ![image-20231110131212861](../../../typora-user-images/Day08-xml配置AOP详解/image-20231110131212861.png)
 
-###小测试
+### 小测试
 
 -   这么写可以,但很不人道,也没有意义
 
@@ -335,7 +335,7 @@ before
 before
 ```
 
-###ProceedingJoinPoint
+### ProceedingJoinPoint
 
 >   动态获取被增强的方法
 
@@ -352,7 +352,7 @@ public Object around(ProceedingJoinPoint point) throws  Throwable{
 
 ![image-20231110134859631](../../../typora-user-images/Day08-xml配置AOP详解/image-20231110134859631.png)
 
-###Throwable
+### Throwable
 
 >得到目标对象的方法抛出的异常
 >
@@ -407,7 +407,7 @@ around:java.lang.NullPointerException
 
 
 
-##\<advisor\>配置切面
+## \<advisor\>配置切面
 
 ### AOP的xml配置的两种方式
 
@@ -445,7 +445,7 @@ public class MyAdvice2 implements MethodBeforeAdvice, AfterReturningAdvice {
 }
 ```
 
-###xml文件
+### xml文件
 
 ```java
 <?xml version="1.0" encoding="UTF-8"?>
@@ -477,7 +477,7 @@ public class MyAdvice2 implements MethodBeforeAdvice, AfterReturningAdvice {
 
 ![image-20231110142335511](../../../typora-user-images/Day08-xml配置AOP详解/image-20231110142335511.png)
 
-###详解MethodInterceptor
+### 详解MethodInterceptor
 
 >   类似于around()
 
@@ -497,11 +497,11 @@ public class MyAdvice2 implements MethodInterceptor {
 }
 ```
 
-####结果
+#### 结果
 
 ![image-20231110143108353](../../../typora-user-images/Day08-xml配置AOP详解/image-20231110143108353.png)
 
-###与\<aspect\>的区别
+### 与\<aspect\>的区别
 
 -   用接口就没有\<aspect\>灵活了
 

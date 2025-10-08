@@ -59,7 +59,7 @@ ONBOOT=yes
 DNS1=114.114.114.114
 ```
 
-##apt命令为Ubuntu安装软件
+## apt命令为Ubuntu安装软件
 
 
 
@@ -99,7 +99,7 @@ sudo su - root
 
 
 
-###使用apt
+### 使用apt
 
 Ubuntu的软件安装包时`.deb`的文件, 与centos的不同
 

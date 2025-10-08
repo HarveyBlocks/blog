@@ -1,6 +1,6 @@
 #  MyCat配置
 
-##核心配置文件
+## 核心配置文件
 
 核心配置文件/usr/local/mycact/conf/schema.xml
 
@@ -123,7 +123,7 @@
         -   不配默认时普通表
         -   全局表配置为**"global"**
 
-###数据节点
+### 数据节点
 
 ```xml
 <dataNode name="dn1" dataHost="localhost1" database="db01" />
@@ -182,7 +182,7 @@
     <!--host的值涉及主从复制-->
 
 
-##分页规则配置
+## 分页规则配置
 
 >   rule.xml
 >
@@ -233,7 +233,7 @@
 
 
 
-##用户权限配置
+## 用户权限配置
 
 >   server.xml
 
@@ -260,7 +260,7 @@
 
 
 
-###配置用户的用户权限
+### 配置用户的用户权限
 
 ```xml
 <user name="root" defaultAccount="true">
@@ -279,7 +279,7 @@
 </user>
 ```
 
-###表级权限配置
+### 表级权限配置
 
 ```xml
 				<!--改成true表示实行检查-->

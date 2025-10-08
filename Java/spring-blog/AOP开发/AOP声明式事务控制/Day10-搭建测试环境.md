@@ -1,10 +1,10 @@
-#搭建转账环境
+# 搭建转账环境
 
 ![image-20231111005627345](../../../typora-user-images/Day10-搭建测试环境/image-20231111005627345.png)
 
 ## 前期准备
 
-###数据库搭建
+### 数据库搭建
 
 ```mysql
 create table tb_account (
@@ -53,7 +53,7 @@ public interface AccountMapper {
 }
 ```
 
-###Service层
+### Service层
 
 -   事物(transferMoney)方法
     -   其中必须有转入和转出事物的方法,共同构成一个事物
@@ -126,7 +126,7 @@ public class SpringConfig {
 }
 ```
 
-###测试
+### 测试
 
 ```java
 package com.harvey;

@@ -1,4 +1,4 @@
-#解决击穿
+# 解决击穿
 
 ## 互斥锁
 
@@ -98,7 +98,7 @@ private Shop getShopFromDbAndWriteToRedis(Long id, String shopKey) {
 
 
 
-####互斥锁逻辑
+#### 互斥锁逻辑
 
 ```java
 @Override
@@ -490,7 +490,7 @@ public Shop queryMutexFixByLock(Long id)  {
 
 热点key会提前加入缓存,设定上理论过期时间,所以这些key会一直存在直到活动结束
 
-###提前加入热点key
+### 提前加入热点key
 
 -   为了检查数据, 准备了返回值
 
@@ -593,7 +593,7 @@ private Shop getHashShopFromRedis(Long id) {
 
 
 
-###逻辑过期时间的使用
+### 逻辑过期时间的使用
 
 ```java
 @Override
@@ -635,7 +635,7 @@ public Shop queryMutexFixByLogicalTtl(Long id) {
 }
 ```
 
-####DoubleCheck
+#### DoubleCheck
 
 如果锁成功应该再次检测redis缓存是否过期
 做DoubleCheck
@@ -659,7 +659,7 @@ public Shop queryMutexFixByLogicalTtl(Long id) {
     1-依旧过期
     正在缓存数据
     完成缓存
-##测试
+## 测试
 
 最终的测试(100条线程一秒完成)结果
 

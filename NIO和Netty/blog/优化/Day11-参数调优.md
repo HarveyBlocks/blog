@@ -96,7 +96,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 
 -   属于ServerSocketChannel的参数
 
-###TCP三次握手和Backlog
+### TCP三次握手和Backlog
 
 -   在Linux早期版本中, backlog包括了两个队列的大小, 在之后, 分别用一下参数来控制
 
@@ -161,7 +161,7 @@ TCP-Nagle算法: 将小数据包攒一批了再发送
 
 然而, Netty默认开启了Nagle算法
 
-##SO_SNDBUF & SO_RCVBUF
+## SO_SNDBUF & SO_RCVBUF
 
 -   发送缓冲区和接收缓冲区
 

@@ -4,11 +4,11 @@
 
 
 
-##实现流程
+## 实现流程
 
 ![image-20240120151734806](../../../assert/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120151734806.png)
 
-##实现代码
+## 实现代码
 
 ```java
 // 4. 查询是否存在订单
@@ -57,7 +57,7 @@ private boolean voucherUserExit(Long userId, Long voucherId) {
 
 
 
-###锁的粒度
+### 锁的粒度
 
 要使用改变锁的粒度的方法
 

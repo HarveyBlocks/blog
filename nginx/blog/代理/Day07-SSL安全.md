@@ -27,7 +27,7 @@
 
 `http`, `server`
 
-###开启SSL
+### 开启SSL
 
 
 
@@ -133,9 +133,9 @@ ssl_session_timeout  5m;
 ssl_ciphers  HIGH:!aNULL:!MD5;
 ssl_prefer_server_ciphers  on;
 ```
-##生成SSL证书
+## 生成SSL证书
 
-###从阿里云购买SSL证书文件
+### 从阿里云购买SSL证书文件
 
 登录
 

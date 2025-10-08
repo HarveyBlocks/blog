@@ -6,7 +6,7 @@
 
 ## 发送短信验证码
 
-###流程分析
+### 流程分析
 
 1.  输入手机号
 
@@ -24,7 +24,7 @@
 
 5.  给用户发送短信验证码
 
-###查看前端请求
+### 查看前端请求
 
 ![image-20240102205326705](../../../../typora-user-images/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102205326705.png)
 
@@ -127,7 +127,7 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 }
 ```
 
-####~~牢骚~~
+#### ~~牢骚~~
 
 >   我认为, **将验证码存入session**,**决定返回什么Result**, 不是service层该做的事情, 应该在controller来完成
 
@@ -175,7 +175,7 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 
 
-###测试
+### 测试
 
 ![image-20240102220601048](../../../../typora-user-images/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102220601048.png)
 
@@ -187,7 +187,7 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 
 
-###流程分析
+### 流程分析
 
 1.  用户提交验证码
 
@@ -256,7 +256,7 @@ public class LoginFormDTO {
 
 是我的话可能会写俩类, 造成代码的冗余, 归根结底是不够熟练. 反省反省
 
-####Service
+#### Service
 
 -   Session的键是自己定义的一些常量
 
@@ -426,7 +426,7 @@ public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
 
 由于对于每一次的请求都需要校验用户信息, 我们将这个功能做在拦截器`Interceptor`
 
-###流程分析
+### 流程分析
 
 1.  请求并携带Cookie
 
@@ -448,7 +448,7 @@ public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
 
 5.  放行
 
-###查看请求
+### 查看请求
 
 
 

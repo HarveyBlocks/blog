@@ -2,7 +2,7 @@
 
 >   可排序Set集合
 
-##介绍
+## 介绍
 
 -   每个元素都带有Score属性,基于Score属性对元素排序
 -   元素不可重复
@@ -58,7 +58,7 @@ centos-redis:0>zRevRank stu Jhon
 
 
 
-####score值
+#### score值
 
 
 
@@ -177,7 +177,7 @@ centos-redis:0>zIncrBy stu -1 Amy
 
 
 
-###倒置
+### 倒置
 
 -   这些命令有关排序的都是默认升序
 
@@ -205,7 +205,7 @@ zInter zSet1 zSet2
 
 
 
-###并
+### 并
 
 ```bash
 zUnion zSet1 zSet2
@@ -215,7 +215,7 @@ zUnion zSet1 zSet2
 
 
 
-###差
+### 差
 
 
 

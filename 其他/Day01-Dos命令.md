@@ -2,7 +2,7 @@
 
 ![image-20230731175142923](typora-user-images/image-20230731175142923.png)
 
- ## 打开cmd的方式
+## 打开cmd的方式
 
 1. Windows菜单 -> Windows系统 -> 命令提示符
 

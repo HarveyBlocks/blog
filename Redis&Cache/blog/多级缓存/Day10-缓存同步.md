@@ -43,7 +43,7 @@
     -   时效性要求一般
     -   有多个服务需要同步
 
-##Canel
+## Canel
 
 >   Canel 水道, 管道, 沟渠
 
@@ -66,7 +66,7 @@ Canel会伪装成Mysql数据库的Slave节点, 从而监听master的binary log�
 [安装Canel](安装Canal.md)
 
 
-##使用Canel
+## 使用Canel
 
 ### Canal客户端
 

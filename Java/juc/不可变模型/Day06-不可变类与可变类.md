@@ -1,6 +1,6 @@
 # 不可变
 
-##不可变immutable类
+## 不可变immutable类
 
 >   String为例
 
@@ -10,7 +10,7 @@ String是不可变的, 其内的方法不会改变自己的字段值, 其如`sub
 
 不可变类被finnal修饰, 防止自己的字段/方法被子类继承后改变其不可变的意义
 
-##可变mutable类
+## 可变mutable类
 
 >   SimpleDataFormat为例
 

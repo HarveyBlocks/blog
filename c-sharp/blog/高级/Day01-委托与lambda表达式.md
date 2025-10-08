@@ -2,7 +2,7 @@
 
 函数式接口
 
-##声明
+## 声明
 
 ```csharp
 public delegate TResult Func<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in T8, out TResult>(
@@ -16,7 +16,7 @@ public delegate TResult Func<in T1, in T2, in T3, in T4, in T5, in T6, in T7, in
   T8 arg8);
 ```
 
-##使用
+## 使用
 
 ```csharp
 var runnable = new Action(() => Console.WriteLine());

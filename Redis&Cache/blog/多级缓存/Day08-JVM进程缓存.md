@@ -2,7 +2,7 @@
 
 如HashMap,GuavaCache
 
-##特点
+## 特点
 
 -   优点: 读取本地内存, 没有网络开销, 速度比分布式缓存快
 -   缺点: 存储容量有限, 可靠性较低(Tomcat服务器重启数据就丢失), 无法共享
@@ -16,7 +16,7 @@
 
 目前Spring内部使用的缓存就是Caffeine
 
-###简述
+### 简述
 
 [Caffeine](https://github.com/ben-manes/caffeine/wiki/Home-zh-CN)
 
@@ -154,7 +154,7 @@ key: null
 
 ### Caffeine的使用
 
-####在配置类创建缓存
+#### 在配置类创建缓存
 
 将Item信息分为Item表和ItemStock表(itemStock是库存和售出数据), item表的数据是不常变的, itemStock的数据是常变的, 分开存储, 有利于频繁读写ItemStock的缓存
 
@@ -178,7 +178,7 @@ public class CacheConfig {
 }
 ```
 
-####配合缓存的查询
+#### 配合缓存的查询
 
 ```java
 @GetMapping("/{id}")

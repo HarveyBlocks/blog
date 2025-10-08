@@ -6,7 +6,7 @@
 
 -   判断是否存在
 
-##Hash值和Hash函数
+## Hash值和Hash函数
 
 相同的数据总能得出相同的Hash值
 
@@ -51,9 +51,9 @@ t_HashCode Hash::doXor(const t_HashCode *p, int len) {
     4.  index没数据, 填入
     5.  index有数据, 往后一格, 返回Step.4
 
-##例题
+## 例题
 
-###有效的字母异位词
+### 有效的字母异位词
 
 判断一个字符串A能不能把字母重组成字符串B, 只考虑全小写
 
@@ -74,7 +74,7 @@ t_HashCode Hash::doXor(const t_HashCode *p, int len) {
 
 
 
-###求交集
+### 求交集
 
 同理, 两个数组(一个数组里也含重复元素), 求交集
 
@@ -136,7 +136,7 @@ hash.find(target-nums[i]); 如果存在, 在nums中找到target-nums[i], 返回[
 
 时间复杂度O(n+1)
 
-###四数相加
+### 四数相加
 
 [力扣](https://leetcode.cn/problems/4sum-ii/)
 

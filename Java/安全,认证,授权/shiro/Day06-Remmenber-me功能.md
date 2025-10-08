@@ -1,7 +1,7 @@
 -   敏感信息或付款操作是不能remenber me的
 -   基于Cookie实现
 
-#实现
+# 实现
 
 ## 准备Cookie
 
@@ -49,7 +49,7 @@ public static CookieRememberMeManager getManager(){
 
 
 
-##配置
+## 配置
 
 ```java
 /**

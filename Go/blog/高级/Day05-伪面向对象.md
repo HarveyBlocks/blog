@@ -1,4 +1,4 @@
-#伪OOP
+# 伪OOP
 
 ```go
 type Student struct {
@@ -26,7 +26,7 @@ func main() {
 
 ## 结构体
 
-###声明
+### 声明
 
 ```go
 type 结构体名 struct{
@@ -73,9 +73,9 @@ var newStudent *Student = new(Student)
 
 
 
-##方法
+## 方法
 
-###声明
+### 声明
 
 ```go
 func (对象指针名 *对象类型) 方法名(参数 参数类型, ...)(返回值 返回值类型,...){

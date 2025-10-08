@@ -226,7 +226,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-####用户信息服务
+#### 用户信息服务
 
 需要我们提供UserDetailsService
 
@@ -254,7 +254,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     a
 
-####密码编码器
+#### 密码编码器
 
 ```java
 /**
@@ -321,7 +321,7 @@ protected Class<?>[] getRootConfigClasses() {
 }
 ```
 
-###SpringSecurity环境的初始化
+### SpringSecurity环境的初始化
 
 >   创建一个属于SpringSecurity的Initializer
 
@@ -341,7 +341,7 @@ public class SpringSecurityApplicationInitializer extends AbstractSecurityWebApp
 
 ## 授权
 
-###对端点进行权限限制
+### 对端点进行权限限制
 
 ```java
 /**

@@ -43,7 +43,7 @@ pipline.sync();// 发送请求执行命令,将管道中的数据清空
 
 
 
-####RedisTemplate
+#### RedisTemplate
 
 ```java
 RedisCallback<Object> objectRedisCallback = connection -> {
@@ -53,7 +53,7 @@ RedisCallback<Object> objectRedisCallback = connection -> {
 stringRedisTemplate.executePipelined(objectRedisCallback);
 ```
 
-###Pipeline和Redis原生命令的区别和选择
+### Pipeline和Redis原生命令的区别和选择
 
 Redis的原生命令具有**原子性**
 

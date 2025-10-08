@@ -2,7 +2,7 @@
 
 [Kubernetes 博客](https://www.cnblogs.com/weicunqi/tag/Kubernetes 学习笔记/)
 
-##容器部署
+## 容器部署
 
 ### 应用部署方式演变
 
@@ -37,7 +37,7 @@
 
 
 
-##Kubernetes简介
+## Kubernetes简介
 
 [Kubernetes](https://kubernetes.io/)
 

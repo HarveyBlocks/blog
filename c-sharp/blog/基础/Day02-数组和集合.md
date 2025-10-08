@@ -2,7 +2,7 @@
 
 ## 数组
 
-###一维数组
+### 一维数组
 
 声明赋值
 
@@ -52,7 +52,7 @@ Console.WriteLine(array2.GetLength(0)); // 3
 Console.WriteLine(array2.GetLength(1)); // 2
 ```
 
-###继承
+### 继承
 
 皆继承自Array类
 

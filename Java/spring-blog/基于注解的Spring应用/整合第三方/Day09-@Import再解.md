@@ -64,7 +64,7 @@ public class MyImportSelect implements ImportSelector {
 
 有些第三方框架没有做Spring,可以在这里面帮助它注册,或者说包一层,导入一层注解啥的
 
-##导入实现ImportBeanDefinitionRegister接口的类
+## 导入实现ImportBeanDefinitionRegister接口的类
 
 >   这里不仅能动态地决定import的Bean,还能确定其name
 

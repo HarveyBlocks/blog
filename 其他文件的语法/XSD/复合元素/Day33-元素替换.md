@@ -6,11 +6,11 @@
 
 新定义一个名字不一样的元素, 可以完全替换另一个元素的位置, 它们的区别仅仅只有名字不而已
 
-##需求
+## 需求
 
 使用schema的程序员, 来自英国和China! 我们希望有能力让用户选择在 XML 文档中使用China! 语的元素名称还是英语的元素名称。
 
-##属性`substitutionGroup`
+## 属性`substitutionGroup`
 
 定义一个 *substitutionGroup*, 声明主元素(NAME)，次元素(name)，
 

@@ -32,7 +32,7 @@
 
 
 
-##设置状态
+## 设置状态
 
 ```nginx
 upstream lb_test{

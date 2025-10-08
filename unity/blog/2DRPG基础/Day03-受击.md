@@ -56,7 +56,7 @@ public class CharacterFeature : MonoBehaviour {
 }
 ```
 
-##攻击与受击
+## 攻击与受击
 
 ```csharp
 public class Attack : MonoBehaviour {

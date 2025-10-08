@@ -73,7 +73,7 @@ void AvlTree<T>::leftRotate(BinaryTreeNode<T> *node, BinaryTreeNode<T> *parentNo
 
 
 
-###右旋
+### 右旋
 
 当左子树比较重, 使用右旋
 

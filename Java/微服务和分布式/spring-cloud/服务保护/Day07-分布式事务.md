@@ -41,7 +41,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 ### 2PC二阶段提交
 
-####流程
+#### 流程
 
 1.  提交事务请求
     1.  参与者将各自的SQL交给协调者, 协调者进行SQL执行(意义不明)
@@ -112,7 +112,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
     1.  各参与者接收到`abort`请求后, 执行事务回滚操作
     2.  各参与者完成事务回滚后, 向发送者反馈ACK, 完成事务回滚
 
-#### 
+####
 
 
 
@@ -164,7 +164,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 ![image-20240116163219427](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116163219427.png)
 
-##Seata的使用
+## Seata的使用
 
 ### 部署TC服务
 
@@ -388,7 +388,7 @@ seata:
       boss-thread-size: 1
 ```
 
-####在Docker上部署
+#### 在Docker上部署
 
 -   拷贝seata目录到虚拟机的/root目录
 -   拷贝seata.tar文件于**统一目录**
@@ -448,7 +448,7 @@ seata:
 
 ### 微服务集成Seata
 
-####引入依赖
+#### 引入依赖
 
 ```xml
 <!--seata-->

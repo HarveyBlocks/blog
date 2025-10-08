@@ -249,7 +249,7 @@ s.query(QueryBuilders.multiMatchQuery("如家","name","business"));
 
 
 
-##精准查询
+## 精准查询
 
 ### `ids`根据id查询
 
@@ -390,7 +390,7 @@ s.query(QueryBuilders.geoBoundingBoxQuery("location")
                 new GeoPoint(31.351433, 121.57522)));
 ```
 
-##复合查询
+## 复合查询
 
 
 
@@ -519,7 +519,7 @@ MatchQueryBuilder matchQuery = new MatchQueryBuilder("all","上海北京如家")
 
     然后到序输出newlist
 
-### `bool` 复合条件查询 
+### `bool` 复合条件查询
 
 -   组合方式
     -   `must`必须匹配每个子查询
@@ -600,7 +600,7 @@ s.sort("price", SortOrder.ASC);
 
 ## 分页
 
-###普通分页
+### 普通分页
 
 -   `from`
 -   `size`

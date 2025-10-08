@@ -138,7 +138,7 @@ Slice->Poivot 锚点, 图片中心轴的位置(图中蓝色小圆圈), 将锚点
 
 Porject->Asset->Create->2D->SpriteAtlas
 
-##瓦片地图瓦片调色盘
+## 瓦片地图瓦片调色盘
 
 Window->2D->Tile Palette
 
@@ -162,7 +162,7 @@ Window->2D->Tile Palette
 
 TilePallette 识别到了实体TileMap
 
-###工具
+### 工具
 
 -   同样的按钮点两次就可以取消
 

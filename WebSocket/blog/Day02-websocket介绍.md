@@ -163,7 +163,7 @@ public class ChatEndpoint {
 
 ![image-20231230134333139](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231230134333139.png)
 
-####服务端推送数据给客户端
+#### 服务端推送数据给客户端
 
 1.  `RemoteEndpoint`, 其实例由Session维护
 

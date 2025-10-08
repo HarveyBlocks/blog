@@ -1,4 +1,4 @@
-#请求数据的接收
+# 请求数据的接收
 
 >   Get请求数据-键值对
 >
@@ -76,7 +76,7 @@ public String getParam(@RequestParam("name") String username, int age){...}
 
     
 
-###Get请求一键对多值
+### Get请求一键对多值
 
 >   把接收的数据,以字符串**数组**接收
 
@@ -246,9 +246,9 @@ public String getParam(@RequestParam("name") String username, int age) {
 
 
 
-###@requesrParam
+### @requesrParam
 
-####属性
+#### 属性
 
 -   **value**:键名指定
 

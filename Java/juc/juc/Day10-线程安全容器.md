@@ -7,7 +7,7 @@
 
 历史悠久, 简单粗暴的方法上synchrinuzed
 
-##修饰器线程安全集合
+## 修饰器线程安全集合
 
 ```java
 Collection<Object> collection = Collections.synchronizedCollection(list);
@@ -15,7 +15,7 @@ Collection<Object> collection = Collections.synchronizedCollection(list);
 
 简单的方法内synchrinuzed修饰
 
-##JUC线程安全集合
+## JUC线程安全集合
 
 ### Blocking-
 

@@ -130,7 +130,7 @@ public static void main(String[] args) {
 }
 ```
 
-##泛型类型转换
+## 泛型类型转换
 
 ```java
 T t1 = (T) new Object();

@@ -22,7 +22,7 @@ typedef struct redisObject {
 
 但是如果用了存储容器, 就只有一个头, 节省了内存的开支
 
-##Encoding编码
+## Encoding编码
 
 ```C
 #define OBJ_ENCODING_RAW 0     /* Raw 编码动态字符串 */
@@ -38,6 +38,6 @@ typedef struct redisObject {
 #define OBJ_ENCODING_STREAM 10 /* Encoded as a radix tree of listpacks 流*/
 ```
 
-###类型和编码
+### 类型和编码
 
 ![image-20240405194043887](../../assets/Day13-RedisObject/image-20240405194043887.png)

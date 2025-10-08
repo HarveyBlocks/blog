@@ -103,7 +103,7 @@
 
 ## XML方式使用Spring Task
 
-###引入命名空间
+### 引入命名空间
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -141,7 +141,7 @@ public class TaskServiceImpl implements TaskService {
 
 
 
-###配置定时任务
+### 配置定时任务
 
 
 
@@ -157,7 +157,7 @@ public class TaskServiceImpl implements TaskService {
 
 
 
-###配置定时规则
+### 配置定时规则
 
 ```xml
 <task:scheduled ref="taskService" method="firstTask" initial-delay="1000" fixed-delay="1000"/>
@@ -176,7 +176,7 @@ public class TaskServiceImpl implements TaskService {
 -   由七部分组成
 -   每个部分用空格隔开
 
-#####组成部分表
+##### 组成部分表
 
 | 组成部分 | 含义         | 取值范围                 |
 | -------- | ------------ | ------------------------ |
@@ -249,7 +249,7 @@ public class TaskApplication {
 }
 ```
 
-###测试运行
+### 测试运行
 
 ![image-20240117123609275](../assert/Day01-SpringTask%E6%A6%82%E8%BF%B0/image-20240117123609275.png)
 

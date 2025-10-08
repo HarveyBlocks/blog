@@ -1,6 +1,6 @@
 # 异常机制
 
-##抛出异常
+## 抛出异常
 
 以返回值的形式返回给调用者处理
 
@@ -18,4 +18,4 @@ func add(nums ...int) (sum int, err error) {
 }
 ```
 
-##defer-recover-panic
+## defer-recover-panic

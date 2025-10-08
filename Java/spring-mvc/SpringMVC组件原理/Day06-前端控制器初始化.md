@@ -1,6 +1,6 @@
-##DispatcherServlet
+## DispatcherServlet
 
-###作用
+### 作用
 
 1.  DispatcharServlet是SpringMVC的入口
 2.  负责调用其他组件

@@ -1,4 +1,4 @@
-#类的双亲委派机制
+# 类的双亲委派机制
 
 双亲是parent的翻译, 不是真的有爹妈, 其实只有一个爹
 
@@ -223,7 +223,7 @@ Application加载引入的jar包中的驱动类
 
 
 
-####SPI机制
+#### SPI机制
 
 >   Service Provider Interface
 

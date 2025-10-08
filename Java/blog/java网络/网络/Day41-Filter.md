@@ -80,7 +80,7 @@ public class MyFilter implements Filter {
 
 
 
-##使用细节
+## 使用细节
 
 ### 拦截路径配置
 
@@ -120,7 +120,7 @@ public class MyFilter implements Filter {
 
 
 
-###过滤器链
+### 过滤器链
 
 -   一个Web应用,可以配置多个过滤器,这多个过滤器被称为过滤器链
 
@@ -128,11 +128,11 @@ public class MyFilter implements Filter {
 
 ![image-20231119200211275](../../../typora-user-images/Day41-Filter/image-20231119200211275.png)
 
-####自然排序的优先级
+#### 自然排序的优先级
 
 -   如果是用注解配置的Filter,优先级按照过滤器的**类名(字符串)**的自然排序,小的先执行
 
-####注解配置优先级
+#### 注解配置优先级
 
 ```java
 @WebFilter(urlPatterns = "/*",filterName = "1")
@@ -140,7 +140,7 @@ public class MyFilter implements Filter {
 
 -   主打的就是一个投机取巧
 
-####XML配置决定优先级
+#### XML配置决定优先级
 
 ```xml
 xmlCopy code<filter>

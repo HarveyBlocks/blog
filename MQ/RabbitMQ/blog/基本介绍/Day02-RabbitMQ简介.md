@@ -44,7 +44,7 @@ docker run \
 
 
 
-##基本使用
+## 基本使用
 
 `http://centos:15672/`
 
@@ -72,7 +72,7 @@ docker run \
 
 ![image-20240112161249779](../../assert/Day02-RabbitMQ%E7%AE%80%E4%BB%8B/image-20240112161249779.png)
 
-###查看消息是否到达队列
+### 查看消息是否到达队列
 
 #### exchange-Overview
 

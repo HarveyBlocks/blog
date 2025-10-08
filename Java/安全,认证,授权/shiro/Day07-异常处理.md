@@ -62,7 +62,7 @@ public class ShiroExceptionController  {
 }
 ```
 
-##没权限就不再前端显示(需要thymeleaf)
+## 没权限就不再前端显示(需要thymeleaf)
 
 ```xml
 <artifactId>thymeleaf-extra-shiro</artifactId>

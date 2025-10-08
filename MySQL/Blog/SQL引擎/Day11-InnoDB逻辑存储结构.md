@@ -15,7 +15,7 @@
 
 表空间内多个段
 
-####数据段**(Leaf Node Segment)**
+#### 数据段**(Leaf Node Segment)**
 
 InnoDB是索引组织表
 

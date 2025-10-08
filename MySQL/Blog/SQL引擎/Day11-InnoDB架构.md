@@ -64,7 +64,7 @@
 
     
 
- ## Log Buffer 日志缓冲区
+## Log Buffer 日志缓冲区
 
 -   默认大小时16M
 
@@ -127,7 +127,7 @@ show variables like '%Innodb_Data_file_path%';
 
 
 
-## File Per Table TableSpace 
+## File Per Table TableSpace
 
 -   每一个表都会有一个表空间文件(如果打开)
 -   每一个文件包含每一张表的数据和索引

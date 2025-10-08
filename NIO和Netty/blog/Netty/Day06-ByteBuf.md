@@ -2,7 +2,7 @@
 
 >   Netty对ByteBuffer的增强
 
-##创建
+## 创建
 
 ```java
 ByteBuf buf = ByteBufAllocator.DEFAULT.buffer();
@@ -89,7 +89,7 @@ ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用�
 
 不用切换读写模式了
 
-##使用
+## 使用
 
 ### 写入
 
@@ -131,7 +131,7 @@ log.debug("{}",buf.writeBytes("12345".repeat(100).getBytes()));
     -   选择下一个2^n^
     -   例如写入后大小为1000 , 则扩容后capacity是1024
 
-###读取
+### 读取
 
 -   get开头的一系列方法不会改变读指针的位置
 
@@ -193,7 +193,7 @@ buf.resetWriterIndex();
 
 
 
-#####原理
+##### 原理
 
 1.  创建新的写指针和读指针指向被切片的内存区域
 

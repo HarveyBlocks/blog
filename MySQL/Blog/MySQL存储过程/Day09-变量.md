@@ -9,7 +9,7 @@
 
 ## 系统变量
 
-###查看
+### 查看
 
 ```mysql
 show [session|global] variables;                -- 查看所有系统变量

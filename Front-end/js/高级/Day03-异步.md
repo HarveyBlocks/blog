@@ -63,7 +63,7 @@ let id = setInterval(action, 5);
 clearInterval(id);
 ```
 
-###onreadystatechange  等待文件
+### onreadystatechange  等待文件
 
 >   on ready state change
 

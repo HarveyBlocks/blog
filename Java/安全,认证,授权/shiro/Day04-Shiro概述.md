@@ -4,7 +4,7 @@
 
 [Apache Shiro](https://shiro.apache.org/reference.html)
 
-##功能
+## 功能
 
 ![Apache Shiro Features](https://shiro.apache.org/images/ShiroFeatures.png)
 
@@ -32,7 +32,7 @@
 
 
 
-##架构原理
+## 架构原理
 
 ![Shiro Basic Architecture Diagram](https://shiro.apache.org/images/ShiroBasicArchitecture.png)
 
@@ -48,7 +48,7 @@ Shiro Security Manager对Subject对象进行安全校验
 
 
 
-##依赖
+## 依赖
 
 ```xml
 <dependency>
@@ -58,7 +58,7 @@ Shiro Security Manager对Subject对象进行安全校验
 </dependency>
 ```
 
-### 
+###
 
 
 

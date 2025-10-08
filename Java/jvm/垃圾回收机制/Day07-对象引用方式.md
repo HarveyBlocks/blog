@@ -18,7 +18,7 @@
 
 缓存
 
-###使用
+### 使用
 
 JDK1.2后提供了`SoftReference`对一个对象进行增强, 来指明对一个对象的引用在**不被强引用**且**内存不足**时就可以被回收
 
@@ -45,7 +45,7 @@ for (int i = 0; i < 10; i++) {
 
 
 
-###Caffine中的软引用
+### Caffine中的软引用
 
 Caffine有使用`SoftReference`的软引用的API
 
@@ -68,7 +68,7 @@ ThreadLocal
 
 
 
-###使用
+### 使用
 
 JDK1.2之后提供WeakReference类来实现弱引用
 

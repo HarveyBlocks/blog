@@ -46,7 +46,7 @@
 
 -   不需要配置MyBatis的信息
 
-###编写Mapper类
+### 编写Mapper类
 
 ```java
 package com.harvey.bootmybatis.dao;

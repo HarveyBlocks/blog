@@ -372,7 +372,7 @@ DEventLoop2((EventLoop2))
 
 #### 💡
 
-##不同Handler线程的切换原理
+## 不同Handler线程的切换原理
 
 ```java
 ctx.fireChannelRead(message);

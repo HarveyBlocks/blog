@@ -143,7 +143,7 @@ static Array<T> &sort(Array<T> &array) {
 
 <img src="..\..\assets\Day05-Stack&Queue\20.有效括号.gif" alt="20.有效括号" style="zoom:67%;" />
 
- ## 删除重复项
+## 删除重复项
 
 "abbbaabababbab"
 
@@ -218,7 +218,7 @@ while (!output.empty()) {
 
 复杂度没变, 技术力变低哩(悲)
 
-##求逆波兰表达式的运算结果
+## 求逆波兰表达式的运算结果
 
 表达式树
 
@@ -383,7 +383,7 @@ for (int i = windowLen; i < data.size(); ++i) {
 
 求所有解? 证明存在解? 
 
-###流程
+### 流程
 
 1.  给地图各个子区块标上标号
 2.  用邻接矩阵描述地图

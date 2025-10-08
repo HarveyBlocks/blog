@@ -29,13 +29,13 @@ Filter
 
 <img src="../../typora-user-images/Day02-SpringSecurity工作原理/image-20231219132438050.png" alt="image-20231219132438050" style="zoom:200%;" />
 
-###SecurityContextPersistenceFilter
+### SecurityContextPersistenceFilter
 
 整个拦截过程的入口和出口(第一个和最后一个拦截器)
 
 
 
-###UsernamePasswirdAuthenticationFilter
+### UsernamePasswirdAuthenticationFilter
 
 **处理来自表单提交的认证**, 表单必须提供对应的用户名密码,
 
@@ -227,7 +227,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 -   **注意数据库中存储的密码字段应该是密码编码器转换成密文之后的密文结果**
 
-###测试编码器(BCrypt为例)
+### 测试编码器(BCrypt为例)
 
 我们再来测试一下BCryptPasswordEncoder的编码过程
 
@@ -288,7 +288,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 每次编码结果都不一样, 校验能一样吗
 
-##授权流程
+## 授权流程
 
 ![image-20231218184035761](../../typora-user-images/Day02-SpringSecurity工作原理 (2)/image-20231218184035761.png)
 
@@ -332,7 +332,7 @@ public interface AccessDecisionManager {
 }
 ```
 
-####投票决策
+#### 投票决策
 
 ![image-20231218190027223](../../typora-user-images/Day02-SpringSecurity工作原理 (2)/image-20231218190027223.png)
 

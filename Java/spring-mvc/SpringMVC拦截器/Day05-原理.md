@@ -1,6 +1,6 @@
-#SpringMVC原理
+# SpringMVC原理
 
-##图解
+## 图解
 
 ![image-20231129200738394](../../typora-user-images/Day05-原理/image-20231129200738394.png)
 
@@ -36,7 +36,7 @@
 
 ## 拦截器
 
-###前端控制器
+### 前端控制器
 
 ![image-20231129202230927](../../typora-user-images/Day05-原理/image-20231129202230927.png)
 
@@ -60,7 +60,7 @@
 
 
 
-#### 
+####
 
 ```java
 mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
@@ -81,7 +81,7 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 
 
-####applyPreHandle()
+#### applyPreHandle()
 
 ![image-20231129202646794](../../typora-user-images/Day05-原理/image-20231129202646794.png)
 
@@ -91,7 +91,7 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 
 
-####applyPreHandle()
+#### applyPreHandle()
 
 ![image-20231129203119815](../../typora-user-images/Day05-原理/image-20231129203119815.png)
 

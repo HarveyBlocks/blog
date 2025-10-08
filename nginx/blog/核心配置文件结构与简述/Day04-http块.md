@@ -50,7 +50,7 @@ default_type mime-type;
     -   用来记录nginx本身运行时的错误信息
     -   不会记录用户的访问请求
 
-###`access_log`
+### `access_log`
 
 用来设置用户访问日志的相关属性
 
@@ -186,7 +186,7 @@ server {
 
 ```
 
-###`listen`与`server_name`
+### `listen`与`server_name`
 
 监听端口
 

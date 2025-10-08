@@ -69,7 +69,7 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 
 ## 细节
 
-###Session钝化,活化
+### Session钝化,活化
 
 -   服务器重启之后,Session数据是否还存在?
     -   如果不在了?合理吗?
@@ -84,7 +84,7 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 >
 >   文件删除
 
-####文件的位置
+#### 文件的位置
 
 `${project}/target/tomcat/work/Tomcat/localhost/${project}/SESSIONS.ser`
 
@@ -109,15 +109,15 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 -   Session钝化,活化包装服务端的数据安全,不会有数据丢失
 -   至于浏览器关闭,导致了数据丢失,就不关服务器的事啦
 
-###Seesion销毁
+### Seesion销毁
 
 -   默认情况下Session30分钟内销毁
 
 -   用于用户登出
 
-####更改销毁时间
+#### 更改销毁时间
 
-#####配置web.xml
+##### 配置web.xml
 
 -   webapp/WEB-INF/web.xml
 

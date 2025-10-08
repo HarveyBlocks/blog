@@ -1,4 +1,4 @@
-##spring-mvc.xml
+## spring-mvc.xml
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -48,7 +48,7 @@
 </beans>
 ```
 
-###自定义Bean(Controller)的配置
+### 自定义Bean(Controller)的配置
 
 >   包扫描
 
@@ -66,7 +66,7 @@ public class SpringMVCConfig {
 }
 ```
 
-###第三方Bean(CommonsMultipartResolver)的配置
+### 第三方Bean(CommonsMultipartResolver)的配置
 
 >   @Bean注解方法,返回值为该类型
 
@@ -108,9 +108,9 @@ public class SpringMVCConfig {
 }
 ```
 
-###非Bean的配置
+### 非Bean的配置
 
-####`<mvc:annotation-driven/>`的配置
+#### `<mvc:annotation-driven/>`的配置
 
 >   @EnableWebMvc注解配置类
 
@@ -132,7 +132,7 @@ public class SpringMVCConfig {
 
 -   视图解析器,get
 
-####拦截器的配置
+#### 拦截器的配置
 
 **DelegatingWebMvcConfiguration的源码:**
 
@@ -161,13 +161,13 @@ public class SpringMVCConfig {
 
 >   实现WebMvcConfigurer接口
 
-####`<mvc:default-servlet-handler/>`的配置
+#### `<mvc:default-servlet-handler/>`的配置
 
 **WebMvcConfigurer的源码:**
 
 ![image-20231129233640118](../../typora-user-images/Day05-消除spring-mvc.xml/image-20231129233640118.png)
 
-####配置非Bean
+#### 配置非Bean
 
 1.  注解@EnableWebMvc解决`<mvc:annotation-driven/>`的配置
 

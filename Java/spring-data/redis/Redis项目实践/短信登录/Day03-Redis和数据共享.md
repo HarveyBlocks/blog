@@ -1,4 +1,4 @@
-#Redis和数据共享
+# Redis和数据共享
 
 ## 为解决Session缺点的必要条件
 
@@ -66,7 +66,7 @@ code类型就直接字符串
 phone:18292038255 = "188320"
 ```
 
-###短信验证码登录注册
+### 短信验证码登录注册
 
 ```
 Object phoneCache = session.getAttribute(PHONE_SESSION_KEY);
@@ -107,7 +107,7 @@ sessionStorage存储在客户端，Session在服务器端(用来存ID的话还�
 
 ## 修改代码
 
-###准备RedisTemplate
+### 准备RedisTemplate
 
 ```java
 @Autowired
@@ -200,7 +200,7 @@ public boolean preHandle(HttpServletRequest request,
 }
 ```
 
-###对有效期的优化
+### 对有效期的优化
 
 对于用户的刷新, 如果用户一直在不会被拦截的界面操作, 超过了时间, 依然会丢失用户的数据
 

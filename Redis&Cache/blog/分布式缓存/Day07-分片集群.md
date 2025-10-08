@@ -2,7 +2,7 @@
 
 >   未测试
 
-##问题
+## 问题
 
 -   为了增强主从同步的性能, 单节点的Redis内存不应该太高, 
 
@@ -218,7 +218,7 @@ Redis会根据key的**有效部分**计算插槽值
 
 在集群增加或减少节点时, 使用**插槽转移**,将Key与插槽绑定而不是节点绑定, 可以防止数据的丢失, 也增加了集群的可拓展性
 
-###插槽的使用
+### 插槽的使用
 
 ![image-20240211145012550](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211145012550.png)
 
@@ -259,7 +259,7 @@ reshard        host:port
                --cluster-replace
 ```
 
-###增加节点
+### 增加节点
 
 ```bash
 redis-cli --cluster add-node new_host:new_port existing_host:existing_port
@@ -416,7 +416,7 @@ spring:
 
 
 
-###配置读写分离
+### 配置读写分离
 
 ```java
 @Bean

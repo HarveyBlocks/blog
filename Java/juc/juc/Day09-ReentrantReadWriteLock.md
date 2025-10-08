@@ -160,7 +160,7 @@ private static void exec(Runnable firstTarget, Runnable secondTarget) throws Int
 
     addWaiter的时候, 使用的是加入SHARED节点
 
-##读写锁实现缓存
+## 读写锁实现缓存
 
 -   缓存-持久化数据不一致(写操作时, 先情况删除缓存的数据, 再写到数据库中去)
 

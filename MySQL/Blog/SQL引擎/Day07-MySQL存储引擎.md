@@ -378,7 +378,7 @@ CREATE TABLE 表名 (
 
 ## 对存储引擎的场景选择
 
-### InnoDB的场合 
+### InnoDB的场合
 
 -   需要事务(**只能**用InnoDB了)的完整性
 

@@ -2,7 +2,7 @@
 
 使用`ngx_http_proxy_module`
 
-##开启缓存
+## 开启缓存
 
 ### `proxy_cache_path`
 

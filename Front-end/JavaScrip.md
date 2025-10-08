@@ -30,7 +30,7 @@
 
         因为从用户体验角度,先加载html的body再加载scripe更好
 
-###外部脚本
+### 外部脚本
 
 -   demo.js
 
@@ -84,9 +84,9 @@ console.log("写入浏览器控制台(F12)")
     test = "张三";
     ```
 
-###变量作用域
+### 变量作用域
 
-####var
+#### var
 
 -   无论如何都是全局
 -   可以重复定义
@@ -112,7 +112,7 @@ console.log("写入浏览器控制台(F12)")
 
 -   这也是不行的
 
-###const表示常量
+### const表示常量
 
 
 
@@ -161,7 +161,7 @@ alert(typeof str);//string
 
 
 
-####boolean
+#### boolean
 
 ```js
 var flag1 = true;
@@ -249,7 +249,7 @@ alert(typeof obj);//object
 
 
 
-###===全等于运算符
+### ===全等于运算符
 
 
 
@@ -289,7 +289,7 @@ alert(20==="20");//false
 
 
 
-###函数
+### 函数
 
 ```js
 function 函数名(参数1,参数){//形参不需要语言,就是 var
@@ -354,7 +354,7 @@ var 函数名 = function(参数1,参数2){
 
 
 
-###Window
+### Window
 
 ![image-20231113203434829](../Java/typora-user-images/JavaScrip/image-20231113203434829.png)
 
@@ -399,7 +399,7 @@ var 函数名 = function(参数1,参数2){
 
 
 
-## DOM对象 
+## DOM对象
 
 >   Document Object Model 文档对象模型
 
@@ -467,7 +467,7 @@ Html事件是发送再Html的事情
 
 
 
-###常见事件
+### 常见事件
 
 表单验证
 

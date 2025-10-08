@@ -1,4 +1,4 @@
-##web.xml
+## web.xml
 
 >   一般不会抛弃web.xml
 
@@ -105,15 +105,15 @@ Spring定义了一个实现类`SpringServletContainerInitializer`(它定义实�
 
 ->因此,我们只需要自己写一个WebApplicationInitializer的实现类即可
 
-####SpringServletContainerInitializer
+#### SpringServletContainerInitializer
 
 ![image-20231201160043897](../../typora-user-images/Day06-消除web.xml/image-20231201160043897.png)
 
-####WebApplicationInitializer
+#### WebApplicationInitializer
 
 ![image-20231201160333641](../../typora-user-images/Day06-消除web.xml/image-20231201160333641.png)
 
-####自己的WebApplicationInitializer
+#### 自己的WebApplicationInitializer
 
 -   当然,我们不会直接实现WebApplicationInitializer
 

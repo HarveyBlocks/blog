@@ -46,7 +46,7 @@ http {
 
 ```
 
-##Server块简述
+## Server块简述
 
 ```Nginx
 http {

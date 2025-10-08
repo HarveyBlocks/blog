@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
 
 
 
-##`QString`简介
+## `QString`简介
 
 ### `QChar`简介
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[]) {
 
  `QChar` 是一个 Unicode 4.0 标准的字符
 
-###`QString`简介
+### `QString`简介
 
 -   `QString` 是由一系列 `QChar` 组成的字符串，以 `NULL` 字符结尾（末尾的 `NULL` 不计入字符串长度）
 
@@ -103,7 +103,7 @@ QString 对复制过程采用**隐式共享机制**
 
 
 
-##基本类型与字符串互相转换
+## 基本类型与字符串互相转换
 
 | **基本类型**           | **Qt别称**              | **转入函数**    | **转出函数**    | **描述**                                                     |
 | ---------------------- | ----------------------- | --------------- | --------------- | ------------------------------------------------------------ |
@@ -146,7 +146,7 @@ QString & setNum(int n, int base = 10);
 -   'g'：自动选择用科学计数法或定点数显示，哪种方式最简洁就用哪个，科学计数法的 e 小写。
 -   'G'：自动选择用科学计数法或定点数显示，哪种方式最简洁就用哪个，科学计数法的 E 大写。
 
-####`arg`
+#### `arg`
 
 ```cpp
 QString arg(int a, int fieldWidth = 0, int base = 10, QChar fillChar = QLatin1Char( ' ' )) const;
@@ -241,7 +241,7 @@ QString arg(const QString & a, int fieldWidth = 0, QChar fillChar = QLatin1Char(
     // "1 小于 2，1 小于 3，3 大于 2 。"
     ```
 
-###QString转出
+### QString转出
 
 ```cpp
 int QString::toInt(bool * ok = 0, int base = 10) const;
@@ -277,7 +277,7 @@ std::string QString::toStdString() const;
 
 ## 字串查询与操作
 
-###增加/填充/重复
+### 增加/填充/重复
 
 -   追加子串到字符串**尾部**。
 
@@ -357,7 +357,7 @@ std::string QString::toStdString() const;
 
 
 
-###删
+### 删
 
 -   从 position 开始的位置移除掉 n 个字符
 
@@ -421,7 +421,7 @@ std::string QString::toStdString() const;
 
 
 
-###查
+### 查
 
 -   查找**第一个**指定子串
 
@@ -548,7 +548,7 @@ void testQStreamIn(){
 
 QByteArray 在赋值、传参数、返回值时也是使用**隐式共享机制**提高运行效率，只有字符串发生修改时才会执行深拷贝。
 
-###和char
+### 和char
 
 QByteArray 的字节单元是 char
 

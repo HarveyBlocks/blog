@@ -2,7 +2,7 @@
 
 >   **A**synchronous **J**avaScript **A**nd **X**ML
 
-## XMLHttpRequest 
+## XMLHttpRequest
 
 ```js
 variable = new XMLHttpRequest();

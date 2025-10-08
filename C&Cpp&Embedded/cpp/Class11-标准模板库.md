@@ -57,7 +57,7 @@ end指capacity的最后
 
 ![image-20240529182839335](../../Java/jvm/asset/Class11-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93/image-20240529182839335.png)
 
-####增
+#### 增
 
 ```cpp
 push_front(T element); // queue
@@ -143,7 +143,7 @@ empty(); // 是否为空
 
 
 
-####deque
+#### deque
 
 双端队列, 允许插队, 允许从头入, 从尾出
 
@@ -441,7 +441,7 @@ Dqueue<|--stack
 
 每种容器必须拥有自己的迭代器
 
-###分类
+### 分类
 
 -   输入迭代器 InputIterator
     -   可以用来从序列中读取数据

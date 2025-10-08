@@ -1,6 +1,6 @@
-#Atomic包
+# Atomic包
 
-##原子数值
+## 原子数值
 
 -   AtomicBoolean
 -   AtomicLong
@@ -97,7 +97,7 @@ for (boolean haveNext = false;;) {
 
 
 
-###compareAndSet
+### compareAndSet
 
 此compare基于引用的地址, 故使用如下代码
 
@@ -171,7 +171,7 @@ private void sub(BigInteger delta) {
 }
 ```
 
-###标记-`AtomicMarkableReference`
+### 标记-`AtomicMarkableReference`
 
 不关心是否版本号具体是多少, 只关心是否出现过这个情况
 

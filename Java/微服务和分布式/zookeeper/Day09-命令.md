@@ -58,7 +58,7 @@ Usage: ./zkServer.sh [--config <conf-dir>] {start|start-foreground|stop|version|
 
     Mode: standalone 单机状态
 
-##客户端命令
+## 客户端命令
 
 [org.apache.zookeeper.cli](https://zookeeper.apache.org/doc/r3.7.2/apidocs/zookeeper-server/org/apache/zookeeper/cli/package-summary.html)
 
@@ -192,7 +192,7 @@ ls2 path [watch]
 
     
 
-###创建节点
+### 创建节点
 
 ```bash
 create [-s] [-e] [-c] [-t ttl] path [data] [acl]

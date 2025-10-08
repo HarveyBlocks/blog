@@ -1,4 +1,4 @@
-##函数式接口
+## 函数式接口
 
 ```java
 @FunctionalInterface
@@ -48,7 +48,7 @@ public static class SimpleMethodAdvice implements MethodAdvice {
 
 ```
 
-###构建者类
+### 构建者类
 
 ```java
 public class MethodExecutorBuilder {

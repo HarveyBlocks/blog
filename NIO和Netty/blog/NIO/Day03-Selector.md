@@ -27,7 +27,7 @@
 
 
 
-##Selector基本用法
+## Selector基本用法
 
 ### 创建Selector对象
 
@@ -35,7 +35,7 @@
 Selector selector = Selector.open();
 ```
 
-###将Channel注册到Selector
+### 将Channel注册到Selector
 
 >   建立Selector与Channel的联系
 
@@ -82,7 +82,7 @@ Selector selector = Selector.open();
 
 ### Cancel
 
-####问题的产生与需求
+#### 问题的产生与需求
 
 如果Selector接收到事件之后, 事件未处理会怎么样?
 

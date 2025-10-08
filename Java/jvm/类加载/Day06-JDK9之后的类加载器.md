@@ -2,7 +2,7 @@
 
 JDK8之前的版本中, 扩展类加载器和应用程序类加载器的源码位于`rt.jar`包中的`run.misc.Launcher.java`
 
-##jmod
+## jmod
 
 JDK9引入了module的概念, Java类会放到jmod文件, jmod会放在jmods的文件夹下
 

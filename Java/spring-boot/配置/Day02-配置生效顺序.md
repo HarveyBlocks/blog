@@ -26,7 +26,7 @@
 
 *对于相同的属性会有加载顺序之别, 不同的属性依旧会加载*
 
-##外部配置
+## 外部配置
 
 [Spring官网spring-boot配置文档](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 
@@ -56,7 +56,7 @@ java -jar .\spring-boot-0.0.1-SNAPSHOT.jar --spring.config.location=d://applicat
 
 `application.properties`被自动读取
 
-##内部和外部文件配置的意义
+## 内部和外部文件配置的意义
 
 内部文件的配置不尽人意时,在外部配置文件.覆盖掉内部的配置文件
 

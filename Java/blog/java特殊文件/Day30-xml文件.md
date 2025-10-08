@@ -1,6 +1,6 @@
 # XML文件
 
-##基本介绍
+## 基本介绍
 
 - 可拓展标记语言
 - 后缀.xml
@@ -82,7 +82,7 @@
   - 存用户名,密码
 - 在网络中转播
 
-##Java-XML IO
+## Java-XML IO
 
 ### 解析XML文件
 
@@ -280,7 +280,7 @@ public class ParseXml {
 
   ![image-20231004162355349](../../typora-user-images/Day31/image-20231004162355349.png)
   
-  ### Schema约束文档
+### Schema约束文档
 
 - 后缀必须是.xsd
 

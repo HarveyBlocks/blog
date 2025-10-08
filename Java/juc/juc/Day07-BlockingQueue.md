@@ -1,6 +1,6 @@
 # BlockingQueue
 
-##LinkedBlockingQueue
+## LinkedBlockingQueue
 
 `LinkedBlockingQueue`的capacity是上限, 是finnal的字段
 

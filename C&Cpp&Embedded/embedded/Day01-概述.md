@@ -8,7 +8,7 @@
 
 
 
-##ISA
+## ISA
 
 >   Instryction Set Architecture指令集架构
 
@@ -26,7 +26,7 @@ RISC-V是新生的指令集架构
 
 
 
-###复杂指令集
+### 复杂指令集
 
 哪个时候没有高级语言
 

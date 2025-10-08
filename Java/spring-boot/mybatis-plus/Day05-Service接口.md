@@ -1,4 +1,4 @@
-#IService接口
+# IService接口
 
 ![image-20231208194028601](../../typora-user-images/Day05-Service接口/image-20231208194028601.png)
 
@@ -116,7 +116,7 @@ for(int i = 0;i<100000;i++)
 
 -   需要多次请求十万次数据库,所以很慢
 
-###法二:批量插入
+### 法二:批量插入
 
 批量插入1000条SQL语句次,插100次(因为从java传到MySQL不能传太多次)
 
@@ -131,13 +131,13 @@ for(int i = 0;i<100;i++){
 
 -   快了很多,但是,SQL语句依旧有十万条,还是有进步空间
 
-###法三:批量插入values
+### 法三:批量插入values
 
 ![image-20231209130551375](../../typora-user-images/Day05-Service接口/image-20231209130551375.png)
 
 把原来的一千条分开了的SQL语句拼成一条
 
-####方案一: 自定义SQL语句
+#### 方案一: 自定义SQL语句
 
 ```java
 public void adds(@Param("users")List<User> users);

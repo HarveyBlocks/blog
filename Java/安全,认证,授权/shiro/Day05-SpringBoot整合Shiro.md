@@ -47,7 +47,7 @@
 
 
 
-##配置
+## 配置
 
 ```yml
 mybatis-plus:

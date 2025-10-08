@@ -1,8 +1,8 @@
-#变量
+# 变量
 
 ## 变量的声明与赋值
 
-###语法
+### 语法
 
 ```nginx
 set $variable value ;
@@ -18,7 +18,7 @@ set $variable value ;
 
 `server`, `location`, `if`
 
-##全局变量
+## 全局变量
 
 ### Rewrite常用全局变量
 

@@ -4,13 +4,13 @@
 
 ## 快速入门
 
-###创建项目
+### 创建项目
 
 使用SpringBoot
 
 <img src="../../typora-user-images/Day02-%E4%BD%BF%E7%94%A8RedisTemplate/image-20240102130922548.png" alt="image-20240102130922548" style="zoom:50%;" />
 
-###引入依赖
+### 引入依赖
 
 
 

@@ -16,7 +16,7 @@ var instance2 = new ExampleClass();
 
 
 
-##结构实例
+## 结构实例
 
 使用new运算符在堆上分配, 最终交由垃圾回收器回收
 
@@ -63,7 +63,7 @@ Console.WriteLine(object.Equals(s1, s2)); // False
 Console.WriteLine(s3.Equals(s1)); // True
 ```
 
-###结构值相等
+### 结构值相等
 
 所有值类型隐式继承`System.ValueType`
 
@@ -77,6 +77,6 @@ Console.WriteLine(s3.Equals(s1)); // True
 
 值类型其实也隐式继承Object类
 
-###类的值相等
+### 类的值相等
 
 类重写`Equals`个`==`

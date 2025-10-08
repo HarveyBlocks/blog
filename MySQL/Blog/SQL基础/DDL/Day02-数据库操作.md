@@ -23,7 +23,7 @@ CREATE DATABASE 数据库名;
 - 最简写法
 - 如果数据库存在就报错
 
-### if not exists 
+### if not exists
 
 ```mysql
 CREATE DATABASE IF NOT EXISTS  数据库名;
@@ -61,7 +61,7 @@ DROP DATABASE 数据库名;
 - 最简写法
 - 如果数据库不存在就报错
 
-### if exists 
+### if exists
 
 ```mysql
 DROP DATABASE IF EXISTS 数据库名;

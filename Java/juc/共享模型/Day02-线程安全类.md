@@ -24,7 +24,7 @@
 
 但是它们多个方法的组合不是原子的
 
-##例
+## 例
 
 ```java
 Map<String, String> table = new Hashtable<>();

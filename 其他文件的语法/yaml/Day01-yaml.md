@@ -40,7 +40,7 @@
 
 <img src="../assets/Day01-yaml/image-20231204180650748.png" alt="image-20231204180650748" style="zoom:67%;" />
 
-##数据格式
+## 数据格式
 
 -   对象(map):键值对的集合
 
@@ -109,7 +109,7 @@ myServer:
 
 
 
-##读取配置yaml文件里的内容
+## 读取配置yaml文件里的内容
 
 -   `@Value`注解
 -   `Environment`对象
@@ -118,7 +118,7 @@ myServer:
 
 ### `@Value`注解
 
-####对象注入
+#### 对象注入
 
 ```yaml
 person:
@@ -139,7 +139,7 @@ public String yaml() {
 }
 ```
 
-####数组注入
+#### 数组注入
 
 ```yaml
 address:
@@ -160,7 +160,7 @@ public String yaml() {
 }
 ```
 
-###`Environment`对象
+### `Environment`对象
 
 ```yaml
 person:
@@ -190,7 +190,7 @@ public String yaml() {
 }
 ```
 
-###`@ConfigurationPropertoes`注解
+### `@ConfigurationPropertoes`注解
 
 -   yaml
 

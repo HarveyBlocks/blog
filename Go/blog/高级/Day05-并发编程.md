@@ -62,7 +62,7 @@ func main(){
 
 
 
-##sync.WaitGroup
+## sync.WaitGroup
 
 -   计数
 -   等待
@@ -112,7 +112,7 @@ var 信道名 = make(chan 消息类型, size)
 
 
 
-###使用
+### 使用
 
 ```go
 for i := 0; i < 3; i++ {

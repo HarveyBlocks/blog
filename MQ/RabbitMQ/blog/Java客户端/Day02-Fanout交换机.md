@@ -6,11 +6,11 @@
 
 一服务, 一队列
 
-##创建Fanout交换机
+## 创建Fanout交换机
 
 ![image-20240112193143733](../../assert/Day02-Fanout%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112193143733.png)
 
-##发送到消息交换机
+## 发送到消息交换机
 
 ```java
 @Test

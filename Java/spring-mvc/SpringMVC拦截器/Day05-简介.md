@@ -5,7 +5,7 @@
 -   执行顺序
 -   原理
 
-##简介
+## 简介
 
 >   Interceptor 拦截器
 >
@@ -103,7 +103,7 @@ public class MyInterceptor implements HandlerInterceptor {//不是Intercptor接�
 
 
 
-###spring-mvc.xml配置
+### spring-mvc.xml配置
 
 ```xml
 <mvc:interceptors>

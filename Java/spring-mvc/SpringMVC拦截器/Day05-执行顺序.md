@@ -1,8 +1,8 @@
 # 拦截器执行顺序
 
-##多个拦截器的执行顺序
+## 多个拦截器的执行顺序
 
-###康康两个的
+### 康康两个的
 
 >   两个拦截器拦截同一个资源,执行顺序是怎么样的?
 
@@ -36,7 +36,7 @@ MyInterceptor0::afterCompletion
 
 
 
-###康康三个的
+### 康康三个的
 
 ```xml
 <mvc:interceptors>
@@ -75,7 +75,7 @@ MyInterceptor0::afterCompletion
 
 -   规律逐渐明了
 
-###看看图解
+### 看看图解
 
 ![image-20231129155637307](../../typora-user-images/Day05-执行顺序/image-20231129155637307.png)
 

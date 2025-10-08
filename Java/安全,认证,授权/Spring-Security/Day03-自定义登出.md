@@ -17,7 +17,7 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
-###logoutSuccessHandler
+### logoutSuccessHandler
 `.logoutSuccessHandler(LogoutSuccessHandler接口的实现类)`
 
 自定义登出成功之后的清理工作,但是这些操作可以在logoutSuccessUrl做,

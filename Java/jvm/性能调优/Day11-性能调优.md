@@ -18,13 +18,13 @@
 
 可用来解决CPU占用率高, 死锁等问题
 
-###JDK自带
+### JDK自带
 
 ```shell
 jstack <PID> > thread_dump.tdump
 ```
 
-###Visual VM
+### Visual VM
 
 ![image-20240527221844400](../asset/Day11-%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98/image-20240527221844400.png)
 
@@ -79,11 +79,11 @@ jstack <PID> > thread_dump.tdump
 
     
 
-##在调用链上定位性能问题出现的方法
+## 在调用链上定位性能问题出现的方法
 
 使用Arthus命令
 
-###trace
+### trace
 
 trace 在调用到某方法时, 打印出该方法执行各语句信息, 如果方法里面有方法调用不会方法里面的语句执行显示
 
@@ -142,7 +142,7 @@ profiler stop --format html
 
 ## 死锁
 
-###介绍
+### 介绍
 
 两个以上的线程争夺同一个资源, 只能无限循环
 

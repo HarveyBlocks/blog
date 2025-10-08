@@ -108,7 +108,7 @@ final boolean nonfairTryAcquire(int acquires) {
 
 AQS方法
 
-####创建等待节点
+#### 创建等待节点
 
 1.  构造Node的WaitStatus状态, 其中0为默认正常的状态
 2.  Node的创建是懒惰的
@@ -281,7 +281,7 @@ protected final boolean tryRelease(int releases) {
 }
 ```
 
-###唤醒后继
+### 唤醒后继
 
 ```java
 private void unparkSuccessor(Node node) { 
@@ -349,7 +349,7 @@ final boolean acquireQueued(final Node node, int arg) {
 
 ## 可重入性
 
-###使用
+### 使用
 
 ```java
 new Thread(() -> {
@@ -375,7 +375,7 @@ new Thread(() -> {
 
 sync方法
 
-####上锁
+#### 上锁
 
 ```java
 final boolean nonfairTryAcquire(int acquires) {
@@ -453,7 +453,7 @@ sleep(2);
 thread.interrupt();
 ```
 
-###原理
+### 原理
 
 #### 可打断锁
 
@@ -770,7 +770,7 @@ condition.signal(); 	// 在锁中调用
 condition.signalAll(); 	// 在锁中调用
 ```
 
-###等待
+### 等待
 
 ```java
 private static void startNewThread(ReentrantLock lock, Condition condition, String conditionName) {

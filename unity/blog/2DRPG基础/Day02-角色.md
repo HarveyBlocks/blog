@@ -73,7 +73,7 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
      <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140603177.png" alt="image-20241018140603177" style="zoom:67%;" />
 
-####组合碰撞体
+#### 组合碰撞体
 
 >   Composite Collider 2D
 
@@ -321,7 +321,7 @@ Composite->Mode->DigitalNormalized , 对于键盘, 以值+1/-1表示按键被按
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018151739083.png" alt="image-20241018151739083" style="zoom:50%;" />
 
-###保存
+### 保存
 
 点击保存
 
@@ -339,9 +339,9 @@ Untiy自动生成默认的InputAction配置表
 
 有了默认的设置
 
-###PlayerInput
+### PlayerInput
 
-####函数监听执行逻辑
+#### 函数监听执行逻辑
 
 Player Input->Actions->Behavior->Invoke Unity Events
 
@@ -349,7 +349,7 @@ Player Input->Actions->Behavior->Invoke Unity Events
 
 而后可添加各个行为的函数执行逻辑
 
-####C#脚本执行逻辑
+#### C#脚本执行逻辑
 
 选中inputactions文件, Inspector->Generate C# Class 勾选
 
@@ -369,7 +369,7 @@ C#的Console类打印不生效, 使用`Debug.Log("")`在(window->General->Consol
 
 ## C#控制角色移动
 
-###创建PlayerInputControl对象
+### 创建PlayerInputControl对象
 
 PlayerController.cs 角色控制脚本
 
@@ -614,7 +614,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 ## 人物周围物体检测
 
-###问题
+### 问题
 
 人物卡墙(在墙上, 依然有向墙内的速度, 就卡墙上了)
 
@@ -684,7 +684,7 @@ private void OnDrawGizmosSelected() {
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019144025594.png" alt="image-20241019144025594" style="zoom:50%;" />
 
-###检测物体代码
+### 检测物体代码
 
 ```csharp
 public class EnvironmentPhysicsCheck : MonoBehaviour {
@@ -771,7 +771,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 给人物一个无摩擦的材质解决这个问题
 
-###创建自定义物理材质
+### 创建自定义物理材质
 
 Project->Create->2D->Physics Material 2D
 

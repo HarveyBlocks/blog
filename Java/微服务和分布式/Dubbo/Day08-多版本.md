@@ -1,6 +1,6 @@
 # 多版本
 
-##灰度发布
+## 灰度发布
 
 当服务的提供者发生更改(升级), 并部署在其他地址上时
 
@@ -10,13 +10,13 @@
 
 
 
-##version属性
+## version属性
 
 dubbo使用version属性来设置和调用同一个接口的不同版本
 
 
 
-###生产者
+### 生产者
 
 ```java
 @com.alibaba.dubbo.config.annotation.Service(version = "v1.0")

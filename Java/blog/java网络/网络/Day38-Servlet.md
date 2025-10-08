@@ -1,6 +1,6 @@
-#Servlet接口
+# Servlet接口
 
-##Servlet
+## Servlet
 
 >   Java提供的一门**动态**web资源开发**技术**
 >
@@ -22,7 +22,7 @@
 </dependency>
 ```
 
-##基本使用
+## 基本使用
 
 ```java
 package com.harvey;
@@ -79,7 +79,7 @@ public class App implements Servlet {
 
 -   通过配置可以改变创建对象的时机
 
-###初始化init()
+### 初始化init()
 
 -   在Servlet**初始化之后**
 -   容器调用Servlet的**init()**方法**初始化这个对象**
@@ -95,7 +95,7 @@ public class App implements Servlet {
 
 
 
-###服务终止
+### 服务终止
 
 -   需要释放内存或容器关闭时
 -   容器调用**destroy()**方法完成**资源释放**
@@ -257,7 +257,7 @@ public class Application extends HttpServlet {
 @WebServlet(urlPattern={"/app","App"})
 ```
 
-###配置规则
+### 配置规则
 
 -   精确匹配
 

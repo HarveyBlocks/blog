@@ -67,11 +67,11 @@
 
 
 
-##代码实现
+## 代码实现
 
 >   spring-boot整合webSocket
 
-###用户系统
+### 用户系统
 
 #### 实体类
 
@@ -119,7 +119,7 @@ public class Result {
 
 
 
-####用户Controller
+#### 用户Controller
 
 ```java
 package com.harvey.hotel.controller;
@@ -191,7 +191,7 @@ public class ResultMessage {
 }
 ```
 
-####消息工具类
+#### 消息工具类
 
 使用FastJson
 
@@ -219,7 +219,7 @@ public class MessageUtils {
 
 
 
-###引入坐标
+### 引入坐标
 
 ```xml
 <!--WebSocket-->
@@ -237,7 +237,7 @@ public class MessageUtils {
 
 ### 编写配置类
 
-####注册`ServerEndpointExporter`
+#### 注册`ServerEndpointExporter`
 
 -   注册`ServerEndpointExporter`的Bean
     -   `ServerEndpointExporter`, 用来**扫描注解了@ServerEndpoint的类**
@@ -326,7 +326,7 @@ public class ChatEndpoint {
 }
 ```
 
-####onOpen
+#### onOpen
 
 ##### onOPen主要方法
 
@@ -451,7 +451,7 @@ public void onClose(Session session){
 }
 ```
 
-####onMessage
+#### onMessage
 
 ```java
 /**

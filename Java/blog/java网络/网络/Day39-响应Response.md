@@ -1,4 +1,4 @@
-#Response
+# Response
 
 ![image-20231117180624023](../../../typora-user-images/Day39-响应Response/image-20231117180624023-1700286455676.png)
 
@@ -161,7 +161,7 @@ this.parseWebString(request, response);//这一步居然会会执行!
 
 **那么,什么时候要写虚拟路径呢?**
 
-###明确路径谁使用
+### 明确路径谁使用
 
 -   浏览器使用?需要加虚拟路径(项目访问路径)
 -   服务端使用?不需要加虚拟路径
@@ -191,7 +191,7 @@ this.parseWebString(request, response);//这一步居然会会执行!
 
     还记得这个空缺吗?就是我设置的**/**
 
-##响应字符数据
+## 响应字符数据
 
 ```java
 PrintWriter getWriter();
@@ -230,7 +230,7 @@ PrintWriter writer = response.getWriter();//注意更改了字符集之后再获
 
 ![image-20231118143138032](../../../typora-user-images/Day39-响应Response/image-20231118143138032.png)
 
-##响应字节数据
+## 响应字节数据
 
 ```java
 ServletOutputStream getOutputStream();

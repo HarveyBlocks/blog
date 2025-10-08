@@ -50,7 +50,7 @@ public String show() {
 
         
 
-    ##GetMapping和PostMappering
+## GetMapping和PostMappering
 
 ```java
 @RequestMapping(path = {"/show","/showIt","showThat"},

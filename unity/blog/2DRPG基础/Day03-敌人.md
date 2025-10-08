@@ -8,7 +8,7 @@
 
 
 
-##改变碰撞图层
+## 改变碰撞图层
 
 不希望角色会撞到敌人, 也不希望两个敌人之间会相撞
 
@@ -31,11 +31,11 @@ Inspector->右上角Layer->创建Layer
 -   Exclude Layer: **Contact Capture Layers**-Exclude Layer
 -   Callback Layer: 
 
-##触发器
+## 触发器
 
 >Trigger
 
-###创建触发器
+### 创建触发器
 
 再创建一个碰撞体, 用于检测伤害
 

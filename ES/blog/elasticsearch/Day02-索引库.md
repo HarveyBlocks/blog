@@ -2,7 +2,7 @@
 
 [Elasticsearch Guide](https://www.elastic.co/guide/en/elasticsearch/reference/7.12/index.html)
 
-##mapping属性
+## mapping属性
 
 >   mapping , 对索引库文档的约束
 
@@ -111,7 +111,7 @@ PUT /索引库名称
 
 
 
-#索引库CURD
+# 索引库CURD
 
 [**和Rust风格一致**](..\..\..\JDK\JavaDailyBlog\spring-mvc\SpringMVC请求与响应\Day02-Rest风格.md)
 

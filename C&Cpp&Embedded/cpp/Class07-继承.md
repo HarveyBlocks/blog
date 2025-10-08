@@ -34,7 +34,7 @@ class 子类名:继承方式 父类{
     -   在类内部, 子类中的成员函数都可以直接访问父类中的`public`和`protected`成员
     -   子类创建出来的对象不能直接访问父类中的任何成员
 
-##代码示例
+## 代码示例
 
 ```cpp
 #include<iostream>
@@ -449,7 +449,7 @@ C::C(C &c1):B(c1){…}
 
 对于菱形继承
 
-###构造器
+### 构造器
 
 -   作用
 
@@ -524,7 +524,7 @@ int main(){
 
 
 
-####`static_cast`
+#### `static_cast`
 
 >   静态转化
 
@@ -576,7 +576,7 @@ static_cast<new_type> (expression)
 
 
 
-####`dynamic_cast`
+#### `dynamic_cast`
 
 >   能类型检查的类型转换
 
@@ -601,7 +601,7 @@ void f(const Base &b)
 
 
 
-####`const_cast`
+#### `const_cast`
 
 
 
@@ -621,7 +621,7 @@ char* h3 = const_cast<char*>(g3);//去掉const指针的const属性
 
 ```
 
-####`reinterpret_cast`
+#### `reinterpret_cast`
 
 啥都能转, 无关也能转, 略
 

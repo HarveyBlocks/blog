@@ -21,7 +21,7 @@ MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
 
 ![image-20240530154020503](../asset/Day13-%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8/image-20240530154020503.png)
 
-##JVM内存信息
+## JVM内存信息
 
 ```java
 protected void show() {
@@ -56,7 +56,7 @@ private static String getMemoryInfo(MemoryPoolMXBean bean) {
 
 
 
-##直接内存信息
+## 直接内存信息
 
 特指NIO里面提供的直接内存, 而不是元空间, 元空间在JVM内存获取中已经被显示了
 

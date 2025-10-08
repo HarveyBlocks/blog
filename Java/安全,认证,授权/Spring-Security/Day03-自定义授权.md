@@ -38,7 +38,7 @@
 
 -   都会调用**accessDecisionManager**进行授权决策
 
-##从数据库查询权限
+## 从数据库查询权限
 
 ### 数据库权限准备
 
@@ -84,7 +84,7 @@ CREATE TABLE `t_role_permission` (
 insert into `t_role_permission`(`role_id`,`permission_id`) values ('1','1'),('1','2');
 ```
 
-###定义权限Entity
+### 定义权限Entity
 
 ```java
 public class PermissionDto {
@@ -96,7 +96,7 @@ public class PermissionDto {
 }
 ```
 
-###依据用户ID查询权限
+### 依据用户ID查询权限
 
 -   准备查询命令
 
@@ -225,7 +225,7 @@ public class PermissionDto {
 	
 	`hasIpAddress(String ipaddressExpression)` 限制IP地址或子网
 
-##基于方法授权
+## 基于方法授权
 
 -   可以在Controller,Service,Dao层的方法,但是**建议拦截Controller方法**
 
@@ -262,9 +262,9 @@ public interface BankService {
 }
 ```
 
-###@PreAuthorize
+### @PreAuthorize
 
-####开启@PreAuthorize
+#### 开启@PreAuthorize
 
 ```java
 @EnableGlobalMethodSecurity(prePostEnabled = true)//注解在任何配置类上边,开启@PreAuthorize

@@ -1,6 +1,6 @@
 # ES持久化
 
-##配置文件
+## 配置文件
 
 ```shell
 vim config/application.yml 

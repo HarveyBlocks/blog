@@ -4,7 +4,7 @@
 -   擅长随机查找
 -   增删慢
 
-##操作
+## 操作
 
 ### 查
 
@@ -34,11 +34,11 @@ void showArr(char *arr, int len) {
 
 
 
-###删
+### 删
 
 **数组的元素是不能删的，只能覆盖。**
 
-####依据索引删
+#### 依据索引删
 
 ```c
 void removeEle(char *arr, int len, int index) {
@@ -51,7 +51,7 @@ void removeEle(char *arr, int len, int index) {
 }
 ```
 
-####依据元素删
+#### 依据元素删
 
 考虑到一个数组里有相同的元素
 
@@ -70,7 +70,7 @@ int removeEleByValue(char *arr, int len, char value) {
 }
 ```
 
-###增
+### 增
 
 ```c
 void insertEle(char *arr, int len, int index, char value) {

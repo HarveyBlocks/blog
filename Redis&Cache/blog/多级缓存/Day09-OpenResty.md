@@ -75,7 +75,7 @@ ngx.say('{"id":10001,"name":"SALSA AIR"}')
 
 ## 获取请求参数
 
-###获取不同形式的参数
+### 获取不同形式的参数
 
 ![image-20240219142948143](../../assets/Day09-OpenResty/image-20240219142948143.png)
 
@@ -239,7 +239,7 @@ local resp = ngx.location.capture(
 
 
 
-###Tomcat集群负载均衡
+### Tomcat集群负载均衡
 
 OpenResty需要:
 
@@ -278,7 +278,7 @@ OpenResty需要:
 
 ## 向Redis发起请求
 
-###缓存预热
+### 缓存预热
 
 先向Redis发起请求查询数据, 如果没有数据, 再向Tomcat缓存查询数据
 
@@ -471,7 +471,7 @@ ngx.say(resp)
 
 >   OpenResty为Nginx提供了shard dict的功能, 可以在**一个Nginx**的**多个worker**之间共享数据, 实现缓存功能
 
-###开启共享词典
+### 开启共享词典
 
 在`nginx.conf`的`http`下配置：
 

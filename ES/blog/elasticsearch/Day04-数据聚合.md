@@ -4,7 +4,7 @@
 
 
 
-##聚合种类
+## 聚合种类
 
 >   聚合的字段一定不能用来分词
 
@@ -201,7 +201,7 @@ GET /hotel/_search
 
 
 
-###Metric 聚合
+### Metric 聚合
 
 >   获取每个品牌的用户评分的最大, 最小, 平均
 
@@ -293,7 +293,7 @@ GET /hotel/_search
 
 
 
-##Rust Client
+## Rust Client
 
 ```java
 public void getData() throws IOException {
@@ -340,7 +340,7 @@ public void getData() throws IOException {
 
 ## 聚合的应用
 
-###分组结果的应用
+### 分组结果的应用
 
 >   索引库中存在的文档中, 共涉及了哪些城市 ? 这决定了用户能在前端看见的选项数量
 
@@ -361,7 +361,7 @@ GET /hotel/_search
 }
 ```
 
-###带条件的聚合的应用
+### 带条件的聚合的应用
 
 >   如果用户选择了选项100-500区间, 品牌栏目就不应该继续存在哪些价格不在此区间范围的选项
 >

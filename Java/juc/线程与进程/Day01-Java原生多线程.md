@@ -1,8 +1,8 @@
 # 线程API
 
-##创建-启动线程
+## 创建-启动线程
 
-###Thread-Runnable
+### Thread-Runnable
 
 Thread啊. lambda Runnable啊, 啥的
 
@@ -130,7 +130,7 @@ Caused by: java.lang.ArithmeticException: / by zero
 
 ## Thread常见方法
 
-###一览
+### 一览
 
 #### 对象方法
 

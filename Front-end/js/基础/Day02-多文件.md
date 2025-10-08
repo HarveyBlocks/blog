@@ -220,7 +220,7 @@ var module2 = require('module2');
 
 
 
-## **import()** 
+## **import()**
 
 -   ES2020引入的功能
 -   它返回一个Promise

@@ -78,7 +78,7 @@ public class QuickController {
 @RequestMapping("/show")
 ```
 
-###交给SpringMVC的容器管理
+### 交给SpringMVC的容器管理
 
 ```java
 @Controller//@Component的三个衍生注解,比Component更具备语义化

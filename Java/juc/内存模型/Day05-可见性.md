@@ -20,9 +20,9 @@ public static void demo() {
 
 运行代码, 发现即使run更改成false之后, 另一线程依然循环不断
 
-##不可见
+## 不可见
 
-###原因分析
+### 原因分析
 
 JVM的JIT发现代码`while(run){}`反复运行, 是热点代码, 
 
@@ -55,7 +55,7 @@ graph TD
 工作内存-->读线程
 ```
 
-###工作内存
+### 工作内存
 
 >   高速缓存
 
@@ -105,7 +105,7 @@ private volatile static boolean run = 1;
 
 
 
-###synchronized
+### synchronized
 
 synchronized加锁部分的变量不会被放入工作内存
 

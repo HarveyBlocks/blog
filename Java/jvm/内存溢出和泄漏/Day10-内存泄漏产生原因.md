@@ -2,7 +2,7 @@
 
 ## equals()和hashCode()
 
-###出现条件
+### 出现条件
 
 1.  `HashMap`和`equals,` `hashCode`联合使用
 
@@ -193,9 +193,9 @@ public static void main(String[] args) throws InterruptedException {
 
 要显示地写出`remove()`来, remove写到finally里取, 保证确实的删除
 
-##String#intern
+## String#intern
 
-###产生条件
+### 产生条件
 
 JDK6中字符串常量池在堆内存的PermGen永久代中, 永久代一般不会配置的特别大
 

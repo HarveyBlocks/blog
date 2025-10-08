@@ -42,7 +42,7 @@ CREATE TABLE `tb_hotel` (
 -   是否分词
     -   分词器
 
-####字段分析
+#### 字段分析
 
 -   `id`, 依据**es的`id`是字符串**<img src="../typora-user-images/Day02-Java%E6%93%8D%E4%BD%9Ces/image-20231225165355121.png" alt="image-20231225165355121" style="zoom:33%;" />
 
@@ -59,7 +59,7 @@ CREATE TABLE `tb_hotel` (
 
     `latitude`和`longitude`在一起才是一个`geo_point `字段
 
-####搜索分析
+#### 搜索分析
 
 -   根据多字段查询, 效率不如单个字段, 如何提高效率?
 
@@ -284,7 +284,7 @@ void destroy() throws IOException {
 
 >   restClient.indices()
 
-###创建索引库
+### 创建索引库
 
 ```java
 private static final String CREATE_HOTEL_INDEX = 
@@ -344,7 +344,7 @@ void deleteHotelIndex() throws IOException {
 
 见上文
 
-###新增hotel数据
+### 新增hotel数据
 
 >   去数据库查询酒店数据, 导入hotel索引库
 
@@ -470,9 +470,9 @@ void testDatabaseToIndex() throws IOException {
 
 -   查询不存在的东西, String json为null;
 
-###修改hotel数据
+### 修改hotel数据
 
- #### 全量更新
+#### 全量更新
 
 >   如果不存在创建新的文档, 和新增完全一致
 

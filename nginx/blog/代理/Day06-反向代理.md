@@ -24,7 +24,7 @@ Server4 --> Proxy
 
 
 
-##`proxy_pass`
+## `proxy_pass`
 
 ```NGINX
 server {

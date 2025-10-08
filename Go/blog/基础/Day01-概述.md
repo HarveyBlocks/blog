@@ -1,4 +1,4 @@
-#Go
+# Go
 
 -   面向过程
 -   垃圾回收
@@ -18,7 +18,7 @@ goroutine类似于线程，但并非线程, 可以将goroutine理解为一种虚
 
 Go语言运行时会参与调 度goroutine，并将goroutine**合理地分配到每个CPU中**，最大限度地使 用CPU性能。
 
-##channel
+## channel
 
 多个goroutine中，Go语言使用channel进行通信
 
@@ -28,7 +28,7 @@ Go语言运行时会参与调 度goroutine，并将goroutine**合理地分配到
 
 
 
-##Hello World
+## Hello World
 
 ```go
 package main
@@ -40,7 +40,7 @@ func main() {
 }
 ```
 
-###package
+### package
 
 *`package main`* 定义了包名
 

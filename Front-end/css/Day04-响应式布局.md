@@ -291,7 +291,7 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 }
 ```
 
-#### justify-content 
+#### justify-content
 
 在容器内**水平**对齐整个网格
 

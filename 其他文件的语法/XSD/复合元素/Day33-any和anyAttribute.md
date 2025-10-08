@@ -1,10 +1,10 @@
-#`<any>`&`<anyAttribute>`
+# `<any>`&`<anyAttribute>`
 
 作用是预留一个空位给其他任意元素/属性
 
 这个空位, 不能留给自己(不能直接嵌套), 但可以留给自己的父元素, 然后再嵌套自己😀
 
-##`<any>`
+## `<any>`
 
 ```xml
 <xs:complexType name="personType">
@@ -32,7 +32,7 @@
 </xs:element>
 ```
 
-##可扩展的文档
+## 可扩展的文档
 
 准备两个xsd文档
 
@@ -109,7 +109,7 @@
 
 ```
 
-##`<anyAttribute>`
+## `<anyAttribute>`
 
 ```xml
 <xs:complexType name="personType">

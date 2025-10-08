@@ -42,7 +42,7 @@ emmm, 这里会采用小端, 可以明确, `zlbytes`,`zltail`, `zllen`会采用�
 
 ![image-20240404224845452](../../assets/Day12-ZipList/image-20240404224845452.png)
 
-##ZipListEntry
+## ZipListEntry
 
 ![image-20240404225526943](../../assets/Day12-ZipList/image-20240404225526943.png)
 

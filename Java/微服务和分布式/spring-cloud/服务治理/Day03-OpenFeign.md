@@ -1,6 +1,6 @@
 #  OpenFeign
 
-##现有注册中心存在的问题
+## 现有注册中心存在的问题
 
 ```java
 @Resource
@@ -72,7 +72,7 @@ private List<ItemDTO> requestItemByIds(Set<Long> itemIds) {
 
 写这么多代码,我不乐意!
 
-##OpenFeign简述
+## OpenFeign简述
 
 >   声明式Http客户端, 是SpringCloud在Eureka公司开源的Feign基础上改造而来
 
@@ -82,11 +82,11 @@ private List<ItemDTO> requestItemByIds(Set<Long> itemIds) {
 
 
 
-##使用OpenFeign
+## 使用OpenFeign
 
 
 
-###引入依赖
+### 引入依赖
 
 ```xml
 <!--OpenFeign-->
@@ -117,7 +117,7 @@ public class CartServiceApplication {
 }
 ```
 
-###定义FeignClient
+### 定义FeignClient
 
 ```java
 @FeignClient(value = Constants.ITEM_SERVICE_NAME)
@@ -174,7 +174,7 @@ OpenClient对Http请求做了优雅的伪装, 不过其底层发起http请求, �
 </dependency>
 ```
 
-####开启连接池
+#### 开启连接池
 
 ```yml
 feign:
@@ -229,7 +229,7 @@ Order需要对Item的查询, Cart需要对Item的查询
     -   **一开始**就在单体服务里**有了**配置类实体类, 可以改造原来的项目结构为统一管理模块
 -   一开始就决定是采用微服务架构的, 
 
-###对的创建新模块方案的实践
+### 对的创建新模块方案的实践
 
 #### 移动依赖
 
@@ -256,7 +256,7 @@ Order需要对Item的查询, Cart需要对Item的查询
 </dependency>
 ```
 
-####移动启动Client注解
+#### 移动启动Client注解
 
 ```java
 @EnableFeignClients("com.hmall.api.client")
@@ -274,7 +274,7 @@ Order需要对Item的查询, Cart需要对Item的查询
 
 >   OpenFeign只会在FeignClient所在包的日志级别为**DEBUG**时, 才会输出日志
 
-###OpenFeign的日志级别
+### OpenFeign的日志级别
 
 1.  **NONE**
     -   不记录任何日志
@@ -286,7 +286,7 @@ Order需要对Item的查询, Cart需要对Item的查询
 4.  **FULL**
     -   记录所有的**请求和响应信息**, 包括头信息, **请求体, 元数据**
 
-###注册日志级别
+### 注册日志级别
 
 ```java
 /**
@@ -307,7 +307,7 @@ public class ClientConfig {
 
 
 
-###声明级别生效
+### 声明级别生效
 
 -   对特定客户端声明有效
 

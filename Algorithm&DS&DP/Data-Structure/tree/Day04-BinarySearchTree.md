@@ -260,7 +260,7 @@ bool BinaryTree<T>::isLeftChild(const BinaryTreeNode<T> *node, const BinaryTreeN
 1.  考虑增删涉及的节点
 2.  若节点保存父节点指针, 考虑需要更改的信息(3的父亲到底指向谁啊)
 
-##连接   *Join*
+## 连接   *Join*
 
 集合S~1~和S~2~, max{S~1~}<a~n~<min{S~2~}, 集合以红黑树存储, 思考如何获取S, S = S~1~∪{a~n~}∪S~2~ (S~1~和S~2~可销毁)
 

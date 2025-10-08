@@ -247,7 +247,7 @@ coroutineScope函数**只会阻塞当前协程**，既**不影响其他协程**�
 
 
 
-### Job 
+### Job
 
 作用域构建器的Job, 在协程作用域外, 可以用Job对对应协程进行关闭
 
@@ -266,7 +266,7 @@ GlobalScope.launch的返回值就是job, 如果需要在GlobalScope.launch的协
 
 
 
-### CoroutineScope.async 
+### CoroutineScope.async
 
 在协程作用域中有效, 用于获取内部协程作用域的返回值
 

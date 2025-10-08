@@ -1,6 +1,6 @@
 # 交替控制
 
-##1->2
+## 1->2
 
 ```java
  private enum LogCondition {
@@ -121,7 +121,7 @@ private static Runnable loopPrintTarget(FutureResponse<LogCondition> response,
 }
 ```
 
-###park-unpark
+### park-unpark
 
 ```java
 private static Thread thread1 = null;

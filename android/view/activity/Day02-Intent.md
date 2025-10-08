@@ -277,7 +277,7 @@ class SecondActivity : AppCompatActivity() {
 - Serializable 
 - Parcelable 将对象进行分解封装
 
-### Serializable 
+### Serializable
 
 类实现java.io.Serializable
 
@@ -301,7 +301,7 @@ if (support(Build.VERSION_CODES.TIRAMISU)) {
 }
 ```
 
-### Parcelable 
+### Parcelable
 
 ```kotlin
 class Person(val name: String = "", val age: Int = 0) : Parcelable {

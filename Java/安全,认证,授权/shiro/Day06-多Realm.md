@@ -1,6 +1,6 @@
 # **多**Realm
 
-##原理
+## 原理
 
 -   Shiro 的 ModularRealmAuthentication ( 模块化Realm认证 ) 和AuthenticationStrategy (认证策略)组件判断认证成功还是失败
 -   AuthenticationStrategy 
@@ -13,7 +13,7 @@
         3.  调用Realm的getAuthenticationInfo之后
         4.  在所有Realm调用之后
 
-###三种认证策略
+### 三种认证策略
 
 | AuthenticationStrategy      | 描述                                 |
 | --------------------------- | ------------------------------------ |

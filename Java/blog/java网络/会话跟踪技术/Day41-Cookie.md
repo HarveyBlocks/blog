@@ -6,7 +6,7 @@
 
 -   将数据保存在客户端,以后每次请求都携带Cookie数据进行访问
 
-##基础使用
+## 基础使用
 
 >   我们不关心浏览器怎么做的，我们只关心浏览器做了啥，以及服务器应该是如何应对
 
@@ -33,7 +33,7 @@
 
 
 
-####试验
+#### 试验
 
 
 
@@ -96,7 +96,7 @@ public class Servlet1 extends HttpServlet {
 
 ![image-20231119131952562](../../../typora-user-images/Day41-Cookie/image-20231119131952562.png)
 
-###获取Cookie
+### 获取Cookie
 
 1.  获取客户端携带的所有Cookie对象
 
@@ -188,7 +188,7 @@ public class Servlet2 extends HttpServlet {
 
 
 
-###Cookie存储中文
+### Cookie存储中文
 
 -   Cookie不能直接存储中文(尊嘟假嘟?0.o)
 -   使用URL编码

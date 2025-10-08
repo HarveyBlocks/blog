@@ -77,7 +77,7 @@ typedef struct dict {
 
 当然, 扩容之后, 利用率却很低, 就会进行收缩
 
-###触发条件
+### 触发条件
 
 -   扩容
     -   Dict在每次新增键值对时会检查负载因子(LoadFactor = used/size)

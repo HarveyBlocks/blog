@@ -101,7 +101,7 @@ public class AccountServlet extends HttpServlet {
 
 ### 改进
 
-####配置类/(xml文件的名字)写死了
+#### 配置类/(xml文件的名字)写死了
 
 >   由于我使用了全注解,而他又不讲全注解,我这里就只能大概的写一下xml的配置方法
 
@@ -204,7 +204,7 @@ public void contextInitialized(ServletContextEvent sce) {
 
 
 
-####applicationContext的键"applicationContext"写死了
+#### applicationContext的键"applicationContext"写死了
 
 
 

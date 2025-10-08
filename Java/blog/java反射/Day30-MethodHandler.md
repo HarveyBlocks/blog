@@ -8,7 +8,7 @@ MethodHandler创建时就必须做权限检查，而不是invoke运行时做权�
 
 通过将method handle置为static final的变量，invoke甚至可以达到直接调用的效率
 
-##相关类
+## 相关类
 
 -   Lookup
     -   工厂, 用于创建MethodHandle
@@ -54,7 +54,7 @@ MethodHandles.Lookup publicLookup = MethodHandles.publicLookup();
 
 ### 使用
 
-####获取字节码对象
+#### 获取字节码对象
 
 ```java
 MethodHandles.Lookup publicLookup = MethodHandles.publicLookup();
@@ -70,7 +70,7 @@ try {
 
 ## MethodHandler
 
-###从Lookup中创建
+### 从Lookup中创建
 
 #### Public构造器
 
@@ -147,7 +147,7 @@ try {
 }
 ```
 
-####非Public的方法
+#### 非Public的方法
 
 ```java
 Method method = targetClass.getDeclaredMethod(methodName, paramTypes);
@@ -201,7 +201,7 @@ try {
 
 private字段的Getter和Setter的获取通过`Lookup#unreflectGetter`和`Lookup#unreflectSetter`
 
-###对方法调用执行
+### 对方法调用执行
 
 Static, 实例, 字段等方法的调用执行都一样
 

@@ -110,7 +110,7 @@ public abstract class Observer {
 }
 ```
 
-###Concrete Observer
+### Concrete Observer
 
 ```java
 public class ConcreteObserver extends Observer {

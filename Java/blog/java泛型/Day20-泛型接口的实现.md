@@ -28,7 +28,7 @@ class PersonImpl implement Person//这里Person默认成了Object
 
 ## 实现接口之法一
 
-### 接口文件 
+### 接口文件
 
 ```java
 package GenericLearning;

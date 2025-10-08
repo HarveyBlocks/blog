@@ -371,7 +371,7 @@ fun afterRequestPermission(
 }
 ```
 
-### 
+###
 
 ## XXPermissions
 

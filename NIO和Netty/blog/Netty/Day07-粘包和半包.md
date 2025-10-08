@@ -63,7 +63,7 @@ server.option(ChannelOption.SO_RCVBUF/*SO_RCVBUF: 作为接受方的BUf大小; S
 
 ## 产生粘包现象的原因
 
-###滑动窗口
+### 滑动窗口
 
 #### 串行机制
 
@@ -79,7 +79,7 @@ TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户�
 
 
 
-####滑动窗口原理
+#### 滑动窗口原理
 
 为了解决此问题，引入了**窗口**
 
@@ -205,7 +205,7 @@ server.childOption(
 
 
 
-###定长解码器
+### 定长解码器
 
 >   FixedLengthFrameDecoder
 >
@@ -343,7 +343,7 @@ ngHandler - [id: 0x062bf8c0, L:/127.0.0.1:8080 - R:/127.0.0.1:60707] READ COMPLE
 
 
 
-####使用
+#### 使用
 
 行分隔符
 
@@ -374,13 +374,13 @@ pipeline.addLast(
 
 
 
-###长度字段
+### 长度字段
 
 >   LengthFieldBasedFrameDecoder
 >
 >   基于长度字段的解码器
 
-####使用
+#### 使用
 
 ```java
 public LengthFieldBasedFrameDecoder(
