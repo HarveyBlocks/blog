@@ -67,7 +67,7 @@
     address:
       - beijing
       - shanghai
-    #等价于
+    # 等价于
     address: [beijing,shanghai] # 逗号分割
     ```
 

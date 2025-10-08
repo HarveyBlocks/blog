@@ -178,7 +178,7 @@ Console.WriteLine(((Color)2)); // Red
 -   结构最适用于小型数据结构
 -   记录类型是具有附加编译器合成成员的数据结构
 
-###可变性设计
+### 可变性设计
 
 -   类通常存储计划在创建类对象后进行修改的数据
 -   结构通常存储不打算在创建结构后修改的数据
@@ -283,7 +283,7 @@ class Son: Parent{
 
 -   不支持多继承
 
-###抽象类
+### 抽象类
 
 使用`abstract`修饰
 
@@ -364,7 +364,7 @@ Student student2 = student with{ Name = "Jhon"} ;
 
 类型名由编译器生成, 每个属性的类型由编译器推断
 
-###声明使用
+### 声明使用
 
 ```c#
 var v = new { FirstName = "John", /*string 不要写*/ LastName = "Doe" };
@@ -378,7 +378,7 @@ Console.WriteLine(v3.Person.v);
 
 -   返回值和形参不能声明成匿名类型
 
-###特征
+### 特征
 
 -   匿名类型包含一个或多个**公共只读属性**
 -   是class 类型，直接派生自 object
@@ -387,7 +387,7 @@ Console.WriteLine(v3.Person.v);
 
 常用于LINQ
 
-###匿名类型数组
+### 匿名类型数组
 
 指定匿名类型数组
 

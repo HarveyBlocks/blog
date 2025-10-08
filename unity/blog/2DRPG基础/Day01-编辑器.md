@@ -56,8 +56,14 @@ Hierarchy->
 
 锁定之后, 按比例缩放
 
--   选择图片素材(不是对象)->Inspector->General->pixels Per Unit 单位像素Unit中的像素个数,调整像素比例(调成像素单位<img src="../../assets/Day01-%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90/image-20241016113952406.png" alt="image-20241016113952406" style="zoom:33%;" />如图数一灰一白的格子, 就是一个像素Unit), 调成16是因为资源下载网站说资源是16*16的
--   选择图片素材(不是对象)->Inspector->Advanced->>Filter Mode-> 以相邻的模式放大缩小, 使用临近的像素单位点来对像素进行补充, 选择Pointer(None), 关闭
+- 选择图片素材(不是对象)->Inspector->General->pixels Per Unit 单位像素Unit中的像素个数,调整像素比例(调成像素单位
+
+  如图数一灰一白的格子, 就是一个像素Unit), 调成16是因为资源下载网站说资源是16*16的
+
+  <img src="../../assets/Day01-%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90/image-20241016113952406.png" alt="image-20241016113952406" style="zoom:33%;" />
+
+- 选择图片素材(不是对象)->Inspector->Advanced->>Filter Mode-> 以相邻的模式放大缩小, 使用临近的像素单位点来对像素进行补充, 选择Pointer(None), 关闭
+
 -   选择图片素材(不是对象)->Inspector->Advanced->Compression->None 关闭压缩像素
 
 点击Apply生效
