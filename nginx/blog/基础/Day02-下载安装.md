@@ -53,8 +53,6 @@ gcc --version
 rpm -qa pcre-devel pcre zlib zlib-devel openssl openssl-devel
 ```
 
-
-
 接下来是yum安装
 
 [nginx: Linux packages](https://nginx.org/en/linux_packages.html#RHEL)
@@ -116,6 +114,12 @@ whereis nginx
 <img src="../../asset/Day02-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/image-20240416125402251.png" alt="image-20240416125402251" style="zoom:50%;" />
 
 启动成功
+
+# docker
+
+```
+docker run -p 443:443 -p 80:80 --name nginx -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/conf/conf.d:/etc/nginx/conf.d -v /home/nginx/log:/var/log/nginx -v /home/nginx/html:/usr/share/nginx/html -v /home/files:/etc/nginx/html/htmlstatic -d nginx:latest
+```
 
 
 

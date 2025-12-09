@@ -39,6 +39,40 @@ bind 0.0.0.0
 requirepass 123456
 ```
 
+下面是一些docker部署普通redis
+
+
+
+```bash
+docker run \
+	-p 6379:6379\
+    --name redis\
+    -v $PWD/conf/redis.config:/etc/redis/redis.config\
+    -v $PWD/data:/var/lib/redis\
+    -v $PWD/logs:/logs\
+    --privileged=true\
+    --restart=always\
+    -d redis:latest\
+    redis-server ./redis.config
+```
+
+```
+docker run 
+	-p 6379:6379
+    --name redis
+    -v $PWD/conf/redis.conf:/etc/redis/redis.conf
+    -v $PWD/data:/var/lib/redis
+    -v $PWD/logs:/logs
+    --privileged=true
+    --restart=always
+    -d redis:latest
+    redis-server /etc/redis/redis.conf
+```
+
+
+
+
+
 ## 分布式Redis
 
 Redis持久化
@@ -48,4 +82,3 @@ Redis主从
 Redis哨兵
 
 Redis分片集群
-

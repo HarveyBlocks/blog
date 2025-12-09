@@ -154,6 +154,37 @@ div~p {
 }
 ```
 
+### 联合类选择器
+
+- 选择器直接相连, 中间无空格
+- 元素必须同时拥有所指定的类型
+- 常用于组件的组合状态和样式复用
+
+```css
+.red {
+    color: red;
+}
+
+.alert {
+    /*随便选一个字体, 用于测试*/
+    font-family: "Berlin Sans FB Demi", serif;
+}
+
+.alert.red {
+    background-color: black;
+}
+```
+
+
+```html
+<body>
+<h1 class="red">A red heading</h1>
+<h1 class="alert">An alert</h1>
+<h1 class="red alert">Red alert</h1>
+</body>
+</html>
+```
+
 
 
 ## 伪类

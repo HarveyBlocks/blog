@@ -124,6 +124,28 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+```
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": [
+        "https:/doublezonline.cloud"
+  ]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+
+```
+
+```conf
+nameserver 192.168.2.1
+nameserver 114.114.114.114
+nameserver 210.34.48.34
+```
+
+
+
 ## Docker配置MySQl
 
 ```bash
@@ -138,6 +160,23 @@ docker run -d \
  -e MYSQL_ROOT_PASSWORD=123456 \
  mysql
 ```
+
+
+
+```
+docker run -d \
+ --name mysql \
+ --privileged \
+ -p 3306:3306 \
+ -v $PWD/conf:/etc/mysql/conf.d \
+ -v $PWD/logs:/logs \
+ -v $PWD/data:/var/lib/mysql \
+ -e TZ=Asia/Shanghai \
+ -e MYSQL_ROOT_PASSWORD=EmiyaShirou3.14159265358979 \
+ mysql
+```
+
+
 
 -   run:
 

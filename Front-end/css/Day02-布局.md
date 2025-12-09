@@ -519,3 +519,115 @@ div.sticky {
 ```
 
 设置所有的框都采用这台规则
+
+
+
+
+
+## Flexbox
+
+> display: flex;
+
+
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>  
+</div>
+</body>
+</html>
+
+```
+
+弹性布局中必须有一个 **display** 属性设置为 **flex** 的**父元素**。
+
+弹性容器的直接子元素会自动成为弹性项目。
+
+### 属性
+
+- `flex-direction`
+- `flex-wrap`
+- `flex-flow`
+- `justify-content`
+- `align-items`
+- `align-content`
+
+### flex-direction
+
+定义容器要在哪个方向上堆叠 flex 项目
+
+- `column` 设置垂直堆叠 flex 项目（从上到下）
+- `column-reverse` 值垂直堆叠 flex 项目（但从下到上）
+- `row` 值水平堆叠 flex 项目（从左到右）
+- `row-reverse` 值水平堆叠 flex 项目（但从右到左）
+
+```css
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+
+
+![image-20251031104830760](../assets/Day02-布局/image-20251031104830760.png)
+
+### flex-wrap
+
+规定是否应该对 flex 项目换行。
+
+```css
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+```
+
+- wrap 值规定 flex 项目将在必要时进行换行
+- nowrap 值规定将不对 flex 项目换行（默认）
+- wrap-reverse 值规定如有必要，弹性项目将以相反的顺序换行
+
+默认情况(nowarp), 自动调整flex宽度
+
+![image-20251031105243834](../assets/Day02-布局/image-20251031105243834.png)
+
+使用wrap-reverse
+
+![image-20251031105116586](../assets/Day02-布局/image-20251031105116586.png)
+
+### flex-flow
+
+**同时设置** `flex-direction` 和 `flex-wrap` 属性的简写属性。
+
+````
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+
+
+
+

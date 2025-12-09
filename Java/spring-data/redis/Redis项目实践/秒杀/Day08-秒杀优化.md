@@ -160,7 +160,6 @@ public class LuaScript {
         DefaultRedisScript<T>  script = new DefaultRedisScript<>();
         script.setLocation(new ClassPathResource(classPath));
         script.setResultType(returnType);
-        System.out.println(returnType);
         return script;
     }
 }

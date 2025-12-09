@@ -23,7 +23,7 @@ show global status like 'Com_____';
 
     ![image-20231021213930746](../../shoot/Day07-SQL性能优化/image-20231021213930746.png)
 
-![image-20231021214624293](../../shoot/Day07-SQL性能优化/image-20231021214624293.png)
+![image-20231021214624293](../../Screenshots/Day07-性能分析/image-20231021214624293.png)
 
 ## 慢查询日志
 

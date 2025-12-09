@@ -76,7 +76,7 @@ centos-redis:0>zScore stu Jhon
 #### *score值* 范围内的元素
 
 ```bash
-zRangeByScore zSet min max
+zRangeByScore zSetmin max
 zRevRangeByScore zSet min max
 ```
 
