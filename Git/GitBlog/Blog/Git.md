@@ -4,7 +4,7 @@
 2. 代码即使提交,提交过就不会丢
 3. 遇到任何问题都不要删除文件
 
-```Git
+```bash
 git init
 ```
 
@@ -14,7 +14,7 @@ git init
 
 
 
-```Git
+```bash
 git remote add origin  https://github.com/HarveyBlocks/collection-java
 ```
 
@@ -22,7 +22,7 @@ git remote add origin  https://github.com/HarveyBlocks/collection-java
 
 
 
-```Git
+```bash
 git branch -M main
 ```
 
@@ -30,7 +30,7 @@ git branch -M main
 
 
 
-```Git
+```bash
 echo "# Hello World" > README.md   
 ```
 
@@ -40,14 +40,14 @@ echo "# Hello World" > README.md
 
 
 
-  ```Git
+  ```bash
 git add .
   ```
 添加全部的发生了更改的文件
 
 
 
-  ```Git
+  ```bash
 git commit -m "add:first commit"
   ```
 
@@ -55,7 +55,7 @@ git commit -m "add:first commit"
 
 
 
-  ```Git
+  ```bash
 git push -u origin main
   ```
 
