@@ -1,7 +1,7 @@
 # blog
 
 ```txt
-D:\IT_STUDY\BLOG
+https://github.com/HarveyBlocks/blog
 +---android
 |   +---kotlin
 |   |   +---advanced
