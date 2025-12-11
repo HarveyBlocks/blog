@@ -6,7 +6,7 @@
 
 ## Follow数据表
 
-![image-20240129143837368](../../../assert/Untitled/image-20240129143837368.png)
+![image-20240129143837368](../../../assets/Untitled/image-20240129143837368.png)
 
 ## 关注和取关
 
@@ -138,8 +138,4 @@ public List<UserDTO> followInteraction(Long user1Id, Long user2Id) {
             ).collect(Collectors.toList());
 }
 ```
-
-
-
-
 

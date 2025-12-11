@@ -58,3 +58,4 @@ t1->>table : put("KEY","VALUE2")
 >   以String和Integer为例
 
 String和Integer中的属性, 都是只能读, 不能写的, 故实现了线程安全
+

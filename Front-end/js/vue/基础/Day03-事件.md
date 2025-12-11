@@ -211,4 +211,3 @@ function notAllow(event) {
 
 - `.once` 只触发一次回调。
 
-

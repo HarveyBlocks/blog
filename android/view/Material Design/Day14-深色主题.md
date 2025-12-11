@@ -45,7 +45,7 @@ Android 10.0 引入系统
 
 创建给night的配色
 
-![image-20250926225644191](../../assets/Day14-深色主题/image-20250926225644191.png)
+![image-20250926225644191](../../assetss/Day14-深色主题/image-20250926225644191.png)
 
 light的colors有的, night里有需要的, 都重写一份, 到时候从light换到night的时候, 同样name的color, 会采用night, 而不是light
 
@@ -60,7 +60,7 @@ light的colors有的, night里有需要的, 都重写一份, 到时候从light�
 </resources>
 ```
 
-![image-20250926230624227](../../assets/Day14-深色主题/image-20250926230624227.png)
+![image-20250926230624227](../../assetss/Day14-深色主题/image-20250926230624227.png)
 
 ## 代码中判断主题
 

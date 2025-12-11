@@ -8,7 +8,7 @@
 
     -   拦截器为**FilterSecurityInterceptor**
 
-        ![image-20231219124632028](../../typora-user-images/Day03-自定义授权/image-20231219124632028.png)
+        ![image-20231219124632028](../../assets/Day03-自定义授权/image-20231219124632028.png)
 
     -   在
 
@@ -323,3 +323,4 @@ http.csrf().disable()// 取消对CSRF的保护
         .logoutSuccessUrl("/logout-view?logout")//自定义登出成功的端点
 ;
 ```
+

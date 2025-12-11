@@ -19,3 +19,4 @@ public T GetFirst<T>(List<T> ls) {
     return ls[0];
 }
 ```
+

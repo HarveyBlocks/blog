@@ -51,7 +51,7 @@
 
 
 
-![image-20250819213902643](../assets/Day05-变换/image-20250819213902643.png)
+![image-20250819213902643](../assetss/Day05-变换/image-20250819213902643.png)
 
 
 
@@ -83,7 +83,7 @@
 </style>
 ```
 
-![image-20250819213930464](../assets/Day05-变换/image-20250819213930464.png)
+![image-20250819213930464](../assetss/Day05-变换/image-20250819213930464.png)
 
 ### 倾斜
 
@@ -108,7 +108,7 @@
 </style>
 ```
 
-![image-20250819214159345](../assets/Day05-变换/image-20250819214159345.png)
+![image-20250819214159345](../assetss/Day05-变换/image-20250819214159345.png)
 
 ### 位移
 
@@ -128,7 +128,7 @@
 </style>
 ```
 
-![image-20250819214326039](../assets/Day05-变换/image-20250819214326039.png)
+![image-20250819214326039](../assetss/Day05-变换/image-20250819214326039.png)
 
 ### 缩放
 
@@ -168,7 +168,7 @@
 </style>
 ```
 
-![image-20250819214751232](../assets/Day05-变换/image-20250819214751232.png)
+![image-20250819214751232](../assetss/Day05-变换/image-20250819214751232.png)
 
 ## 三维属性
 
@@ -386,10 +386,4 @@ const perspectiveOriginWidth = ref(0);
 ### 演示
 
 <video src="../assets/Day05-变换/演示3D属性.mp4" style="border: 2px solid"></video>
-
-
-
-
-
-
 

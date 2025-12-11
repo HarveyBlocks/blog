@@ -109,5 +109,3 @@ Ubuntu的软件安装包时`.deb`的文件, 与centos的不同
 apt [-y] [install/remove/search] 软件名称
 ```
 
-
-

@@ -30,7 +30,7 @@
 
 [Spring官网spring-boot配置文档](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 
-![image-20231206000313637](../../typora-user-images/Day02-配置生效顺序/image-20231206000313637.png)
+![image-20231206000313637](../../assets/Day02-配置生效顺序/image-20231206000313637.png)
 
 命令行优先级4(比内部配置都高)
 
@@ -61,3 +61,4 @@ java -jar .\spring-boot-0.0.1-SNAPSHOT.jar --spring.config.location=d://applicat
 内部文件的配置不尽人意时,在外部配置文件.覆盖掉内部的配置文件
 
 内外部的文件形成互补
+

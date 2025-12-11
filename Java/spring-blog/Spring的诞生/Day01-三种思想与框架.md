@@ -6,9 +6,9 @@
 
 Bean的代理对象增强过帮我们解决耦合的问题
 
-![image-20231029235447864](../../typora-user-images/Untitled/image-20231029235447864.png)
+![image-20231029235447864](../../assets/Untitled/image-20231029235447864.png)
 
-![image-20231029235629962](../../typora-user-images/Untitled/image-20231029235629962.png)
+![image-20231029235629962](../../assets/Untitled/image-20231029235629962.png)
 
 -   BeanProxy是代理的Bean对象,是加强后的Bean对象
 
@@ -50,4 +50,5 @@ Bean的代理对象增强过帮我们解决耦合的问题
 -   基础框架
 -   服务框架
 
-![image-20231030000857887](../../typora-user-images/Untitled/image-20231030000857887.png)
+![image-20231030000857887](../../assets/Untitled/image-20231030000857887.png)
+

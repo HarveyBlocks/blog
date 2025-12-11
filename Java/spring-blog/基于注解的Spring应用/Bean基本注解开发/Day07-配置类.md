@@ -71,7 +71,7 @@ public class SpringConfig {
 -   UserServiceImpl的name是其全类名
 -   这个UserServiceImpl.class也变成了配置类(分配置类)
 
-![image-20231109122228676](../../../typora-user-images/Day07-配置类/image-20231109122228676.png)
+![image-20231109122228676](../../../assets/Day07-配置类/image-20231109122228676.png)
 
 [详见@Import再解](../..\基于注解的Spring应用\整合第三方\Day09-@Import再解.md)
 
@@ -104,6 +104,7 @@ public class ApplicationContextTest {
 
 ## 成果
 
-![image-20231106215928341](../../../typora-user-images/Day07-配置/image-20231106215928341.png)
+![image-20231106215928341](../../../assets/Day07-配置/image-20231106215928341.png)
 
 ### 删了,但是岁月静好
+

@@ -26,7 +26,7 @@
 java '-Dserver.port=8090' '-Dcsp.sentinel.dashboard.server=localhost:8090' '-Dproject.name=sentinel-dashboard' '-jar' sentinel-dashboard.jar
 ```
 
-![image-20240116125452769](../../../assert/Day07-Sentinel/image-20240116125452769.png)
+![image-20240116125452769](../../../assets/Day07-Sentinel/image-20240116125452769.png)
 
 账号密码`sentinel` `sentinel`
 
@@ -52,7 +52,7 @@ spring:
 
 ### 测试
 
-![image-20240116131800308](../../../assert/Day07-Sentinel/image-20240116131800308.png)
+![image-20240116131800308](../../../assets/Day07-Sentinel/image-20240116131800308.png)
 
 ## 基本使用
 
@@ -68,7 +68,7 @@ spring:
 
 -   资源名默认是接口的**请求路径**
 
-    ![image-20240116132047232](../../../assert/Day07-Sentinel/image-20240116132047232.png)
+    ![image-20240116132047232](../../../assets/Day07-Sentinel/image-20240116132047232.png)
 
     此时, 若用Rest风格的路径请求, 则会导致无法分清**不同请求方式**Controller
     -   配置使用**请求方式和路径**作为资源名
@@ -80,24 +80,24 @@ spring:
               http-method-specify: true
         ```
 
-    -   ![image-20240116132837437](../../../assert/Day07-Sentinel/image-20240116132837437.png)
+    -   ![image-20240116132837437](../../../assets/Day07-Sentinel/image-20240116132837437.png)
 
 
 
 
 ## 请求限流
 
-![image-20240116133407586](../../../assert/Day07-Sentinel/image-20240116133407586.png)
+![image-20240116133407586](../../../assets/Day07-Sentinel/image-20240116133407586.png)
 
 -   单机阈值: 每秒钟最多请求数
 
     超出阈值(2)的响应
 
-    ![image-20240116133652224](../../../assert/Day07-Sentinel/image-20240116133652224.png)
+    ![image-20240116133652224](../../../assets/Day07-Sentinel/image-20240116133652224.png)
 
-    ![image-20240116134216697](../../../assert/Day07-Sentinel/image-20240116134216697.png)
+    ![image-20240116134216697](../../../assets/Day07-Sentinel/image-20240116134216697.png)
 
-    ![image-20240116134342639](../../../assert/Day07-Sentinel/image-20240116134342639.png)
+    ![image-20240116134342639](../../../assets/Day07-Sentinel/image-20240116134342639.png)
 
 
 
@@ -123,13 +123,13 @@ feign:
 
 ### 线程隔离规则
 
-![image-20240116135055174](../../../assert/Day07-Sentinel/image-20240116135055174.png)
+![image-20240116135055174](../../../assets/Day07-Sentinel/image-20240116135055174.png)
 
-![image-20240116135200321](../../../assert/Day07-Sentinel/image-20240116135200321.png)
+![image-20240116135200321](../../../assets/Day07-Sentinel/image-20240116135200321.png)
 
 -   单机阈值, 最高线程数不超过2
 
-![image-20240116135700593](../../../assert/Day07-Sentinel/image-20240116135700593.png)
+![image-20240116135700593](../../../assets/Day07-Sentinel/image-20240116135700593.png)
 
 ## Fallback
 
@@ -202,13 +202,13 @@ public class CartServiceApplication {
 
 ### 测试
 
-![image-20240116145429393](../../../assert/Day07-Sentinel/image-20240116145429393.png)
+![image-20240116145429393](../../../assets/Day07-Sentinel/image-20240116145429393.png)
 
-![image-20240116145505173](../../../assert/Day07-Sentinel/image-20240116145505173.png)
+![image-20240116145505173](../../../assets/Day07-Sentinel/image-20240116145505173.png)
 
 
 
-![image-20240116145714108](../../../assert/Day07-Sentinel/image-20240116145714108.png)
+![image-20240116145714108](../../../assets/Day07-Sentinel/image-20240116145714108.png)
 
 ## 服务熔断
 
@@ -236,17 +236,17 @@ public class CartServiceApplication {
 
 ### 熔断规则
 
-![image-20240116151217004](../../../assert/Day07-Sentinel/image-20240116151217004.png)
+![image-20240116151217004](../../../assets/Day07-Sentinel/image-20240116151217004.png)
 
-![image-20240116151241884](../../../assert/Day07-Sentinel/image-20240116151241884.png)
+![image-20240116151241884](../../../assets/Day07-Sentinel/image-20240116151241884.png)
 
 
 
--   测试![image-20240116151754654](../../../assert/Day07-Sentinel/image-20240116151754654.png)
+-   测试![image-20240116151754654](../../../assets/Day07-Sentinel/image-20240116151754654.png)
 
     用户友好
 
-    ![image-20240116151919036](../../../assert/Day07-Sentinel/image-20240116151919036.png)
+    ![image-20240116151919036](../../../assets/Day07-Sentinel/image-20240116151919036.png)
 
 ## 持久化配置
 
@@ -280,11 +280,11 @@ public class CartServiceApplication {
 }
 ```
 
-![image-20240116153102865](../../../assert/Day07-Sentinel/image-20240116153102865.png)
+![image-20240116153102865](../../../assets/Day07-Sentinel/image-20240116153102865.png)
 
 -   `resource`
 
-    ![image-20240116153222868](../../../assert/Day07-Sentinel/image-20240116153222868.png)
+    ![image-20240116153222868](../../../assets/Day07-Sentinel/image-20240116153222868.png)
 
 -   其余的其实是替代`application.yml`里的配置
 

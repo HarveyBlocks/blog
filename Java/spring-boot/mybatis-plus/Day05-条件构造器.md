@@ -8,11 +8,11 @@
 
 >   条件构造器
 
-![image-20231208161542475](../../typora-user-images/Day4/image-20231208161542475.png)
+![image-20231208161542475](../../assets/Day4/image-20231208161542475.png)
 
 -   AbstractWrapper
 
-    ![image-20231208161900349](../../typora-user-images/Day4/image-20231208161900349.png)
+    ![image-20231208161900349](../../assets/Day4/image-20231208161900349.png)
 
 -   UpdateWrapper
 

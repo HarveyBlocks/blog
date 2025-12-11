@@ -12,7 +12,7 @@ grep [-n] 关键字 文件路径
 
 ## 示例
 
-![image-20230929222413269](../shoot/Day03/image-20230929222413269.png)
+![image-20230929222413269](../assets/Day03/image-20230929222413269.png)
 
 
 
@@ -24,7 +24,7 @@ grep "know" ./test.txt
 
 
 
-![image-20230929222830246](../shoot/Day03/image-20230929222830246.png)
+![image-20230929222830246](../assets/Day03/image-20230929222830246.png)
 
 
 
@@ -36,5 +36,5 @@ grep -n "know" ./test.txt
 
 
 
-![image-20230929223030108](../shoot/Day03/image-20230929223030108.png)
+![image-20230929223030108](../assets/Day03/image-20230929223030108.png)
 

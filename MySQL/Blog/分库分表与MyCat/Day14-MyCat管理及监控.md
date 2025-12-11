@@ -51,7 +51,7 @@ mysql -h 192.168.200.210 -p 9066 -uroot -p123456
 
 -   管理端指令:
 
-    ![image-20231211205600860](D:\IT_study\blog\MySQL\Screenshots/Day14-MyCat管理及监控/image-20231211205600860.png)
+    ![image-20231211205600860](D:\IT_study\blog\MySQL\assets/Day14-MyCat管理及监控/image-20231211205600860.png)
 
     ```bash
     show @@help
@@ -155,3 +155,4 @@ sh start.sh
     -   管理端口:9066
 
     -   服务端口:8066
+

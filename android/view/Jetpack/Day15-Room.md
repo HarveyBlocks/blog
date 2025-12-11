@@ -205,7 +205,7 @@ android {
 }
 ```
 
-![image-20250926094127802](../../assets/Day14-Room/image-20250926094127802.png)
+![image-20250926094127802](../../assetss/Day14-Room/image-20250926094127802.png)
 
 ## 升级
 
@@ -265,3 +265,4 @@ abstract class AppDatabase : RoomDatabase() {
 
 }
 ```
+

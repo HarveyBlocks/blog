@@ -32,7 +32,7 @@
 
 ### 后四步起承上文
 
-![image-20231104110909139](../../../typora-user-images/Day06-Bean的初始化阶段/image-20231104110909139.png)
+![image-20231104110909139](../../../assets/Day06-Bean的初始化阶段/image-20231104110909139.png)
 
 ## 属性注入的三种情况
 
@@ -45,3 +45,4 @@
 Service需要注入Dao,Dao需要注入Service;
 
 [循环引用问题](.\Day06🤩-Bean的循环引用.md)
+

@@ -2,7 +2,7 @@
 
 ## Stream继承关系
 
-![image-20240515140343205](../assets/Class09-stream%E6%B5%81/image-20240515140343205.png)##
+![image-20240515140343205](../assetss/Class09-stream%E6%B5%81/image-20240515140343205.png)##
 
 
 
@@ -539,6 +539,4 @@ istringstream input(str);
 input>>ch; // 从输入设备(串)读入一个字符
 cout<<ch<<endl; // 输出'T'
 ```
-
-
 

@@ -12,7 +12,7 @@
 
 在父工程指定SpringCloud版本
 
-![image-20240502140346642](../../assert/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502140346642.png)
+![image-20240502140346642](../../assets/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502140346642.png)
 
 
 
@@ -60,7 +60,7 @@ eureka:
 
 [eureka界面](http://localhost:10086)
 
-![image-20240502151310015](../../assert/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502151310015.png)
+![image-20240502151310015](../../assets/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502151310015.png)
 
 ## 服务注册
 
@@ -99,11 +99,11 @@ eureka:
 
 ### 启动
 
-![image-20240502154655928](../../assert/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502154655928.png)
+![image-20240502154655928](../../assets/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502154655928.png)
 
 ### 多个服务实例
 
-![image-20240502155549871](../../assert/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502155549871.png)
+![image-20240502155549871](../../assets/Day03-Eureka%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/image-20240502155549871.png)
 
 ## 服务发现
 
@@ -122,3 +122,4 @@ UserDto userDto = restTemplate.getForObject("http://user/user/"+userId, UserDto.
 ```
 
 -   服务名`user`代替host和port
+

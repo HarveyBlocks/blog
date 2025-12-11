@@ -12,3 +12,4 @@
 | SyntaxError    | 已发生语法错误                |
 | TypeError      | 已发生类型错误                |
 | URIError       | 在 encodeURI() 中已发生的错误 |
+

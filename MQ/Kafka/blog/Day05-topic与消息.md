@@ -4,7 +4,7 @@
 
 Kafka的消息都基于topic
 
-![image-20240408133524862](../assets/Day06-topic/image-20240408133524862.png)
+![image-20240408133524862](../assetss/Day06-topic/image-20240408133524862.png)
 
 
 
@@ -75,17 +75,17 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-
 
 -   生产者
 
-    ![image-20240408135745449](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135745449.png)
+    ![image-20240408135745449](../assetss/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135745449.png)
 
 -   消费者
 
     缺省`--from-beginning`
 
-    ![image-20240408135836011](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135836011.png)
+    ![image-20240408135836011](../assetss/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135836011.png)
 
     `--from-beginning`
 
-    ![image-20240408140112296](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408140112296.png)
+    ![image-20240408140112296](../assetss/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408140112296.png)
 
 ## Kafka tools
 

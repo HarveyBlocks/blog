@@ -26,11 +26,11 @@ SELECT
 
 -   区分编写顺序和执行顺序
 
-![image-20231007011121151](../../../Screenshots/Day03/image-20231007011121151.png)
+![image-20231007011121151](../../../assets/Day03/image-20231007011121151.png)
 
 
 
-![image-20231007013213035](../../../Screenshots/Day03/开始.png)
+![image-20231007013213035](../../../assets/Day03/开始.png)
 
 ## 验证方法---------取别名
 
@@ -66,3 +66,4 @@ select section_id , age how_old from employee
 ```
 
 -   以此类推
+

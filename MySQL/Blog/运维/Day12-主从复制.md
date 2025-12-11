@@ -48,7 +48,7 @@
 >
 >   开启3306端口号(MySQL)
 
-![配置端口和关闭防火墙](../../shoot/Day12-主从复制/image-20231028105718393.png)
+![配置端口和关闭防火墙](../../assets/Day12-主从复制/image-20231028105718393.png)
 
 -   Linux的命令qwq
 
@@ -115,9 +115,9 @@ change replication source to source_host='xx.xx',source_user='xxx',master_log_fi
 -   master_log_file='xxx',日志地址
 -   master_log_pos='xxx';从这份日志的哪个位置
 
-![image-20231028142452730](../../shoot/Day12-主从复制/image-20231028142452730.png)
+![image-20231028142452730](../../assets/Day12-主从复制/image-20231028142452730.png)
 
-![image-20231028142516412](../../shoot/Day12-主从复制/image-20231028142516412.png)
+![image-20231028142516412](../../assets/Day12-主从复制/image-20231028142516412.png)
 
 -   后版本支持前版本
 
@@ -126,15 +126,9 @@ change replication source to source_host='xx.xx',source_user='xxx',master_log_fi
 start replica;
 ```
 
-![image-20231028142719836](../../shoot/Day12-主从复制/image-20231028142719836.png)
+![image-20231028142719836](../../assets/Day12-主从复制/image-20231028142719836.png)
 
 
 
 -   兼容!
-
-
-
-
-
-
 

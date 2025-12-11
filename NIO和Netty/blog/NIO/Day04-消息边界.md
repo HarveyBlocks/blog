@@ -6,7 +6,7 @@
 
 
 
-![](../../assets/Day04-%E6%B6%88%E6%81%AF%E8%BE%B9%E7%95%8C/0023.png)
+![](../../assetss/Day04-%E6%B6%88%E6%81%AF%E8%BE%B9%E7%95%8C/0023.png)
 
 -   Message1->需要扩容
 -   Message3,Message6->半包
@@ -80,7 +80,7 @@ b2 ->> b2: 01234567890abcdef3333\r
 
 >   attachment
 
-![image-20240224144309363](../../assets/Day04-%E6%B6%88%E6%81%AF%E8%BE%B9%E7%95%8C/image-20240224144309363.png)
+![image-20240224144309363](../../assetss/Day04-%E6%B6%88%E6%81%AF%E8%BE%B9%E7%95%8C/image-20240224144309363.png)
 
 
 

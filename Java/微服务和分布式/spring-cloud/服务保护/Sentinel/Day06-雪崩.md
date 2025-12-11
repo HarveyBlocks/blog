@@ -4,7 +4,7 @@
 
 -   一个服务崩了(或者特别慢)
 
-    ![image-20240115215927818](../../../assert/Day06-%E9%9B%AA%E5%B4%A9/image-20240115215927818.png)
+    ![image-20240115215927818](../../../assets/Day06-%E9%9B%AA%E5%B4%A9/image-20240115215927818.png)
 
 ## 服务保护
 
@@ -50,6 +50,5 @@
 -   SpringCloudCircuitBreaker
     -   Spring出品
 
-![image-20240115223527847](../../../assert/Day06-%E9%9B%AA%E5%B4%A9/image-20240115223527847.png)
+![image-20240115223527847](../../../assets/Day06-%E9%9B%AA%E5%B4%A9/image-20240115223527847.png)
 
- 

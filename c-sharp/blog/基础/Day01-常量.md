@@ -40,3 +40,4 @@ Console.WriteLine(f);  // output: 1.3445
 decimal m = 1.5E6m;
 Console.WriteLine(m);  // output: 1500000
 ```
+

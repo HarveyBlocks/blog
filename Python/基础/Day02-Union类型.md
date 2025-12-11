@@ -41,3 +41,4 @@ my_list = [3.1, 2.1] # 涉黄
 def my_fun(var: Union[int, str]) -> Union[int, str]:
     return var
 ```
+

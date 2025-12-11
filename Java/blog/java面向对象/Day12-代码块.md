@@ -37,7 +37,7 @@ public class Main {
 
 输出结果：
 
-![image-20230813192525169](../../typora-user-images/Day12/image-20230813192525169.png)
+![image-20230813192525169](../../assets/Day12/image-20230813192525169.png)
 
 
 
@@ -47,7 +47,7 @@ public class Main {
 
 
 
-![image-20230901164123132](../../typora-user-images/Day12/image-20230901164123132.png)
+![image-20230901164123132](../../assets/Day12/image-20230901164123132.png)
 
 
 
@@ -70,3 +70,4 @@ public void hi(){
 ```
 
 方法里static不行
+

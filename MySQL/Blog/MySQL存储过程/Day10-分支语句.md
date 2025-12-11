@@ -23,7 +23,7 @@ End if;
 
 ### 案例
 
-![image-20231024192008091](../../shoot/Day10-if条件判断/image-20231024192008091.png)
+![image-20231024192008091](../../assets/Day10-if条件判断/image-20231024192008091.png)
 
 -   惊天大发现!**所有的declare声明语句都要在set赋值语句之前**
 
@@ -130,3 +130,4 @@ select @day;
 
 drop  procedure if exists day;
 ```
+

@@ -28,3 +28,4 @@ set [session|global] @@[session.|global.]变量名;
 
 -   重启会恢复默认
 -   永久修改在/etc/my.cnf系统配置文件
+

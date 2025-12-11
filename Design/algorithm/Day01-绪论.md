@@ -78,3 +78,4 @@ Program=Algorithms+Data Structures
 -   实例 数据的内容
 
 I(n) 表示规模相同, 考虑所有数据的情况下的时间复杂度
+

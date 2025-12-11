@@ -1,6 +1,6 @@
 # Dos 命令
 
-![image-20230731175142923](typora-user-images/image-20230731175142923.png)
+![image-20230731175142923](assets/image-20230731175142923.png)
 
 ## 打开cmd的方式
 

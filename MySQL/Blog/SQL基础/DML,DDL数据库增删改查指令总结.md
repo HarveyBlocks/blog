@@ -2,4 +2,5 @@
 
  [SQL指令汇总1.0.xlsx](..\..\SQL指令汇总1.0.xlsx) 
 
-![image-20231006180448654](../../Screenshots/Day03/image-20231006180448654.png)
+![image-20231006180448654](../../assets/Day03/image-20231006180448654.png)
+

@@ -265,3 +265,4 @@ bool BinaryTree<T>::isLeftChild(const BinaryTreeNode<T> *node, const BinaryTreeN
 集合S~1~和S~2~, max{S~1~}<a~n~<min{S~2~}, 集合以红黑树存储, 思考如何获取S, S = S~1~∪{a~n~}∪S~2~ (S~1~和S~2~可销毁)
 
 a~n~一定是适合作为初始根节点的
+

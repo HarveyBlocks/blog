@@ -22,7 +22,7 @@ console.log('Hello World')
 tsc greeter.ts
 ```
 
-![image-20250827091825585](../../assets/Untitled/image-20250827091825585.png)
+![image-20250827091825585](../../assetss/Untitled/image-20250827091825585.png)
 
 编译结果是一个js文件
 
@@ -44,13 +44,13 @@ let user = [0, 1, 2];
 console.log(greeter(user));
 ```
 
-![image-20250827092321011](../../assets/Untitled/image-20250827092321011.png)
+![image-20250827092321011](../../assetss/Untitled/image-20250827092321011.png)
 
 
 
 空参也会错误
 
-![image-20250827092427643](../../assets/Untitled/image-20250827092427643.png)
+![image-20250827092427643](../../assetss/Untitled/image-20250827092427643.png)
 
 ## 实质性的类型检查
 
@@ -93,6 +93,4 @@ let a: A = new B(); // 错误! A有, B无
     -   声明合并
 -   Day04
     -   声明文件
-
-
 

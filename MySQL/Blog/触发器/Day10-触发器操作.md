@@ -38,7 +38,7 @@ Drop Triggers [schema_name.]trigger_name;
 
 -   触发器的作用在哪里?作用在这里,他真的,我哭死 
 
-![image-20231025192847499](../../shoot/Day10-触发器操作/image-20231025192847499.png)
+![image-20231025192847499](../../assets/Day10-触发器操作/image-20231025192847499.png)
 
 ```mysql
 create table user_logs(
@@ -110,7 +110,7 @@ insert into user(id)
 value (43927);
 ```
 
-![image-20231025202511484](../../shoot/Day10-触发器操作/image-20231025202511484.png)
+![image-20231025202511484](../../assets/Day10-触发器操作/image-20231025202511484.png)
 
 -   我还以为会是name=null之类的字符串呢qwq
 

@@ -40,7 +40,7 @@ Netty提供了HTTP, Redis, Https协议, Web操作协议.....
 pipeline.addLast(new HttpServerCodec()); // Codec 一般是组合式的编解码器
 ```
 
-![image-20240229153827182](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229153827182.png)
+![image-20240229153827182](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229153827182.png)
 
 
 
@@ -48,7 +48,7 @@ pipeline.addLast(new HttpServerCodec()); // Codec 一般是组合式的编解码
 
 
 
-![image-20240229154638331](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229154638331.png)
+![image-20240229154638331](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229154638331.png)
 
 服务端接收
 
@@ -182,11 +182,11 @@ pipeline.addLast(new SimpleChannelInboundHandler<HttpRequest>() {
 });
 ```
 
-![image-20240229161119749](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229161119749.png)
+![image-20240229161119749](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229161119749.png)
 
 但是, 浏览器不知道实际内容有多长, 就一直等
 
-![image-20240229161407560](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229161407560.png)
+![image-20240229161407560](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229161407560.png)
 
 ```java
 String result = "<h1>Hello, " + uri + "<h1>";
@@ -363,7 +363,7 @@ serverBootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
 
 Netty提供**`@Sharable`注解**, 指示是否可以交给多条Channel
 
-![image-20240229205112468](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205112468.png)
+![image-20240229205112468](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205112468.png)
 
 
 
@@ -375,7 +375,7 @@ public class MessageCodec extends ByteToMessageCodec<Message>{}
 
 父类`ByteToMessageCodec`: 
 
-![image-20240229205834088](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205834088.png)
+![image-20240229205834088](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205834088.png)
 
 怎么办呢?
 
@@ -386,7 +386,7 @@ public class MessageCodec extends ByteToMessageCodec<Message>{}
 public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message> {}
 ```
 
-![image-20240229205912064](../../assets/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205912064.png)
+![image-20240229205912064](../../assetss/Day08-%E5%8D%8F%E8%AE%AE%E7%9A%84%E8%A7%A3%E6%9E%90%E5%92%8C%E8%AE%BE%E8%AE%A1/image-20240229205912064.png)
 
 ```java
 @ChannelHandler.Sharable
@@ -409,3 +409,4 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
 
 
 当然在使用这个解码器之前一定要将`LengthFieldBasedFrameDecoder`加入pipline
+

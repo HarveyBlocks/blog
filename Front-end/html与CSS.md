@@ -203,7 +203,7 @@ a{
 
 ## 视频和图片
 
-![image-20231112161542815](../java/typora-user-images/html与CSS/image-20231112161542815.png)
+![image-20231112161542815](../java/assets/html与CSS/image-20231112161542815.png)
 
 ### 播放控件
 
@@ -219,7 +219,7 @@ a{
 
 
 
-![image-20231112161613705](../java/typora-user-images/html与CSS/image-20231112161613705.png)
+![image-20231112161613705](../java/assets/html与CSS/image-20231112161613705.png)
 
 -   \<p\>,段落标签,换行+空行(视觉上的,如果尝试去选中,是选不了的)
 -   \<br\>,换行标签,相当于\r\n
@@ -246,30 +246,30 @@ p{
 
 ### 盒子模型
 
-![image-20231113191028069](../java/typora-user-images/html与CSS/image-20231113191028069.png)
+![image-20231113191028069](../java/assets/html与CSS/image-20231113191028069.png)
 
 -   键入F12
 
-![image-20231112163439224](../Java/typora-user-images/html与CSS/image-20231112163439224.png)
+![image-20231112163439224](../Java/assets/html与CSS/image-20231112163439224.png)
 
 ### 布局标签
 
-![image-20231112163822817](../Java/typora-user-images/html与CSS/image-20231112163822817.png)
+![image-20231112163822817](../Java/assets/html与CSS/image-20231112163822817.png)
 
-![image-20231112164138982](../Java/typora-user-images/html与CSS/image-20231112164138982.png)
+![image-20231112164138982](../Java/assets/html与CSS/image-20231112164138982.png)
 
 -   ```CSS
     width:70%;
     margin:0 auto;自动居中
     ```
 
-![image-20231112164838050](../Java/typora-user-images/html与CSS/image-20231112164838050.png)
+![image-20231112164838050](../Java/assets/html与CSS/image-20231112164838050.png)
 
 ## 表格
 
 
 
-![image-20231112164958687](../Java/typora-user-images/html与CSS/image-20231112164958687.png)
+![image-20231112164958687](../Java/assets/html与CSS/image-20231112164958687.png)
 
 -   cellspace="0"表格单元之间变成实心
 
@@ -297,19 +297,19 @@ p{
 
 
 
-![image-20231112165526019](../Java/typora-user-images/html与CSS/image-20231112165526019.png)
+![image-20231112165526019](../Java/assets/html与CSS/image-20231112165526019.png)
 
 ### 表单项标签
 
-![image-20231112165458283](../Java/typora-user-images/html与CSS/image-20231112165458283.png)
+![image-20231112165458283](../Java/assets/html与CSS/image-20231112165458283.png)
 
 -   \<input>
 
-![image-20231112170918084](../Java/typora-user-images/html与CSS/image-20231112170918084.png)
+![image-20231112170918084](../Java/assets/html与CSS/image-20231112170918084.png)
 
 -   隐藏域看不见,但是会提交(大概就是贤良说的管理员快捷登录罢)
 
-![image-20231112171213578](../Java/typora-user-images/html与CSS/image-20231112171213578.png)
+![image-20231112171213578](../Java/assets/html与CSS/image-20231112171213578.png)
 
 -   radio:name一样,才能实现多选一
 -   label一包裹,不需要点男女前面的圆圈,label里面的元素都可以被点击,即点击文字亦可以

@@ -84,4 +84,5 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 
 
-![image-20250918172004473](../../assets/Day07-ContentResolver/image-20250918172004473-1758191266943.png)
+![image-20250918172004473](../../assetss/Day07-ContentResolver/image-20250918172004473-1758191266943.png)
+

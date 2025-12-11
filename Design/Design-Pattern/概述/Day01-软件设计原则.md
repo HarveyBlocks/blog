@@ -206,3 +206,4 @@ friend指
 例如不要做DynamicProgramingMazeHandler, 要写一个DynamicProgramingHandler类作为AlgorithmHandler的子类
 
 MazeHandler有一个AlgorithmHandler的属性,用setAlgorithmHandler来决定MazeHandler使用的是什么算法解决问题
+

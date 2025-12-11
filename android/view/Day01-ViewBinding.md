@@ -162,3 +162,4 @@ private class MainAdapter(private val mList: MutableList<String?>) : RecyclerVie
     }
 }
 ```
+

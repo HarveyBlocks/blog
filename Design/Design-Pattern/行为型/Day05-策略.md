@@ -69,3 +69,4 @@ BubbleSort.sort(numbers, Comparator.comparingInt(n -> n)); // 子类实现
 System.out.println(Arrays.toString(numbers));
 BubbleSort.sort(numbers, (n1, n2) -> n2 - n1);// 用Lambda产生新策略
 ```
+

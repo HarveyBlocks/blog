@@ -46,3 +46,4 @@ public static void extracted(int num) {
 	// do something
 }
 ```
+

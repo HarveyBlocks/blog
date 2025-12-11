@@ -76,3 +76,4 @@ if (!-f $request_filename) {
 文件是否可执行
 
 `-x`/`!-x`
+

@@ -74,3 +74,4 @@ public void customize(){
 ==>  Preparing: update tb_user set age = age + ? WHERE (id IN (?,?,?)) 
 ==> Parameters: -5(Integer), 1(Long), 2(Long), 4(Long) 
 <\==    Updates: 3 
+

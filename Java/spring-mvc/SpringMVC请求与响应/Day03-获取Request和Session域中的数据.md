@@ -44,6 +44,7 @@ public String getRequest2(@RequestAttribute("key") Integer value){
 }
 ```
 
-![image-20231126200840198](../../typora-user-images/Day03-获取域中的数据/image-20231126200840198.png)
+![image-20231126200840198](../../assets/Day03-获取域中的数据/image-20231126200840198.png)
 
 -   也可以举一反三一波,搞个`@SessionAttribute("key")`,可以直接获取Session域中的数据
+

@@ -46,7 +46,7 @@
 
 ## 缺点
 
-![image-20231025234350967](../../shoot/Day10-全局锁/image-20231025234350967.png)
+![image-20231025234350967](../../assets/Day10-全局锁/image-20231025234350967.png)
 
 
 
@@ -59,3 +59,4 @@ MysqlDump -single-transaction -uroot -p密码 数据库>目标SQL文件.sql
 ```
 
 -   依据快照读实现的
+

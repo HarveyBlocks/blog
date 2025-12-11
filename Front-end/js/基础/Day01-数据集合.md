@@ -359,3 +359,4 @@ let patt1 = /[a-z]*/gi;
 let result = str.match(patt1).filter((s) => s.length > 0);
 console.log(result); // ['Is', 'this', 'all', 'there', 'is']
 ```
+

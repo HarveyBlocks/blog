@@ -179,3 +179,4 @@ public class SqlSessionFactoryUtils {
 -   **sqlSession不能放到工具类里**
     -   每个SqlSession都代表一个连接,所用用户公用一个连接就很不合理
     -   会让多个用户多个功能之间产生影响
+

@@ -6,7 +6,7 @@
 
 2.  表单的enctype属性(缺省是"application/x-www-form-urlencoded")必须是**multipart/form-data**
 
-    ![image-20231126145404833](../../typora-user-images/Day02-接收文件上传/image-20231126145404833.png)
+    ![image-20231126145404833](../../assets/Day02-接收文件上传/image-20231126145404833.png)
 
     不对字符编码,即使用字节输入流,传输的不一定是文本文件
 
@@ -18,7 +18,7 @@
 </form>
 ```
 
-![image-20231126145622338](../../typora-user-images/Day02-接收文件上传/image-20231126145622338.png)
+![image-20231126145622338](../../assets/Day02-接收文件上传/image-20231126145622338.png)
 
 <form action="" enctype="multipart/form-data" method="post">
         <input type="file" name="myFile">
@@ -30,7 +30,7 @@
 
 ## Postman模拟文件上传
 
-![image-20231126150141435](../../typora-user-images/Day02-接收文件上传/image-20231126150141435.png)
+![image-20231126150141435](../../assets/Day02-接收文件上传/image-20231126150141435.png)
 
 1.  在key的text/file选择**File**
 2.  选择文件地址
@@ -52,7 +52,7 @@ public String addFile(@RequestBody MultipartFile myFile){
 }
 ```
 
-![image-20231126151057293](../../typora-user-images/Day02-接收文件上传/image-20231126151057293.png)
+![image-20231126151057293](../../assets/Day02-接收文件上传/image-20231126151057293.png)
 
 -   此时直接上,会出现:
     -   `Failed to parse multipart servlet ,IllegalStateException: multi-part配置`
@@ -99,7 +99,7 @@ public String addFile(@RequestBody MultipartFile myFile){
 
 ### Postman测试与运行结果
 
-![image-20231126154148819](../../typora-user-images/Day02-接收文件上传/image-20231126154148819.png)
+![image-20231126154148819](../../assets/Day02-接收文件上传/image-20231126154148819.png)
 
 
 
@@ -164,13 +164,11 @@ public String addFile(@RequestBody MultipartFile myFile) {
 }
 ```
 
-![image-20231126161020322](../../typora-user-images/Day02-接收文件上传/image-20231126161020322.png)
+![image-20231126161020322](../../assets/Day02-接收文件上传/image-20231126161020322.png)
 
 ## 上传多个文件
 
 ```java
 public String addFile(@RequestBody MultipartFile myFile1,@RequestBody MultipartFile myFile2)
 ```
-
-
 

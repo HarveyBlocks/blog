@@ -144,7 +144,3 @@ class Student extends Person<T>//编译时错误
 class Student extends Person//这里Person默认成了Object
 ```
 
-
-
-
-

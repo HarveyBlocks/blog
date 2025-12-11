@@ -83,3 +83,4 @@ cluster-require-full-coverage no
 单体的Redis(主从Redis+哨兵)已经能达到**万级别的QPS**了, 并且具备很强的高可用特性
 
 如果主从能满足业务需求的情况下, 尽量不搭建Redis集群
+

@@ -1,1 +1,2 @@
 [批量写在分片中的策略](https://www.mongodb.com/zh-cn/docs/manual/core/bulk-write-operations/#strategies-for-bulk-inserts-to-a-sharded-collection
+

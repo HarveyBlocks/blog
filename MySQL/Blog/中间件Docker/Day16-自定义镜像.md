@@ -27,7 +27,7 @@ Docker不是把所有文件都打包,
 
 而是把文件打成一个一个包,这些包合在一起才是一个镜像
 
-![image-20231213194859696](../../../Java/spring-data/assert/Day16-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F/image-20231213194859696.png)
+![image-20231213194859696](../../../Java/spring-data/assets/Day16-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F/image-20231213194859696.png)
 
 ### 好处
 
@@ -88,7 +88,7 @@ Docker不是把所有文件都打包,
 
 >   Instruction
 
-![image-20231213200006175](../../../Java/spring-data/assert/Day16-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F/image-20231213200006175.png)
+![image-20231213200006175](../../../Java/spring-data/assets/Day16-%E8%87%AA%E5%AE%9A%E4%B9%89%E9%95%9C%E5%83%8F/image-20231213200006175.png)
 
 [Dockerfile references](https://docs.docker.com/engine/reference/builder/)
 

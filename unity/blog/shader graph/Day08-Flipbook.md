@@ -56,11 +56,11 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 - `Mirrot Once` 单次镜像
 - `Per-Axis` 自定义
 
-![image-20250929152850212](../../assets/Day08-动画/image-20250929152850212.png)
+![image-20250929152850212](../../assetss/Day08-动画/image-20250929152850212.png)
 
 ## 实现动画
 
-![image-20250929155123943](../../assets/Day08-动画/image-20250929155123943.png)
+![image-20250929155123943](../../assetss/Day08-动画/image-20250929155123943.png)
 
 Time变量, 作为时间轴
 
@@ -69,3 +69,4 @@ Combine,将一个(或几个)分散的变量转换成一个向量
 选取其前二维输入Tilling And Offset, 时间变化, Offset也不断变化
 
 Simple Noise, 生成噪声, 用于展示图像被移动
+

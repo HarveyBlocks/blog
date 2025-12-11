@@ -16,7 +16,7 @@ public String show() {
 }
 ```
 
-![image-20231124212934029](../../typora-user-images/Day02-请求/image-20231124212934029.png)
+![image-20231124212934029](../../assets/Day02-请求/image-20231124212934029.png)
 
 -   @RequestMapping的源码:
 
@@ -30,7 +30,7 @@ public String show() {
 
         互为别名,可以相互平替
 
-    -   ![image-20231124213133384](../../typora-user-images/Day02-请求/image-20231124213133384.png)可以用配置method的方式来指定它是请求头什么的干活
+    -   ![image-20231124213133384](../../assets/Day02-请求/image-20231124213133384.png)可以用配置method的方式来指定它是请求头什么的干活
 
         ```java
         public enum RequestMethod {
@@ -46,7 +46,7 @@ public String show() {
 
     -   一个路径映射到两个方法会报错
 
-        ![image-20231124214029344](../../typora-user-images/Day02-请求/image-20231124214029344.png)
+        ![image-20231124214029344](../../assets/Day02-请求/image-20231124214029344.png)
 
         
 
@@ -95,3 +95,4 @@ public class QuickController {
     又由于方法show的请求方式指定了Get
 
     所以show方法永远不会通过响应直接访问到
+

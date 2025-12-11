@@ -235,7 +235,7 @@ public String yaml() {
     }
     ```
 
-    ![image-20231204191833904](../assets/Day01-yaml/image-20231204191833904.png)
+    ![image-20231204191833904](../assetss/Day01-yaml/image-20231204191833904.png)
 
     正确配置之后会有插件提示
 
@@ -254,16 +254,4 @@ public String yaml() {
         return userMeg;
     }
     ```
-
-    
-
-
-
-
-
-
-
-
-
-
 

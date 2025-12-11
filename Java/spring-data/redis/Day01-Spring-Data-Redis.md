@@ -21,8 +21,9 @@ SpringData里啥数据库都有, es, sql, nosql
 
 >   RedisTemplate中封装了各色对Redis的操作, 并且将不同数据类型的操作API封装到了不同的类型中
 
-![image-20240102130147837](../../typora-user-images/Day01-Spring-Data-Redis/image-20240102130147837.png)
+![image-20240102130147837](../../assets/Day01-Spring-Data-Redis/image-20240102130147837.png)
 
 原来, jedis一个类就相当于一个控制台, jedis里由redis的所有几乎方法, 没有层次感 (?)
 
 SpringData的redisTemplate就相当于给把Jedis分层次了,操作更方便了
+

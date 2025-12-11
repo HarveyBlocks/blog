@@ -6,4 +6,3 @@
     filterChainDefinition.addPathDefinition("/logout","logout");
     ```
 
-    

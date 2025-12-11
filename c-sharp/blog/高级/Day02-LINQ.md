@@ -17,3 +17,4 @@ var query = from student in students
     select sameChemistry.Count();
 query.ToList().ForEach(Console.WriteLine);
 ```
+

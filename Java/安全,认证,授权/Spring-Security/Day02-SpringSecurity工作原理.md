@@ -219,7 +219,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 你看,它给你的警告也很有意思
 
-![image-20231218161614766](../../typora-user-images/Day02-SpringSecurity工作原理/image-20231218161614766.png)
+![image-20231218161614766](../../assets/Day02-SpringSecurity工作原理/image-20231218161614766.png)
 
 它只知道这是字符串, 咱知道这是明文还是密文嘞
 
@@ -290,7 +290,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 ## 授权流程
 
-![image-20231218184035761](../../typora-user-images/Day02-SpringSecurity工作原理 (2)/image-20231218184035761.png)
+![image-20231218184035761](../../assets/Day02-SpringSecurity工作原理 (2)/image-20231218184035761.png)
 
 
 
@@ -334,7 +334,7 @@ public interface AccessDecisionManager {
 
 #### 投票决策
 
-![image-20231218190027223](../../typora-user-images/Day02-SpringSecurity工作原理 (2)/image-20231218190027223.png)
+![image-20231218190027223](../../assets/Day02-SpringSecurity工作原理 (2)/image-20231218190027223.png)
 
 随便一个实现类都可以看看
 
@@ -387,6 +387,4 @@ public interface AccessDecisionVoter<S> {
         -   属性**allowlfEqualGrantedDecision**为true(**默认**), 通过
         -   属性**allowlfEqualGrantedDecision**为false, 不通过
     -   没有反对, 但有赞成: 通过
-
-      
 

@@ -121,5 +121,3 @@ whereis nginx
 docker run -p 443:443 -p 80:80 --name nginx -v /home/nginx/conf/nginx.conf:/etc/nginx/nginx.conf -v /home/nginx/conf/conf.d:/etc/nginx/conf.d -v /home/nginx/log:/var/log/nginx -v /home/nginx/html:/usr/share/nginx/html -v /home/files:/etc/nginx/html/htmlstatic -d nginx:latest
 ```
 
-
-

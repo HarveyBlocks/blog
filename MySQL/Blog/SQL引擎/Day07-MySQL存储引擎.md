@@ -29,7 +29,7 @@
 show Engines;
 ```
 
-![image-20231021095931326](../../Screenshots/Day07-MySQL存储引擎/image-20231021095931326.png)
+![image-20231021095931326](../../assets/Day07-MySQL存储引擎/image-20231021095931326.png)
 
 ## 指定存储引擎
 
@@ -325,7 +325,7 @@ CREATE TABLE 表名 (
 
     -   默认打开
 
-        ![image-20231021101139577](../Screenshots/Day07-MySQL存储引擎/image-20231021101139577.png)
+        ![image-20231021101139577](../assets/Day07-MySQL存储引擎/image-20231021101139577.png)
 
 -   存储该表的结构,数据,索引
 
@@ -334,7 +334,7 @@ CREATE TABLE 表名 (
 -   一个区的大小1M固定
 -   一个页16K大小固定
 
-![image-20231021104652778](../../Screenshots/Day07-MySQL存储引擎/image-20231021104652778.png)
+![image-20231021104652778](../../assets/Day07-MySQL存储引擎/image-20231021104652778.png)
 
 -   区的大小固定1M
 
@@ -374,7 +374,7 @@ CREATE TABLE 表名 (
 
 ## 三个主要引擎的区别与比较
 
-![image-20231021105710074](../../Screenshots/Day07-MySQL存储引擎/image-20231021105710074.png)
+![image-20231021105710074](../../assets/Day07-MySQL存储引擎/image-20231021105710074.png)
 
 ## 对存储引擎的场景选择
 
@@ -408,3 +408,4 @@ CREATE TABLE 表名 (
 ### PS
 
 然而,现在MyISAM和Memory有了其他平替,甚至更好
+

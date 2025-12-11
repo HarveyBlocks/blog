@@ -2,7 +2,7 @@
 
 名为Class的一个类
 
-![image-20230908231201469](../../typora-user-images/Day28/image-20230908231201469.png)
+![image-20230908231201469](../../assets/Day28/image-20230908231201469.png)
 
 ## 获取Class对象
 
@@ -76,3 +76,4 @@ System.out.println(studentClass1 == studentClass2);//true
 System.out.println(studentClass2 == studentClass3);//true
 System.out.println(studentClass1 == studentClass3);//true
 ```
+

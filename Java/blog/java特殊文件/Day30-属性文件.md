@@ -83,6 +83,7 @@ public class ParsePro {
 
 ```
 
-![image-20231004002959039](../../typora-user-images/Day30/image-20231004002959039.png)
+![image-20231004002959039](../../assets/Day30/image-20231004002959039.png)
 
-![image-20231004003114458](../../typora-user-images/Day30/image-20231004003114458.png)
+![image-20231004003114458](../../assets/Day30/image-20231004003114458.png)
+

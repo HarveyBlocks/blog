@@ -47,7 +47,7 @@ public Result queryShopById(@PathVariable("id") Long id) {
         2.  将数据写到缓存中
         3.  将新写入的数据设置时效
 
-![image-20240103210133106](../../../../typora-user-images/Day03-%E7%BC%93%E5%AD%98/image-20240103210133106.png)
+![image-20240103210133106](../../../../assets/Day03-%E7%BC%93%E5%AD%98/image-20240103210133106.png)
 
 ### 实现商铺的存储
 
@@ -121,9 +121,9 @@ shopJson = JSONUtil.toJsonStr(shop);
 
 ### 测试
 
-![image-20240104015028762](../../../../typora-user-images/Day03-%E7%BC%93%E5%AD%98/image-20240104015028762.png)
+![image-20240104015028762](../../../../assets/Day03-%E7%BC%93%E5%AD%98/image-20240104015028762.png)
 
-![image-20240104015056013](../../../../typora-user-images/Day03-%E7%BC%93%E5%AD%98/image-20240104015056013.png)
+![image-20240104015056013](../../../../assets/Day03-%E7%BC%93%E5%AD%98/image-20240104015056013.png)
 
 ### ShopType的业务实现
 

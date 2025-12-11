@@ -41,9 +41,9 @@ public class ReviewSystemApplication {
 
 [Swagger UI](http://localhost:8081/swagger-ui.html)
 
-![image-20240117153200586](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117153200586.png)
+![image-20240117153200586](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117153200586.png)
 
-![image-20240117153407780](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117153407780.png)
+![image-20240117153407780](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117153407780.png)
 
 -   basic-error-controller是spring提供的
 
@@ -57,7 +57,7 @@ Swagger扫描的是@Controller, 以及其@XxxMapping的方法. 然后解析注�
 
 ### 定制标题等
 
-![image-20240117155718480](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117155718480.png)
+![image-20240117155718480](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117155718480.png)
 
 
 
@@ -98,7 +98,7 @@ public class SwaggerConfig {
 }
 ```
 
-![image-20240117161401625](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117161401625.png)
+![image-20240117161401625](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117161401625.png)
 
 ### 根据环境判断是否生成文档
 
@@ -139,7 +139,7 @@ docket = docket.select()
 
 
 
-![image-20240117170303923](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117170303923.png)
+![image-20240117170303923](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117170303923.png)
 
 only two
 
@@ -168,7 +168,7 @@ docket = docket.select()
 ```
 
 
-![image-20240117171420106](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117171420106.png)
+![image-20240117171420106](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117171420106.png)
 
 
 
@@ -187,7 +187,7 @@ public class HelloController {...}
 
 
 
-![image-20240117190209102](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117190209102.png)
+![image-20240117190209102](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117190209102.png)
 
 -   就会有俩
 
@@ -201,7 +201,7 @@ public String post(){
 }
 ```
 
-![image-20240117190559637](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117190559637.png)
+![image-20240117190559637](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117190559637.png)
 
 ### @ApiParam
 
@@ -218,7 +218,7 @@ public String get(
 }
 ```
 
-![image-20240117191124313](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117191124313.png)
+![image-20240117191124313](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117191124313.png)
 
 
 
@@ -237,7 +237,7 @@ public String post(String m,String n) {
 }
 ```
 
-![image-20240117193525854](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117193525854.png)
+![image-20240117193525854](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117193525854.png)
 
 `@ApiImplicitParam(s)`和`@ApiParam`
 
@@ -260,6 +260,7 @@ public class Result {
 }
 ```
 
-![image-20240117195829252](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117195829252.png)
+![image-20240117195829252](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117195829252.png)
 
-![image-20240117195921877](../assert/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117195921877.png)
+![image-20240117195921877](../assets/Day01-%E4%BD%BF%E7%94%A8Swagger/image-20240117195921877.png)
+

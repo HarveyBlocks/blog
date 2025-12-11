@@ -1,4 +1,4 @@
-![image-20231109122346761](../../../typora-user-images/Day09-@Import再解/image-20231109122346761.png)
+![image-20231109122346761](../../../assets/Day09-@Import再解/image-20231109122346761.png)
 
 # @Import
 

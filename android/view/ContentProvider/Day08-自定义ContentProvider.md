@@ -243,7 +243,7 @@ Android 11 后的要求
 
 如果requester不申请权限, 则直接报错
 
-![image-20250918210123908](../../assets/Day08-自定义ContentProvider/image-20250918210123908.png)
+![image-20250918210123908](../../assetss/Day08-自定义ContentProvider/image-20250918210123908.png)
 
 申请权限
 
@@ -260,3 +260,4 @@ Android 11 后的要求
 这种情况, provider可以开放一个Activity(permission normal), 在Activity里确保用户知情和同意, 并以此返回给requester数据
 
 缺点是要渲染一个页面, 增加了系统负担(无中生有系列)
+

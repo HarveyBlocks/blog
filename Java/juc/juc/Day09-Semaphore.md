@@ -38,3 +38,4 @@ for (int i = 0; i < 5; i++) {
 21:44:19.050 [Thread-3] DEBUG org.harvey.juc.juc.SemaphoreDemo -- end
 21:44:19.050 [Thread-2] DEBUG org.harvey.juc.juc.SemaphoreDemo -- end
 ```
+

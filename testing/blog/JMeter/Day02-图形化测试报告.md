@@ -17,3 +17,4 @@ java -jar ./ApacheJMeter.jar -n -t D:\IT_study\source\jmx\hvideo.jmx -l D:\IT_st
 ```
 
 `D:\IT_study\source\jmx\result`要求是个空目录
+

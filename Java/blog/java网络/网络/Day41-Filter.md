@@ -4,7 +4,7 @@
 
 JavaWeb三大组件(Servlet,Filter,Listener)之一
 
-![image-20231119195200028](../../../typora-user-images/Day41-Filter/image-20231119195200028.png)
+![image-20231119195200028](../../../assets/Day41-Filter/image-20231119195200028.png)
 
 -   过滤器可以把对资源的请求拦截下来,从而实现一些特殊的功能
 -   过滤器一般用于完成一些通用的操作,比如:**权限控制**,**统一编码处理**,**敏感字符处理**等等
@@ -84,7 +84,7 @@ public class MyFilter implements Filter {
 
 ### 拦截路径配置
 
-![image-20231119195824121](../../../typora-user-images/Day41-Filter/image-20231119195824121.png)
+![image-20231119195824121](../../../assets/Day41-Filter/image-20231119195824121.png)
 
 -   精确匹配
 
@@ -126,7 +126,7 @@ public class MyFilter implements Filter {
 
 
 
-![image-20231119200211275](../../../typora-user-images/Day41-Filter/image-20231119200211275.png)
+![image-20231119200211275](../../../assets/Day41-Filter/image-20231119200211275.png)
 
 #### 自然排序的优先级
 
@@ -245,3 +245,4 @@ public class MyFilter2 implements Filter {
 
 }
 ```
+

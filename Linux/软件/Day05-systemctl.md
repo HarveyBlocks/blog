@@ -38,3 +38,4 @@ systemctl status ntpd
 查看状态
 
 httpd也会把自己注册为系统服务
+

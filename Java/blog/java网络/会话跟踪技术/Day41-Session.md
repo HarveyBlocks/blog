@@ -61,7 +61,7 @@
 
 ### 看看id真实的样子
 
-![image-20231119152016332](../../../typora-user-images/Day41-Session/image-20231119152016332.png)
+![image-20231119152016332](../../../assets/Day41-Session/image-20231119152016332.png)
 
 ```
 JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
@@ -94,7 +94,7 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 
 ### 小问题
 
-![image-20231119155233359](../../../typora-user-images/Day41-Session/image-20231119155233359.png)
+![image-20231119155233359](../../../assets/Day41-Session/image-20231119155233359.png)
 
 1.  浏览器请求A资源
 2.  浏览器关闭

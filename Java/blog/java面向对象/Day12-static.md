@@ -203,9 +203,9 @@ public class Main {
   - 定义一个static类变量记住类的一个对象
   - 定义一个static类方法,返回对象
 
-![image-20230901213045997](../../typora-user-images/Day12/image-20230901213045997.png)
+![image-20230901213045997](../../assets/Day12/image-20230901213045997.png)
 
-![image-20230901212223408](../../typora-user-images/Day12/image-20230901212223408.png)
+![image-20230901212223408](../../assets/Day12/image-20230901212223408.png)
 
 
 
@@ -224,7 +224,7 @@ public class Main {
 
   
 
-![image-20230901214453733](../../typora-user-images/Day12/image-20230901214453733.png)
+![image-20230901214453733](../../assets/Day12/image-20230901214453733.png)
 
 
 
@@ -235,3 +235,4 @@ public class Main {
 类用的不频繁懒汉式
 
 类用的频繁就用饿汉式
+

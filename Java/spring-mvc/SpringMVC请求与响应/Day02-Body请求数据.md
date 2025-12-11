@@ -6,11 +6,11 @@
 
 -   POSTMAN里有Body
 
-![image-20231125165710280](../../typora-user-images/Day02-/image-20231125165710280.png)
+![image-20231125165710280](../../assets/Day02-/image-20231125165710280.png)
 
 
 
-![image-20231126150021882](../../typora-user-images/Day02-Body请求数据/image-20231126150021882.png)
+![image-20231126150021882](../../assets/Day02-Body请求数据/image-20231126150021882.png)
 
 -   row就是一长串字符串
 -   这个row没有格式的限制,也可以做一些选择
@@ -189,7 +189,7 @@ public enum Gender {
 
 但是!
 
-![image-20231125200927149](../../typora-user-images/Day02-/image-20231125200927149.png)
+![image-20231125200927149](../../assets/Day02-/image-20231125200927149.png)
 
 
 
@@ -209,7 +209,7 @@ public enum Gender {
 
 -   有参数要配置
 
-![image-20231125195756713](../../typora-user-images/Day02-/image-20231125195756713.png)
+![image-20231125195756713](../../assets/Day02-/image-20231125195756713.png)
 
 -   HttpMessageConverter:Http消息中的参数的转换器
 
@@ -229,7 +229,7 @@ public enum Gender {
     -   我们需要配它的实现类org.springframework.http.converter.json.**MappingJackson2HttpMessageConverter**
     -   着就是一个JSON转换器
 
-![image-20231125200104578](../../typora-user-images/Day02-/image-20231125200104578.png)
+![image-20231125200104578](../../assets/Day02-/image-20231125200104578.png)
 
 ```xml
 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">

@@ -200,8 +200,9 @@ public static boolean demo() {
 }
 ```
 
-![image-20240605005402515](../../assets/Day02-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/image-20240605005402515.png)
+![image-20240605005402515](../../assetss/Day02-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/image-20240605005402515.png)
 
 ## 缺点
 
 创建的产品具有较多的共同点, 产品差异很大就不适合使用建造者模式
+

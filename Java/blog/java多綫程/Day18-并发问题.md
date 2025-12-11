@@ -30,7 +30,7 @@ public class TestThread implements Runnable{
 }
 ```
 
-![image-20230825090730601](../../typora-user-images/Day18/image-20230825090730601.png)
+![image-20230825090730601](../../assets/Day18/image-20230825090730601.png)
 
 
 

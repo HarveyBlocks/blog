@@ -37,7 +37,7 @@ implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" )
 </androidx.drawerlayout.widget.DrawerLayout>
 ```
 
-![image-20250923134905273](../../assets/Day12-下拉刷新/image-20250923134905273.png)
+![image-20250923134905273](../../assetss/Day12-下拉刷新/image-20250923134905273.png)
 
 ## 注册刷新事件
 
@@ -73,3 +73,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 }
 ```
+

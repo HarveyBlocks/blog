@@ -6,7 +6,7 @@
 
 在长字符串A中找pattern串B出现的第一个位置, 如果要退回, 希望不是退到头, 而是尽可能少退一点, 怎么退能少退一点呢?
 
-![KMP](../../assets/Day04-STM/KMP%E7%B2%BE%E8%AE%B22.gif)
+![KMP](../../assetss/Day04-STM/KMP%E7%B2%BE%E8%AE%B22.gif)
 
 不止是子串, 子数组也是一样的
 
@@ -34,13 +34,13 @@
 
 从前往后查看, 得出前缀表
 
-![KMP](../../assets/Day04-KMP/KMP%E7%B2%BE%E8%AE%B28.png)
+![KMP](../../assetss/Day04-KMP/KMP%E7%B2%BE%E8%AE%B28.png)
 
 
 
 ## 前缀表的使用
 
-![KMP](../../assets/Day04-KMP/KMP%E7%B2%BE%E8%AE%B22.gif)
+![KMP](../../assetss/Day04-KMP/KMP%E7%B2%BE%E8%AE%B22.gif)
 
 1.  一一比对pattern的 j 索引所在和 src 的 i 索引所在
 2.  值不相等, 进入3

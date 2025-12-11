@@ -217,5 +217,3 @@ if [ $num -eq 0 ]; then
 fi
 ```
 
-
-

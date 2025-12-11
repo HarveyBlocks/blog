@@ -111,3 +111,4 @@ select * from user where name like "A%B%";
 ```
 
 -   那么它会前5位当作`"A%"`会比较合理咯?
+

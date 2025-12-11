@@ -1,6 +1,6 @@
 # Response
 
-![image-20231117180624023](../../../typora-user-images/Day39-响应Response/image-20231117180624023-1700286455676.png)
+![image-20231117180624023](../../../assets/Day39-响应Response/image-20231117180624023-1700286455676.png)
 
 -   请求数据就是一个字符串嘛
 -   都是字符串嘛
@@ -24,7 +24,7 @@ public class Application extends HttpServlet {
 }
 ```
 
-![image-20231117181708837](../../../typora-user-images/Day39-响应Response/image-20231117181708837-1700286455677.png)
+![image-20231117181708837](../../../assets/Day39-响应Response/image-20231117181708837-1700286455677.png)
 
 ## 继承体系
 
@@ -103,13 +103,13 @@ ServletOutputStream getOutputStream();//获取字符输出流
 
 -   响应状态码:**302**表示要进行重定向
 
-![image-20231118131445233](../../../typora-user-images/Day39-响应Response/image-20231118131445233.png)
+![image-20231118131445233](../../../assets/Day39-响应Response/image-20231118131445233.png)
 
 
 
 
 
-![image-20231118133343176](../../../typora-user-images/Day39-响应Response/image-20231118133343176.png)
+![image-20231118133343176](../../../assets/Day39-响应Response/image-20231118133343176.png)
 
 
 
@@ -126,7 +126,7 @@ response.setHeader("Location","/MyServlet");
 response.sendRedirect("/MyServlet");
 ```
 
-![image-20231118133534292](../../../typora-user-images/Day39-响应Response/image-20231118133534292.png)
+![image-20231118133534292](../../../assets/Day39-响应Response/image-20231118133534292.png)
 
 
 
@@ -143,7 +143,7 @@ this.parseWebString(request, response);//这一步居然会会执行!
 
 
 
-![image-20231118141307558](../../../typora-user-images/Day39-响应Response/image-20231118141307558.png)
+![image-20231118141307558](../../../assets/Day39-响应Response/image-20231118141307558.png)
 
 ### 特点
 
@@ -187,7 +187,7 @@ this.parseWebString(request, response);//这一步居然会会执行!
 
 -   动态获取虚拟目录(**以前讲过**)
 
-    ![image-20231118140457995](../../../typora-user-images/Day39-响应Response/image-20231118140457995.png)
+    ![image-20231118140457995](../../../assets/Day39-响应Response/image-20231118140457995.png)
 
     还记得这个空缺吗?就是我设置的**/**
 
@@ -212,7 +212,7 @@ PrintWriter getWriter();
     parameterMap.forEach((k, v) -> writer.write(k + "=" + Arrays.toString(v)+"<br>"));
     ```
 
-![image-20231118142122635](../../../typora-user-images/Day39-响应Response/image-20231118142122635.png)
+![image-20231118142122635](../../../assets/Day39-响应Response/image-20231118142122635.png)
 
 -   不支持中文
 -   **不需要对流关闭**,response销毁的时候**会自动对流关闭**,提早关闭了反而之后的工作不好做了
@@ -228,7 +228,7 @@ response.setContentType("text/html"+";"
 PrintWriter writer = response.getWriter();//注意更改了字符集之后再获取字符输出流
 ```
 
-![image-20231118143138032](../../../typora-user-images/Day39-响应Response/image-20231118143138032.png)
+![image-20231118143138032](../../../assets/Day39-响应Response/image-20231118143138032.png)
 
 ## 响应字节数据
 

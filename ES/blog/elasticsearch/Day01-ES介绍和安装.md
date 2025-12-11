@@ -78,7 +78,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 4.  如果是**已出现的词条**, 就在**new_table**的这条**已出现的词条**对应的**文档ID**中将**table**的扫描到的**tittle**对应的ID存入
 5.   由于**词条绝对不会重复(唯一性)**, 就可以依据词条创建索引
 
-![image-20231223130101074](../typora-user-images/Untitled/image-20231223130101074.png)
+![image-20231223130101074](../assets/Untitled/image-20231223130101074.png)
 
 #### 查询原理
 
@@ -98,15 +98,15 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 
 >   相同类型文档的集合
 
-![image-20231223131206136](../typora-user-images/Untitled/image-20231223131206136.png)
+![image-20231223131206136](../assets/Untitled/image-20231223131206136.png)
 
 对索引的**映射**
 
-![image-20231223131222393](../typora-user-images/Untitled/image-20231223131222393.png)
+![image-20231223131222393](../assets/Untitled/image-20231223131222393.png)
 
 
 
-![image-20231223131312770](../typora-user-images/Untitled/image-20231223131312770.png)
+![image-20231223131312770](../assets/Untitled/image-20231223131312770.png)
 
 -   Schema叫约束, 外键约束, 主键约束
 
@@ -119,7 +119,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 -   Elasticsearch
     -   擅长海量数据搜索, 复杂查询 , 分析, 计算
 
- ![image-20231223131945612](../typora-user-images/Untitled/image-20231223131945612.png)
+ ![image-20231223131945612](../assets/Untitled/image-20231223131945612.png)
 
 那么, 他俩都应该存有数据喽:
 
@@ -127,7 +127,7 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 
 使用数据同步技术,同步到ES
 
-![image-20231223132055645](../typora-user-images/Untitled/image-20231223132055645.png)
+![image-20231223132055645](../assets/Untitled/image-20231223132055645.png)
 
 (根据ID查询这种, 用MySQL也没毛病的)
 
@@ -216,7 +216,7 @@ docker network create es-net
 
 - 访问kibana
 
-    ![image-20231223223909221](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223223909221.png)
+    ![image-20231223223909221](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223223909221.png)
 
     访问kibana
 
@@ -226,7 +226,7 @@ docker network create es-net
 
     或用浏览器
 
-    ![image-20231223232256251](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232256251.png)
+    ![image-20231223232256251](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232256251.png)
 
 
 
@@ -286,19 +286,19 @@ elasticsearch:
 
 ### 简单使用
 
-![image-20231223232746611](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232746611.png)
+![image-20231223232746611](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232746611.png)
 
 
 
 -   选择自己玩儿
 
-![image-20231223233031103](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233031103.png)
+![image-20231223233031103](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233031103.png)
 
 -   方便的DSL控制台
 
 
 
-![image-20231223232956422](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232956422.png)
+![image-20231223232956422](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232956422.png)
 
 想想, 我们说到, kibana之本质是向`es:9200`发送请求
 
@@ -310,7 +310,7 @@ Get /
 
 不就是发送请求:访问`es:9200`吗? 可以得到和访问`http://10.192.128.23:9200/`一样的效果
 
-![image-20231223233550917](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233550917.png)
+![image-20231223233550917](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233550917.png)
 
 ## 安装ik分词器
 
@@ -322,11 +322,11 @@ Get /
 docker volume inspect es-plugins
 ```
 
-![image-20231224195020438](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195020438.png)
+![image-20231224195020438](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195020438.png)
 
 [ik分词器, 注意版本对应](https://github.com/medcl/elasticsearch-analysis-ik/tags)
 
-![image-20231224195124805](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195124805.png)
+![image-20231224195124805](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195124805.png)
 
 -   重启es容器
 
@@ -738,7 +738,7 @@ POST /_analyze
 
 要修改词典, 需要配置ik分词器目录中的config目录下的`IKAnalyzer.cfg.xml`文件指定`拓展字典`和`停止词字典`
 
-![image-20231225134005482](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134005482.png)
+![image-20231225134005482](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134005482.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -783,7 +783,7 @@ POST /_analyze
 
     -   stopword.dic已存在(同级目录下)
 
-        ![image-20231225134428721](../typora-user-images/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134428721.png)
+        ![image-20231225134428721](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134428721.png)
 
         ```txt
         
@@ -836,6 +836,4 @@ POST /_analyze
       ]
     }
     ```
-
-    
 

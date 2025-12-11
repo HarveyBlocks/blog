@@ -7,7 +7,7 @@ select 'hello world';
 
 -   直观上来看实现了打印字符串的功能
 
-![image-20231007153131817](../../../Screenshots/Day04/image-20231007153131817.png)
+![image-20231007153131817](../../../assets/Day04/image-20231007153131817.png)
 
 ## 字符串拼接(concat)
 
@@ -85,3 +85,4 @@ select substring(concat('Hello',' ','World'),7);
 select substring(concat('Hello',' ','World'),1,5);
 /*Hello*/
 ```
+

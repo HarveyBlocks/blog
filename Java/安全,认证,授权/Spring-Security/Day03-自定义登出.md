@@ -61,3 +61,4 @@ protected void configure(HttpSecurity http) throws Exception {
     退出时SecurityContext的相关清理
 
 链式API提供了调用相应的 LogoutHandler 实现的快捷方式，比如deleteCookies()。
+

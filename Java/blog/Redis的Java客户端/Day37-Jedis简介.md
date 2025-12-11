@@ -6,7 +6,7 @@
 -   **线程不安全**
     -   多线程短句下需要基于连接池使用
 
-![image-20231029130820175](../../typora-user-images/Day37-Jadis简介/image-20231029130820175.png)
+![image-20231029130820175](../../assets/Day37-Jadis简介/image-20231029130820175.png)
 
 ```xml
 <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
@@ -80,3 +80,4 @@ public class AppTest extends TestCase {
 
 }
 ```
+

@@ -4,7 +4,7 @@
 
 -   键值对
 
-![image-20231126192817172](../../typora-user-images/Day02-接收请求头信息/image-20231126192817172.png)
+![image-20231126192817172](../../assets/Day02-接收请求头信息/image-20231126192817172.png)
 
 -   我们获取这个请求头
 
@@ -20,7 +20,7 @@ public String getHeader(@RequestHeader("Accept-Encoding") String headerValue){
 }
 ```
 
-![image-20231126193041597](../../typora-user-images/Day02-接收请求头信息/image-20231126193041597.png)
+![image-20231126193041597](../../assets/Day02-接收请求头信息/image-20231126193041597.png)
 
 
 
@@ -42,7 +42,7 @@ public String getHeader(@RequestHeader Map<String,String> map){
 
 -   对于服务端来说,接收Cookie的时候,Cookie的本质还是一个头
 
-![image-20231126193553195](../../typora-user-images/Day02-接收请求头信息/image-20231126193553195.png)
+![image-20231126193553195](../../assets/Day02-接收请求头信息/image-20231126193553195.png)
 
 其实在获取所有头的时候已经有一个Cookie被获取到了
 
@@ -60,4 +60,5 @@ public String getCookie(@CookieValue("JSESSIONID") String jSessionId){
 }
 ```
 
-![image-20231126194225910](../../typora-user-images/Day02-接收请求头信息/image-20231126194225910.png)
+![image-20231126194225910](../../assets/Day02-接收请求头信息/image-20231126194225910.png)
+

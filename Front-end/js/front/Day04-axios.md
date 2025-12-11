@@ -117,7 +117,7 @@ function logCategory(){
 }
 ```
 
-![image-20250826160247330](../../assets/Day04-axios/image-20250826160247330.png)
+![image-20250826160247330](../../assetss/Day04-axios/image-20250826160247330.png)
 
 ## 渲染
 
@@ -126,3 +126,4 @@ function logCategory(){
 当渲染的数据涉及到服务器的请求资源的时候, 就会undefine, 而发生TypeError
 
 为了避免这种情况, 应该==使用`v-if`判断是否加载完成==, 加载完成之后再渲染
+

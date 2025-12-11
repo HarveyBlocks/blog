@@ -38,7 +38,7 @@
 
 ### 设计ID
 
-![image-20240120091229673](../../../assert/Day06-%E5%85%A8%E5%B1%80%E5%94%AF%E4%B8%80ID/image-20240120091229673.png)
+![image-20240120091229673](../../../assets/Day06-%E5%85%A8%E5%B1%80%E5%94%AF%E4%B8%80ID/image-20240120091229673.png)
 
 -   符号位
     -    `0`表示正数
@@ -121,3 +121,4 @@ void testId() throws InterruptedException {
     System.out.println(end-begin);
 }
 ```
+

@@ -33,6 +33,7 @@ const backgroundColor = computed(() => {
 </template>
 ```
 
-![image-20250818230630405](../../../assets/Day06-teleport/image-20250818230630405.png)
+![image-20250818230630405](../../../assetss/Day06-teleport/image-20250818230630405.png)
 
 目标似乎有很多限制, 暂时未知
+

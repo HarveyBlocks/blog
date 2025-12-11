@@ -31,7 +31,7 @@
 
 
 
-![组件结构)](../assets/Day01-%E7%BB%84%E4%BB%B6/image-20200406184656917.png)
+![组件结构)](../assetss/Day01-%E7%BB%84%E4%BB%B6/image-20200406184656917.png)
 
 ## Master
 
@@ -84,3 +84,4 @@
     -   `pod`是`kubernetes`的最小操作单元，容器必须跑在`pod`中至此
 
 6.  一个nginx服务就运行了，如果需要访问nginx，就需要通过`kube-proxy`来对pod产生访问的代理
+

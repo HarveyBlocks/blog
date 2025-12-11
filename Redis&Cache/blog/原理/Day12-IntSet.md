@@ -35,3 +35,4 @@ typedef struct intset {
 ## 插入
 
 先用二分查找找到需要插入的位置, 再插入
+

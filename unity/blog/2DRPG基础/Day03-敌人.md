@@ -24,7 +24,7 @@ Inspector->右上角Layer->创建Layer
 
 然后Exclude Layers
 
-![image-20241019221711452](../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019221711452.png)
+![image-20241019221711452](../../assetss/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019221711452.png)
 
 -   **Contact Capture Layers** 与当前层接触的层
 -   Include Layer: **Contact Capture Layers** +Include Layer
@@ -286,3 +286,4 @@ protected bool FaceToPlayer() {
 <img src="../../assets/Day03-%E6%95%8C%E4%BA%BA/image-20241102221900253.png" alt="image-20241102221900253" style="zoom:50%;" />
 
 然后再Hierarchy窗口拷贝该对象, 那么, 修改一个参数, 其他所有参数都会改变
+

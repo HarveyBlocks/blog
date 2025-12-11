@@ -90,3 +90,4 @@ XML 处理器就不会更改字符串数据类型中的值
 -   minLength
 -   pattern (NMTOKENS、IDREFS 以及 ENTITIES 无法使用此约束)
 -   whiteSpace
+

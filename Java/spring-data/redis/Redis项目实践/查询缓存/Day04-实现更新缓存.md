@@ -50,18 +50,19 @@ public boolean updateCache(Shop shop) {
 
 记得关闭用户登录权限啥都
 
-![image-20240104130207986](../../../../typora-user-images/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130207986.png)
+![image-20240104130207986](../../../../assets/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130207986.png)
 
 
 
 
 
-![image-20240104130343610](../../../../typora-user-images/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130343610.png)
+![image-20240104130343610](../../../../assets/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130343610.png)
 
 成功删除缓存
 
-![image-20240104130227962](../../../../typora-user-images/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130227962.png)
+![image-20240104130227962](../../../../assets/Day04-%E5%AE%9E%E7%8E%B0%E6%9B%B4%E6%96%B0%E7%BC%93%E5%AD%98%E9%80%BB%E8%BE%91/image-20240104130227962.png)
 
 成功更新
 
 记得把用户权限啥的开起来
+

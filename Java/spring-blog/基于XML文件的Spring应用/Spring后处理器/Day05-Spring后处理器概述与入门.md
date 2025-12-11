@@ -83,7 +83,7 @@
 
 -   输出结果:
 
-    ![gs](../../../typora-user-images/Day05-Spring后处理器概述与入门/image-20231102165327882.png)
+    ![gs](../../../assets/Day05-Spring后处理器概述与入门/image-20231102165327882.png)
 
   -   SO FAST
 
@@ -140,7 +140,7 @@
 
 -   输出结果
 
-    ![image-20231102171532946](../../../typora-user-images/Day05-Spring后处理器概述与入门/image-20231102171532946.png)
+    ![image-20231102171532946](../../../assets/Day05-Spring后处理器概述与入门/image-20231102171532946.png)
 
  
 
@@ -212,9 +212,9 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
 
 -   输出结果
 
-    ![image-20231102211816134](../../../typora-user-images/Day05😕-Spring后处理器概述与入门/image-20231102211816134.png)
+    ![image-20231102211816134](../../../assets/Day05😕-Spring后处理器概述与入门/image-20231102211816134.png)
 
-![image-20231102211937555](../../../typora-user-images/Day05😕-Spring后处理器概述与入门/image-20231102211937555.png)
+![image-20231102211937555](../../../assets/Day05😕-Spring后处理器概述与入门/image-20231102211937555.png)
 
 ## 最终实战! 使用后处理器编写@MyComponent注解实现自动注册Bean
 
@@ -369,6 +369,4 @@ String pattern = ResourcePatternResolver.CLASSPATH_URL_PREFIX +
         RESOURCE_PATTERN;
 Resource[] resources = pathResolver.getResources(pattern);
 ```
-
-
 

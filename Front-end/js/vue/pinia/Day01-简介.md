@@ -10,7 +10,7 @@ Vue.js 的状态管理库
 
 
 
-![image-20250825171352702](../../../assets/Day01-简介/image-20250825171352702.png)
+![image-20250825171352702](../../../assetss/Day01-简介/image-20250825171352702.png)
 
 ```shell
 npm install pinia
@@ -302,4 +302,5 @@ export default defineComponent({
 
 ## DevTools
 
-![image-20250826000216460](../../assets/Day01-简介/image-20250826000216460.png)
+![image-20250826000216460](../../assetss/Day01-简介/image-20250826000216460.png)
+

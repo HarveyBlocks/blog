@@ -87,3 +87,4 @@ picture.transform.localScale = player.transform.localScale;
 和奖励的逻辑一样, 检测到就出现标识, 然后执行传送的逻辑
 
 详见[场景转换](Day07-场景.md##场景转换)
+

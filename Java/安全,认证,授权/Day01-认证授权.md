@@ -131,7 +131,7 @@ OAuth2.0
 
 ### 主体, 资源, 权限的关系
 
-![image-20231215140916962](../typora-user-images/Day01-Spring Security概述/image-20231215140916962.png)
+![image-20231215140916962](../assets/Day01-Spring Security概述/image-20231215140916962.png)
 
 ### 角色
 
@@ -143,7 +143,7 @@ OAuth2.0
 
 ### 授权的数据模型
 
-![image-20231215141056932](../typora-user-images/Day01-Spring Security概述/image-20231215141056932.png)
+![image-20231215141056932](../assets/Day01-Spring Security概述/image-20231215141056932.png)
 
  
 
@@ -183,6 +183,4 @@ OAuth2.0
 		then 使用权限和资源
 }
 ```
-
-
 

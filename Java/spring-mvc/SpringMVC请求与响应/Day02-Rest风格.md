@@ -10,7 +10,7 @@
 
 1.  用URI表示某个资源模块,资源名称为名词
 
-    ![image-20231125203759890](../../typora-user-images/Day02-Rust风格/image-20231125203759890.png)user所对应的增删改查等所有操作,都是在user资源下这个完成
+    ![image-20231125203759890](../../assets/Day02-Rust风格/image-20231125203759890.png)user所对应的增删改查等所有操作,都是在user资源下这个完成
 
     即在user后边添加一些其他的更细的地址或数据
 
@@ -26,7 +26,7 @@
     -   PUT - 更新
     -   DELETE - 删除
 
-    ![image-20231125204155130](../../../ES/blog/typora-user-images/Day02-Rest%E9%A3%8E%E6%A0%BC/image-20231125204155130.png)
+    ![image-20231125204155130](../../../ES/blog/assets/Day02-Rest%E9%A3%8E%E6%A0%BC/image-20231125204155130.png)
 
     -   模块后边没数据?->
         -   不是新增操作
@@ -73,7 +73,7 @@
 
 #### 看源码
 
-![image-20231203143703908](../../typora-user-images/Day02-Rust风格/image-20231203143703908.png)
+![image-20231203143703908](../../assets/Day02-Rust风格/image-20231203143703908.png)
 
 -   注意,只能响应响应体,不能响应页面了
 
@@ -90,7 +90,7 @@ public String findUserById(int id){
 }
 ```
 
-![image-20231125210729376](../../typora-user-images/Day02-Rust风格/image-20231125210729376.png)
+![image-20231125210729376](../../assets/Day02-Rust风格/image-20231125210729376.png)
 
 诶呀,不是这么配的
 
@@ -124,3 +124,4 @@ public ModelAndView findUserById(
     return  modelAndView;
 }
 ```
+

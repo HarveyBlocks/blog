@@ -63,7 +63,7 @@ jstat -gc PID MILLION_TIME COUNT
 -   MILLION_TIME 间隔时长
 -   COUNT 次数
 
-![image-20240527133124398](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527133124398.png)
+![image-20240527133124398](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527133124398.png)
 
 -   `C` Capacity
 -   `U` Used
@@ -156,7 +156,7 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 ### 锯齿状
 
-![image-20240527174539591](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174539591.png)
+![image-20240527174539591](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174539591.png)
 
 下降的最终内存占用差不多, 没有内存泄漏
 
@@ -164,7 +164,7 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 ### 缓存对象过多
 
-![image-20240527174617469](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174617469.png)
+![image-20240527174617469](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174617469.png)
 
 下降的高度依旧很高, 可能是起缓存作用的对象占用内存
 
@@ -174,13 +174,13 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 局部锯齿状, 总体上升
 
-![image-20240527174758234](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174758234.png)
+![image-20240527174758234](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174758234.png)
 
 ### 持续FullGC
 
 在某个时间点FullGC飙升
 
-![image-20240527174854173](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174854173.png)
+![image-20240527174854173](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527174854173.png)
 
 用户的请求突然飙升, 程序产生了大量对象
 
@@ -190,6 +190,7 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 
 
-![image-20240527175153041](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527175153041.png)
+![image-20240527175153041](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527175153041.png)
 
 堆内存充足, 元空间不足, 导致JVM对元空间反复FullGC
+

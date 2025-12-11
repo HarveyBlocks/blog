@@ -38,12 +38,13 @@ public class UserServiceImpl implements UserService {
 
 -   "不能注册到Spring环境"是以`NoSuchBeanDefinitionException`的形式报错给你的
 
-![image-20231107132648728](../../../typora-user-images/Day07-其他注解/image-20231107132648728.png)
+![image-20231107132648728](../../../assets/Day07-其他注解/image-20231107132648728.png)
 
-![image-20231107132354465](../../../typora-user-images/Day07-其他注解/image-20231107132354465.png)
+![image-20231107132354465](../../../assets/Day07-其他注解/image-20231107132354465.png)
 
 -   翻翻以前的笔记
 
 ```java
 System.setProperty("spring.profiles.active", "test");
 ```
+

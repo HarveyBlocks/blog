@@ -180,6 +180,7 @@ public class App {
 }
 ```
 
-![image-20231110193611810](../../../typora-user-images/Day09-基本使用/image-20231110193611810.png)
+![image-20231110193611810](../../../assets/Day09-基本使用/image-20231110193611810.png)
 
 #### 再见了,最后的XML战士🥺
+

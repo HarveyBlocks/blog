@@ -221,11 +221,11 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 -   要使用web工程哟
 
-![image-20231206194137192](../../typora-user-images/Day03-自动配置/image-20231206194137192.png)
+![image-20231206194137192](../../assets/Day03-自动配置/image-20231206194137192.png)
 
 
 
-![image-20231206195402635](../../typora-user-images/Day03-自动配置/image-20231206195402635.png)
+![image-20231206195402635](../../assets/Day03-自动配置/image-20231206195402635.png)
 
 可以看出, 它时凭借查看是否存在Tomcat类来判断依赖是否存在, 要启用哪个服务器的
 
@@ -276,7 +276,7 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
     **你其实早就知道了**-----使用@Import(另一个包的配置类)
 
-![image-20231206202826125](../../typora-user-images/Day03-自动配置/image-20231206202826125.png)
+![image-20231206202826125](../../assets/Day03-自动配置/image-20231206202826125.png)
 
 -   其实@SpringBootApplication注解的类也会被加载到Spring容器里去(离谱),所以马,扫描另一个Jar包实例化Bean的那配置类所在的包也是可以获取那个配置类的,以此简洁地获取这个配置类实例化的Bean(离谱)
 
@@ -327,21 +327,21 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 -   源码
 
-![image-20231206215303168](../../typora-user-images/Day03-自动配置/image-20231206215303168.png)
+![image-20231206215303168](../../assets/Day03-自动配置/image-20231206215303168.png)
 
-![image-20231206215343632](../../typora-user-images/Day03-自动配置/image-20231206215343632.png)
-
-
-
-![image-20231206215406396](../../typora-user-images/Day03-自动配置/image-20231206215406396.png)
+![image-20231206215343632](../../assets/Day03-自动配置/image-20231206215343632.png)
 
 
+
+![image-20231206215406396](../../assets/Day03-自动配置/image-20231206215406396.png)
 
 
 
 
 
-![image-20231206215155661](../../typora-user-images/Day03-自动配置/image-20231206215155661.png)
+
+
+![image-20231206215155661](../../assets/Day03-自动配置/image-20231206215155661.png)
 
 ## 案例
 
@@ -355,13 +355,13 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 先去看看人家mybatis-spring-boot-starter是咋写的
 
-![image-20231206221305450](../../typora-user-images/Day03-自动配置/image-20231206221305450.png)
+![image-20231206221305450](../../assets/Day03-自动配置/image-20231206221305450.png)
 
 
 
-![image-20231206221609159](../../typora-user-images/Day03-自动配置/image-20231206221609159.png)
+![image-20231206221609159](../../assets/Day03-自动配置/image-20231206221609159.png)
 
-![image-20231206221729543](../../typora-user-images/Day03-自动配置/image-20231206221729543.png)
+![image-20231206221729543](../../assets/Day03-自动配置/image-20231206221729543.png)
 
 ### 步骤
 

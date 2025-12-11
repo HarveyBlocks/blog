@@ -2,17 +2,17 @@
 
 -   用psvm测试之坏处
 
-    ![image-20231029140915283](../../typora-user-images/Untitled/image-20231029140915283.png)
+    ![image-20231029140915283](../../assets/Untitled/image-20231029140915283.png)
 
 IDEA已经集成了Junit
 
 ## 优点
 
-![image-20231029141033993](../../typora-user-images/Untitled/image-20231029141033993.png)
+![image-20231029141033993](../../assets/Untitled/image-20231029141033993.png)
 
 ## 使用
 
-![image-20231029141314389](../../typora-user-images/Untitled/image-20231029141314389.png)
+![image-20231029141314389](../../assets/Untitled/image-20231029141314389.png)
 
 
 
@@ -57,7 +57,7 @@ junit.framework.AssertionFailedError: 方法内部有Bug expected:<1> but was:<1
 
 
 
-![image-20231029145418402](../../typora-user-images/Untitled/image-20231029145418402.png)
+![image-20231029145418402](../../assets/Untitled/image-20231029145418402.png)
 
 ```
 @BeforeClass
@@ -77,6 +77,7 @@ junit.framework.AssertionFailedError: 方法内部有Bug expected:<1> but was:<1
 @AfterClass
 ```
 
-![image-20231029150158876](../../typora-user-images/Untitled/image-20231029150158876.png)
+![image-20231029150158876](../../assets/Untitled/image-20231029150158876.png)
 
 玩弄我感情是吧
+

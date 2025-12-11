@@ -396,7 +396,7 @@ kubectl apply -f kube-flannel.yml
 kubectl get nodes
 ```
 
-![image-20240511142744210](../assets/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511142744210.png)
+![image-20240511142744210](../assetss/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511142744210.png)
 
 逆天
 
@@ -417,9 +417,9 @@ kubectl expose deployment nginx --port=80 --type=NodePort
 kubectl get pods,svc
 ```
 
-![image-20240511143226959](../assets/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511143226959.png)
+![image-20240511143226959](../assetss/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511143226959.png)
 
 -   `80:30991`, 本机的30991暴露
 
-    ![image-20240511144104949](../assets/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511144104949.png)
+    ![image-20240511144104949](../assetss/Day01-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240511144104949.png)
 

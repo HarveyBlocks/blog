@@ -82,7 +82,7 @@ binding.drawerLayout.closeDrawers()
 
 ### 效果
 
-![image-20250922184150076](../../assets/Day12-滑动菜单/image-20250922184150076.png)
+![image-20250922184150076](../../assetss/Day12-滑动菜单/image-20250922184150076.png)
 
 ## NavigationView
 
@@ -247,3 +247,4 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ### 效果
 
 <img src="../../assets/Day12-滑动菜单/image-20250922204002233.png" alt="image-20250922204002233" style="zoom:67%;" />
+

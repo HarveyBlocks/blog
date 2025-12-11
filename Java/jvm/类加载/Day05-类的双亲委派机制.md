@@ -219,7 +219,7 @@ JDBC中使用了**DriverManager**来管理项目中引入的不同数据库驱�
 
 Application加载引入的jar包中的驱动类
 
-![image-20240518091301497](../asset/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518091301497.png)
+![image-20240518091301497](../assets/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518091301497.png)
 
 
 
@@ -266,7 +266,7 @@ SPI机制是JDK内置的一种服务提供发现的机制
     ServiceLoader<java.sql.Driver> loadedDrivers = ServiceLoader.load(java.sql.Driver.class);
     ```
 
-    ![image-20240518110900127](../asset/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518110900127.png) 
+    ![image-20240518110900127](../assets/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518110900127.png) 
 
 4.  SPI中使用线程上下文中保存的类加载器进行加载, 这个类加载器一般是Application
 
@@ -326,18 +326,4 @@ Osgi还实现了热部署的功能, 服务不停止的情况下, 动态更新字
 除非将class文件放入jar包中进行更新
 
 `retrasform`不能添加方法或者字段, 也不能更新正在执行中的方法
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

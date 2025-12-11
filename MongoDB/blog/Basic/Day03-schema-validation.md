@@ -141,3 +141,4 @@ db.createCollection("store", {
 - `$nearSphere`
 - `$text`
 - `$where`
+

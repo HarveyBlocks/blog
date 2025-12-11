@@ -28,7 +28,7 @@ public class AjaxServlet extends HttpServlet {
 2.  向服务器发送请求
 3.  获取服务器的响应数据
 
-![image-20231119224436304](../../../typora-user-images/Day41-AJAX使用/image-20231119224436304.png)
+![image-20231119224436304](../../../assets/Day41-AJAX使用/image-20231119224436304.png)
 
 
 
@@ -67,9 +67,9 @@ public class AjaxServlet extends HttpServlet {
 
 
 
-![image-20231119225422322](../../../typora-user-images/Day41-AJAX使用/image-20231119225422322.png)
+![image-20231119225422322](../../../assets/Day41-AJAX使用/image-20231119225422322.png)
 
-![image-20231119225507593](../../../typora-user-images/Day41-AJAX使用/image-20231119225507593.png)
+![image-20231119225507593](../../../assets/Day41-AJAX使用/image-20231119225507593.png)
 
 
 
@@ -81,8 +81,9 @@ public class AjaxServlet extends HttpServlet {
 
 ## 结果
 
-![image-20231119225900393](../../../typora-user-images/Day41-AJAX使用/image-20231119225900393.png)
+![image-20231119225900393](../../../assets/Day41-AJAX使用/image-20231119225900393.png)
 
 ### xhr - 异步请求
 
 >   XML HTTP Request
+

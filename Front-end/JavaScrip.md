@@ -40,7 +40,7 @@ alert("Hello JavaScripe");//弹出警告窗
 
 -   引入外部文件
 
-![image-20231113185138492](../Java/typora-user-images/Untitled/image-20231113185138492.png)
+![image-20231113185138492](../Java/assets/Untitled/image-20231113185138492.png)
 
 ```html
 <script src="testJS.js"></script>
@@ -48,7 +48,7 @@ alert("Hello JavaScripe");//弹出警告窗
 
 
 
-![image-20231113185734025](../Java/typora-user-images/Untitled/image-20231113185734025.png)
+![image-20231113185734025](../Java/assets/Untitled/image-20231113185734025.png)
 
 -   **这个自闭和是不会生效的!**
 
@@ -96,7 +96,7 @@ console.log("写入浏览器控制台(F12)")
 -   Java型作用域
 -   不可以重复定义
 
-![image-20231113191204275](../Java/typora-user-images/JavaScrip/image-20231113191204275.png)
+![image-20231113191204275](../Java/assets/JavaScrip/image-20231113191204275.png)
 
 
 
@@ -118,13 +118,13 @@ console.log("写入浏览器控制台(F12)")
 
 ### 原始类型和引用类型
 
-![image-20231113191559389](../Java/typora-user-images/JavaScrip/image-20231113191559389.png)
+![image-20231113191559389](../Java/assets/JavaScrip/image-20231113191559389.png)
 
 
 
 
 
-![image-20231113191636543](../Java/typora-user-images/JavaScrip/image-20231113191636543.png)
+![image-20231113191636543](../Java/assets/JavaScrip/image-20231113191636543.png)
 
 
 
@@ -230,9 +230,9 @@ alert(typeof obj);//object
     
     用处:
     
-    ![image-20231113194717753](../Java/typora-user-images/JavaScrip/image-20231113194717753.png)
+    ![image-20231113194717753](../Java/assets/JavaScrip/image-20231113194717753.png)
     
-    ![image-20231113194726287](../Java/typora-user-images/JavaScrip/image-20231113194726287.png)
+    ![image-20231113194726287](../Java/assets/JavaScrip/image-20231113194726287.png)
     
     简化了
     
@@ -306,7 +306,7 @@ var 函数名 = function(参数1,参数2){
 
 -   可以传任意参数的个数
 
--   ![image-20231113195800520](../Java/typora-user-images/JavaScrip/image-20231113195800520.png)
+-   ![image-20231113195800520](../Java/assets/JavaScrip/image-20231113195800520.png)
 
     
 
@@ -324,7 +324,7 @@ var 函数名 = function(参数1,参数2){
 
 ### Array数组
 
-![image-20231113201627399](../Java/typora-user-images/JavaScrip/image-20231113201627399.png)
+![image-20231113201627399](../Java/assets/JavaScrip/image-20231113201627399.png)
 
 -   中括号!不是大括号!
 -   变长变类型
@@ -334,13 +334,13 @@ var 函数名 = function(参数1,参数2){
 
 ### String字符串
 
-![image-20231113202356679](../Java/typora-user-images/JavaScrip/image-20231113202356679.png)
+![image-20231113202356679](../Java/assets/JavaScrip/image-20231113202356679.png)
 
 -   去除前后空白字符`str4.trim()`
 
 ### 自定义对象
 
-![image-20231113202746976](../Java/typora-user-images/JavaScrip/image-20231113202746976.png)
+![image-20231113202746976](../Java/assets/JavaScrip/image-20231113202746976.png)
 
 
 
@@ -350,13 +350,13 @@ var 函数名 = function(参数1,参数2){
 
 >   **B**rowser **O**bject **M**odel 浏览器对象模型
 
-![image-20231113203322614](../Java/typora-user-images/JavaScrip/image-20231113203322614.png)
+![image-20231113203322614](../Java/assets/JavaScrip/image-20231113203322614.png)
 
 
 
 ### Window
 
-![image-20231113203434829](../Java/typora-user-images/JavaScrip/image-20231113203434829.png)
+![image-20231113203434829](../Java/assets/JavaScrip/image-20231113203434829.png)
 
 -   `conform`点确认返回true,点取消返回false
 
@@ -389,13 +389,13 @@ var 函数名 = function(参数1,参数2){
 
 ### History和Location
 
-![image-20231113205030333](../Java/typora-user-images/JavaScrip/image-20231113205030333.png)
+![image-20231113205030333](../Java/assets/JavaScrip/image-20231113205030333.png)
 
 
 
-![image-20231113205043873](../Java/typora-user-images/JavaScrip/image-20231113205043873.png)
+![image-20231113205043873](../Java/assets/JavaScrip/image-20231113205043873.png)
 
-![image-20231113205128144](../Java/typora-user-images/JavaScrip/image-20231113205128144.png)
+![image-20231113205128144](../Java/assets/JavaScrip/image-20231113205128144.png)
 
 
 
@@ -410,13 +410,13 @@ var 函数名 = function(参数1,参数2){
 -   Text
 -   Comment
 
-![image-20231113221442557](../Java/typora-user-images/JavaScrip/image-20231113221442557.png)
+![image-20231113221442557](../Java/assets/JavaScrip/image-20231113221442557.png)
 
 
 
 
 
-![image-20231113221902768](../Java/typora-user-images/JavaScrip/image-20231113221902768.png)
+![image-20231113221902768](../Java/assets/JavaScrip/image-20231113221902768.png)
 
 
 
@@ -476,3 +476,4 @@ onsubmit事件
 ## 案例:表单验证
 
 要求:表单不符合要求,就不能submit
+

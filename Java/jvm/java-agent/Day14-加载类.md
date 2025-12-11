@@ -62,7 +62,7 @@ Arrays.stream(inst.getAllLoadedClasses()).filter(
 
     返回值为null, 表示不对该类做增强
 
-    ![image-20240531160336002](../asset/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531160336002.png)
+    ![image-20240531160336002](../assets/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531160336002.png)
 
     ```java
     public static final ClassFileTransformer PRINT_CLASS_FILE_TRANSFORMER = 
@@ -106,7 +106,7 @@ Arrays.stream(inst.getAllLoadedClasses()).filter(
     AgentMain.getInst().removeTransformer(PRINT_CLASS_FILE_TRANSFORMER);
     ```
 
-![image-20240531162201632](../asset/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531162201632.png)
+![image-20240531162201632](../assets/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531162201632.png)
 
 ### 反编译
 
@@ -319,4 +319,5 @@ public static final ClassFileTransformer PRINT_DECOMPILED_SOURCE_TRANSFORMER = n
 
 结果
 
-![image-20240531164707773](../asset/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531164707773.png)
+![image-20240531164707773](../assets/Day14-%E7%B1%BB%E5%8A%A0%E8%BD%BD/image-20240531164707773.png)
+

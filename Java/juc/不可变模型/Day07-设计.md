@@ -41,3 +41,4 @@ public static byte[] toBytes(char[] value, int off, int len) {
 ## 无状态
 
 没有字段的类自然是不可变类, 自然是线程安全的了
+

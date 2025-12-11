@@ -9,7 +9,7 @@
 
 ## 架构
 
-![architecture-2.png (2364×1370)](../assert/Day01-Dubbo/architecture-2.png)
+![architecture-2.png (2364×1370)](../assets/Day01-Dubbo/architecture-2.png)
 
 ## ZooKepper安装
 
@@ -490,3 +490,4 @@ dubbo:
 @com.alibaba.dubbo.config.annotation.Reference(init = true )
 private HelloService helloService;
 ```
+

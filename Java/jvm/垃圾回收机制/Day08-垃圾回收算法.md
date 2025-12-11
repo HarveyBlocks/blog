@@ -136,7 +136,7 @@ arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就�
 
 ### 内存分配配置
 
-![image-20240520132606187](../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/image-20240520132606187.png)
+![image-20240520132606187](../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AE%97%E6%B3%95/image-20240520132606187.png)
 
 ```shell
 -XX:+PrintGCDetails
@@ -175,6 +175,4 @@ arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就�
 4.  年轻代依旧存满, 执行Full GC, 对整个堆进行垃圾回收, STW会比较久
 
 5.  FullGC之后仍然无法申请内存, `OutOfMemoryError`
-
-
 

@@ -66,23 +66,23 @@ public class Servlet1 extends HttpServlet {
 
 
 
-![image-20231119131610881](../../../typora-user-images/Day41-Cookie/image-20231119131610881.png)
+![image-20231119131610881](../../../assets/Day41-Cookie/image-20231119131610881.png)
 
 
 
-![image-20231119131643180](../../../typora-user-images/Day41-Cookie/image-20231119131643180.png)
+![image-20231119131643180](../../../assets/Day41-Cookie/image-20231119131643180.png)
 
 
 
-![image-20231119131734333](../../../typora-user-images/Day41-Cookie/image-20231119131734333.png)
+![image-20231119131734333](../../../assets/Day41-Cookie/image-20231119131734333.png)
 
 
 
-![image-20231119131803846](../../../typora-user-images/Day41-Cookie/image-20231119131803846.png)
+![image-20231119131803846](../../../assets/Day41-Cookie/image-20231119131803846.png)
 
 
 
-![image-20231119131859935](../../../typora-user-images/Day41-Cookie/image-20231119131859935.png)
+![image-20231119131859935](../../../assets/Day41-Cookie/image-20231119131859935.png)
 
 
 
@@ -90,11 +90,11 @@ public class Servlet1 extends HttpServlet {
 
 
 
-![image-20231119131934893](../../../typora-user-images/Day41-Cookie/image-20231119131934893.png)
+![image-20231119131934893](../../../assets/Day41-Cookie/image-20231119131934893.png)
 
 
 
-![image-20231119131952562](../../../typora-user-images/Day41-Cookie/image-20231119131952562.png)
+![image-20231119131952562](../../../assets/Day41-Cookie/image-20231119131952562.png)
 
 ### 获取Cookie
 
@@ -134,7 +134,7 @@ public class Servlet2 extends HttpServlet {
 }
 ```
 
-![image-20231119134529174](../../../typora-user-images/Day41-Cookie/image-20231119134529174.png)
+![image-20231119134529174](../../../assets/Day41-Cookie/image-20231119134529174.png)
 
 ## 原理
 
@@ -179,7 +179,7 @@ public class Servlet2 extends HttpServlet {
     -   0
         -   删除对应Cookie(妙哉,曲线救国了属于是)
 
-![image-20231119141902140](../../../typora-user-images/Day41-Cookie/image-20231119141902140.png)
+![image-20231119141902140](../../../assets/Day41-Cookie/image-20231119141902140.png)
 
 -   设置了1小时
 -   但实际上我设置了每次关闭时删除所有Cookie记录,所以没法实验

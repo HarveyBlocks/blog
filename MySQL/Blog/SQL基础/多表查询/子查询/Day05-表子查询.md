@@ -2,7 +2,7 @@
 
 
 
-![image-20231009001258973](../../../../Screenshots/Day05/image-20231009001258973.png)
+![image-20231009001258973](../../../../assets/Day05/image-20231009001258973.png)
 
 -   缝合怪: 结合了行子查询的()元组和列子查询的IN
 
@@ -19,3 +19,4 @@ where (gender, age) in (select gender,age
 ```
 
 -   有in了还用什么or 啊
+

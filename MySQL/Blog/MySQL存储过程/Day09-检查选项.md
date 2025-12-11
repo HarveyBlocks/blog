@@ -6,7 +6,7 @@ Create [Or Replace] View 要改的视图名[(列名列表)] As Select语句 [wit
 
 -   **with cascaded check option**检查选项
 
-![image-20231023211713062](../../shoot/Day09-检查选项/image-20231023211713062.png)
+![image-20231023211713062](../../assets/Day09-检查选项/image-20231023211713062.png)
 
 -   cascaded - 检查到最底层,检查每一个有check的
 -   local - 检查到最上层没有check的,然后就不检查了
@@ -231,3 +231,4 @@ insert into uv3_0_0_1(id, name) values ( 5,'123');
 ```
 
 -   两者的区别主要看这条指令
+

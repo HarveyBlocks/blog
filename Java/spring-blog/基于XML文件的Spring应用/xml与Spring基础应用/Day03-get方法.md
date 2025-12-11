@@ -1,12 +1,12 @@
 # Spring的get方法
 
-![image-20231101001118392](../../../typora-user-images/Day03-get方法/image-20231101001118392.png)
+![image-20231101001118392](../../../assets/Day03-get方法/image-20231101001118392.png)
 
 
 
 
 
-![image-20231101001147032](../../../typora-user-images/Day03-get方法/image-20231101001147032.png)
+![image-20231101001147032](../../../assets/Day03-get方法/image-20231101001147032.png)
 
 
 
@@ -20,3 +20,4 @@
 	```
 	
 -   你还是没记住
+

@@ -6,11 +6,11 @@
 
 1.  搭建SpringBoot工程
 
-    ![image-20231206135642864](../../typora-user-images/Day03-整合Redis/image-20231206135642864.png)
+    ![image-20231206135642864](../../assets/Day03-整合Redis/image-20231206135642864.png)
 
 2.  引入redis起步依赖
 
-    ![image-20231206135846568](../../typora-user-images/Day03-整合Redis/image-20231206135846568.png)
+    ![image-20231206135846568](../../assets/Day03-整合Redis/image-20231206135846568.png)
 
 3.  配置redis相关属性
 
@@ -29,7 +29,7 @@
 
         
 
-    ![image-20231206141746043](../../typora-user-images/Day03-整合Redis/image-20231206141746043.png)
+    ![image-20231206141746043](../../assets/Day03-整合Redis/image-20231206141746043.png)
 
 4.  注入RedisTemplate模板
 
@@ -63,3 +63,4 @@
         }
     }
     ```
+

@@ -435,4 +435,3 @@ return obj.length;
     "Convert this to camelcase".spaceToCamelCase()
     ```
 
-

@@ -44,7 +44,7 @@ typedef struct dict {
 
 
 
-![image-20240404205504169](../../assets/Day12-Dict/image-20240404205504169.png)
+![image-20240404205504169](../../assetss/Day12-Dict/image-20240404205504169.png)
 
 
 
@@ -59,11 +59,11 @@ typedef struct dict {
 
 3.     存储`key=value`, 假设`key`的Hash值是`2`,size是4,则`2&3`=2, 存在2的位置, 
 
-    ![image-20240404204707626](../../assets/Day12-Dict/image-20240404204707626.png)
+    ![image-20240404204707626](../../assetss/Day12-Dict/image-20240404204707626.png)
 
 4.  当Hash值相同时, 我们将新元素插入链首, 插入链尾会遍历链表
 
-    ![image-20240404205054210](../../assets/Day12-Dict/image-20240404205054210.png)
+    ![image-20240404205054210](../../assetss/Day12-Dict/image-20240404205054210.png)
 
     Hash表+单项链表
 

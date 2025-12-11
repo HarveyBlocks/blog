@@ -32,7 +32,7 @@
     docker save --help
     ```
 
-    ![image-20231213144408840](../../../Java/spring-data/assert/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213144408840.png)
+    ![image-20231213144408840](../../../Java/spring-data/assets/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213144408840.png)
 
     ```bash
     docker save -o dockers/mysql.tar mysql:latest
@@ -132,7 +132,7 @@
         mysql -uroot -p
         ```
 
-        ![image-20231213151435278](../../../Java/spring-data/assert/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213151435278.png)
+        ![image-20231213151435278](../../../Java/spring-data/assets/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213151435278.png)
 
         退出mysql
 
@@ -165,7 +165,7 @@
     -   `rmi`删除镜像
     -   `rm`删除容器
 
-![image-20231213142652668](../../../Java/spring-data/assert/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213142652668.png)
+![image-20231213142652668](../../../Java/spring-data/assets/Day15-Docker%E5%91%BD%E4%BB%A4/image-20231213142652668.png)
 
 剩下的看官方文档
 
@@ -210,6 +210,4 @@ docker update --restart=always $(docker ps -aq)
 ```bash
 docker update --restart=no 容器id 或 容器名称
 ```
-
-
 

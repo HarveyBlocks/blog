@@ -2,7 +2,7 @@
 
 ## 策略
 
-![image-20240406220436331](../assert/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406220436331.png)
+![image-20240406220436331](../assets/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406220436331.png)
 
 ### Random(Default)
 
@@ -111,7 +111,7 @@ public class HelloController {
 
 ### 选择策略
 
-![image-20240406220512732](../assert/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406220512732.png)
+![image-20240406220512732](../assets/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406220512732.png)
 
 ```java
 @com.alibaba.dubbo.config.annotation.Reference(loadbalance = RandomLoadBalance.NAME)

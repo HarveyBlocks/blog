@@ -2,7 +2,7 @@
 
 ## 前端交互
 
-![image-20240131121346926](../../../assert/Day11-%E4%BE%9D%E7%85%A7%E4%BD%8D%E7%BD%AE%E6%8E%92%E5%BA%8F/image-20240131121346926.png)
+![image-20240131121346926](../../../assets/Day11-%E4%BE%9D%E7%85%A7%E4%BD%8D%E7%BD%AE%E6%8E%92%E5%BA%8F/image-20240131121346926.png)
 
 
 

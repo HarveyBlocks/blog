@@ -49,7 +49,7 @@
     nmap IP地址
     ```
 
-    ![image-20240101132353864](../shoot/Day06-netstat/image-20240101132353864.png)
+    ![image-20240101132353864](../assets/Day06-netstat/image-20240101132353864.png)
 
     
 
@@ -67,7 +67,7 @@
     netstat -anp | grep 6000
     ```
 
-    ![image-20240101132933601](../shoot/Day06-netstat/image-20240101132933601.png)
+    ![image-20240101132933601](../assets/Day06-netstat/image-20240101132933601.png)
 
     ```bash
     netstat -anp | grep 1919
@@ -75,4 +75,5 @@
 
     无人占用
 
-    ![image-20240101132910182](../shoot/Day06-netstat/image-20240101132910182.png)
+    ![image-20240101132910182](../assets/Day06-netstat/image-20240101132910182.png)
+

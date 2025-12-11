@@ -576,5 +576,3 @@ def classify_test():
     net.fit(25, loss_fun, opt, train_loader, valid_loader)
 ```
 
-
-

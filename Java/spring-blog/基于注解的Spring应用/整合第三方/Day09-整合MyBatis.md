@@ -128,7 +128,7 @@ public interface UserMapper {
 }
 ```
 
-![image-20231206145356561](../../../typora-user-images/Day09-整合MyBatis/image-20231206145356561.png)
+![image-20231206145356561](../../../assets/Day09-整合MyBatis/image-20231206145356561.png)
 
 #### org/test/mapper/UserMapper.xml
 
@@ -270,3 +270,4 @@ public class App {
     }
 }
 ```
+

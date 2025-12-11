@@ -186,7 +186,7 @@ false
 
 哈希表=数组 + 字符串
 
-![new了一个HashSet对象](../../typora-user-images/Day21/new了一个HashSet对象.png)
+![new了一个HashSet对象](../../assets/Day21/new了一个HashSet对象.png)
 
 老规矩 Alt + Insert  偷懒大法
 
@@ -231,3 +231,4 @@ public int hashCode() {
 
    ​	31 * i == ( i << 5) - i
    ​						  ↑ 左移
+

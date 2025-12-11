@@ -10,11 +10,11 @@
 
 1.  搭建SpringBoot工程
 
-    ![image-20231206142621456](../../typora-user-images/Day03-整合MyBatis/image-20231206142621456.png)
+    ![image-20231206142621456](../../assets/Day03-整合MyBatis/image-20231206142621456.png)
 
 2.  引入mybatis起步依赖, 添加mysql驱动
 
-    ![image-20231206142722978](../../typora-user-images/Day03-整合MyBatis/image-20231206142722978.png)
+    ![image-20231206142722978](../../assets/Day03-整合MyBatis/image-20231206142722978.png)
 
     -   runtime-编译不生效, 运行生效
 
@@ -156,4 +156,3 @@ class BootMybatisApplicationTests {
       type-aliases-package: com.harvey.bootmybatis.domain
     ```
 
-    

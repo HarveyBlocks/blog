@@ -62,3 +62,4 @@ list2 = list.stream()
             .filter(s -> s.length()==3)
             .collect(Collectors.toList());
 ```
+

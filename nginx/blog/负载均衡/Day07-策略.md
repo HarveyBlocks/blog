@@ -185,3 +185,4 @@ stream {
 `http`里的`server`和`stream`里的`server`如果监听同一个端口, 那么会代理到哪里去?
 
 `stream`在第四层 ,`http`在第七层, `stream`的配置生效
+

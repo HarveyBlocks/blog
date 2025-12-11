@@ -77,3 +77,4 @@ use db_mine
 | <DB_NAME>.system.profile    | 包含数据库概要(profile)信息。             |
 | <DB_NAME>.system.users      | 列出所有可访问数据库的用户。              |
 | <DB_NAME>.local.sources     | 包含复制对端（slave）的服务器信息和状态。 |
+

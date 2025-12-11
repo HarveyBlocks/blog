@@ -160,17 +160,17 @@ logging:
 
 [路由断言工厂](https://docs.spring.io/spring-cloud-gateway/docs/3.1.8/reference/html/#gateway-request-predicates-factories)
 
-![image-20240110143440419``](../../assert/Day04-Gateway%E6%8A%80%E6%9C%AF/image-20240110143440419.png)
+![image-20240110143440419``](../../assets/Day04-Gateway%E6%8A%80%E6%9C%AF/image-20240110143440419.png)
 
 -   `-Path=/red/{segment}`,传递参数, 要求路径要符合有参数这一规则
 
-![image-20240110144422092](../../assert/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110144422092.png)
+![image-20240110144422092](../../assets/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110144422092.png)
 
 ### 路由过滤器
 
 [过滤器工厂](https://docs.spring.io/spring-cloud-gateway/docs/3.1.8/reference/html/#gatewayfilter-factories)
 
-![image-20240110144501258](../../assert/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110144501258.png)
+![image-20240110144501258](../../assets/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110144501258.png)
 
 -   `StripPrefix`
 
@@ -180,7 +180,7 @@ logging:
 
     就可以剔除前缀`/api` 这个用处
 
-![image-20240110145050509](../../assert/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110145050509.png)
+![image-20240110145050509](../../assets/Day04-%E8%B7%AF%E7%94%B1%E8%BD%AC%E5%8F%91/image-20240110145050509.png)
 
 ```yaml
 spring:

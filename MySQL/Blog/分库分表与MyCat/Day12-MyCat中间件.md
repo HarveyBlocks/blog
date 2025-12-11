@@ -9,7 +9,7 @@ MyCat伪装MySQL协议
 
 ## 优势
 
-![image-20231028145919535](../../shoot/Day12-MyCat中间件/image-20231028145919535.png)
+![image-20231028145919535](../../assets/Day12-MyCat中间件/image-20231028145919535.png)
 
 
 

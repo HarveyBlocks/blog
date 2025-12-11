@@ -33,3 +33,4 @@
 7. 检查是否安装成功                                           
 
 <img src="../../typora-user-images/image-20230731225203082.png" alt="image-20230731225203082" style="zoom:50%;" />
+

@@ -54,3 +54,4 @@ print(message2)  # num = 02
 ## 比较
 
 依据时ASCII码, 但不能直接和数字比
+

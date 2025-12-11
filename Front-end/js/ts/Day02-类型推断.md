@@ -146,3 +146,4 @@ type NonEmptyString =
         S extends "" ? never : S
         : never;
 ```
+

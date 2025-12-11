@@ -486,3 +486,4 @@ void removeNode(Stack<BinaryTreeNode<T> *> &trace) override {
     }
 }
 ```
+

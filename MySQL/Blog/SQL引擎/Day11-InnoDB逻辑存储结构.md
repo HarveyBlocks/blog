@@ -2,7 +2,7 @@
 
 
 
-![image-20231026165529839](../../shoot/Day11-InnoDB引擎逻辑存储结构/image-20231026165529839.png)
+![image-20231026165529839](../../assets/Day11-InnoDB引擎逻辑存储结构/image-20231026165529839.png)
 
 ## 表空间(TableSpace)
 

@@ -1,10 +1,10 @@
 # 列子查询
 
-![image-20231008172151490](../../../../Screenshots/Day05/image-20231008172151490.png)
+![image-20231008172151490](../../../../assets/Day05/image-20231008172151490.png)
 
 ## 常用操作符
 
-![image-20231008172209881](../../../../Screenshots/Day05/image-20231008172209881.png)
+![image-20231008172209881](../../../../assets/Day05/image-20231008172209881.png)
 
 ## 实践
 
@@ -12,7 +12,7 @@
     1.  查询**开发部**和**销售部**的ID
     2.  查询ID的所有员工信息
 
-![image-20231008172841020](../../../../Screenshots/Day05/image-20231008172841020.png)
+![image-20231008172841020](../../../../assets/Day05/image-20231008172841020.png)
 
 -   ↑能运行
 
@@ -58,6 +58,4 @@ where section_ID in (select id
                                          from section
                                          where section.name = '董事会'));
     ```
-
-    
 

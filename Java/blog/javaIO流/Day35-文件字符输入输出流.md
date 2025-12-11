@@ -1,8 +1,8 @@
-![image-20231014163825854](../../typora-user-images/Day35/image-20231014163825854.png)
+![image-20231014163825854](../../assets/Day35/image-20231014163825854.png)
 
-![image-20231014141424496](../../typora-user-images/Day35/image-20231014141424496.png)
+![image-20231014141424496](../../assets/Day35/image-20231014141424496.png)
 
-![image-20231014163925194](../../typora-user-images/Day35/image-20231014163925194.png)
+![image-20231014163925194](../../assets/Day35/image-20231014163925194.png)
 
 -   关闭流也有从缓冲区添加到硬盘里去
 -   缓冲区满了?自动存到硬盘去

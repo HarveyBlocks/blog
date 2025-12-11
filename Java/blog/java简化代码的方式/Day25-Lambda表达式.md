@@ -317,3 +317,4 @@ public static void main(String[] args) {
 -   Consumer**有参无返回**消费型函数
 -   Runnable**无参无返回**型函数
 -   Function **有参有返回**型函数。
+

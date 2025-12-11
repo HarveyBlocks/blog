@@ -80,3 +80,4 @@ Console.WriteLine(s3.Equals(s1)); // True
 ### 类的值相等
 
 类重写`Equals`个`==`
+

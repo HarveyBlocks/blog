@@ -27,7 +27,7 @@
 
 ### 创建JSP文件
 
-![image-20231118184339031](../../../typora-user-images/Day40-JSP/image-20231118184339031.png)
+![image-20231118184339031](../../../assets/Day40-JSP/image-20231118184339031.png)
 
 
 
@@ -65,3 +65,4 @@ Tomcat自动转换成Servlet
 hello.jsp->hello_jsp.java->hello_jsp.class
 
 底层还是writer.write()原始方法
+

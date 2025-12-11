@@ -10,3 +10,4 @@
 $$
 x.size=x.right.size+x.left.size+1
 $$
+

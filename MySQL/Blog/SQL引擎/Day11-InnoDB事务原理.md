@@ -19,9 +19,9 @@
 
 [并发事务问题](..\SQL基础\事务\Day06-并发事务.md)
 
-![image-20231027151123534](../../shoot/Day11-InnoDB事务原理/image-20231027151123534.png)
+![image-20231027151123534](../../assets/Day11-InnoDB事务原理/image-20231027151123534.png)
 
-![image-20231027151239058](../../shoot/Day11-InnoDB事务原理/image-20231027151239058.png)
+![image-20231027151239058](../../assets/Day11-InnoDB事务原理/image-20231027151239058.png)
 
 -   MVCC多版本并发控制
 
@@ -130,20 +130,4 @@ Undo Log 在事务执行时产生,事务提交后,**并不会立刻删除**Undo 
 ### Undo Log 存储
 
 Undo Log 采用 [**段**](Day11-InnoDB逻辑存储结构) 的方式进行管理和记录,存放在前面的 Rollback Segment 回滚段中,内部包含1024个Undo Log Segment
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

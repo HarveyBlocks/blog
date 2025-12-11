@@ -2,7 +2,7 @@
 
 Type的子类有
 
-![image-20240802153350200](../../typora-user-images/Day30-Type/image-20240802153350200.png)
+![image-20240802153350200](../../assets/Day30-Type/image-20240802153350200.png)
 
 -   `Class ` 字节码类
 
@@ -38,3 +38,4 @@ Type的子类有
 那么, 在获取方法的返回值或参数的运行时类型时, 可以使用形如`getGenericParameterTypes()`的方法, 获取Type类型
 
 然后再使用 `type instanceof  ParameterizedType` 再对不同类型的类型对象做各自的处理
+

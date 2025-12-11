@@ -63,7 +63,7 @@ log.info("<====================================>");
 3.  线程恢复运行
 4.  设置`_counter`为0
 
-![image-20240908203232080](../assets/Day04-LockSupport/image-20240908203232080.png)
+![image-20240908203232080](../assetss/Day04-LockSupport/image-20240908203232080.png)
 
 ### unpark->park
 
@@ -74,9 +74,10 @@ log.info("<====================================>");
 5.  设置`_counter`为0
 6.  不等待, 继续运行
 
-![image-20240908203559200](../assets/Day04-LockSupport/image-20240908203559200.png)
+![image-20240908203559200](../assetss/Day04-LockSupport/image-20240908203559200.png)
 
 ## `parkNanos(long)` 和`parkUntil(long millis)`
 
 -   `LockSupport#parkNanos(long)` , 单位纳秒
 -   `LockSupport#parkUntil(long)` , 单位毫秒
+

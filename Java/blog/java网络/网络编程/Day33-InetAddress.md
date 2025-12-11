@@ -2,7 +2,7 @@
 
 -   IP地址类
 
-![image-20231011175307819](../../../typora-user-images/Day33-InetAddress/image-20231011175307819.png)
+![image-20231011175307819](../../../assets/Day33-InetAddress/image-20231011175307819.png)
 
 ## 获取本机IP地址对象
 

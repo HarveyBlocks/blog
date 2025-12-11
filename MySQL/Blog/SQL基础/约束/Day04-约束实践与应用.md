@@ -1,8 +1,8 @@
-![image-20231007195655689](../../../Screenshots/Day04/image-20231007195655689.png)
+![image-20231007195655689](../../../assets/Day04/image-20231007195655689.png)
 
 允许空值null                                                                                                                                NULL
 
-![image-20231008012617909](../../../Screenshots/Day04/image-20231008012617909.png)
+![image-20231008012617909](../../../assets/Day04/image-20231008012617909.png)
 
 ```mysql
 CREATE TABLE 表名(
@@ -15,7 +15,7 @@ CREATE TABLE 表名(
 
 
 
-![image-20231007201232437](../../../Screenshots/Day04/image-20231007201232437.png)
+![image-20231007201232437](../../../assets/Day04/image-20231007201232437.png)
 
 
 

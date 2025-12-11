@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
 
 Event和状态之间的关系
 
-![image-20250925145520614](../../assets/Day14-Lifecycles/image-20250925145520614.png)
+![image-20250925145520614](../../assetss/Day14-Lifecycles/image-20250925145520614.png)
 
 
 
@@ -97,6 +97,4 @@ when (source.lifecycle.currentState) {
     Lifecycle.State.RESUMED -> TODO()
 }
 ```
-
-
 

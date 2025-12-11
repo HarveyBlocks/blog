@@ -83,7 +83,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
 4.   完成场景转换后调用函数清空缓存
 
-     ![image-20241028205318774](../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028205318774.png)
+     ![image-20241028205318774](../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028205318774.png)
 
 5.   脚本编写
 
@@ -214,3 +214,4 @@ MainCamera->CinemachineBrain-> UpdateMethod
 
 -   Smart Update
 -   Fix Update, 减小走路移动造成的微小幅度(因人而异)
+

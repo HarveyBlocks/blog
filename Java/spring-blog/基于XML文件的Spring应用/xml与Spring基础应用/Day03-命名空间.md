@@ -12,7 +12,7 @@
 
 >   不用导入其他命名约束的标签 ,如\<bean\>标签
 
-![image-20231031202624445](../../../typora-user-images/Day03-配置标签/image-20231031202624445.png)
+![image-20231031202624445](../../../assets/Day03-配置标签/image-20231031202624445.png)
 
 
 
@@ -20,7 +20,7 @@
 
 >   beans可以嵌套beans
 
-![image-20231031212011380](../../../typora-user-images/Day03-配置标签/image-20231031212011380.png)
+![image-20231031212011380](../../../assets/Day03-配置标签/image-20231031212011380.png)
 
 -   指定环境
 
@@ -89,13 +89,13 @@ reader.loadBeanDefinitions("beans.xml");
 
 >   引入其他命名空间约束,并通过前缀引用的标签
 
-![image-20231031202351864](../../../typora-user-images/Day03-配置标签/image-20231031202351864.png)
+![image-20231031202351864](../../../assets/Day03-配置标签/image-20231031202351864.png)
 
 -   解释一下这个**context**:
 
     -   一言以蔽之,是自己取的别名,所以:
 
-        ![image-20231031202527263](../../../typora-user-images/Day03-配置标签/image-20231031202527263.png)
+        ![image-20231031202527263](../../../assets/Day03-配置标签/image-20231031202527263.png)
 
         abc也没事
 
@@ -115,7 +115,7 @@ reader.loadBeanDefinitions("beans.xml");
     <context:property-placeholder></context:property-placeholder>
 ```
 
-![image-20231031205937511](../../../typora-user-images/Day03-配置标签/image-20231031205937511.png)
+![image-20231031205937511](../../../assets/Day03-配置标签/image-20231031205937511.png)
 
 -   这样报错
 
@@ -139,6 +139,4 @@ reader.loadBeanDefinitions("beans.xml");
                     第三方的虚拟网址">
         <第三方名:第三方的标签/>
     ```
-
-    
 

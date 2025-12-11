@@ -54,7 +54,7 @@ val manager = NotificationManagerCompat.from(this)
 
 底层是一样的
 
-![image-20250918230119568](../../assets/Day08-Notification/image-20250918230119568.png)
+![image-20250918230119568](../../assetss/Day08-Notification/image-20250918230119568.png)
 
 ### 等级
 
@@ -128,7 +128,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 
 在Lint的检查下, 报错了, 它不知道我其实使用了自定义函数将代码进行了检查
 
-![image-20250918232619379](../../assets/Day08-Notification/image-20250918232619379.png)
+![image-20250918232619379](../../assetss/Day08-Notification/image-20250918232619379.png)
 
 ```kotlin
 package org.harvey.android.first.lint
@@ -198,7 +198,7 @@ private fun createPendingIntent(): PendingIntent {
 
 点击通知后, 应当取消通知, 否则通知将一直保留在通知栏
 
-![image-20250919014633868](../../assets/Day08-Notification/image-20250919014633868.png)
+![image-20250919014633868](../../assetss/Day08-Notification/image-20250919014633868.png)
 
 
 
@@ -487,3 +487,4 @@ notificationManager.run {
     // ... more notify
 }
 ```
+

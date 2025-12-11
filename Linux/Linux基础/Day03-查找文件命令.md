@@ -23,7 +23,7 @@ find [起始路径] -name "fileName"
 
 **fileName可以用通配符*匹配**
 
-![image-20230929100137254](../shoot/Day03/image-20230929100137254.png)
+![image-20230929100137254](../assets/Day03/image-20230929100137254.png)
 
 ### 通过内存大小查找
 
@@ -45,5 +45,5 @@ find 起始路径 -size [+,-]n[k,M,G]
 查找大于1GB文件:find / -size +10G
 ```
 
-![image-20230929100854792](shoot/Day03/image-20230929100854792.png)
+![image-20230929100854792](assets/Day03/image-20230929100854792.png)
 

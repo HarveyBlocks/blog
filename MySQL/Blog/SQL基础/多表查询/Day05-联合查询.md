@@ -46,3 +46,4 @@ SELECT 字段列表 FROM 表2;
             ```
         
         这两条,name,age,entrydate皆一致,应为重复信息
+

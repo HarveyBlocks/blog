@@ -77,7 +77,7 @@ public interface BeanPostProcessor {
 
 -   结果
 
-    ![image-20231102235738999](../../../typora-user-images/Day05-Bean后处理器/image-20231102235738999.png)
+    ![image-20231102235738999](../../../assets/Day05-Bean后处理器/image-20231102235738999.png)
 
 ### 执行顺序与生命周期
 
@@ -109,7 +109,7 @@ public class UserDaoImpl implements UserDao, InitializingBean {
 
 -   结果:
 
-    ![image-20231103001459846](../../../typora-user-images/Day05-Bean后处理器/image-20231103001459846.png)
+    ![image-20231103001459846](../../../assets/Day05-Bean后处理器/image-20231103001459846.png)
 
 ## 实践:用动态代理对Bean进行时间日志增强
 
@@ -163,17 +163,5 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
 
 ## 生命周期
 
--   ![image-20231104022943450](../../../typora-user-images/Day05-Bean后处理器/image-20231104022943450.png)
-
-
-
-
-
-
-
-
-
-
-
-
+-   ![image-20231104022943450](../../../assets/Day05-Bean后处理器/image-20231104022943450.png)
 

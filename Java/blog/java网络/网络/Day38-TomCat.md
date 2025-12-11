@@ -8,17 +8,17 @@
 
 # Web项目结构
 
--   ![image-20231116190517288](../../../typora-user-images/Day38-TomCat/image-20231116190517288.png)
+-   ![image-20231116190517288](../../../assets/Day38-TomCat/image-20231116190517288.png)
 
 Web项目的War包
 
 -   POM.xml
 
-![image-20231116190857842](../../../typora-user-images/Day38-TomCat/image-20231116190857842.png)
+![image-20231116190857842](../../../assets/Day38-TomCat/image-20231116190857842.png)
 
 Idea集成Tomcat
 
-![image-20231116202021810](../../../typora-user-images/Day38-TomCat/image-20231116202021810.png)
+![image-20231116202021810](../../../assets/Day38-TomCat/image-20231116202021810.png)
 
 
 
@@ -63,5 +63,5 @@ Idea集成Tomcat
 
 -   随便找个文件左键
 
-![image-20231116200450164](../../../typora-user-images/Day38-TomCat/image-20231116200450164.png)
+![image-20231116200450164](../../../assets/Day38-TomCat/image-20231116200450164.png)
 

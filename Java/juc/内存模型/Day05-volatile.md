@@ -246,5 +246,3 @@ public Singleton instance(){
 
 没有好的例子, 故略
 
-
-

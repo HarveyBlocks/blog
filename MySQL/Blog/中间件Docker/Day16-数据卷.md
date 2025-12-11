@@ -22,7 +22,7 @@
 
 这是一个固定的目录
 
-![image-20231213155313888](../../../Java/spring-data/assert/Day16-%E6%95%B0%E6%8D%AE%E5%8D%B7/image-20231213155313888.png)
+![image-20231213155313888](../../../Java/spring-data/assets/Day16-%E6%95%B0%E6%8D%AE%E5%8D%B7/image-20231213155313888.png)
 
 绑定之后,将会**双向映射**,一个改了,俩全改了
 
@@ -32,7 +32,7 @@
 
 ## 命令
 
-![image-20231213155420605](../../../Java/spring-data/assert/Day16-%E6%95%B0%E6%8D%AE%E5%8D%B7/image-20231213155420605.png)
+![image-20231213155420605](../../../Java/spring-data/assets/Day16-%E6%95%B0%E6%8D%AE%E5%8D%B7/image-20231213155420605.png)
 
 
 
@@ -59,6 +59,4 @@ docker inspect 容器名
 -   在执行`docker run`命令时, 使用`-v 本地路径:容器内目录`可以**完成数据卷挂载**
     -   路径必须以**`./`**或**`/`**开头,以示为本地目录
     -   否则,认为是`/var/lib/docker/volumns/`下的目录
-
-
 

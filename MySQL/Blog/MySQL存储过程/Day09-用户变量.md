@@ -1,6 +1,6 @@
-![image-20231024120944892](../../shoot/Day09-用户变量/image-20231024120944892.png)
+![image-20231024120944892](../../assets/Day09-用户变量/image-20231024120944892.png)
 
-![image-20231024121256356](../../shoot/Day09-用户变量/image-20231024121256356.png)
+![image-20231024121256356](../../assets/Day09-用户变量/image-20231024121256356.png)
 
 
 
@@ -39,3 +39,4 @@ select @my_cnt,@my_avg;
 	```mysql    
   select count(*) into  @my_cnt,avg(id) into@my_avg from user;
   ```
+

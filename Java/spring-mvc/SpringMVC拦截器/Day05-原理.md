@@ -2,11 +2,11 @@
 
 ## 图解
 
-![image-20231129200738394](../../typora-user-images/Day05-原理/image-20231129200738394.png)
+![image-20231129200738394](../../assets/Day05-原理/image-20231129200738394.png)
 
 1.  服务端请求
 
-    ![image-20231129202230927](../../typora-user-images/Day05-原理/image-20231129202230927.png)
+    ![image-20231129202230927](../../assets/Day05-原理/image-20231129202230927.png)
 
 2.  SpringMVC对资源进行映射
 
@@ -20,13 +20,13 @@
 
     3.  把Intercepter(**可能有多个**)和Controller(**只有一个**)封装成对象HandlerExcutionChain
 
-        ![image-20231129202133183](../../typora-user-images/Day05-原理/image-20231129202133183.png)
+        ![image-20231129202133183](../../assets/Day05-原理/image-20231129202133183.png)
 
-        ![image-20231129202354427](../../typora-user-images/Day05-原理/image-20231129202354427.png)
+        ![image-20231129202354427](../../assets/Day05-原理/image-20231129202354427.png)
 
     4.  经过HandlerMapping把对象HandlerExcutionChain返回
 
-        ![image-20231129202211657](../../typora-user-images/Day05-原理/image-20231129202211657.png)
+        ![image-20231129202211657](../../assets/Day05-原理/image-20231129202211657.png)
 
 3.  运行HandlerExcutionChain的内容
 
@@ -38,7 +38,7 @@
 
 ### 前端控制器
 
-![image-20231129202230927](../../typora-user-images/Day05-原理/image-20231129202230927.png)
+![image-20231129202230927](../../assets/Day05-原理/image-20231129202230927.png)
 
 
 
@@ -46,7 +46,7 @@
 
 
 
-![image-20231129202354427](../../typora-user-images/Day05-原理/image-20231129202354427.png)
+![image-20231129202354427](../../assets/Day05-原理/image-20231129202354427.png)
 
 
 
@@ -56,7 +56,7 @@
 
 
 
-![image-20231129202517417](../../typora-user-images/Day05-原理/image-20231129202517417.png)
+![image-20231129202517417](../../assets/Day05-原理/image-20231129202517417.png)
 
 
 
@@ -71,11 +71,11 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 
 
-![image-20231129203101822](../../typora-user-images/Day05-原理/image-20231129203101822.png)
+![image-20231129203101822](../../assets/Day05-原理/image-20231129203101822.png)
 
 
 
-![image-20231129203424990](../../typora-user-images/Day05-原理/image-20231129203424990.png)
+![image-20231129203424990](../../assets/Day05-原理/image-20231129203424990.png)
 
 
 
@@ -83,7 +83,7 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 #### applyPreHandle()
 
-![image-20231129202646794](../../typora-user-images/Day05-原理/image-20231129202646794.png)
+![image-20231129202646794](../../assets/Day05-原理/image-20231129202646794.png)
 
 **你看这循环,从前到后**
 
@@ -93,7 +93,7 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 #### applyPreHandle()
 
-![image-20231129203119815](../../typora-user-images/Day05-原理/image-20231129203119815.png)
+![image-20231129203119815](../../assets/Day05-原理/image-20231129203119815.png)
 
 -   **你看这循环, 从后到前**
 
@@ -101,10 +101,11 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 
 -   processDispatchResult()
 
-    ![image-20231129203545598](../../typora-user-images/Day05-原理/image-20231129203545598.png)
+    ![image-20231129203545598](../../assets/Day05-原理/image-20231129203545598.png)
 
 -   triggerAfterCompletion()
 
-    ![image-20231129203623992](../../typora-user-images/Day05-原理/image-20231129203623992.png)
+    ![image-20231129203623992](../../assets/Day05-原理/image-20231129203623992.png)
 
     -   **你看这循环, 从后到前**
+

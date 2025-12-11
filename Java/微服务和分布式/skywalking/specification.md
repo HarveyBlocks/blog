@@ -254,3 +254,4 @@ OpenTracing要求，`SpanContext`是**不可变**的，目的是防止由于`Spa
 ### 可选 API 元素
 
 有些语言的OpenTracing实现，为了在串行处理中，传递活跃的`Span`或`SpanContext`，提供了一些工具类。例如，`opentracing-go`中，通过`context.Context`机制，可以设置和获取活跃的`Span`。
+

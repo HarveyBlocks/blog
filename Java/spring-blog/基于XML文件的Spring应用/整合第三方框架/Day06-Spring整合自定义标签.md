@@ -9,7 +9,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 ```
 
-![image-20231105204448937](../../../typora-user-images/Day06-Spring整合其他标签/image-20231105204448937.png)
+![image-20231105204448937](../../../assets/Day06-Spring整合其他标签/image-20231105204448937.png)
 
 ## Namespace有什么用
 
@@ -27,7 +27,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 1.  在META-INF文件夹下创建spring.handlers(键值对) 
 
-    -   META-INF要放在项目的根目录下![image-20231105203724936](../../../typora-user-images/Day06-Spring整合其他标签/image-20231105203724936.png)
+    -   META-INF要放在项目的根目录下![image-20231105203724936](../../../assets/Day06-Spring整合其他标签/image-20231105203724936.png)
 
     -   这是由于Spring的源码里对指定(有namespace的解析器的位置的)文件的位置的要求
 
@@ -50,7 +50,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 ### 步骤简述
 
-![image-20231105204854539](../../../typora-user-images/Day06-Spring整合其他标签/image-20231105204854539.png)
+![image-20231105204854539](../../../assets/Day06-Spring整合其他标签/image-20231105204854539.png)
 
 ### 1.确定各色名称
 
@@ -76,7 +76,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
 -   在MATE-INF目录创建:
 
-    ![image-20231105210439603](../../../typora-user-images/Day06-Spring整合其他标签/image-20231105210439603.png)
+    ![image-20231105210439603](../../../assets/Day06-Spring整合其他标签/image-20231105210439603.png)
 
 #### 编写约束映射文件spring.schemas
 

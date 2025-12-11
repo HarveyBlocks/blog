@@ -54,7 +54,7 @@ System.out.println(nums[1]);//4
 
 - 代码可维护性好
 
-![image-20230902183430097](../../../../../AppData/Roaming/Typora/typora-user-images/image-20230902183430097.png)
+![image-20230902183430097](../../../../../AppData/Roaming/Typora/assets/image-20230902183430097.png)
 
 如果用了常量,只要改了最上面,就一改全改了
 

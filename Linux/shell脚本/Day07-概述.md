@@ -72,7 +72,7 @@ source hello.sh
 -   `bash`是在操作系统正在使用的`bash`解析器启动`bash`
     -   子bash无法影响父环境
     
-    ![image-20240409134806860](../shoot/Day07-%E6%A6%82%E8%BF%B0/image-20240409134806860.png)
+    ![image-20240409134806860](../assets/Day07-%E6%A6%82%E8%BF%B0/image-20240409134806860.png)
 -   `source`是启动新的`bash`解析器进行解析
     
     -   和操作系统的bash一个等级, 能获取环境变量
@@ -97,6 +97,4 @@ hello.sh
 ```shell
 ./hello.sh
 ```
-
-
 

@@ -66,3 +66,4 @@ Thrift使用TCP专属协议,  效率比gRPC高
 gRPC高效进行进程间通信, **原生**支持Go, Java, C, 支持多平台Linux, Android,IOS,MacOS, Windows
 
 Dubbo可以和gRPC做整合
+

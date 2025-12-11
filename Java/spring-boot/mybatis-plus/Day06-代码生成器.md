@@ -13,7 +13,7 @@
 
 -   以上代码总是固定
 
-![image-20231209155247161](../../typora-user-images/Day06-代码生成器/image-20231209155247161.png)
+![image-20231209155247161](../../assets/Day06-代码生成器/image-20231209155247161.png)
 
 [代码生成器（新）官方文档](https://baomidou.com/pages/779a6e/#安装)
 
@@ -23,12 +23,13 @@
 
  [MybatisX快速开发插件](https://baomidou.com/pages/ba5b24/)
 
-![image-20231209155914052](../../typora-user-images/Day06-代码生成器/image-20231209155914052.png)
+![image-20231209155914052](../../assets/Day06-代码生成器/image-20231209155914052.png)
 
-![image-20231209160133557](../../typora-user-images/Day06-代码生成器/image-20231209160133557.png)
+![image-20231209160133557](../../assets/Day06-代码生成器/image-20231209160133557.png)
 
 
 
 ## MyBatisPlus(下架了好像)
 
 封面是初音未来耶
+

@@ -28,7 +28,7 @@
 -   TransactionStatus
     -   事物状态
 
-![image-20231111004955953](../../../typora-user-images/Day10-Spring事物编程概述/image-20231111004955953.png)
+![image-20231111004955953](../../../assets/Day10-Spring事物编程概述/image-20231111004955953.png)
 
 不同的底层实现,可能会提供不同的实现
 
@@ -45,3 +45,4 @@ DataSourceTaransactionManager
 事物状态在不同节点会有不同的状态信息,不同节点不同状态下的信息,
 
 事物的状态是动态的,事物的定义是静态的
+

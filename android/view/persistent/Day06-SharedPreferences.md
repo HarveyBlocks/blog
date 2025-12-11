@@ -89,9 +89,5 @@ fun show() {
 }
 ```
 
-![image-20250916204200909](../../assets/Day06-SharedPreferences/image-20250916204200909.png)
-
-
-
-
+![image-20250916204200909](../../assetss/Day06-SharedPreferences/image-20250916204200909.png)
 

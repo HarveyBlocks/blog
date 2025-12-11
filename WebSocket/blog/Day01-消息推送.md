@@ -4,7 +4,7 @@
 
 >   在邮箱会在新邮件过来时提示
 
-![image-20231229220524642](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229220524642.png?lastModify=1703858921)
+![image-20231229220524642](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229220524642.png?lastModify=1703858921)
 
 
 
@@ -120,3 +120,4 @@ http1.1版本的**长连接**利用了**长轮询**的特性
     -   两个方向上传输指的是**主动**的传输
 
 [WebSocket介绍](./Day02-websocket介绍.md)
+

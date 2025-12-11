@@ -7,7 +7,7 @@
 ALTER TABLE 表名 ADD 字段名 类型[(长度)] [comment '注释'] [约束];
 ```
 
-![image-20231006105845263](../../../Screenshots/Day03/image-20231006103820194.png)
+![image-20231006105845263](../../../assets/Day03/image-20231006103820194.png)
 
 -   命名也不区分大小写
 -   **duplicate重复**
@@ -31,3 +31,4 @@ ALTER TABLE 表名 CHANGE 旧列名之名 新列名之名 新列的类型[(长�
 ```mysql
 ALTER TABLE 表名 DROP 列名之名;
 ```
+

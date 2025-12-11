@@ -70,7 +70,7 @@ try (MongoCursor<Document> cursor = iterable.cursor()) {
 }
 ```
 
-![image-20251119183651547](../../../assets/Day04-Array&Object/image-20251119183651547.png)
+![image-20251119183651547](../../../assetss/Day04-Array&Object/image-20251119183651547.png)
 
 ### 比较
 

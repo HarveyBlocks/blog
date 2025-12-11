@@ -247,7 +247,7 @@ const images = ref([
 
 ```
 
-![image-20250814210605833](../../../assets/Day02-指令/image-20250814210605833.png)
+![image-20250814210605833](../../../assetss/Day02-指令/image-20250814210605833.png)
 
 
 
@@ -273,7 +273,7 @@ const image = ref(
 </template>
 ```
 
-![image-20250814211243697](../../../assets/Day02-指令/image-20250814211243697.png)
+![image-20250814211243697](../../../assetss/Day02-指令/image-20250814211243697.png)
 
 ### 带索引的遍历
 
@@ -305,7 +305,7 @@ const image = ref(
 </template>
 ```
 
-![image-20250814211345220](../../../assets/Day02-指令/image-20250814211345220.png)
+![image-20250814211345220](../../../assetss/Day02-指令/image-20250814211345220.png)
 
 
 
@@ -332,7 +332,7 @@ const images = ref([
 </template>
 ```
 
-![image-20250814211655189](../../../assets/Day02-指令/image-20250814211655189.png)
+![image-20250814211655189](../../../assetss/Day02-指令/image-20250814211655189.png)
 
 ### Generator的遍历
 
@@ -358,7 +358,7 @@ function* range(start, end, step) {
 </template>
 ```
 
-![image-20250814212109448](../../../assets/Day02-指令/image-20250814212109448.png)
+![image-20250814212109448](../../../assetss/Day02-指令/image-20250814212109448.png)
 
 
 
@@ -552,7 +552,7 @@ const lightOn = ref(false);
 
 
 
-![image-20250814223239007](../../../assets/Day04-响应式布局/image-20250814223239007.png)
+![image-20250814223239007](../../../assetss/Day04-响应式布局/image-20250814223239007.png)
 
 ### input
 
@@ -575,7 +575,7 @@ function redInput(e) {
 </template>
 ```
 
-![image-20250814225210497](../../../assets/Day02-指令/image-20250814225210497.png)
+![image-20250814225210497](../../../assetss/Day02-指令/image-20250814225210497.png)
 
 ### mousemove
 

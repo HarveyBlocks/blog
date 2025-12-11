@@ -141,3 +141,4 @@ let stats = db.runCommand({
 console.log(stats.capped); // true
 console.log(stats['size'] > stats.maxSize); // true 非常奇怪
 ```
+

@@ -118,7 +118,7 @@ System.out.println("pid = " + pid);
 dashboard -i 500 -n 3 
 ```
 
-![image-20240512195204647](../asset/Day01-Arthas/image-20240512195204647.png)
+![image-20240512195204647](../assets/Day01-Arthas/image-20240512195204647.png)
 
 ## 生成字节码文件
 
@@ -139,7 +139,7 @@ dashboard -i 500 -n 3
 
 
 
-![image-20240512200358919](../asset/Day01-Arthas/image-20240512200358919.png)
+![image-20240512200358919](../assets/Day01-Arthas/image-20240512200358919.png)
 
 类的字节码文件和类加载器的字节码文件
 
@@ -164,3 +164,4 @@ dashboard -i 500 -n 3
 |                C | 可选, 类所属 ClassLoader 的 hashcode            |
 | classLoaderClass | 可选,指定执行表达式的 ClassLoader 的 class name |
 |                E | 可选,开启正则表达式匹配，默认为通配符匹配       |
+

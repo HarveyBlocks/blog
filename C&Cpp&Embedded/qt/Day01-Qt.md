@@ -378,7 +378,7 @@ widget->setWindowTitle(QApplication::translate(
 
 
 
-![image-20240506124245894](../assets/Day01-Qt/image-20240506124245894.png)
+![image-20240506124245894](../assetss/Day01-Qt/image-20240506124245894.png)
 
 设置Label样式
 
@@ -390,5 +390,5 @@ label->setStyleSheet(QApplication::tr(
 ));
 ```
 
-![image-20240506124252302](../assets/Day01-Qt/image-20240506124252302.png)
+![image-20240506124252302](../assetss/Day01-Qt/image-20240506124252302.png)
 

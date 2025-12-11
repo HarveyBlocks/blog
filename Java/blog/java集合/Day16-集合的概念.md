@@ -5,7 +5,7 @@
 
 
 
-![Interface Collection](../../typora-user-images/Day16/Interface Collection.png)
+![Interface Collection](../../assets/Day16/Interface Collection.png)
 
 ## Interface Collection
 
@@ -39,7 +39,7 @@
 
 存储结构红黑树
 
-![Map集合体系](../../typora-user-images/Day22/Map集合体系.png)
+![Map集合体系](../../assets/Day22/Map集合体系.png)
 
 ## Interface Map
 
@@ -62,3 +62,4 @@
 存储结构红黑树
 
 ## Collections工具类
+

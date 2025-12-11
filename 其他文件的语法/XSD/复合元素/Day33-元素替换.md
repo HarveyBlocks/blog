@@ -93,11 +93,11 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
 <xs:element name="name" type="xs:string" block="substitution"/>
 ```
 
-![image-20240613210939704](../../assets/Day33-%E5%85%83%E7%B4%A0%E6%9B%BF%E6%8D%A2/image-20240613210939704.png)
+![image-20240613210939704](../../assetss/Day33-%E5%85%83%E7%B4%A0%E6%9B%BF%E6%8D%A2/image-20240613210939704.png)
 
 看似一切安好
 
-![image-20240613210954431](../../assets/Day33-%E5%85%83%E7%B4%A0%E6%9B%BF%E6%8D%A2/image-20240613210954431.png)
+![image-20240613210954431](../../assetss/Day33-%E5%85%83%E7%B4%A0%E6%9B%BF%E6%8D%A2/image-20240613210954431.png)
 
 其实已经不生效了
 

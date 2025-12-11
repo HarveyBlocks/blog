@@ -5,7 +5,7 @@
 
 
 
-![image-20231010204722650](../../typora-user-images/Day32/image-20231010204722650.png)
+![image-20231010204722650](../../assets/Day32/image-20231010204722650.png)
 
 # 使用Druid
 

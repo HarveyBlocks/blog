@@ -82,4 +82,5 @@ auto-aof-rewrite-min-size 64mb
 
 ## AOF和RDB的比较
 
-![image-20240207185318515](../../assets/Day05-AOF%E6%8C%81%E4%B9%85%E5%8C%96/image-20240207185318515.png)
+![image-20240207185318515](../../assetss/Day05-AOF%E6%8C%81%E4%B9%85%E5%8C%96/image-20240207185318515.png)
+

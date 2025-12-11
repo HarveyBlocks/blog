@@ -88,3 +88,4 @@ console.log(Number.POSITIVE_INFINITY);
 | `tan(x)` | 返回角的正切 |
 | `tanh(x)` | 返回数字的双曲正切 |
 | `trunc(x)` | 返回数字的整数部分 (x) |
+

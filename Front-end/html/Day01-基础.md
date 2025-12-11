@@ -202,7 +202,7 @@ alt提示图片失效时的文本
      width="300" height="200">
 ```
 
-![image-20250730151705619](../assets/Day01-基础/image-20250730151705619.png)
+![image-20250730151705619](../assetss/Day01-基础/image-20250730151705619.png)
 
 ### 高度和宽度
 
@@ -234,7 +234,7 @@ alt提示图片失效时的文本
 <img src="public\javascript.svg" alt="图片失效" style="vertical-align: middle">文本
 ```
 
-![image-20250730155041374](../assets/Day01-基础/image-20250730155041374.png)
+![image-20250730155041374](../assetss/Day01-基础/image-20250730155041374.png)
 
 
 
@@ -264,3 +264,4 @@ document.write("Hello World!")
 在html中一些字符被预留, 例如`<` 和 `>`, 字符实体渲染这些字符
 
 如需显示`<`：`&lt;` 或 `&#60;` 或 `&#060;`
+

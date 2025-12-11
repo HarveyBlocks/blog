@@ -32,7 +32,7 @@
 
 -   Skywalking APM Distribution
 
-![image-20240425154405633](../assert/Day10-Skywalking/image-20240425154405633.png)
+![image-20240425154405633](../assets/Day10-Skywalking/image-20240425154405633.png)
 
 ```shell
 tar -zxf 文件
@@ -44,7 +44,7 @@ tar -zxf 文件
 
 `/root/skywalking/apache-skywalking-apm-bin/webapp`
 
-![image-20240425165113084](../assert/Day10-Skywalking/image-20240425165113084.png)
+![image-20240425165113084](../assets/Day10-Skywalking/image-20240425165113084.png)
 
 
 
@@ -80,7 +80,7 @@ bin/webappService.sh
 
 收集数据上交服务端
 
-![image-20240425154340853](../assert/Day10-Skywalking/image-20240425154340853.png)
+![image-20240425154340853](../assets/Day10-Skywalking/image-20240425154340853.png)
 
 
 
@@ -104,7 +104,7 @@ gRpc的端口是11800, skywalking使用grpc做数据的上报
 
 
 
-![image-20240426191816862](../assert/Day10-Skywalking/image-20240426191816862.png)
+![image-20240426191816862](../assets/Day10-Skywalking/image-20240426191816862.png)
 
 
 
@@ -165,7 +165,7 @@ docker run \
 
 ## 组件
 
-![image-20240425184053764](../assert/Day10-Skywalking/image-20240425184053764.png)
+![image-20240425184053764](../assets/Day10-Skywalking/image-20240425184053764.png)
 
 ### Agent
 
@@ -194,6 +194,4 @@ docker run \
 -   轻量级
 -   可插拔
 -   可移植
-
-
 

@@ -57,7 +57,7 @@ classloader
 
 ## JDK提供或自定义的类加载器
 
-![image-20240513212249611](../asset/Day04-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/image-20240513212249611.png)
+![image-20240513212249611](../assets/Day04-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/image-20240513212249611.png)
 
 上图是JDK17编译的Springboot项目查看到的类加载器
 
@@ -217,3 +217,4 @@ classloader -c ClassLoaderHashCode
 
 
 应用程序类加载器也会加载扩展类目录下的Jar包(类的双亲委派机制)
+

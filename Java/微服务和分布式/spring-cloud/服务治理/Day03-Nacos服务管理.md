@@ -27,21 +27,21 @@ docker run -d \
 nacos/nacos-server:v2.1.0-slim
 ```
 
-![image-20240107153114453](../../assert/Day03-Nacos/image-20240107153114453.png)
+![image-20240107153114453](../../assets/Day03-Nacos/image-20240107153114453.png)
 
-![image-20240107153219480](../../assert/Day03-Nacos/image-20240107153219480.png)
+![image-20240107153219480](../../assets/Day03-Nacos/image-20240107153219480.png)
 
 泪目
 
-![image-20240107153318985](../../assert/Day03-Nacos/image-20240107153318985.png)
+![image-20240107153318985](../../assets/Day03-Nacos/image-20240107153318985.png)
 
 输入用户名密码
 
-![image-20240107153713808](../../assert/Day03-Nacos/image-20240107153713808.png)
+![image-20240107153713808](../../assets/Day03-Nacos/image-20240107153713808.png)
 
 输入列表
 
-![image-20240107153744573](../../assert/Day03-Nacos/image-20240107153744573.png)
+![image-20240107153744573](../../assets/Day03-Nacos/image-20240107153744573.png)
 
 ## 服务注册
 
@@ -73,21 +73,21 @@ spring:
 
 重启后自动注册
 
-![image-20240107160430014](../../assert/Day03-Nacos/image-20240107160430014.png)
+![image-20240107160430014](../../assets/Day03-Nacos/image-20240107160430014.png)
 
 ### 模拟多实例
 
 创建新的启动项
 
-![image-20240107155813141](../../assert/Day03-Nacos/image-20240107155813141.png)
+![image-20240107155813141](../../assets/Day03-Nacos/image-20240107155813141.png)
 
 由于在同一台机器运行, 可能造成端口冲突, 所以端口得改
 
-![image-20240107155921376](../../assert/Day03-Nacos/image-20240107155921376.png)
+![image-20240107155921376](../../assets/Day03-Nacos/image-20240107155921376.png)
 
 
 
-![image-20240107160035883](../../assert/Day03-Nacos/image-20240107160035883.png)
+![image-20240107160035883](../../assets/Day03-Nacos/image-20240107160035883.png)
 
 ```bash
 -Dserver.port=8083
@@ -95,11 +95,11 @@ spring:
 
 优先级高于yaml文件
 
-![image-20240107160301326](../../assert/Day03-Nacos/image-20240107160301326.png)
+![image-20240107160301326](../../assets/Day03-Nacos/image-20240107160301326.png)
 
 查看Nacos
 
-![image-20240107160342536](../../assert/Day03-Nacos/image-20240107160342536.png)
+![image-20240107160342536](../../assets/Day03-Nacos/image-20240107160342536.png)
 
 ## 服务调用
 
@@ -162,15 +162,15 @@ String url = String.format("%s/items?ids={%s}", uri, placeholders);
 
 第一次
 
-![image-20240107163506999](../../assert/Day03-Nacos/image-20240107163506999.png)
+![image-20240107163506999](../../assets/Day03-Nacos/image-20240107163506999.png)
 
 第二次
 
-![image-20240107163540282](../../assert/Day03-Nacos/image-20240107163540282.png)
+![image-20240107163540282](../../assets/Day03-Nacos/image-20240107163540282.png)
 
 让8083挂
 
-![image-20240107163711496](../../assert/Day03-Nacos/image-20240107163711496.png)
+![image-20240107163711496](../../assets/Day03-Nacos/image-20240107163711496.png)
 
 没问题
 
@@ -229,9 +229,9 @@ spring:
 
 ### 运行测试
 
-![image-20240503140358369](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503140358369.png)
+![image-20240503140358369](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503140358369.png)
 
-![image-20240503133009584](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503133009584.png)
+![image-20240503133009584](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503133009584.png)
 
 ### 分级下的负载均衡
 
@@ -266,9 +266,9 @@ NacosRule优先本地, 然后随机, 如果本地的宕机了, 使用远程的�
 
 ## 配置负载均衡权重
 
-![image-20240503142459283](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142459283.png)
+![image-20240503142459283](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142459283.png)
 
-![image-20240503142511861](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142511861.png)
+![image-20240503142511861](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142511861.png)
 
 失败
 
@@ -312,9 +312,9 @@ end
 
 ### 新建
 
-![image-20240503143234526](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143234526.png)
+![image-20240503143234526](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143234526.png)
 
-![image-20240503143651516](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143651516.png)
+![image-20240503143651516](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143651516.png)
 
 ### 配置与使用
 
@@ -326,21 +326,21 @@ spring:
         namespace: 38fbc4ea-907e-4bce-8abb-f4bcce9fb598 # 配置ID
 ```
 
-![image-20240503143311411](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143311411.png)
+![image-20240503143311411](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143311411.png)
 
-![image-20240503143900513](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143900513.png)
+![image-20240503143900513](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143900513.png)
 
 不在一个命名空间, 就报错, 找不到该服务
 
-![image-20240503144037783](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144037783.png)
+![image-20240503144037783](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144037783.png)
 
 
 
 在一个命名空间, 不报错
 
-![image-20240503144231845](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144231845.png)
+![image-20240503144231845](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144231845.png)
 
-![image-20240503144155985](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144155985.png)
+![image-20240503144155985](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144155985.png)
 
 
 
@@ -361,11 +361,11 @@ spring:
         ephemeral: false # 非临时实例
 ```
 
-![image-20240503145352208](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145352208.png)
+![image-20240503145352208](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145352208.png)
 
-![image-20240503145416504](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145416504.png)
+![image-20240503145416504](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145416504.png)
 
-![image-20240503145433849](../../assert/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145433849.png)
+![image-20240503145433849](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145433849.png)
 
 ### 删除
 
@@ -376,3 +376,4 @@ curl -X DELETE 'http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=cart-serv
 ```
 
 失败
+

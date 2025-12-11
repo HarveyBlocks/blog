@@ -239,7 +239,7 @@ fun main() {
 
 引用实现`getValue`的源码是
 
-![image-20250906013042070](../../assets/Day04-delegate/image-20250906013042070.png)
+![image-20250906013042070](../../assetss/Day04-delegate/image-20250906013042070.png)
 
 top变量/成员属性/扩展属性之间可以互相委托
 
@@ -342,3 +342,4 @@ fun example(computeFoo: () -> Foo) {
 使用`provideDelegate`函数重载
 
 不重要, 即使重载了译器也将delegate转成调用`getValue`和`setValue`方法
+

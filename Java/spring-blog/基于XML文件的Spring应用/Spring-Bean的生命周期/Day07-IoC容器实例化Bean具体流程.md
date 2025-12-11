@@ -9,7 +9,7 @@
 
 ## 流程
 
-![image-20231104153243541](../../../typora-user-images/Day07-IoC容器实例化Bean具体流程/image-20231104153243541.png)
+![image-20231104153243541](../../../assets/Day07-IoC容器实例化Bean具体流程/image-20231104153243541.png)
 
 
 
@@ -17,5 +17,5 @@
 
 
 
-![image-20231104153450500](../../../typora-user-images/Day07-IoC容器实例化Bean具体流程/image-20231104153450500.png)
+![image-20231104153450500](../../../assets/Day07-IoC容器实例化Bean具体流程/image-20231104153450500.png)
 

@@ -10,10 +10,11 @@
 
 不得不该文件名
 
-![image-20240510203700249](../../../Kubernetes/assets/Day03-IDEA%E7%9A%84%E5%AE%89%E8%A3%85/image-20240510203700249.png)
+![image-20240510203700249](../../../Kubernetes/assetss/Day03-IDEA%E7%9A%84%E5%AE%89%E8%A3%85/image-20240510203700249.png)
 
 很智障
 
 修改配置文件
 
 `C:\Users\27970\AppData\Roaming\JetBrains\DataGrip2023.2\options\recentProjects.xml`
+

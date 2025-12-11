@@ -2,13 +2,13 @@
 
 >   Fanout 广播
 
-![img](../../assert/Day02-Fanout%E4%BA%A4%E6%8D%A2%E6%9C%BA/python-three-overall.png)
+![img](../../assets/Day02-Fanout%E4%BA%A4%E6%8D%A2%E6%9C%BA/python-three-overall.png)
 
 一服务, 一队列
 
 ## 创建Fanout交换机
 
-![image-20240112193143733](../../assert/Day02-Fanout%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112193143733.png)
+![image-20240112193143733](../../assets/Day02-Fanout%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112193143733.png)
 
 ## 发送到消息交换机
 

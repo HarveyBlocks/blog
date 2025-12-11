@@ -52,11 +52,11 @@ public class App implements Servlet {
 }
 ```
 
-![image-20231116211755202](../../../typora-user-images/Day38-Servlet/image-20231116211755202.png)
+![image-20231116211755202](../../../assets/Day38-Servlet/image-20231116211755202.png)
 
 -   每一次访问(刷新一次也算哦),就会执行一次servlet
 
-![image-20231116211953731](../../../typora-user-images/Day38-Servlet/image-20231116211953731.png)
+![image-20231116211953731](../../../assets/Day38-Servlet/image-20231116211953731.png)
 
 -   网页一片空白,怎么了?
 -   service()方法还没有指定这个网页要干嘛呢,连Html的加载也没说,Tomcat就好心地没有为我们多此一举啦
@@ -204,7 +204,7 @@ public ServletConfig getServletConfig() {
 
 ## Servlet体系结构
 
-![image-20231116220204607](../../../typora-user-images/Day38-Servlet/image-20231116220204607.png)
+![image-20231116220204607](../../../assets/Day38-Servlet/image-20231116220204607.png)
 
 ### 使用HttpServlet
 
@@ -239,9 +239,9 @@ public class Application extends HttpServlet {
 }
 ```
 
-![image-20231116221129299](../../../typora-user-images/Day38-Servlet/image-20231116221129299.png)
+![image-20231116221129299](../../../assets/Day38-Servlet/image-20231116221129299.png)
 
-![image-20231116221140810](../../../typora-user-images/Day38-Servlet/image-20231116221140810.png)
+![image-20231116221140810](../../../assets/Day38-Servlet/image-20231116221140810.png)
 
 
 
@@ -333,3 +333,4 @@ public class Application extends HttpServlet {
 ```
 
 411(这个41啥意思啊?我也不好乱删啊😓)
+

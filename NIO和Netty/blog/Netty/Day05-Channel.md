@@ -126,7 +126,7 @@ if ("exit".equals(input)) {
 
 结束NioEventLoopGroup里的线程都关闭
 
-![image-20240226164831895](../../assets/Day05-Channel/image-20240226164831895.png)
+![image-20240226164831895](../../assetss/Day05-Channel/image-20240226164831895.png)
 
 ## EmbeddedChannel
 
@@ -137,3 +137,4 @@ private static ChannelHandler[] handlers() {
     return new ChannelHandler[]{new StringEncoder()};
 }
 ```
+

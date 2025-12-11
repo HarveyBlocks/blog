@@ -1,27 +1,27 @@
- ![image-20231110153343057](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110153343057.png)
+ ![image-20231110153343057](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153343057.png)
 
 基于JDK
 
-![image-20231110153756303](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110153756303.png)
+![image-20231110153756303](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153756303.png)
 
 基于Cglib
 
 
 
-![image-20231110153722294](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110153722294.png)
+![image-20231110153722294](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153722294.png)
 
 -   默认false,基于JDK
 -   
 
-![image-20231110153823145](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110153823145.png)
+![image-20231110153823145](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153823145.png)
 
-![image-20231110153946550](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110153946550.png)
-
-
+![image-20231110153946550](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153946550.png)
 
 
 
-![image-20231110154123034](../../../typora-user-images/Day08-xml配置AOP原理剖析/image-20231110154123034.png)
+
+
+![image-20231110154123034](../../../assets/Day08-xml配置AOP原理剖析/image-20231110154123034.png)
 
 -   ```java
     class App2 {
@@ -87,4 +87,4 @@ after-returning
        -   service是代理类，并且是**jdk 动态代理**
   　　3. serice方法没有添加@Transactional注解或者其它的aop拦截配置。 
        -   serivce不是代理类，而是**普通类**
-                     
+

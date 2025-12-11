@@ -203,3 +203,4 @@ fun main() {
     val s = run<SomeImpl, _>(SomeImpl())
 }
 ```
+

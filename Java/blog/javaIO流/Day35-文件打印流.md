@@ -2,7 +2,7 @@
 
 
 
-![image-20231014173908574](../../typora-user-images/Day35/image-20231014173908574.png)
+![image-20231014173908574](../../assets/Day35/image-20231014173908574.png)
 
 ```java
 public class PrintStream extends FilterOutputStream
@@ -19,7 +19,7 @@ class FilterOutputStream extends OutputStream
 -   缝合怪
 -   男人的梦想
 
-![image-20231014174306643](../../typora-user-images/Day35/image-20231014174306643.png)
+![image-20231014174306643](../../assets/Day35/image-20231014174306643.png)
 
 ```java
 public class PrintWriter extends Writer
@@ -42,3 +42,4 @@ public class PrintWriter extends Writer
 -   **但是**
 -   PrintWriter(new FileWriter("Path.......",true))可以追加数据!!!!!
 -   所以它还是无敌的
+

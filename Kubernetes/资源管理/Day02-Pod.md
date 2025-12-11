@@ -60,7 +60,3 @@ kubectl run nginx \
 	--namespace my-ns
 ```
 
-
-
-
-

@@ -41,7 +41,7 @@ fun save(inputText: String) {
 
 
 
-![image-20250916171833200](../../assets/Day06-文件存储/image-20250916171833200.png)
+![image-20250916171833200](../../assetss/Day06-文件存储/image-20250916171833200.png)
 
 ## 读取数据
 
@@ -65,11 +65,5 @@ fun read(): String {
 }
 ```
 
-![image-20250916201117412](../../assets/Day06-文件存储/image-20250916201117412.png)
-
-
-
-
-
-
+![image-20250916201117412](../../assetss/Day06-文件存储/image-20250916201117412.png)
 

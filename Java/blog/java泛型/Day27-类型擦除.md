@@ -108,7 +108,7 @@ public class Student<T extends  Number> {}
 
 
 
-![Screenshot_20230910_222830](../../typora-user-images/Day27/Screenshot_20230910_222830.jpg)
+![Screenshot_20230910_222830](../../assets/Day27/Screenshot_20230910_222830.jpg)
 
 **注意**,有两个info()方法,类型还不一样
 
@@ -140,3 +140,4 @@ T t4 = (T) new Student();
 ```
 
 都不会报`ClassCastException`错😂
+

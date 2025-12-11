@@ -57,7 +57,7 @@ String indexName = collection.createIndex(Indexes.ascending("title"));
 
 
 
-![Diagram of an index on the ``score`` field (ascending).](../../assets/Day07-Index/index-ascending.bakedsvg.svg)
+![Diagram of an index on the ``score`` field (ascending).](../../assetss/Day07-Index/index-ascending.bakedsvg.svg)
 
 
 
@@ -78,7 +78,7 @@ db.<collection>.createIndex( {
 
 - `sortOrder` 可选`1` (升序)和`-1`
 
-![Diagram of a compound index on the ``userid`` field (ascending) and the ``score`` field (descending). The index sorts first by the ``userid`` field and then by the ``score`` field.](../../assets/Day07-Index/index-compound-key.bakedsvg.svg)
+![Diagram of a compound index on the ``userid`` field (ascending) and the ``score`` field (descending). The index sorts first by the ``userid`` field and then by the ``score`` field.](../../assetss/Day07-Index/index-compound-key.bakedsvg.svg)
 
 ```java
 // {"a": 1, "b": 1}
@@ -114,7 +114,7 @@ collection.createIndex(indexBson);
 db.<collection>.createIndex( { <arrayField>: <sortOrder> } )
 ```
 
-![Diagram of a multikey index on the ``addr.zip`` field. The ``addr`` field contains an array of address documents. The address documents contain the ``zip`` field.](../../assets/Day07-Index/index-multikey.bakedsvg.svg)
+![Diagram of a multikey index on the ``addr.zip`` field. The ``addr`` field contains an array of address documents. The address documents contain the ``zip`` field.](../../assetss/Day07-Index/index-multikey.bakedsvg.svg)
 
 图为使用addr.zip创建Index而自动构建的`Multikey`
 
@@ -206,6 +206,4 @@ db.collection.find( { 'ratings.scores': { $elemMatch: { 'q1': 2, 'q2': 8 } } } )
 将索引隐藏之后, 其将不对查询进行优化, 也不会再对写操作而造成负担
 
 允许下一次取消隐藏该索引, 而不是重新创建一个被删除的索引
-
-
 

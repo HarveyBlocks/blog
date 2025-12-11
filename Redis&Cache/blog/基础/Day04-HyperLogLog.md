@@ -22,7 +22,7 @@
 
 ## 命令
 
-![image-20240131211252667](../../../Java/spring-data/assert/Day04-HyperLogLog/image-20240131211252667.png)
+![image-20240131211252667](../../../Java/spring-data/assets/Day04-HyperLogLog/image-20240131211252667.png)
 
 ### PfAdd
 
@@ -102,7 +102,7 @@ redis(pc2):0>pfCount logLogKey
     }
     ```
 
-    ![image-20240131213142661](../../../Java/spring-data/assert/Day04-HyperLogLog/image-20240131213142661.png)
+    ![image-20240131213142661](../../../Java/spring-data/assets/Day04-HyperLogLog/image-20240131213142661.png)
 
 -   初步判断为: 不擅长中文
 

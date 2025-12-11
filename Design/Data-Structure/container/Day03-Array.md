@@ -123,3 +123,4 @@ int minSubArrayLen(int target, int *nums, int numsSize) {
     return result == numsSize + 1 ? 0 : result;
 }
 ```
+

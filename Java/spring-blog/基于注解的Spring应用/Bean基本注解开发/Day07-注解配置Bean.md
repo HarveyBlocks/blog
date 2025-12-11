@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao {
 
 ### 属性注解
 
-![image-20231106161845099](../../../typora-user-images/Day07-注解开发/image-20231106161845099.png)
+![image-20231106161845099](../../../assets/Day07-注解开发/image-20231106161845099.png)
 
 #### @Scope
 
@@ -152,6 +152,4 @@ public DataSource dataSource(@Value("${jdbc.driverClassName}")
 ```
 
 -   不取名字,以方法名为名
-
-
 

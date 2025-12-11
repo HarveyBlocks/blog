@@ -2,5 +2,3 @@
 
 [聚合管道和分片集合](https://www.mongodb.com/zh-cn/docs/manual/core/aggregation-pipeline-sharded-collections/)
 
-
-

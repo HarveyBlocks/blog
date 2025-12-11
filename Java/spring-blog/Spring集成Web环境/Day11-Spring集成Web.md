@@ -124,7 +124,7 @@
 
 -   使用Spring提供的工具类替代自己的工具类
 
-![image-20231120161343863](../../typora-user-images/Day11-Spring集成Web/image-20231120161343863.png)
+![image-20231120161343863](../../assets/Day11-Spring集成Web/image-20231120161343863.png)
 
 
 
@@ -132,4 +132,5 @@
 
 
 
-![image-20231120161516227](../../typora-user-images/Day11-Spring集成Web/image-20231120161516227.png)
+![image-20231120161516227](../../assets/Day11-Spring集成Web/image-20231120161516227.png)
+

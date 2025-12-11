@@ -35,7 +35,7 @@
 
 2.  根据服务器配置计算最大堆内存
 
-    ![image-20240527190030076](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527190030076.png)
+    ![image-20240527190030076](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527190030076.png)
 
     堆, 即可配置的部分, 是年轻代+老年区
 
@@ -158,7 +158,7 @@ JDK8下的默认组合, 注重并发量, 不适合高并发, 响应时间长
 
 如果在并发清理的过程中出现老年代的空间不足里放入新的对象, 会产生并发模式失败
 
-![image-20240527203400084](../asset/Day11-GC%E8%B0%83%E4%BC%98/image-20240527203400084.png)
+![image-20240527203400084](../assets/Day11-GC%E8%B0%83%E4%BC%98/image-20240527203400084.png)
 
 其下场, 是JVM使用Serial Old单线程进行FullGC对老年代的回收, 会出现长时间的停顿
 
@@ -177,3 +177,4 @@ JDK8中默认-1, 默认值的计算方式如下:
 $$
 CMSInitiatingOccupancyFraction = 100-MinHeapFreeRadio+CMSTringgerRatio*\frac{MinHeapFreeRatio}{100}
 $$
+

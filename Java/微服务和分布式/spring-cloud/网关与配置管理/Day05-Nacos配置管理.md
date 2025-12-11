@@ -28,7 +28,7 @@
 
 说淘宝垃圾,不必要的功能一推, 说Nacos牛逼, 喜欢的功能一应俱全
 
-![image-20240111141038973](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111141038973.png)
+![image-20240111141038973](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111141038973.png)
 
 ### 配置共享
 
@@ -59,7 +59,7 @@ ${hm.db.name}
 ${hm.db.host:centos}:${hm.db.port:3306} # 设定默认值3306
 ```
 
-![image-20240111141937018](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111141937018.png)
+![image-20240111141937018](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111141937018.png)
 
 ##### jdbc-mybatis.yml
 
@@ -253,7 +253,7 @@ private void checkCartsFull(Long userId) {
 
 nacos
 
-![image-20240111160727083](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111160727083.png)
+![image-20240111160727083](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240111160727083.png)
 
 ### 动态路由
 
@@ -315,7 +315,7 @@ spring:
 
 
 
-![image-20240116120559235](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116120559235.png)
+![image-20240116120559235](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116120559235.png)
 
 
 
@@ -522,10 +522,11 @@ public class DybanucRouteLoaderListener {
 
 
 
-![image-20240116123628643](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116123628643.png)
+![image-20240116123628643](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116123628643.png)
 
 
 
 访问[localhost:8080/search/list](http://localhost:8080/search/list?pageNo=1&pageSize=1)
 
-![image-20240116124502212](../../assert/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116124502212.png)
+![image-20240116124502212](../../assets/Day05-Nacos%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/image-20240116124502212.png)
+

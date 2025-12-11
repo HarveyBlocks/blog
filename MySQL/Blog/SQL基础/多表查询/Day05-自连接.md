@@ -36,5 +36,3 @@ select 字段列表 from 表 别名1 JOIN 表 别名2 ON条件
              left join employee b on a.manager_ID = b.employee_id;
     ```
 
-    
-

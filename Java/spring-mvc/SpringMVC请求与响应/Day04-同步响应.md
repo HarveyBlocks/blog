@@ -15,7 +15,7 @@
 
 ## 传统的同步响应
 
-![image-20231128205640812](../../typora-user-images/Untitled/image-20231128205640812.png)
+![image-20231128205640812](../../assets/Untitled/image-20231128205640812.png)
 
 -   请求资源转发
 
@@ -39,7 +39,7 @@
 
     地址变了
 
-    ![image-20231128205746031](../../typora-user-images/Untitled/image-20231128205746031.png)
+    ![image-20231128205746031](../../assets/Untitled/image-20231128205746031.png)
 
 
 
@@ -182,5 +182,5 @@ public class MyResponse{
 
 ### 康康源码
 
-![image-20231128235627206](../../typora-user-images/Day04-同步响应/image-20231128235627206.png)
+![image-20231128235627206](../../assets/Day04-同步响应/image-20231128235627206.png)
 

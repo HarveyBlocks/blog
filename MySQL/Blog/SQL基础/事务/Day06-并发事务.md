@@ -4,7 +4,7 @@
 
 ## 并发事务问题
 
-![image-20231009155620510](../../../Screenshots/Day06/image-20231009155620510.png)
+![image-20231009155620510](../../../assets/Day06/image-20231009155620510.png)
 
 -   脏读
     -   对数据库产生更改的事务还**未提交**,就被另一个事务录取到了更改后的数据
@@ -17,7 +17,7 @@
 
 
 
-![image-20231009161629487](../../../Screenshots/Day06/image-20231009161629487.png)
+![image-20231009161629487](../../../assets/Day06/image-20231009161629487.png)
 
 -   默认是指MySQL的默认
 -   **数据的安全性越高,性能就越差**
@@ -45,4 +45,4 @@ SET [SESSION|GLOBAL] TRANSACTION ISOLATIOn LEVEL 事务隔离级别
     -   缺省 仅对下一个事务生效. 
         -   下一个事务提交后，会恢复为session的事务级别
         -   该语句在事务中是不允许的。(必须写在commit后begin/START Transaction 前)
-          
+

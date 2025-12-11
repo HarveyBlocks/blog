@@ -6,7 +6,7 @@
 
 1.   Hierarchy-> ＋->UI->Canvas 创建画布
 
-     ![image-20241026135819895](../../assets/Day05-UGUI/image-20241026135819895.png)
+     ![image-20241026135819895](../../assetss/Day05-UGUI/image-20241026135819895.png)
 
      自动创建EventSystem
 
@@ -60,13 +60,13 @@
 
 5.   Screen Math Mode按比例优先排列模式, 同时符合高度或宽度/完全拉伸/缩小, 选择Match Width Or Height 不变
 
-     ![image-20241026144547019](../../assets/Day05-UGUI/image-20241026144547019.png)
+     ![image-20241026144547019](../../assetss/Day05-UGUI/image-20241026144547019.png)
 
      调整宽高优先级, 0表示宽度不变拉高度, 1表示高度不变拉宽度, 设置成0.5
 
 6.   Reference Pixels Per Unit, 和素材的像素比一样, 本项目中是16
 
-     ![image-20241026144804655](../../assets/Day05-UGUI/image-20241026144804655.png)
+     ![image-20241026144804655](../../assetss/Day05-UGUI/image-20241026144804655.png)
 
 ### 使用
 
@@ -130,11 +130,11 @@
 
 6.   将Image重命名为BloodEmpty, 再复制BloodEmpty对象, 将源换成绿色血条素材
 
-     ![image-20241026152735243](../../assets/Day05-UGUI/image-20241026152735243.png)
+     ![image-20241026152735243](../../assetss/Day05-UGUI/image-20241026152735243.png)
 
      绿血条完全覆盖空血条
 
-     ![image-20241026152913107](../../assets/Day05-UGUI/image-20241026152913107.png)
+     ![image-20241026152913107](../../assetss/Day05-UGUI/image-20241026152913107.png)
 
      交换对象位置, 下面的覆盖上面的
 
@@ -152,11 +152,11 @@
 
      <img src="../../assets/Day05-UGUI/image-20241026153503732.png" alt="image-20241026153503732" style="zoom:50%;" />
 
-     ![image-20241026153514710](../../assets/Day05-UGUI/image-20241026153514710.png)
+     ![image-20241026153514710](../../assetss/Day05-UGUI/image-20241026153514710.png)
 
 8.   渐变效果, 扣血了, 绿色快速移动, 红色缓慢移动
 
-     ![image-20241026154428127](../../assets/Day05-UGUI/image-20241026154428127.png)
+     ![image-20241026154428127](../../assetss/Day05-UGUI/image-20241026154428127.png)
 
 9.   将几个血条移到一个父类下, 方便一起移动
 
@@ -394,3 +394,4 @@ private void HealthChange() {
       ```
 
       <img src="../../assets/Day05-UGUI/image-20241027223044453.png" alt="image-20241027223044453" style="zoom:67%;" />
+

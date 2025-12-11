@@ -63,7 +63,7 @@ ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用�
 
 打印ByteBuf.toString()
 
-![image-20240226213726346](../../assets/Day06-ByteBuf/image-20240226213726346.png)
+![image-20240226213726346](../../assetss/Day06-ByteBuf/image-20240226213726346.png)
 
 #### 开启池化功能
 
@@ -78,7 +78,7 @@ ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用�
 
 
 
-![0010.png](../../assets/Day06-ByteBuf/0010.png)
+![0010.png](../../assetss/Day06-ByteBuf/0010.png)
 
 -   max capacity: 默认: 2^31^
 -   capacity
@@ -120,7 +120,7 @@ log.debug("{}",buf);
 log.debug("{}",buf.writeBytes("12345".repeat(100).getBytes()));
 ```
 
-![image-20240226212545701](../../assets/Day06-ByteBuf/image-20240226212545701.png)
+![image-20240226212545701](../../assetss/Day06-ByteBuf/image-20240226212545701.png)
 
 #### 扩容规则
 
@@ -282,3 +282,4 @@ channel.writeInbound(buf);
 提供了非池化ByteBuf的创建 , 组合, 复制等操作
 
 `wrappedByteBuf`使用浅拷贝(底层使用CompositeByteBuf), 将ByteBuf或数组包装成新的ByteBuf
+

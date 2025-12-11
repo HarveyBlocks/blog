@@ -12,7 +12,7 @@ public void readFile (String file) throws IOExpection{
 
 
 
-![image-20230807142807201](../../typora-user-images/Day09/image-20230807142807201.png)
+![image-20230807142807201](../../assets/Day09/image-20230807142807201.png)
 
 
 
@@ -23,7 +23,7 @@ public void readFile (String file) throws IOExpection{
 对象名.方法名;
 ```
 
-![image-20230807143459592](../../typora-user-images/Day09/image-20230807143459592.png)
+![image-20230807143459592](../../assets/Day09/image-20230807143459592.png)
 
 
 
@@ -79,7 +79,7 @@ static方法中不能有this调用属性,实例方法中可以
 
 
 
-![image-20230901001456683](../../typora-user-images/Day09/image-20230901001456683.png)
+![image-20230901001456683](../../assets/Day09/image-20230901001456683.png)
 
 
 
@@ -103,8 +103,4 @@ static 方法属于类，非静态方法属于实例
 | static a()     | / | 能 | 能 | 能 |
 | ~~static~~ b()   | 否 | 否         | 否 | / |
 |static b() | 能 | 能 | / | 能 |
-
-
-
-
 

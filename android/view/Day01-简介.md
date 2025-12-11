@@ -4,13 +4,13 @@
 
 此乃平板
 
-![image-20250915215654786](../assets/Day01-简介/image-20250915215654786.png)
+![image-20250915215654786](../assetss/Day01-简介/image-20250915215654786.png)
 
 ## Android 系统
 
 ### 架构
 
-![Android 架构](../assets/Day01-简介/android_architecture.jpg)
+![Android 架构](../assetss/Day01-简介/android_architecture.jpg)
 
 
 
@@ -77,7 +77,7 @@
 
 
 
-![image-20250915215801511](../assets/Day01-简介/image-20250915215801511.png)
+![image-20250915215801511](../assetss/Day01-简介/image-20250915215801511.png)
 
 
 
@@ -376,8 +376,9 @@ gradle构建脚本
 
 两个参数, tag, 和message, tag用于对日志进行一定分类
 
-![image-20250915220131673](../assets/Day01-简介/image-20250915220131673.png)
+![image-20250915220131673](../assetss/Day01-简介/image-20250915220131673.png)
 
 自定义日志样式
 
-![image-20250926140734485](../assets/Day01-简介/image-20250926140734485.png)
+![image-20250926140734485](../assetss/Day01-简介/image-20250926140734485.png)
+

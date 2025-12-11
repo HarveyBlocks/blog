@@ -39,7 +39,7 @@
 
 #### 配置
 
-![image-20231223110911172](../../typora-user-images/Day07-缓存/image-20231223110911172.png)
+![image-20231223110911172](../../assets/Day07-缓存/image-20231223110911172.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,3 +95,4 @@
 
 </ehcache>
 ```
+

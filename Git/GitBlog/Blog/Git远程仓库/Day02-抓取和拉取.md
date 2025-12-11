@@ -24,3 +24,4 @@ git pull [remote name] [branch name]
   - 解决经验:在push之前先pull以下解决merge问题
 
 - fetch之后不影响执行pull
+

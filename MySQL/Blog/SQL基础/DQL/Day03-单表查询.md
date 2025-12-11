@@ -1,6 +1,6 @@
 # 单表查询(select)
 
-![image-20231028142923462](../../shoot/Day03-单表查询/image-20231028142923462.png)
+![image-20231028142923462](../../assets/Day03-单表查询/image-20231028142923462.png)
 
 ```mysql
 /*-------------基本查询-------------*/
@@ -49,7 +49,7 @@ SELECT * FROM 表名;
 select name,age,level,entrydate from employee ;
 ```
 
-![image-20231007133528469](../../../Screenshots/Day03/image-20231007133528469.png)
+![image-20231007133528469](../../../assets/Day03/image-20231007133528469.png)
 
 **返回的字段顺序是按照指定的顺序来的**
 
@@ -78,7 +78,7 @@ SELECT DISTINCT 列名1, 列名2... FROM 表名;
 -   对同属一列的重复内容去重
     -   例如:对性别列去重,就只会留下**性别列列名 **, **男** , **女**,**null**,顶多三行
 
-![image-20231006232229692](../../../Screenshots/Day03/image-20231006232229692.png)
+![image-20231006232229692](../../../assets/Day03/image-20231006232229692.png)
 
 ## 条件(where)查询条件/筛选
 
@@ -281,11 +281,11 @@ select name,gender,count(*) from employee group by gender;
 
 视频里写的:
 
-![image-20231006233731006](../../../Screenshots/Day03/image-20231006233731006.png)
+![image-20231006233731006](../../../assets/Day03/image-20231006233731006.png)
 
 我写的:
 
-![image-20231006233826666](../../../Screenshots/Day03/image-20231006233826666.png)
+![image-20231006233826666](../../../assets/Day03/image-20231006233826666.png)
 
 -   应该是版本问题
 
@@ -297,7 +297,7 @@ select gender from employee where age<30 group by gender ;
 
 
 
-![image-20231006231741758](../../../Screenshots/Day03/image-20231006231741758.png)
+![image-20231006231741758](../../../assets/Day03/image-20231006231741758.png)
 
 -   没啥意义,不如DISTINCT
 
@@ -316,7 +316,7 @@ select count(*) from employee;
 
 -   聚合函数的内容,此处用作对照
 
-![image-20231006195337973](../../../Screenshots/Day03/image-20231006195337973.png)
+![image-20231006195337973](../../../assets/Day03/image-20231006195337973.png)
 
 ```mysql
 select * , count(*) from employee;/*error*/
@@ -334,13 +334,13 @@ select count(*) from employee group by gender;
 
 
 
-![image-20231006195417783](../../../Screenshots/Day03/image-20231006195417783.png)
+![image-20231006195417783](../../../assets/Day03/image-20231006195417783.png)
 
 ```mysql
 select avg(age) from employee group by gender;
 ```
 
-![image-20231006230104732](../../../Screenshots/Day03/image-20231006230104732.png)
+![image-20231006230104732](../../../assets/Day03/image-20231006230104732.png)
 
 
 
@@ -348,7 +348,7 @@ select avg(age) from employee group by gender;
 select gender,avg(age) from employee group by gender;
 ```
 
-![image-20231006195919233](../../../Screenshots/Day03/image-20231006195919233.png)
+![image-20231006195919233](../../../assets/Day03/image-20231006195919233.png)
 
 
 
@@ -364,7 +364,7 @@ select age , count(gender) from employee group by gender/*error*/;
 select gender , count(gender) from employee group by gender;
 ```
 
-![image-20231006195549187](../../../Screenshots/Day03/image-20231006195549187.png)
+![image-20231006195549187](../../../assets/Day03/image-20231006195549187.png)
 
 
 
@@ -386,7 +386,7 @@ select
 ;
 ```
 
-![image-20231007133231463](../../../Screenshots/Day03/image-20231007133231463.png)
+![image-20231007133231463](../../../assets/Day03/image-20231007133231463.png)
 
 ## 排序查询
 
@@ -426,7 +426,7 @@ select * from employee order by name,age;
 
 ## 分页查询
 
-![image-20231007000426132](../../../Screenshots/Day03/image-20231007000426132.png)
+![image-20231007000426132](../../../assets/Day03/image-20231007000426132.png)
 
 -   可以用来拿"前五个"这种
 
@@ -452,7 +452,7 @@ select * from employee limit 1,1;
 select * from employee limit 2,2;
 ```
 
-![image-20231007005448251](../../../../../../../AppData/Roaming/Typora/typora-user-images/image-20231007005448251.png)
+![image-20231007005448251](../../../../../../../AppData/Roaming/Typora/assets/image-20231007005448251.png)
 
 -   看这个图想象一下
 
@@ -464,10 +464,4 @@ select * from employee
 	limit 2
 ;
 ```
-
-
-
-
-
-
 

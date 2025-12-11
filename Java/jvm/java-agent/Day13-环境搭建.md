@@ -84,7 +84,7 @@ Can-Set-Native-Method-Prefix: true
 
 ### 写了版本的下场
 
-![image-20240529225003388](../asset/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529225003388.png)
+![image-20240529225003388](../assets/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529225003388.png)
 
 很奇妙的是, 不会把自己的代码打包进去, 能把依赖的代码打包????
 
@@ -92,7 +92,7 @@ Can-Set-Native-Method-Prefix: true
 
 ### 不要写版本
 
-![image-20240529234514241](../asset/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529234514241.png)
+![image-20240529234514241](../assets/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529234514241.png)
 
 ## 启动
 
@@ -100,7 +100,7 @@ Can-Set-Native-Method-Prefix: true
  java -javaagent:.\target\test-agent-1.0-SNAPSHOT-jar-with-dependencies.jar -jar .\spring-demo\target\spring-demo-0.0.1-SNAPSHOT.jar
 ```
 
-![image-20240529231919307](../asset/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529231919307.png)
+![image-20240529231919307](../assets/Day13-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/image-20240529231919307.png)
 
 ## 获取进程列表
 
@@ -133,3 +133,4 @@ private static void execJps() throws IOException {
     }
 }
 ```
+

@@ -1,4 +1,4 @@
-![image-20231030001822732](../../typora-user-images/Day02-BeanFactory/image-20231030001822732.png)
+![image-20231030001822732](../../assets/Day02-BeanFactory/image-20231030001822732.png)
 
 1.    第三方->BeanFactory,导入Jar包或Maven坐标
 
@@ -151,3 +151,4 @@ TestLogger.LOGGER.info(""+userDao);
 拒绝new一个userDao
 
 为的就是IoC,用Factory帮我们做
+

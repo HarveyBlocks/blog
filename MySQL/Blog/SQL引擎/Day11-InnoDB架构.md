@@ -1,6 +1,6 @@
 # 硬盘架构(内存结构)
 
-![image-20231026212230651](../../shoot/Day11-InnoDB引擎架构/image-20231026212230651.png)
+![image-20231026212230651](../../assets/Day11-InnoDB引擎架构/image-20231026212230651.png)
 
 
 
@@ -106,7 +106,7 @@ show variables like '%flush_log%';
 
 # 磁盘架构
 
-![image-20231027141306924](../../shoot/Day11-InnoDB架构/image-20231027141306924.png)
+![image-20231027141306924](../../assets/Day11-InnoDB架构/image-20231027141306924.png)
 
 ## System TableSpace系统表空间
 
@@ -121,7 +121,7 @@ show variables like '%Innodb_Data_file_path%';
 -- ibdata1:12M:autoextend这个文件存放系统表空间
 ```
 
-![image-20231027142116847](../../shoot/Day11-InnoDB架构/image-20231027142116847.png)
+![image-20231027142116847](../../assets/Day11-InnoDB架构/image-20231027142116847.png)
 
 
 
@@ -162,7 +162,7 @@ show variables like '%innodb_file_per_table%';
 
     -   undo_002
 
-        ![image-20231027143637306](../../shoot/Day11-InnoDB架构/image-20231027143637306.png)
+        ![image-20231027143637306](../../assets/Day11-InnoDB架构/image-20231027143637306.png)
 
 -   默认大小16M
 
@@ -191,7 +191,7 @@ show variables like '%innodb_file_per_table%';
 -   当事务提交之后都会把所有修改的信息村早该日志文件
 -   用于出刷新脏话脏页到磁盘时,发生错误时候,进行数据恢复使用使用
 
-![image-20231027145143692](../../shoot/Day11-InnoDB架构/image-20231027145143692.png)
+![image-20231027145143692](../../assets/Day11-InnoDB架构/image-20231027145143692.png)
 
 -   以循环的方式从左日志文件
 
@@ -199,7 +199,7 @@ show variables like '%innodb_file_per_table%';
 
 -   连接新盘和磁盘
 
-![image-20231027145338971](../../shoot/Day11-InnoDB架构/image-20231027145338971.png)
+![image-20231027145338971](../../assets/Day11-InnoDB架构/image-20231027145338971.png)
 
 
 
@@ -207,7 +207,7 @@ show variables like '%innodb_file_per_table%';
 
 将InnoDB引擎的缓冲池里的数据**在合适的时机**刷新到硬盘
 
-![image-20231027145412824](../../shoot/Day11-InnoDB架构/image-20231027145412824.png)
+![image-20231027145412824](../../assets/Day11-InnoDB架构/image-20231027145412824.png)
 
 ## 四类后台线程
 
@@ -228,7 +228,7 @@ show variables like '%innodb_file_per_table%';
 
 -   IO Thread 主要负责IO请求的回调
 
-    ![image-20231027145922308](../../shoot/Day11-InnoDB架构/image-20231027145922308.png)
+    ![image-20231027145922308](../../assets/Day11-InnoDB架构/image-20231027145922308.png)
 
 -   查看InnoDB引擎的状态,借此看看IO Thread
 

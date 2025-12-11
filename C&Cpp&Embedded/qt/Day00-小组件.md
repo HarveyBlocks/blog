@@ -25,4 +25,5 @@ QMessageBox::StandardButton button = QMessageBox::information(
 qDebug()<<button; // QMessageBox::Ok
 ```
 
-![image-20240507160722150](../assets/Day00-%E5%B0%8F%E7%BB%84%E4%BB%B6/image-20240507160722150.png)
+![image-20240507160722150](../assetss/Day00-%E5%B0%8F%E7%BB%84%E4%BB%B6/image-20240507160722150.png)
+

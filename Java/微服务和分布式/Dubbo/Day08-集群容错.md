@@ -1,6 +1,6 @@
 # 集群容错
 
-![image-20240406221817459](../assert/Day08-%E9%9B%86%E7%BE%A4%E5%AE%B9%E9%94%99/image-20240406221817459.png)
+![image-20240406221817459](../assets/Day08-%E9%9B%86%E7%BE%A4%E5%AE%B9%E9%94%99/image-20240406221817459.png)
 
 ## failover(默认)
 
@@ -68,3 +68,4 @@ private HelloService helloService;
 emm, 一个服务有些方法需要Failback, 有些需要Failover咋办?
 
 在服务的提供方配置, 能生效吗?
+

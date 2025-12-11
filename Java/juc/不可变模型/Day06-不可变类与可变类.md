@@ -50,3 +50,4 @@ for (int i = 0; i < 1000; i++) {
 BigDecimal是不可变类, 为什么需要Atomic给BigDecimal保证线程安全
 
 因为Atomic给BigDecimal保证线程安全的时候, 需求为一读一写
+

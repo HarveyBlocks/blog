@@ -126,3 +126,4 @@ SET @@autocommit = 1;
             1.  异常:有两个年龄一样大的人
         2.  level升级成组长
     3.  其他组员的manage_id换成新组长的id
+

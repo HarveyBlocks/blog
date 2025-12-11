@@ -134,7 +134,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 
 
-![img](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/solution-1bdadb80e54074aa3088372c17f0244b.png)
+![img](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/solution-1bdadb80e54074aa3088372c17f0244b.png)
 
 
 
@@ -162,7 +162,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
     -   管理分支事务
     -   与TC交谈以注册分支事务和报告分支事务的状态
 
-![image-20240116163219427](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116163219427.png)
+![image-20240116163219427](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116163219427.png)
 
 ## Seata的使用
 
@@ -442,7 +442,7 @@ seata:
 
     2.2.2版本没有登录模仿(听不清)
 
-    ![image-20240116172633874](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116172633874.png)
+    ![image-20240116172633874](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116172633874.png)
     
     用户名`admin`密码`admin`登录网页控制台
 
@@ -553,7 +553,7 @@ seata:
 
 #### 测试运行
 
-![](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116222538583.png)
+![](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116222538583.png)
 
 成功地失败了
 
@@ -645,20 +645,12 @@ seata:
 ---
 
 
-![image-20240116231509942](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231509942.png)
+![image-20240116231509942](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231509942.png)
 
 ---
 
 
-![image-20240116231907335](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231907335.png)
-
-
-
----
-
-
-
-![image-20240116231355051](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231355051.png)
+![image-20240116231907335](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231907335.png)
 
 
 
@@ -666,7 +658,15 @@ seata:
 
 
 
-![image-20240116231345817](../../assert/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231345817.png)
+![image-20240116231355051](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231355051.png)
+
+
+
+---
+
+
+
+![image-20240116231345817](../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/image-20240116231345817.png)
 
 ==**成功地失败了**==
 
@@ -685,3 +685,4 @@ seata:
 Mybatis-plus在进行写操作的时候, 往往有一个condition, 利用好这个condition, 用condition作为标记来**人为判断**, 而不是让数据库直接上全局锁
 
 也可以使用where, 先排除一大部分的记录, 然后再进行操作
+

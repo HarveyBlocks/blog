@@ -1,6 +1,6 @@
 # 缓冲流
 
-![image-20231014150742916](../../typora-user-images/Day35/image-20231014150742916.png)
+![image-20231014150742916](../../assets/Day35/image-20231014150742916.png)
 
 -   包装流的构造里套原始流
 
@@ -8,13 +8,13 @@
 
 
 
-![image-20231014145430962](../../typora-user-images/Day35/image-20231014145430962.png)
+![image-20231014145430962](../../assets/Day35/image-20231014145430962.png)
 
 ### API
 
 
 
-![image-20231014145637992](../../typora-user-images/Day35/image-20231014145637992.png)
+![image-20231014145637992](../../assets/Day35/image-20231014145637992.png)
 
 
 
@@ -36,11 +36,11 @@ InputStream bufferedInputStream =
 
 
 
-![image-20231014151109479](../../typora-user-images/Day35/image-20231014151109479.png)
+![image-20231014151109479](../../assets/Day35/image-20231014151109479.png)
 
 
 
-![image-20231014152042510](../../typora-user-images/Day35/image-20231014152042510.png)
+![image-20231014152042510](../../assets/Day35/image-20231014152042510.png)
 
 -   用readLine()读csa之类的啊
 

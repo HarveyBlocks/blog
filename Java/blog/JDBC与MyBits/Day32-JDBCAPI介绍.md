@@ -48,7 +48,7 @@ Connect getConnection(String url,String username,String password)
 
 
 
-![image-20231009202026261](../../typora-user-images/Day32/image-20231009202026261.png)
+![image-20231009202026261](../../assets/Day32/image-20231009202026261.png)
 
 ## Connect 接口
 
@@ -371,7 +371,7 @@ class EmployeeField{
 
 2.  设置参数值
 
-    ![image-20231010195748753](../../typora-user-images/Day32/image-20231010195748753.png)
+    ![image-20231010195748753](../../assets/Day32/image-20231010195748753.png)
 
 3.  执行sql
 

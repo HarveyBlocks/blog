@@ -16,3 +16,4 @@ Zookeeper是一个树形目录, 其数据模型拥有一个层次化结构
 -   `Ephemeral` 临时节点 `-e`
 -   `Persistent_Sequential` 持久化序列(创建出来之后会加上编号)节点 `-s`
 -   `Ephemeral_Sequential` 临时顺序写点 `-es`
+

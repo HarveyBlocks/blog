@@ -55,3 +55,4 @@ public synchronized static void b() {
 synchronized保证了对象锁内部的区域的 **原子性**
 
 详见[管程](./Day02-管程.md)
+

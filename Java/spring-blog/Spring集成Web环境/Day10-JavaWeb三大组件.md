@@ -1,4 +1,4 @@
-![image-20231113165957123](../../typora-user-images/Day10-JavaWeb三大组件/image-20231113165957123.png)
+![image-20231113165957123](../../assets/Day10-JavaWeb三大组件/image-20231113165957123.png)
 
 
 
@@ -238,3 +238,4 @@ public void contextInitialized(ServletContextEvent sce) {
         response.getWriter().write("OK");
     }
     ```
+

@@ -1,6 +1,6 @@
 # wait-notify
 
-![image-20240907003307780](../assets/Day03-wait-notfy/image-20240907003307780.png)
+![image-20240907003307780](../assetss/Day03-wait-notfy/image-20240907003307780.png)
 
 在wait-notify中, Owner线程调用`wait()`, 将存入Monitor的`WaitSet`字段, 而后将临界区开放给EntryList中的其他线程
 
@@ -342,3 +342,4 @@ public abstract class AbstractNotifiedStandardPattern implements NotifiedStandar
     protected abstract void finishPreTask();
 }
 ```
+

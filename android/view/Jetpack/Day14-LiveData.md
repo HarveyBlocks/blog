@@ -191,3 +191,4 @@ private suspend fun getById(id: String): Person = coroutineScope {
 ```
 
 返回的`LiveData<Person>`可以进行switchMap, 进行一个对外透明的数据IO过程
+

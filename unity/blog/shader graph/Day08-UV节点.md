@@ -78,7 +78,7 @@ Step越大, 过度越平滑
 
 
 
-![image-20250929150459246](../../assets/Day08-UV节点/image-20250929150459246.png)
+![image-20250929150459246](../../assetss/Day08-UV节点/image-20250929150459246.png)
 
 去除Splite, 发现像素化的方式只和XY有关, 和ZW的Step的变化无关
 
@@ -96,5 +96,5 @@ Step越大, 过度越平滑
 
 Project-> 右键->Create->ShaderGraph->URP->
 
-![image-20250929143930213](../../assets/Day08-UV节点/image-20250929143930213.png)
+![image-20250929143930213](../../assetss/Day08-UV节点/image-20250929143930213.png)
 

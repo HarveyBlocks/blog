@@ -77,7 +77,7 @@ MyInterceptor0::afterCompletion
 
 ### 看看图解
 
-![image-20231129155637307](../../typora-user-images/Day05-执行顺序/image-20231129155637307.png)
+![image-20231129155637307](../../assets/Day05-执行顺序/image-20231129155637307.png)
 
 
 
@@ -85,13 +85,5 @@ MyInterceptor0::afterCompletion
 
 
 
- ![image-20231129200410668](../../typora-user-images/Day05-执行顺序/image-20231129200410668.png)
-
-
-
-
-
-
-
-
+ ![image-20231129200410668](../../assets/Day05-执行顺序/image-20231129200410668.png)
 

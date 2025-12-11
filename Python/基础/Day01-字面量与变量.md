@@ -6,7 +6,7 @@
 
 
 
-![image-20240302012543128](../assets/%E5%AD%97%E9%9D%A2%E9%87%8F/image-20240302012543128.png)
+![image-20240302012543128](../assetss/%E5%AD%97%E9%9D%A2%E9%87%8F/image-20240302012543128.png)
 
 ```python
 type() # 查看数据类型 
@@ -103,3 +103,4 @@ def my_fun(str_var:str,int_var:int) -> (int, str):
 ```
 
 声明了参数类型和返回值类型
+

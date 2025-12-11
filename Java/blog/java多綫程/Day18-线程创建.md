@@ -218,29 +218,3 @@ public class TestCallable implements Callable{
 
 保留问题Future<Boolean>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -32,12 +32,13 @@ Declare [continue|exit] Handler for 状态值1[,状态值2...] statement;
 
 [MySQL ERROR状态码](https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html) - ctrl + F 查找
 
-![image-20231025142016920](../../shoot/Day11-条件处理程序/image-20231025142016920.png)
+![image-20231025142016920](../../assets/Day11-条件处理程序/image-20231025142016920.png)
 
-![image-20231025142105898](../../shoot/Day11-条件处理程序/image-20231025142105898.png)
+![image-20231025142105898](../../assets/Day11-条件处理程序/image-20231025142105898.png)
 
 ```mysql
 declare exit handler for SQLSTATE '02000'
     close cur;-- '02000' 游标没有数据
 -- 这个存储过程中但凡出现 ' 02000 '这种异常,直接exit;mysql
 ```
+

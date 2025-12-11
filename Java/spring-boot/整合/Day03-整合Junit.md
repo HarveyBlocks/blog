@@ -47,10 +47,11 @@
     }
     ```
 
-    ![image-20231206134826211](../../typora-user-images/Untitled/image-20231206134826211.png)
+    ![image-20231206134826211](../../assets/Untitled/image-20231206134826211.png)
 
     这个Application.就是程序的入口
 
-    ![image-20231206134957688](../../typora-user-images/Untitled/image-20231206134957688.png)
+    ![image-20231206134957688](../../assets/Untitled/image-20231206134957688.png)
 
     测试类和入口在同一目录下,就不用写这个参数了
+

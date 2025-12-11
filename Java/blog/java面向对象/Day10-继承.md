@@ -8,17 +8,17 @@
 
 
 
-![image-20230808153845384](../../typora-user-images/Day09/image-20230808153845384.png)
+![image-20230808153845384](../../assets/Day09/image-20230808153845384.png)
 
 
 
 私有的是无法继承的
 
-![image-20230808154425415](../../typora-user-images/Day09/image-20230808154425415.png)
+![image-20230808154425415](../../assets/Day09/image-20230808154425415.png)
 
 当然不止是方法,属性也可以继承
 
-![image-20230808154758757](../../typora-user-images/Day09/image-20230808154758757.png)
+![image-20230808154758757](../../assets/Day09/image-20230808154758757.png)
 
 
 
@@ -125,7 +125,7 @@ Human
 
 执行构造器
 
-![image-20230808163452662](../../typora-user-images/Day09/image-20230808163452662.png)
+![image-20230808163452662](../../assets/Day09/image-20230808163452662.png)
 
 
 
@@ -147,7 +147,7 @@ public class Student extends Person{
 
 不在第一行还会报错
 
-![image-20230808163919804](../../typora-user-images/Day09/image-20230808163919804.png)
+![image-20230808163919804](../../assets/Day09/image-20230808163919804.png)
 
 由此，调用父类的构造器，必须在子类构造器的第一行
 
@@ -163,7 +163,7 @@ public class Student extends Person{
 
 
 
-![image-20230902184916077](../../typora-user-images/Day10/image-20230902184916077.png)
+![image-20230902184916077](../../assets/Day10/image-20230902184916077.png)
 
 
 
@@ -171,7 +171,7 @@ public class Student extends Person{
 
 
 
-![image-20230902185517310](../../typora-user-images/Day10/image-20230902185517310.png)
+![image-20230902185517310](../../assets/Day10/image-20230902185517310.png)
 
 
 
@@ -182,3 +182,4 @@ public class Student extends Person{
 **顺带一提，也可以用this()调用本构造器，但也要求处于第一行，** ***与前一条矛盾***  **，故不能同时调用this()和super()**
 
 **this()调用的子类方法里自动有添加一个隐藏的super(),所以this()要放最前,而又不能同时super()**
+

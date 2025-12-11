@@ -182,3 +182,4 @@ synchronized(lock){
 ## 原理
 
 [volatile](Day05-volatile.md)
+

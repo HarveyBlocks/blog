@@ -2,7 +2,7 @@
 
 
 
-![image-20231007164450281](../../../Screenshots/Day04/image-20231007164450281.png)
+![image-20231007164450281](../../../assets/Day04/image-20231007164450281.png)
 
 ## IF(value,t,f)
 
@@ -90,7 +90,7 @@ select
 from employee group by age_limits ;
 ```
 
-![image-20231007172554140](../../../Screenshots/Day04/image-20231007172554140.png)
+![image-20231007172554140](../../../assets/Day04/image-20231007172554140.png)
 
 -   很爽
 
@@ -117,7 +117,7 @@ from employee group by age_limits ;
 -   更爽了,但和之前讲的DQL执行顺序冲突
 -   **mysql可,sql不可**
 
-![image-20231007174155444](../../../Screenshots/Day04/image-20231007174155444.png)
+![image-20231007174155444](../../../assets/Day04/image-20231007174155444.png)
 
 ## case when then end
 

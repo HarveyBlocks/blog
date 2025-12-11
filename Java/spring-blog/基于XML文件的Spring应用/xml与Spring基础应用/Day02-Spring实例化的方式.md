@@ -274,11 +274,11 @@ public class MyBeanFactory implements FactoryBean<UserService> {
 
     
 
-![image-20231030163230085](../../../typora-user-images/Day02-Spring实例化的方式/image-20231030163230085.png)
+![image-20231030163230085](../../../assets/Day02-Spring实例化的方式/image-20231030163230085.png)
 
 -   啊?你怎么是MyBeanFactory捏?
 
-![image-20231030163544481](../../../typora-user-images/Day02-Spring实例化的方式/image-20231030163544481.png)
+![image-20231030163544481](../../../assets/Day02-Spring实例化的方式/image-20231030163544481.png)
 
 -   此乃真身😀
 
@@ -320,3 +320,4 @@ UserService无参构造
 延迟了调用
 
 好处在于可以把临时产生的Bean的需求先产生,对于Bean的具体产生放在后面
+

@@ -87,7 +87,7 @@ private static String toMillion(LocalDateTime time) {
 
 ### 脚本流程
 
-![image-20240126193708610](../../../assert/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240126193708610.png)
+![image-20240126193708610](../../../assets/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240126193708610.png)
 
 
 
@@ -345,7 +345,7 @@ public long saveOrderDb(VoucherOrder order) {
 
 ## Controller逻辑
 
-![image-20240126200614368](../../../assert/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240126200614368.png)
+![image-20240126200614368](../../../assets/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240126200614368.png)
 
 
 
@@ -389,7 +389,7 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId,
 
 ## 测试
 
-![image-20240127011420541](../../../assert/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240127011420541.png)
+![image-20240127011420541](../../../assets/Day08-%E7%A7%92%E6%9D%80%E4%BC%98%E5%8C%96/image-20240127011420541.png)
 
 36ms, 很快
 
@@ -398,3 +398,4 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId,
 -   阻塞队列的内存限制
 -   当服务宕机, 阻塞队列的数据丢失, 引发数据安全问题安全
 -   Redis和数据库没有形成一致的事务, 可能出现数据不一致的情况
+

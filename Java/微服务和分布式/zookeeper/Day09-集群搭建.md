@@ -216,3 +216,4 @@ Mode: leader
 -   Observer
     -   处理客户端非事物请求
     -   转发事物请求给Leader
+

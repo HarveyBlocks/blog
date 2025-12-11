@@ -83,7 +83,7 @@ bool RedBlackTree<T>::isRedBlackTree(BinaryTreeNode<T> *root) {
 
 可得
 
-![image-20240626154341310](../../assets/Untitled/image-20240626154341310.png)
+![image-20240626154341310](../../assetss/Untitled/image-20240626154341310.png)
 
 AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树, AVL为了达到严格的平衡, 插入和删除更加复杂
 
@@ -91,7 +91,7 @@ AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树,
 
 ## 哨兵Nil
 
-![image-20240628001742607](../../assets/Day05-Red-BlackTree/image-20240628001742607.png)
+![image-20240628001742607](../../assetss/Day05-Red-BlackTree/image-20240628001742607.png)
 
 所有叶子节点都指向哨兵, 根节点的父节点为哨兵节点(什么好处?)
 
@@ -449,3 +449,4 @@ void RedBlackTree<T>::paintingAndRotate(
 ## 树高
 
 红黑树仅凭借增删实现对一个树高字段的维护?Who To?
+

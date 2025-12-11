@@ -205,7 +205,7 @@ public static class FlagsEnumExample {
 
 发出警告
 
-![image-20240929195619817](../../assets/Day01-%E5%A4%9A%E6%80%81%E6%80%A7/image-20240929195619817.png)
+![image-20240929195619817](../../assetss/Day01-%E5%A4%9A%E6%80%81%E6%80%A7/image-20240929195619817.png)
 
 使用`new`或`override`指定本方法与其父类同名方法处于哪种关系, "重载"or"覆盖"
 
@@ -335,3 +335,4 @@ class Student : Person {
 ### 阻止重载
 
 用`sealed`修饰方法
+

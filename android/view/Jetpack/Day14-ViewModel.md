@@ -16,7 +16,7 @@ ViewModel的生命周期和Activity不同，它可以保证在手机屏幕发生
 
 
 
-![image-20250924214223206](../../assets/Day14-ViewModel/image-20250924214223206.png)
+![image-20250924214223206](../../assetss/Day14-ViewModel/image-20250924214223206.png)
 
 
 
@@ -100,11 +100,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 翻转屏幕也不会丢失点击的数据
 
-![image-20250925110925500](../../assets/Day14-ViewModel/image-20250925110925500.png)
+![image-20250925110925500](../../assetss/Day14-ViewModel/image-20250925110925500.png)
 
 翻转
 
-![image-20250925110913668](../../assets/Day14-ViewModel/image-20250925110913668.png)
+![image-20250925110913668](../../assetss/Day14-ViewModel/image-20250925110913668.png)
 
 ## 工厂
 
@@ -142,7 +142,7 @@ viewModel =
 
 Model-View-ViewModel 架构
 
-![image-20250927001537619](../../assets/Day14-ViewModel/image-20250927001537619.png)
+![image-20250927001537619](../../assetss/Day14-ViewModel/image-20250927001537619.png)
 
 
 
@@ -162,3 +162,4 @@ Model-View-ViewModel 架构
 10. 设计Fragment及其Layout
 11. 设计Activity及其Layout
 12. 返回4
+

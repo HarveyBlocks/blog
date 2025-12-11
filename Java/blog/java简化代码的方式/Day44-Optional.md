@@ -126,3 +126,4 @@ private static void testOrElse(Optional<School> schoolOpt, School originValue) {
 Supplier<School> supplier = () -> defaultValue;
 School school = schoolOpt.orElseGet(supplier);
 ```
+

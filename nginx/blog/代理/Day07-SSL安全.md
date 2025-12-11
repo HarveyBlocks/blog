@@ -139,7 +139,7 @@ ssl_prefer_server_ciphers  on;
 
 登录
 
-![image-20240423170332315](..\..\asset\Day07-SSL安全\image-20240423170332315.png)
+![image-20240423170332315](..\..\assets\Day07-SSL安全\image-20240423170332315.png)
 
 ### 控制台生成
 
@@ -180,7 +180,7 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 此方法自己生成的证书, 会有
 
-![image-20240423194944361](..\..\asset\Day07-SSL安全\image-20240423194944361.png)
+![image-20240423194944361](..\..\assets\Day07-SSL安全\image-20240423194944361.png)
 
 是因为证书没有第三方认证
 

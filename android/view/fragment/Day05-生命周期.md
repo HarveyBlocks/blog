@@ -113,19 +113,19 @@ class RightFragment : BaseFragment<FragmentRightBinding>(FragmentRightBinding::i
 
 第一次打开
 
-![image-20250915150700476](../../assets/Day05-生命周期/image-20250915150700476.png)
+![image-20250915150700476](../../assetss/Day05-生命周期/image-20250915150700476.png)
 
 加入BackStack的Fragment被replace
 
-![image-20250915150719020](../../assets/Day05-生命周期/image-20250915150719020.png)
+![image-20250915150719020](../../assetss/Day05-生命周期/image-20250915150719020.png)
 
 从BackStack中remove
 
-![image-20250915151334000](../../assets/Day05-生命周期/image-20250915151334000.png)
+![image-20250915151334000](../../assetss/Day05-生命周期/image-20250915151334000.png)
 
 恢复Fragment
 
-![image-20250915152927595](../../assets/Day05-生命周期/image-20250915152927595.png)
+![image-20250915152927595](../../assetss/Day05-生命周期/image-20250915152927595.png)
 
 ## 被回收
 

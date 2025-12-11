@@ -5,13 +5,13 @@
 
 ## 创建客户端,服务端
 
-![image-20231011194330097](../../../typora-user-images/Day33-基于UDP通信实现java网络编程/image-20231011194330097.png)
+![image-20231011194330097](../../../assets/Day33-基于UDP通信实现java网络编程/image-20231011194330097.png)
 
 -   要实现一发一收
 
 ## 创建数据包
 
-![image-20231011194344578](../../../typora-user-images/Day33-基于UDP通信实现java网络编程/image-20231011194344578.png)
+![image-20231011194344578](../../../assets/Day33-基于UDP通信实现java网络编程/image-20231011194344578.png)
 
 ## 实践
 
@@ -237,4 +237,5 @@ public class Client {
 -   **Shift + Alt + F10**打开**编辑配置窗口**
 -   设置**允许多个实例**
 
-![image-20231011210006281](../../../typora-user-images/Day33-基于UDP通信实现java网络编程/image-20231011210006281.png)
+![image-20231011210006281](../../../assets/Day33-基于UDP通信实现java网络编程/image-20231011210006281.png)
+

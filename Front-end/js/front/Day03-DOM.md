@@ -10,7 +10,7 @@ DOM 是 W3C 定义的一套标准
 
 ## 对象树
 
-![DOM HTML tree](../../assets/Day03-DOM/pic_htmltree.gif)
+![DOM HTML tree](../../assetss/Day03-DOM/pic_htmltree.gif)
 
 
 
@@ -54,7 +54,7 @@ for (let i = 0; i < paragraphElements.length; i++) {
 }
 ```
 
-![image-20250810001206336](../../assets/Day03-DOM/image-20250810001206336.png)
+![image-20250810001206336](../../assetss/Day03-DOM/image-20250810001206336.png)
 
 **深度优先**
 
@@ -106,11 +106,11 @@ console.log(paragraphElements.length === paragraphElements2.length); // true
 
 原来:
 
-![image-20250810003747644](../../assets/Day03-DOM/image-20250810003747644.png)
+![image-20250810003747644](../../assetss/Day03-DOM/image-20250810003747644.png)
 
 之后:
 
-![image-20250810003737329](../../assets/Day03-DOM/image-20250810003737329.png)
+![image-20250810003737329](../../assetss/Day03-DOM/image-20250810003737329.png)
 
 ### 添加和删除
 
@@ -235,7 +235,7 @@ element.removeEventListener("mousemove", action);
 -   每个 HTML 属性是属性节点
 -   所有注释是注释节点
 
-![DOM HTML tree](../../assets/Day03-DOM/pic_htmltree-17548146148672.gif)
+![DOM HTML tree](../../assetss/Day03-DOM/pic_htmltree-17548146148672.gif)
 
 ### 节点关系
 

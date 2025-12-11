@@ -30,3 +30,4 @@
 | `struct`    | `private`        | `public`  `internal`  `private`                              |
 
 -   具有 `private` 可访问性的 `interface` 成员必须具有默认的实现。
+

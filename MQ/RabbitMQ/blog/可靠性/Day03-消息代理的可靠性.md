@@ -17,13 +17,13 @@
 
 >   Spring默认
 
-![image-20240113151832936](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113151832936.png)
+![image-20240113151832936](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113151832936.png)
 
 ### 队列持久化
 
 >   Spring默认
 
-![image-20240113151904982](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113151904982.png)
+![image-20240113151904982](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113151904982.png)
 
 ### 消息持久化
 
@@ -33,11 +33,11 @@
 
     -   queue
 
-        ![image-20240113152330222](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113152330222.png)
+        ![image-20240113152330222](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113152330222.png)
 
     -   exchange
 
-        ![image-20240113152141125](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113152141125.png)
+        ![image-20240113152141125](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113152141125.png)
 
     
 
@@ -86,7 +86,7 @@ void testPageOut() throws InterruptedException {
 }
 ```
 
-![image-20240113175421939](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113175421939.png)
+![image-20240113175421939](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113175421939.png)
 
 ```java
 @Test
@@ -103,7 +103,7 @@ void testPageOut() throws InterruptedException {
 }
 ```
 
-![image-20240113175551169](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113175551169.png)
+![image-20240113175551169](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113175551169.png)
 
 
 
@@ -128,7 +128,7 @@ void testPageOut() throws InterruptedException {
 
 #### 指定
 
-![image-20240113163404482](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113163404482.png)
+![image-20240113163404482](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113163404482.png)
 
 ```java
 @Bean
@@ -154,8 +154,9 @@ public void lazyQueue(String msg) {
 }
 ```
 
-![image-20240113164315620](../../assert/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113164315620.png)
+![image-20240113164315620](../../assets/Day03-%E6%B6%88%E6%81%AF%E4%BB%A3%E7%90%86%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113164315620.png)
 
 不经过memory直接写硬盘
 
 lazyque性能更好
+

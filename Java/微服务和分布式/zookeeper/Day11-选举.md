@@ -55,5 +55,3 @@ Leader崩溃
 
 Follower全部变Looking, 重新选举
 
-
-

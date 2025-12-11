@@ -255,3 +255,4 @@ identity = reverse; // OK
 let a: any = "x";
 let b: number = a;
 ```
+

@@ -62,3 +62,4 @@ public class Demo01 {
     list2.add(2);//.ClassCastException
     list2.remove(13);//.ClassCastException
 ```
+

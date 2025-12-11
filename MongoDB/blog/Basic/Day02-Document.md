@@ -59,5 +59,3 @@ string类型
   - `_id`可以是任意类型, 数组、正则表达式或undefined除外
   - 如果是应用程序生成的UUID作为ID, 建议使用BinData进行存储
 
-
-

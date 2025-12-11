@@ -47,5 +47,3 @@ p {color:blue;}
 
 （内联样式）Inline style > （内部样式）Internal style sheet >（外部样式）External style sheet > 浏览器默认样式
 
-
-

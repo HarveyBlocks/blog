@@ -11,13 +11,13 @@ void testRabbitTemplate() {
 }
 ```
 
-![image-20240112224116222](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112224116222.png)
+![image-20240112224116222](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112224116222.png)
 
 使用了JDK的序列化方式(Redis: 这该死的熟悉感)
 
 ## 消息序列化
 
-![image-20240112225409617](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112225409617.png)
+![image-20240112225409617](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112225409617.png)
 
 
 
@@ -32,7 +32,7 @@ protected Message convertMessageIfNecessary(final Object object) {
 
 -   默认选择的消息转换器
 
-![image-20240112225605070](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112225605070.png)
+![image-20240112225605070](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112225605070.png)
 
 ```java
 protected Message createMessage(Object object, MessageProperties messageProperties) throws MessageConversionException {
@@ -71,11 +71,11 @@ protected Message createMessage(Object object, MessageProperties messageProperti
 
 原罪
 
-![image-20240112230435325](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112230435325.png)
+![image-20240112230435325](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112230435325.png)
 
 说起来`createMessage`是
 
-![image-20240112230521401](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112230521401.png)
+![image-20240112230521401](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112230521401.png)
 
 所以seialize(Object)使用了ObjectOutputStream(见Redis)
 
@@ -112,9 +112,9 @@ public MessageConverter jackson2JsonMessageConverter(){
 
 #### 发送测试
 
-![image-20240112232458686](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112232458686.png)
+![image-20240112232458686](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240112232458686.png)
 
 #### 接收测试
 
-![image-20240113124301003](../../assert/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240113124301003.png)
+![image-20240113124301003](../../assets/Day02-%E6%B6%88%E6%81%AF%E8%BD%AC%E6%8D%A2%E5%99%A8/image-20240113124301003.png)
 

@@ -8,7 +8,7 @@
 
 ### 同步调用
 
-![image-20231229214114839](../typora-user-images/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20231229214114839.png)
+![image-20231229214114839](../assets/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20231229214114839.png)
 
 #### 流程
 
@@ -27,7 +27,7 @@
 
 ### 异步通知
 
-![image-20240114160733141](../../../java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F/assert/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20240114160733141.png)
+![image-20240114160733141](../../../java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F/assets/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20240114160733141.png)
 
 解除业务的耦合
 
@@ -41,7 +41,7 @@ MySQL的用于主从同步的Binlog, 每当MySQL做增删改时,都会改变Binl
 
 利用canal中间件监听Binlog, 发送消息给微服务
 
-![image-20240114161124813](../../../Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F/assert/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20240114161124813.png)
+![image-20240114161124813](../../../Java/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F/assets/Day05-%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/image-20240114161124813.png)
 
 完全解除了服务间的耦合
 
@@ -194,6 +194,4 @@ rabbitTemplate.convertAndSend(
     // 3.发送请求
     restHighLevelClient.index(request, RequestOptions.DEFAULT);
     ```
-
-    
 

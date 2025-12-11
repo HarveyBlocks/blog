@@ -212,5 +212,3 @@ SahpeAbstraction --> ColorImplement
 
 X抽象的范围越广, X的含义越广, 可拓展的子类越多, 对A的侵入越少, 同时, X的定义就越不清晰, A在一开始的设计就越难
 
-
-

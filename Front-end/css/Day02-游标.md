@@ -62,3 +62,4 @@
 <p style="border: solid;width: 200px;padding:5px;text-align:center;cursor:text">text</p>
 <p style="border: solid;width: 200px;padding:5px;text-align:center;cursor:w-resize">w-resize</p>
 <p style="border: solid;width: 200px;padding:5px;text-align:center;cursor:wait">wait</p>
+

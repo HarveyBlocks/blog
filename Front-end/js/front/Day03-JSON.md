@@ -14,3 +14,4 @@ let jsonString = JSON.stringify(obj);
 
 -   obj中有日期的, 应当转为(服务器约定)字符串 or timestamp
 -   stringify 会删除函数成员
+

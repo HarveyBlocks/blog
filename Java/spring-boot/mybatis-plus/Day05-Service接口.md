@@ -1,6 +1,6 @@
 # IService接口
 
-![image-20231208194028601](../../typora-user-images/Day05-Service接口/image-20231208194028601.png)
+![image-20231208194028601](../../assets/Day05-Service接口/image-20231208194028601.png)
 
 -   截一张api
 
@@ -20,7 +20,7 @@
 
 ## 继承IService
 
-![image-20231208195349766](../../typora-user-images/Day05-Service接口/image-20231208195349766.png)
+![image-20231208195349766](../../assets/Day05-Service接口/image-20231208195349766.png)
 
 ```java
 public interface UserService extends IService<User> {
@@ -63,7 +63,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User>
 
     -   page()
 
-        ![image-20231209132459619](../../typora-user-images/Day05-Service接口/image-20231209132459619.png)
+        ![image-20231209132459619](../../assets/Day05-Service接口/image-20231209132459619.png)
 
         ```java
         @Override
@@ -133,7 +133,7 @@ for(int i = 0;i<100;i++){
 
 ### 法三:批量插入values
 
-![image-20231209130551375](../../typora-user-images/Day05-Service接口/image-20231209130551375.png)
+![image-20231209130551375](../../assets/Day05-Service接口/image-20231209130551375.png)
 
 把原来的一千条分开了的SQL语句拼成一条
 

@@ -6,7 +6,7 @@ select 1.5;
 
 -   尊滴流批
 
-![image-20231007155701876](../../../Screenshots/Day04/image-20231007155701876.png)
+![image-20231007155701876](../../../assets/Day04/image-20231007155701876.png)
 
 ```mysql
 select floor(-1.2);         -- -2
@@ -28,3 +28,4 @@ x%y+int(x/y)*y=x
 
 select lpad(floor(rand()*10000),4,0); -- 四位验证码
 ```
+

@@ -443,3 +443,4 @@ class MyClass(val external: @WriteWith<ExternalClassParceler>() ExternalClass) :
 ### @IgnoredOnParcel
 
 可以跳过序列化
+

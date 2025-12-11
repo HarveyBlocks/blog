@@ -318,5 +318,3 @@ db.<collection>.deleteMany( <QueryFilter> )
 db.<collection>.deleteMany({ })
 ```
 
-
-

@@ -102,7 +102,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 样式如下
 
-![image-20250922162524115](../../assets/Day12-Toolbar/image-20250922162524115.png)
+![image-20250922162524115](../../assetss/Day12-Toolbar/image-20250922162524115.png)
 
 ## label
 
@@ -197,8 +197,9 @@ class MainActivity : AppCompatActivity() {
 
 显示效果
 
-![image-20250922165114031](../../assets/Day12-Toolbar/image-20250922165114031.png)
+![image-20250922165114031](../../assetss/Day12-Toolbar/image-20250922165114031.png)
 
 有一个item被隐藏了
 
-![image-20250922165255220](../../assets/Day12-Toolbar/image-20250922165255220.png)
+![image-20250922165255220](../../assetss/Day12-Toolbar/image-20250922165255220.png)
+

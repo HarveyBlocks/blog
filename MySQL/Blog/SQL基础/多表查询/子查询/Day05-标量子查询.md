@@ -2,7 +2,7 @@
 
 
 
-![image-20231008164546829](../../../../Screenshots/Day05/image-20231008164546829.png)
+![image-20231008164546829](../../../../assets/Day05/image-20231008164546829.png)
 
 
 
@@ -48,7 +48,7 @@ where section_ID = (select id
 
     -   错解:
 
-        ![image-20231008170854608](../../../../Screenshots/Day05/image-20231008170854608.png)
+        ![image-20231008170854608](../../../../assets/Day05/image-20231008170854608.png)
 
         
 
@@ -72,7 +72,7 @@ where section_ID = (select section_ID
     4.  查询**入职日期**之前的**开发部成员**的信息
 
     -   错误:
-    -   ![image-20231008171825743](../../../../Screenshots/Day05/image-20231008171825743.png)
+    -   ![image-20231008171825743](../../../../assets/Day05/image-20231008171825743.png)
     -   正确:
 
 ```mysql

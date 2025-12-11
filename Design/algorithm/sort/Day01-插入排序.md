@@ -2,7 +2,7 @@
 
 >   Insertion Sort
 
-![image-20240617183323122](../../assets/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240617183323122.png)
+![image-20240617183323122](../../assetss/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240617183323122.png)
 
 
 
@@ -10,11 +10,11 @@
 
 想要升序, 遍历到当前元素, 检查这个元素前面的元素, 如果比当前元素大, 就将当前元素和前面的元素互换
 
-![image-20240617144204834](../../assets/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240617144204834.png)
+![image-20240617144204834](../../assetss/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/image-20240617144204834.png)
 
 ## 流程
 
- ![img](../../assets/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/insertionSort.gif)
+ ![img](../../assetss/Day01-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/insertionSort.gif)
 
 ## 实现
 
@@ -162,3 +162,4 @@ void ShellSort<T>::sort0(int start, int direct) {
 ### 缺陷
 
 每次, d都是前一个d的因子(n分之一), 如果前一次d子序列是有序的, 可能就做无用功
+

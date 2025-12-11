@@ -1,6 +1,6 @@
 
 
-![image-20231008013839662](../../../Screenshots/Day04/image-20231008013839662.png)
+![image-20231008013839662](../../../assets/Day04/image-20231008013839662.png)
 
 # 多表关系
 
@@ -26,7 +26,7 @@ where s.id = sc.student_id && sc.course_id = c.id;
 
     
 
-![image-20231009012449793](../../../Screenshots/Day05/image-20231009012449793.png)
+![image-20231009012449793](../../../assets/Day05/image-20231009012449793.png)
 
 ## 一对一
 

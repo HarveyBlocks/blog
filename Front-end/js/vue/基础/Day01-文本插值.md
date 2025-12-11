@@ -43,10 +43,11 @@ const text = ref("{{raw html}} 以及 <span style='color: red'>文本</span>");
 
 ```
 
-![image-20250813224944596](../../../assets/Day01-文本插值/image-20250813224944596.png)
+![image-20250813224944596](../../../assetss/Day01-文本插值/image-20250813224944596.png)
 
 但是, 使用`v-html`属性, 其内部就不能再使用组合模板了
 
 ==不建议设用动态的HTML==
 
 因为
+

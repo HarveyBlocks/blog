@@ -6,7 +6,7 @@
 
 ## 实现流程
 
-![image-20240120151734806](../../../assert/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120151734806.png)
+![image-20240120151734806](../../../assets/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120151734806.png)
 
 ## 实现代码
 
@@ -39,13 +39,13 @@ private boolean voucherUserExit(Long userId, Long voucherId) {
 
 ### 测试
 
-![image-20240120153128019](../../../assert/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120153128019.png)
+![image-20240120153128019](../../../assets/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120153128019.png)
 
 ## 存在问题
 
 使用JMETER高并发地查
 
-![image-20240120153601176](../../../assert/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120153601176.png)
+![image-20240120153601176](../../../assets/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120153601176.png)
 
 高并发, 导致连续几次`insert`的操作进行时, order记录还是不存在的
 
@@ -98,7 +98,7 @@ synchronized (userId){
 
 只用`userId.toString()`是不够的:
 
-![image-20240120155456729](../../../assert/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120155456729.png)
+![image-20240120155456729](../../../assets/Day07-%E4%B8%80%E4%BA%BA%E4%B8%80%E5%8D%95/image-20240120155456729.png)
 
 它使用了new这种方法创建新的字符串对象
 

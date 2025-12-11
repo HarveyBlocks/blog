@@ -313,5 +313,3 @@ public class ArrayList<E> extends AbstractList<E>
 }
 ```
 
-
-

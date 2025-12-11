@@ -51,3 +51,4 @@ htpasswd -v /usr/local/nginx/conf/htpasswd username # 验证用户名和密码�
 然后用户量大了之后效率不能保证? 
 
 说不定适合面向企业内部员工或管理员
+

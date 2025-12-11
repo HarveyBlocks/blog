@@ -4,7 +4,7 @@
 
 将管道符左边的命令作为右边命令的输入
 
-![image-20230929224740504](../shoot/Day03/image-20230929224740504.png)
+![image-20230929224740504](../assets/Day03/image-20230929224740504.png)
 
 ## 应用实例
 
@@ -16,7 +16,7 @@ ls -l /usr/bin
 
 
 
-![image-20230929230033365](../shoot/Day03/image-20230929230033365.png)
+![image-20230929230033365](../assets/Day03/image-20230929230033365.png)
 
 肥肠的不直观
 
@@ -26,7 +26,7 @@ ls -l /usr/bin
 ls -l /usr/bin | grep "gtf" 
 ```
 
-![image-20230929230138654](../shoot/Day03/image-20230929230138654.png)
+![image-20230929230138654](../assets/Day03/image-20230929230138654.png)
 
 
 
@@ -38,7 +38,7 @@ ls -l /usr/bin | wc -l
 
 
 
-![image-20230929230319801](../shoot/Day03/image-20230929230319801.png)
+![image-20230929230319801](../assets/Day03/image-20230929230319801.png)
 
 所以:**懒惰使人进步**
 
@@ -49,6 +49,4 @@ cat ./text.tst | grep "know" | grep -n "death"
 cat ./text.tst | grep "know" | wc -w
 ls -l / | grep "game" | wc -l
 ```
-
-
 

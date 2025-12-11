@@ -61,3 +61,4 @@ BaseException
     -   `StopIteration` 是迭代器对象遍历结束时引发的异常。当一个迭代器没有更多的元素可以返回时，会引发 `StopIteration` 异常。
     -   `AssertionError` 当 `assert` 语句失败时引发的异常。`assert` 语句用于测试程序的断言，并且如果断言为假，则会引发 `AssertionError` 异常。
     -   `AttributeError` 当尝试访问不存在的属性或方法时引发的异常。通常用于指示对象没有特定的属性或方法。
+

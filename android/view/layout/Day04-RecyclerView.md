@@ -158,7 +158,7 @@ layoutManager.orientation = LinearLayoutManager.HORIZONTAL
 binding.recyclerView.layoutManager = layoutManager
 ```
 
-![image-20250914200225299](../../assets/Day04-RecyclerView/image-20250914200225299.png)
+![image-20250914200225299](../../assetss/Day04-RecyclerView/image-20250914200225299.png)
 
 横向布局后, 如果还保留原先的一个item占据一行, 就会很丑, 故重新设计item的布局
 
@@ -192,7 +192,7 @@ binding.recyclerView.layoutManager = layoutManager
 - 改 layout_marginEnd 和 layout_marginStart 为固定大小, item之间保持一定间距
 - 改 layout_gravity 为水平
 
-![image-20250914201145257](../../assets/Day04-RecyclerView/image-20250914201145257.png)
+![image-20250914201145257](../../assetss/Day04-RecyclerView/image-20250914201145257.png)
 
 ### 网格布局
 
@@ -339,7 +339,7 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 例如对话框气泡
 
-![message_left_original](../../assets/Day04-RecyclerView/message_left_original.png)
+![message_left_original](../../assetss/Day04-RecyclerView/message_left_original.png)
 
 #### 制作
 
@@ -395,7 +395,7 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
     </LinearLayout>
 ```
 
-![image-20250914211241873](../../assets/Day04-RecyclerView/image-20250914211241873.png)
+![image-20250914211241873](../../assetss/Day04-RecyclerView/image-20250914211241873.png)
 
 ### RecyclerView不同的ViewHolder类型创建不同的页面
 
@@ -444,3 +444,4 @@ binding.send.setOnClickListener{
     binding.inputText.setText("") // 清空输入框中的内容 
 }
 ```
+

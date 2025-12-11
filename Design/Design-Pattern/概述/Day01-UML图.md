@@ -325,3 +325,4 @@ classDiagram
         -canEat()
     }
 ```
+

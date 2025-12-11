@@ -18,7 +18,7 @@
 
  
 
-![image-20240308133941988](../assets/Untitled/image-20240308133941988.png)
+![image-20240308133941988](../assetss/Untitled/image-20240308133941988.png)
 
 -   对计算机和计算性能的要求
 
@@ -47,7 +47,7 @@
 
 ## 深度学习框架
 
-![image-20240308134432780](../assets/Untitled/image-20240308134432780.png)
+![image-20240308134432780](../assetss/Untitled/image-20240308134432780.png)
 
 
 
@@ -83,8 +83,4 @@ CPU, 核心少 , 但是每个核心的处理速度块, 适合做连续的任务
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple keras_applications==1.0.6 tensorflow
 
 ```
-
-
-
-
 

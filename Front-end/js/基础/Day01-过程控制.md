@@ -17,7 +17,7 @@ console.log(1.2/*f*/);
 console.log(1e30===(1e30+1e-30));
 ```
 
-![image-20250807172318439](../../assets/Day01-过程控制/image-20250807172318439.png)
+![image-20250807172318439](../../assetss/Day01-过程控制/image-20250807172318439.png)
 
 
 
@@ -32,7 +32,7 @@ for (let i = 0; i < 32; i++) {
 }
 ```
 
-![image-20250807172726598](../../assets/Day01-过程控制/image-20250807172726598.png)
+![image-20250807172726598](../../assetss/Day01-过程控制/image-20250807172726598.png)
 
 
 
@@ -68,7 +68,7 @@ for (let i = 0; i < 32; i++) {
 
     在运行时异常
 
-    ![image-20250807181139058](../../assets/Day01-过程控制/image-20250807181139058.png)
+    ![image-20250807181139058](../../assetss/Day01-过程控制/image-20250807181139058.png)
 
 -   var 变量, 类似Python的变量
 
@@ -81,7 +81,7 @@ for (let i = 0; i < 32; i++) {
 
     输出2
 
-    ![image-20250807181331888](../../assets/Day01-过程控制/image-20250807181331888.png)
+    ![image-20250807181331888](../../assetss/Day01-过程控制/image-20250807181331888.png)
 
 -   const 常量
 
@@ -142,7 +142,7 @@ console.log(value); // value
 
 但let和const不能, 会直接报错
 
-![image-20250807201247594](../../assets/Day01-过程控制/image-20250807201247594.png)
+![image-20250807201247594](../../assetss/Day01-过程控制/image-20250807201247594.png)
 
 ## 分支
 
@@ -308,3 +308,4 @@ function  simpleTest() {
   console.log(carName);
 }
 ```
+

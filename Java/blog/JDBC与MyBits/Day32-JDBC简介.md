@@ -9,7 +9,7 @@
 
 -   数据库的实现类也叫做**驱动**的.jar包
 
-![image-20231009193046103](../../typora-user-images/Day32/homeschool-f10a98.png)
+![image-20231009193046103](../../assets/Day32/homeschool-f10a98.png)
 
 ```java
 import java.sql.Connection;

@@ -187,7 +187,7 @@ console.log(typeOfType === type); // t
 console.log(~0.7);
 ```
 
-![image-20250807195341817](../../assets/Day01-运算符/image-20250807195341817.png)
+![image-20250807195341817](../../assetss/Day01-运算符/image-20250807195341817.png)
 
 ### 优先级
 
@@ -254,3 +254,4 @@ console.log(~0.7);
 |        |            |                  |
 | 2      | yield      | 暂停函数         |
 | 1      | ,          | 逗号             |
+

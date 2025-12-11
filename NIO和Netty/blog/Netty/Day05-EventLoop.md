@@ -366,7 +366,7 @@ DEventLoop2((EventLoop2))
 
 
 
-![](../../assets/Day05-EventLoop/0041.png)
+![](../../assetss/Day05-EventLoop/0041.png)
 
 
 
@@ -411,4 +411,3 @@ static void invokeChannelRead(final AbstractChannelHandlerContext next, Object m
 }
 ```
 
- 

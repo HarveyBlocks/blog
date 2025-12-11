@@ -40,3 +40,4 @@
     ```mysql
     explain select * from user     FORCE INDEX(USER_AGE)       where age = 35;
     ```
+

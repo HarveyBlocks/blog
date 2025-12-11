@@ -111,5 +111,3 @@ with conn.cursor() as cursor:
 
 事务的提交就是事务的结束也是游标的关闭
 
-
-

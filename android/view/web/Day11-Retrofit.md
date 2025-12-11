@@ -126,7 +126,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 Logcat似乎会对一些隐私信息做加密, 例如URL和IP
 
-![image-20250921225332407](../../assets/Day11-Retrofit/image-20250921225332407.png)
+![image-20250921225332407](../../assetss/Day11-Retrofit/image-20250921225332407.png)
 
 而且, **Callback的回调是发生在主线程的**
 
@@ -150,7 +150,7 @@ echoService.getData(2).enqueue(initCallback())
 echoService.getData(3).enqueue(initCallback())
 ```
 
-![image-20250921225708806](../../assets/Day11-Retrofit/image-20250921225708806.png)
+![image-20250921225708806](../../assetss/Day11-Retrofit/image-20250921225708806.png)
 
 ## Header声明
 
@@ -312,3 +312,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     }
 }
 ```
+

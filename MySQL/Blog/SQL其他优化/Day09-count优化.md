@@ -1,6 +1,6 @@
 # count优化
 
-![image-20231023171213787](../../shoot/Day09-count优化/image-20231023171213787.png)
+![image-20231023171213787](../../assets/Day09-count优化/image-20231023171213787.png)
 
 -   如果使用了条件查询,统统打回原形,再数一遍
 
@@ -26,16 +26,17 @@ select count(-1) from tb_user;
 select count(null) from user ;# 有记录就放null,放再多null都不加1
 ```
 
-![image-20231023172736832](../../shoot/Day09-count优化/image-20231023172736832.png)
+![image-20231023172736832](../../assets/Day09-count优化/image-20231023172736832.png)
 
 
 
 
 
-![image-20231023173020691](../../shoot/Day09-count优化/image-20231023173020691.png)
+![image-20231023173020691](../../assets/Day09-count优化/image-20231023173020691.png)
 
 
 
 
 
 -   
+

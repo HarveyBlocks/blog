@@ -41,5 +41,3 @@ fgabcde
 3.  reverse(string[n:len])
 4.  倒转可以用头尾各一个指针, 双指针交换, 逐渐向中间靠近
 
-
-

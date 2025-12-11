@@ -6,7 +6,7 @@
 | ---------- | -------------- |
 | 弱类型语言 | VB，JavaScripe |
 ## 数据类型的分类
-![数据类型](../../typora-user-images/数据类型.png)
+![数据类型](../../assets/数据类型.png)
 
 
 ## 整形相关
@@ -96,7 +96,7 @@ System.out.println(f1 == f2);//true
 
 输出结果如下：
 
-![screemshot 2023-08-02 221411](../../typora-user-images/screemshot 2023-08-02 221411.png)
+![screemshot 2023-08-02 221411](../../assets/screemshot 2023-08-02 221411.png)
 
 
 
@@ -125,7 +125,7 @@ System.out.println("\u0022+\u0022"+".");//,
 
 ### 信息丢失
 
-![数值类型之间的合法转换](../../typora-user-images/数值类型之间的合法转换.png)
+![数值类型之间的合法转换](../../assets/数值类型之间的合法转换.png)
 
 
 
@@ -152,7 +152,7 @@ double d=i;
 System.out.println(d);
 ```
 
-![y'h](../../typora-user-images/image-20230802222956611.png)
+![y'h](../../assets/image-20230802222956611.png)
 
 
 
@@ -168,7 +168,7 @@ public class Demon01 {
 }
 ```
 
-![屏幕截图 2023-08-03 120537](../../Screenshots/屏幕截图 2023-08-03 120537.png)
+![屏幕截图 2023-08-03 120537](../../assets/屏幕截图 2023-08-03 120537.png)
 
 ### 高转低
 
@@ -187,7 +187,7 @@ byte b=(byte) i;
 System.out.println(b);
 ```
 
-![image-20230802223038798](../../typora-user-images/image-20230802223038798.png)
+![image-20230802223038798](../../assets/image-20230802223038798.png)
 
 ``` java 
 int money=10_0000_0000;
@@ -208,10 +208,11 @@ long tatal2=money*(long)year;//(long)加前加后一个样
 System.out.println(tatal2);//不溢出
 ```
 
-![image-20230802223801578](../../typora-user-images/image-20230802223801578.png)
+![image-20230802223801578](../../assets/image-20230802223801578.png)
 
 ## 引用类型
 
 引用类型首先要检查是否为**null**
 
 **如果在null上调用方法,会出现错误**
+

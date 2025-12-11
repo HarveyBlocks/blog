@@ -49,7 +49,7 @@ file_output.close()
 file_input.close()
 ```
 
-![image-20240303011633527](../assets/Day01-%E6%96%87%E4%BB%B6IO/image-20240303011633527.png)
+![image-20240303011633527](../assetss/Day01-%E6%96%87%E4%BB%B6IO/image-20240303011633527.png)
 
 ```python
 """
@@ -68,3 +68,4 @@ if __name__ == '__main__':
 ```
 
 `with-as`自动关闭流
+

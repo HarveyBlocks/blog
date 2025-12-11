@@ -19,7 +19,7 @@
 
 创建目录`src\main\assets`, 音频文件放入其目录下
 
-![image-20250920152028202](../../assets/Day10-MediaPlayer/image-20250920152028202.png)
+![image-20250920152028202](../../assetss/Day10-MediaPlayer/image-20250920152028202.png)
 
 
 
@@ -206,3 +206,4 @@ override fun onDestroy() {
     super.onDestroy()
 }
 ```
+

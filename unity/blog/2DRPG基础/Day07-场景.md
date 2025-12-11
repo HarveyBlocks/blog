@@ -4,7 +4,7 @@
 
 在Hierarchy窗口显示多个场景
 
-![image-20241030201312365](../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030201312365.png)
+![image-20241030201312365](../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241030201312365.png)
 
 通过将场景文件拖拽到Hierarchy窗口而不是双击场景文件
 
@@ -68,7 +68,7 @@ Hierarchy->选中场景->右键选择UnloadSence
 
 7.   一个场景在Addressable中勾选, 就会自动取消其在Build Setting中的勾选
 
-     ![image-20241102221215053](../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221215053.png)
+     ![image-20241102221215053](../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221215053.png)
 
      因为Build打包是用全部文件打包的方式, Addressable采用部分打包, 部分寻址的方式
 
@@ -314,3 +314,4 @@ Hierarchy->右键->Volume->
 
 1.   profile->New 创建profile设置
 2.   
+

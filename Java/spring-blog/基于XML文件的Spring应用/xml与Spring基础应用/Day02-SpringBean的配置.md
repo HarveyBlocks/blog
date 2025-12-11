@@ -2,7 +2,7 @@
 
 # SpringBean 的配置
 
-![image-20231030130011011](../../../typora-user-images/Untitled/image-20231030130011011.png)
+![image-20231030130011011](../../../assets/Untitled/image-20231030130011011.png)
 
 这些配置不分先后
 
@@ -39,7 +39,7 @@
 <bean id="userService" class="com.harvey.Impl.UserServiceImpl"/>
 ```
 
-![image-20231030131034992](../../../typora-user-images/Untitled/image-20231030131034992.png)
+![image-20231030131034992](../../../assets/Untitled/image-20231030131034992.png)
 
 -   其实是在BeanFactory里形成了key-value
 
@@ -50,7 +50,7 @@
         <!--id="userService"-->
 ```
 
-![image-20231030131340505](../../typora-user-images/Untitled/image-20231030131340505.png)
+![image-20231030131340505](../../assets/Untitled/image-20231030131340505.png)
 
 -   它也是有Key的,是**全类名**
 
@@ -84,7 +84,7 @@
 
     
 
-![image-20231030132328860](../../../typora-user-images/Untitled/image-20231030132328860.png)
+![image-20231030132328860](../../../assets/Untitled/image-20231030132328860.png)
 
 -   BeanFactory使用了映射
 
@@ -221,3 +221,4 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
 ## factory-method和factory-bean
     
      [Spring实例化的方式](Day02😘-Spring实例化的方式.md)
+

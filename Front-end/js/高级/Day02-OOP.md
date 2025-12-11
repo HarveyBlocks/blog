@@ -112,5 +112,3 @@ class Sun extends Obj {
 |Object.freeze(object) | 防止对对象进行任何更改 |
 |Object.isFrozen(object)  |  如果对象被冻结，则返回 true |
 
-
-

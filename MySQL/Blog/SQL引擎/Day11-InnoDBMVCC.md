@@ -56,7 +56,7 @@ MVCC的**具体实现**,依赖于数据库记录中的 **三个隐式字段** , 
 
 InnoDB隐式地为自建表创建的字段
 
-![image-20231027162638112](../../shoot/Day11-InnoDBMVCC/image-20231027162638112.png)
+![image-20231027162638112](../../assets/Day11-InnoDBMVCC/image-20231027162638112.png)
 
 #### 查看
 
@@ -64,7 +64,7 @@ InnoDB隐式地为自建表创建的字段
 ibd2sdi 文件名.ibd
 ```
 
-![image-20231027163642114](../../shoot/Day11-InnoDBMVCC/image-20231027163642114.png)
+![image-20231027163642114](../../assets/Day11-InnoDBMVCC/image-20231027163642114.png)
 
 -   我是在这个文件夹下打开的控制台,别的地方我不好说
 -   绝对路径不好用
@@ -124,15 +124,15 @@ ptr->point
 
 ### Undo Log 版本链
 
-![image-20231027165217214](../../shoot/Day11-InnoDBMVCC/image-20231027165217214.png)
+![image-20231027165217214](../../assets/Day11-InnoDBMVCC/image-20231027165217214.png)
 
-![image-20231027165051793](../../shoot/Day11-InnoDBMVCC/image-20231027165051793.png)
+![image-20231027165051793](../../assets/Day11-InnoDBMVCC/image-20231027165051793.png)
 
-![image-20231027165153357](../../shoot/Day11-InnoDBMVCC/image-20231027165153357.png)
+![image-20231027165153357](../../assets/Day11-InnoDBMVCC/image-20231027165153357.png)
 
 
 
- ![image-20231027165330207](../../shoot/Day11-InnoDBMVCC/image-20231027165330207.png)
+ ![image-20231027165330207](../../assets/Day11-InnoDBMVCC/image-20231027165330207.png)
 
 -   链表的头部是最新的记录
 -   链表的尾部是最旧的记录
@@ -155,7 +155,7 @@ ptr->point
 
 ### readView 的核心字段
 
-![image-20231027175849727](../../shoot/Day11-InnoDBMVCC/image-20231027175849727.png)
+![image-20231027175849727](../../assets/Day11-InnoDBMVCC/image-20231027175849727.png)
 
 -   **Max_trx_id 不是最大当前活跃事务集合里的最大ID**
 
@@ -189,8 +189,4 @@ ptr->point
     -   在事务中每一次执行快照读时生成ReadView
 -   Repeatalbe Read
     -   仅在事务第一次体现快照读时生成ReadView,后续**复用( 这就是可重复读,每次快照读,读出来的都是相同的 )**该ReadView
-
-
-
-
 

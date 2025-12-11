@@ -90,7 +90,7 @@ public class Main {
 }
 ```
 
-![image-20230802232613177](../../typora-user-images/image-20230802232613177.png)
+![image-20230802232613177](../../assets/image-20230802232613177.png)
 
 
 
@@ -111,3 +111,4 @@ public class Main {
     }
 }
 ```
+

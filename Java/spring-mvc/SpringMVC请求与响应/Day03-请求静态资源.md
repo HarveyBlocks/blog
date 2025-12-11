@@ -8,15 +8,15 @@
 tomcat的conf文件夹下有一个web.xml文件,
 是对所有web项目生效的配置
 
-![image-20231126204901443](../../typora-user-images/Day03-请求静态资源/image-20231126204901443.png)
+![image-20231126204901443](../../assets/Day03-请求静态资源/image-20231126204901443.png)
 
 其中配置的DefaultServlet
 
-![image-20231126204935431](../../typora-user-images/Day03-请求静态资源/image-20231126204935431.png)
+![image-20231126204935431](../../assets/Day03-请求静态资源/image-20231126204935431.png)
 
 其url-pattern为**/**
 
-![image-20231126205000760](../../typora-user-images/Day03-请求静态资源/image-20231126205000760.png)
+![image-20231126205000760](../../assets/Day03-请求静态资源/image-20231126205000760.png)
 
 tomcat默认会把在url中的路径信息当成一个Servlet路径
 先去Servlet中找,找不到了,就认为是静态资源,然后就去访问静态资源
@@ -27,7 +27,7 @@ DispatcherServlet前端控制器
 url-pattern也为/
 它会优先使用我们的web.xml的配置
 
-![image-20231126205034484](../../typora-user-images/Day03-请求静态资源/image-20231126205034484.png)
+![image-20231126205034484](../../assets/Day03-请求静态资源/image-20231126205034484.png)
 
 但是**DispatcherServlet没有加载静态资源的能力**
 我们就无法加载静态资源了
@@ -36,7 +36,7 @@ url-pattern也为/
 
     -   **不要使用index.jsp做这个实验**
 
-    ![image-20231126205127822](../../typora-user-images/Day03-请求静态资源/image-20231126205127822.png)
+    ![image-20231126205127822](../../assets/Day03-请求静态资源/image-20231126205127822.png)
 
     tomcat默认了index.jsp为开始界面,是可以加载出来的静态资源
 
@@ -46,11 +46,11 @@ url-pattern也为/
 
 
 
-![image-20231126204659672](../../typora-user-images/Day03-请求静态资源/image-20231126204659672.png)
+![image-20231126204659672](../../assets/Day03-请求静态资源/image-20231126204659672.png)
 
 
 
-![image-20231126204647193](../../typora-user-images/Day03-请求静态资源/image-20231126204647193.png)
+![image-20231126204647193](../../assets/Day03-请求静态资源/image-20231126204647193.png)
 
 ## 解决静态资源无法加载的问题
 
@@ -79,11 +79,11 @@ url-pattern也为/
 
 -   虽然乱码,但找到资源了
 
-![image-20231126210651667](../../typora-user-images/Day03-请求静态资源/image-20231126210651667.png)
+![image-20231126210651667](../../assets/Day03-请求静态资源/image-20231126210651667.png)
 
 ### 法二:Spring-MVC配置路径映射
 
-![image-20231127195240423](../../typora-user-images/Day03-请求静态资源/image-20231127195240423.png)
+![image-20231127195240423](../../assets/Day03-请求静态资源/image-20231127195240423.png)
 
 
 
@@ -111,6 +111,4 @@ url-pattern也为/
 #### 优势
 
 -   不用一一映射,写一行就行
-
-
 

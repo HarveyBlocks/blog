@@ -21,5 +21,3 @@ public slots: // 声明槽函数
 connect(ui->getHelpButton(), SIGNAL(clicked()), this, SLOT(helpCallback()));
 ```
 
-
-

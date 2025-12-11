@@ -23,11 +23,11 @@ height 和 width 属性**不包括内边距、边框或外边距**
 
 浏览器宽度足够: 
 
-![image-20250804213120343](../assets/Day01-属性/image-20250804213120343.png)
+![image-20250804213120343](../assetss/Day01-属性/image-20250804213120343.png)
 
 浏览器宽度不足:
 
-![image-20250804213140433](../assets/Day01-属性/image-20250804213140433.png)
+![image-20250804213140433](../assetss/Day01-属性/image-20250804213140433.png)
 
 最大最小宽度效果的演示:
 
@@ -172,7 +172,7 @@ p {
 
 ## 边距
 
-![img](../assets/Day01-属性/css_margin.png)
+![img](../assetss/Day01-属性/css_margin.png)
 
 -   auto - 浏览器来计算外边距
 -   *length* - px、pt、cm
@@ -214,7 +214,7 @@ div {
 
 ## 盒子模型
 
-![image-20250804223813576](../assets/Day01-属性/image-20250804223813576.png)
+![image-20250804223813576](../assetss/Day01-属性/image-20250804223813576.png)
 $$
 元素总宽度 = margin_{left}+border_{left}+padding_{left}+width+padding_{right}+border_{right}+margin_{right}
 \\
@@ -294,3 +294,4 @@ div {
 <p style="width:200px;outline: 4px hidden;">隐藏边框</p>
 
 ##
+

@@ -130,3 +130,4 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  "schema" 元素的直接子元素
 
 本地元素（Local elements）指嵌套在其他元素中的元素。
+

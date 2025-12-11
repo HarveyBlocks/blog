@@ -1,6 +1,6 @@
 # 注入
 
-![image-20231031003436670](../../../typora-user-images/Day03-Bean的注入方式/image-20231031003436670.png)
+![image-20231031003436670](../../../assets/Day03-Bean的注入方式/image-20231031003436670.png)
 
 -   ref->reference
 -   对象引用就用ref="id"
@@ -12,7 +12,7 @@
 
 
 
-![image-20231031003557367](../../../typora-user-images/Day03-Bean的注入方式/image-20231031003557367.png)
+![image-20231031003557367](../../../assets/Day03-Bean的注入方式/image-20231031003557367.png)
 
 ### List的注入
 
@@ -69,7 +69,7 @@
 -   使用子标签
 -   List\<String\>,String是普通值,可以直接value
 
-![image-20231031011307971](../../../typora-user-images/Day03-Bean的注入方式/image-20231031011307971.png)
+![image-20231031011307971](../../../assets/Day03-Bean的注入方式/image-20231031011307971.png)
 
 
 
@@ -289,4 +289,5 @@ public void setMap(Map<String, UserService> map) {
 
 -    出大问题
 
-    ![image-20231031112732918](../../../typora-user-images/Day03-Bean的注入方式/image-20231031112732918.png)
+    ![image-20231031112732918](../../../assets/Day03-Bean的注入方式/image-20231031112732918.png)
+

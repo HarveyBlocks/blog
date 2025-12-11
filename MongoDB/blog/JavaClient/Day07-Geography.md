@@ -97,7 +97,7 @@ GeoJson对象必须包含两个字段
 
 
 
-![Diagram of a Polygon with internal ring.](../../assets/Day07-Geography/index-2dsphere-polygon-with-ring.bakedsvg.svg)
+![Diagram of a Polygon with internal ring.](../../assetss/Day07-Geography/index-2dsphere-polygon-with-ring.bakedsvg.svg)
 
 
 
@@ -251,10 +251,4 @@ db.<collection>.createIndex( { <location field> : "2d" } )
 索引的目标坐标表示第一个值（经度）必须介于 - 180和180 （含）之间。 第二个值（纬度）必须介于90和90 （含）之间。
 
 可以使用2 d 索引上的min和max选项覆盖这些默认限制。 
-
-
-
-
-
-
 

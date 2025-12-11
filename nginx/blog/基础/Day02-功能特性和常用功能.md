@@ -39,5 +39,3 @@
 
 [nginx documentation](https://nginx.org/en/docs/)
 
-
-

@@ -2,13 +2,13 @@
 
 ## 算数运算符
 
-![image-20240302095953890](../assets/Day01-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240302095953890.png)
+![image-20240302095953890](../assetss/Day01-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240302095953890.png)
 
 ## 赋值运算符
 
 -   复合赋值运算符
 
-![image-20240302100107610](../assets/Day01-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240302100107610.png)
+![image-20240302100107610](../assetss/Day01-%E5%AD%97%E7%AC%A6%E4%B8%B2/image-20240302100107610.png)
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-![image-20240302103315833](../assets/Day01-%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240302103315833.png)
+![image-20240302103315833](../assetss/Day01-%E8%BF%90%E7%AE%97%E7%AC%A6/image-20240302103315833.png)
 
 
 
@@ -48,3 +48,4 @@
 if __name__ == '__main__':
     print(1 in [1,2]) # True
 ```
+

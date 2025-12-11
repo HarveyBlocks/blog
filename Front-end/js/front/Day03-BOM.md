@@ -203,7 +203,7 @@ let s = window.prompt('some text', 'defaultText');
 console.log(s);
 ```
 
-![image-20250810220206291](../../assets/Day03-BOM/image-20250810220206291.png)
+![image-20250810220206291](../../assetss/Day03-BOM/image-20250810220206291.png)
 
 按下取消后, 返回`null`
 
@@ -257,3 +257,4 @@ document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 **应该定义 cookie 路径以确保删除正确的 cookie**
 
 如果你不指定路径，一些浏览器不会让你删除 cookie
+

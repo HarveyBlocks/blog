@@ -168,3 +168,4 @@ transient Node<E> last;//尾节点指针
 ### 方法
 
 ....以后再看
+

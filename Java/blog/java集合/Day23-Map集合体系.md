@@ -1,6 +1,6 @@
 # Map集合体系
 
-![Map集合体系](../../typora-user-images/Day22/Map集合体系.png)
+![Map集合体系](../../assets/Day22/Map集合体系.png)
 
 ## Map接口的特点:
 
@@ -11,3 +11,4 @@
 - 值:无序,无下标,允许重复
 
 **字典终于来了QAQ**
+

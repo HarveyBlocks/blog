@@ -27,8 +27,9 @@ Android系统要求只有**签名**后的APK文件才可以安装
 
 apk文件就在目标目录下了
 
-![image-20250927040047267](../assets/Day16-APK文件/image-20250927040047267.png)
+![image-20250927040047267](../assetss/Day16-APK文件/image-20250927040047267.png)
 
 ## Gradle 生成
 
 略
+

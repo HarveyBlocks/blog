@@ -84,5 +84,3 @@ Service1<--Nacos
 Nacos<--Service2
 ```
 
-
-

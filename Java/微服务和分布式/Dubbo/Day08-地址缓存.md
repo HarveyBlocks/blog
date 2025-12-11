@@ -17,7 +17,7 @@ java.net.ConnectException: Connection refused: no further information
 
 但是会在服务的生产者和消费者这里一直报错
 
-![image-20240406194008523](../assert/Day08-%E5%9C%B0%E5%9D%80%E7%BC%93%E5%AD%98/image-20240406194008523.png)
+![image-20240406194008523](../assets/Day08-%E5%9C%B0%E5%9D%80%E7%BC%93%E5%AD%98/image-20240406194008523.png)
 
 当服务提供者的地址发生变化时, 注册中心会通知服务消费者
 

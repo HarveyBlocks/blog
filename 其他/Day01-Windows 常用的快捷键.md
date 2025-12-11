@@ -12,3 +12,4 @@
 10. win + R     运行
 11. win + E     打开我的电脑
 12. Ctrl + Shift +Esc 打开任务管理器
+

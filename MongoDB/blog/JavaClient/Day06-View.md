@@ -154,3 +154,4 @@ private static void defineMonthlyBackSalesUpdate(Date startDate, MongoCollection
 
 
 `$merge`阶段会将输出写入 `monthly_bake_sales` 集合。基于ID对文档使用Upsert的逻辑
+

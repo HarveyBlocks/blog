@@ -277,7 +277,7 @@
 
     宁可用Hash代替sring类型都要比String占用的少:
 
-    ![image-20240220153825168](../../assets/Day11-%E9%94%AE%E5%80%BC%E8%AE%BE%E8%AE%A1/image-20240220153825168.png)
+    ![image-20240220153825168](../../assetss/Day11-%E9%94%AE%E5%80%BC%E8%AE%BE%E8%AE%A1/image-20240220153825168.png)
 
 ### Hash类型
 

@@ -124,7 +124,7 @@ Java中的事件监听机制定义了以下几个类:
       com.harvey.boot.listener.MyInitializer
     ```
 
-![image-20231207094720888](../../typora-user-images/Day03-监听机制/image-20231207094720888.png)
+![image-20231207094720888](../../assets/Day03-监听机制/image-20231207094720888.png)
 
 ```java
 //@Component,应为是靠配置自动装配的,所以@Componet没啥用
@@ -149,25 +149,25 @@ public class MyInitializer implements ApplicationContextInitializer {
 
 -   报错
 
-    ![image-20231207095147839](../../typora-user-images/Day03-监听机制/image-20231207095147839.png)
+    ![image-20231207095147839](../../assets/Day03-监听机制/image-20231207095147839.png)
 
     缺少构造方法(\<init\>的意思是构造),其参数是(SpringApplication,String)
 
-    看看人家怎么写的:![image-20231207095356418](../../typora-user-images/Day03-监听机制/image-20231207095356418.png)
+    看看人家怎么写的:![image-20231207095356418](../../assets/Day03-监听机制/image-20231207095356418.png)
 
-    ![image-20231207095513328](../../typora-user-images/Day03-监听机制/image-20231207095513328.png)
+    ![image-20231207095513328](../../assets/Day03-监听机制/image-20231207095513328.png)
 
 有的吧~~
 
 仿照写一个:
 
-![image-20231207095622558](../../typora-user-images/Day03-监听机制/image-20231207095622558.png)
+![image-20231207095622558](../../assets/Day03-监听机制/image-20231207095622558.png)
 
 这是因为@Componet需要创建Bean,就要的检测参数能否注入,删掉@Component就行(应为@Compont没啥用)
 
 因为ApplicationContextInitializer和SpringApplicationRunListener是靠配置执行的,也就是说, 上面SpringApplicationRunListener的@Compnet删掉也没事
 
-![image-20231207100203330](../../typora-user-images/Day03-监听机制/image-20231207100203330.png)
+![image-20231207100203330](../../assets/Day03-监听机制/image-20231207100203330.png)
 
 成功
 
@@ -177,6 +177,7 @@ public class MyInitializer implements ApplicationContextInitializer {
 
 ## Spring的事件
 
-![image-20231207100518140](../../typora-user-images/Day03-监听机制/image-20231207100518140.png)
+![image-20231207100518140](../../assets/Day03-监听机制/image-20231207100518140.png)
 
 这个包里有好多Event,最终继承自java.util.EventObject
+

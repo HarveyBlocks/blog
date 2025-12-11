@@ -101,4 +101,5 @@
 
 -   成功注入
 
-![image-20231123222801047](../../typora-user-images/Day01-在Controller中访问容器中的Bean/image-20231123222801047.png)
+![image-20231123222801047](../../assets/Day01-在Controller中访问容器中的Bean/image-20231123222801047.png)
+

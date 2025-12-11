@@ -22,3 +22,4 @@ using (FileStream fs = new FileStream("aaa", FileMode.Open, FileAccess.Read)) {
 using FileStream fs = new FileStream("aaa", FileMode.Open, FileAccess.Read);
 int data = fs.ReadByte();
 ```
+

@@ -65,7 +65,7 @@ public class Main {
 }
 ```
 
-![image-20230802234251023](../../typora-user-images/image-20230802234251023.png)
+![image-20230802234251023](../../assets/image-20230802234251023.png)
 
 ## 逻辑运算符
 

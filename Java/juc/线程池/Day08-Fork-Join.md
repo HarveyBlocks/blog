@@ -138,3 +138,4 @@ private static class SummarizeTask extends RecursiveTask<Integer> {
 循环串行执行20.634 s (sleep了0.2s)
 
 22个线程并行执行 3.073s  (sleep的0.2s被利用了起来)
+

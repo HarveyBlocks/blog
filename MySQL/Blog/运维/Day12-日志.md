@@ -129,13 +129,13 @@ binlog_expire_logs_seconds=1145141414810
 show variables like '%general_log%';
 ```
 
-![image-20231028101445087](../../shoot/Day12-日志/image-20231028101445087.png)
+![image-20231028101445087](../../assets/Day12-日志/image-20231028101445087.png)
 
 -    
 
 ### 开启
 
-![image-20231028101701926](../../shoot/Day12-日志/image-20231028101701926.png)
+![image-20231028101701926](../../assets/Day12-日志/image-20231028101701926.png)
 
 -   1和on都行
 
@@ -165,4 +165,3 @@ SET GLOBAL general_log=1;
     long_queries_not_using_indexes=1
     ```
 
-    

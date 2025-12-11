@@ -130,3 +130,4 @@ end
 8.  `RUNNABLE`<-->`TIMED_WAITING`  `Thread#sleep(long)`
 9.  `RUNNABLE`<-->`BLOCKED` 竞争锁成功`BLOCKED`->`RUNNABLE`; 竞争锁失败`RUNNABLE`->`BLOCKED`
 10.  `RUNNABLE`-->`TERMINATED` 线程所有代码执行完毕, 进入`TERMINATED`
+

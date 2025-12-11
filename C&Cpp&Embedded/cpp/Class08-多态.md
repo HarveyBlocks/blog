@@ -266,5 +266,3 @@ Student 114514 is eating 10
 */
 ```
 
-
-

@@ -584,7 +584,3 @@ abstract class Person : Animal() {
 }
 ```
 
-
-
-
-

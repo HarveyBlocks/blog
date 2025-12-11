@@ -8,11 +8,11 @@
 
     -   Http向服务器请求`UPgradeLwebsocket`
 
-        ![image-20231229224638131](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229224638131.png)
+        ![image-20231229224638131](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229224638131.png)
 
     -   服务器响应`101 Switch Protocols`完成==HTTP协议转换成WrbSocket协议==
 
-        ![image-20231229224655249](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229224655249.png)
+        ![image-20231229224655249](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229224655249.png)
 
 -   从此, 浏览器可以主动发数据给服务器, 服务器也可以主动发数据给服务端s
 
@@ -30,7 +30,7 @@
 
 2.  websocket对象的相关事件
 
-    ![image-20231229225134408](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229225134408.png)
+    ![image-20231229225134408](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229225134408.png)
 
     error																						发生处一万元事故触发
 
@@ -108,7 +108,7 @@
     -   在客户端与服务端**连接过程中有效**
     -   在**链接关闭时结束**
 
-    ![image-20231230131939140](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231230131939140.png)
+    ![image-20231230131939140](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231230131939140.png)
 
 ### 双向数据传输
 
@@ -161,7 +161,7 @@ public class ChatEndpoint {
 }
 ```
 
-![image-20231230134333139](../assert/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231230134333139.png)
+![image-20231230134333139](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231230134333139.png)
 
 #### 服务端推送数据给客户端
 

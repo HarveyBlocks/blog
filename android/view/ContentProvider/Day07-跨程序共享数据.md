@@ -81,7 +81,7 @@ Caused by: java.lang.SecurityException: Permission Denial: starting Intent { act
 
 会提示需要什么权限
 
-![image-20250917112626165](../../assets/Day01-跨程序共享数据/image-20250917112626165.png)
+![image-20250917112626165](../../assetss/Day01-跨程序共享数据/image-20250917112626165.png)
 
 接下来在Manifest
 
@@ -383,7 +383,7 @@ fun afterRequestPermission(
 
 在model的gradle 配置文件中查看版本信息
 
-![image-20250920003941891](../../assets/Day07-跨程序共享数据/image-20250920003941891.png)
+![image-20250920003941891](../../assetss/Day07-跨程序共享数据/image-20250920003941891.png)
 
 minSdk 表示版本其之下的系统禁止安装本应用
 

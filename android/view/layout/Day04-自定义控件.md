@@ -122,7 +122,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 以下是运行效果
 
-![image-20250913214400033](../../assets/Day04-自定义控件/image-20250913214400033.png)
+![image-20250913214400033](../../assetss/Day04-自定义控件/image-20250913214400033.png)
 
 在代码中调用目标控件
 
@@ -267,3 +267,4 @@ class TitleBarLayout(context: Context, attrs: AttributeSet) :
 
 }
 ```
+

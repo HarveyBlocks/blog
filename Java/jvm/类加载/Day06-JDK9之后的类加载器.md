@@ -6,7 +6,7 @@ JDK8之前的版本中, 扩展类加载器和应用程序类加载器的源码�
 
 JDK9引入了module的概念, Java类会放到jmod文件, jmod会放在jmods的文件夹下
 
-![image-20240518125932560](../asset/Day06-JDK9%E4%B9%8B%E5%90%8E%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/image-20240518125932560.png)
+![image-20240518125932560](../assets/Day06-JDK9%E4%B9%8B%E5%90%8E%E7%9A%84%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/image-20240518125932560.png)
 
 ## Bootstrap
 
@@ -25,3 +25,4 @@ PlatformClassLoader遵循模块化方式加载字节码文件, 所以一继承�
 BuiltinClassLoader实现了从模块中加载字节码文件
 
 PlatformClassLoader的存在更多的是为了与老版本的设计方案兼容, 本身没有什么特殊的逻辑
+
