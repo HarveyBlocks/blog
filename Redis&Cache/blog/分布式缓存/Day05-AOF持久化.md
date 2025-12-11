@@ -80,5 +80,5 @@ auto-aof-rewrite-min-size 64mb
 
 ## AOF和RDB的比较
 
-![image-20240207185318515](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/分布式缓存/Day05-AOF持久化/image-20240207185318515.png)
+![image-20240207185318515](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/分布式缓存/Day05-AOF持久化/image-20240207185318515.png)
 

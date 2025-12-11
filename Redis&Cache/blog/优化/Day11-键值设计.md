@@ -265,7 +265,7 @@
 
     宁可用Hash代替sring类型都要比String占用的少:
 
-    ![image-20240220153825168](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/优化/Day11-键值设计/image-20240220153825168.png)
+    ![image-20240220153825168](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/优化/Day11-键值设计/image-20240220153825168.png)
 
 ### Hash类型
 

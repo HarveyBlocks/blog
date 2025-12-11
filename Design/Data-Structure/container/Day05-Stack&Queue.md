@@ -132,7 +132,7 @@ static Array<T> &sort(Array<T> &array) {
 
 ## 括号匹配
 
-<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack&Queue/20.有效括号.gif" alt="20.有效括号" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack%26Queue/20.有效括号.gif" alt="20.有效括号" style="zoom:67%;" />
 
 ## 删除重复项
 
@@ -160,7 +160,7 @@ static Array<T> &sort(Array<T> &array) {
 
 为之奈何?
 
-![1047.删除字符串中的所有相邻重复项](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack&Queue/1047.删除字符串中的所有相邻重复项.gif)
+![1047.删除字符串中的所有相邻重复项](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack%26Queue/1047.删除字符串中的所有相邻重复项.gif)
 
 ```cpp
 Stack<char> charStack;
@@ -384,7 +384,7 @@ for (int i = windowLen; i < data.size(); ++i) {
 
 ## 电路板布线
 
-![布线问题-CSDN博客](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack&Queue/20200527131114375.png)
+![布线问题-CSDN博客](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day05-Stack%26Queue/20200527131114375.png)
 
 ### 栈实现
 

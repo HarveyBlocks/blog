@@ -2,7 +2,7 @@
 
 ## Stream继承关系
 
-![image-20240515140343205](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/cpp/Class09-stream流/image-20240515140343205.png)##
+![image-20240515140343205](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C%26Cpp%26Embedded/cpp/Class09-stream流/image-20240515140343205.png)##
 
 cin、cout和clog是带缓冲区的
 

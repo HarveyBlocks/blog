@@ -1,6 +1,6 @@
 # 数据类型和编码
 
-![image-20240405194043887](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405194043887.png)
+![image-20240405194043887](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405194043887.png)
 
 ## string
 
@@ -8,7 +8,7 @@
 
 -   最基本的编码方式是**RAW**, 基于简单字符串SDS实现, 存储上限是**512MB**
 
-![image-20240405194438227](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405194438227.png)
+![image-20240405194438227](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405194438227.png)
 
 ### EMBSTR
 
@@ -18,14 +18,14 @@
 
 -   44字节? Object头16字节+SDS头3字节+44字节+结束符`\0`一字节=64字节
 
-![image-20240405195104794](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405195104794.png)
+![image-20240405195104794](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405195104794.png)
 
 ### INT
 
 -   如果存储的字符串是整数值, 并且大小在LONG_MAX范围内, 则采用**INT**编码
 -   直接讲数据保存在RedisObject的ptr指针位置(刚好8字节), 不再需要SDS
 
-![image-20240405195548404](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405195548404.png)
+![image-20240405195548404](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405195548404.png)
 
 ### 使用指导
 
@@ -57,7 +57,7 @@ LinkedList+ZipList
 
 内存占用低, 存储上限高
 
-![image-20240405201151086](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405201151086.png)
+![image-20240405201151086](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405201151086.png)
 
 ## Set
 
@@ -76,14 +76,14 @@ LinkedList+ZipList
 -   当插入元素不符合上述条件时, 将会把IntSet改变成HashTable
 -   更节省内存
 
-![image-20240405205853450](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405205853450.png)
+![image-20240405205853450](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405205853450.png)
 
 ### HashTable
 
 -   Key存储元素
 -   value统一为null
 
-![image-20240405205952847](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405205952847.png)
+![image-20240405205952847](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405205952847.png)
 
 ## ZSet
 
@@ -103,7 +103,7 @@ typedef struct zset{
 
 ### HashTable+SkipList
 
-![image-20240405211011738](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405211011738.png)
+![image-20240405211011738](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405211011738.png)
 
 数据重复存储, 肥肠臃肿内存占用很高
 
@@ -122,7 +122,7 @@ typedef struct zset{
 
 相邻两个entry分别是member和score
 
-![image-20240405214418243](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405214418243.png)
+![image-20240405214418243](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405214418243.png)
 
 -   score越小越接近队首, score升序排序
 
@@ -142,9 +142,9 @@ typedef struct zset{
 -   节省空间
 -   相邻两个entry分别是field和value
 
-![image-20240405215336522](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405215336522.png)
+![image-20240405215336522](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405215336522.png)
 
 ### HashTable
 
-![image-20240405215549570](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-数据类型和编码/image-20240405215549570.png)
+![image-20240405215549570](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day13-数据类型和编码/image-20240405215549570.png)
 

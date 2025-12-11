@@ -32,7 +32,7 @@
 
 在xml文件夹下创建file_paths.xml
 
-<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Multimedia/Day09-Camera&Album/image-20250919175218652.png" alt="image-20250919175218652" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Multimedia/Day09-Camera%26Album/image-20250919175218652.png" alt="image-20250919175218652" style="zoom:50%;" />
 
 在其中编写
 

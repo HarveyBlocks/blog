@@ -8,7 +8,7 @@
 
 emmm, 这里会采用小端, 可以明确, `zlbytes`,`zltail`, `zllen`会采用小端, `content`会采用大端, `zlend`无关大小端, 其余不知道
 
-![image-20240404224643001](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day12-ZipList/image-20240404224643001.png)
+![image-20240404224643001](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day12-ZipList/image-20240404224643001.png)
 
 1.  `zlbyte`
 
@@ -40,11 +40,11 @@ emmm, 这里会采用小端, 可以明确, `zlbytes`,`zltail`, `zllen`会采用�
 
     -   `0xff`, 标记ZipList的结束
 
-![image-20240404224845452](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day12-ZipList/image-20240404224845452.png)
+![image-20240404224845452](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day12-ZipList/image-20240404224845452.png)
 
 ## ZipListEntry
 
-![image-20240404225526943](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day12-ZipList/image-20240404225526943.png)
+![image-20240404225526943](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day12-ZipList/image-20240404225526943.png)
 
 1.  `previous_entry_length`
     -   前一节点的长度

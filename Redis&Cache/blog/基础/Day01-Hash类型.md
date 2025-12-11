@@ -28,7 +28,7 @@ centos-redis:0>hset user:A gender '男'
 "OK"
 ```
 
-![image-20240102001912466](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-Hash类型/image-20240102001912466.png)
+![image-20240102001912466](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day01-Hash类型/image-20240102001912466.png)
 
 -   标的是key其实是field
 
@@ -37,7 +37,7 @@ centos-redis:0>hset user:B id 2 name 'Mary' age 15 gender '女'
 "4"
 ```
 
-![image-20240102002101946](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-Hash类型/image-20240102002101946.png)
+![image-20240102002101946](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day01-Hash类型/image-20240102002101946.png)
 
 **若存在这个field, 则不执行**
 
@@ -56,7 +56,7 @@ centos-redis:0>hdel user:A age
 "1"
 ```
 
-![image-20240102003610670](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-Hash类型/image-20240102003610670.png)
+![image-20240102003610670](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day01-Hash类型/image-20240102003610670.png)
 
 #### 获取
 

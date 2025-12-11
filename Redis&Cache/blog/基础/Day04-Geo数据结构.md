@@ -7,7 +7,7 @@
 
 底层是SortedKey, latitude 纬度和longitude 经度经过运算转化为score
 
-![image-20240131110937834](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day04-Geo数据结构/image-20240131110937834.png)
+![image-20240131110937834](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day04-Geo数据结构/image-20240131110937834.png)
 
 ## 单位
 
@@ -73,7 +73,7 @@ redis(pc2):1>geoPos geoKey (0,0)号点
 -   指定圆心半径, 返回其内的所有member
 -   6.2之后废弃
 
-![image-20240131112225581](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day04-Geo数据结构/image-20240131112225581.png)
+![image-20240131112225581](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day04-Geo数据结构/image-20240131112225581.png)
 
 ```bash
 redis(pc2):1>geoRadius geoKey 0.5 0.5 100 km WithCoord WithDist ASC 
@@ -111,7 +111,7 @@ redis(pc2):1>geoRadius geoKey 0.5 0.5 100 km WithCoord WithDist ASC
 -   范围可以是圆或矩形
 -   6.2新功能
 
-![image-20240131112455136](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day04-Geo数据结构/image-20240131112455136.png)
+![image-20240131112455136](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day04-Geo数据结构/image-20240131112455136.png)
 
 ```bash
 redis(pc2):1>geoSearch geoKey FromMember (0,0)号点 ByRadius 120 km Desc WithCoord WithDist WithHash

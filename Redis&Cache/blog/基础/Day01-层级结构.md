@@ -14,7 +14,7 @@ Redis的key允许多个单词形成层级结构, **多个单词用`:`隔开**
 mset user:id1 1 user:id2 2
 ```
 
-![image-20240102000436898](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-层级结构/image-20240102000436898.png)
+![image-20240102000436898](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/基础/Day01-层级结构/image-20240102000436898.png)
 
 对对象序列化成JSON字符串之后存储在redis
 
