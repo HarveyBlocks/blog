@@ -492,7 +492,7 @@ def fun(a, b):
     return max(a, b)
 ```
 
-![image-20240302130556065](../../assetss/Day01-%E5%87%BD%E6%95%B0/image-20240302130556065.png)
+![image-20240302130556065](../../assets/Day01-%E5%87%BD%E6%95%B0/image-20240302130556065.png)
 
 ## 匿名函数
 

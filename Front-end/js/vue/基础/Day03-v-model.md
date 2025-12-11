@@ -96,7 +96,7 @@ function deleteItem(targetId) {
 
     因为在文本框里回车也会指向submit, 而在按钮上监听是管不到文本框里的回车的
 
-![image-20250816003114114](../../../assetss/Day03-v-model/image-20250816003114114.png)
+![image-20250816003114114](../../../assets/Day03-v-model/image-20250816003114114.png)
 
 
 

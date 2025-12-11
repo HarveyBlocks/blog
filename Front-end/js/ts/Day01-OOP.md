@@ -46,7 +46,7 @@ function printLabel(labelledObj: LabelledValue) {
 
 接口的定义不会被编译为Javascript, 因此其能且仅能作为类型指示, 而不能出现在在实质性的代码中
 
-![image-20250828004617702](../../assetss/Day01-OOP/image-20250828004617702.png)
+![image-20250828004617702](../../assets/Day01-OOP/image-20250828004617702.png)
 
 
 
@@ -607,7 +607,7 @@ interface Constructor {
 }
 ```
 
-![image-20250828155815909](../../assetss/Day01-OOP/image-20250828155815909.png)
+![image-20250828155815909](../../assets/Day01-OOP/image-20250828155815909.png)
 
 
 

@@ -45,11 +45,11 @@
 
 在res目录下**新建`layout-large`文件夹**，在这个文件夹下新建一个布局，也叫作`activity_main.xml`, 用于在大屏幕使用
 
-<img src="../../assetss/Day05-动态加载布局/image-20250915155751499.png" alt="image-20250915155751499" style="zoom: 33%;" />
+<img src="../../assets/Day05-动态加载布局/image-20250915155751499.png" alt="image-20250915155751499" style="zoom: 33%;" />
 
 文件显示(Android Studio)
 
-<img src="../../assetss/Day05-动态加载布局/image-20250915155859694.png" alt="image-20250915155859694" style="zoom:50%;" />
+<img src="../../assets/Day05-动态加载布局/image-20250915155859694.png" alt="image-20250915155859694" style="zoom:50%;" />
 
 代码如下
 
@@ -84,11 +84,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 在大屏幕上显示
 
-![image-20250915160216958](../../assetss/Day05-动态加载布局/image-20250915160216958.png)
+![image-20250915160216958](../../assets/Day05-动态加载布局/image-20250915160216958.png)
 
 在小屏幕上显示
 
-<img src="../../assetss/Day05-动态加载布局/image-20250915160516146.png" alt="image-20250915160516146" style="zoom:50%;" />
+<img src="../../assets/Day05-动态加载布局/image-20250915160516146.png" alt="image-20250915160516146" style="zoom:50%;" />
 
 
 
@@ -112,7 +112,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 新建layout-sw600dp文件夹，然后在这个文件夹下新建activity_main.xml布局
 
-<img src="../../assetss/Day05-动态加载布局/image-20250915163203766.png" alt="image-20250915163203766" style="zoom:50%;" />
+<img src="../../assets/Day05-动态加载布局/image-20250915163203766.png" alt="image-20250915163203766" style="zoom:50%;" />
 
 编写布局
 
@@ -574,11 +574,11 @@ class NewsBriefListFragment :
 
 选择列表
 
-![image-20250915234148192](../../assetss/Day05-动态加载布局/image-20250915234148192.png)
+![image-20250915234148192](../../assets/Day05-动态加载布局/image-20250915234148192.png)
 
 详情页面
 
-![image-20250915234207236](../../assetss/Day05-动态加载布局/image-20250915234207236.png)
+![image-20250915234207236](../../assets/Day05-动态加载布局/image-20250915234207236.png)
 
 
 
@@ -586,9 +586,9 @@ class NewsBriefListFragment :
 
 未选中
 
-![image-20250915234226634](../../assetss/Day05-动态加载布局/image-20250915234226634.png)
+![image-20250915234226634](../../assets/Day05-动态加载布局/image-20250915234226634.png)
 
 选中
 
-![image-20250915234234269](../../assetss/Day05-动态加载布局/image-20250915234234269.png)
+![image-20250915234234269](../../assets/Day05-动态加载布局/image-20250915234234269.png)
 

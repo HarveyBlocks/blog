@@ -117,7 +117,7 @@ function logCategory(){
 }
 ```
 
-![image-20250826160247330](../../assetss/Day04-axios/image-20250826160247330.png)
+![image-20250826160247330](../../assets/Day04-axios/image-20250826160247330.png)
 
 ## 渲染
 

@@ -14,7 +14,7 @@
 
 电器厂会生产电视机, 会生产洗衣机, 会生产空调
 
-<img src="../../assetss/Day02-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/image-20240604201859928.png" alt="image-20240604201859928" style="zoom: 67%;" />
+<img src="../../assets/Day02-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/image-20240604201859928.png" alt="image-20240604201859928" style="zoom: 67%;" />
 
 ## 概念
 
@@ -233,7 +233,7 @@ public static void abstractFactory() {
 }
 ```
 
-![image-20240604205351035](../../assetss/Day02-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/image-20240604205351035.png)
+![image-20240604205351035](../../assets/Day02-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/image-20240604205351035.png)
 
 ## 缺点
 

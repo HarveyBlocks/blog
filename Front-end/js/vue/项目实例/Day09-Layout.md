@@ -13,7 +13,7 @@
 
 
 
-<img src="../../../assetss/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
+<img src="../../../assets/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
 
 
 
@@ -130,7 +130,7 @@
 
 ## header
 
-![image-20250827021837835](../../../assetss/Day09-Layout/image-20250827021837835.png)
+![image-20250827021837835](../../../assets/Day09-Layout/image-20250827021837835.png)
 
 1.   准备容器
 
@@ -275,7 +275,7 @@
 
 "联系我们"的部分
 
-![image-20250827030442933](../../../assetss/Day09-Layout/image-20250827030442933.png)
+![image-20250827030442933](../../../assets/Day09-Layout/image-20250827030442933.png)
 
 1.   容器
 
@@ -359,7 +359,7 @@
      <div class="message-block">
        <div class="message-title">下载APP</div>
        <div class="message-description qrcode">
-           <img src="@/assetss/images/qrcode.svg" alt="下载二维码"/>
+           <img src="@/assets/images/qrcode.svg" alt="下载二维码"/>
        </div>
        <div class="message-description download">
          <p>扫描二维码(Fake)</p>
@@ -429,7 +429,7 @@
 
 ### 其他
 
-![image-20250827033107380](../../../assetss/Day09-Layout/image-20250827033107380.png)
+![image-20250827033107380](../../../assets/Day09-Layout/image-20250827033107380.png)
 
 上面是口号
 

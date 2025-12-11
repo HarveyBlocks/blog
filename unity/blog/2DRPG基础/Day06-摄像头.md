@@ -10,7 +10,7 @@ window->PacageManager->Unity Registery
 
 ### 添加摄像头
 
-<img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028191021310.png" alt="image-20241028191021310" style="zoom:50%;" />
+<img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028191021310.png" alt="image-20241028191021310" style="zoom:50%;" />
 
 Hierarchy->Create->Cinimachine->
 
@@ -22,7 +22,7 @@ Hierarchy->Create->Cinimachine->
 
 指定跟随和正在观看
 
-<img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028191405147.png" alt="image-20241028191405147" style="zoom: 67%;" />
+<img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028191405147.png" alt="image-20241028191405147" style="zoom: 67%;" />
 
 Virtual Camera->Inspector->ChinemachineVirtualCamera
 
@@ -35,21 +35,21 @@ Virtual Camera->Inspector->ChinemachineVirtualCamera
 
 Game窗口下调整参数
 
-<img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200029285.png" alt="image-20241028200029285" style="zoom:50%;" />
+<img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200029285.png" alt="image-20241028200029285" style="zoom:50%;" />
 
 Virtual Camera->Inspector->CinimachineVirtualCamera->Body
 
 -   调整跟随中心点(不在以脚底未中心)
 
-    <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028195839924.png" alt="image-20241028195839924" style="zoom:67%;" />
+    <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028195839924.png" alt="image-20241028195839924" style="zoom:67%;" />
 
 -   设置摄像头缓冲值
 
-    <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028195929613.png" alt="image-20241028195929613" style="zoom:67%;" />
+    <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028195929613.png" alt="image-20241028195929613" style="zoom:67%;" />
 
     人物移动不超过这个范围, 摄像头不跟随
 
-    <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200123659.png" alt="image-20241028200123659" style="zoom:50%;" />
+    <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200123659.png" alt="image-20241028200123659" style="zoom:50%;" />
 
 ### 停止跟随
 
@@ -57,13 +57,13 @@ Virtual Camera->Inspector->CinimachineVirtualCamera->Body
 
 VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
-<img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200850885.png" alt="image-20241028200850885" style="zoom:67%;" />
+<img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028200850885.png" alt="image-20241028200850885" style="zoom:67%;" />
 
 -   `CinemachinePixelPerfect` 像素旋转或产生畸变的时候不会出现像素扭曲, 保持单位像素
 
 -   `Cinemachine Confier 2D` 限定摄像机移动范围
 
-    <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028201227402.png" alt="image-20241028201227402" style="zoom:50%;" />
+    <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028201227402.png" alt="image-20241028201227402" style="zoom:50%;" />
 
     1.   创建新对象, 添加组件Polygon Collider 2D , 
     2.   将碰撞体设置为Trigger
@@ -75,7 +75,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
 1.   为边框设置Tag
 
-     <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028204457774.png" alt="image-20241028204457774" style="zoom:50%;" />
+     <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028204457774.png" alt="image-20241028204457774" style="zoom:50%;" />
 
 2.   创建脚本, 用来转换不同场景下的同有Tag Bound的对象
 
@@ -83,7 +83,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
 4.   完成场景转换后调用函数清空缓存
 
-     ![image-20241028205318774](../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028205318774.png)
+     ![image-20241028205318774](../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028205318774.png)
 
 5.   脚本编写
 
@@ -128,7 +128,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
      Impulse 瞬时的
 
-     <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210259031.png" alt="image-20241028210259031" style="zoom:50%;" />
+     <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210259031.png" alt="image-20241028210259031" style="zoom:50%;" />
 
      此拓展会对任何`CinemachineImpulseSource`的广播信号做出回应
 
@@ -138,7 +138,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
      2.   为其添加组件CinemachineImpulseSource
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210732276.png" alt="image-20241028210732276" style="zoom:50%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210732276.png" alt="image-20241028210732276" style="zoom:50%;" />
 
           使用本脚本中定义的`GeneraterImpulse`API方法来链接你的振动事件, 执行瞬间振动(想振动就调用这个API)
 
@@ -146,15 +146,15 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
      4.   Impulse Shape选择振动方式
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210927392.png" alt="image-20241028210927392" style="zoom:50%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028210927392.png" alt="image-20241028210927392" style="zoom:50%;" />
 
           查看振动方程
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028211034522.png" alt="image-20241028211034522" style="zoom:50%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028211034522.png" alt="image-20241028211034522" style="zoom:50%;" />
 
      5.   调整震动速度, 同时决定方向和大小(矢量叉乘)
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028211111815.png" alt="image-20241028211111815" style="zoom:67%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028211111815.png" alt="image-20241028211111815" style="zoom:67%;" />
 
 3.   创建监听事件Assert
 
@@ -178,11 +178,11 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
      2.   创建Assert文件
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028212725448.png" alt="image-20241028212725448" style="zoom:50%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028212725448.png" alt="image-20241028212725448" style="zoom:50%;" />
 
      3.   注册事件
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028213731677.png" alt="image-20241028213731677" style="zoom:67%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028213731677.png" alt="image-20241028213731677" style="zoom:67%;" />
 
      4.   注册事件监听函数
 
@@ -204,7 +204,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
      5.   添加参数
 
-          <img src="../../assetss/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028213348970.png" alt="image-20241028213348970" style="zoom:50%;" />
+          <img src="../../assets/Day06-%E6%91%84%E5%83%8F%E5%A4%B4/image-20241028213348970.png" alt="image-20241028213348970" style="zoom:50%;" />
 
 4.   
 

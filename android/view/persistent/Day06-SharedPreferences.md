@@ -56,7 +56,7 @@ fun save() {
 }
 ```
 
-<img src="../../assetss/Day06-SharedPreferences/image-20250916203246324.png" alt="image-20250916203246324" style="zoom:50%;" />
+<img src="../../assets/Day06-SharedPreferences/image-20250916203246324.png" alt="image-20250916203246324" style="zoom:50%;" />
 
 其实就是xml文件
 
@@ -89,5 +89,5 @@ fun show() {
 }
 ```
 
-![image-20250916204200909](../../assetss/Day06-SharedPreferences/image-20250916204200909.png)
+![image-20250916204200909](../../assets/Day06-SharedPreferences/image-20250916204200909.png)
 

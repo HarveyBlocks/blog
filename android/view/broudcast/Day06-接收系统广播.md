@@ -81,7 +81,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 一分钟变化一次
 
-![image-20250916090744618](../../assetss/Day06-接收系统广播/image-20250916090744618.png)
+![image-20250916090744618](../../assets/Day06-接收系统广播/image-20250916090744618.png)
 
 ### 父类抽象
 
@@ -150,7 +150,7 @@ Android 8.0系统之后，所有隐式广播都不允许使用静态注册的方
 
 
 
-![image-20250916095216392](../../assetss/Day06-接收系统广播/image-20250916095216392.png)
+![image-20250916095216392](../../assets/Day06-接收系统广播/image-20250916095216392.png)
 
 
 
@@ -158,7 +158,7 @@ Android 8.0系统之后，所有隐式广播都不允许使用静态注册的方
 
 
 
-![image-20250916095157092](../../assetss/Day06-接收系统广播/image-20250916095157092.png)
+![image-20250916095157092](../../assets/Day06-接收系统广播/image-20250916095157092.png)
 
 
 

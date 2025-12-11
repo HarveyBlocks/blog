@@ -1,6 +1,6 @@
 # 数据类型和编码
 
-![image-20240405194043887](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405194043887.png)
+![image-20240405194043887](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405194043887.png)
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-![image-20240405194438227](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405194438227.png)
+![image-20240405194438227](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405194438227.png)
 
 ### EMBSTR
 
@@ -24,14 +24,14 @@
 
 -   44字节? Object头16字节+SDS头3字节+44字节+结束符`\0`一字节=64字节
 
-![image-20240405195104794](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405195104794.png)
+![image-20240405195104794](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405195104794.png)
 
 ### INT
 
 -   如果存储的字符串是整数值, 并且大小在LONG_MAX范围内, 则采用**INT**编码
 -   直接讲数据保存在RedisObject的ptr指针位置(刚好8字节), 不再需要SDS
 
-![image-20240405195548404](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405195548404.png)
+![image-20240405195548404](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405195548404.png)
 
 
 
@@ -65,7 +65,7 @@ LinkedList+ZipList
 
 内存占用低, 存储上限高
 
-![image-20240405201151086](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405201151086.png)
+![image-20240405201151086](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405201151086.png)
 
 ## Set
 
@@ -86,7 +86,7 @@ LinkedList+ZipList
 
 
 
-![image-20240405205853450](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405205853450.png)
+![image-20240405205853450](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405205853450.png)
 
 
 
@@ -101,7 +101,7 @@ LinkedList+ZipList
 
 
 
-![image-20240405205952847](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405205952847.png)
+![image-20240405205952847](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405205952847.png)
 
 
 
@@ -127,7 +127,7 @@ typedef struct zset{
 
 ### HashTable+SkipList
 
-![image-20240405211011738](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405211011738.png)
+![image-20240405211011738](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405211011738.png)
 
 数据重复存储, 肥肠臃肿内存占用很高
 
@@ -148,7 +148,7 @@ typedef struct zset{
 
 
 
-![image-20240405214418243](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405214418243.png)
+![image-20240405214418243](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405214418243.png)
 
 -   score越小越接近队首, score升序排序
 
@@ -170,9 +170,9 @@ typedef struct zset{
 
 
 
-![image-20240405215336522](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405215336522.png)
+![image-20240405215336522](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405215336522.png)
 
 ### HashTable
 
-![image-20240405215549570](../../assetss/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405215549570.png)
+![image-20240405215549570](../../assets/Day13-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E7%BC%96%E7%A0%81/image-20240405215549570.png)
 

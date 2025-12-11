@@ -14,7 +14,7 @@
 
 特征值+目标值
 
-![image-20240305151956111](../assetss/Untitled/image-20240305151956111.png)
+![image-20240305151956111](../assets/Untitled/image-20240305151956111.png)
 
 从而获取目标规律
 

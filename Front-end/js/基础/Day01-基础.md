@@ -73,7 +73,7 @@ const changeButtonValue = function (buttonElement) {
 </script>
 ```
 
-![image-20250807160443280](../../assetss/Day01-基础/image-20250807160443280.png)
+![image-20250807160443280](../../assets/Day01-基础/image-20250807160443280.png)
 
 ### document.write
 
@@ -89,7 +89,7 @@ const changeButtonValue = function (buttonElement) {
 
 
 
-![image-20250807162110117](../../assetss/Day01-基础/image-20250807162110117.png)
+![image-20250807162110117](../../assets/Day01-基础/image-20250807162110117.png)
 
 
 
@@ -115,7 +115,7 @@ const changeButtonValue = function (buttonElement) {
 };
 ```
 
-![image-20250807163724666](../../assetss/Day01-基础/image-20250807163724666.png)
+![image-20250807163724666](../../assets/Day01-基础/image-20250807163724666.png)
 
 ### window.print()
 
@@ -125,7 +125,7 @@ const changeButtonValue = function (buttonElement) {
 <button onclick="window.print()">打印此页</button>
 ```
 
-![image-20250807163954817](../../assetss/Day01-基础/image-20250807163954817.png)
+![image-20250807163954817](../../assets/Day01-基础/image-20250807163954817.png)
 
 ## 注释
 

@@ -92,7 +92,7 @@ Console.WriteLine($"max: {double.PositiveInfinity/*正无穷*/}, min: {double.Ne
 
 ## 引用类型
 
-<img src="../../assetss/Day01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/image-20240925112608694.png" alt="image-20240925112608694" style="zoom:50%;" />
+<img src="../../assets/Day01-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/image-20240925112608694.png" alt="image-20240925112608694" style="zoom:50%;" />
 
 ### object
 

@@ -97,7 +97,7 @@ GeoJson对象必须包含两个字段
 
 
 
-![Diagram of a Polygon with internal ring.](../../assetss/Day07-Geography/index-2dsphere-polygon-with-ring.bakedsvg.svg)
+![Diagram of a Polygon with internal ring.](../../assets/Day07-Geography/index-2dsphere-polygon-with-ring.bakedsvg.svg)
 
 
 

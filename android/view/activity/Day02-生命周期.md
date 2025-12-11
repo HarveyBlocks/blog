@@ -10,7 +10,7 @@ Android 使用任务（task）来管理Activity
 
 一个任务就是一组存放在栈里的 Activity 的集合，这个栈也被称作返回栈（back stack）
 
-<img src="../../assetss/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
+<img src="../../assets/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
 
 ## 状态
 
@@ -90,7 +90,7 @@ Android 使用任务（task）来管理Activity
 
 
 
-<img src="../../assetss/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
+<img src="../../assets/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
 
 ### 完整生存期
 
@@ -360,25 +360,25 @@ class MainActivity : AppCompatActivity() {
 
 1.  打开应用
 
-    ![image-20250908233849631](../../assetss/Day02-生命周期/image-20250908233849631.png)
+    ![image-20250908233849631](../../assets/Day02-生命周期/image-20250908233849631.png)
 
 2.  打开 Normal Activity
 
-    ![image-20250908233938881](../../assetss/Day02-生命周期/image-20250908233938881.png)
+    ![image-20250908233938881](../../assets/Day02-生命周期/image-20250908233938881.png)
 
 3.  返回 Normal Activity 到Main Activity
 
-    ![image-20250908234001902](../../assetss/Day02-生命周期/image-20250908234001902.png)
+    ![image-20250908234001902](../../assets/Day02-生命周期/image-20250908234001902.png)
 
 4.  打开Dialog Activity
 
-    ![image-20250908234054742](../../assetss/Day02-生命周期/image-20250908234054742.png)
+    ![image-20250908234054742](../../assets/Day02-生命周期/image-20250908234054742.png)
 
 5.  此时返回Dialog Activity 到 Main Activity
 
-    ![image-20250908234144846](../../assetss/Day02-生命周期/image-20250908234144846.png)
+    ![image-20250908234144846](../../assets/Day02-生命周期/image-20250908234144846.png)
 
 6.  退出程序
 
-    ![image-20250908234536141](../../assetss/Day02-生命周期/image-20250908234536141.png)
+    ![image-20250908234536141](../../assets/Day02-生命周期/image-20250908234536141.png)
 

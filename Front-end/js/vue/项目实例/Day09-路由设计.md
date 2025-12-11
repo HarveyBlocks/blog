@@ -88,11 +88,11 @@ export default router;
 </template>
 ```
 
-![image-20250826164456156](../../../assetss/Day09-路由设计/image-20250826164456156.png)
+![image-20250826164456156](../../../assets/Day09-路由设计/image-20250826164456156.png)
 
 更换成`/login`
 
-![image-20250826164531122](../../../assetss/Day09-路由设计/image-20250826164531122.png)
+![image-20250826164531122](../../../assets/Day09-路由设计/image-20250826164531122.png)
 
 ## 创建二级路由
 
@@ -138,7 +138,7 @@ export default router;
 </template>
 ```
 
-<img src="../../../assetss/Day09-路由设计/image-20250826165549828.png" alt="image-20250826165549828" style="zoom:50%;" />
+<img src="../../../assets/Day09-路由设计/image-20250826165549828.png" alt="image-20250826165549828" style="zoom:50%;" />
 
 制作二级路由目录
 

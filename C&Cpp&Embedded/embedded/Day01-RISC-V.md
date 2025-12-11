@@ -10,13 +10,13 @@ UC Berkeley设计
 
 [环境](https://venus.cs61c.org/)
 
-![image-20240226120320289](../assetss/Day01-RISC-V/image-20240226120320289.png)
+![image-20240226120320289](../assets/Day01-RISC-V/image-20240226120320289.png)
 
-![image-20240226120338835](../assetss/Day01-RISC-V/image-20240226120338835.png)
+![image-20240226120338835](../assets/Day01-RISC-V/image-20240226120338835.png)
 
-![image-20240226120451002](../assetss/Day01-RISC-V/image-20240226120451002.png)
+![image-20240226120451002](../assets/Day01-RISC-V/image-20240226120451002.png)
 
-![image-20240226120503386](../assetss/Day01-RISC-V/image-20240226120503386.png)
+![image-20240226120503386](../assets/Day01-RISC-V/image-20240226120503386.png)
 
 ## 寄存器和变量
 
@@ -59,11 +59,11 @@ add x1 x2 x3
 # x1, x2, x3 是opcode
 ```
 
-![image-20240226125224923](../assetss/Day01-RISC-V/image-20240226125224923.png)
+![image-20240226125224923](../assets/Day01-RISC-V/image-20240226125224923.png)
 
 ### RASI基础指令集
 
-![在这里插入图片描述](../assetss/Day01-RISC-V/e60e9bc08961493c81d1be18b3452b10.png)
+![在这里插入图片描述](../assets/Day01-RISC-V/e60e9bc08961493c81d1be18b3452b10.png)
 
 
 
@@ -88,7 +88,7 @@ addi x1 x2 常量
 
 12位带符号数拓展成32位会怎么做呢?
 
-![image-20240226133200536](../assetss/Day01-RISC-V/image-20240226133200536.png)
+![image-20240226133200536](../assets/Day01-RISC-V/image-20240226133200536.png)
 
 测试一下
 
@@ -96,7 +96,7 @@ addi x1 x2 常量
 addi x1 x0 -0x5 # 取反加一: 0000...0101, =>1111...1011=>0xF...B
 ```
 
-![image-20240226133451780](../assetss/Day01-RISC-V/image-20240226133451780.png)
+![image-20240226133451780](../assets/Day01-RISC-V/image-20240226133451780.png)
 
 
 
@@ -108,7 +108,7 @@ addi x1 x0 -0x5 # 取反加一: 0000...0101, =>1111...1011=>0xF...B
 mv x5 x4 # 将x4赋值给x5
 ```
 
-![image-20240226131244098](../assetss/Day01-RISC-V/image-20240226131244098.png)
+![image-20240226131244098](../assets/Day01-RISC-V/image-20240226131244098.png)
 
 
 
@@ -148,7 +148,7 @@ add x0 x0 x0
 
 ## 内存读写
 
-![image-20240226160554382](../assetss/Day01-RISC-V/image-20240226160554382.png)
+![image-20240226160554382](../assets/Day01-RISC-V/image-20240226160554382.png)
 
 ### 端序
 
@@ -166,7 +166,7 @@ add x0 x0 x0
 
 **大部分的指令集架构都是小端**, 早期是大端
 
-![image-20240226155810971](../assetss/Day01-RISC-V/image-20240226155810971.png)
+![image-20240226155810971](../assets/Day01-RISC-V/image-20240226155810971.png)
 
 
 
@@ -202,7 +202,7 @@ lhu x2 12(x3) # 无符号拓展
 
 ### Store
 
-![image-20240226160751346](../assetss/Day01-RISC-V/image-20240226160751346.png)
+![image-20240226160751346](../assets/Day01-RISC-V/image-20240226160751346.png)
 
 ## 指令集
 

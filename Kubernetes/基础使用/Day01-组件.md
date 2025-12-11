@@ -31,7 +31,7 @@
 
 
 
-![组件结构)](../assetss/Day01-%E7%BB%84%E4%BB%B6/image-20200406184656917.png)
+![组件结构)](../assets/Day01-%E7%BB%84%E4%BB%B6/image-20200406184656917.png)
 
 ## Master
 

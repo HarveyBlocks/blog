@@ -96,7 +96,7 @@ SingletonUser --> Singleton
 
 
 
-![image-20240604134849975](../../assetss/Day02-%E5%8D%95%E4%BE%8B/image-20240604134849975.png)
+![image-20240604134849975](../../assets/Day02-%E5%8D%95%E4%BE%8B/image-20240604134849975.png)
 
 ### 缺陷
 
@@ -406,5 +406,5 @@ private HungrySingletonObject() throws InstanceAlreadyExistsException {
 
 ## JDK中的单例
 
-![image-20240604191938965](../../assetss/Day02-%E5%8D%95%E4%BE%8B/image-20240604191938965.png)
+![image-20240604191938965](../../assets/Day02-%E5%8D%95%E4%BE%8B/image-20240604191938965.png)
 

@@ -257,7 +257,7 @@ ClientBulkWriteResult clientBulkWriteResult = mongoClient.bulkWrite(clientNamesp
 System.out.println(clientBulkWriteResult);
 ```
 
-![image-20251120212007035](../../assetss/Day03-Document/image-20251120212007035.png)
+![image-20251120212007035](../../assets/Day03-Document/image-20251120212007035.png)
 
 输出结果
 

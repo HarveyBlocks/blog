@@ -66,7 +66,7 @@ installer.exe --mirror https://mirrors.tuna.tsinghua.edu.cn/qt
 
 ### 使用Clion创建Qt项目
 
-<img src="../assetss/Day01-Qt/image-20240505211011513.png" alt="image-20240505211011513" style="zoom:40%;" />
+<img src="../assets/Day01-Qt/image-20240505211011513.png" alt="image-20240505211011513" style="zoom:40%;" />
 
 
 
@@ -213,7 +213,7 @@ QLabel 会自动解析 HTML 标记, 有多强大? 未知, 至少不能解析按�
     -   宽度 200 像素
     -   高度 40 像素
     
-    <img src="../assetss/Day01-Qt/image-20240506144212792.png" alt="image-20240506144212792" style="zoom:63%;" />
+    <img src="../assets/Day01-Qt/image-20240506144212792.png" alt="image-20240506144212792" style="zoom:63%;" />
     
 -   居中
 
@@ -222,7 +222,7 @@ QLabel 会自动解析 HTML 标记, 有多强大? 未知, 至少不能解析按�
     label->setText(QApplication::tr("<h1>你好 QT</h1>"));
     ```
 
-    <img src="../../assetss/Day01-Qt/image-20240506144608864.png" alt="image-20240506144608864" style="zoom:33%;" />
+    <img src="../../assets/Day01-Qt/image-20240506144608864.png" alt="image-20240506144608864" style="zoom:33%;" />
 
 
 
@@ -378,7 +378,7 @@ widget->setWindowTitle(QApplication::translate(
 
 
 
-![image-20240506124245894](../assetss/Day01-Qt/image-20240506124245894.png)
+![image-20240506124245894](../assets/Day01-Qt/image-20240506124245894.png)
 
 设置Label样式
 
@@ -390,5 +390,5 @@ label->setStyleSheet(QApplication::tr(
 ));
 ```
 
-![image-20240506124252302](../assetss/Day01-Qt/image-20240506124252302.png)
+![image-20240506124252302](../assets/Day01-Qt/image-20240506124252302.png)
 

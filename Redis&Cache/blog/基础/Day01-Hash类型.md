@@ -28,7 +28,7 @@ centos-redis:0>hset user:A gender '男'
 "OK"
 ```
 
-![image-20240102001912466](../../assetss/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102001912466.png)
+![image-20240102001912466](../../assets/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102001912466.png)
 
 -   标的是key其实是field
 
@@ -37,7 +37,7 @@ centos-redis:0>hset user:B id 2 name 'Mary' age 15 gender '女'
 "4"
 ```
 
-![image-20240102002101946](../../assetss/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102002101946.png)
+![image-20240102002101946](../../assets/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102002101946.png)
 
 
 
@@ -60,7 +60,7 @@ centos-redis:0>hdel user:A age
 "1"
 ```
 
-![image-20240102003610670](../../assetss/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102003610670.png)
+![image-20240102003610670](../../assets/Day01-Hash%E7%B1%BB%E5%9E%8B/image-20240102003610670.png)
 
 #### 获取
 

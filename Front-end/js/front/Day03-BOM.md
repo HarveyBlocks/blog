@@ -203,7 +203,7 @@ let s = window.prompt('some text', 'defaultText');
 console.log(s);
 ```
 
-![image-20250810220206291](../../assetss/Day03-BOM/image-20250810220206291.png)
+![image-20250810220206291](../../assets/Day03-BOM/image-20250810220206291.png)
 
 按下取消后, 返回`null`
 
@@ -233,12 +233,12 @@ document.cookie = 'key5=value5; expires=Thu, 18 Dec 2033 12:00:00 UTC; path=/';
 console.log(document.cookie);
 ```
 
-<img src="../../assetss/Day03-BOM/image-20250810223617244.png" alt="image-20250810223617244" style="zoom: 67%;" />
+<img src="../../assets/Day03-BOM/image-20250810223617244.png" alt="image-20250810223617244" style="zoom: 67%;" />
 
 -   set 的 逻辑比较特殊
 -   一次写入, 其实写入一条cookie, 而不会覆盖之前的cookie
 
-<img src="../../assetss/Day03-BOM/image-20250810223709669.png" alt="image-20250810223709669" style="zoom: 50%;" />
+<img src="../../assets/Day03-BOM/image-20250810223709669.png" alt="image-20250810223709669" style="zoom: 50%;" />
 
 -   通过`;`分割同一个cookie的不同属性
 

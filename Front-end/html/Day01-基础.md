@@ -202,7 +202,7 @@ alt提示图片失效时的文本
      width="300" height="200">
 ```
 
-![image-20250730151705619](../assetss/Day01-基础/image-20250730151705619.png)
+![image-20250730151705619](../assets/Day01-基础/image-20250730151705619.png)
 
 ### 高度和宽度
 
@@ -215,10 +215,10 @@ alt提示图片失效时的文本
 实现方法: `<a>`标签内嵌套`<img>`标签
 
 ```html
-<a href="https://www.w3schools.com/js/"><img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效"></a>
+<a href="https://www.w3schools.com/js/"><img src="..\assets\Day01-基础\javascript.svg" alt="图片失效"></a>
 ```
 
-<a href="https://www.w3schools.com/js/"><img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效" ></a>
+<a href="https://www.w3schools.com/js/"><img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" ></a>
 
 ### 图像对齐文本
 
@@ -234,7 +234,7 @@ alt提示图片失效时的文本
 <img src="public\javascript.svg" alt="图片失效" style="vertical-align: middle">文本
 ```
 
-![image-20250730155041374](../assetss/Day01-基础/image-20250730155041374.png)
+![image-20250730155041374](../assets/Day01-基础/image-20250730155041374.png)
 
 
 

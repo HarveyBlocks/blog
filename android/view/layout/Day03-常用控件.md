@@ -138,7 +138,7 @@ val inputText = editText.text.toString()
         />
 ```
 
-![image-20250909155402717](../../assetss/Day03-常用控件/image-20250909155402717.png)
+![image-20250909155402717](../../assets/Day03-常用控件/image-20250909155402717.png)
 
 在代码中修改文件
 
@@ -158,7 +158,7 @@ binding.imageView.setImageResource(R.drawable.img_2)
         />
 ```
 
-![image-20250909161504680](../../assetss/Day03-常用控件/image-20250909161504680.png)
+![image-20250909161504680](../../assets/Day03-常用控件/image-20250909161504680.png)
 
 可选属性`android:visibility`, 用于设置是否可见, 其值有三
 
@@ -197,7 +197,7 @@ binding.button.setOnClickListener {
 
 在当前界面弹出一个对话框，这个对话框是置顶于所有界面元素之上的，能够 屏蔽其他控件的交互能力
 
-<img src="../../assetss/Day03-常用控件/image-20250909165521698.png" alt="image-20250909165521698" style="zoom:50%;" />
+<img src="../../assets/Day03-常用控件/image-20250909165521698.png" alt="image-20250909165521698" style="zoom:50%;" />
 
 
 

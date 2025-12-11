@@ -132,13 +132,13 @@ public static SocketChannel accept(final ServerSocketChannel serverSocketChannel
 
 #### 加入readBuf
 
-![image-20240403213323201](../../assetss/Day11-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/image-20240403213323201.png)
+![image-20240403213323201](../../assets/Day11-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/image-20240403213323201.png)
 
 #### 将readBuf加入ServerSocketChannel流水线
 
 获取流水线`pipeline`
 
-![](../../assetss/Day11-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/image-20240403213739764.png)
+![](../../assets/Day11-%E4%BA%8B%E4%BB%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/image-20240403213739764.png)
 
 ```java
 @Override

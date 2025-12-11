@@ -135,7 +135,7 @@
 </form>
 
 复选框有半选状态`indeterminate`
-![image-20250827064908685](../assetss/Day04-表单/image-20250827064908685.png)
+![image-20250827064908685](../assets/Day04-表单/image-20250827064908685.png)
 
 ```html
 <input checked type="checkbox" indeterminate name="value[]" value="2">

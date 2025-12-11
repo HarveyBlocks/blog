@@ -4,7 +4,7 @@
 
 ## 组件继承结构
 
-<img src="../../assetss/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
+<img src="../../assets/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-<img src="../../assetss/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
+<img src="../../assets/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
 
 
 
@@ -122,7 +122,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 以下是运行效果
 
-![image-20250913214400033](../../assetss/Day04-自定义控件/image-20250913214400033.png)
+![image-20250913214400033](../../assets/Day04-自定义控件/image-20250913214400033.png)
 
 在代码中调用目标控件
 

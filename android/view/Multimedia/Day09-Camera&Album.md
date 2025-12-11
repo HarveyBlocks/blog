@@ -34,7 +34,7 @@
 
 在xml文件夹下创建file_paths.xml
 
-<img src="../../assetss/Day09-Camera&Album/image-20250919175218652.png" alt="image-20250919175218652" style="zoom:50%;" />
+<img src="../../assets/Day09-Camera&Album/image-20250919175218652.png" alt="image-20250919175218652" style="zoom:50%;" />
 
 在其中编写
 

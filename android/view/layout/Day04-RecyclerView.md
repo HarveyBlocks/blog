@@ -158,7 +158,7 @@ layoutManager.orientation = LinearLayoutManager.HORIZONTAL
 binding.recyclerView.layoutManager = layoutManager
 ```
 
-![image-20250914200225299](../../assetss/Day04-RecyclerView/image-20250914200225299.png)
+![image-20250914200225299](../../assets/Day04-RecyclerView/image-20250914200225299.png)
 
 横向布局后, 如果还保留原先的一个item占据一行, 就会很丑, 故重新设计item的布局
 
@@ -192,7 +192,7 @@ binding.recyclerView.layoutManager = layoutManager
 - 改 layout_marginEnd 和 layout_marginStart 为固定大小, item之间保持一定间距
 - 改 layout_gravity 为水平
 
-![image-20250914201145257](../../assetss/Day04-RecyclerView/image-20250914201145257.png)
+![image-20250914201145257](../../assets/Day04-RecyclerView/image-20250914201145257.png)
 
 ### 网格布局
 
@@ -210,7 +210,7 @@ binding.recyclerView.layoutManager = layoutManager
 binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 ```
 
-<img src="../../assetss/Day04-RecyclerView/image-20250914202348222.png" alt="image-20250914202348222" style="zoom:50%;" />
+<img src="../../assets/Day04-RecyclerView/image-20250914202348222.png" alt="image-20250914202348222" style="zoom:50%;" />
 
 
 
@@ -229,7 +229,7 @@ binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 
 > StaggeredGridLayoutManager
 
-<img src="../../assetss/Day04-RecyclerView/Screenshot_20250914_203212.jpg" alt="Screenshot_20250914_203212" style="zoom: 25%;" />
+<img src="../../assets/Day04-RecyclerView/Screenshot_20250914_203212.jpg" alt="Screenshot_20250914_203212" style="zoom: 25%;" />
 
 一个个元素之间高度不对齐, 依据内容分别排列, 这就是瀑布布局
 
@@ -284,7 +284,7 @@ item的layout, height要是warp_content, 才符合瀑布的样子, width是match
 
 测试运行
 
-<img src="../../assetss/Day04-RecyclerView/image-20250914204218867.png" alt="image-20250914204218867" style="zoom:50%;" />
+<img src="../../assets/Day04-RecyclerView/image-20250914204218867.png" alt="image-20250914204218867" style="zoom:50%;" />
 
 ## 点击事件
 
@@ -339,21 +339,21 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 例如对话框气泡
 
-![message_left_original](../../assetss/Day04-RecyclerView/message_left_original.png)
+![message_left_original](../../assets/Day04-RecyclerView/message_left_original.png)
 
 #### 制作
 
 选中原图片后右击
 
-<img src="../../assetss/Day04-最佳实践/image-20250914211501914.png" alt="image-20250914211501914" style="zoom:30%;" />
+<img src="../../assets/Day04-最佳实践/image-20250914211501914.png" alt="image-20250914211501914" style="zoom:30%;" />
 
 设置文件名后保存(原图在创建9-Patch之后可以删除)
 
-<img src="../../assetss/Day04-最佳实践/image-20250914211602427.png" alt="image-20250914211602427" style="zoom:50%;" />
+<img src="../../assets/Day04-最佳实践/image-20250914211602427.png" alt="image-20250914211602427" style="zoom:50%;" />
 
 其操作界面如下
 
-<img src="../../assetss/Day04-最佳实践/image-20250914211701400.png" alt="image-20250914211701400" style="zoom:50%;" />
+<img src="../../assets/Day04-最佳实践/image-20250914211701400.png" alt="image-20250914211701400" style="zoom:50%;" />
 
 
 
@@ -363,13 +363,13 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 右边是假设进行了一些扩展后的预览
 
-<img src="../../assetss/Day04-最佳实践/image-20250914211829297.png" alt="image-20250914211829297" style="zoom:50%;" />
+<img src="../../assets/Day04-最佳实践/image-20250914211829297.png" alt="image-20250914211829297" style="zoom:50%;" />
 
 长按Shift键拖动可以进行擦除
 
 最终的结果
 
-<img src="../../assetss/Day04-最佳实践/image-20250914212040896.png" alt="image-20250914212040896" style="zoom:50%;" />
+<img src="../../assets/Day04-最佳实践/image-20250914212040896.png" alt="image-20250914212040896" style="zoom:50%;" />
 
 最终可以延长的部分是指所有黑线重叠的部分(交集)
 
@@ -395,7 +395,7 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
     </LinearLayout>
 ```
 
-![image-20250914211241873](../../assetss/Day04-RecyclerView/image-20250914211241873.png)
+![image-20250914211241873](../../assets/Day04-RecyclerView/image-20250914211241873.png)
 
 ### RecyclerView不同的ViewHolder类型创建不同的页面
 

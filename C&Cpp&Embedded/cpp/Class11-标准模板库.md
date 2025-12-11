@@ -463,7 +463,7 @@ bidirectional-->
 randomAcess
 ```
 
-![image-20240612143049176](../assetss/Class11-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93/image-20240612143049176.png)
+![image-20240612143049176](../assets/Class11-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93/image-20240612143049176.png)
 
 ### find()
 

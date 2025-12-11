@@ -39,7 +39,7 @@
     cat /var/log/mysqld.log | grep "temporary password"
     ```
 
-    ![image-20240101192940263](../../Kubernetes/assetss/Day06-MySQL%E5%AE%89%E8%A3%85/image-20240101192940263.png)
+    ![image-20240101192940263](../../Kubernetes/assets/Day06-MySQL%E5%AE%89%E8%A3%85/image-20240101192940263.png)
 
 5.  进入mysql
 
@@ -123,7 +123,7 @@
     grep "temporary password" /var/log/mysqld.log
     ```
 
-    ![image-20240101192940263](../../Kubernetes/assetss/Day06-MySQL%E5%AE%89%E8%A3%85/image-20240101192940263-1715341408584.png)
+    ![image-20240101192940263](../../Kubernetes/assets/Day06-MySQL%E5%AE%89%E8%A3%85/image-20240101192940263-1715341408584.png)
 
 5.  进入mysql
 

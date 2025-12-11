@@ -6,9 +6,9 @@
 
 分治
 
-![img](../../assetss/Day01-%E5%BD%92%E4%BA%95%E6%8E%92%E5%BA%8F/20200524221406526.gif)
+![img](../../assets/Day01-%E5%BD%92%E4%BA%95%E6%8E%92%E5%BA%8F/20200524221406526.gif)
 
-<img src="../../assetss/Day01-%E5%BD%92%E4%BA%95%E6%8E%92%E5%BA%8F/image-20240617145849061.png" alt="image-20240617145849061" style="zoom:67%;" />
+<img src="../../assets/Day01-%E5%BD%92%E4%BA%95%E6%8E%92%E5%BA%8F/image-20240617145849061.png" alt="image-20240617145849061" style="zoom:67%;" />
 
 ## 实现
 

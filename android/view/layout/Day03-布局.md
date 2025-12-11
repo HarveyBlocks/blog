@@ -8,7 +8,7 @@
 
 通过多层布局的嵌套，完成一些比较复杂的界面实现
 
-![image-20250909173332385](../../assetss/Day04-布局/image-20250909173332385.png)
+![image-20250909173332385](../../assets/Day04-布局/image-20250909173332385.png)
 
 ## LinearLayout
 
@@ -44,13 +44,13 @@
 </LinearLayout>
 ```
 
-<img src="../../assetss/Day04-布局/image-20250909173751059.png" alt="image-20250909173751059" style="zoom:70%;" />
+<img src="../../assets/Day04-布局/image-20250909173751059.png" alt="image-20250909173751059" style="zoom:70%;" />
 
 
 
 设置成`horizontal`水平
 
-<img src="../../assetss/Day04-布局/image-20250909173809497.png" alt="image-20250909173809497" style="zoom:70%;" />
+<img src="../../assets/Day04-布局/image-20250909173809497.png" alt="image-20250909173809497" style="zoom:70%;" />
 
 如果LinearLayout的排列方向是horizontal，内部的控件就绝对不能将宽度指定为match_parent
 
@@ -99,7 +99,7 @@
 </LinearLayout>
 ```
 
-<img src="../../assetss/Day04-布局/image-20250909181319810.png" alt="image-20250909181319810" style="zoom:50%;" />
+<img src="../../assets/Day04-布局/image-20250909181319810.png" alt="image-20250909181319810" style="zoom:50%;" />
 
 
 
@@ -138,7 +138,7 @@
 
 
 
-![image-20250909181431796](../../assetss/Day04-布局/image-20250909181431796.png)
+![image-20250909181431796](../../assets/Day04-布局/image-20250909181431796.png)
 
 
 
@@ -176,7 +176,7 @@
 </LinearLayout>
 ```
 
-![image-20250909182415369](../../assetss/Day04-布局/image-20250909182415369.png)
+![image-20250909182415369](../../assets/Day04-布局/image-20250909182415369.png)
 
 
 
@@ -205,7 +205,7 @@
 </LinearLayout>
 ```
 
-![image-20250909182838865](../../assetss/Day04-布局/image-20250909182838865.png)
+![image-20250909182838865](../../assets/Day04-布局/image-20250909182838865.png)
 
 ## RelativeLayout
 
@@ -265,7 +265,7 @@
 -   ` android:layout_alignParentTop`
 -   `android:layout_alignParentBottom`
 
-<img src="../../assetss/Day04-布局/image-20250910103008328.png" alt="image-20250910103008328" style="zoom:67%;" />
+<img src="../../assets/Day04-布局/image-20250910103008328.png" alt="image-20250910103008328" style="zoom:67%;" />
 
 
 
@@ -329,7 +329,7 @@
 
 当一个控件去引用另一个控件的id时，该控件**一定要定义在引用控件的后面**，不然会出现找不到id的情况。
 
-![image-20250910103817776](../../assetss/Day04-布局/image-20250910103817776.png)
+![image-20250910103817776](../../assets/Day04-布局/image-20250910103817776.png)
 
 ## FrameLayout
 
@@ -358,7 +358,7 @@
 
 两个组件都在左上角, 重叠展示
 
-![image-20250910105528509](../../assetss/Day04-布局/image-20250910105528509.png)
+![image-20250910105528509](../../assets/Day04-布局/image-20250910105528509.png)
 
 
 

@@ -56,19 +56,19 @@ body {background-image:url('bgdesert.jpg');}
 
 -   对image进行平铺(默认会进行平铺)
 
-    <img src="../assetss/Day01-属性/image-20250803165751457.png" alt="image-20250803165751457" style="zoom:33%;" />
+    <img src="../assets/Day01-属性/image-20250803165751457.png" alt="image-20250803165751457" style="zoom:33%;" />
 
 -   repeat-x 值, 在x轴(水平)方向上平铺
 
-    <img src="../assetss/Day01-属性/image-20250803165813325.png" alt="image-20250803165813325" style="zoom:33%;" />
+    <img src="../assets/Day01-属性/image-20250803165813325.png" alt="image-20250803165813325" style="zoom:33%;" />
 
 -   repeat-y 值, 在y轴(垂直)方向上平铺
 
-    <img src="../assetss/Day01-属性/image-20250803165829885.png" alt="image-20250803165829885" style="zoom:33%;" />
+    <img src="../assets/Day01-属性/image-20250803165829885.png" alt="image-20250803165829885" style="zoom:33%;" />
 
 -   no-repeat 值, 不进行平铺
 
-    <img src="../assetss/Day01-属性/image-20250803165848279.png" alt="image-20250803165848279" style="zoom:33%;" />
+    <img src="../assets/Day01-属性/image-20250803165848279.png" alt="image-20250803165848279" style="zoom:33%;" />
 
 ### 位置
 
@@ -82,7 +82,7 @@ body {
 }
 ```
 
-<img src="../assetss/Day01-属性/image-20250803165952866.png" alt="image-20250803165952866" style="zoom:33%;" />
+<img src="../assets/Day01-属性/image-20250803165952866.png" alt="image-20250803165952866" style="zoom:33%;" />
 
 ### 背景附着
 
@@ -292,14 +292,14 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 
     -   可以被浏览器设置(Edge为例)
 
-        ![image-20250803225949060](../assetss/Day01-属性/image-20250803225949060.png)
+        ![image-20250803225949060](../assets/Day01-属性/image-20250803225949060.png)
 
 ```html
 <div style="font-size: 1em">1em</div>
 <div style="font-size: 16px">16px</div>
 ```
 
-![image-20250803230014903](../assetss/Day01-属性/image-20250803230014903.png)
+![image-20250803230014903](../assets/Day01-属性/image-20250803230014903.png)
 
 
 
@@ -319,7 +319,7 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 <div style="font-weight: 1000 ; font-size: 50px">Hello World</div>
 ```
 
-![image-20250803231854455](../assetss/Day01-属性/image-20250803231854455.png)
+![image-20250803231854455](../assets/Day01-属性/image-20250803231854455.png)
 
 ## 链接
 
@@ -460,7 +460,7 @@ inside(似乎也会和内容一起处于"居中"):
 </ul>
 ```
 
-![image-20250805200218113](../assetss/Day01-元素样式/image-20250805200218113.png)
+![image-20250805200218113](../assets/Day01-元素样式/image-20250805200218113.png)
 
 outside:
 
@@ -472,7 +472,7 @@ outside:
 </ul>
 ```
 
-![image-20250805200138769](../assetss/Day01-元素样式/image-20250805200138769.png)
+![image-20250805200138769](../assets/Day01-元素样式/image-20250805200138769.png)
 
 
 
@@ -510,7 +510,7 @@ table, th, td {
 }
 ```
 
-![image-20250805202521197](../assetss/Day01-元素样式/image-20250805202521197.png)
+![image-20250805202521197](../assets/Day01-元素样式/image-20250805202521197.png)
 
 -   border-collapse 属性, 用于单一边框
 

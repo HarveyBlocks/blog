@@ -42,7 +42,7 @@ UV节点可以作为输入,  链接Sample textual 2D 节点来引导纹理贴在
 
 创建一个ST 2D 节点 
 
-<img src="../../assetss/Day08-UV节点/image-20250929150844895.png" alt="image-20250929150844895" style="zoom:50%;" />
+<img src="../../assets/Day08-UV节点/image-20250929150844895.png" alt="image-20250929150844895" style="zoom:50%;" />
 
 
 
@@ -60,7 +60,7 @@ UV节点可以作为输入,  链接Sample textual 2D 节点来引导纹理贴在
 
 
 
-<img src="../../assetss/Day08-UV节点/image-20250929150055911.png" alt="image-20250929150055911" style="zoom:33%;" />
+<img src="../../assets/Day08-UV节点/image-20250929150055911.png" alt="image-20250929150055911" style="zoom:33%;" />
 
 
 
@@ -78,7 +78,7 @@ Step越大, 过度越平滑
 
 
 
-![image-20250929150459246](../../assetss/Day08-UV节点/image-20250929150459246.png)
+![image-20250929150459246](../../assets/Day08-UV节点/image-20250929150459246.png)
 
 去除Splite, 发现像素化的方式只和XY有关, 和ZW的Step的变化无关
 
@@ -86,7 +86,7 @@ Step越大, 过度越平滑
 
 ### 像素画 ST2D
 
-<img src="../../assetss/Day08-UV节点/image-20250929151027513.png" alt="image-20250929151027513" style="zoom:50%;" />
+<img src="../../assets/Day08-UV节点/image-20250929151027513.png" alt="image-20250929151027513" style="zoom:50%;" />
 
 将用Posterize像素画的UV的四位向量注入ST2D中, 完成了对ST2D纹理的像素化
 
@@ -96,5 +96,5 @@ Step越大, 过度越平滑
 
 Project-> 右键->Create->ShaderGraph->URP->
 
-![image-20250929143930213](../../assetss/Day08-UV节点/image-20250929143930213.png)
+![image-20250929143930213](../../assets/Day08-UV节点/image-20250929143930213.png)
 

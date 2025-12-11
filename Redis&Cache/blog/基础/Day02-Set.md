@@ -85,7 +85,7 @@ SisMember Set member
 
 
 
-![image-20231029120848794](../../assetss/image-20231029120848794.png)
+![image-20231029120848794](../../assets/image-20231029120848794.png)
 
 ### 交
 

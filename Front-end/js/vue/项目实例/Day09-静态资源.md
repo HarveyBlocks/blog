@@ -6,7 +6,7 @@
 
 1.   images放入assets
 
-     <img src="../../../assetss/Day09-静态资源/image-20250826170324620.png" alt="image-20250826170324620" style="zoom:50%;" />
+     <img src="../../../assets/Day09-静态资源/image-20250826170324620.png" alt="image-20250826170324620" style="zoom:50%;" />
 
 2.   commons.scss放入styles下
 

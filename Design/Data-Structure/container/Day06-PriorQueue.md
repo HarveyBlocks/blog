@@ -88,7 +88,7 @@ void increasePriority(int index, T newPriority) {
 }
 ```
 
-<img src="../../assetss/Day06-PriorQueue/image-20240618182511967.png" alt="image-20240618182511967" style="zoom:80%;" />
+<img src="../../assets/Day06-PriorQueue/image-20240618182511967.png" alt="image-20240618182511967" style="zoom:80%;" />
 
 将要加入的元素加入堆/队尾
 

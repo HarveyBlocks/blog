@@ -9,9 +9,9 @@
 1.  双向链表
 2.  元素升序排序
 
-![image-20240405164758014](../../assetss/Day14-SkipList/image-20240405164758014.png)
+![image-20240405164758014](../../assets/Day14-SkipList/image-20240405164758014.png)
 
-![image-20240405164822551](../../assetss/Day14-SkipList/image-20240405164822551.png)
+![image-20240405164822551](../../assets/Day14-SkipList/image-20240405164822551.png)
 
 跳表最多支持32个指针
 
@@ -35,7 +35,7 @@ typedef struct zskiplist{
 } zskiplist;
 ```
 
-![image-20240405171258290](../../assetss/Day14-SkipList/image-20240405171258290.png)
+![image-20240405171258290](../../assets/Day14-SkipList/image-20240405171258290.png)
 
 1.  跨度最大的, 尝试查一下
     -   比目标大, 重复1

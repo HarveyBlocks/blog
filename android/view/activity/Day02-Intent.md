@@ -19,7 +19,7 @@ Intent用于Android程序中各组件之间的交互
 
 
 
-<img src="../../assetss/Day03-Intent/image-20250908094943709.png" alt="image-20250908094943709" style="zoom: 33%;" />
+<img src="../../assets/Day03-Intent/image-20250908094943709.png" alt="image-20250908094943709" style="zoom: 33%;" />
 
 注册Manifest
 

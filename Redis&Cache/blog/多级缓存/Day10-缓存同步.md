@@ -49,7 +49,7 @@
 
 监听Mysql, 实现数据同步
 
-![image-20240219203231747](../../assetss/Day10-%E7%BC%93%E5%AD%98%E5%90%8C%E6%AD%A5/image-20240219203231747.png)
+![image-20240219203231747](../../assets/Day10-%E7%BC%93%E5%AD%98%E5%90%8C%E6%AD%A5/image-20240219203231747.png)
 
 
 
@@ -57,7 +57,7 @@ Canel是阿里巴巴基于Java开发, 基于数据库**增量日志**解析, 提
 
 Canel会伪装成Mysql数据库的Slave节点, 从而监听master的binary log的变化, 再把消息通知给Canel客户端,进而完成对其他数据库的同步
 
-![image-20240219203706946](../../assetss/Day10-%E7%BC%93%E5%AD%98%E5%90%8C%E6%AD%A5/image-20240219203706946.png)
+![image-20240219203706946](../../assets/Day10-%E7%BC%93%E5%AD%98%E5%90%8C%E6%AD%A5/image-20240219203706946.png)
 
 
 

@@ -43,7 +43,7 @@
 </ul>
 ```
 
-![image-20250806004016066](../assetss/Day02-布局/image-20250806004016066.png)
+![image-20250806004016066](../assets/Day02-布局/image-20250806004016066.png)
 
 
 
@@ -84,7 +84,7 @@
 <div class="static">static</div>
 ```
 
-![image-20250805224719804](../assetss/Day02-布局/image-20250805224719804.png)
+![image-20250805224719804](../assets/Day02-布局/image-20250805224719804.png)
 
 ### fixed
 
@@ -150,7 +150,7 @@ div.in{
 </div>
 ```
 
-![image-20250805230948617](../assetss/Day02-布局/image-20250805230948617.png)
+![image-20250805230948617](../assets/Day02-布局/image-20250805230948617.png)
 
 -   `absolute` 元素**会脱离文档流**，**不再占用空间**，因此会直接改变兄弟元素的布局位置。
 -   `relative` 在文档流中原本占据的空间仍会保留，兄弟元素会在其后一样排列
@@ -203,7 +203,7 @@ div.sticky {
 ```html
 <div><!--用于重叠的空间-->
     <div style="position: absolute;z-index: 2">元素一</div>
-    <div style="position: absolute;z-index: 1"><img src="../assetss/Day02-布局/image-20250805230948617.png" alt="js"></div>
+    <div style="position: absolute;z-index: 1"><img src="../assets/Day02-布局/image-20250805230948617.png" alt="js"></div>
 </div>
 ```
 
@@ -211,7 +211,7 @@ div.sticky {
 
 <div style="height: 500px;"><!--用于重叠的空间-->
     <div style="position: absolute;z-index: 2;font-size: 80px">元素一</div>
-    <div style="border: solid 3px; width: 800px;height: 500px;position: absolute;z-index: 1"><img src="../assetss/Day02-布局/image-20250805230948617.png" alt="js"></div>
+    <div style="border: solid 3px; width: 800px;height: 500px;position: absolute;z-index: 1"><img src="../assets/Day02-布局/image-20250805230948617.png" alt="js"></div>
 </div>
 
 
@@ -271,15 +271,15 @@ div.sticky {
 </div>
 ```
 
-![image-20250806000420763](../assetss/Day02-布局/image-20250806000420763.png)将元素浮动(left)
+![image-20250806000420763](../assets/Day02-布局/image-20250806000420763.png)将元素浮动(left)
 
-![image-20250806000502129](../assetss/Day02-布局/image-20250806000502129.png)
+![image-20250806000502129](../assets/Day02-布局/image-20250806000502129.png)
 
 将元素浮动(right)
 
 
 
-![image-20250806000613541](../assetss/Day02-布局/image-20250806000613541.png)
+![image-20250806000613541](../assets/Day02-布局/image-20250806000613541.png)
 
 
 
@@ -311,13 +311,13 @@ div.sticky {
 </div>
 ```
 
-![image-20250806010122981](../assetss/Day02-布局/image-20250806010122981.png)
+![image-20250806010122981](../assets/Day02-布局/image-20250806010122981.png)
 
 但是, 这个文字所在的`<div>`块, 其边框显示, 这个`div`有一部分会穿过元素, 不希望这样
 
 于是对文本增加`clear:left`
 
-![image-20250806010409269](../assetss/Day02-布局/image-20250806010409269.png)
+![image-20250806010409269](../assets/Day02-布局/image-20250806010409269.png)
 
 
 
@@ -591,7 +591,7 @@ div.sticky {
 
 
 
-![image-20251031104830760](../assetss/Day02-布局/image-20251031104830760.png)
+![image-20251031104830760](../assets/Day02-布局/image-20251031104830760.png)
 
 ### flex-wrap
 
@@ -610,11 +610,11 @@ div.sticky {
 
 默认情况(nowarp), 自动调整flex宽度
 
-![image-20251031105243834](../assetss/Day02-布局/image-20251031105243834.png)
+![image-20251031105243834](../assets/Day02-布局/image-20251031105243834.png)
 
 使用wrap-reverse
 
-![image-20251031105116586](../assetss/Day02-布局/image-20251031105116586.png)
+![image-20251031105116586](../assets/Day02-布局/image-20251031105116586.png)
 
 ### flex-flow
 

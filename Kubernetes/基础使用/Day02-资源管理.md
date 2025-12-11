@@ -12,7 +12,7 @@ Kubernetes通过**pod控制器**管理pod的container资源
 
 pod提供服务, **service**访问pod 的服务
 
-![img](../assetss/Day02-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/image-20200406225334627.png)
+![img](../assets/Day02-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86/image-20200406225334627.png)
 
 ## 资源管理方式
 

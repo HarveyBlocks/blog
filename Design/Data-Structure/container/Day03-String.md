@@ -34,7 +34,7 @@ fgabcde
 
 
 
-<img src="../../assetss/Day03-String/image-20240615203841717.png" alt="image-20240615203841717" style="zoom:50%;" />
+<img src="../../assets/Day03-String/image-20240615203841717.png" alt="image-20240615203841717" style="zoom:50%;" />
 
 1.  reverse(string[0:length])
 2.  reverse(string[0:n])

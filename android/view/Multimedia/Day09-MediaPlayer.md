@@ -19,7 +19,7 @@
 
 创建目录`src\main\assets`, 音频文件放入其目录下
 
-![image-20250920152028202](../../assetss/Day10-MediaPlayer/image-20250920152028202.png)
+![image-20250920152028202](../../assets/Day10-MediaPlayer/image-20250920152028202.png)
 
 
 
@@ -120,7 +120,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 在`res\raw`下存放视频文件
 
-<img src="../../assetss/Day10-MediaPlayer/image-20250920161556537-1758356886299.png" alt="image-20250920161556537" style="zoom:50%;" />
+<img src="../../assets/Day10-MediaPlayer/image-20250920161556537-1758356886299.png" alt="image-20250920161556537" style="zoom:50%;" />
 
 
 

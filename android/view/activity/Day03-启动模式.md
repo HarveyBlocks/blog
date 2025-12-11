@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-![image-20250909084439178](../../assetss/Day03-启动模式/image-20250909084439178.png)
+![image-20250909084439178](../../assets/Day03-启动模式/image-20250909084439178.png)
 
 每次都是新的实例
 

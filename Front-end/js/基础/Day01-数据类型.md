@@ -64,7 +64,7 @@ console.log('string')
 console.log({ name: 'Mike', age: 12, });
 ```
 
-![image-20250807184307420](../../assetss/Day01-数据类型/image-20250807184307420.png)
+![image-20250807184307420](../../assets/Day01-数据类型/image-20250807184307420.png)
 
 最后允许有一个逗号
 
@@ -74,7 +74,7 @@ console.log({ name: 'Mike', age: 12, });
 console.log(['Mike', 12]);
 ```
 
-![image-20250807184351106](../../assetss/Day01-数据类型/image-20250807184351106.png)
+![image-20250807184351106](../../assets/Day01-数据类型/image-20250807184351106.png)
 
 最后允许有一个逗号
 

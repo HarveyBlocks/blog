@@ -127,7 +127,7 @@ function onClick() {
 }
 ```
 
-![image-20250811001416431](../../assetss/Day03-表单/image-20250811001416431.png)
+![image-20250811001416431](../../assets/Day03-表单/image-20250811001416431.png)
 
 ### validity属性
 

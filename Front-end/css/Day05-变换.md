@@ -39,7 +39,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo" />
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo" />
   </div>
 </template>
 <style scoped>
@@ -51,7 +51,7 @@
 
 
 
-![image-20250819213902643](../assetss/Day05-变换/image-20250819213902643.png)
+![image-20250819213902643](../assets/Day05-变换/image-20250819213902643.png)
 
 
 
@@ -72,7 +72,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -83,7 +83,7 @@
 </style>
 ```
 
-![image-20250819213930464](../assetss/Day05-变换/image-20250819213930464.png)
+![image-20250819213930464](../assets/Day05-变换/image-20250819213930464.png)
 
 ### 倾斜
 
@@ -97,7 +97,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -108,7 +108,7 @@
 </style>
 ```
 
-![image-20250819214159345](../assetss/Day05-变换/image-20250819214159345.png)
+![image-20250819214159345](../assets/Day05-变换/image-20250819214159345.png)
 
 ### 位移
 
@@ -117,7 +117,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -128,7 +128,7 @@
 </style>
 ```
 
-![image-20250819214326039](../assetss/Day05-变换/image-20250819214326039.png)
+![image-20250819214326039](../assets/Day05-变换/image-20250819214326039.png)
 
 ### 缩放
 
@@ -137,7 +137,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -157,7 +157,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -168,7 +168,7 @@
 </style>
 ```
 
-![image-20250819214751232](../assetss/Day05-变换/image-20250819214751232.png)
+![image-20250819214751232](../assets/Day05-变换/image-20250819214751232.png)
 
 ## 三维属性
 

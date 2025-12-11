@@ -366,7 +366,7 @@ DEventLoop2((EventLoop2))
 
 
 
-![](../../assetss/Day05-EventLoop/0041.png)
+![](../../assets/Day05-EventLoop/0041.png)
 
 
 

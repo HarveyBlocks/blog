@@ -1,6 +1,6 @@
 # 使用
 
-![img](../../assetss/Day17-使用/v2-35025ef2bd08c19887f6b1cf928f9f17_1440w.jpg)
+![img](../../assets/Day17-使用/v2-35025ef2bd08c19887f6b1cf928f9f17_1440w.jpg)
 
 ## load resource
 

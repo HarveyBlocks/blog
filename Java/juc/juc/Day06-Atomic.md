@@ -254,11 +254,11 @@ AtomicReferenceFieldUpdater<Student, MyNumber> studentScoreUpdater = AtomicRefer
 
 
 
-![image-20240911150554078](../assetss/Day06-Atomic/image-20240911150554078.png)
+![image-20240911150554078](../assets/Day06-Atomic/image-20240911150554078.png)
 
 修饰了volatile之后
 
-![image-20240911151436327](../assetss/Day06-Atomic/image-20240911151436327.png)
+![image-20240911151436327](../assets/Day06-Atomic/image-20240911151436327.png)
 
 尝试过了, 真的对private毫无办法, 真的菜!
 

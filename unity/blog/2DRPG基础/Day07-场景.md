@@ -4,7 +4,7 @@
 
 在Hierarchy窗口显示多个场景
 
-![image-20241030201312365](../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241030201312365.png)
+![image-20241030201312365](../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030201312365.png)
 
 通过将场景文件拖拽到Hierarchy窗口而不是双击场景文件
 
@@ -16,13 +16,13 @@
 
 人物, 敌人,摄像机和场景并没有强绑定, 那就创建有一个持久化场景, 将这些和场景没有强绑定的对象放入此场景
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241030202719663.png" alt="image-20241030202719663" style="zoom:50%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030202719663.png" alt="image-20241030202719663" style="zoom:50%;" />
 
 
 
 让后以Persisten为主要场景
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241030202841193.png" alt="image-20241030202841193" style="zoom:50%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030202841193.png" alt="image-20241030202841193" style="zoom:50%;" />
 
 地图切换就是将不同的场景加载到和Persisten场景同级
 
@@ -30,15 +30,15 @@
 
 Hierarchy->选中场景->右键选择UnloadSence
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241031103013614.png" alt="image-20241031103013614" style="zoom:50%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241031103013614.png" alt="image-20241031103013614" style="zoom:50%;" />
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241031103048416.png" alt="image-20241031103048416" style="zoom:80%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241031103048416.png" alt="image-20241031103048416" style="zoom:80%;" />
 
 
 
 此时添加新的对象时, 优先添加到Persistent, 选中场景, 选择set Active sence, 即可将默认添加位置改变
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241031103250374.png" alt="image-20241031103250374" style="zoom:80%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241031103250374.png" alt="image-20241031103250374" style="zoom:80%;" />
 
 
 
@@ -58,23 +58,23 @@ Hierarchy->选中场景->右键选择UnloadSence
 
 5.   重命名Addressables
 
-     <img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221350816.png" alt="image-20241102221350816" style="zoom:50%;" />
+     <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221350816.png" alt="image-20241102221350816" style="zoom:50%;" />
 
 6.   将project的sence在inspector中勾选Addressable, 即将场景加载到Addressable中
 
-     <img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221335962.png" alt="image-20241102221335962" style="zoom:50%;" />
+     <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221335962.png" alt="image-20241102221335962" style="zoom:50%;" />
 
-     <img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221455905.png" alt="image-20241102221455905" style="zoom:50%;" />
+     <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221455905.png" alt="image-20241102221455905" style="zoom:50%;" />
 
 7.   一个场景在Addressable中勾选, 就会自动取消其在Build Setting中的勾选
 
-     ![image-20241102221215053](../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221215053.png)
+     ![image-20241102221215053](../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221215053.png)
 
      因为Build打包是用全部文件打包的方式, Addressable采用部分打包, 部分寻址的方式
 
 8.   全选, Simplify Addressable names
 
-     <img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241102221536246.png" alt="image-20241102221536246" style="zoom:50%;" />
+     <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241102221536246.png" alt="image-20241102221536246" style="zoom:50%;" />
 
 9.   Addressable Groups->New -> Packed Asset->创建一个新的要打包的素材
 
@@ -285,7 +285,7 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
 
 Hierarchy->右键->Light->Spot Light 2D 点光源
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241111142620531.png" alt="image-20241111142620531" style="zoom:50%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241111142620531.png" alt="image-20241111142620531" style="zoom:50%;" />
 
 -   Color 光的颜色
 -   Intensity 光强
@@ -310,7 +310,7 @@ Hierarchy->右键->Volume->
 
 ### Global Volume
 
-<img src="../../assetss/Day07-%E5%9C%BA%E6%99%AF/image-20241111143751412.png" alt="image-20241111143751412" style="zoom:50%;" />
+<img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241111143751412.png" alt="image-20241111143751412" style="zoom:50%;" />
 
 1.   profile->New 创建profile设置
 2.   

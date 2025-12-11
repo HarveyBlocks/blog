@@ -108,5 +108,5 @@ typedef struct quicklist {
 
 ### 内存结构图
 
-![image-20240405154337665](../../assetss/Day13-QuickList/image-20240405154337665.png)
+![image-20240405154337665](../../assets/Day13-QuickList/image-20240405154337665.png)
 

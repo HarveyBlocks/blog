@@ -197,7 +197,7 @@ centos-redis:0>BLpop id 100
 
 如果id被删完了, 就会阻塞, 停在哪里了,卡死了
 
-![image-20240102010501165](../../assetss/Day02-List%E7%B1%BB%E5%9E%8B/image-20240102010501165.png)
+![image-20240102010501165](../../assets/Day02-List%E7%B1%BB%E5%9E%8B/image-20240102010501165.png)
 
 然后再一个客户端B
 

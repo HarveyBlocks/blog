@@ -18,7 +18,7 @@
     -   运行应用程序所需要的资源被容器包装, 和地城基础架构解耦
     -   容器化的应用程序可以跨云服务商, 跨Linux操作系统进行部署
 
-![应用部署方式演变](../assetss/Day01-Kubernetes%E6%A6%82%E8%BF%B0/image-20200505183738289.png)
+![应用部署方式演变](../assets/Day01-Kubernetes%E6%A6%82%E8%BF%B0/image-20200505183738289.png)
 
 ### 容器编排问题
 
@@ -65,5 +65,5 @@
 -   **存储编排**
     -   可以根据容器自身的需求自动创建存储卷
 
-![结构](../assetss/Day01-Kubernetes%E6%A6%82%E8%BF%B0/image-20200526203726071.png)
+![结构](../assets/Day01-Kubernetes%E6%A6%82%E8%BF%B0/image-20200526203726071.png)
 

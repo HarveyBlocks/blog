@@ -23,7 +23,7 @@ function simpleTest() {
 }
 ```
 
-![image-20250809142712186](../../assetss/Day03-异步/image-20250809142712186.png)
+![image-20250809142712186](../../assets/Day03-异步/image-20250809142712186.png)
 
 ```js
 setTimeout(task, 0, 'A');
@@ -183,7 +183,7 @@ async function simpleTest() {
 simpleTest();
 ```
 
-![image-20250809222622206](../../assetss/Day03-异步/image-20250809222622206.png)
+![image-20250809222622206](../../assets/Day03-异步/image-20250809222622206.png)
 
 但这样是不好的, 不太符合JavaScript的设计初衷
 

@@ -3,7 +3,7 @@
 ### 查看设备文件
 
 使用Studio的DeviceExplorer
-<img src="../../assetss/Day06-文件存储/image-20250916171348933.png" alt="image-20250916171348933" style="zoom:50%;" /> 
+<img src="../../assets/Day06-文件存储/image-20250916171348933.png" alt="image-20250916171348933" style="zoom:50%;" /> 
 
 ## 写入数据
 
@@ -37,11 +37,11 @@ fun save(inputText: String) {
 
 
 
-<img src="../../assetss/Day06-文件存储/image-20250916171811934.png" alt="image-20250916171811934" style="zoom:50%;" />
+<img src="../../assets/Day06-文件存储/image-20250916171811934.png" alt="image-20250916171811934" style="zoom:50%;" />
 
 
 
-![image-20250916171833200](../../assetss/Day06-文件存储/image-20250916171833200.png)
+![image-20250916171833200](../../assets/Day06-文件存储/image-20250916171833200.png)
 
 ## 读取数据
 
@@ -65,5 +65,5 @@ fun read(): String {
 }
 ```
 
-![image-20250916201117412](../../assetss/Day06-文件存储/image-20250916201117412.png)
+![image-20250916201117412](../../assets/Day06-文件存储/image-20250916201117412.png)
 
