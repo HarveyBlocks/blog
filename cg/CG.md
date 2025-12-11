@@ -391,7 +391,7 @@ $$
 ### 空间定义
 
 | 空间名称                  | 简要说明                                                     |
-| :------------------------ | :----------------------------------------------------------- |
+| ------------------------- | ------------------------------------------------------------ |
 | **Object Space**          | 模型自身坐标系，定义几何体的原始形状和顶点位置。             |
 | **World Space**           | 全局统一坐标系，所有物体置于其中，定义其在场景中的绝对位置和方向。 |
 | **Camera Space**          | 以相机（观察者）为原点的坐标系，**视线通常朝向 -Z 轴方向**。 |
@@ -401,7 +401,7 @@ $$
 ### 变换
 
 | 变换名称                      | 简要说明（作用与起点/终点空间）                              |
-| :---------------------------- | :----------------------------------------------------------- |
+| ----------------------------- | ------------------------------------------------------------ |
 | **Modeling Transformation**   | 将物体从 **Object Space** 变换到 **World Space**，包括缩放、旋转、平移。 |
 | **View Transformation**       | 将整个场景从 **World Space** 变换到 **Camera Space**，使相机位于原点并对齐轴向。 |
 | **Projection Transformation** | 将 **Camera Space** 中的3D物体投影到2D成像平面，并变换到 **Canonical View Volume**。 |
@@ -736,15 +736,7 @@ $$
 
 纹理->3D单元->2D投影
 
-- 放大的情形, 一个纹理的像素会占据好几个结果的像素
-
-  问题: 会看见大的色块
-
-  解决: 使用双线性插值进行颜色的混合
-
-  <img src="assert/CG/image-20251210015245032.png" alt="image-20251210015245032" style="zoom:33%;" />
-
-  <img src="assert/CG/image-20251210015220216.png" alt="image-20251210015220216" style="zoom:50%;" />
+- 放大的情形, 一个纹理的像素会占据好几个结果的像
 
 - 缩小的情形, 一个结果像素中存在好几个纹理的单元
 
@@ -1209,12 +1201,184 @@ do{
 
 - 将每个元素重复地分割成更小的部分
 - 用相邻顶点位置的加权平均来替换顶点位置
+- 新生成的点是规则的, 同时把旧的点的坐标拉向规则
+- 目标
+  - 插值 or 近似, 是否需要总是经过细分前的所有点(看需求)
+  - 极限曲面需要有怎样的连续性($C^1, C^2...$)
+  - 在不规则顶点出的表现, 如果出现了非常高阶的顶点怎么办?
+- 实现方法
+  - 对于四边形网格,  Catmull Cark
+  - 对于三角形网格, Loop, Buterrfly, Sqrt
+
+
+
+### Loop
+
+极限细分后的曲面曲率在不规则顶点之外将是连续的 $C^2$
+
+1. 每个边取中点, 分割
+
+   <img src="assert/CG/image-20251211025735751.png" alt="image-20251211025735751" style="zoom:50%;" />
+
+2. 将每一个新边进行翻转
+
+   <img src="assert/CG/image-20251211025830351.png" alt="image-20251211025830351" style="zoom:50%;" />
+
+   此时, 每一个原三角形分成四个新三角形
+
+   <img src="assert/CG/image-20251211024534013.png" alt="image-20251211024534013" style="zoom: 50%;" />
+
+   
+
+3. 新点的坐标是周围老坐标的加权平均
+
+   <img src="assert/CG/image-20251211024747069.png" alt="image-20251211024747069" style="zoom: 50%;" />
+   $$
+   p := \sum_i\phi_ip_i
+   $$
+
+4. 对于旧点的新位置, 设 $n$ 为点的度数
+
+   <img src="assert/CG/image-20251211024925893.png" alt="image-20251211024925893" style="zoom:50%;" />
+
+   定义中间量 $u$
+   $$
+   u := \left\{\begin{align}
+     \frac{3}{16} & &n = 3\\
+     \frac{3}{8n} & &otherwise
+   \end{align}\right.
+   $$
+   最终计算得旧点的新位置坐标为
+   $$
+   p'_0 = \sum_{i=1}^n{u \cdot p_i} + (1-n\cdot u) \cdot p_0
+   $$
+   
+
+   
+
+
+
+### Catmull Cark
+
+不仅只适用于四边形网格, 对于任意多边形
+
+1. 在其中插入一个点 $m$
+
+   其坐标是周边各个点的加权平均
+   $$
+   p_m = \frac{1}{n} \sum_ip_i
+   $$
+   
+
+2. 每个边取中点, 分割
+
+3. 将每条边的中点和这个点 $m$ 相连
+
+   效果: 利用插入的点将多边形变成多个四边形的组合
+
+   <img src="assert/CG/image-20251211001125189.png" alt="image-20251211001125189" style="zoom:50%;" />
+
+4. 计算顶点的新坐标
+
+   - **n** : 顶点的度数, 即顶点旁边有几条边
+   - **Q** : 顶点周围所有的表面上新增加的点(步骤1)的坐标的平均值
+   - **R** : 顶点周围所有的边上新增加的点(步骤2)的坐标的平均值
+   - **S** : 原始顶点位置
+
+   $$
+   Coords  := \frac{Q+2R+(n-3)S}{n}
+   $$
 
 
 
 
 
+<img src="assert/CG/image-20251211023808342.png" alt="image-20251211023808342" style="zoom:67%;" />
 
+ 
+
+Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
+
+因为Catmull Cark会将三角形网格转化成四边形网格, 而好的三角形网格的度数是6, 这放到四边形网格中是非规则的网格了
+
+四边形网格好的度数是4
+
+## Mesh Simplification
+
+下采样, 简化多边形网格
+
+边坍缩
+
+迭代地坍缩, 使用贪心算法
+
+给每个边赋予一个 $cost$ 值, 表示这条边对表面的改变量
+
+计算出哪个边的 $cost$ 最小, 则删除这条边
+
+
+
+使用合并来对网格进行坍缩
+
+1. 找到新点 $m$
+
+   评判影响使用点到平面的距离之和
+   $$
+   dist_i(x) := < \vec{N} ,  \vec{x}- \vec{p}>
+   $$
+   <img src="assert/CG/image-20251211032817419.png" alt="image-20251211032817419" style="zoom:50%;" />
+   $$
+   dist(x) := \sum_i{< \vec{N_i} ,  \vec{x}- \vec{p}>}
+   $$
+   <img src="assert/CG/image-20251211032945329.png" alt="image-20251211032945329" style="zoom:50%;" />
+
+   下面给出运算最小值 $\vec{x}$ 的方法, 证明略(大概就是矩阵正定, 开平方这些)
+
+   1. 设目标坐标 $\vec{x} = (x,y,z)$, 法向量坐标 $\vec{n} = (a,b,c)$, 偏移量 $d := <\vec{n},\vec{p}>$
+
+   2. 在齐次坐标中定义 $\vec{u} = (x,y,z,1), \vec{v} = (a,b,c,d)$ 
+
+   3. 定义矩阵 $K$, $cost = <u,v>^2 = u^T(vv^T)u =: u^TKu$
+
+   4. 再分解 $K$, 定义 $B,\vec{w}$
+      $$
+      K = \left(\begin{array}{ll}
+       a^2&ab&ac&ad\\
+       ab&b^2&bc&bd\\
+       ac&bc&c^2&cd\\
+       ad&bd&dc&d^2
+      \end{array} \right) :=\left(\begin{array}{ll}
+       B&\vec{w}\\
+       \vec{w}^T&d^2
+      \end{array} \right)
+      $$
+
+   5. 在 $\vec{x}$ 满足下式时, $cost$ 最小
+      $$
+      \vec{x} = -B^{-1}\vec{w}
+      $$
+
+   6. 对于点 $p_i$ 的损失 $K_i$, 边 $e_{ij}$ 的损失 $K_{ij}$
+      $$
+      K_{ij} = K_i+K_j
+      $$
+
+   7. 比较每一个边的 $K_{ij}$, 直到找到最小的
+
+2. $e_{ij}$ 两边的点 $v_i, v_j$ 关联的半边, 都与新点 $m$ 进行关联
+
+<img src="assert/CG/image-20251211032509066.png" alt="image-20251211032509066" style="zoom:50%;" />
+
+
+
+从 $e_{ij}$ 坍缩到 $m$ 时存在问题
+
+如果 $m$ 的位置不够好, 将会导致坍缩之后的三角形不规则
+
+<img src="assert/CG/image-20251211035245985.png" alt="image-20251211035245985" style="zoom:50%;" />
+
+解决方法是如果坍缩之后的 $i$ 导致 $<\vec{N_{ijk}}, \vec{N_{kjl}}>$ 小于0, 则不进行坍缩
+
+ 
 
 ## Mesh Regularization
 
@@ -1232,6 +1396,8 @@ do{
 
 有助于提高数值精度和稳定性
 
+### Delaunay
+
 存在一种 $Delaunay$ 的特殊网格, 具有一些较好的性质
 
  $Delaunay$ 即所有三角形表面的外接圆内不存在其他三角形的顶点
@@ -1239,6 +1405,8 @@ do{
 <img src="assert/CG/image-20251210222033580.png" alt="image-20251210222033580" style="zoom:50%;" />
 
 好的Mesh应该拥有规则的**顶点的度** (degree), 有助于并发计算, 
+
+### 度
 
 **顶点的度**, 指接触该顶点的边的数量
 
@@ -1252,3 +1420,240 @@ subdivision 时, 过高的degree会导致瑕疵
 
 <img src="assert/CG/image-20251210222741976.png" alt="image-20251210222741976" style="zoom:50%;" />
 
+
+
+### 翻转优化
+
+使用边翻转来优化度数, 使其接近六
+
+方法是, 如果与6的总偏差减小了, 则进行牌男装
+
+<img src="assert/CG/image-20251211040011918.png" alt="image-20251211040011918" style="zoom:50%;" />
+
+总偏差的计算如下
+$$
+|d_i - 6|+|d_j - 6|+|d_k - 6|+|d_l - 6|
+$$
+上图中是从5降到了1, 则进行翻转
+
+### 更接近等边三角形
+
+ $Delaunay$ 不保证三角形是接近正三角形的, 可能满足 $Delaunay$ , 但依旧存在长长的三角形
+
+可以重复地中心化顶点来使三角形根接近等边三角形
+
+<img src="assert/CG/image-20251211040602379.png" alt="image-20251211040602379" style="zoom:50%;" />
+
+原来位置是 $p$ , 目标位置是 $p'$, 为例保证网格描述的几何体的形状不变,那么在移动时的方向应当移除法线方向上的分量
+
+==TODO 这里提到的法线是哪个面的法线????==
+
+ ### 策略
+
+循环下列操作
+
+- Splite 超过 $\frac{4}3 \cdot mean(edges)$ 长度的边
+- Collapse 小于 $\frac{4}5 \cdot mean(edges)$ 长度的边
+- Flip 边以接近最佳度数
+- 沿切线方向将点进行居中优化
+
+
+
+## 信息丢失
+
+如果反复使用upsampling和downsampling, 会导致信号丢失
+
+<img src="assert/CG/image-20251211041535447.png" alt="image-20251211041535447" style="zoom:50%;" />
+
+因为upsampling和downsampling的操作是凸包的, 总是先一个更圆滑的方向去逼近
+
+# 辐射度学
+
+> 辐射度, *Radiance*
+
+几何光学撇开光的波动本性, 仅考虑光的 **直线传播**, **独立传播**, **反射/折射**
+
+## 辐射能量
+
+$Radiant$ $Energy$ 光子击中物体表面的次数
+
+单个光子的能量 $Q$
+$$
+Q = h \frac{c}{\lambda}
+$$
+其中, 普朗克常量 $h \approx 6.626 \times 10^{-34} J \cdot s$ , 光速 $c \approx 3.00 \times 10^{8} m/s$ , 波长 $\lambda$ 是可变参数, 关系到颜色
+
+## 辐射通量
+
+$Radiant$ $Flux$ 每单位时间, 光子击中表面的次数, 单位 瓦特
+$$ { }
+\Phi = \lim_{\Delta \to 0} \frac{\Delta Q}{\Delta t} = \frac{dQ}{dt}
+$$
+对于辐射能量 $Q$
+$$
+Q = \int_{t_0}^{t_1}{\Phi(t)}dt
+$$
+
+
+## 辐射能量密度
+
+$Radiant$ $Density$ 每单位面积, 光子击中表面的次数
+
+
+
+## 辐照度
+
+$Radiant$ $Flux$ $Density$ / $Irradiance$ 每单位面积, 单位时间, 光子击中表面的次数
+$$
+E(p) = \lim_{\Delta \to 0} \frac{\Delta \Phi(p)}{\Delta A} = \frac{d\Phi(p)}{dA}
+$$
+其中所照表面面积为 $A$, 应当是直面光线的面积
+
+<img src="assert/CG/image-20251211143406134.png" alt="image-20251211143406134" style="zoom:50%;" />
+$$
+cos(\theta) = \vec{n} \cdot \vec{l}
+$$
+其中 $\vec{n}$ 是表面的单位法向量, $\vec{l}$ 是法向量起点指向光源的单位方向向量
+
+<img src="assert/CG/image-20251211143803069.png" alt="image-20251211143803069" style="zoom:50%;" />
+
+又要考虑到, 如果 $cos(\theta) < 0$, 则不渲染
+
+```cpp
+double surfaceColor(Vector3 n, vector3 l){
+    return max(0., dot(n,l));
+}
+```
+
+## 光强
+
+$Intensity$, **光源**发出的光的能量在各方向上的密度(**特定方向**, **单位长度**)
+
+和 $Irradiance$ 的区别在于 $Irradiance$ 描述的是**物体接受**的光
+
+考虑点光源模型
+
+<img src="assert/CG/image-20251211154549109.png" alt="image-20251211154549109" style="zoom:33%;" />
+
+光强和辐射通量之间的关系
+$$
+\Phi = \int_{S^2} I d \omega = 4 \pi I
+$$
+得出光强
+$$
+I = \frac{\Phi}{4\pi}
+$$
+在某一**特定方向**(角度 $\omega$) 的**单位长度**上的光强
+$$
+I(\omega) = \frac{d\Phi}{d\omega}
+$$
+又有 $E = \frac{d\Phi}{dA}$, 得
+$$
+E = \frac{I(\omega)}{r^2}
+$$
+
+## 立体角
+
+### 定义
+
+这里光强的定义使用到了立体角 $\Omega $ (弧度)的概念
+
+<img src="assert/CG/image-20251211160427217.png" alt="image-20251211160427217" style="zoom: 33%;" />
+
+在平面上的角(弧度) $\theta := \frac{l}{r}$, 立体角的定义为:
+$$
+\Omega := \frac{A}{r^2}
+$$
+其中 $A$ 是球的**部分表面积**
+
+由定义, 球的立体弧度为 $4\pi$
+
+下图是立体角的一个应用, "两个天体到地球上的投影有多大", 这个问题考虑投影而不考虑天体的远近
+
+<img src="assert/CG/image-20251211160726609.png" alt="image-20251211160726609" style="zoom:50%;" />
+
+
+
+"太阳和月亮在地球上看起来差不多大", 这句话转换成"太阳和月亮的光在地球表面上的人的眼睛上的投影差不多大", 即"两者对于地球的立体弧度差不多大"
+
+### 和平面角的关系
+
+考虑立体角 $\Omega$ 和 $x-y$ 平面上的角 $\phi$, 与 $z$ 轴的夹角 $\theta$ 之间存在的关系
+
+<img src="assert/CG/image-20251211161830550.png" alt="image-20251211161830550" style="zoom:33%;" />
+
+首先从微风的角度上考虑, $dA = (r\cdot d\theta)(rsin(\theta)\cdot d\phi)$, 与 $\omega$ 的定义联立
+$$
+dA  = \left\{\begin{array}{ll}
+r^2 sin(\theta)\cdot d\theta d\phi\\
+r^2d\omega
+\end{array} \right.
+$$
+ 可得
+$$
+d\omega = sin(\theta) d\theta d\phi
+$$
+积分得
+$$
+\Omega = \int_{S^2} d\omega = \int_0^{\theta_0}\int_0^{\phi_0} sin(\theta) d\theta d\phi
+= (1-cos(\theta_0))\phi
+$$
+==有时, $\omega$ 也会被用作方向向量, 存在符号滥用的现象== 
+
+
+
+## 光强和距离的关系
+
+到点光源的距离和**辐照度**之间的关系
+
+<img src="assert/CG/image-20251211154958645.png" alt="image-20251211154958645" style="zoom: 33%;" />
+$$
+E = \frac{\Phi}{4\pi r^2 } \to \Phi = 4\pi r^2 E
+$$
+得出关系是**平方反比**的
+$$
+\frac{E_1}{E_2} = (\frac{r_2}{r_1})^2
+$$
+
+
+
+
+## 辐射率
+
+$Radiance$
+
+表示辐射度在立体角上的密度, 单位时间, 单位面积, 单位立体角上的光的能量
+$$
+L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
+$$
+<img src="assert/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
+
+
+
+# TODO
+
+| PPT  | Vedio  |
+| ---- | ------ |
+| 10   | 15     |
+| 11   | 16     |
+| 12   | 13(no) |
+| 13   | 18     |
+
+[TODO](变量名和PPT不匹配)
+
+- CMU
+- 校对
+- 去图片, 简化
+
+
+
+文档处理
+
+1. 删除段落前后的空行
+2. 调整字体大小
+3. 自定义布局
+4. 调整图片大小
+   1. 批量[选中](https://zhuanlan.zhihu.com/p/649198144)图片
+   2. 批量[调整](https://zhuanlan.zhihu.com/p/42493664)多张图片大小
+5. 列表前的序号/`-`[调整](https://support.microsoft.com/zh-cn/office/%E6%9B%B4%E6%94%B9word%E4%B8%AD%E7%9A%84%E9%A1%B9%E7%9B%AE%E7%AC%A6%E5%8F%B7%E7%BC%A9%E8%BF%9B-5ed8b9a0-d44c-4e9a-81b3-47c234e980d3)位置
+6. 改变布局为两栏
