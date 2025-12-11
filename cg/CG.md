@@ -18,7 +18,7 @@ $$
 
 设置一个单位向量 $\vec{n}$,  现将其作为一个平面 $\alpha$ 的法向量, $\vec{u}$ 是平面 $\alpha$ 上的一个向量
 
-![image-20251208220509763](D:\IT_study\blog_assets\cg\CG\image-20251208220509763.png)
+![image-20251208220509763](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208220509763.png)
 
 求 $\vec{n} \times \vec{u}$ 相当于将 $\vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $90^{\circ}$
 
@@ -33,13 +33,13 @@ det\left(\begin{array}{ll}
 $$
 例如$\vec{u}\times\vec{v}$就是底面积, 同时也是u-v平面的法向量, $(\vec{u} \times \vec{v}) \cdot \vec{w}$ 就是求这个菱形的体积
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208223852460.png" alt="image-20251208223852460" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208223852460.png" alt="image-20251208223852460" style="zoom:50%;" />
 
 ## Jacobi identity
 
 雅可比式在三角形的法向量运算中的使用
 
-![image-20251208222609328](D:\IT_study\blog_assets\cg\CG\image-20251208222609328.png)
+![image-20251208222609328](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208222609328.png)
 
 $$
 \vec{u}\times(\vec{v}\times\vec{w}) +
@@ -57,11 +57,11 @@ $$
 
 在矩阵上求梯度
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208230010947.png" alt="image-20251208230010947" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208230010947.png" alt="image-20251208230010947" style="zoom: 67%;" />
 
 例证第一个
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208230045747.png" alt="image-20251208230045747" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208230045747.png" alt="image-20251208230045747" style="zoom:50%;" />
 
 ## Gradients on Function
 
@@ -70,7 +70,6 @@ $$
 << \nabla F,u >> := D_uF
 $$
 $$
-
 D_uF := \lim_{\epsilon \to 0} \frac{F(f+\epsilon u)-F(f)}{\epsilon}
 $$
 
@@ -103,7 +102,7 @@ $$
 
 - 三角形可以组成任意图形
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251208180956394.png" alt="image-20251208180956394" style="zoom: 50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208180956394.png" alt="image-20251208180956394" style="zoom: 50%;" />
 
 - 三角形由三个点组成, 三个点总是在一个平面=>便于计算这个单元(三角形单元就构成一个平面)的法线
 
@@ -115,25 +114,25 @@ $$
 
 复杂信号可以表示为不同频率的简单信号的和
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208182920178.png" alt="image-20251208182920178" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208182920178.png" alt="image-20251208182920178" style="zoom:50%;" />
 
 将这个概念扩展到二维图像上
 
 如果只采样低频的数据, 就会获取比较糊的图像
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208183345552.png" alt="image-20251208183345552" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183345552.png" alt="image-20251208183345552" style="zoom:33%;" />
 
 如果只采样中间频率的数据, 就会有一个模糊的轮廓
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208183448924.png" alt="image-20251208183448924" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183448924.png" alt="image-20251208183448924" style="zoom:33%;" />
 
 如果只采样高频率的数据, 就会有一个清晰的轮廓
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208183544417.png" alt="image-20251208183544417" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183544417.png" alt="image-20251208183544417" style="zoom:33%;" />
 
 上述三个频率的采样加起来, 就是全段频率的采样, 同理, 图片加起来也会比较清晰
 
-![image-20251208183641212](D:\IT_study\blog_assets\cg\CG\image-20251208183641212.png)
+![image-20251208183641212](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183641212.png)
 
 采样低频率数据+采样较低频率数据+采样较高频率数据+采样超高频率数据
 
@@ -141,13 +140,13 @@ $$
 
 Origin频率高于采样频率太多, 将导致采样结果反而接近低频下的Origin
 
-![image-20251208183052084](D:\IT_study\blog_assets\cg\CG\image-20251208183052084.png)
+![image-20251208183052084](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183052084.png)
 
 在相同频率的采样率下, 频率的信号高到一定程度, 就会高度失真
 
 在$f_5(x)$中, 明明源信号是高频的, 但采样得到的信号看起来好像是低频的(蓝色虚线)
 
- <img src="D:\IT_study\blog_assets\cg\CG\image-20251208183741433.png" alt="image-20251208183741433" style="zoom:50%;" />
+ <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183741433.png" alt="image-20251208183741433" style="zoom:50%;" />
 
 随着X增大, 源数据频率增高, 发现出现了低频的点, 这就是因为采样频率不足导致的
 
@@ -157,7 +156,7 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 判断一个像素是否被三角形Cover, 看这个Pixel的中心点
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208181431002.png" alt="image-20251208181431002" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208181431002.png" alt="image-20251208181431002" style="zoom:50%;" />
 
 - 1 not Covered Pixel
 - 2 not Covered Pixel
@@ -184,7 +183,7 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 同理, 也可以依据$P_0 ,P_1, P_2$ 三个点的横坐标, 找到最左边的一个点, 来减少行的开始时对Point的无用检查
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251208184025324.png" alt="image-20251208184025324" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208184025324.png" alt="image-20251208184025324" style="zoom:33%;" />
 
 ## Depth-buffer/z-buffer
 
@@ -260,7 +259,7 @@ $$
 
 三维空间下的旋转
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251209212017193.png" alt="image-20251209212017193" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209212017193.png" alt="image-20251209212017193" style="zoom:50%;" />
 
 ### 缩放
 
@@ -333,7 +332,7 @@ $$
 
 从几何目标到二维图像平面的一系列转化流程
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210163340038.png" alt="image-20251210163340038" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210163340038.png" alt="image-20251210163340038" style="zoom:50%;" />
 
 ### 空间定义
 
@@ -399,7 +398,7 @@ $$
 
 习惯上, 我们让相机镜头对准-z轴方向, 以保证**视锥体**的投影在等价的屏幕上
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251209194004812.png" alt="image-20251209194004812" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209194004812.png" alt="image-20251209194004812" style="zoom:50%;" />
 
 原点是相机镜头, 白板是相机屏幕, 灰色是物体在屏幕上的投影的还原
 
@@ -411,7 +410,7 @@ $$
 
 对于只有一部分落在区域内的三角形, 选择将其分为更小的子三角形
 
-![image-20251209200137545](D:\IT_study\blog_assets\cg\CG\image-20251209200137545.png)
+![image-20251209200137545](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209200137545.png)
 
 我们定义, 剔除比 `z-near` 近, 比 `z-far` 远的物体
 
@@ -419,11 +418,11 @@ $$
 
 如果 `z-near` 过小, 或 `z-far` 过大, 浮点数将会导致精度丢失, 最终导致光栅化时产生肉眼可见的误差
 
-![image-20251209200640031](D:\IT_study\blog_assets\cg\CG\image-20251209200640031.png)
+![image-20251209200640031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209200640031.png)
 
 ## 视锥体到单位正方体的映射
 
-![image-20251209200825480](D:\IT_study\blog_assets\cg\CG\image-20251209200825480.png)
+![image-20251209200825480](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209200825480.png)
 
 为什么要这么做?
 
@@ -435,7 +434,7 @@ $$
 
 1. 将视锥体的灰色部分, 一个锥台, 变成一个长方体, 转 **透视投影** 为 **正交投影**
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251209213603492.png" alt="image-20251209213603492" style="zoom: 33%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209213603492.png" alt="image-20251209213603492" style="zoom: 33%;" />
 
    定义变量
 
@@ -583,7 +582,7 @@ $$
 
 7. 对于现代计算机的图形渲染, 因此从空间到数组的索引, 也存在一个映射
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251209223532674.png" alt="image-20251209223532674" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209223532674.png" alt="image-20251209223532674" style="zoom:50%;" />
 
    - 前面正方体的边长是2
    - **w** : width
@@ -618,23 +617,23 @@ $$
 \hat{f}=f_i+\frac{x-x_i}{x_{i+1}-x_i}(f_{i+1}-f_i)
 $$
 
-![image-20251209234859076](D:\IT_study\blog_assets\cg\CG\image-20251209234859076.png)
+![image-20251209234859076](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209234859076.png)
 
 ### 平面插值
 
 在平面上进行线性插值
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251209234934712.png" alt="image-20251209234934712" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209234934712.png" alt="image-20251209234934712" style="zoom:50%;" />
 
 使用解析式法, 如下
 $$
 \hat{f}(x,y)  = ax+by+c
 $$
-![image-20251209235132800](D:\IT_study\blog_assets\cg\CG\image-20251209235132800.png)
+![image-20251209235132800](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209235132800.png)
 
 如果转化思路, 变为比例的概念, 重心<->面积比例<->高
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210013254123.png" alt="image-20251210013254123" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210013254123.png" alt="image-20251210013254123" style="zoom:33%;" />
 
 ### 投影问题
 
@@ -642,17 +641,17 @@ $$
 
 造成的问题:
 
-![image-20251210012134774](D:\IT_study\blog_assets\cg\CG\image-20251210012134774.png)
+![image-20251210012134774](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210012134774.png)
 
 解决方法:
 
-![image-20251210012836310](D:\IT_study\blog_assets\cg\CG\image-20251210012836310.png)
+![image-20251210012836310](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210012836310.png)
 
 ## Texture
 
 纹理映射
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210014347227.png" alt="image-20251210014347227" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210014347227.png" alt="image-20251210014347227" style="zoom:50%;" />
 
 为什么要重复性地(周期性地)贴同一种这种红绿渐变的材质?
 
@@ -672,9 +671,9 @@ $$
 
 解决: 使用双线性插值进行颜色的混合
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210015245032.png" alt="image-20251210015245032" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210015245032.png" alt="image-20251210015245032" style="zoom:33%;" />
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210015220216.png" alt="image-20251210015220216" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210015220216.png" alt="image-20251210015220216" style="zoom:50%;" />
 
 ## mipmap
 
@@ -692,11 +691,11 @@ $$
 
 MipMap思路大概如此, 在每个可能的尺度上存储一个预过滤的图像
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210020221613.png" alt="image-20251210020221613" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210020221613.png" alt="image-20251210020221613" style="zoom:50%;" />
 
 ### 选择等级
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210021047580.png" alt="image-20251210021047580" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210021047580.png" alt="image-20251210021047580" style="zoom:50%;" />
 
 左图是屏幕空间, 右图是纹理空间
 
@@ -704,7 +703,7 @@ MipMap思路大概如此, 在每个可能的尺度上存储一个预过滤的图
 
 要展示红色区域, 从纹理空间到屏幕空间, 大小缩小了不少, 因此使用 $level$ 更低的mipmap
 
-![image-20251210021607292](D:\IT_study\blog_assets\cg\CG\image-20251210021607292.png)
+![image-20251210021607292](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210021607292.png)
 
 上图中, 屏幕空间的 $(u,v)_{0,0}$ 这一块空间, 对应了多大的mipmap纹理空间?
 $$
@@ -722,7 +721,6 @@ $$
 $$
 
 $$
-
 \frac{du}{dy} = u_{01}-u_{00} , 
 \frac{dv}{dy} = v_{01}-v_{00} 
 $$
@@ -731,7 +729,7 @@ $$
 
 原本一个RGB位图, 存储是$W\cdot H\cdot 3$, 现在, 将RGB摊开了存储, 存储成本并不会增加多少
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210020746549.png" alt="image-20251210020746549" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210020746549.png" alt="image-20251210020746549" style="zoom:50%;" />
 
 ### 三次线性插值
 
@@ -741,11 +739,11 @@ $$
 
 对于空间中的任意点 $(u,v,w)$, 其相邻的八个取值点 $f_{000},f_{001},f_{010},f_{011},f_{100},f_{101},f_{110},f_{111},$
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210022917654.png" alt="image-20251210022917654" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210022917654.png" alt="image-20251210022917654" style="zoom:50%;" />
 
 $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, 插值出 $h$, 最终 两个 $h$ 配对, 按比例取得 $(u,v,w)$的插值
 
-![image-20251210022904038](D:\IT_study\blog_assets\cg\CG\image-20251210022904038.png)
+![image-20251210022904038](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210022904038.png)
 
 对非整型的 $level$ : $D \in R$ , 
 
@@ -761,11 +759,11 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 
 对于这种屏幕空间场景, 某一个方向比另一个方向拉长的比例相差过大
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210024346282.png" alt="image-20251210024346282" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210024346282.png" alt="image-20251210024346282" style="zoom: 67%;" />
 
 如果采用的取法依旧是正方形, 就不适合了
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210024411454.png" alt="image-20251210024411454" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210024411454.png" alt="image-20251210024411454" style="zoom:50%;" />
 
 由于纵向拉长, 导致mipmap level 增大, 但是横向却不应该是这么大的 level 最终导致横向上糊成一片
 
@@ -793,11 +791,11 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 
 构造实体几何, 使用Boolean表达式链接多个简单的几何体, 来描述一个复杂的几何体
 
-![image-20251210152738210](D:\IT_study\blog_assets\cg\CG\image-20251210152738210.png)
+![image-20251210152738210](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210152738210.png)
 
 ### Blobby Surfaces
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210154756152.png" alt="image-20251210154756152" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210154756152.png" alt="image-20251210154756152" style="zoom:50%;" />
 
 P点的高斯中心
 $$
@@ -807,15 +805,15 @@ $$
 $$
 f := \phi_p + \phi_q
 $$
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210154230482.png" alt="image-20251210154230482" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210154230482.png" alt="image-20251210154230482" style="zoom:50%;" />
 
 在 $f$ 上, 取不同的高度, 来投影到二维平面上, 查看不同半径的圆的融合
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210154811807.png" alt="image-20251210154811807" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210154811807.png" alt="image-20251210154811807" style="zoom:50%;" />
 
 如果想融合两个非圆形的实体, 可以使用距离公式
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210160041252.png" alt="image-20251210160041252" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210160041252.png" alt="image-20251210160041252" style="zoom:50%;" />
 
 末尾的 $0.5$ 可选择其他合适的值
 $$
@@ -828,11 +826,11 @@ $$
 
 在其中有混叠(aliasing)的问题
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210160330500.png" alt="image-20251210160330500" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210160330500.png" alt="image-20251210160330500" style="zoom:50%;" />
 
 水平集存储数据量的成本也大幅提升, 一般存储表面的一部分信息, 并不存储所有信息, 以此降低计算量和存储压力
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210160524110.png" alt="image-20251210160524110" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210160524110.png" alt="image-20251210160524110" style="zoom:50%;" />
 
 ### 使用场景
 
@@ -874,7 +872,7 @@ $$
 
 例如下面的球壳部分是比较细致的, 柱体部分就用细长的三角形简化
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210162236414.png" alt="image-20251210162236414" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210162236414.png" alt="image-20251210162236414" style="zoom: 33%;" />
 
 缺点是数据结构变得更加复杂, 需要考虑如何链接, 要考虑各种情况, 特别是特殊的边界情形
 
@@ -898,7 +896,7 @@ B^n_k(t) := C_n^k t^k(1-t)^{n-k}
 $$
 使用伯恩斯坦基底可以构造曲线
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210165144789.png" alt="image-20251210165144789" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210165144789.png" alt="image-20251210165144789" style="zoom: 50%;" />
 
 贝塞尔曲线就是使用伯恩斯坦基底构造的曲线
 
@@ -911,7 +909,7 @@ $$
 
 - $n=3$: 三次贝塞尔曲线
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210165656868.png" alt="image-20251210165656868" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210165656868.png" alt="image-20251210165656868" style="zoom:50%;" />
 
   经过点 $p_0, p_3$
 
@@ -921,7 +919,7 @@ $$
 
 - $n=k$: 控制点太多, 难以控制
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210165928658.png" alt="image-20251210165928658" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210165928658.png" alt="image-20251210165928658" style="zoom:50%;" />
 
 一般偏向于使用多个分段的三次贝塞尔曲线拼接起来
 
@@ -932,13 +930,13 @@ $$
 - 线段端点相遇
 - 端点切线相遇
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210170314783.png" alt="image-20251210170314783" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210170314783.png" alt="image-20251210170314783" style="zoom:50%;" />
 
 对于曲面构建, 伯恩斯坦基底
 $$
 B_{i,j}^3 := B_{i}^3 B_{j}^3 
 $$
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210170835510.png" alt="image-20251210170835510" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210170835510.png" alt="image-20251210170835510" style="zoom:50%;" />
 
 获取贝塞尔曲面片, 定义空间中的控制点 $p_{ij}$
 $$
@@ -949,21 +947,21 @@ $$
 
 可以采用的细分比例是杨辉三角中的 $\frac{1}{4},\frac{2}{4},\frac{1}{4}$
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210171912242.png" alt="image-20251210171912242" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210171912242.png" alt="image-20251210171912242" style="zoom:50%;" />
 
 迭代得去做, 就可以极限出一条比较平滑的曲线/曲面
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210171950173.png" alt="image-20251210171950173" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210171950173.png" alt="image-20251210171950173" style="zoom: 50%;" />
 
 曲面也可以近似
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210172034587.png" alt="image-20251210172034587" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210172034587.png" alt="image-20251210172034587" style="zoom: 50%;" />
 
 # 网格表示
 
 正方形网格
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210194011972.png" alt="image-20251210194011972" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210194011972.png" alt="image-20251210194011972" style="zoom:50%;" />
 
 为何计算机上选择正方形作为pixel单元的形状
 
@@ -980,18 +978,18 @@ $$
 
   存在一些图形是非流形的
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210194631064.png" alt="image-20251210194631064" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210194631064.png" alt="image-20251210194631064" style="zoom:50%;" />
 
   中间部分无法趋于平面, 下面是其他的例子
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210194806637.png" alt="image-20251210194806637" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210194806637.png" alt="image-20251210194806637" style="zoom:50%;" />
 
 - 流形连通性, 是"扇面" ,而不是鳍
 
   - 每条边只包含在两个多边形中
   - 汇聚点四周应该以多个扇面的形式存在. 汇聚点周边的图形应该在同一个多边形环/扇里
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210195335057.png" alt="image-20251210195335057" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210195335057.png" alt="image-20251210195335057" style="zoom:50%;" />
 
 流形保证目标几何体是简单的, 不需要考虑太多的特殊情况
 
@@ -1033,7 +1031,7 @@ struct Vertex {
 
 但Halfedge构建时, `twin` 和 `next` 符合要求, 则满足改网络描述的是一个流形
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210202751136.png" alt="image-20251210202751136" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210202751136.png" alt="image-20251210202751136" style="zoom:50%;" />
 
 遍历面的所有顶点
 
@@ -1045,7 +1043,7 @@ do{
 }while(h != f->halfedge);
 ```
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210203511738.png" alt="image-20251210203511738" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210203511738.png" alt="image-20251210203511738" style="zoom:50%;" />
 
 获取 `Halfedge` 的 `end ` `Vertex`
 
@@ -1065,7 +1063,7 @@ do{
 }while(h != v->halfedge);
 ```
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210203451586.png" alt="image-20251210203451586" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210203451586.png" alt="image-20251210203451586" style="zoom: 50%;" />
 
 # 数字几何处理
 
@@ -1077,7 +1075,7 @@ do{
 
 - **上采样** **Upsampling** 双线性插值
 
-  <img src="D:\IT_study\blog_assets\cg\CG\image-20251210215556997.png" alt="image-20251210215556997" style="zoom:50%;" />
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210215556997.png" alt="image-20251210215556997" style="zoom:50%;" />
 
 - **下采样** **Downsampling** 迭代的边塌陷算法, 用于希望将一个多变的集合体变得粗糙一些来存储
 
@@ -1110,26 +1108,26 @@ do{
 
 1. 每个边取中点, 分割
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211025735751.png" alt="image-20251211025735751" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211025735751.png" alt="image-20251211025735751" style="zoom:50%;" />
 
 2. 将每一个新边进行翻转
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211025830351.png" alt="image-20251211025830351" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211025830351.png" alt="image-20251211025830351" style="zoom:50%;" />
 
    此时, 每一个原三角形分成四个新三角形
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211024534013.png" alt="image-20251211024534013" style="zoom: 50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211024534013.png" alt="image-20251211024534013" style="zoom: 50%;" />
 
 3. 新点的坐标是周围老坐标的加权平均
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211024747069.png" alt="image-20251211024747069" style="zoom: 50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211024747069.png" alt="image-20251211024747069" style="zoom: 50%;" />
    $$
    p := \sum_i\phi_ip_i
    $$
 
 4. 对于旧点的新位置, 设 $n$ 为点的度数
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211024925893.png" alt="image-20251211024925893" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211024925893.png" alt="image-20251211024925893" style="zoom:50%;" />
 
    定义中间量 $u$
    $$
@@ -1160,7 +1158,7 @@ do{
 
    效果: 利用插入的点将多边形变成多个四边形的组合
 
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211001125189.png" alt="image-20251211001125189" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211001125189.png" alt="image-20251211001125189" style="zoom:50%;" />
 
 4. 计算顶点的新坐标
 
@@ -1173,7 +1171,7 @@ do{
    Coords  := \frac{Q+2R+(n-3)S}{n}
    $$
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211023808342.png" alt="image-20251211023808342" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211023808342.png" alt="image-20251211023808342" style="zoom:67%;" />
 
 Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
@@ -1201,11 +1199,11 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
    $$
    dist_i(x) := < \vec{N} ,  \vec{x}- \vec{p}>
    $$
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211032817419.png" alt="image-20251211032817419" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211032817419.png" alt="image-20251211032817419" style="zoom:50%;" />
    $$
    dist(x) := \sum_i{< \vec{N_i} ,  \vec{x}- \vec{p}>}
    $$
-   <img src="D:\IT_study\blog_assets\cg\CG\image-20251211032945329.png" alt="image-20251211032945329" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211032945329.png" alt="image-20251211032945329" style="zoom:50%;" />
 
    下面给出运算最小值 $\vec{x}$ 的方法, 证明略(大概就是矩阵正定, 开平方这些)
 
@@ -1242,13 +1240,13 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
 2. $e_{ij}$ 两边的点 $v_i, v_j$ 关联的半边, 都与新点 $m$ 进行关联
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211032509066.png" alt="image-20251211032509066" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211032509066.png" alt="image-20251211032509066" style="zoom:50%;" />
 
 从 $e_{ij}$ 坍缩到 $m$ 时存在问题
 
 如果 $m$ 的位置不够好, 将会导致坍缩之后的三角形不规则
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211035245985.png" alt="image-20251211035245985" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211035245985.png" alt="image-20251211035245985" style="zoom:50%;" />
 
 解决方法是如果坍缩之后的 $i$ 导致 $<\vec{N_{ijk}}, \vec{N_{kjl}}>$ 小于0, 则不进行坍缩
 
@@ -1260,7 +1258,7 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
 下面是一个构建网格时表面存在大量锯齿的例子, 这将导致网格估算出来的表面积和实际目标的表面积相差甚远
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210221628708.png" alt="image-20251210221628708" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210221628708.png" alt="image-20251210221628708" style="zoom: 67%;" />
 
 表面的形状接近正边形的(例如等边三角形), 是比较好的单元形状
 
@@ -1272,7 +1270,7 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
  $Delaunay$ 即所有三角形表面的外接圆内不存在其他三角形的顶点
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210222033580.png" alt="image-20251210222033580" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210222033580.png" alt="image-20251210222033580" style="zoom:50%;" />
 
 好的Mesh应该拥有规则的**顶点的度** (degree), 有助于并发计算, 
 
@@ -1280,15 +1278,15 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
 **顶点的度**, 指接触该顶点的边的数量
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210222526173.png" alt="image-20251210222526173" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210222526173.png" alt="image-20251210222526173" style="zoom:50%;" />
 
 subdivision 时, 过高的degree会导致瑕疵
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210222809493.png" alt="image-20251210222809493" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210222809493.png" alt="image-20251210222809493" style="zoom:50%;" />
 
 合适的degree可以避免这一点
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251210222741976.png" alt="image-20251210222741976" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210222741976.png" alt="image-20251210222741976" style="zoom:50%;" />
 
 ### 翻转优化
 
@@ -1296,7 +1294,7 @@ subdivision 时, 过高的degree会导致瑕疵
 
 方法是, 如果与6的总偏差减小了, 则进行牌男装
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211040011918.png" alt="image-20251211040011918" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211040011918.png" alt="image-20251211040011918" style="zoom:50%;" />
 
 总偏差的计算如下
 $$
@@ -1310,7 +1308,7 @@ $$
 
 可以重复地中心化顶点来使三角形根接近等边三角形
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211040602379.png" alt="image-20251211040602379" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211040602379.png" alt="image-20251211040602379" style="zoom:50%;" />
 
 原来位置是 $p$ , 目标位置是 $p'$, 为例保证网格描述的几何体的形状不变,那么在移动时的方向应当移除法线方向上的分量
 
@@ -1329,7 +1327,7 @@ $$
 
 如果反复使用upsampling和downsampling, 会导致信号丢失
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211041535447.png" alt="image-20251211041535447" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211041535447.png" alt="image-20251211041535447" style="zoom:50%;" />
 
 因为upsampling和downsampling的操作是凸包的, 总是先一个更圆滑的方向去逼近
 
@@ -1372,13 +1370,13 @@ E(p) = \lim_{\Delta \to 0} \frac{\Delta \Phi(p)}{\Delta A} = \frac{d\Phi(p)}{dA}
 $$
 其中所照表面面积为 $A$, 应当是直面光线的面积
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211143406134.png" alt="image-20251211143406134" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211143406134.png" alt="image-20251211143406134" style="zoom:50%;" />
 $$
 cos(\theta) = \vec{n} \cdot \vec{l}
 $$
 其中 $\vec{n}$ 是表面的单位法向量, $\vec{l}$ 是法向量起点指向光源的单位方向向量
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211143803069.png" alt="image-20251211143803069" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211143803069.png" alt="image-20251211143803069" style="zoom:50%;" />
 
 又要考虑到, 如果 $cos(\theta) < 0$, 则不渲染
 
@@ -1396,7 +1394,7 @@ $Intensity$, **光源**发出的光的能量在各方向上的密度(**特定方
 
 考虑点光源模型
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211154549109.png" alt="image-20251211154549109" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211154549109.png" alt="image-20251211154549109" style="zoom:33%;" />
 
 光强和辐射通量之间的关系
 $$
@@ -1421,7 +1419,7 @@ $$
 
 这里光强的定义使用到了立体角 $\Omega $ (弧度)的概念
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211160427217.png" alt="image-20251211160427217" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211160427217.png" alt="image-20251211160427217" style="zoom: 33%;" />
 
 在平面上的角(弧度) $\theta := \frac{l}{r}$, 立体角的定义为:
 $$
@@ -1433,7 +1431,7 @@ $$
 
 下图是立体角的一个应用, "两个天体到地球上的投影有多大", 这个问题考虑投影而不考虑天体的远近
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211160726609.png" alt="image-20251211160726609" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211160726609.png" alt="image-20251211160726609" style="zoom:50%;" />
 
 "太阳和月亮在地球上看起来差不多大", 这句话转换成"太阳和月亮的光在地球表面上的人的眼睛上的投影差不多大", 即"两者对于地球的立体弧度差不多大"
 
@@ -1441,7 +1439,7 @@ $$
 
 考虑立体角 $\Omega$ 和 $x-y$ 平面上的角 $\phi$, 与 $z$ 轴的夹角 $\theta$ 之间存在的关系
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211161830550.png" alt="image-20251211161830550" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211161830550.png" alt="image-20251211161830550" style="zoom:33%;" />
 
 首先从微风的角度上考虑, $dA = (r\cdot d\theta)(rsin(\theta)\cdot d\phi)$, 与 $\omega$ 的定义联立
 $$
@@ -1465,7 +1463,7 @@ $$
 
 到点光源的距离和**辐照度**之间的关系
 
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211154958645.png" alt="image-20251211154958645" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211154958645.png" alt="image-20251211154958645" style="zoom: 33%;" />
 $$
 E = \frac{\Phi}{4\pi r^2 } \to \Phi = 4\pi r^2 E
 $$
@@ -1482,7 +1480,7 @@ $Radiance$
 $$
 L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
 $$
-<img src="D:\IT_study\blog_assets\cg\CG\image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
 
 # TODO
 
