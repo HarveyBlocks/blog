@@ -189,7 +189,7 @@ GET localhost:8081/actuator/prometheus
 
 -   正常情况
 
-    <img src="../assets/Day09-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20240525144520162.png" alt="image-20240525144520162" style="zoom:50%;" />
+    <img src="../assets/Day09-解决方案/image-20240525144520162.png" alt="image-20240525144520162" style="zoom:50%;" />
 
     -   上下起伏(Minor GC)
     -   手动FullGC后内存大小骤降
@@ -197,7 +197,7 @@ GET localhost:8081/actuator/prometheus
 
 -   内存泄漏
 
-    <img src="../assets/Day09-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20240525144633385.png" alt="image-20240525144633385" style="zoom:50%;" />
+    <img src="../assets/Day09-解决方案/image-20240525144633385.png" alt="image-20240525144633385" style="zoom:50%;" />
 
     -   持续内存升高, MinorGC不能把大部分对象回收
     -   手动Full GC之后内存使用没有好转

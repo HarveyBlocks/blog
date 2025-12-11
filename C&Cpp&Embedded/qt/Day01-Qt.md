@@ -200,7 +200,7 @@ QLabel 会自动解析 HTML 标记, 有多强大? 未知, 至少不能解析按�
     label->setText(QApplication::tr("<h1>你好 QT</h1>"));
     ```
 
-    <img src="../../assets/Day01-Qt/image-20240506144608864.png" alt="image-20240506144608864" style="zoom:33%;" />
+    <img src="../assets/Day01-Qt/image-20240506144608864.png" alt="image-20240506144608864" style="zoom:33%;" />
 
 ```cpp
 HelloWidget::~HelloWidget() {

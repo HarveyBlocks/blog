@@ -8,7 +8,7 @@ Inspector->AddComponent
 
 ### 移除组件
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018142717398.png" alt="image-20241018142717398" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018142717398.png" alt="image-20241018142717398" style="zoom:50%;" />
 
 ### 物理组件
 
@@ -25,7 +25,7 @@ Inspector->AddComponent->Physicis2D
 
 Edit->ProjectSettings->Physics2D->GeneralSettings
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018134903269.png" alt="image-20241018134903269" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018134903269.png" alt="image-20241018134903269" style="zoom:50%;" />
 
 -   Gravity 重力
 -   Simulation Mode 模拟模式
@@ -41,21 +41,21 @@ Edit->ProjectSettings->Physics2D->GeneralSettings
 
 ![image-20241018135358975](../../assets/Day02-角色/image-20241018135358975.png)
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018135501669.png" alt="image-20241018135501669" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018135501669.png" alt="image-20241018135501669" style="zoom:50%;" />
 
 Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018135602548.png" alt="image-20241018135602548" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018135602548.png" alt="image-20241018135602548" style="zoom:50%;" />
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018135830725.png" alt="image-20241018135830725" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018135830725.png" alt="image-20241018135830725" style="zoom:50%;" />
 
 #### 瓦片碰撞体
 
 >Tilemap Collider 2D 
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140102439.png" alt="image-20241018140102439" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018140102439.png" alt="image-20241018140102439" style="zoom:50%;" />
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140116857.png" alt="image-20241018140116857" style="zoom:67%;" />
+<img src="../../assets/Day02-角色/image-20241018140116857.png" alt="image-20241018140116857" style="zoom:67%;" />
 
 将多方块合成为同一个碰撞体
 
@@ -63,13 +63,13 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
 2.   勾选Tilemap Collider 2D -> Used By Composite 合成为一体
 
-     <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140416658.png" alt="image-20241018140416658" style="zoom:50%;" />
+     <img src="../../assets/Day02-角色/image-20241018140416658.png" alt="image-20241018140416658" style="zoom:50%;" />
 
 3.   ==注意==会自动添加Rigidbody组件, 为其增加重力
 
 4.   在Rigidbody2D中修改刚体组件的BodyType, 使其为static
 
-     <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140603177.png" alt="image-20241018140603177" style="zoom:67%;" />
+     <img src="../../assets/Day02-角色/image-20241018140603177.png" alt="image-20241018140603177" style="zoom:67%;" />
 
 #### 组合碰撞体
 
@@ -81,21 +81,21 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
 对象有物理的有关层设置Inspector->Layer
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241024190425597.png" alt="image-20241024190425597" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241024190425597.png" alt="image-20241024190425597" style="zoom:50%;" />
 
 添加自定义层
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241024190703102.png" alt="image-20241024190703102" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241024190703102.png" alt="image-20241024190703102" style="zoom:50%;" />
 
 在Edit->project settings Physics 2D-> Layer Collision Matrix 勾选表示层与层之间会产生碰撞, 不勾选表示不会碰撞
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241024190627121.png" alt="image-20241024190627121" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241024190627121.png" alt="image-20241024190627121" style="zoom:50%;" />
 
 ### 刚体
 
 >   Rigidbody 2D
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140949653.png" alt="image-20241018140949653" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018140949653.png" alt="image-20241018140949653" style="zoom:50%;" />
 
 #### 重力
 
@@ -115,9 +115,9 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
 Transform ->Rotation 设置人物旋转角度
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018140759663.png" alt="image-20241018140759663" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018140759663.png" alt="image-20241018140759663" style="zoom:50%;" />
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141024146.png" alt="image-20241018141024146" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018141024146.png" alt="image-20241018141024146" style="zoom:50%;" />
 
 人物有倾斜, 运行测试
 
@@ -127,7 +127,7 @@ Transform ->Rotation 设置人物旋转角度
 
 不一定是调整参数, 人物可能在撞到啥有碰撞体的东西, 都会躺板板, 例如, 从边角磕下来
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141359226.png" alt="image-20241018141359226" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018141359226.png" alt="image-20241018141359226" style="zoom:50%;" />
 
 也会躺板板
 
@@ -137,7 +137,7 @@ Transform ->Rotation 设置人物旋转角度
 
 在RigidBody->Constraints->Freeze Rotation 勾选, 锁定旋转
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141544340.png" alt="image-20241018141544340" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018141544340.png" alt="image-20241018141544340" style="zoom:50%;" />
 
 效果: 小伙立正了
 
@@ -152,7 +152,7 @@ Transform ->Rotation 设置人物旋转角度
 
 ### 自定义C#脚本组件
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018142504579.png" alt="image-20241018142504579" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018142504579.png" alt="image-20241018142504579" style="zoom:50%;" />
 
 在人物的Inspector中AddComponent, 搜索自定义C#脚本文件名, 添加该脚本文件
 
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour {
 }
 ```
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018165042902.png" alt="image-20241018165042902" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018165042902.png" alt="image-20241018165042902" style="zoom:50%;" />
 
 #### 关闭C#脚本自动同步刷新
 
@@ -245,7 +245,7 @@ Rider: Setting->Language&Frameworks->Unity Engine -> Automatically refresh 取�
 
 ### 创建输入系统
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018144848519.png" alt="image-20241018144848519" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018144848519.png" alt="image-20241018144848519" style="zoom:50%;" />
 
 Project->Create->反复点击`↓`箭头->Input Actions
 
@@ -253,7 +253,7 @@ Project->Create->反复点击`↓`箭头->Input Actions
 
 ![image-20241018145032253](../../assets/Day02-角色/image-20241018145032253.png)
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018145051887.png" alt="image-20241018145051887" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018145051887.png" alt="image-20241018145051887" style="zoom:50%;" />
 
 ### 按键绑定
 
@@ -263,7 +263,7 @@ Project->Create->反复点击`↓`箭头->Input Actions
 
 游戏运行一套, 暂停一套, 控制UI一套
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018150323087.png" alt="image-20241018150323087" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018150323087.png" alt="image-20241018150323087" style="zoom:50%;" />
 
 -   Action Type
 
@@ -273,7 +273,7 @@ Project->Create->反复点击`↓`箭头->Input Actions
 
 -   特别的, Value
 
-    <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018150534143.png" alt="image-20241018150534143" style="zoom:50%;" />
+    <img src="../../assets/Day02-角色/image-20241018150534143.png" alt="image-20241018150534143" style="zoom:50%;" />
 
     -   Vector 2 二维向量, 纵轴和横轴的移动的输入检测
 
@@ -285,11 +285,11 @@ Actions->+->Add Up\Down\Left\Right Composite
 
 快速创建按键映射
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018150838943.png" alt="image-20241018150838943" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018150838943.png" alt="image-20241018150838943" style="zoom:50%;" />
 
 Composite->Mode->DigitalNormalized , 对于键盘, 以值+1/-1表示按键被按下;对于手柄在[-1,1]的单精度浮点连续变化
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018152847497.png" alt="image-20241018152847497" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018152847497.png" alt="image-20241018152847497" style="zoom:50%;" />
 
 绑定: 输入`W[Keyboard]`, 指定监听键盘W, 或点击`Listen`按钮, 然后按下按键`W`完成按键指定
 
@@ -299,13 +299,13 @@ Composite->Mode->DigitalNormalized , 对于键盘, 以值+1/-1表示按键被按
 
 >   Controller Schema
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018151648347.png" alt="image-20241018151648347" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018151648347.png" alt="image-20241018151648347" style="zoom:50%;" />
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018151607162.png" alt="image-20241018151607162" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018151607162.png" alt="image-20241018151607162" style="zoom:50%;" />
 
 为按键选择约束
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018151739083.png" alt="image-20241018151739083" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018151739083.png" alt="image-20241018151739083" style="zoom:50%;" />
 
 ### 保存
 
@@ -331,7 +331,7 @@ Untiy自动生成默认的InputAction配置表
 
 Player Input->Actions->Behavior->Invoke Unity Events
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018153517708.png" alt="image-20241018153517708" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018153517708.png" alt="image-20241018153517708" style="zoom:50%;" />
 
 而后可添加各个行为的函数执行逻辑
 
@@ -339,13 +339,13 @@ Player Input->Actions->Behavior->Invoke Unity Events
 
 选中inputactions文件, Inspector->Generate C# Class 勾选
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018153913394.png" alt="image-20241018153913394" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018153913394.png" alt="image-20241018153913394" style="zoom:50%;" />
 
 Apply, 生成C#代码, 在C#代码的类来访问控制
 
 C#的Console类打印不生效, 使用`Debug.Log("")`在(window->General->Console):
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018180601470.png" alt="image-20241018180601470" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241018180601470.png" alt="image-20241018180601470" style="zoom:50%;" />
 
 显示
 
@@ -383,7 +383,7 @@ public class PlayerController : MonoBehaviour {
 
 -   OnEnable调用时机
 
-    <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018155035374.png" alt="image-20241018155035374" style="zoom:50%;" />
+    <img src="../../assets/Day02-角色/image-20241018155035374.png" alt="image-20241018155035374" style="zoom:50%;" />
 
     变成`已被勾选`状态的时候被调用
 
@@ -435,7 +435,7 @@ private void Update() {
 
 Inspector->Rigidbody->info
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018161601565.png" alt="image-20241018161601565" style="zoom:67%;" />
+<img src="../../assets/Day02-角色/image-20241018161601565.png" alt="image-20241018161601565" style="zoom:67%;" />
 
 -   Position/Rotation 覆盖上面的数值
 -   Velocity 速度
@@ -470,7 +470,7 @@ Inspector->Rigidbody->info
 
     在unity图形化界面中选择rigidbody的组件对象
 
-    <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018164629367.png" alt="image-20241018164629367" style="zoom:80%;" />
+    <img src="../../assets/Day02-角色/image-20241018164629367.png" alt="image-20241018164629367" style="zoom:80%;" />
 
     优势: 在编辑器(Rider/VS)执行或**游戏执行之前, 直接获取组件的使用权**, 速度更快
 
@@ -511,7 +511,7 @@ private void Move() {
 
     Inspector->SpriteRenderer->Flip 实现快速翻转
 
-    <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018171548047.png" alt="image-20241018171548047" style="zoom:50%;" />
+    <img src="../../assets/Day02-角色/image-20241018171548047.png" alt="image-20241018171548047" style="zoom:50%;" />
 
 由于Transform是默认组件, 就不需要`GetComponent` 了, 直接获取成员
 
@@ -546,7 +546,7 @@ public float jumpSpeed;
 public Vector2 inputDirection;
 ```
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018174912465.png" alt="image-20241018174912465" style="zoom:70%;" />
+<img src="../../assets/Day02-角色/image-20241018174912465.png" alt="image-20241018174912465" style="zoom:70%;" />
 
 ### 跳跃
 
@@ -600,7 +600,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 人物卡墙(在墙上, 依然有向墙内的速度, 就卡墙上了)
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019132750107.png" alt="image-20241019132750107" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019132750107.png" alt="image-20241019132750107" style="zoom:50%;" />
 
 人物不限次数连跳
 
@@ -622,11 +622,11 @@ private void Jump(InputAction.CallbackContext obj) {
 
 ### 检测图层
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019135501162.png" alt="image-20241019135501162" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019135501162.png" alt="image-20241019135501162" style="zoom:50%;" />
 
 1.   对Land进行Layer创建
 
-     <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019140235044.png" alt="image-20241019140235044" style="zoom:50%;" />
+     <img src="../../assets/Day02-角色/image-20241019140235044.png" alt="image-20241019140235044" style="zoom:50%;" />
 
 2.   给land设置Layer
 
@@ -634,7 +634,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 3.   给检查设置Layer
 
-     <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019140400310.png" alt="image-20241019140400310" style="zoom:50%;" />
+     <img src="../../assets/Day02-角色/image-20241019140400310.png" alt="image-20241019140400310" style="zoom:50%;" />
 
 ### 绘制检测范围
 
@@ -656,7 +656,7 @@ private void OnDrawGizmosSelected() {
 }
 ```
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019144025594.png" alt="image-20241019144025594" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019144025594.png" alt="image-20241019144025594" style="zoom:50%;" />
 
 ### 检测物体代码
 
@@ -733,9 +733,9 @@ private void Jump(InputAction.CallbackContext obj) {
 
 ## 物理材质
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019144651440.png" alt="image-20241019144651440" style="zoom:67%;" />
+<img src="../../assets/Day02-角色/image-20241019144651440.png" alt="image-20241019144651440" style="zoom:67%;" />
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019144704152.png" alt="image-20241019144704152" style="zoom:67%;" />
+<img src="../../assets/Day02-角色/image-20241019144704152.png" alt="image-20241019144704152" style="zoom:67%;" />
 
 描述物体的粗糙程度
 
@@ -747,17 +747,17 @@ private void Jump(InputAction.CallbackContext obj) {
 
 Project->Create->2D->Physics Material 2D
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019145117645.png" alt="image-20241019145117645" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019145117645.png" alt="image-20241019145117645" style="zoom:50%;" />
 
 调整参数
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019145135844.png" alt="image-20241019145135844" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019145135844.png" alt="image-20241019145135844" style="zoom:50%;" />
 
 Friction 摩擦系数
 
 ### 设置物理材质
 
-<img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019145241508.png" alt="image-20241019145241508" style="zoom:50%;" />
+<img src="../../assets/Day02-角色/image-20241019145241508.png" alt="image-20241019145241508" style="zoom:50%;" />
 
 人物就会从墙上滑下来
 

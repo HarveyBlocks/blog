@@ -131,7 +131,7 @@ public class Sudent{
 
     -   在字节码文件内使用符号引用
 
-    <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512145637300.png" alt="image-20240512145637300" style="zoom:50%;" />
+    <img src="../assets/Day01-字节码文件/image-20240512145637300.png" alt="image-20240512145637300" style="zoom:50%;" />
 
 -   直接引用
 
@@ -178,7 +178,7 @@ public class Sudent{
 
 2.  初始化阶段会执行字节码文件中的`clinit`(Cl(ass)+INIT)部分
 
-    <img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513202042353.png" alt="image-20240513202042353" style="zoom:50%;" />
+    <img src="../assets/Day03-类加载生命周期/image-20240513202042353.png" alt="image-20240513202042353" style="zoom:50%;" />
 
 ### 观察初始化
 
@@ -204,13 +204,13 @@ JDK17依旧没有这个功能???
     public static final int value = Integer.valueOf(1);
     ```
 
-    <img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513203338409.png" alt="image-20240513203338409" style="zoom:50%;" />
+    <img src="../assets/Day03-类加载生命周期/image-20240513203338409.png" alt="image-20240513203338409" style="zoom:50%;" />
 
-    <img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513203529248.png" alt="image-20240513203529248" style="zoom:50%;" />
+    <img src="../assets/Day03-类加载生命周期/image-20240513203529248.png" alt="image-20240513203529248" style="zoom:50%;" />
 
     特别的, 在这种情况下, value应该在CONST_VALUE之前, 否则编译报错
 
-    <img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513203612160.png" alt="image-20240513203612160" style="zoom:50%;" />
+    <img src="../assets/Day03-类加载生命周期/image-20240513203612160.png" alt="image-20240513203612160" style="zoom:50%;" />
 
 2.  调用`Class.forName`
 
@@ -277,7 +277,7 @@ num = 2
 
     -   **匿名代码块的代码不能在字段的声明之前**
 
-    <img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513201849892.png" alt="image-20240513201849892" style="zoom:50%;" />
+    <img src="../assets/Day03-类加载生命周期/image-20240513201849892.png" alt="image-20240513201849892" style="zoom:50%;" />
 
 3.  构造器的代码执行
 
@@ -285,7 +285,7 @@ num = 2
 
 即在解析阶段能做完类的所有工作, 不需要Init阶段, 就不会有Clinit
 
-<img src="../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240513202635864.png" alt="image-20240513202635864" style="zoom:50%;" />
+<img src="../assets/Day03-类加载生命周期/image-20240513202635864.png" alt="image-20240513202635864" style="zoom:50%;" />
 
 -   无静态代码块且
     -   没有**静态变量**

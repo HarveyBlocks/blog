@@ -1,6 +1,6 @@
 # 日期函数
 
-![image-20231007162807543](../../../../../JDK/JavaDailyBlog/blog/java基础/image-20231007162807543.png)
+![image-20231007162807543](../../../../Java/assets/image-20231007162807543.png)
 
 ```mysql
 select curdate(),curtime(),now();

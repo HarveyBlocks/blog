@@ -133,7 +133,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 ##### 角色
 
-<img src="../../assets/Day07-%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/TB1hSpccIVl614jSZKPXXaGjpXa-1330-924.png" alt="Overview of a global transaction" style="zoom:67%;" />
+<img src="../../assets/Day07-分布式事务/TB1hSpccIVl614jSZKPXXaGjpXa-1330-924.png" alt="Overview of a global transaction" style="zoom:67%;" />
 
 -   TC    `Transaction Coordinator`
     -   事务协调者

@@ -62,9 +62,9 @@
 - 不要乱在xml文件里写>,<,&啥的(><会被认定是标签)
   - 平替:![image-20231004004846059](../assets/Day30-xml文件/image-20231004004846059.png)
   - 可以用浏览器查看是否替换成功:
-    - xml文件里的样子:<img src="../assets/Day30-xml%E6%96%87%E4%BB%B6/image-20231004005029309.png" alt="image-20231004005029309" style="zoom: 50%;" />
+    - xml文件里的样子:<img src="../assets/Day30-xml文件/image-20231004005029309.png" alt="image-20231004005029309" style="zoom: 50%;" />
     - ​												↓
-    - 浏览器里的样子:<img src="../assets/Day30-xml%E6%96%87%E4%BB%B6/image-20231004005058669.png" alt="image-20231004005058669" style="zoom:50%;" />
+    - 浏览器里的样子:<img src="../assets/Day30-xml文件/image-20231004005058669.png" alt="image-20231004005058669" style="zoom:50%;" />
 
   - 也可以输入"CD"一回车![image-20231004005522775](../assets/Day30-xml文件/image-20231004005522775.png)
   - 召唤出特殊数据区:![image-20231004005636626](../assets/Day30-xml文件/image-20231004005636626.png)

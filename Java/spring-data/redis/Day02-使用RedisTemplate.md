@@ -8,7 +8,7 @@
 
 使用SpringBoot
 
-<img src="../../assets/Day02-%E4%BD%BF%E7%94%A8RedisTemplate/image-20240102130922548.png" alt="image-20240102130922548" style="zoom:50%;" />
+<img src="../../assets/Day02-使用RedisTemplate/image-20240102130922548.png" alt="image-20240102130922548" style="zoom:50%;" />
 
 ### 引入依赖
 

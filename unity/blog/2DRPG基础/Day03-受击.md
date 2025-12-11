@@ -149,35 +149,35 @@ public class CharacterFeature : MonoBehaviour {
 
 3.   Animation->AddProperties->Sprite Renderer->SpriteRenderer.Material._Color
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020122123304.png" alt="image-20241020122123304" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020122123304.png" alt="image-20241020122123304" style="zoom:50%;" />
 
 4.   点击时间轴上的0.2, 调整A
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020122428403.png" alt="image-20241020122428403" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020122428403.png" alt="image-20241020122428403" style="zoom:50%;" />
 
 5.   Animator->Layers 添加动画图层
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020121047256.png" alt="image-20241020121047256" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020121047256.png" alt="image-20241020121047256" style="zoom:50%;" />
 
 6.   Layer->Config->Blending->Additive 调整为**叠加**层, Weigt权重表示动画播放的优先级, 调到1
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020123048710.png" alt="image-20241020123048710" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020123048710.png" alt="image-20241020123048710" style="zoom:50%;" />
 
 7.   拖入动画状态到叠加层
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020123351032.png" alt="image-20241020123351032" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020123351032.png" alt="image-20241020123351032" style="zoom:50%;" />
 
 8.   Animator->Parameters->+->Trigger 添加条件参数: 触发器
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020123506925.png" alt="image-20241020123506925" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020123506925.png" alt="image-20241020123506925" style="zoom:50%;" />
 
 9.   Animator->Transition->Inspector->Condition->添加Trigger hurt, 不需要转换时间, 不需要退出时间
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020123715970.png" alt="image-20241020123715970" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020123715970.png" alt="image-20241020123715970" style="zoom:50%;" />
 
 10.   动画播放完, 就返回到原有状态
 
-      <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020123916838.png" alt="image-20241020123916838" style="zoom:50%;" />
+      <img src="../../assets/Day03-受击/image-20241020123916838.png" alt="image-20241020123916838" style="zoom:50%;" />
 
 11.   C#脚本, 触发器触发
 
@@ -205,13 +205,13 @@ public class CharacterFeature : MonoBehaviour {
 
       角色->Inspector->CharacterFeature-> On Take Damage
 
-      <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020144146924.png" alt="image-20241020144146924" style="zoom:50%;" />
+      <img src="../../assets/Day03-受击/image-20241020144146924.png" alt="image-20241020144146924" style="zoom:50%;" />
 
       点击`+`添加在事件发生后会被调用的方法
 
-      <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020144301095.png" alt="image-20241020144301095" style="zoom:50%;" />
+      <img src="../../assets/Day03-受击/image-20241020144301095.png" alt="image-20241020144301095" style="zoom:50%;" />
 
-      <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020144831870.png" alt="image-20241020144831870" style="zoom:50%;" />
+      <img src="../../assets/Day03-受击/image-20241020144831870.png" alt="image-20241020144831870" style="zoom:50%;" />
 
       -   Runtime Only 在运行时检测
       -   Knight Player Animation C#脚本文件/组件
@@ -241,7 +241,7 @@ public class CharacterFeature : MonoBehaviour {
 
 14.   受伤的动画关系绘制
 
-      <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020202442182.png" alt="image-20241020202442182" style="zoom:50%;" />
+      <img src="../../assets/Day03-受击/image-20241020202442182.png" alt="image-20241020202442182" style="zoom:50%;" />
 
       Transitions->settings->Can transition to self 取消勾选
 
@@ -291,17 +291,17 @@ public class CharacterFeature : MonoBehaviour {
 
 2.   注册受击事件
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020191904003.png" alt="image-20241020191904003" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020191904003.png" alt="image-20241020191904003" style="zoom:50%;" />
 
      PS: 可以再添加方法时, 关注`Dynamic XXX` 表示传递参数和事件需要的参数一致, 有助于快速选择
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020192019865.png" alt="image-20241020192019865" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020192019865.png" alt="image-20241020192019865" style="zoom:50%;" />
 
 3.   在受击动画完成播放之后调用`Recover`方法, 恢复用户的控制
 
      Animator->Hurt状态->Inspector->Add behaviour
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020194345548.png" alt="image-20241020194345548" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020194345548.png" alt="image-20241020194345548" style="zoom:50%;" />
 
      自动生成在Assert文件夹下
 
@@ -323,7 +323,7 @@ public class CharacterFeature : MonoBehaviour {
 
 2.   创建死亡层
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020221047369.png" alt="image-20241020221047369" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020221047369.png" alt="image-20241020221047369" style="zoom:50%;" />
 
      override, 权重为1, 完全覆盖前面一层的动画, 
 
@@ -335,7 +335,7 @@ public class CharacterFeature : MonoBehaviour {
 
      如果Death Animation直接到Exit, 就会跳回上一层的动画
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020221147192.png" alt="image-20241020221147192" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020221147192.png" alt="image-20241020221147192" style="zoom:50%;" />
 
 4.   C#脚本
 
@@ -363,9 +363,9 @@ public class CharacterFeature : MonoBehaviour {
 
      点击动画素材
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020221407024.png" alt="image-20241020221407024" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020221407024.png" alt="image-20241020221407024" style="zoom:50%;" />
 
      Inspector->LoopTIme 取消勾选
 
-     <img src="../../assets/Day03-%E5%8F%97%E5%87%BB/image-20241020221336803.png" alt="image-20241020221336803" style="zoom:50%;" />
+     <img src="../../assets/Day03-受击/image-20241020221336803.png" alt="image-20241020221336803" style="zoom:50%;" />
 

@@ -18,7 +18,7 @@ $$
 
 设置一个单位向量 $\vec{n}$,  现将其作为一个平面 $\alpha$ 的法向量, $\vec{u}$ 是平面 $\alpha$ 上的一个向量
 
-![image-20251208220509763](assets/CG/image-20251208220509763.png)
+![image-20251208220509763](D:\IT_study\blog_assets\cg\CG\image-20251208220509763.png)
 
 求 $\vec{n} \times \vec{u}$ 相当于将 $\vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $90^{\circ}$
 
@@ -39,7 +39,7 @@ $$
 
 雅可比式在三角形的法向量运算中的使用
 
-![image-20251208222609328](assets/CG/image-20251208222609328.png)
+![image-20251208222609328](D:\IT_study\blog_assets\cg\CG\image-20251208222609328.png)
 
 $$
 \vec{u}\times(\vec{v}\times\vec{w}) +
@@ -133,7 +133,7 @@ $$
 
 上述三个频率的采样加起来, 就是全段频率的采样, 同理, 图片加起来也会比较清晰
 
-![image-20251208183641212](assets/CG/image-20251208183641212.png)
+![image-20251208183641212](D:\IT_study\blog_assets\cg\CG\image-20251208183641212.png)
 
 采样低频率数据+采样较低频率数据+采样较高频率数据+采样超高频率数据
 
@@ -141,7 +141,7 @@ $$
 
 Origin频率高于采样频率太多, 将导致采样结果反而接近低频下的Origin
 
-![image-20251208183052084](assets/CG/image-20251208183052084.png)
+![image-20251208183052084](D:\IT_study\blog_assets\cg\CG\image-20251208183052084.png)
 
 在相同频率的采样率下, 频率的信号高到一定程度, 就会高度失真
 
@@ -411,7 +411,7 @@ $$
 
 对于只有一部分落在区域内的三角形, 选择将其分为更小的子三角形
 
-![image-20251209200137545](assets/CG/image-20251209200137545.png)
+![image-20251209200137545](D:\IT_study\blog_assets\cg\CG\image-20251209200137545.png)
 
 我们定义, 剔除比 `z-near` 近, 比 `z-far` 远的物体
 
@@ -419,11 +419,11 @@ $$
 
 如果 `z-near` 过小, 或 `z-far` 过大, 浮点数将会导致精度丢失, 最终导致光栅化时产生肉眼可见的误差
 
-![image-20251209200640031](assets/CG/image-20251209200640031.png)
+![image-20251209200640031](D:\IT_study\blog_assets\cg\CG\image-20251209200640031.png)
 
 ## 视锥体到单位正方体的映射
 
-![image-20251209200825480](assets/CG/image-20251209200825480.png)
+![image-20251209200825480](D:\IT_study\blog_assets\cg\CG\image-20251209200825480.png)
 
 为什么要这么做?
 
@@ -618,7 +618,7 @@ $$
 \hat{f}=f_i+\frac{x-x_i}{x_{i+1}-x_i}(f_{i+1}-f_i)
 $$
 
-![image-20251209234859076](assets/CG/image-20251209234859076.png)
+![image-20251209234859076](D:\IT_study\blog_assets\cg\CG\image-20251209234859076.png)
 
 ### 平面插值
 
@@ -630,7 +630,7 @@ $$
 $$
 \hat{f}(x,y)  = ax+by+c
 $$
-![image-20251209235132800](assets/CG/image-20251209235132800.png)
+![image-20251209235132800](D:\IT_study\blog_assets\cg\CG\image-20251209235132800.png)
 
 如果转化思路, 变为比例的概念, 重心<->面积比例<->高
 
@@ -642,11 +642,11 @@ $$
 
 造成的问题:
 
-![image-20251210012134774](assets/CG/image-20251210012134774.png)
+![image-20251210012134774](D:\IT_study\blog_assets\cg\CG\image-20251210012134774.png)
 
 解决方法:
 
-![image-20251210012836310](assets/CG/image-20251210012836310.png)
+![image-20251210012836310](D:\IT_study\blog_assets\cg\CG\image-20251210012836310.png)
 
 ## Texture
 
@@ -704,7 +704,7 @@ MipMap思路大概如此, 在每个可能的尺度上存储一个预过滤的图
 
 要展示红色区域, 从纹理空间到屏幕空间, 大小缩小了不少, 因此使用 $level$ 更低的mipmap
 
-![image-20251210021607292](assets/CG/image-20251210021607292.png)
+![image-20251210021607292](D:\IT_study\blog_assets\cg\CG\image-20251210021607292.png)
 
 上图中, 屏幕空间的 $(u,v)_{0,0}$ 这一块空间, 对应了多大的mipmap纹理空间?
 $$
@@ -745,7 +745,7 @@ $$
 
 $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, 插值出 $h$, 最终 两个 $h$ 配对, 按比例取得 $(u,v,w)$的插值
 
-![image-20251210022904038](assets/CG/image-20251210022904038.png)
+![image-20251210022904038](D:\IT_study\blog_assets\cg\CG\image-20251210022904038.png)
 
 对非整型的 $level$ : $D \in R$ , 
 
@@ -793,7 +793,7 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 
 构造实体几何, 使用Boolean表达式链接多个简单的几何体, 来描述一个复杂的几何体
 
-![image-20251210152738210](assets/CG/image-20251210152738210.png)
+![image-20251210152738210](D:\IT_study\blog_assets\cg\CG\image-20251210152738210.png)
 
 ### Blobby Surfaces
 

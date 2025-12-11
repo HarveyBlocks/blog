@@ -54,5 +54,5 @@
 
 -   而 `@GlobalTransactional` 是 **Seata** **分布式事务框架**中用来管理分布式事务的注解
 
--   <img src="../../assets/Day04-%E8%AE%A2%E5%8D%95%E6%94%AF%E4%BB%98%E5%80%92%E8%AE%A1%E6%97%B6/image-20240114141022774.png" alt="image-20240114141022774" style="zoom:33%;" />
+-   <img src="../../assets/Day04-订单支付倒计时/image-20240114141022774.png" alt="image-20240114141022774" style="zoom:33%;" />
 

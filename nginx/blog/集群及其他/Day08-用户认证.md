@@ -20,7 +20,7 @@ auth_basic string | off;
 
 Edge: 
 
-<img src="../../assets/Day08-%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81/image-20240424235652621.png" alt="image-20240424235652621" style="zoom:80%;" />
+<img src="../../assets/Day08-用户认证/image-20240424235652621.png" alt="image-20240424235652621" style="zoom:80%;" />
 
 这种区别?
 

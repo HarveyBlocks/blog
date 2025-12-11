@@ -167,7 +167,7 @@ http{
 
 300kb, 70ms->50ms
 
-<img src="../../assets/Day08-%E9%85%8D%E7%BD%AE/image-20240424190704208.png" alt="image-20240424190704208" style="zoom:67%;" />
+<img src="../../assets/Day08-配置/image-20240424190704208.png" alt="image-20240424190704208" style="zoom:67%;" />
 
 ## 清除缓存
 

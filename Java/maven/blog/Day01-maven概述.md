@@ -174,7 +174,7 @@ mvn archetype:generate -DgroupId=com.harvey -DartifactId=web-project -Darchetype
 
 ### 依赖冲突
 
-![image-20231202215555984](../screenshots/Day01-maven概述/image-20231202215555984.png)
+![image-20231202215555984](../assets/Day01-maven概述/image-20231202215555984.png)
 
 -   只要指定依赖范围为**provide**即可
 

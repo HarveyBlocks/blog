@@ -22,7 +22,7 @@ public class HelloServiceImpl implements HelloService {
 
 开启多台机器
 
-<img src="../assets/Day08-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/image-20240406214809791.png" alt="image-20240406214809791" style="zoom: 45%;" />
+<img src="../assets/Day08-负载均衡/image-20240406214809791.png" alt="image-20240406214809791" style="zoom: 45%;" />
 
 测试用比例1:10:100
 

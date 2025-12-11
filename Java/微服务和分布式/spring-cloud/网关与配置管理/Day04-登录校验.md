@@ -7,7 +7,7 @@
 
 >   思考如何在路由转发之前完成登录校验
 
-![spring_cloud_gateway_diagram.png (443×595)](../../assets/Day04-%E7%99%BB%E5%BD%95%E6%A0%A1%E9%AA%8C/spring_cloud_gateway_diagram.png)
+![spring_cloud_gateway_diagram.png (443×595)](../../assets/Day04-登录校验/spring_cloud_gateway_diagram.png)
 
 -   `Handler Mapping`
 

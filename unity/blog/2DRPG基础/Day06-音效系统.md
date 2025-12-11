@@ -12,19 +12,19 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
 
 2.   Inspector->Add Component->Audio
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029161057722.png" alt="image-20241029161057722" style="zoom:50%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029161057722.png" alt="image-20241029161057722" style="zoom:50%;" />
 
      -   Audio Listener 音乐监听
 
          MainCamera中默认含有Audio Listener
 
-         <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029161212181.png" alt="image-20241029161212181" style="zoom:67%;" />
+         <img src="../../assets/Day06-音效系统/image-20241029161212181.png" alt="image-20241029161212181" style="zoom:67%;" />
 
      -   Audio Source 音乐播放
 
 3.   Audio Manager中添加Audio Source
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029161706706.png" alt="image-20241029161706706" style="zoom:50%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029161706706.png" alt="image-20241029161706706" style="zoom:50%;" />
 
      -   Audio Clip 音效切片, 就是BGM素材直接导入
 
@@ -86,7 +86,7 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
 
      2.   创建对应assets
 
-          <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029164344385.png" alt="image-20241029164344385" style="zoom:67%;" />
+          <img src="../../assets/Day06-音效系统/image-20241029164344385.png" alt="image-20241029164344385" style="zoom:67%;" />
 
      3.   创建音乐广播脚本
 
@@ -114,7 +114,7 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
 
           横劈是*呼~*, 竖劈是*划~*
 
-          <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029170724133.png" alt="image-20241029170724133" style="zoom:67%;" />
+          <img src="../../assets/Day06-音效系统/image-20241029170724133.png" alt="image-20241029170724133" style="zoom:67%;" />
 
           Play设置为true
 
@@ -197,7 +197,7 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
 
      6.   为AudioManager调整参数
 
-          <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029170833047.png" alt="image-20241029170833047" style="zoom:67%;" />
+          <img src="../../assets/Day06-音效系统/image-20241029170833047.png" alt="image-20241029170833047" style="zoom:67%;" />
 
           BGM不需要切换, 所以OnAwake保持, 就会在启动时播放
 
@@ -216,24 +216,24 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
 
 2.   创建AudioMixer文件
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029172644496.png" alt="image-20241029172644496" style="zoom:67%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029172644496.png" alt="image-20241029172644496" style="zoom:67%;" />
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029172740459.png" alt="image-20241029172740459" style="zoom:67%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029172740459.png" alt="image-20241029172740459" style="zoom:67%;" />
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029172950543.png" alt="image-20241029172950543" style="zoom:67%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029172950543.png" alt="image-20241029172950543" style="zoom:67%;" />
 
 3.   选中Master, 点击+, 添加子轨道(用于人声, 环境音, 白噪音...)
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029173115455.png" alt="image-20241029173115455" style="zoom:50%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029173115455.png" alt="image-20241029173115455" style="zoom:50%;" />
 
      -   主音轨调节整个游戏声音
      -   子音轨各自调节声音
 
 4.   选择AudioManager对象->Inspector->AudioSource->Output
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029173213291.png" alt="image-20241029173213291" style="zoom:50%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029173213291.png" alt="image-20241029173213291" style="zoom:50%;" />
 
      选中对应子轨道
 
-     <img src="../../assets/Day06-%E9%9F%B3%E6%95%88%E7%B3%BB%E7%BB%9F/image-20241029173256722.png" alt="image-20241029173256722" style="zoom:50%;" />
+     <img src="../../assets/Day06-音效系统/image-20241029173256722.png" alt="image-20241029173256722" style="zoom:50%;" />
 

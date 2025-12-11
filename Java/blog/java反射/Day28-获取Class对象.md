@@ -42,7 +42,7 @@ Class.forName("全.包.名.类名")
 
 全类名的粘贴:
 
-<video src="../../typora-user-images/Day28/LearnLambda – Demo.java 2023-09-08 23-45-14.mp4"></video>
+<video src="../../assets/Day28/LearnLambda – Demo.java 2023-09-08 23-45-14.mp4"></video>
 
 ```java
 /*LearnReflection.Student*/

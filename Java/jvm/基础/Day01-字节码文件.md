@@ -2,17 +2,17 @@
 
 字节码文件以二进制形式存贮
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512135833880.png" alt="image-20240512135833880" style="zoom:30%;" />
+<img src="../assets/Day01-字节码文件/image-20240512135833880.png" alt="image-20240512135833880" style="zoom:30%;" />
 
 Notepad++的十六进制插件对文件进行简单查看
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140144414.png" alt="image-20240512140144414" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512140144414.png" alt="image-20240512140144414" style="zoom:50%;" />
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140219779.png" alt="image-20240512140219779" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512140219779.png" alt="image-20240512140219779" style="zoom:50%;" />
 
 Idea依靠插件之类的, 还是能反编译一下
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140002081.png" alt="image-20240512140002081" style="zoom:40%;" />
+<img src="../assets/Day01-字节码文件/image-20240512140002081.png" alt="image-20240512140002081" style="zoom:40%;" />
 
 ## 字节码文件查看器
 
@@ -121,7 +121,7 @@ SourceFile: "Demo1.java"
 
 #### 页面概览
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512141228008.png" alt="image-20240512141228008" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512141228008.png" alt="image-20240512141228008" style="zoom:50%;" />
 
 #### Idea插件
 
@@ -133,7 +133,7 @@ SourceFile: "Demo1.java"
 
 魔数, 字节码文件对应的Java版本号, 访问标识(public, final等) 父类和接口
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512142115663.png" alt="image-20240512142115663" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512142115663.png" alt="image-20240512142115663" style="zoom:50%;" />
 
 **主版本号**:
 
@@ -209,15 +209,15 @@ public static void main(String[] args) {
 ```
 两个字段都指向同一个`info#8`
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512145536052.png" alt="image-20240512145536052" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512145536052.png" alt="image-20240512145536052" style="zoom:50%;" />
 
 `info#8`存放了存放常量内存空间的地址
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512145637300.png" alt="image-20240512145637300" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512145637300.png" alt="image-20240512145637300" style="zoom:50%;" />
 
 `info#8`指向了`info#27`, `info#27`是存放字符串值的内存空间
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512145754986.png" alt="image-20240512145754986" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512145754986.png" alt="image-20240512145754986" style="zoom:50%;" />
 
 -   Q: 为什么不让字段都指向`info#27`呢?
 
@@ -239,11 +239,11 @@ public static void main(String[] args) {
 
 ## 字段
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512141632194.png" alt="image-20240512141632194" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512141632194.png" alt="image-20240512141632194" style="zoom:50%;" />
 
 ## 方法
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512141600802.png" alt="image-20240512141600802" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512141600802.png" alt="image-20240512141600802" style="zoom:50%;" />
 
 ### 操作数栈
 
@@ -281,9 +281,9 @@ System.out.println(i);
 
 以查看`i++`的执行过程为例
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512152549160.png" alt="image-20240512152549160" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512152549160.png" alt="image-20240512152549160" style="zoom:50%;" />
 
-<img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512152653164.png" alt="image-20240512152653164" style="zoom:50%;" />
+<img src="../assets/Day01-字节码文件/image-20240512152653164.png" alt="image-20240512152653164" style="zoom:50%;" />
 
 ```assembly
 # 0->stack

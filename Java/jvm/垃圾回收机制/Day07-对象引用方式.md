@@ -45,7 +45,7 @@ for (int i = 0; i < 10; i++) {
 
 Caffine有使用`SoftReference`的软引用的API
 
-<img src="../assets/Day07-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/image-20240519165528163.png" alt="image-20240519165528163" style="zoom:50%;" />
+<img src="../assets/Day07-对象引用方式/image-20240519165528163.png" alt="image-20240519165528163" style="zoom:50%;" />
 
 ```java
 Cache<String, Object> cache = Caffeine.newBuilder().softValues().build();
@@ -96,7 +96,7 @@ private static WeakReference<byte[]> getWeakReference() {
 
 PhantomReference
 
-<img src="../assets/Day07-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/image-20240519204535900.png" alt="image-20240519204535900" style="zoom:50%;" />
+<img src="../assets/Day07-对象引用方式/image-20240519204535900.png" alt="image-20240519204535900" style="zoom:50%;" />
 
 写死了
 

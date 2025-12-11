@@ -242,7 +242,7 @@ void (Node *root) {
 3.  左子树的右子树和右子树的左子树完全相等
 4.  符合以上三条的是为对称
 
-<img src="../../assets/Day04-BinaryTree/101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.gif" alt="101.对称二叉树" style="zoom: 80%;" />
+<img src="../../assets/Day04-BinaryTree/101.对称二叉树.gif" alt="101.对称二叉树" style="zoom: 80%;" />
 
 ```cpp
 if (root == NULL) return true;

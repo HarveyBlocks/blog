@@ -102,9 +102,9 @@ public static void demo() {
 
 2.  Java命令行, `jconsol`
 
-    <img src="../assets/Day01-%E9%94%81%E7%9A%84%E6%B4%BB%E8%B7%83%E6%80%A7/image-20240908215640636.png" alt="image-20240908215640636" style="zoom:40%;" />
+    <img src="../assets/Day01-锁的活跃性/image-20240908215640636.png" alt="image-20240908215640636" style="zoom:40%;" />
 
-    <img src="../assets/Day01-%E9%94%81%E7%9A%84%E6%B4%BB%E8%B7%83%E6%80%A7/image-20240908215704768.png" alt="image-20240908215704768" style="zoom:50%;" />
+    <img src="../assets/Day01-锁的活跃性/image-20240908215704768.png" alt="image-20240908215704768" style="zoom:50%;" />
 
 ### 哲学家就餐
 

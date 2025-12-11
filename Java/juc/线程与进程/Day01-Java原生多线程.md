@@ -33,7 +33,7 @@ Thread thread2 = new Thread(() -> log.info("Run"));
 
 获取方法结果
 
-<img src="../assets/Day01-Java%E5%8E%9F%E7%94%9F%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20240905174644759.png" alt="image-20240905174644759" style="zoom: 33%;" />
+<img src="../assets/Day01-Java原生多线程/image-20240905174644759.png" alt="image-20240905174644759" style="zoom: 33%;" />
 
 使用
 
@@ -179,7 +179,7 @@ try {
 
 优先级的大小越大, 优先级越高
 
-<img src="../assets/Day01-Java%E5%8E%9F%E7%94%9F%E5%A4%9A%E7%BA%BF%E7%A8%8B/image-20240905194129268.png" alt="image-20240905194129268" style="zoom: 67%;" />
+<img src="../assets/Day01-Java原生多线程/image-20240905194129268.png" alt="image-20240905194129268" style="zoom: 67%;" />
 
 CPU空闲时, 优先级不会对任务调度器产生影响, 所有任务一律执行
 
