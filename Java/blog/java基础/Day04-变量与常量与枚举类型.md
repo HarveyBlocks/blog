@@ -5,7 +5,6 @@
 声明和初始化：
 [变量类型]  [变量名] = [变量值]
 
-
 ``` java
 int a=1,b=2,c=3; //不建议在一行里定义多个变量，程序可读性差
 ```
@@ -45,8 +44,6 @@ public class Main {
 
 ```
 
-
-
 #### 局部变量
 
 **必须声明和初始化**
@@ -81,7 +78,7 @@ final static double PI=3.14;
 public class Main {
 
     static final double PI=3.14;
-    
+
     public static void main(String[] args) {
 
         System.out.println(PI);
@@ -91,8 +88,6 @@ public class Main {
 ```
 
 ![image-20230802232613177](../../assets/image-20230802232613177.png)
-
-
 
 ## 枚举类型
 

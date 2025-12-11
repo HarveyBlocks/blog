@@ -2,16 +2,12 @@
 
 >   高并发, 一致性, 效率,线程安全问题, Redis集群
 
-
-
 ## 思路
-
-
 
 数据库读写太慢. 选择在Redis内存储**库存信息**和**一人一单**的业务
 
 -   库存信息需要**业务:商品编号为键, 库存为值**
-  
+
     -   过期时间也是有必要的啊
 -   一人一单需要**业务:商品编号为键, 订单为值**
     -   订单号为不重复的, 适合使用Set集合
@@ -33,10 +29,8 @@
 -   为保证以上过程的原子性, 选择使用Lua脚本
 -   记录用户ID,订单ID, 优惠券ID
 -   数据库中的数据的变更, 放在新的线程中去执行( 异步 )
-  
+
     -   可以累计到一定数量, 然后执行批量增加的操作\
-
-
 
 ## 需求
 
@@ -46,7 +40,6 @@
 2.  基于Lua脚本, 判断秒杀库存, 一人一单, 决定用户是否抢购成功
 3.  如果抢购成功, 不断从阻塞队列中获取信息, 实现异步下单
 4.  开启线程任务, 不断阻塞队列中获取信息, 实现异步下单功能
-
 
 ## Redis保存优惠券
 
@@ -88,8 +81,6 @@ private static String toMillion(LocalDateTime time) {
 ### 脚本流程
 
 ![image-20240126193708610](../../../assets/Day08-秒杀优化/image-20240126193708610.png)
-
-
 
 ### 脚本
 
@@ -150,8 +141,6 @@ redis.call('sAdd', orderKey, userId);
 return 0;
 ```
 
-
-
 ### 执行脚本
 
 ```java
@@ -182,8 +171,6 @@ public Long executeSeckillLua(Long voucherId) {
         voucherId.toString(), userId.toString());
 }
 ```
-
-
 
 ```java
 // 1. 执行Lua脚本
@@ -308,8 +295,6 @@ private class VoucherOrderHandler implements Runnable {
 }
 ```
 
-
-
 ### 秒杀订单存储到数据库
 
 ```java
@@ -341,13 +326,9 @@ public long saveOrderDb(VoucherOrder order) {
 }
 ```
 
-
-
 ## Controller逻辑
 
 ![image-20240126200614368](../../../assets/Day08-秒杀优化/image-20240126200614368.png)
-
-
 
 Controller逻辑
 
@@ -385,7 +366,6 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId,
     return Result.ok(orderId);
 }
 ```
-
 
 ## 测试
 

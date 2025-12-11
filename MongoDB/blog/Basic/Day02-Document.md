@@ -24,8 +24,6 @@ var mydoc = {
             }
 ```
 
-
-
 ### 字段名称
 
 string类型

@@ -53,12 +53,6 @@ public void testFactory() {
 
 ### 创建UserDao接口和实现类
 
-
-
-
-
-
-
 ### Bean.xml
 
 加上
@@ -67,11 +61,7 @@ public void testFactory() {
 <bean id="userDao" class="com.harvey.Impl.UserDaoImpl"/>
 ```
 
-
-
 ### 测试类
-
-
 
 ```java
 //创建工厂对象
@@ -99,8 +89,6 @@ TestLogger.LOGGER.info(""+userDao);
 
     就行
 
-
-
 ### Service层调用Dao层的实现
 
 -   这个是这样子的
@@ -110,13 +98,13 @@ TestLogger.LOGGER.info(""+userDao);
     ```java
     public class UserServiceImpl implements UserService {
         private UserDao userDao;
-    
+
         //Bean工厂去调用 从容器中获取userDao设置到此处
         public void setUserDao(UserDao userDao){
             this.userDao = userDao;
             System.out.println("BeanFactory去调用该方法获取userDao设置到此处" + userDao);
         }
-    
+
     }
     ```
 

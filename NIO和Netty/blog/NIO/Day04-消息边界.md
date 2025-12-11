@@ -4,8 +4,6 @@
 
 传输的是字节, 一个字符往往不是一个字节, 而由于buffer长度固定, 字符可能被切割
 
-
-
 ![](../../assets/Day04-消息边界/0023.png)
 
 -   Message1->需要扩容
@@ -23,8 +21,6 @@
 * TLV 格式，即 Type 类型、Length 长度、Value 数据，类型和长度已知的情况下，就可以方便获取消息大小，分配合适的 buffer，缺点是 buffer 需要提前分配，如果内容过大，则影响 server 吞吐量
     * Http 1.1 是 TLV 格式
     * Http 2.0 是 LTV 格式
-
-
 
 ### 半包粘包的分割整合
 
@@ -47,11 +43,7 @@ private static void split(ByteBuffer source) {
 }
 ```
 
-
-
 ### 扩容思路
-
-
 
 对于超出一次buffer容量的消息
 
@@ -81,8 +73,6 @@ b2 ->> b2: 01234567890abcdef3333\r
 >   attachment
 
 ![image-20240224144309363](../../assets/Day04-消息边界/image-20240224144309363.png)
-
-
 
 每个SocketChannel都有自己的附件
 
@@ -117,8 +107,6 @@ private static ByteBuffer expansion(ByteBuffer buffer) {
     return newBuffer.put(buffer);
 }
 ```
-
-
 
 ## ByteBuffer的大小分配
 

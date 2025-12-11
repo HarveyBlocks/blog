@@ -55,7 +55,6 @@ public class MethodExecutorBuilder {
 
     private MethodExecutor runnable;
 
-
     public MethodExecutorBuilder(MethodExecutor task) {
         this.runnable = task;
     }
@@ -87,14 +86,12 @@ public class MethodExecutorBuilder {
         runnable = params -> advice.post(task.execute(advice.pre(params)));
         return this;
     }
-    
+
     public static MethodExecutor defaultAdvice(MethodExecutor executor){
         // ...
     }
 }
 ```
-
-
 
 ## 增强
 
@@ -138,8 +135,6 @@ public static MethodExecutor defaultAdvice(MethodExecutor executor) {
             }).getTask();
 }
 ```
-
-
 
 ## 代理
 

@@ -26,15 +26,13 @@ public class Demo01 {
         String a=""+ i;
         System.out.println(plus(a));
     }
-    
+
     public static String plus(String a){
         return a+=a;
     }
 
 }
 ```
-
-
 
 return i;
 **只是往做返回容器用的寄存器里面复制入i的值而已。不对其他东西有影响**
@@ -77,10 +75,6 @@ public class Demo01 {
 
 ```
 
-
-
-
-
 ## 可变参数
 
 - 当方法需要未知个数的参数是，使用可变参数
@@ -96,8 +90,6 @@ public class Demo01 {
     方法体
 }
 ```
-
-
 
 示例：
 
@@ -128,10 +120,6 @@ public class Demo01 {
 }
 
 ```
-
-
-
-
 
 ## 递归
 

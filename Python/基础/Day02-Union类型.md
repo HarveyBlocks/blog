@@ -10,8 +10,6 @@
 
 ## 对变量标注Union
 
-
-
 ```python
 my_var: Union[str,int] = "2sdal"
 print(my_var)
@@ -22,10 +20,6 @@ print(my_var)
 my_var = 21.3 # 涉黄
 print(my_var)
 ```
-
-
-
-
 
 ## 对容器标注Union
 

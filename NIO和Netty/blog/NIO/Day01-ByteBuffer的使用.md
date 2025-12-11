@@ -117,8 +117,6 @@ public void testByteBufferWrite() {
 
 ## ByteBuffer读写原理
 
-
-
 ### ByteBuffer的三种属性
 
 * capacity容量
@@ -188,13 +186,7 @@ clear 动作发生后
 
 ![](../../assets/Day01-ByteBuffer的使用/0022.png)
 
-
-
-
-
 -   由于不会清空数据, 一定要按照规范去操作Buffer
-
-
 
 ## 调试工具类
 
@@ -375,8 +367,6 @@ public class ByteBufferUtil {
 }
 ```
 
-
-
 使用实例
 
 ```java
@@ -387,8 +377,6 @@ private void testByteBufferUtil(){
     ByteBufferUtil.debugAll(buffer);
 }
 ```
-
-
 
 使用结果
 
@@ -437,8 +425,6 @@ private void testCreate() {
 
 ### put()与get()
 
-
-
 -   `put()`总是写到`position`所指向的位置
 -   `get()`总是读`position`所指向的内容
 -   `put()`执行之后,`position`自动后移一格
@@ -447,8 +433,6 @@ private void testCreate() {
 -   `put()` 在非写模式下也能使用, 只是结果不一定和预期一样(主要看`position`)
 -   `put()`返回`buffer`, 故支持链式编程
 -   在`position`在值上超过`limit`, 就会报错: `BufferUnderflowException`
-
-
 
 ```java
 private void testGetAndPut(){
@@ -468,8 +452,6 @@ private void testGetAndPut(){
 }
 ```
 
-
-
 -   `get(bytes)`是从buffer中寻找`bytes`一致的字节数组, 然后将position移到byte之后, 返回buffer
 
 -   `get(index)`不会移动position指针
@@ -487,8 +469,6 @@ private void testGetAndPut(){
             return put(src, 0, src.length);
         }
         ```
-
-
 
 ### 指针
 
@@ -523,8 +503,6 @@ mark和position一样是buffer的属性
     即`position = mark`
 
 -   没啥卵用
-
-
 
 当然并不是简简单单`position = 0;`就好了, 可以自己去看源码
 
@@ -620,10 +598,6 @@ public void testScatteringReads(){
 -   将buffer集中成大buffer, 再向文件中写
     -   减少文件IO
 -   `buffer1`,写入文件, buffer2写入文件, buffer3写入文件
-
-
-
-
 
 #### 代码实现
 

@@ -205,8 +205,6 @@ void BinarySearchTree<T>::remove0(const BinaryTreeNode<T> *node) {
 
 判断左孩子还是右孩子的函数, 返回布尔值, 但是不具备继承关系就抛出异常
 
-
-
 ```cpp
 template<class T>
 bool BinaryTree<T>::isLeftChild(const BinaryTreeNode<T> *node, const BinaryTreeNode<T> *nodeParent) {

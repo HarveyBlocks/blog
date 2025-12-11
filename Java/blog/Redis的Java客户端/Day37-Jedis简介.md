@@ -77,7 +77,6 @@ public class AppTest extends TestCase {
         LOGGER.info("Close Succeed");
     }
 
-
 }
 ```
 

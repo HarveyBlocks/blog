@@ -1,7 +1,5 @@
 -   写什么就打印什么,嘎嘎牛逼
 
-
-
 ![image-20231014173908574](../../assets/Day35/image-20231014173908574.png)
 
 ```java
@@ -12,8 +10,6 @@ public class PrintStream extends FilterOutputStream
 ```java
 class FilterOutputStream extends OutputStream
 ```
-
-
 
 -   离谱啊啊啊啊啊啊啊啊啊啊啊啊啊啊
 -   缝合怪
@@ -28,10 +24,6 @@ public class PrintWriter extends Writer
 ### PrintStream和PrintWriter的区别
 
 -   PrinterWeiter的writer(String s)可以,PrintStream不行
-
-
-
-
 
 ### 注意
 

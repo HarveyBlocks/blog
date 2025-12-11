@@ -11,9 +11,6 @@ joblib.dump(
 )
 ```
 
-
-
-
 ```python
 import joblib
 classifier = joblib.load(

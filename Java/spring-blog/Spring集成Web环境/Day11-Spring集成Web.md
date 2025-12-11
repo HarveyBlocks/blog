@@ -10,16 +10,10 @@
 </dependency>
 ```
 
-
-
-
-
 ## 需求
 
 -   Spring管理Listener
 -   Spring提供返回 ApplicationContext的工具类
-
-
 
 ### Listener替换成Spring-web的
 
@@ -48,11 +42,9 @@
                     http://www.springframework.org/schema/context
                     http://www.springframework.org/schema/context/spring-context.xsd">
             <context:component-scan base-package="com.harvey"/>
-    
+
     </beans>
     ```
-
-    
 
 -   Web.xml
 
@@ -87,15 +79,13 @@
     }
     ```
 
-
-
 -   我们要搞一个类,AnnotationConfigWebApplicationContext的子类,注册我们的配置类
 
     ```java
     package com.harvey.config;
-    
+
     import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
-    
+
     /**
      * ...
      */
@@ -107,8 +97,6 @@
     }
     ```
 
-
-
 -   web.xml要这么写配置核心配置类:
 
     ```xml
@@ -118,19 +106,11 @@
     </context-param>
     ```
 
-    
-
 ### Spring提供返回 ApplicationContext的工具类
 
 -   使用Spring提供的工具类替代自己的工具类
 
 ![image-20231120161343863](../../assets/Day11-Spring集成Web/image-20231120161343863.png)
-
-
-
-
-
-
 
 ![image-20231120161516227](../../assets/Day11-Spring集成Web/image-20231120161516227.png)
 

@@ -21,7 +21,6 @@ class JedisConnectionFactory{
                 //,"123456"//密码
         );
 
-
     }
     public static Jedis getJedis(){
         return JEDIS_POOL.getResource();

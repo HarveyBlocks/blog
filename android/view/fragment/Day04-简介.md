@@ -6,8 +6,6 @@ Fragment是一种可以嵌入在Activity当中的UI片段，它能让程序更�
 
 和Activity一样，都能包含布局，有自己的生命周期
 
-
-
 例如, 在新闻软件的设计中, 如果在手机上，可以将新闻标题列表放在一个Activity中，将新闻的详细内容放在另一个Activity中
 
 <img src="../../assets/Day04-简介/image-20250914224141582.png" alt="image-20250914224141582" style="zoom:67%;" />

@@ -34,8 +34,6 @@ MyInterceptor0::afterCompletion
 -   **谁先配置.谁先执行preHandle()**
 -   剩下俩倒着来
 
-
-
 ### 康康三个的
 
 ```xml
@@ -78,12 +76,6 @@ MyInterceptor0::afterCompletion
 ### 看看图解
 
 ![image-20231129155637307](../../assets/Day05-执行顺序/image-20231129155637307.png)
-
-
-
-
-
-
 
  ![image-20231129200410668](../../assets/Day05-执行顺序/image-20231129200410668.png)
 

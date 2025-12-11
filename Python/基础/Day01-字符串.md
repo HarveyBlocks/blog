@@ -20,8 +20,6 @@ string = "你好" + "mysql" + str(12)
 print(string)
 ```
 
-
-
 ## 格式化
 
 ```python
@@ -34,10 +32,6 @@ var_value = 2
 message2 = "%s = %02d" % (var_name, var_value)
 print(message2)  # num = 02
 ```
-
-
-
-
 
 字符串`f"xxxx{var}xxx"`带入变量
 

@@ -68,8 +68,6 @@
 
 ![image-20240130095101766](../../../assets/Day11-关注推送/image-20240130095101766.png)
 
-
-
 #### 推拉结合
 
 >   读写混合
@@ -82,8 +80,6 @@
 -   普通人Fan少
 -   普通粉丝人数多,请求次数少
 -   活跃粉丝人数少,请求次数多
-
-
 
 -   普通人粉丝少, 可以采取推模式, 数据的冗余很少
 -   大V对活跃粉丝, 采用推模式, 请求怎么多, 都只有一次数据传输; 活跃粉丝人数少, 不会有太多数据冗余
@@ -160,29 +156,27 @@ public void sendBlogToFans(Long blogId) {
 
 ![image-20240130163927814](../../../assets/Day11-关注推送/image-20240130163927814.png)
 
-
-
 -   Redis模拟分页
 
     ```bash
     redis(pc2):0>zRangeByScore sortedKey 4 4 # 4是lastScore
     1) "value4" # 获取这个score的Value(同值怎么办呢?)
-    
+
     redis(pc2):0>zRank sortedKey value4 # 获取value的排名
     "5"
     redis(pc2):0>zRange sortedKey 6 7 # 排名+1为start, 排名+一页个数为end
     1) "value5"
     2) "value6" # 想要的数据
-    
+
     redis(pc2):0>zScore sortedKey "value6" # 将上一次查询的lastScore记录, 方便下一次查询
     "6"
     redis(pc2):0>zRangeByScore sortedKey 6 6 # 新的轮回
     1) "value6"
-    
+
     redis(pc2):0>zRank sortedKey value6
     "7"
     redis(pc2):0>zRangeByScore sortedKey 8 9
-    
+
     ```
 
     时间戳的话, Score越大越新, 就需要**`Rev`**倒过来
@@ -190,16 +184,16 @@ public void sendBlogToFans(Long blogId) {
     ```bash
     redis(pc2):0>zRevRangeByScore sortedKey 4 4
     1) "value4"
-    
+
     redis(pc2):0>zRevRank sortedKey value4
     "2"
     redis(pc2):0>zRevRange sortedKey 3 4
     1) "value3"
     2) "value2.5"
-    
+
     redis(pc2):0>zScore sortedKey "value2.5"
     "2" # 小了, 说明是更老的数据
-    
+
     redis(pc2):0>zRevRangeByScore sortedKey 2 2
     1) "value2.5" # 对于同分的,zRevRangeByScore的Rev就有用了
     2) "value2"  # 上面的才是last Value, 我们取上面的,也就是第一个
@@ -237,25 +231,25 @@ public void sendBlogToFans(Long blogId) {
     2) "6"
     3) "value5"
     4) "5"
-    
+
     redis(pc2):0>zRevRangeByScore sortedKey 5 0 withScores limit 1 2 # 第二次以后使用lastId,偏移1
     1) "value4"
     2) "4"
     3) "value3"
     4) "3"
-    
+
     redis(pc2):0>zRevRangeByScore sortedKey 3 0 withScores limit 1 2
     1) "value2.5"
     2) "2"
     3) "value2"
     4) "2"
-    
+
     redis(pc2):0>zRevRangeByScore sortedKey 2 0 withScores limit 1 2
     1) "value2" # 对于同分,依旧存在重复查这种情况,简而言之就是傻逼需求,只能使用zRevRange(不支持Limit)
     2) "2"
     3) "value1"
     4) "1"
-    
+
     redis(pc2):0>zRevRangeByScore sortedKey 2 0 withScores limit 2 2
     1) "value1"
     2) "1"
@@ -275,7 +269,7 @@ public void sendBlogToFans(Long blogId) {
     -   List\<Blog\>
     -   minTime(本查询的推送的最小时间错)
     -   offset偏移量
-    
+
 -   Java代码, 从Redis收件箱获取BlogIds
 
     ```java
@@ -296,15 +290,15 @@ public void sendBlogToFans(Long blogId) {
     public ScrollResult followBlogs(Long lastTimestamp, Integer offset) {
         Set<ZSetOperations.TypedTuple<String>> typedTuples
                 = getBlogIdsWithTimestamp(lastTimestamp, offset);
-    
+
         if (typedTuples == null || typedTuples.isEmpty()) {
             log.error("没有");
             return new ScrollResult(null, lastTimestamp, offset);
         }
-    
+
         int newOffset = 0;
         long minTime = lastTimestamp;
-    
+
         int size = typedTuples.size();
         List<String> blogIds = new ArrayList<>(size);
         // 获得blogIds,offset
@@ -322,7 +316,7 @@ public void sendBlogToFans(Long blogId) {
             }
             newOffset++;
         }
-    
+
         // 查询完整笔记
         List<Blog> blogs = queryCompleteBlogs(blogIds);
         log.debug("newOffset="+newOffset);
@@ -338,7 +332,7 @@ public void sendBlogToFans(Long blogId) {
         String blogIdsStr = String.join(",", blogIds);
         List<Blog> blogs = this.query().in("id", blogIds)
                 .last("order by field(id," + blogIdsStr + ")").list();
-    
+
         // 让blog信息完整
         blogs.forEach(blog->{
             addWriter(blog);
@@ -347,8 +341,6 @@ public void sendBlogToFans(Long blogId) {
         return blogs;
     }
     ```
-
-    
 
 ### 关注后创建收件箱
 
@@ -364,12 +356,12 @@ public void sendBlogToFans(Long blogId) {
         public String getValue() {
             return blog.getId().toString();
         }
-    
+
         @Override
         public Double getScore() {
             return toMillion(blog.getCreateTime()).doubleValue();
         }
-    
+
         @Override
         public int compareTo(ZSetOperations.TypedTuple<String> o) {
             // 经源码确认, 这个在添加到Redis的逻辑中, 这个方法的实现是无关紧要的

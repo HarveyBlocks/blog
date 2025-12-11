@@ -47,8 +47,6 @@ export default {
 </template>
 ```
 
-
-
 ### 组合式
 
 ChildNode.vue
@@ -65,8 +63,6 @@ function selfEvent() {
   <button @click="selfEvent">button</button>
 </template>
 ```
-
-
 
 不仅可以在子组件触发事件时触发父组件的事件, 也可以在某值变化时, 需要看需求了
 

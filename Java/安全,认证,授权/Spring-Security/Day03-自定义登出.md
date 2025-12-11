@@ -33,8 +33,6 @@ protected void configure(HttpSecurity http) throws Exception {
 
 不会让logoutSuccessUrl失效
 
-
-
 #### LogoutHandler接口的实现类
 一般来说， LogoutHandler 的实现类被用来执行必要的清理，因而他们不应该抛出异常。
 

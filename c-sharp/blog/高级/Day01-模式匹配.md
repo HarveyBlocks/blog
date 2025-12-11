@@ -58,8 +58,6 @@ E is T
     Show(new object(), new object()); // Unknown Type
     ```
 
-    
-
 -   `E` 的运行时类型存在从其到 `T` 的其他的*隐式引用转换*
 
 -   `E`的运行时类型是基础类型为 `T` 且 *`Nullable.HasValue`*为 `true` 的*可为空值类型*
@@ -85,8 +83,6 @@ E is T
     Console.WriteLine(obj is long); // False
     Console.WriteLine(obj is System.Int32); // True
     ```
-
-
 
 ### and/or/not
 
@@ -124,8 +120,6 @@ if (a is Person and not (Stident or  Teacher)) {
 }
 ```
 
-
-
 ### switch表达式
 
 #### 基本元素
@@ -141,11 +135,9 @@ if (a is Person and not (Stident or  Teacher)) {
 结果类型 结果元素 = [(]待审查参数1[,待审查参数2,待审查参数3...)]switch{
     [(]待审查参数1匹配模式1[,待审查参数2匹配模式1,待审查参数3匹配模式1...)] => 匹配成功后执行逻辑表达式(可有返回)
       [,[(]待审查参数1匹配模式2[,待审查参数2匹配模式2,待审查参数3匹配模式2...)] => 匹配成功后执行逻辑表达式(可有返回),[(]待审查参数1匹配模式2[,待审查参数2匹配模式2,待审查参数3匹配模式2...)] => 匹配成功后执行逻辑表达式(可有返回),[(]待审查参数1匹配模式2[,待审查参数2匹配模式2,待审查参数3匹配模式2...)] => 匹配成功后执行逻辑表达式(可有返回)...]
-    
+
 };
 ```
-
-
 
 #### 使用实例
 
@@ -250,8 +242,6 @@ private static void ShowMessage(object a) {
 
 放弃对某个参数的审查, 直接成功匹配进入分支
 
-
-
 ```csharp
 string msg = a switch{
     null => null,
@@ -317,8 +307,6 @@ string msg  = a switch{
     _ => "unknown type" // 弃元模式 
 };
 ```
-
-
 
 ### 属性模式
 

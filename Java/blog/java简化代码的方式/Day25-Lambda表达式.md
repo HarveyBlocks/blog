@@ -9,10 +9,6 @@
 }
 ```
 
-
-
-
-
 ```java
 package LearnLambda;
 
@@ -38,13 +34,11 @@ public class Demo {
     qwq,编译异常
     */
 
-
 abstract class Animal{
     public abstract void run();
 }
 
 ```
-
 
 这是因为:
 - lambda表达式不能简化所有匿名内部类的写法
@@ -61,8 +55,6 @@ abstract class Animal{
 - 有这个注解的**一定**时函数式接口
 - 函数式接口**不一定**有这个注解
 
-
-
 ```java
 public class Demo {
     public static void main(String[] args) {Human I = new Human() {
@@ -74,7 +66,6 @@ public class Demo {
 
         I.study();
 
-
         Human you = () -> {
             System.out.println("you study");
         };
@@ -82,7 +73,6 @@ public class Demo {
         you.study();
     }
 }
-
 
 @FunctionalInterface
 interface Human{
@@ -122,7 +112,6 @@ public static void main(String[] args) {
 ```
 
 ###  TreeSet(Comparator<? super E> comparator)
-
 
 ```java
 TreeSet<Student> treeSet = new TreeSet<>(new Comparator<Student>() {
@@ -165,7 +154,7 @@ TreeSet<Student> treeSet = new TreeSet<>((Student o1, Student o2) -> {
 - **如果只有一个参数**,参数类型省略的同时()可以省略
 
   - 如果不是一个参数 , 不能省略() ,举个例子:
-	
+
 	  ```java
 	  /*
 	  Arrays.sort(students,new Comparator<Student>() {
@@ -175,24 +164,20 @@ TreeSet<Student> treeSet = new TreeSet<>((Student o1, Student o2) -> {
 	  	}
 	  });
 	  */
-	  
+
 	  Arrays.sort(students,(student1, student2)->
 	  	student1.getScore() - student2.getScore()
 	  );//这是合理的
-	  
+
 	  Arrays.sort(students,student1,student2->
 	  	student1.getScore() - student2.getScore()
 	  );//这是不合理的
-	  
+
 	  Arrays.sort(students,Student student1, Student student2->
 	  	student1.getScore() - student2.getScore()
 	  );//这也是不合理的
 	  ```
-	  
-	  
-	
-	
-	
+
 - **如果只有一行代码且这行代是`return <....>;`**,可以省略return , ; ,{}
 
 - **遵守最后条但不遵守前两条也可以**
@@ -217,9 +202,9 @@ private static void print(int num1,int num2,TryLambda tryLambda){
     System.out.println("num1 = " + num1);
     System.out.println("num2 = " + num2);
     System.out.println("---------------------------------");
-    
+
     num1 = tryLambda.test(num2);
-    
+
     System.out.println("num1 = " + num1);
     System.out.println("num2 = " + num2);
     System.out.println("=================================");
@@ -274,13 +259,10 @@ print(1, 0, tryLambda5);
 
 3. 6. 遵守最后条但不遵守前两条也可以
 
-
 ```java
 TryLambda tryLambda2 = (int value) ->value;
 print(1, 0, tryLambda2);
 ```
-
-
 
 4. 输出
 
@@ -293,8 +275,6 @@ public static <RESOURCE,TARGET> List<TARGET> convert(List<RESOURCE> resources,Fu
     return resources.stream().map(convertor).collect(Collectors.toList());
 }
 ```
-
-
 
 -   使用:
 

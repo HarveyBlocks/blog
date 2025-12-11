@@ -46,8 +46,6 @@
 
 <img src="../../assets/Day04-布局/image-20250909173751059.png" alt="image-20250909173751059" style="zoom:70%;" />
 
-
-
 设置成`horizontal`水平
 
 <img src="../../assets/Day04-布局/image-20250909173809497.png" alt="image-20250909173809497" style="zoom:70%;" />
@@ -101,10 +99,6 @@
 
 <img src="../../assets/Day04-布局/image-20250909181319810.png" alt="image-20250909181319810" style="zoom:50%;" />
 
-
-
-
-
 `android:orientation="vertical"`时的情况
 
 ```xml
@@ -136,15 +130,7 @@
 </LinearLayout>
 ```
 
-
-
 ![image-20250909181431796](../../assets/Day04-布局/image-20250909181431796.png)
-
-
-
-
-
-
 
 ### android:layout_weight 排列比重
 
@@ -177,8 +163,6 @@
 ```
 
 ![image-20250909182415369](../../assets/Day04-布局/image-20250909182415369.png)
-
-
 
 当只指明一个元素指定为`android:layout_weight="1"`, 同时, 另一个**不设置** `android:layout_weight`, `android:layout_weight="wrap_content"`, 两个元素依旧放在同一行
 
@@ -266,10 +250,6 @@
 -   `android:layout_alignParentBottom`
 
 <img src="../../assets/Day04-布局/image-20250910103008328.png" alt="image-20250910103008328" style="zoom:67%;" />
-
-
-
-
 
 ### 相对组件
 
@@ -359,8 +339,6 @@
 两个组件都在左上角, 重叠展示
 
 ![image-20250910105528509](../../assets/Day04-布局/image-20250910105528509.png)
-
-
 
 除非使用各种对齐方式等等进行控制
 

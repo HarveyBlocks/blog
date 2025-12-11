@@ -2,8 +2,6 @@
 
 ## 创建群聊
 
-
-
 服务端
 
 ```java
@@ -34,8 +32,6 @@ public class GroupCreateHandler extends SimpleChannelInboundHandler<GroupCreateR
 ```
 
 ## 发送群聊消息
-
-
 
 服务端
 

@@ -37,8 +37,6 @@ redis(pc2):1>brpop list 10
 2) "e2"
 ```
 
-
-
 ```bash
 redis(pc2):1>lpush list e1
 "1"
@@ -103,36 +101,36 @@ Redis支持的通配符有
     ```bash
     redis(pc2):1>keys *St*m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *Ste?m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *Ste[ae]m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *Ste[o]m*
-    
+
     redis(pc2):1>keys *Ste[oa]m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *Ste[oa]m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *Ste[oa]m*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *St[a-f]am*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *St[a-c,d-f]am*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *St[a-c,d-f]am*
     1) "这是一个Steam的Key"
-    
+
     redis(pc2):1>keys *St[a-c,d-f]am*
     1) "这是一个Steam的Key"
-    
+
     ```
 
     这支持的...应该是正则吧?
@@ -169,23 +167,21 @@ Redis支持的通配符有
     ```bash
     redis(pc2):1>subscribe order.q1 
     ...
-    
+
     1) "message"
     2) "order.q1"
     3) "It's a message"
     ```
 
-    
-
     ```bash
     redis(pc2):1>psubscribe order.*
     ...
-    
+
     1) "pmessage"
     2) "order.*"
     3) "order.q1"
     4) "It's a message"
-    
+
     ```
 
 4.  接收patter channal的消息
@@ -198,14 +194,12 @@ Redis支持的通配符有
     ```bash
     redis(pc2):1>psubscribe order.*
     ...
-    
+
     1) "pmessage"
     2) "order.*"
     3) "order.q1"
     4) "It's a message"
     ```
-
-    
 
 #### 特点
 
@@ -265,8 +259,6 @@ redis(pc2):1>xadd 这是一个Steam的Key 1706332759493-0 这是field 这是valu
 "ERR The ID specified in XADD is equal or smaller than the target stream top item"
 ```
 
-
-
 ### xRead读
 
 ```bash
@@ -287,14 +279,9 @@ redis(pc2):1>xread Count -1 Streams 这是一个Steam的Key 0
          2) 1) "这是field"
             2) "这是value"
 
-
       2) 1) "1706332759493-0"
          2) 1) "这是field"
             2) "这是value2"
-
-
-
-
 
 redis(pc2):1>xread Count 1 Streams 这是一个Steam的Key 0
 1) 1) "这是一个Steam的Key"
@@ -302,29 +289,17 @@ redis(pc2):1>xread Count 1 Streams 这是一个Steam的Key 0
          2) 1) "这是field"
             2) "这是value"
 
-
-
-
-
 redis(pc2):1>xread Count 2 Streams 这是一个Steam的Key 0
 1) 1) "这是一个Steam的Key"
    2) 1) 1) "1706331746559-0"
          2) 1) "这是field"
             2) "这是value"
 
-
       2) 1) "1706332759493-0"
          2) 1) "这是field"
             2) "这是value2"
 
-
 ```
-
-
-
-
-
-
 
 ```bash
 redis(pc2):1>xread block 10000 Streams 这是一个Steam的Key $ # 不阻塞不返回
@@ -391,14 +366,10 @@ XGroup Create StreamKey groupName Id [MkStream]
     "ERR The XGROUP subcommand requires the key to exist. Note that for CREATE you may want to use the MKSTREAM option to create an empty stream automatically."
     ```
 
-
-
 ```bash
 redis(pc2):1>XGroup Create 这是一个Steam的Key  myGroup 0
 "OK"
 ```
-
-
 
 #### 其他消费者和消费者组的写命令
 
@@ -452,19 +423,11 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 Streams 这是一�
          2) 1) "这是field"
             2) "这是value"
 
-
-
-
-
 redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 Streams 这是一个Steam的Key >
 1) 1) "这是一个Steam的Key"
    2) 1) 1) "1706332759493-0"
          2) 1) "这是field"
             2) "这是value2"
-
-
-
-
 
 redis(pc2):1>
 ```
@@ -478,19 +441,11 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 NoACK Streams 这�
          2) 1) "这是field2"
             2) "这是value4"
 
-
-
-
-
 redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 NoACK Streams 这是一个Steam的Key >
 1) 1) "这是一个Steam的Key"
    2) 1) 1) "1706333411065-0"
          2) 1) "这是field2"
             2) "这是value4"
-
-
-
-
 
 ```
 
@@ -520,16 +475,11 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 100 Streams 这是一个Steam的K
          2) 1) "field10"
             2) "value9"
 
-
-
-
-
 redis(pc2):1>XPending 这是一个Steam的Key myGroup - + 100
 1) 1) "1706339962583-0"
    2) "c1"
    3) "6321"
    4) "1"
-
 
 redis(pc2):1>XReadGroup Group myGroup c1 Count 100 Streams 这是一个Steam的Key 0
 1) 1) "这是一个Steam的Key"
@@ -537,14 +487,8 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 100 Streams 这是一个Steam的K
          2) 1) "field10"
             2) "value9"
 
-
-
-
-
 redis(pc2):1>
 ```
-
-
 
 ### 确认消息
 
@@ -565,17 +509,9 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 Streams 这是一�
          2) 1) "这是field"
             2) "这是value2"
 
-
-
-
-
 redis(pc2):1>XAck 这是一个Steam的Key myGroup 1706332759493-0
 "1"
 ```
-
-
-
-
 
 NoAck的
 
@@ -586,15 +522,9 @@ redis(pc2):1>XReadGroup Group myGroup c1 Count 1 Block 99000 NoACK Streams 这�
          2) 1) "这是field2"
             2) "这是value4"
 
-
-
-
-
 redis(pc2):1>XAck 这是一个Steam的Key myGroup 1706333411065-0
 "0"
 ```
-
-
 
 消费
 
@@ -606,7 +536,6 @@ redis(pc2):1>XPending 这是一个Steam的Key myGroup - + 100
 redis(pc2):1>XReadGroup Group myGroup c1 Count 100 Streams 这是一个Steam的Key 0
 1) 1) "这是一个Steam的Key"
    2) null
-
 
 ```
 
@@ -662,8 +591,6 @@ while(true){
 ![image-20240127154611146](../../assets/Day09-消息队列/image-20240127154611146.png)
 
 是否支持多消费者, 多生产者? 
-
-
 
 -   Redis只支持消费者的确认机制,不能保证生产者在发消息的过程中丢失消息
 -   缺少消息的事务机制

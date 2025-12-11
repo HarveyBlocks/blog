@@ -58,8 +58,6 @@ namespace Application.ApplicationInner {
 }
 ```
 
-
-
 C#10, 文件作用域的命名空间
 
 ```csharp
@@ -67,8 +65,6 @@ namespace Application.ApplicationInner;
 // ...
 
 ```
-
-
 
 ## 枚举
 
@@ -155,17 +151,17 @@ Console.WriteLine(((Color)2)); // Red
 
     ```C#
     Days meetingDays = Days.Monday | Days.Wednesday | Days.Friday;
-    
+
     Console.WriteLine(meetingDays);
     // Monday, Wednesday, Friday
-    
+
     Days workingFromHomeDays = Days.Thursday | Days.Friday;
     Console.WriteLine(meetingDays & workingFromHomeDays);
     // Friday
-    
+
     Console.WriteLine((meetingDays & Days.Tuesday) == Days.Tuesday);
     //False
-    
+
     Console.WriteLine((Days)37);
     // Monday, Wednesday, Saturday
     ```
@@ -214,8 +210,6 @@ C# 没有全局变量或方法
 -   protected internal
 -   private
 -   专用受保护
-
-
 
 ### 扩展方法
 
@@ -298,8 +292,6 @@ class Son: Parent{
 ### 静态类型
 
 用`static`修饰, 只能有静态成员, 不能被new关键字实例化
-
-
 
 ## 记录
 

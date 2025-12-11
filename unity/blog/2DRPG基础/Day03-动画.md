@@ -4,15 +4,11 @@
 
 <img src="../../assets/Day03-%E5%8A%A8%E7%94%BB/guide.png" alt="guide" style="zoom:67%;" />
 
-
-
 ## 动画组件Animator
 
 >   Animator 动画控制器
 
 ### 创建待机动画
-
-
 
 1.   Inspector->Add Component->Animator
 
@@ -87,8 +83,6 @@
 
           <img src="../../assets/Day03-%E5%8A%A8%E7%94%BB/image-20241019162222324.png" alt="image-20241019162222324" style="zoom:50%;" />
 
-     
-
 ### 状态转换和转换条件
 
 状态转换, 从IDLE转到RUN的状态
@@ -139,9 +133,9 @@
 
           ```csharp
           public class PlayerAnimation : MonoBehaviour {
-          
+
               private Animator _animator;
-          
+
               private void Awake() {
                   // 获取Animator组件
                   _animator = GetComponent<Animator>();
@@ -155,20 +149,20 @@
           public class PlayerAnimation : MonoBehaviour {
               // 依照变量名获取Hash值
               private static readonly int VelocityX = Animator.StringToHash("velocityX");
-          
+
               private Animator _animator;
               private Rigidbody2D _rb;
-          
+
               private void Awake() {
                   // 获取Animator组件
                   _animator = GetComponent<Animator>();
                   _rb = GetComponent<Rigidbody2D>();
               }
-          
+
               private void Update() {
                   Transform();
               }
-          
+
               private void Transform() {
                   _animator.SetFloat(VelocityX, Mathf.Abs(_rb.velocity.x));
                   // Mathf.Abs是Unity的Math
@@ -183,8 +177,6 @@
 跳跃动画制作
 
 ![image-20241019183443305](../../assets/Day03-动画/image-20241019183443305.png)
-
-
 
 -   Jump Preparation 起跳*2
 -   Flying up 起飞 *4
@@ -219,8 +211,6 @@ Animator->右键->Create State->From New Bland Tree
      <img src="../../assets/Day03-%E5%8A%A8%E7%94%BB/image-20241019191937051.png" alt="image-20241019191937051" style="zoom:50%;" />
 
      <img src="../../assets/Day03-%E5%8A%A8%E7%94%BB/image-20241019192034428.png" alt="image-20241019192034428" style="zoom:50%;" />
-
-     
 
 5.   蓝色的线表示当前正在运行的动画, velocityY的值, 发现蓝线指向其他动画
 
@@ -267,15 +257,15 @@ Animator->右键->Create State->From New Bland Tree
          	// ...
           private static readonly int VelocityY = Animator.StringToHash("velocityY");
           private static readonly int OnGround = Animator.StringToHash("onGround");
-      
+
           // 组件
-      
+
           private void Awake() {/*...*/}
-      
+
           private void Update() {
               Transform();
           }
-      
+
           private void Transform() {
               // ...
               // Jump

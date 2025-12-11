@@ -73,11 +73,7 @@ void SortUtil<T>::mergeSort() {
 }
 ```
 
-
-
 ## 复杂度
-
-
 
 时间复杂度 O(nlog(n)) 
 

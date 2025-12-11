@@ -7,8 +7,6 @@
     -   系统预定义变量
     -   用户自定义变量
 
-
-
 ## 系统预定义变量
 
 ### 常用系统变量
@@ -55,8 +53,6 @@ set
 ```shell
 set | less
 ```
-
-
 
 ## 自定义变量
 
@@ -113,15 +109,11 @@ unset my_var
 
 父Bash不可以获取子Bash的变量
 
-
-
 ### 局部变量的声明
 
 ```shell
 var="value"
 ```
-
-
 
 ### 全局变量的声明
 
@@ -248,8 +240,6 @@ echo '$num' # $num
 echo "hello $1, $2"
 ```
 
-
-
 ```shell
 27970@Harvey-PC MINGW64 /d/IT_study/source/JDK/dubbo/api/src/main/resources
 $ ./hello.sh A B
@@ -287,8 +277,6 @@ $ ./hello.sh
 
 ```
 
-
-
 `hello2.sh`↓
 
 ```
@@ -299,7 +287,6 @@ $ ./hello.sh
 27970@Harvey-PC MINGW64 /d/IT_study/source/JDK/dubbo/api/src/main/resources
 $ /bin/sh D:/IT_study/source/JDK/dubbo/api/src/main/resources/hello2.sh
 ./hello.sh
-
 
 ```
 
@@ -313,8 +300,6 @@ num=$#
 echo ${num}
 ```
 
-
-
 ```shell
 27970@Harvey-PC MINGW64 /d/IT_study/source/JDK/dubbo/api/src/main/resources
 $ /usr/bin/env sh D:/IT_study/source/JDK/dubbo/api/src/main/resources/hello.sh
@@ -324,10 +309,7 @@ $ /usr/bin/env sh D:/IT_study/source/JDK/dubbo/api/src/main/resources/hello.sh
 $ ./hello.sh 1 2 3 4 5
 5
 
-
 ```
-
-
 
 #### `$*`与`$@`
 
@@ -341,8 +323,6 @@ $ ./hello.sh 1 2 3 4 5
 echo "$*"
 echo "$@"
 ```
-
-
 
 ```shell
 27970@Harvey-PC MINGW64 /d/IT_study/source/JDK/dubbo/api/src/main/resources

@@ -16,8 +16,6 @@
 
 >   事件循环组
 
-
-
 是一组EventLoop
 
 `Channel`一般会调用`EventLoopGroup`的`register`方法来绑定一个`EventLoop`
@@ -46,8 +44,6 @@ static {
     }
 }
 ```
-
-
 
 主要做普通任务和定时任务
 
@@ -93,17 +89,11 @@ eventLoop.execute(()->{
 log.debug("main");
 ```
 
-
-
 ```log
 2024-02-25 18:58:42.931 DEBUG 11812 --- [           main] NettyServer   : main
 2024-02-25 18:58:42.931 DEBUG 11812 --- [ntLoopGroup-2-1] NettyServer   : hi
 2024-02-25 18:58:42.932 DEBUG 11812 --- [ntLoopGroup-2-1] NettyServer   : hello
 ```
-
-
-
-
 
 ## 定时任务
 
@@ -117,8 +107,6 @@ eventLoop.scheduleAtFixedRate(
 );
 log.debug("main");
 ```
-
-
 
 ```log
 2024-02-25 19:04:25.727 DEBUG 17620 --- [           main] NettyServer   : start
@@ -140,8 +128,6 @@ ChannelInitializer<NioSocketChannel> childHandler = new ChannelInitializer<>() {
     }
 };
 ```
-
-
 
 ```java
 // 自定义Handler
@@ -166,8 +152,6 @@ ChannelInboundHandlerAdapter customHandler = new ChannelInboundHandlerAdapter() 
 };
 ```
 
-
-
 客户端传输的数据
 
 ```java
@@ -181,10 +165,6 @@ channel.writeAndFlush("World");
 ```log
 2024-02-25 19:29:33.264 DEBUG 4856 --- [ntLoopGroup-2-2] c.harvey.netty.demo.server.NettyServer   : Hello WorldHelloWorld
 ```
-
-
-
-
 
 ```mermaid
 graph LR
@@ -228,10 +208,6 @@ NioEventLoopGroup child = new NioEventLoopGroup(4);
 server.group(parent,child);
 ```
 
-
-
-
-
 将耗时较长的任务交给`DefaultEventLoopGroup()`的`EventLoop`处理
 
 ```java
@@ -248,8 +224,6 @@ ChannelInboundHandlerAdapter longTimeHandler = new ChannelInboundHandlerAdapter(
 };
 ```
 
-
-
 ```java
 ChannelInboundHandlerAdapter customHandler = new ChannelInboundHandlerAdapter() {
     @Override
@@ -259,8 +233,6 @@ ChannelInboundHandlerAdapter customHandler = new ChannelInboundHandlerAdapter() 
     }
 };
 ```
-
-
 
 ```java
 ChannelInitializer<NioSocketChannel> childHandler = new ChannelInitializer<>() {
@@ -272,10 +244,6 @@ ChannelInitializer<NioSocketChannel> childHandler = new ChannelInitializer<>() {
     }
 };
 ```
-
-
-
-
 
 测试结果, 发现线程不一样了
 
@@ -305,9 +273,6 @@ head3(head)
 h3-1(h1)
 h3-2(h2)
 tail3(tail)
-
-
-
 
 subgraph Channel1
 channel1 --> head1
@@ -353,9 +318,6 @@ DEventLoop1 --> h2-2
 DEventLoop2 --> h3-2
 end
 
-
-
-
 DEventLoop1((EventLoop1))
 DEventLoop2((EventLoop2))
 ```
@@ -364,11 +326,7 @@ DEventLoop2((EventLoop2))
 
 执行）
 
-
-
 ![](../../assets/Day05-EventLoop/0041.png)
-
-
 
 #### 💡
 
@@ -395,7 +353,7 @@ static void invokeChannelRead(final AbstractChannelHandlerContext next, Object m
     // 获取下一个handler的eventLoop
     EventExecutor executor = next.executor();
     // 由于多态变成了EventExecutor
-    
+
     if (executor.inEventLoop()/*下一个是否与当前的事件循环是同一线程*/) {
        	// 是
         next.invokeChannelRead(m); // 直接调用

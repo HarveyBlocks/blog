@@ -22,7 +22,7 @@ package GenericLearning;
 public class MyGeneric<T> {
     //创建变量
      T t;
-    
+
     //创建方法
 
     //作为方法的参数
@@ -35,7 +35,7 @@ public class MyGeneric<T> {
         */
         System.out.println(t);
     }
-    
+
     //作为方法的返回值
     public T getT(){
         return t;
@@ -103,8 +103,6 @@ System.out.println(integerMyGeneric.t);//100
 myGeneric3 = myGeneric1;//可以
 ```
 
-
-
 ### 同一泛型类之间的关系
 
 ```java
@@ -126,7 +124,6 @@ class Student<T> extends Person<T>
 ##### 子类是泛型类,且子类的泛型比父类多
 
 <img src="../../assets/Day20/image-20230906215404974.png" alt="image-20230906215404974" style="zoom:50%;" />
-
 
 #### 子类不是泛型类
 

@@ -2,8 +2,6 @@
 
 >   如果我要 "每人限购七张, 阁下又该如何应对"
 
-
-
 ## 实现流程
 
 ![image-20240120151734806](../../../assets/Day07-一人一单/image-20240120151734806.png)
@@ -18,8 +16,6 @@ if(voucherUserExit(userId)){
 // 5.  扣减库存
 // 6. 保存订单信息
 ```
-
-
 
 ```java
 /**
@@ -54,8 +50,6 @@ private boolean voucherUserExit(Long userId, Long voucherId) {
 加死锁
 
 **但是又不能让之前的乐观锁白费**
-
-
 
 ### 锁的粒度
 
@@ -135,8 +129,6 @@ userId.toString()// 获取值
         }
         ```
 
-        
-
 #### Spring事务失效的可能性
 
 ```java
@@ -161,14 +153,10 @@ void b(){
 </dependency>
 ```
 
-
-
 ```java
 @EnableAspectJAutoProxy(exposeProxy = true)
 public class 启动类 {}
 ```
-
-
 
 ```java
 void a(){

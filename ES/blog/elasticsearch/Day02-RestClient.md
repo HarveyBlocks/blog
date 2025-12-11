@@ -4,8 +4,6 @@
 
 [RestClient官方文档](https://www.elastic.co/guide/en/elasticsearch/client/index.html)
 
-
-
 ## 准备数据
 
 -   [CV黑马程序员的sql资源](tb_hotel.sql)
@@ -90,10 +88,6 @@ CREATE TABLE `tb_hotel` (
     -   实际上是看不到`"合成字段"`的
     -   但是能根据`"合成字段"`搜索
 
-
-
-
-
 ### 建立索引库DSL
 
 ```json
@@ -157,8 +151,6 @@ PUT /hotel
 }
 ```
 
-
-
 ## 初始化RestClient
 
 ### 引入es的依赖
@@ -170,8 +162,6 @@ PUT /hotel
     <version>7.12.1</version>
 </dependency>
 ```
-
-
 
 ### 覆盖ES的版本
 
@@ -201,8 +191,6 @@ POST /_analyze
     "analyzer": "stantard"
 }
 ```
-
-
 
 ```java
 private RestClient client; 
@@ -247,8 +235,6 @@ private String[] parseTokens(String tokens) throws IOException {
     return result;
 }
 ```
-
-
 
 ### 初始化RestHighLevelClient
 
@@ -317,10 +303,6 @@ void existsHotelIndex() throws IOException {
 }
 ```
 
-
-
-
-
 ### 删除索引库
 
 ```java
@@ -333,8 +315,6 @@ void deleteHotelIndex() throws IOException {
             .delete(request, RequestOptions.DEFAULT);
 }
 ```
-
- 
 
 ## 文档CRUD相关API
 
@@ -397,9 +377,9 @@ void deleteHotelIndex() throws IOException {
     ```java
     @Component
     public class HotelDocumentDao {
-    
+
         private static RestHighLevelClient restClient;
-    
+
         static  {
             HotelDocumentDao.restClient = new RestHighLevelClient(
                     RestClient.builder(
@@ -407,7 +387,7 @@ void deleteHotelIndex() throws IOException {
                     )
             );
         }
-    
+
         public void addDocument(String documentId,String addSource) throws IOException {
             // 1. 准备Request 对象
             // 代替 "POST /索引库名/_doc/文档id"
@@ -418,12 +398,12 @@ void deleteHotelIndex() throws IOException {
             HotelDocumentDao.restClient.index(request, RequestOptions.DEFAULT);
             destroy();
         }
-    
+
         public static void destroy() throws IOException {
             // 销毁
             HotelDocumentDao.restClient.close();
         }
-    
+
     }
     ```
 
@@ -444,8 +424,6 @@ void deleteHotelIndex() throws IOException {
         hotelDocumentDao.addDocument(String.valueOf(hotelId),addSource);
     }
     ```
-
-
 
 ### 根据id查询hotel数据
 
@@ -515,11 +493,6 @@ public void updateDocument(String documentId) throws IOException {
     ]
     ```
 
-
-
-
-
-
 ### 删除hotel数据
 
 ```java
@@ -586,26 +559,26 @@ public void delete(long hotelId) throws IOException {
     public List<HotelDoc> getAll() throws IOException {
         // 1. 创建 SearchRequest搜索请求,并指定要查询的索引
         SearchRequest request = new SearchRequest(INDEX);
-    
+
         // 2. 创建 SearchSourceBuilder条件构造。
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
-    
+
         searchSourceBuilder.from(0);
         searchSourceBuilder.size(201);
-    
+
         // 3. SearchRequest搜索请求,并指定要查询的索引
         request.source(searchSourceBuilder);
         System.out.println(searchRequest.source().toString());//{"from":0,"size":201}
-    
+
         SearchResponse response = restClient.search(searchRequest, RequestOptions.DEFAULT);
-    
+
         // 4、解析响应
         SearchHits searchHits = response.getHits();
-    
+
         // 4.1查询总条数
         TotalHits totalHits = searchHits.getTotalHits();
         System.out.println("总共" + totalHits + "条记录");// 201(总是)
-    
+
         // 4.2 获取结果数组
         SearchHit[] hits = searchHits.getHits();
         // 4.3遍历,转化

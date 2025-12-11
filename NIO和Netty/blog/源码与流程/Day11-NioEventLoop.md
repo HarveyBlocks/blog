@@ -26,8 +26,6 @@
     unwrappedSelector = provider.openSelector();
     ```
 
-
-
 ### NioEventLoop的两个Selector成员
 
 ```java
@@ -40,8 +38,6 @@ private Selector unwrappedSelector;
 但是JDK使用的Selector内部的SelectionKeys使用的是集合, 遍历的效率不高(底层HashMap)
 
 Netty选择使用数组来存储SelectionKeys, 以提高效率
-
-
 
 ## NIO线程在启动
 
@@ -106,7 +102,7 @@ private void execute(Runnable task, boolean immediate) {
             if (interrupted) {
                 thread.interrupt();
             }
-    
+
             boolean success = false;
             updateLastExecutionTime();
             try {
@@ -128,7 +124,7 @@ private void execute(Runnable task, boolean immediate) {
         int selectCnt = 0;
         for (;;) {
             try {
-                
+
             } catch (Error e) {
                 // ...
             } finally {
@@ -155,8 +151,6 @@ public int select(long timeout) throws IOException {
     return delegate.select(timeout);
 }
 ```
-
-
 
 ### wakeup()方法
 
@@ -220,7 +214,7 @@ protected void run() {
     ```java
     final class DefaultSelectStrategy implements SelectStrategy {
     	// ...
-        
+
         @Override
         public int calculateStrategy(IntSupplier selectSupplier, boolean hasTasks) throws Exception {
             // hasTasks(), 没有任务, 返回假 , 进入SELECT分支
@@ -302,8 +296,6 @@ public int select(long timeout) throws IOException {
         }
         ```
 
-        
-
 ### NIO空轮询的Bug
 
 #### 体现
@@ -349,8 +341,6 @@ protected void run() {
     }
 }
 ```
-
-
 
 ```java
 // 如果selectCnt需要被重置就返回true
@@ -400,11 +390,9 @@ private boolean unexpectedSelectorWakeup(int selectCnt) {
         // MIN_PREMATURE_SELECTOR_RETURNS是3直接写死
         selectorAutoRebuildThreshold = 0;
     }
-    
+
     SELECTOR_AUTO_REBUILD_THRESHOLD = selectorAutoRebuildThreshold;
     ```
-
-    
 
 Netty也有一套完全重写了的Selector, 直接取缔了JDK原生的Selelctor, 已解决空轮询Bug
 
@@ -457,8 +445,6 @@ ranTasks = runAllTasks(ioTime * (100 - ioRatio) / ioRatio);
 
 -   `ioTime * (100 - ioRatio) / ioRatio` 允许普通任务队列花的时间
 -   超出分配的时间, 直接终止任务的进行
-
-
 
 设置成100, 就是**取消了的IoRatio的分配任务时间这个功能**, Netty就会不再干涉普通任务的执行时间
 
@@ -569,7 +555,7 @@ private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {
     // the NIO JDK channel implementation may throw a NotYetConnectedException.
     if ((readyOps & SelectionKey.OP_CONNECT) != 0) {
         // 客户端的连接事件
-        
+
         // remove OP_CONNECT as otherwise Selector.select(..) will always return without blocking
         // See https://github.com/netty/netty/issues/924
         int ops = k.interestOps();

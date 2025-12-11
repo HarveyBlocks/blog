@@ -51,14 +51,10 @@ System.out.println(list.size());//子接口继承父接口方法
 | int        | indexOf(Object o)                  | 返回列表中第一次出现的指定元素的索引 |
 | List       | subList(int fromIndex,int toIndex) | List的切片                           |
 
-
-
 ```java
 System.out.println(list.subList(1,3));
 //[02, 01]
 ```
-
-
 
 ### 删除
 
@@ -92,13 +88,13 @@ public class Demo02 {
         list.add("02");
         list.add("03");
         list.add("04");
-        
+
         while (! list.isEmpty()){
             System.out.println(list.toString());
             System.out.println(list.get(0));
             list.remove(0);
         }
-       
+
         //看来是顶替了
 
     }
@@ -119,8 +115,6 @@ public class Demo02 {
 04
 */
 ```
-
-
 
 ### 遍历
 
@@ -173,7 +167,7 @@ public class Demo02 {
             System.out.print(lit.next()+",");
         }
         System.out.println();
-        
+
         //使用列表迭代器,允许顺序,逆序遍历,增减元素
         while (lit.hasPrevious()) {
             System.out.print(lit.previousIndex()+":");
@@ -181,11 +175,11 @@ public class Demo02 {
             it.set("00");
         }
         System.out.println();
-        
+
         //重置lit指针
         lit = list.listIterator();
         //虽然在这里鸟用没有
-        
+
         while (lit.hasNext()){
             System.out.print(lit.next()+",");
             lit.remove();

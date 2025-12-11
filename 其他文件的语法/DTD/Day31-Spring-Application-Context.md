@@ -41,7 +41,6 @@
         <!ATTLIST alias name IDREF #REQUIRED>
         <!ATTLIST alias alias CDATA #REQUIRED>
 
-
         <!ELEMENT import EMPTY>
         <!ATTLIST import resource CCDATA  #REQUIRED "classpath:">
 
@@ -50,7 +49,6 @@
         <!ATTLIST bean class CDATA #REQUIRED>
         <!ATTLIST bean scope (singleton|prototype)>
         <!ATTLIST bean name CDATA>
-
 
         <!ELEMENT property (list|ref|EMPTY)>
         <!ATTLIST property name CDATA #REQUIRED>

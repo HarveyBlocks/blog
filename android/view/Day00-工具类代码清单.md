@@ -19,7 +19,6 @@ object ApiVersion {
      */
     const val SUPPORT_UPPER = 36
 
-
     /**
      * @return true if support
      */
@@ -29,7 +28,6 @@ object ApiVersion {
      * @return true if support
      */
     fun support(range: IntRange): Boolean = Build.VERSION.SDK_INT in range
-
 
     /**
      * @param range 如果版本不在此参数内, 则执行block, 否则打印警告日志

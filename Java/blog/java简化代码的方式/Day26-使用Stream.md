@@ -31,7 +31,6 @@ Set<键的类> keys = map名.keySet();
 keys.stream();
 //Set<String> keys = map.keySet().stream().collect(Collectors.toSet());???????
 
-
 Collection<值的类> values = map名.values();
 Stream<值的类> valuesStream = values.stream();//也可以向上面这么写
 ```
@@ -66,9 +65,6 @@ public static<T> Stream<T> of(T... values) {
 Stream.of(数组名);
 ```
 
-
-
-
 ### 对于多个数据
 
  Stream接口提供的方法:
@@ -87,8 +83,6 @@ Stream.of(值1,值2,值3.....);
 
 ## 使用Stream流方法
 
-
-
 终结方法之一:
 
 | 返回值类型 | 方法及形参                           | 描述 |
@@ -101,22 +95,16 @@ Stream.of(值1,值2,值3.....);
 | ---------- | --------------------------------------------- | ---- |
 | <R, A> R   | collect(Collector<? super T, A, R> collector) |      |
 
-
 - 不算终结,因为:
 
 ```java
 (集合/数组/...)表.stream().collect(Collectors.toSet()).add();
 ```
 
-
 ### 中间方法
 
 - 中间方法指调用完成后会返回新的Stream流
 - 于是支持链式编程
-
-
-
-
 
 | 返回值类型    | 方法及形参                                      | 描述                                               |
 | ------------- | ----------------------------------------------- | -------------------------------------------------- |
@@ -131,15 +119,10 @@ Stream.of(值1,值2,值3.....);
 
 #### 实现降序
 
-
-
-
-
 | 返回值类型 | 方法及形参                                | 描述                                               |
 | ---------- | ----------------------------------------- | -------------------------------------------------- |
 | Stream<T>  | sorted()                                  | 升序排序,对对象(我不好说)无法直接排序,需要指定规则 |
 | Stream<T>  | sorted(Comparator<? super T> comparator); | Comparator函数式接口,排序,指定排序规则             |
-
 
 已有集合list(乱序)存Double
 
@@ -157,7 +140,6 @@ list.stream()
         .forEach(element -> System.out.println(element));
 ```
 
-
 #### 去重
 
 | 返回值类型 | 方法及形参 | 描述                                      |
@@ -172,15 +154,11 @@ list.stream()
                 .forEach(element -> System.out.println(element));
 ```
 
-
 #### 获取最低的数据3个
-
-
 
 | 返回值类型 | 方法及形参          | 描述                    |
 | ---------- | ------------------- | ----------------------- |
 | Stream<T>  | limit(long maxSize) | 获取**前**maxSize个数据 |
-
 
 已有集合list(乱序)存Double,长度大于3
 
@@ -193,12 +171,9 @@ list.stream()
 
 #### 获取最高数据3个
 
-
-
 | 返回值类型 | 方法及形参   | 描述                      |
 | ---------- | ------------ | ------------------------- |
 | Stream<T>  | skip(long n) | 跳过元素(删去前几个元素?) |
-
 
 已有集合list(乱序)存Double,长度大于3
 
@@ -211,12 +186,9 @@ list.stream()
 
 #### 去除学生对象的不必要信息,只保留其名字(映射)
 
-
 | 返回值类型    | 方法及形参                                    | 描述     |
 | ------------- | --------------------------------------------- | -------- |
 | <R> Stream<R> | map(Function<? super T, ? extends R> mapper); | 映射方法 |
-
-
 
 ```java
 list.stream()
@@ -232,12 +204,7 @@ list.stream()
 
 ```
 
-
-
-
-
 ####  合流
-
 
 | 返回值类型 | 方法及形参                            | 描述       |
 | ---------- | ------------------------------------- | ---------- |
@@ -253,7 +220,6 @@ Stream<String> stream = Stream.concat(stream1,stream2);
 
 stream.forEach(element->System.out.print(element +","));
 
-
 //输出:
 //a,b,c,b,
 ```
@@ -268,12 +234,9 @@ Stream<Object> stream = Stream.concat(stream1,stream2);
 
 stream.forEach(element->System.out.print(element +","));
 
-
 //输出:
 //a,b,c,b,
 ```
-
-
 
 ### 终结方法:
 
@@ -287,8 +250,6 @@ stream.forEach(element->System.out.print(element +","));
 | long        | count()                               | 返回stream中的元素个数                                       |
 | Optional<T> | max(Comparator<? super T> comparator) | 返回**最大**的元素的*Option(容器)?*,**一定要自定义比较规则** |
 | Optional<T> | min(Comparator<? super T> comparator) | 返回**最小**的元素的*Option(容器)?*,**一定要自定义比较规**   |
-
-
 
 ##### 关于Option(容器)
 
@@ -324,8 +285,6 @@ c[]<A> A[]   toArray(IntFunction<A[]> generator)
 ```java
 Student[] students2 = list.stream().toArray(length -> new Student[length]);
 ```
-
-
 
 ##### 收集成集合
 ```java

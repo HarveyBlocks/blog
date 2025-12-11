@@ -135,8 +135,6 @@ logic_error --> length_error
 logic_error --> out_of_bounds
 ```
 
-
-
 ## 异常继承
 
 子类异常可以被父类异常匹配捕获, 顺序是从上到下优先匹配

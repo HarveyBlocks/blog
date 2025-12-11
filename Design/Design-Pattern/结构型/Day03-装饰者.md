@@ -25,8 +25,6 @@
 -   在不影响其他对象的情况下, 以动态透明的方式给对象添加责任
 -   当对象功能**要求可以动态添加, 也可以动态撤销时**
 
-
-
 ## 结构
 
 特征抽象装饰继承抽象构件同时含有具体构件实例成员
@@ -47,8 +45,6 @@
 -   具体装饰
     -   Concrete Decorator
     -   实现抽象装饰的相关方法, 并给具体构建对象添加附加的责任
-
-
 
 ```mermaid
 classDiagram
@@ -94,8 +90,6 @@ ConcoreteComponent1 --> AbstractDecorator
 ConcoreteComponent2 --> AbstractDecorator
 ```
 
-
-
 ## 实现流程
 
 ### 抽象构件
@@ -112,9 +106,7 @@ public abstract class AbstractComponent {
         return description;
     }
 
-
     public abstract void show();
-
 
 }
 ```
@@ -251,7 +243,6 @@ class BufferedWriter{
 	# BufferedWriter(Writer)
 	+ void writer();
 }
-
 
 Writer <|-- FileStreamWriter
 FileStreamWriter <|-- FileWriter

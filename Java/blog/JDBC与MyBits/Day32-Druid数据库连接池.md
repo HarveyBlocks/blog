@@ -3,8 +3,6 @@
 -   讲究一个资源复用
 -   原理还是看[b站](https://www.bilibili.com/video/BV1s3411K7jH?p=9)吧
 
-
-
 ![image-20231010204722650](../../assets/Day32/image-20231010204722650.png)
 
 # 使用Druid
@@ -16,10 +14,10 @@
     ```properties
     # 配置写在配置文件下
     String url = "jdbc:mysql:///company&useServerPrepStmt=true";
-    
+
     String username = "root";
     String password = "123456";
-    
+
     # 初始化连接数
     initialSize = 5
     # 最大连接数
@@ -33,20 +31,20 @@
     ```java
     System.out.println(System.getProperty("user.dir"));//输出当前路径
     //C:\Users\27970\Desktop\IT\JDK\learn_jdbc
-    
+
     //加载属性文件.properties
     Properties prop = new Properties();
     prop.load(new FileInputStream("learn_jdbc\\src\\....."));
-    
+
     //获取连接池对象
     DataSource dataSource = DruidDataSourceFactory.createDataSource(prop);
-    
+
     //获取数据库连接
     Connection connection = dataSource.getConnection();
     System.out.println(connection);
-    
+
     //然后一样
-    
+
     ```
 
 ```java
@@ -59,10 +57,7 @@ String username = "root";
 String password = "123456";
 //以上这些可以写道属性文件.properties里去
 
-    
 Connection conn = DriverManager.getConnection(url, username, password);
-
-
 
 //--------------------------------------------------------------------    
 //定义sql指令,结尾分号可写可不写

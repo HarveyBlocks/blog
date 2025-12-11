@@ -18,16 +18,10 @@ init 0
 
 ![image-20240101203126765](../assets/Day06-集群与scp命令/image-20240101203126765.png)
 
-
-
 -   选择`虚拟机中的当前状态`
 -   选择`创建完整克隆`
 -   给他个名字, 指定下位置(放在一个空文件夹下, 否则会是散装的虚拟机就会烦死你qwq)
 -   拖拽到刚创建的文件夹中
-
-
-
-
 
 -   [改一下IP地址](..\网络\Day05-虚拟机配置固定IP.md),集群中的IP地址不要重复
 
@@ -90,8 +84,6 @@ ssh 用户名@目标IP地址
     ssh-copy-id node3 # 然后再询问(yes/no)的地方输入yes, 然后输入node3的密码
     ```
 
-
-
 ## 关闭防火墙和SELinux
 
 为了避免出现网络不通, 简单的关闭防火墙
@@ -119,8 +111,6 @@ SELINUX=disabled
 
 保存退出后重启虚拟机
 
-
-
 ## 集群间数据传输
 
 >   为了频繁在多台服务器之间相互传输数据使用scp命令
@@ -143,8 +133,6 @@ scp [-r] 远程目标路径 本机路径
 
     表示递归, 用于复制文件夹
 
- 
-
 ```bash
 scp -r /export/server/jdk root@node2:/export/server
 ```
@@ -156,8 +144,6 @@ scp -r node2:/export/server/jdk /export/server
 ```
 
 -   省略用户名,表示使用当前的同名账户
-
-
 
 ```bash
 cd /export/server

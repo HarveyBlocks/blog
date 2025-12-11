@@ -14,8 +14,6 @@
     4.  分页处理
 -   幸苦你了MyCat
 
-
-
 ## MyCat管理系统
 
 -   MyCat:Port=8066
@@ -37,15 +35,11 @@
 </system>
 ```
 
-
-
 ### 连接端管理端口
 
 ```bash
 mysql -h 192.168.200.210 -p 9066 -uroot -p123456
 ```
-
-
 
 ### 使用管理端
 
@@ -93,16 +87,11 @@ mysql -h 192.168.200.210 -p 9066 -uroot -p123456
     show @@sql.sum
     ```
 
-
 ## MyCat-Web/MyCat-eye
 
 >   监控MyCat服务的图形化工具
 
- 
-
 -   MyCat-eye依赖**zoo-kepper**和**MyCat-web**
-
-
 
 ### Zoo-kepper
 
@@ -115,8 +104,6 @@ mysql -h 192.168.200.210 -p 9066 -uroot -p123456
         ```properties
         dataDir=自己创建的文件夹路径
         ```
-
-
 
 ### MyCat-web
 

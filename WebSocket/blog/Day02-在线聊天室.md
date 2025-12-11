@@ -14,15 +14,11 @@
     -   显示聊天内容
     -   显示正在聊天的用户的用户名
 
-
-
 ## 实现流程
 
 ------------------------------------------------------------------------------------------------------------------------------------------==@OnClose==
 
 ![image-20231230134913166](../assets/Day02-在线聊天室/image-20231230134913166.png)
-
-
 
 ## 消息格式
 
@@ -63,10 +59,6 @@
 
         `李四`发来的`你好`的消息
 
-
-
-
-
 ## 代码实现
 
 >   spring-boot整合webSocket
@@ -74,8 +66,6 @@
 ### 用户系统
 
 #### 实体类
-
-
 
 ```java
 package com.harvey.hotel.pojo.entity;
@@ -96,8 +86,6 @@ public class User {
 }
 ```
 
-
-
 ```java
 package com.harvey.hotel.pojo.result;
 
@@ -114,10 +102,6 @@ public class Result {
 	Getter & Setter
 }
 ```
-
-
-
-
 
 #### 用户Controller
 
@@ -162,8 +146,6 @@ public class UserController {
     }
 }
 ```
-
-
 
 ### 消息与Json互转
 
@@ -217,8 +199,6 @@ public class MessageUtils {
 }
 ```
 
-
-
 ### 引入坐标
 
 ```xml
@@ -230,10 +210,6 @@ public class MessageUtils {
 ```
 
 `spring-boot-starter-web`也是要的
-
-
-
-
 
 ### 编写配置类
 
@@ -329,8 +305,6 @@ public class ChatEndpoint {
 #### onOpen
 
 ##### onOPen主要方法
-
-
 
 ![image-20231230152632195](../assets/Day02-在线聊天室/image-20231230152632195.png)
 

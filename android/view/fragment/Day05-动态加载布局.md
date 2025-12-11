@@ -8,8 +8,6 @@
 
 借助限定符 （qualifier）在运行时判断程序应该是使用双页模式还是单页模式
 
-
-
 | 屏幕特征 | 限定符 | 描述                                        |
 | -------- | ------ | ------------------------------------------- |
 | 大小     | small  | 提供给小屏幕的资源                          |
@@ -90,8 +88,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 <img src="../../assets/Day05-动态加载布局/image-20250915160516146.png" alt="image-20250915160516146" style="zoom:50%;" />
 
-
-
 顺带一提, 把Desktop上横向移动界面, 会从large布局变为一般布局
 
 但是, 如果有多个不同阶段的不同布局存在, Desktop上的布局**并不会像预想的一样到一个阶段就变成对应阶段的布局**
@@ -140,10 +136,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 ```
 
 当程序运行在屏幕宽度**大于等于600 dp**的设备上时，会加载`layout-sw600dp/activity_main`布局，当程序运行在屏幕**宽度小于600 dp**的设备上时，则加载**默认**的`layout/activity_main`布局。
-
-
-
-
 
 ## 提高复用性
 
@@ -203,8 +195,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 将新闻内容的布局`contentLayout`设置成不可见。因为在双页模式下，如果还没有选中新闻，是不应该显示新闻内容布局的
 
-
-
 #### Fragment
 
 编写Fragment, 大页面的右半边or小页面的详情页
@@ -231,10 +221,6 @@ class NewsContentFragment : BaseFragment<NewsContentFragBinding>(NewsContentFrag
     }
 }
 ```
-
-
-
-
 
 #### 使用Fragment 的布局
 
@@ -273,7 +259,7 @@ activity代码
 ```kotlin
 class NewsContentActivity :
     BaseActivity<ActivityNewsContentBinding>(ActivityNewsContentBinding::inflate) {
-        
+
     companion object {
         /**
          * 将activityStart暴露给类外
@@ -304,8 +290,6 @@ class NewsContentActivity :
     }
 }
 ```
-
-
 
 ### 选择列表
 
@@ -360,8 +344,6 @@ data class NewsBrief(val title: String, val contentBrief: String)
 - `android:ellipsize`   用于设定当文本内容超出控件宽度时文本的缩略方式
   - `"end"`  表示在尾部进行缩略
 
-
-
 #### Fragment类
 
 NewsBriefListFragment作为展示新闻为列表的Fragment
@@ -369,10 +351,6 @@ NewsBriefListFragment作为展示新闻为列表的Fragment
 ```kotlin
 class NewsBriefListFragment: BaseFragment<NewsBriefListFragBinding>(NewsBriefListFragBinding::inflate)
 ```
-
-
-
-
 
 ### MainActivity
 
@@ -437,14 +415,6 @@ MainActivty需要展示两种不同的界面, 大于600dp的和默认的
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate)
 ```
 
-
-
-
-
-
-
-
-
 ### 制造假数据
 
 #### NewsBrief
@@ -461,8 +431,6 @@ fun getNewsBrief(): List<NewsBrief> {
     return newsList
 }
 ```
-
-
 
 #### News
 
@@ -504,8 +472,6 @@ class NewsBriefListFragment :
     }
 }
 ```
-
-
 
 #### Adapter
 
@@ -568,8 +534,6 @@ class NewsBriefListFragment :
 
 ### 效果演示
 
-
-
 #### 小屏
 
 选择列表
@@ -579,8 +543,6 @@ class NewsBriefListFragment :
 详情页面
 
 ![image-20250915234207236](../../assets/Day05-动态加载布局/image-20250915234207236.png)
-
-
 
 #### 大屏
 

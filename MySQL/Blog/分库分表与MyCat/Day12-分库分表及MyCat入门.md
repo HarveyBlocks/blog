@@ -52,16 +52,6 @@ source /etc/profile
 java -version
 ```
 
-
-
-
-
-
-
-
-
-
-
 ### 目录文件夹
 
 -   bin
@@ -102,8 +92,6 @@ rm -rf jar包名(看情况吧)
 chmod 777 指定文件jar包
 ```
 
-
-
 ## 结构
 
 >   逻辑结构和物理结构
@@ -120,8 +108,6 @@ chmod 777 指定文件jar包
 
 ![image-20231210144416258](../../assets/Day12-分库分表及MyCat入门/image-20231210144416258.png)
 
-
-
 ## MyCat 入门
 
 ### 需求:
@@ -130,8 +116,6 @@ chmod 777 指定文件jar包
 
 ![image-20231210144533279](../../assets/Day12-分库分表及MyCat入门/image-20231210144533279.png)
 
-
-
 -   水平拆分
 
 ### 环境准备
@@ -139,10 +123,6 @@ chmod 777 指定文件jar包
 MyCat中间件服务器
 
 ![image-20231210155621931](../..\assets/Day12-分库分表/image-20231210155621931.png)
-
- 
-
-
 
 #### 检查防火墙
 
@@ -242,10 +222,6 @@ CREATE TABLE TB_ORDER(
 
 数据怎么分布取决于数据分片规则(见配置)
 
-
-
-
-
 ## MyCat 配置
 
 ### 从NotePad++打开服务器文件
@@ -340,7 +316,6 @@ server.xml配置用户的用户权限
     <property name="readOnly">true</property>
 </user>
 ```
-
 
 ## MyCat分片
 

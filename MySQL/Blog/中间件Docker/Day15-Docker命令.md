@@ -99,13 +99,11 @@
     ```
 
     清空日志内容
-    
+
     ```shell
     docker ps -aq | xargs docker inspect --format='{{.LogPath}}' | xargs truncate -s 0
     ```
-    
-    
-    
+
 -   进入**exec(ute)**容器内部(容器是隔离空间),对容器进行修改和操作
 
     ```bash
@@ -154,8 +152,6 @@
         docker exec -it mysql mysql -uroot -p
         ```
 
-        
-
 -   删除**r(e)m(ove)**容器
 
     ```bash
@@ -180,12 +176,6 @@ vi ~/.bashrc
 ```bash
 source ~/.bashrc
 ```
-
-
-
-
-
-
 
 运行容器时开机自启
 

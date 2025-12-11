@@ -2,8 +2,6 @@
 
 >   **R**esponsive **W**eb **D**esign
 
-
-
 允许 Web 页面适应不同屏幕宽度因素等，进行布局和外观的调整的一系列实践
 
 ## 响应式设计
@@ -25,8 +23,6 @@ Ethan Marcotte 在 2010 年首度提出的，他将其描述为三种技术的�
 
 因此，如果迫使用户水平滚动或缩小以查看整个网页，则会导致不佳的用户体验
 
-
-
 1.   不要使用较大的固定宽度元素
 
      比如, 如果图像的宽度大于视口的宽度，则可能导致视口水平滚动
@@ -43,12 +39,6 @@ Ethan Marcotte 在 2010 年首度提出的，他将其描述为三种技术的�
 
      -   **应该考虑使用相对宽度值，例如 width: 100%**
      -   要小心使用较大的绝对定位值，这可能会导致元素滑落到小型设备的视口之外
-
-
-
-
-
-
 
 ## 视口
 
@@ -124,12 +114,10 @@ HTML5 引入
      </div>
      ```
 
-     
-
 5.   行内的所有列全部都向左浮动，因此会从页面流中移出，并将放置其他元素，就好像这些列不存在一样
 
      比如
-     
+
      ```html
      <div class="row">
        <div class="col-9">大量文本</div> <!-- 占用3格 -->
@@ -139,15 +127,15 @@ HTML5 引入
          大量文本
      </p>
      ```
-     
+
      <img src="../assets/Day04-响应式布局/image-20250811233942322.png" alt="image-20250811233942322" style="zoom: 40%;" />
-     
+
      希望结构是:
-     
+
      <img src="../assets/Day04-响应式布局/image-20250811234225607.png" alt="image-20250811234225607" style="zoom:50%;" />
-     
+
      在`class='raw'`的元素上**添加清除流的样式**, 然后将放在`class='col-*'`上的元素放入`class='raw'`中
-     
+
      ```css
      .row::after {
        content: "";
@@ -202,10 +190,6 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 
 <img src="../assets/Day04-响应式布局/image-20250812011109826.png" alt="image-20250812011109826" style="zoom:30%;" />
 
-
-
-
-
 ### 各组成
 
 -   网格列 Grid Cols
@@ -247,8 +231,6 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 ### 网格容器
 
 在网格容器中把 display 属性设置为 grid 或 inline-grid
-
-
 
 #### grid-template-columns
 
@@ -350,8 +332,6 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 
 >   用作 grid-row-start、grid-column-start、grid-row-end 和 grid-column-end 属性的简写属性
 
-
-
 ```css
 .item8 {
   grid-area: 1 / 2 / 5 / 6;
@@ -362,8 +342,6 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 -   column-line-start 2
 -   row-line-end 5
 -   column-line-end 6
-
-
 
 ```css
 .item8 {
@@ -381,8 +359,6 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 使用`grid-column`, `grid-raw`, `grid-area`等属性, 可以让任何项目出现在容器的任何位置
 
 这常常用来在不同媒体下设置不同的布局
-
- 
 
 #### grid-area和命名
 
@@ -431,8 +407,6 @@ div[class*='grid-item'] {
     'menu footer footer footer footer footer';
 }
 ```
-
-
 
 ## 媒体查询
 
@@ -487,14 +461,10 @@ div[class*='grid-item'] {
 
 ### 样式表文件的媒体
 
-
-
 ```html
 <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
 <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
 ```
-
-
 
 ### Media Types
 
@@ -504,8 +474,6 @@ div[class*='grid-item'] {
 | print  | 用于打印机。                           |
 | screen | 用于计算机屏幕、平板电脑、智能手机等。 |
 | speech | 用于朗读页面的屏幕阅读器。             |
-
-
 
 ### Media Feature
 
@@ -530,8 +498,6 @@ div[class*='grid-item'] {
 ```
 
 `max-width`表示屏幕宽度的不超过600px的, 匹配规则
-
-
 
 ### 模板
 

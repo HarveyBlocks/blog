@@ -6,11 +6,7 @@
 print("Hello World",end="")
 ```
 
-
-
 ## 分支结构
-
-
 
 -   if-elif-else
 -   换行
@@ -22,10 +18,6 @@ if True:
 else:
     print(False)
 ```
-
-
-
-
 
 -   可
 
@@ -44,11 +36,7 @@ if s == "1":
 print(a) # 报错
 ```
 
-
-
 ## 循环结构
-
-
 
 ### while
 
@@ -62,8 +50,6 @@ print(a) # 报错
 ```
 
 没有do-while
-
-
 
 ### for-in
 
@@ -81,8 +67,6 @@ for i in range(10):
 print(i) # 报错
 print(a) # 报错
 ```
-
-
 
 ### break-continue
 

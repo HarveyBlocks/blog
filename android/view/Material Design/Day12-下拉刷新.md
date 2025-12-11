@@ -6,8 +6,6 @@
 implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" )
 ```
 
-
-
 ## 简单使用
 
 将RecyclerView放到SwipeRefreshLayout之下, 成为SwipeRefreshLayout的子控件
@@ -40,8 +38,6 @@ implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0" )
 ![image-20250923134905273](../../assets/Day12-下拉刷新/image-20250923134905273.png)
 
 ## 注册刷新事件
-
-
 
 ```kotlin
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {

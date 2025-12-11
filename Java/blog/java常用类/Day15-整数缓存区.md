@@ -6,7 +6,7 @@ public class Main {
         Integer integer1 = new Integer(2);
         Integer integer2 = new Integer(2);
         System.out.println(integer1==integer2);//false，因为比的是地址
-        
+
         Integer integer3 = 2;//自动装箱
         Integer integer4 = 2;//自动装箱
         System.out.println(integer3==integer4);//true，因为...
@@ -15,7 +15,7 @@ public class Main {
         为例：
         Integer integer3 = Integer.valueOf(2);
         */
-        
+
         System.out.println(integer3==integer1);//false
     }
 }
@@ -99,8 +99,6 @@ public static Integer valueOf(int i) {
 
 故比较后地址一致，结果为true
 
-
-
 那么，当自动装箱数不在[-127,128]
 
 ```java
@@ -114,7 +112,6 @@ public class Main {
 ```
 
 valueOf()方法将执行
-
 
 ```java
 return new Integer(i);

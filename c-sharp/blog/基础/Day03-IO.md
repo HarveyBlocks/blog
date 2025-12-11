@@ -6,7 +6,7 @@ API略
 
 ```csharp
 using (resource) {
-    
+
 }
 ```
 

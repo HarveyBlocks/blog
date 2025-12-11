@@ -168,32 +168,30 @@ private static void exec(Runnable firstTarget, Runnable secondTarget) throws Int
 
     ```mermaid
     sequenceDiagram
-    
+
     participant r as 读线程
     participant w as 写线程
     participant c as 缓存
     participant db as 数据库
-    
+
     w->>c : 清理数据
     r-x c : 读取失败
     r->> db : 读取数据
     w->>db : 更新数据
     r->> c : 写入缓存(旧数据!)
-    
-    
-    
+
     ```
 
     加锁
 
     ```mermaid
     sequenceDiagram
-    
+
     participant r as 读线程
     participant w as 写线程
     participant c as 缓存
     participant db as 数据库
-    
+
     w->>+ c : 清理数据
     w->>-db : 更新数据
     r-x c : 读取失败

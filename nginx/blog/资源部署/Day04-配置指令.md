@@ -71,8 +71,6 @@ server_name ""
 server_name localhost ;
 ```
 
-
-
 ### 通配符
 
 `*`表0个或多个, 不能放在中段, 只可以放在`*.`或者`.*`
@@ -110,8 +108,6 @@ location / {
 }
 ```
 
-
-
 ```nginx
 server_name ~^www\.(\w+)\.(\w+)\.com$ ;
 # www.baidu.trash.com
@@ -121,8 +117,6 @@ location / {
     return "$1 is $2";
 }
 ```
-
-
 
 ### 匹配的优先级
 
@@ -157,16 +151,12 @@ server {
         }
         ```
 
-        
-
         ```mermaid
         graph LR
         centos:80/abc --> /abc 
         centos:80/abc/def --> /abc 
         centos:80/abcdef --> /abc 
         ```
-
-        
 
 -   `=`
 
@@ -187,8 +177,6 @@ server {
         centos:80/abcdef --> NF
         NF(404 Not Found)
         ```
-
-        
 
 -   `~`
 
@@ -213,8 +201,6 @@ server {
         centos:80/Abc/112 --> NF
         NF(404 Not Found)
         ```
-        
-        
 
 -   `~*`
 
@@ -232,8 +218,6 @@ server {
 
 ### 修改访问资源路径
 
-
-
 #### `root`
 
 设置请求的根目录, 可在`http` , `server` , `location`
@@ -249,8 +233,6 @@ root path ;
 root html ;
 ```
 
-
-
 path为Nginx服务器接收到请求后朝朝资源的根目录路径
 
 ```nginx
@@ -265,8 +247,6 @@ location /source {
 graph LR
 centos:80/source/hi.png --> 在服务器上查找文件`/usr/share/nginx/html/source/hi.png`
 ```
-
-
 
 #### `alias`
 
@@ -294,8 +274,6 @@ centos:80/source/hello.png --> 在服务器上查找文件`/usr/share/nginx/html
 
 注意
 
-
-
 ```nginx
 location /source/ {
     #  已知/usr/share/nginx/html/image 下存放了一张hello.png
@@ -315,15 +293,9 @@ location /source/ {
 }
 ```
 
-
-
 #### 区别
 
 `alias`和`root`都可以用来指定访问资源的路径, 那么两者之间的区别是什么?
-
-
-
-
 
 ### `index`
 
@@ -337,13 +309,7 @@ location view {
 }
 ```
 
-
-
 默认`index index.html`
-
-
-
-
 
 ### `error_page`
 

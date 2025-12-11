@@ -2,15 +2,11 @@
 
 >   Attribute List
 
-
-
 ## 声明
 
 ```xml-dtd
 <!ATTLIST 元素名称 属性名称 属性类型 默认值>
 ```
-
-
 
 ```xml-dtd
 <!ELEMENT note (#PCDATA)>
@@ -21,10 +17,6 @@
 ```xml
 <note  name="Hello" type="string">XXX</note>
 ```
-
-
-
-
 
 ## 属性类型
 
@@ -82,10 +74,6 @@
 
 字符串中用空格分割, IDEA的支持不太好
 
-
-
-
-
 ## 默认值参数
 
 | 值           | 解释                        |
@@ -101,8 +89,6 @@
         <!ATTLIST note id ID #REQUIRED>
         <!ATTLIST note pi CDATA #FIXED "3.14">
 ```
-
-
 
 ```xml
 <notes>

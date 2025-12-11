@@ -60,8 +60,6 @@
 <!ELEMENT 元素名称 ANY>
 ```
 
-
-
 ```xml-dtd
 <!ELEMENT note ANY>
 ```
@@ -156,8 +154,6 @@
     <!ELEMENT 元素名称 (子元素0,...(子元素1|子元素2),...)>
     ```
 
-    
-
     ```xml-dtd
     <!ELEMENT note (to,from,header,(message|body))>
     ```
@@ -165,8 +161,6 @@
     "note" 元素必须包含 "to" 元素、"from" 元素、"header" 元素，以及非 "message" 元素既 "body" 元素。
 
     这个的优先级似乎比逗号低, 所以要**加括号**
-
-
 
 ### 混合型
 
@@ -186,8 +180,6 @@ pom.xml的dependencies部分
         <!ELEMENT version (#PCDATA)>
         <!ELEMENT scope (#PCDATA)>
 ```
-
-
 
 ```xml-dtd
 <?xml version="1.0" encoding="UTF-8"?>

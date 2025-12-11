@@ -14,7 +14,7 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
-    
+
     <!--包扫描-->
     <context:component-scan base-package="com.harvey"/>
     <!--自动生成通知-->
@@ -22,8 +22,6 @@
 
 </beans>
 ```
-
-
 
 ## 目标对象
 
@@ -83,21 +81,12 @@ public class MyAdvice {
 }
 ```
 
-
-
-
-
-
-
-
-
 ## 注解配置切点表达式
 
 ```java
 public class MyAdvice {
     public static final String 
         EXECUTION = "execution(* com.harvey.service.impl.UserServiceImpl.*(..))";
-
 
     /**
      * @description 切点表达式的切取.真是一点面子也不给啊
@@ -117,7 +106,7 @@ public class MyAdvice {
         System.out.println("before");
     }
     ...
-        
+
 }
 ```
 
@@ -130,10 +119,6 @@ public class MyAdvice {
 >   **如果需要动态配置或更灵活的切点规则，可以选择静态常量；如果切点规则固定且易于管理，可以选择注解。**
 >
 >   ​																																								-------Chat-GPT
-
-
-
-
 
 # 老规矩:核心配置类
 

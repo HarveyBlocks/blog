@@ -13,8 +13,6 @@
 -   虚假账号
 -   皆是二分类问题
 
-
-
 ## 原理
 
 **逻辑回归的输入就是线性回归的输出线性回归方程**
@@ -29,8 +27,6 @@ $$
 
 ![image-20240307224117257](../assets/Day06-逻辑回归和二分法/image-20240307224117257.png)
 
-
-
 -   `\theta^T^x` = **线性回归方程**或预测值
 
 -   `sigmoid`函数的值域落在(0,1)之间, 可以看作一个是与否(函数值与0.5或预测值与0比较之类)的概率
@@ -44,14 +40,10 @@ $$
     	-log_b(1-h_\theta(x)), y = 0
     \end{cases}\\
     $$
-    
+
     - `	h_\theta(x)`就是预测值带入后的`sigmoid`函数
     -  `cost`值越大, 损失就越大
     - `y`是真实值
-
-
-
-
 
 ## API
 
@@ -90,14 +82,12 @@ from sklearn.linear_model import LogisticRegression ,SGDClassifier
     -   `coef:_ndarray`
     -   ` intercept:ndarray`
 
-
-
 ```python
 def pre():
     # 导入
     from sklearn.datasets import load_boston
     boston = load_boston()
-    
+
     # 划分
     from sklearn.model_selection import train_test_split
     data_train,data_test,target_train, target_test = \
@@ -105,7 +95,7 @@ def pre():
             boston.data,boston.target,
             test_size = 0.2 # 可选, 默认0.25
         )
-    
+
     # 标准化
     from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
@@ -113,12 +103,11 @@ def pre():
     data_train = scaler.transform(data_train)
     data_test = scaler.transform(data_test)
     import numpy as np
-    
+
     target_train = np.where(target_train < np.quantile(a=target_train,q=0.1),1,0)
     target_test = np.where(target_test < np.quantile(a=target_test,q=0.1),1,0)
     # 预估器
     return data_train,data_test,target_train, target_test
-
 
 def post(regresssor,data_test,target_test):
     y_pred = regresssor.predict(data_test)
@@ -126,12 +115,11 @@ def post(regresssor,data_test,target_test):
     print(y_pred)
     print(score)
 
-
 if __name__ == "__main__":
     data_train,data_test,target_train, target_test = pre()
-    
+
     from sklearn.linear_model import LogisticRegression ,SGDClassifier
-    
+
     print("---------------------------LogisticRegression---------------------------")
     regresssor = LogisticRegression(C=0.5)
     regresssor.fit(data_train,target_train) # 要求target必须只能有两个值
@@ -145,7 +133,7 @@ if __name__ == "__main__":
     print(classifier.coef_)
     print(classifier.intercept_)
     post(classifier,data_test,target_test) # # 8.333
-    
+
 ```
 
 ## 模型评估
@@ -159,8 +147,6 @@ if __name__ == "__main__":
 例如: 对于癌症数据, 机器学习之后, 得到的正确率, 即使是96%, 也是很危险的, 因为是医学
 
 我们希望的是: "真的患癌症的, 检查出患癌症的正确率是多少", 而不太关心"没有患癌症的, 检查出患癌症的概率" ,因为可以复查嘛, 但是如果第一遍检查出没换癌症, 就不太会去复查了, 这就要危险得多了
-
-
 
 ### 精确率和召回率
 
@@ -191,8 +177,6 @@ $$
 
 **更关心召回率**, 更能代表预测正例的正确率
 
-
-
 #### F1-score
 
 精确率和召回率的调和平均数
@@ -202,8 +186,6 @@ F_1 = \frac{2N(TP)}{2N(TP)+N(FN)+N(FP)} =\frac{2 \cdot Presision \cdot Recall}{P
 $$
 
 F~1~大, 代表*Presision*和*Recall*值都很高, 代表了模型的稳健性
-
-
 
 #### 选择正例
 
@@ -236,8 +218,6 @@ def post(regresssor,data_test,target_test):
     print(mse)
 ```
 
-
-
 ```
               precision    recall  f1-score   support
 
@@ -248,8 +228,6 @@ def post(regresssor,data_test,target_test):
    macro avg       0.93      0.89      0.91       102
 weighted avg       0.97      0.97      0.97       102
 ```
-
-
 
 #### 存在问题
 
@@ -265,51 +243,27 @@ weighted avg       0.97      0.97      0.97       102
 
 F1-score 99.497%
 
-
-
 很危险啊
 
 产生原因: 正例太多,样本不均衡
-
-
-
-
 
 ## ROC曲线和AUC指标
 
 ### TPR
 
-
 $$
 \eta(TPRate) = \frac{N(TP)}{N(TP)+N(FN)}
 $$
 
-
-
 ### FPR
-
 
 $$
 \eta(FPRate) = \frac{N(FP)}{N(FP)+N(TN)}
 $$
 
-
-
-
-
-
-
-
-
 ### ROC
 
 一条以FPR为x轴, TPR为y轴形成的曲线
-
-
-
-
-
-
 
 ![image-20240308003856249](../assets/Day06-逻辑回归和二分法/image-20240308003856249.png)
 
@@ -323,11 +277,7 @@ $$
     -   就不能把AOC指标定义为ROC曲线和直线TPR-FPR=1围成图像的面积吗?????
     -   说明对反例的预测很好很合适
 
-
-
 ### API
-
-
 
 ```python
 print("----------------ROC-AUC------------------")

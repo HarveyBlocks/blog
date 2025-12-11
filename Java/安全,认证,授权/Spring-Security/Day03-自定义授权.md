@@ -27,8 +27,6 @@
             .antMatchers("/resource/r0").hasAnyAuthority("r0")
         ```
 
-        
-
 -   方法授权
 
     -   通过方法拦截
@@ -41,8 +39,6 @@
 ## 从数据库查询权限
 
 ### 数据库权限准备
-
-
 
 ```mysql
 use security;
@@ -109,10 +105,6 @@ public class PermissionDto {
     		where user_id = ?));
     ```
 
-    
-
-
-
 -   在UserDao中查询
 
     ```java
@@ -130,11 +122,11 @@ public class PermissionDto {
                 "where role_id in (select role_id\n" +
                 "from t_user_role\n" +
                 "where user_id = ?));";
-    
+
         List<PermissionDto> query = jdbcTemplate
                 .query(sql, new Object[]{userId},
                         new BeanPropertyRowMapper<>(PermissionDto.class));
-    
+
         if(query==null||query.size()!=1){
             return null;
         }
@@ -158,8 +150,6 @@ public class PermissionDto {
                 .authorities(permissions.toArray(new String[]{})).build();
     }
     ```
-
-    
 
 ## 基于Web授权
 
@@ -212,17 +202,17 @@ public class PermissionDto {
     `authenticated()` **保护URL，需要用户登录**
 
 	`permitAll()` 指定URL无需保护，**一般应用于静态资源文件**
-	
+
 	`hasRole(String role)` 限制单个角色访问，**角色将被增加 “ROLE_” .所以”ADMIN” 将和 “ROLE_ADMIN”进行比较.**
-	
+
 	`hasAnyRole(String… roles)`允许多个角色访问.
-	
+
 	`hasAuthority(String authority)` 限制单个权限访问
-	
+
 	`hasAnyAuthority(String… authorities) `允许多个权限访问.
-	
+
 	`access(String attribute)` 该方法使用 SpEL表达式, 所以可以创建复杂的限制.
-	
+
 	`hasIpAddress(String ipaddressExpression)` 限制IP地址或子网
 
 ## 基于方法授权
@@ -253,10 +243,10 @@ public class PermissionDto {
 public interface BankService {
 	@Secured("IS_AUTHENTICATED_ANONYMOUSLY")// 本方法可匿名访问
 	public Account readAccount(Long id);
-    
+
     @Secured("IS_AUTHENTICATED_ANONYMOUSLY")// 缺点:难记
 	public Account[] findAccounts();
-	
+
     @Secured("ROLE_TELLER")// 有TELLER的角色的用户可以访问,底层使用RoleVoter投票器。
 	public Account post(Account account, double amount);
 }
@@ -276,7 +266,7 @@ public interface BankService {
 @RestController
 @RequestMapping("/resource")
 public class ResourceController {
-    
+
     @GetMapping(value = "/r0",produces = Constant.TEXT_PRODUCES)
     @PreAuthorize("hasAuthority('r0')")
     public String resource0(){
@@ -298,8 +288,6 @@ public class ResourceController {
     }
 }
 ```
-
-
 
 #### configure的配置更改
 

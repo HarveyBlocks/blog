@@ -67,8 +67,6 @@ pinia.use(context => {
 })
 ```
 
-
-
 ## state
 
 ### 添加新的state

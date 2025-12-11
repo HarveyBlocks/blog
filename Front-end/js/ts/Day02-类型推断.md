@@ -7,8 +7,6 @@ let x = 3;// 类型判断: number
 x = "3";// ERROR
 ```
 
-
-
 ## 最佳通用类型
 
 考虑所有元素的类型
@@ -92,8 +90,6 @@ type ArrayElement<T> = T extends (infer E)[] ? E : never;
 type T3<T> = T extends (...args: infer Args) => any ? Args : never; // 拆一波函数参数的包装
 ```
 
-
-
 递归解除泛型封装
 
 ```ts
@@ -122,10 +118,6 @@ type UserNameType = GetDeepProp<User, "info.name">; // string
 type UserAgeType = GetDeepProp<User, "info.age">; // number
 ```
 
-
-
-
-
 拆分固定格式的字符串
 
 ```typescript
@@ -135,8 +127,6 @@ type SplitKeyValue<T> = T extends `${infer Key}:${infer Value}` ? { key: Key; va
 type Res1 = SplitKeyValue<"name:Alice">; // { key: "name"; value: "Alice" }
 type Res2 = SplitKeyValue<"age:30">; // { key: "age"; value: "30" }
 ```
-
-
 
 非空字符串类型
 

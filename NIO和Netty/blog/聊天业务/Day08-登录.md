@@ -107,10 +107,6 @@ public class ServiceLoginHandler extends SimpleChannelInboundHandler<LoginReques
 }
 ```
 
-
-
-
-
 ## 平稳关闭
 
 ```java

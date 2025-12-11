@@ -2,8 +2,6 @@
 
 变量很容易被访问, 更改
 
-
-
 ## 闭包
 
 写一个闭包, 
@@ -38,29 +36,17 @@ if __name__ == '__main__':
     print(result)
 ```
 
-
-
-
-
 ## nonlocal
-
-
 
 内部函数可以作用外部函数,但是在更改其值的时候会出现报错, 但是
 
-
-
-
-
 ```python
 num1 = 100
-
 
 def single(num2: int):
     global num1 # 指的是最顶层的num1
     num1 += num2
     return num1
-
 
 def outer(num: int):
     num1: int = num*2
@@ -116,21 +102,15 @@ def time_advice(fun):
 
     return inner
 
-
 def sleep(sec):
     import time
     # 导包在方法内也是可以做哒!,也是有作用域哒!
     time.sleep(sec)
 
-
 if __name__ == '__main__':
     time_advice_sleep = time_advice(sleep)
     time_advice_sleep(1)
 ```
-
-
-
-
 
 ### 语法糖
 
@@ -141,22 +121,16 @@ if __name__ == '__main__':
 def time_advice(fun):
 	pass
 
-
 @time_advice
 def sleep(sec):
     import time
     time.sleep(sec)
-
 
 if __name__ == '__main__':
     sleep(1) # 直接走了增强
 ```
 
 这么想来, 之前的`getter`和`setter`也算是python自带的一些增强了
-
-
-
-
 
 -   工厂类
 
@@ -172,7 +146,6 @@ def mark() -> float:
     import time
     return time.time()
 
-
 def formated_through_time(marked_time: float):
     import time
     through = time.time() - marked_time
@@ -184,10 +157,8 @@ def formated_through_time(marked_time: float):
         hour % 24, minute, sec, million
     )
 
-
 def formated_now_time():
     return formated_through_time(0)
-
 
 def time_advice(fun):
     def advice():
@@ -209,7 +180,6 @@ from util.time import formated_now_time
 import threading
 import time
 import functools
-
 
 class Log():
     __lever_color_pre = {
@@ -251,7 +221,6 @@ class Log():
 
     def __str__(self):
         return "Log{ thread="+self.__thread+", name="+self.__name+" }"
-
 
 def log_advice(log_name: str = "unknow"):
     def log_adviced_inner(fun):

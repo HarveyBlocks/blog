@@ -14,18 +14,12 @@ cd ~
 
 也是回HOME
 
-
-
-
-
 写完整绝对路径:
 
 ```linux
 cd /    >>>根目录
 cd /usr/games >>>game目录
 ```
-
-
 
 不写全会进入工作目录的子目录
 
@@ -38,8 +32,6 @@ cd Desktop
 ```linux
 no such file or directory
 ```
-
-
 
 # pwd 打印工作目录命令
 

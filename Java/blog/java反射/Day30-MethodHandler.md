@@ -34,8 +34,6 @@ MethodType methodType = MethodType.methodType(returnType, paramType);
 
 工厂, 用于创建MethodHandler
 
-
-
 ### 获取工厂
 
 ```java
@@ -65,8 +63,6 @@ try {
     throw new RuntimeException(e);
 }
 ```
-
-
 
 ## MethodHandler
 
@@ -102,8 +98,6 @@ try {
 ```java
 MethodHandle staticMethod = lookup.findStatic(targetClass, "valueOf",staticMethodType);
 ```
-
-
 
 查找`String#valueOf(int)->String`
 
@@ -156,7 +150,6 @@ method.setAccessible(true);
 MethodHandle protectedMethod = lookup.unreflect(method);
 ```
 
-
 ```java
 try {
     MethodHandle protectedMethod = lookup.findVirtual(targetClass, methodName, objectMethodType);
@@ -185,8 +178,6 @@ try {
 ```java
 MethodHandle getter = lookup.findGetter(targetClass, fieldName, fieldType);
 ```
-
-
 
 ```java
 String fieldName = "publicField";
@@ -224,8 +215,6 @@ targetClass.isAssignableFrom(targetObject.getClass())==true
 
 对方法执行的具体逻辑, 实际上使用的是targetObject里的逻辑, 以实现多态性
 
-
-
 ```java
 // 凡是调用类支持的字节码操作，lookup都支持。
 MethodHandles.Lookup lookup = MethodHandles.lookup();
@@ -247,7 +236,6 @@ try {
     Object getterResult = getter.invoke(targetObject);
     System.out.println(getterResult);
 
-
     System.out.println(((int) getterResult) == setterParam); // true
 } catch (IllegalAccessException | NoSuchFieldException e) {
     System.err.println("reflect error: " + e.getMessage());
@@ -255,8 +243,6 @@ try {
     System.err.println("invoke error: " + e.getMessage());
 }
 ```
-
-
 
 ## JVM原理(大概?)
 
@@ -280,10 +266,6 @@ try {
     -   既然如此为啥还要这个参数????
 2.  reflectMethodFrom和SpecialCaller完全一致时, 总是不报错(自己类内调用本类成员肯定有权限啊)
 3.  SpecialCaller可以不是reflectMethodFrom的子类, 但一定具有继承关系
-
-
-
-
 
 操作同JVM指令`invokespecial`, `invokespecial`是用于实现`super`关键字的指令
 

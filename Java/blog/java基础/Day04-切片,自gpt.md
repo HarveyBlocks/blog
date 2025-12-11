@@ -3,9 +3,7 @@
 1. substring(int beginIndex)：这个方法返回从beginIndex开始到字符串末尾的子串。
 2. substring(int beginIndex, int endIndex)：这个方法返回从beginIndex开始到endIndex之前的子串。注意，endIndex位置的字符不包括在内。
 
-
 下面是一些示例代码来演示如何使用字符串切片操作：
-
 
 ``` java
 public class SubstringExample {    
@@ -20,8 +18,6 @@ public class SubstringExample {
 }
 ```
 记住，Java中的字符串索引从0开始，这意味着第一个字符的索引是0，第二个字符的索引是1，依此类推。要注意确保提供的索引在有效范围内，否则会引发IndexOutOfBoundsException异常。
-
-
 
 在Java中，数组是一组相同类型的元素的集合。要进行数组切片操作，你可以使用`Arrays`类的`copyOfRange`方法或者使用`System.arraycopy`方法。这两种方法都允许你从一个数组中复制指定范围的元素，从而创建一个新的子数组。
 

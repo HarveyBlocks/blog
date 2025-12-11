@@ -27,7 +27,7 @@
     <!DOCTYPE web-app PUBLIC
             "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
             "http://java.sun.com/dtd/web-app_2_3.dtd" >
-    
+
     <web-app>
         <display-name>Archetype Created Web Application</display-name>
         <servlet>
@@ -43,7 +43,7 @@
             <servlet-name>DispatcherServlet</servlet-name>
             <url-pattern>/</url-pattern>
         </servlet-mapping>
-    
+
     </web-app>
     ```
 
@@ -66,12 +66,6 @@ public class QuickController {
 }
 ```
 
-
-
-
-
-
-
 ### 配置映射地址
 
 ```java
@@ -84,10 +78,6 @@ public class QuickController {
 @Controller//@Component的三个衍生注解,比Component更具备语义化
 //交给Spring-MVC容器管理
 ```
-
-
-
-
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -10,8 +10,6 @@ public class Student {
 ```
 ## 用方法获取字段
 
-
-
 Class类里的方法:
 
 | Modifier and Type | Method                        | Description                         |
@@ -20,10 +18,6 @@ Class类里的方法:
 | Field[]           | getDeclaredFields()           | 返回所有成员变量的数组              |
 | Field             | getField(String name)         | 依据标识符,返回public的成员变量对象 |
 | Field[]           | getFields()                   | 返回所有public成员变量的数组        |
-
-
-
-
 
 ```java
 public static void main(String[] args)
@@ -69,16 +63,12 @@ public static void main(String[] args)
             studentName.get(new Student("Mike"))
     );//Mike
 
-
 }
 ```
-
-
 
 ## 对字段进行操作
 
 Field类里的方法:
-
 
 | Modifier and Type | Method                        | Description |
 | ----------------- | ----------------------------- | ----------- |

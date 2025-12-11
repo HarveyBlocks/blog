@@ -104,7 +104,6 @@ public class SpringMVCConfig {
         return resolver;
     }
 
-
 }
 ```
 
@@ -137,8 +136,6 @@ public class SpringMVCConfig {
 **DelegatingWebMvcConfiguration的源码:**
 
 ![image-20231129233036748](../../assets/Day05-消除spring-mvc.xml/image-20231129233036748.png)
-
-
 
 -   附:@Autowire知识点
 
@@ -192,7 +189,7 @@ public class SpringMVCConfig {
             registry.addInterceptor(new MyInterceptor1()).addPathPatterns("/**");
             // 先注册先执行,后注册后执行s
         }
-    
+
         @Override
         public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
             // 开启默认的Servlet处理器
@@ -244,8 +241,6 @@ public class SpringMVCConfig {
         </init-param>
     </servlet>
     ```
-
-    
 
 ![image-20231130004343898](../../assets/Day05-消除spring-mvc.xml/image-20231130004343898.png)
 

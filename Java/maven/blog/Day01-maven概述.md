@@ -33,8 +33,6 @@
 
 ### 镜像仓库
 
-
-
 ## 坐标
 
 文件吧
@@ -61,8 +59,6 @@
 ### 坐标作用
 
 使用唯一标识,唯一性地定位资源位置,通过标识可以将资源的识别与下载工作交给机器完成
-
-
 
 ## DOS命令
 
@@ -108,37 +104,28 @@ mvn archetype:generate -DgroupId=com.harvey -DartifactId=web-project -Darchetype
 
 ```xml
 <dependencies>
-    
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
-    
+
     <dependency>
       <!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
       <version>3.5.6</version>
     </dependency>
-    
+
   </dependencies>
 
 ```
 
-
-
-
-
-
-
 ![image-20231015155312631](../assets/Day01-maven概述/image-20231015155312631.png)
 
 ### 可选依赖
-
-
 
 ![image-20231015155248895](../assets/Day01-maven概述/image-20231015155248895.png)
 
@@ -149,8 +136,6 @@ mvn archetype:generate -DgroupId=com.harvey -DartifactId=web-project -Darchetype
 -   不写版本,所有版本统统去掉
 
 ### 依赖范围
-
-
 
 ```xml
 <dependencies>

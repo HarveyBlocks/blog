@@ -26,8 +26,6 @@ hostnamectl set-hostname Harvey-CentOS
 
 ![image-20231231205715564](../assets/Day05-IP地址和主机名/image-20231231205715564.png)
 
-
-
 重新连接就出现啦
 
 ## 域名映射
@@ -45,8 +43,6 @@ windows:`C:\Windows\System32\drivers\etc\hosts`
 ![image-20231231220006332](../assets/Day05-IP地址和主机名/image-20231231220006332.png)
 
 ![image-20231231220154550](../assets/Day05-IP地址和主机名/image-20231231220154550.png)
-
-
 
 ![image-20231231220618527](../assets/Day05-IP地址和主机名/image-20231231220618527.png)
 

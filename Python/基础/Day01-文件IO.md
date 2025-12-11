@@ -4,8 +4,6 @@
 
 ## IO
 
-
-
 创建文件指针
 
 ```java
@@ -16,10 +14,6 @@ if __name__ == '__main__':
     file_output = open(file=file_name, mode="a", encoding=encoding)
 
 ```
-
-
-
-
 
 `read-write`读写, 字符输入输出
 
@@ -34,9 +28,6 @@ while True:
 file_output.close()
 file_input.close()
 ```
-
-
-
 
 `read_lines-write_lines`读写
 

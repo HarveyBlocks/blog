@@ -45,8 +45,6 @@ private void advanceRunState(int targetState) {
 | TIDYING    | 010         | -          | -                | 任务全执行完毕吗活动线程状态全部为0即将进入终结 |
 | TERMINATED | 011         | -          | -                | 终结状态, 所有线程都不再运行                    |
 
-
-
 ### 状态获取
 
 ```java
@@ -66,8 +64,6 @@ boolean awaitTerminated(long,TimeUtil) throw InterruptedException;
 ```
 
 -   等待直到所有线程真的全部结束
-
-
 
 ## 构造
 
@@ -129,14 +125,14 @@ public ThreadPoolExecutor(int corePoolSize,  // 核心线程数
 自己看源码
 
 -   FixedThreadPool
-    
+
     -   任务频率不高, 任务耗时较长
-    
+
 -   CacheThreadPool
     -   线程数量会根据任务量不断增长, 没有上限
     -   所有的线程都可以在60s无任务后回收
     -   任务密集但每个任务执行时间较短
-    
+
 -   SingleThreadExecutor
 
     -   希望任务是串行的效果, 排队执行任务
@@ -182,8 +178,6 @@ void execute(Runnable command);
  throws InterruptedException, ExecutionException, TimeoutException;
 
 ```
-
-
 
 invokeAll
 

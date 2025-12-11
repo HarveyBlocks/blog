@@ -8,10 +8,6 @@
 
 -   我们获取这个请求头
 
-
-
-
-
 ```java
 @GetMapping(value = "/header")
 public String getHeader(@RequestHeader("Accept-Encoding") String headerValue){
@@ -21,10 +17,6 @@ public String getHeader(@RequestHeader("Accept-Encoding") String headerValue){
 ```
 
 ![image-20231126193041597](../../assets/Day02-接收请求头信息/image-20231126193041597.png)
-
-
-
-
 
 ## 获取所有的头
 
@@ -45,8 +37,6 @@ public String getHeader(@RequestHeader Map<String,String> map){
 ![image-20231126193553195](../../assets/Day02-接收请求头信息/image-20231126193553195.png)
 
 其实在获取所有头的时候已经有一个Cookie被获取到了
-
-
 
 **但是**
 

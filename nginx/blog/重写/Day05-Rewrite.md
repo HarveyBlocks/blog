@@ -59,7 +59,7 @@ flag的可选项:
     	default_type text/plain;
     	return 200 demo_success;
     }
-    
+
     ```
 
     访问 `http://192.168.200.133:8081/rewrite/testabc`,能正确访问
@@ -128,13 +128,7 @@ flag的可选项:
 
     访问`http://192.168.200.133:8081/rewrite/testabc`请求会被永久重定向，浏览器地址也会发生改变
 
-
-
 301和302和"搜索引擎优化SEO"有关
-
-
-
-
 
 ## rewrite_log
 
@@ -203,13 +197,13 @@ server{
 	listen 80;
 	server_name search.api.cn;
     location /search {
-        
+
     }
     location /item {
-        
+
     }
     location /cart {
-        
+
     }
 }
 server{
@@ -229,8 +223,6 @@ server{
 }
  ```
 
-
-
 ## 访问目录自动加斜杠
 
 访问路径`http://localhost/main`, 而index.html`放在了`?/html/main/index.html`
@@ -239,17 +231,9 @@ server{
 
 如果访问了路径`/main`没有找到资源, **Nginx会重定向到`/main/`**
 
-
-
-
-
 ```nginx
 server_name_in_redirect on | off ;
 ```
-
-
-
-
 
 0.8.48之前是`on`, 0.8.48之后改成了`off`
 
@@ -258,8 +242,6 @@ server_name_in_redirect on | off ;
 例如配置了`192.168.0.88`, 转成`localhost`
 
 如果没有`server_name`为`localhost`的server, 就会404
-
-
 
 `off`不对请求的IP做动作
 
@@ -286,10 +268,6 @@ localhost /path {
 1.  URL的目录层级不超过三层
     -   有利于搜索引起的搜索和客户端的输入
     -   所有文件在同一目录下造成资源的混乱
-
-
-
-
 
 要求: 
 

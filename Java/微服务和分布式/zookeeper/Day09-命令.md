@@ -22,8 +22,6 @@ Using config: /conf/zoo.cfg
 Usage: ./zkServer.sh [--config <conf-dir>] {start|start-foreground|stop|version|restart|status|print-cmd}
 ```
 
-
-
 -   启动
 
     ```bash
@@ -76,8 +74,6 @@ Usage: ./zkServer.sh [--config <conf-dir>] {start|start-foreground|stop|version|
 [zk: localhost:2181(CONNECTED) 0] <= 表示进入
 ```
 
-
-
 ```
 ZooKeeper -server host:port -client-configuration properties-file cmd args
         addWatch [-m mode] path # optional mode is one of [PERSISTENT, PERSISTENT_RECURSIVE] - default is PERSISTENT_RECURSIVE
@@ -111,17 +107,11 @@ ZooKeeper -server host:port -client-configuration properties-file cmd args
 
 ```
 
-
-
 断开连接并退出
 
 ```bash
 quit
 ```
-
-
-
-
 
 ### 查看目录/节点
 
@@ -137,7 +127,7 @@ ls2 path [watch]
     ```powershell
     [zk: localhost:2181(CONNECTED) 12] ls /
     [dubbo, zookeeper]
-    
+
     ```
 
 -   `-w`
@@ -145,7 +135,7 @@ ls2 path [watch]
     ```bash
     [zk: localhost:2181(CONNECTED) 12] ls -w /dubbo
     [com.harvey.dubbo.api.service.UserService, com.harvey.dubbo.service.HelloService, com.harvey.dubbo.service.UserService, com.harvey.dubbo.web.HelloController%24HelloService]
-    
+
     ```
 
 -   `-R`区分大小写
@@ -162,7 +152,7 @@ ls2 path [watch]
     /dubbo/com.harvey.dubbo.api.service.UserService/consumers/consumer%3A%2F%2F192.168.54.1%2Fcom.harvey.dubbo.api.service.UserService%3Fapplication%3Dweb%26category%3Dconsumers%26check%3Dfalse%26dubbo%3D2.6.2%26interface%3Dcom.harvey.dubbo.api.service.UserService%26methods%3DsayHello%26pid%3D6440%26side%3Dconsumer%26timestamp%3D1712467353397
     /dubbo/com.harvey.dubbo.api.service.UserService/providers/dubbo%3A%2F%2F192.168.54.1%3A20882%2Fcom.harvey.dubbo.api.service.UserService%3Fanyhost%3Dtrue%26application%3Dweb%26dubbo%3D2.6.2%26generic%3Dfalse%26interface%3Dcom.harvey.dubbo.api.service.UserService%26methods%3DsayHello%26pid%3D440%26side%3Dprovider%26timestamp%3D1712467444364
     /dubbo/com.harvey.dubbo.api.service.UserService/providers/dubbo%3A%2F%2F192.168.54.1%3A22820%2Fcom.harvey.dubbo.api.service.UserService%3Fanyhost%3Dtrue%26application%3Dweb%26dubbo%3D2.6.2%26generic%3Dfalse%26interface%3Dcom.harvey.dubbo.api.service.UserService%26methods%3DsayHello%26pid%3D3960%26side%3Dprovider%26timestamp%3D1712467347257
-    
+
     ```
 
 -   `-s`
@@ -187,10 +177,8 @@ ls2 path [watch]
     ephemeralOwner = 0x0
     dataLength = 12
     numChildren = 4
-    
-    ```
 
-    
+    ```
 
 ### 创建节点
 
@@ -216,12 +204,6 @@ Created /app3
 
 存的值是字符串, `datalength`是字符串长度
 
-
-
-
-
-
-
 ### 获取节点内数据
 
 ```bash
@@ -233,8 +215,6 @@ Created /app3
 null
 
 ```
-
-
 
 ### 设置数据
 
@@ -248,15 +228,11 @@ null
 
 ```
 
-
-
 ### 删除数据
 
 ```bash
  delete [-v version] path
 ```
-
-
 
 ```bash
 [zk: localhost:2181(CONNECTED) 37] get /app2
@@ -273,8 +249,6 @@ null
 ```bash
 deleteall path [-b batch size]
 ```
-
-
 
 ```bash
 [zk: localhost:2181(CONNECTED) 12] create /app
@@ -298,8 +272,6 @@ Node not empty: /app
 ```bash
 create -e /app
 ```
-
-
 
 ### 顺序节点
 

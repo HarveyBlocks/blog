@@ -1,9 +1,5 @@
 # 函数
 
-
-
-
-
 ```python
 def print_hi(name):
     print(len(name))
@@ -14,14 +10,9 @@ if __name__ == '__main__':
     exit(0)
 ```
 
-
-
-
-
 ```python
 def my_function():
     return "Hello"
-
 
 def print_hi():
     def my_fun(): # 可以
@@ -30,16 +21,12 @@ def print_hi():
     print(my_fun())
     print(my_function())
 
-
 # print(my_fun())  保错
-
 
 if __name__ == '__main__':
     print_hi()
     exit(0)
 ```
-
-
 
 ## 传参
 
@@ -56,7 +43,6 @@ if __name__ == '__main__':
 def a(x, y):
     print(x - y)
 
-
 if __name__ == '__main__':
     a(12, 11)
     a(y=11, x=12) # 参数列表是无序的
@@ -67,10 +53,8 @@ if __name__ == '__main__':
 ```python
 from pojo.Student import Student
 
-
 def change(stu: Student):
     stu.name = "李四"
-
 
 if __name__ == '__main__':
     s1: Student = Student("张三", 18, 100)
@@ -82,18 +66,13 @@ if __name__ == '__main__':
 -   传递的是指针
 -   Python没有什么包装类之类的, 所有的类型都是引用类型, int,str都是引用类型
 
-
-
 ### 位置参数
-
-
 
 传入实际参数和接收的形式参数一一对应
 
 ```python
 def xyz_2str(x: int, y: int, z: int):
     return str(x), str(y), str(z)
-
 
 if __name__ == '__main__':
     a: int
@@ -110,7 +89,6 @@ if __name__ == '__main__':
 def xyz_2str(x: int, y: int, /, z: int):
     return str(x), str(y), str(z)
 
-
 if __name__ == '__main__':
     a: int
     b: int
@@ -123,8 +101,6 @@ if __name__ == '__main__':
     print(x, y, z)
 ```
 
-
-
 ### 关键字参数
 
 写出形式参数的变量名, 写出后位置可以变动
@@ -132,7 +108,6 @@ if __name__ == '__main__':
 ```python
 def xyz_2str(x: int, y: int, z: int):
     return str(x), str(y), str(z)
-
 
 if __name__ == '__main__':
     a: int
@@ -142,8 +117,6 @@ if __name__ == '__main__':
 
     x, y, z = xyz_2str(y=a, z=b, x=c)
 ```
-
-
 
 -   写关键字和不写的可以混合
 -   位置参数应该在所有关键字参数之前
@@ -165,7 +138,6 @@ fun(a, z=b, y=c)
 def xyz_2str(x: int, y: int, *, z: int):
     return str(x), str(y), str(z)
 
-
 if __name__ == '__main__':
     a: int
     b: int
@@ -178,14 +150,6 @@ if __name__ == '__main__':
     print(x, y, z)
 ```
 
-
-
-
-
-
-
-
-
 ### 缺省参数
 
 在参数列表为参数声明默认值, 有了默认值, 传参时可以缺省参数,然后使用默认值
@@ -193,7 +157,6 @@ if __name__ == '__main__':
 ```python
 def fun(x: int, y: int, z: int = 0):
     print(x,y,z)
-
 
 if __name__ == '__main__':
     a, b, c = 1, 2, 3
@@ -205,19 +168,11 @@ if __name__ == '__main__':
 
 如果默认值的参数写在中间, 传参的时候串两个,就不知道你是参数没传全还是使用了默认值
 
-
-
 ### 不定长参数
 
 -   不确定参数的数量, 例如`print()`里输出的内容可以有无限多个
 -   不定长参数就是可以给0个, 给1个,给无穷个
 -   在调用函数时, 若不定长参数在缺省参数前面, 应使用关键字参数传参
-
-
-
-
-
-
 
 -   位置传递的不定长
 
@@ -230,23 +185,22 @@ if __name__ == '__main__':
     def fun(*argv):
         print(type(argv))
         print(argv)
-    
-    
+
     if __name__ == '__main__':
         a, b, c = 1, 2, 3
-    
+
         fun()
         """
         <class 'tuple'>
         ()
         """
-    
+
         fun(a)
         """
         <class 'tuple'>
         (1,)
         """
-    
+
         fun(a, b,c)
         """
         <class 'tuple'>
@@ -269,8 +223,7 @@ if __name__ == '__main__':
     def fun(x, end='\n', **argv):
         print(type(argv), end)
         print(argv, end=end)
-    
-    
+
     if __name__ == '__main__':
         fun(1, a=1, b=2, c=3)
         fun(x=1, a=1, b=2, c=3)
@@ -279,31 +232,25 @@ if __name__ == '__main__':
         fun(  a=1, x =1,b=2,end='\n', c=3)
         # 关于写了关键字,传递参数的顺序, 这样也可以:
         fun(1,  a=1, b=2,end='\n', c=3)
-        
+
     ```
 
 -   不管是关键字传递的不定长参数还是位置传递的不定长参数, 凡是不定长参数的, 都不能在同一个函数中出现两个即以上
 
 -   别管什么`args`, 取有意义的名字更为优先
 
-
-
 ## 作用域
-
-
 
 函数内变量, 如果在外界有定义而其内部无定义, 会采用外部的定义
 
 ```python
 a = "a"  # 全局变量
 
-
 def fun():
     print(a)
     print(b)
     print(c)
     print(d)
-
 
 b = "b"  # 全局变量, 后面也能取得
 
@@ -313,11 +260,8 @@ if __name__ == '__main__':
     d = "d" # 不能取得
 ```
 
-
-
 ```python
 a = "a"  # 全局变量
-
 
 def fun():
     print(a)
@@ -325,9 +269,7 @@ def fun():
     # print(c)
     # print(d)
 
-
 b = "b"  # 全局变量, 后面也能取得
-
 
 def fun2():
     print(e)
@@ -336,20 +278,14 @@ def fun2():
     fun()
     d = "d"  # fun中不能取得不能取得
 
-
 if __name__ == '__main__':
     e = "e"  # 可以取得
     fun2()
     f = "f"  # 不能取得
 ```
 
-
-
-
-
 ```python
 a = "a"  # 全局变量
-
 
 def fun():
     # 如果函数中存在和外界同名的变量
@@ -360,7 +296,6 @@ def fun():
     a = "c"  # 也就是说这个a是一个局部变量
     print(a)
 
-
 if __name__ == '__main__':
     print(a)
     fun()
@@ -368,12 +303,6 @@ if __name__ == '__main__':
     a = "e"     # 这改的是全局变量
     print(a)
 ```
-
-
-
-
-
-
 
 ```python
 for i in range(10):
@@ -384,8 +313,6 @@ for i in range(10):
 print(a)  # 经过for改动后的全局变量
 ```
 
-
-
 ### 声明全局变量
 
 ```python
@@ -395,21 +322,17 @@ def fun():
     a = "c"  # 也就是说这个a是一个局部变量
     print(a)
 
-
 if __name__ == '__main__':
     print(a)
     fun()
     print(a) # 已改动
 ```
 
-
-
 ## 函数返回值
 
 ```python
 def p():
     print("hi")
-
 
 if __name__ == '__main__':
     a = p()
@@ -420,8 +343,6 @@ if __name__ == '__main__':
         print(False)
 
 ```
-
-
 
 ### 多返回值
 
@@ -438,18 +359,9 @@ if __name__ == '__main__':
 
 -   返回值的类型可以不一样
 
-
-
-
-
-
-
-
-
 ```python
 def xyz_2str(x: int, y: int, z: int):
     return str(x), str(y), str(z)
-
 
 if __name__ == '__main__':
     a: int
@@ -476,8 +388,6 @@ if __name__ == '__main__':
     """
 ```
 
-
-
 ## 函数说明文档
 
 ```python
@@ -501,7 +411,6 @@ def fun(a, b):
 ```python
 def fun() -> int: ...
 
-
 if __name__ == '__main__':
     # 将函数作为print()的参数
     print(fun)  # <function fun at 0x0000022098EBF0D0>
@@ -510,10 +419,6 @@ if __name__ == '__main__':
     # 将函数作为str()的参数
     print(str(fun))  # <function fun at 0x0000022098EBF0D0>
 ```
-
-
-
-
 
 ```python
 import random
@@ -534,14 +439,11 @@ def do_fun(fun: callable([[str, str], [bool, bool]])) -> int:
     print(fun(a, b))
     return a - b
 
-
 def compute(a: int, b: int) -> [bool, bool]:
     return a + b == 0, a * b == 0
 
-
 def compute2(a: str, b: str) -> [bool, bool]:
     return a + b == "", a == b
-
 
 if __name__ == '__main__':
     do_fun(compute)

@@ -6,8 +6,6 @@
 
 基于Cglib
 
-
-
 ![image-20231110153722294](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153722294.png)
 
 -   默认false,基于JDK
@@ -16,10 +14,6 @@
 ![image-20231110153823145](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153823145.png)
 
 ![image-20231110153946550](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153946550.png)
-
-
-
-
 
 ![image-20231110154123034](../../../assets/Day08-xml配置AOP原理剖析/image-20231110154123034.png)
 
@@ -30,13 +24,13 @@
         }
         public UserServiceImpl getProxyByCGlib() {
             //基于父类(目标类)生成Proxy
-    
+
             //目标对象
             UserServiceImpl userService = new UserServiceImpl();
-    
+
             //通知对象(增强对象)
             MyAdvice myAdvice = new MyAdvice();
-    
+
             //编写CGlib方法
             Enhancer enhancer = new Enhancer();
             //设置父类
@@ -57,15 +51,12 @@
                     return result;
                 }
             });
-    
-    
+
             // 生成代理对象
             return (UserServiceImpl) enhancer.create();
         }
     }
     ```
-
-    
 
 -   测试结果
 

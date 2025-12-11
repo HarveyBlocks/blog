@@ -18,8 +18,6 @@
 yum -y install lrzsz
 ```
 
-
-
 下载
 
 ```bash

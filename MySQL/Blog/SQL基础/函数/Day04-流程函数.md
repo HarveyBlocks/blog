@@ -1,7 +1,5 @@
 # 流程函数
 
-
-
 ![image-20231007164450281](../../../assets/Day04/image-20231007164450281.png)
 
 ## IF(value,t,f)
@@ -12,8 +10,6 @@
   select if(true,'true',false);
   select if(false,'true',false);
 ```
-
-
 
 ```mysql
   select if('true','true',false);  -- 0
@@ -38,8 +34,6 @@ select if(0,1,0);   -- 0
 -   null = false = 0
 -   字符串 = 字符串 != 0 
 
-
-
 ```mysql
 select if(1,(1<2)+1,0);   -- 2
 
@@ -61,8 +55,6 @@ select if(1,2e100,0);
   000000000000000
   00000000000*/
 ```
-
-
 
 ### 实践
 

@@ -16,8 +16,7 @@
 
         ```mysql
         show create table employee;
-        
-        
+
         CREATE TABLE `employee` (
           .....
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='员工表'
@@ -280,7 +279,7 @@ CREATE TABLE 表名 (
                             "is_auto_increment": false,
                             "is_virtual": false,
                             "hidden": 1,
-            
+
             }
             ,
             {
@@ -310,8 +309,6 @@ CREATE TABLE 表名 (
             }
             }
             ```
-
-            
 
 -   每张表对应一个表空间文件
 

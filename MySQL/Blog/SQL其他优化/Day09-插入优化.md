@@ -1,7 +1,4 @@
 
-
-
-
 -   批量(500-1000)插入
 
 -   手动提交事务
@@ -18,14 +15,6 @@
 -   主键顺序插入
 
     -   我直接不insert主键,直接auto_asc会怎么样?
-
-
-
-
-
-
-
-
 
 ## 大批量插入数据
 
@@ -45,19 +34,12 @@
     	into table 表名 
 		fields terminated by '列分隔符' 
 		lines  terminated by '行分隔符';
-		
-		
-		
-		
+
 	load data local infile 'C:/Users/27970/Desktop/add.txt'
 		into table tb_user
 		fields terminated by ','
 		lines terminated by '\n';
-		
-		
-		
-		
-		
+
 	load data infile './day.txt' 
 		into tb_user 
 		fields terminated by',' 

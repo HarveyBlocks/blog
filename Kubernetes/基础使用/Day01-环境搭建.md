@@ -25,8 +25,6 @@
     -   自己编译安装
     -   组件之间需要产生证书
 
-
-
 ### Linux环境准备
 
 1.  查看版本Centos版本, 要求7.5以上
@@ -42,7 +40,7 @@
     systemctl disable firewalld
     systemctl stop iptables
     systemctl disable iptables
-    
+
     ```
 
 3.  警用selinux
@@ -76,8 +74,6 @@
     free -m
     ```
 
-    
-
     如果不能关闭swap分区, 就在集群安装过程中通过明确的参数进行配置说明
 
 5.  修改linux内核
@@ -86,15 +82,11 @@
     vim /etc/sysctl.d/kubernetes.conf
     ```
 
-    
-
     ```properties
     net.bridge.bridge-nf-call-iptables=1
     net.bridge.bridge-nf-call-ip6tables=1
     net.ipv4.ip_forward=1
     ```
-
-    
 
     ```shell
     # 重新加载配置
@@ -103,7 +95,7 @@
     modprobe br_netfilter
     # 查看网桥过滤模块石佛加载成功
     lsmod | grep br_netfilter
-    
+
     ```
 
 6.  配置ipvs
@@ -115,7 +107,7 @@
     ```shell
     # 安装ipset和ipvsadm
     yum install ipset ipvsadmin -y
-    
+
     ```
 
     添加需要加载的模块写入脚本文件
@@ -129,7 +121,7 @@
     modprobe -- ip_vs_sh
     modprobe -- nf_conntrack_ipv4
     EOF
-    
+
     ```
 
     并执行脚本
@@ -141,20 +133,10 @@
     bash /etc/sysconfig/modules/ipvs.modules
     # 查看脚本是否允许成功
     lsmod | grep -e ip_vs -e nf_conntrack_ipv4
-    
+
     ```
 
-    
-
-
-
-
-
-
-
 ### 相关组件安装
-
-
 
 1.  安装Docker, 添加配置文件
 
@@ -167,7 +149,7 @@
         "exec-opts": ["native.cgroupdriver=systemd"],
     	"registry-mirrors": ["https://t9t6i673.mirror.aliyuncs.com"]
     }
-    
+
     ```
 
     -   `exec-opts`: Docekr在默认情况下使用Cgroup Driver为cgroupfs, 而kubernetes推荐使用systemd来代替cgroupfs
@@ -185,8 +167,7 @@
     gpgkey=http://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg
     	http://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
     EOF
-    
-    
+
     ```
 
     ```shell
@@ -204,15 +185,11 @@
     KUBE_PROXY_MODE="ipvs"
     ```
 
-    
-
     ```shell
     systemctl enable kubelet
     systemctl enable kubelet
     systemctl status kubelet
     ```
-
-    
 
 ### 集群初始化
 
@@ -253,7 +230,6 @@ for imageName in ${images[@]} ; do
 	docker rmi registry.cn-hangzhou.aliyuncs.com/google_containers/$imageName
 done
 
-
 ```
 
 以下内容大困惑, 把想到的都试了一遍 
@@ -274,8 +250,6 @@ vim /etc/containerd/config.toml
     sandbox_image = "registry.aliyuncs.com/google_containers/pause:3.9"
 ```
 
-
-
 ```shell
 kubeadm reset -f
 
@@ -291,10 +265,6 @@ mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
-
-
-
-
 
 #### Node
 
@@ -327,8 +297,6 @@ kubeadm init \
 	--v=6
 ```
 
-
-
 ? 不知道有没有必要
 
 ```shell
@@ -342,10 +310,6 @@ systemctl  restart containerd
 journalctl  -f -u containerd
 
 ```
-
-
-
-
 
 ```shell
 kubeadm reset -f # 有必要
@@ -364,8 +328,6 @@ kubeadm join 192.168.88.141:6443 \
    	--v=6
 ```
 
-
-
 ### 安装网络插件
 
 kubernetes支持多种网络插件, 例如flannel, calico, cannal等
@@ -383,8 +345,6 @@ nerdctl pull registry.aliyuncs.com/google_containers/pause:3.8
 nerdctl tag registry.aliyuncs.com/google_containers/pause:3.8  registry.k8s.io/pause:3.8
 
 ```
-
-
 
 ```shell
 kubectl apply -f kube-flannel.yml
@@ -406,7 +366,6 @@ kubectl get nodes
 # 部署Nginx
 kubectl create deployment nginx --image=nginx:latest
 # >> deployment.apps/nginx created
-
 
 # 暴露端口
 kubectl expose deployment nginx --port=80 --type=NodePort

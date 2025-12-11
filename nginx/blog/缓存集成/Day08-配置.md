@@ -63,10 +63,6 @@ proxy_cache_path path [levels=number] keys_zone=zone_name:zone_size [inactive=ti
     }
     ```
 
-    
-
-
-
 ### `proxy_cache`
 
 `http`、`server`、`location`  
@@ -77,15 +73,9 @@ proxy_cache_path path [levels=number] keys_zone=zone_name:zone_size [inactive=ti
 proxy_cache zone_name | off;
 ```
 
-
-
 默认关闭
 
 `zone_name` 和 `proxy_cache_path`里配置的`zone_name`对应
-
-
-
-
 
 ### `proxy_cache_key`
 
@@ -93,23 +83,15 @@ proxy_cache zone_name | off;
 
 指定key，Nginx会根据key值MD5哈希存缓存。
 
-
-
 ```nginx
 proxy_cache_key key;
 ```
-
-
 
 默认
 
 ```nginx
 proxy_cache_key $scheme$proxy_host$request_uri;
 ```
-
-
-
-
 
 ### `proxy_cache_valid`
 
@@ -132,12 +114,6 @@ proxy_cache_valid any 1m;
 # 上面的优先级高, 不会被覆盖
 ```
 
-
-
-
-
-
-
 ### `proxy_cache_min_uses`
 
 `http`、`server`、`location`  
@@ -150,12 +126,6 @@ proxy_cache_min_uses number;
 
 **默认值1**
 
-
-
-
-
-
-
 ### `proxy_cache_methods`
 
 `http`、`server`、`location`  
@@ -166,15 +136,9 @@ proxy_cache_min_uses number;
 proxy_cache_methods GET|HEAD|POST;
 ```
 
-
-
 默认值  proxy_cache_methods GET HEAD;        
 
 默认缓存HTTP的GET和HEAD方法，不缓存POST方法。
-
-
-
-
 
 ### 概览
 
@@ -201,27 +165,17 @@ http{
 }
 ```
 
-
-
 300kb, 70ms->50ms
-
-
 
 <img src="../../assets/Day08-%E9%85%8D%E7%BD%AE/image-20240424190704208.png" alt="image-20240424190704208" style="zoom:67%;" />
 
 ## 清除缓存
-
-
 
 ```shell
 rm -rf /var/cache/nginx/proxy_cache
 ```
 
 😓
-
-
-
-
 
 要不添加`ngx_cache_purge`
 
@@ -269,12 +223,6 @@ proxy_no_cache|proxy_cache_bypass [$cookie_nocache $arg_nocache $arg_comment]; #
     -   `$arg_comment`
         -   当前请求的参数中属性名为`comment`对应的属性值
 -   也可以自定义条件吧?
-
-
-
-
-
-
 
 ```nginx
 server{

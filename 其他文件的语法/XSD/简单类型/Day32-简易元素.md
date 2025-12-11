@@ -7,8 +7,6 @@
 -    XML Schema 定义中包括的类型中的一种（布尔、字符串、数据等等
 -   自行定义的定制类型
 
-
-
 可向数据类型添加限定（即 *facets*），以此来限制它的内容，或者可以要求数据**匹配特定的模式**
 
 ## 声明
@@ -28,8 +26,6 @@
 -   xs:boolean
 -   xs:date
 -   xs:time
-
-
 
 ```xml
 <xs:element name="name" type="xs:string"/>
@@ -60,10 +56,6 @@
 ```xml
 <xs:element name="color" type="xs:string" fixed="red"/>
 ```
-
-
-
-
 
 ```xml
 <xs:element name="radius" type="xs:integer"/>

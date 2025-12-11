@@ -2,21 +2,15 @@
 
 ![image-20240405194043887](../../assets/Day13-数据类型和编码/image-20240405194043887.png)
 
-
-
 ## string
 
 ### RAW
 
 -   最基本的编码方式是**RAW**, 基于简单字符串SDS实现, 存储上限是**512MB**
 
-
-
 ![image-20240405194438227](../../assets/Day13-数据类型和编码/image-20240405194438227.png)
 
 ### EMBSTR
-
-
 
 -   如果存储的SDS长度小于44字节, 将会改变编码格式, 采用**EMBSTR**编码
 
@@ -32,8 +26,6 @@
 -   直接讲数据保存在RedisObject的ptr指针位置(刚好8字节), 不再需要SDS
 
 ![image-20240405195548404](../../assets/Day13-数据类型和编码/image-20240405195548404.png)
-
-
 
 ### 使用指导
 
@@ -84,34 +76,20 @@ LinkedList+ZipList
 -   当插入元素不符合上述条件时, 将会把IntSet改变成HashTable
 -   更节省内存
 
-
-
 ![image-20240405205853450](../../assets/Day13-数据类型和编码/image-20240405205853450.png)
-
-
-
-
 
 ### HashTable
 
 -   Key存储元素
 -   value统一为null
 
-
-
-
-
 ![image-20240405205952847](../../assets/Day13-数据类型和编码/image-20240405205952847.png)
-
-
 
 ## ZSet
 
 -   根据Score值排序
 -   确保Member的唯一性
 -   能根据member查询score
-
-
 
 ```C
 // zset结构
@@ -122,8 +100,6 @@ typedef struct zset{
     zskiplist *zskiplist; // 实现排序, 范围查询, 从值到键的查询
 }
 ```
-
-
 
 ### HashTable+SkipList
 
@@ -146,8 +122,6 @@ typedef struct zset{
 
 相邻两个entry分别是member和score
 
-
-
 ![image-20240405214418243](../../assets/Day13-数据类型和编码/image-20240405214418243.png)
 
 -   score越小越接近队首, score升序排序
@@ -167,8 +141,6 @@ typedef struct zset{
     -   ZipList中的任意entry大小超过了`hash-max-ziplist-value` , 默认64字节
 -   节省空间
 -   相邻两个entry分别是field和value
-
-
 
 ![image-20240405215336522](../../assets/Day13-数据类型和编码/image-20240405215336522.png)
 

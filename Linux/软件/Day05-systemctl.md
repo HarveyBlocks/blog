@@ -8,8 +8,6 @@
 systemctl start/stop/status/enable/disable 服务名
 ```
 
-
-
 - start启动
 - stop关闭
 - status查看状态

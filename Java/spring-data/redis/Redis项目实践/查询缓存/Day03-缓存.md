@@ -9,8 +9,6 @@
 -   降低后端负载
 -   提高读写效率, 降低响应时间
 
-
-
 ## 缓存的成本
 
 -   数据的一致性成本
@@ -36,8 +34,6 @@ public Result queryShopById(@PathVariable("id") Long id) {
 直接在数据库中查找了
 
 ### 缓存模型分析
-
-
 
 -   客户端在Redis中查找
     -   找到数据

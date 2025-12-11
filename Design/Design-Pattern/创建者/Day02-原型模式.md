@@ -54,7 +54,6 @@ public class RealizeType implements Cloneable {
         valueList.addAll(Arrays.asList(value));
     }
 
-
     @Override
     public RealizeType clone() throws CloneNotSupportedException {
         // RealizeType clone = (RealizeType) super.clone();// 还不如用new出来的, 真没用
@@ -88,10 +87,6 @@ public class PrototypeDemo {
     }
 }
 ```
-
-
-
-
 
 ### 使用序列化拷贝
 

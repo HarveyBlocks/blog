@@ -147,13 +147,7 @@ array_name[index] = item;
     console.log(arr.indexOf(21)); // 2
     ```
 
-    
-
     `start` 负值将从结尾开始的给定位置开始，并搜索到结尾
-
-    
-
-    
 
 -   lastIndexOf 
 
@@ -203,8 +197,6 @@ array_name[index] = item;
 
 -   
 
-
-
 ## 对象
 
 ### 声明
@@ -234,8 +226,6 @@ let variable2 = object["p1"];
 object.p1 = value;
 object["p1"] = value;
 ```
-
-
 
 ### 示例
 
@@ -314,8 +304,6 @@ var myMother = new Person("Sally", "Rally", 48, "green");
 ```js
 Person.prototype.nationality = "English";
 ```
-
-
 
 ## 字符串
 

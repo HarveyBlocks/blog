@@ -35,11 +35,7 @@ fun save(inputText: String) {
 }
 ```
 
-
-
 <img src="../../assets/Day06-文件存储/image-20250916171811934.png" alt="image-20250916171811934" style="zoom:50%;" />
-
-
 
 ![image-20250916171833200](../../assets/Day06-文件存储/image-20250916171833200.png)
 

@@ -57,8 +57,6 @@ nacos/nacos-server:v2.1.0-slim
 </dependency>
 ```
 
-
-
 ### 配置Nacos地址
 
 ```yaml
@@ -84,8 +82,6 @@ spring:
 由于在同一台机器运行, 可能造成端口冲突, 所以端口得改
 
 ![image-20240107155921376](../../assets/Day03-Nacos/image-20240107155921376.png)
-
-
 
 ![image-20240107160035883](../../assets/Day03-Nacos/image-20240107160035883.png)
 
@@ -212,8 +208,6 @@ end
 实例32((实例-机器))
 ```
 
-
-
 优先考虑本地集群(同一个机房), 在同一个就局域网加访问
 
 ### 配置
@@ -241,7 +235,6 @@ graph TD
 subgraph BJ
     item1
 end
-
 
 subgraph HZ
     item
@@ -290,14 +283,14 @@ end
 -   Namespace
     -   常用于环境(local-dev-test-deploy)划分
     -   服务跨环境不可见
-    
+
 -   Group
     -   一般依赖关系高的服务放在一起
-    
+
     -   默认的策略是服务跨Group可见的
-    
+
         也可以配置成跨服务不可见
-    
+
         ```yaml
         spring:
           cloud:
@@ -307,8 +300,6 @@ end
                 metadata:
                   nacos.discovery.group.selector: same  # 限制仅同 Group 可见
         ```
-    
-        
 
 ### 新建
 
@@ -334,17 +325,11 @@ spring:
 
 ![image-20240503144037783](../../assets/Day03-Nacos服务管理/image-20240503144037783.png)
 
-
-
 在一个命名空间, 不报错
 
 ![image-20240503144231845](../../assets/Day03-Nacos服务管理/image-20240503144231845.png)
 
 ![image-20240503144155985](../../assets/Day03-Nacos服务管理/image-20240503144155985.png)
-
-
-
-
 
 ## 非临时实例
 

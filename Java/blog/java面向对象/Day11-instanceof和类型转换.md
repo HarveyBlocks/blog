@@ -8,8 +8,6 @@
 boolean isSonOrThis = 对象 instanceof 类/接口;
 ```
 
-
-
 类之间的关系如下：
 
 ![image-20230809194306605](../../assets/Day11/image-20230809194306605.png)
@@ -17,49 +15,46 @@ boolean isSonOrThis = 对象 instanceof 类/接口;
 ``` java
 public class Main {
     public static void main(String[] args) {
-        
+
         Object object = new Student();//多态,instanceof看右边
-        
+
         /*
         Object>String
         Object>Person>**Student**
         Object>Person>Teacher
          */
-        
+
         //返回true,false,看右边.
         System.out.println(object instanceof Student);//true
         System.out.println(object instanceof Teacher);//fase
         System.out.println(object instanceof String);//false
         System.out.println(object instanceof Person);//true
-        
+
         //为父(/爷)false，为子(孙)true
-        
-        
+
         //会不会报错,看左边
-        
+
         System.out.println("=============================================");
-        
+
         Person person=new Student();
-         
+
         /*
         Object>String
         Object>Person>**Student**
         Object>Person>Teacher
          */
-        
+
         System.out.println(person instanceof Student);//true
         System.out.println(person instanceof Teacher);//fase
-        
+
         System.out.println(person instanceof String);//报错
-        
+
         System.out.println(person instanceof Person);//true
-        
+
         //为父子爷孙,否则报错
     }
 }
 ```
-
-
 
 ## 引用类型类型转化
 
@@ -68,8 +63,6 @@ public class Main {
 2. 转换的条件是：只能够在有**继承关系**的类型间进行
 
 3. 正因为只能沿着继承树进行转换，才有向上转型和向下转型的概念
-
-
 
 ```java
 //Student extends Person

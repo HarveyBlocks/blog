@@ -29,8 +29,6 @@ new ChannelInboundHandlerAdapter() {
 
 >   默认直接内存
 
-
-
 #### 直接内存
 
 ```java
@@ -43,21 +41,15 @@ ByteBuf directBuffer = ByteBufAllocator.DEFAULT.directBuffer();
 ByteBuf heapBuffer = ByteBufAllocator.DEFAULT.heapBuffer();
 ```
 
-
-
 ### 池化
 
 ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用了池化
-
-
 
 对于**创建慢**的资源, 用池的思想进行优化
 
 将**创建昂贵(创建时时间, 内存空间占用大)**的对象提前创建好, 省去创建的时间, 省去创建的步骤
 
 使用好对象之后, 将对象归还, 实现对象的重复利用
-
-
 
 池中的 ByteBuf 采用了与jemalloc类似的 内存分配算法提高了效率
 
@@ -75,8 +67,6 @@ ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用�
 -   4.1以前, 池化功能不成熟, 都是非池化
 
 ## 组成
-
-
 
 ![0010.png](../../assets/Day06-ByteBuf/0010.png)
 
@@ -108,8 +98,6 @@ ByteBuf采用直接内存, 直接内存的空间创建慢, 所以ByteBuf采用�
 | writeBytes(byte[] src)                                       | 写入 byte[]            |                                                              |
 | writeBytes(ByteBuffer src)                                   | 写入 nio 的 ByteBuffer |                                                              |
 | int writeCharSequence(CharSequence sequence, Charset charset) | 写入字符串             |                                                              |
-
-
 
 ### 动态扩容
 
@@ -179,19 +167,11 @@ buf.resetWriterIndex();
     -   因此, ByteBuf的使用者依旧有计时释放ByteBuf的责任
     -   **谁最后拿到ByteBuf, 谁来释放它的内存**
 
-
-
-
-
 ### 复制
 
 #### Slice
 
 >   切片
-
-
-
-
 
 ##### 原理
 
@@ -225,8 +205,6 @@ buf.resetWriterIndex();
         }
         ```
 
-        
-
 ##### 测试
 
 ```java
@@ -236,19 +214,13 @@ channel.writeInbound(slice1);
 channel.writeInbound(slice2);
 ```
 
-
-
 #### duplicate
 
 创建读写指针, 将指针拷贝出来, 只是**没有了容量的限制**
 
-
-
 #### copyXxx
 
 **深拷贝**, 无论怎么写, 都和原始ByteBuf无关
-
-
 
 #### composie
 
@@ -260,8 +232,6 @@ ByteBuf buf1 = ByteBufAllocator.DEFAULT.buffer().writeBytes("abc".getBytes());
 ByteBuf buf2 = ByteBufAllocator.DEFAULT.buffer().writeBytes("def".getBytes());
 buf.writeBytes(buf1).writeBytes(buf2); // 也能复制, 深拷贝
 ```
-
-
 
 -   浅拷贝
 -   维护更复杂

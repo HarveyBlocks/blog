@@ -1,7 +1,5 @@
 # 盒子模型
 
-
-
 ## 高度和宽度
 
 ### 值
@@ -51,11 +49,7 @@ height 和 width 属性**不包括内边距、边框或外边距**
 </div>
 ```
 
-
-
 <video style="border-style:solid;" src="../assets/Day01-属性/最大最小宽度效果演示.mp4"></video>
-
-
 
 ## 边框
 
@@ -147,13 +141,9 @@ p {
 }
 ```
 
-
-
 ### 圆角
 
 >   border-radius 圆角半径
-
-
 
 ```html
 <p style="width:200px;text-align:center;border-style: solid;border-radius: 3px;">3px圆角</p>
@@ -162,13 +152,9 @@ p {
 
 ```
 
-
-
 <p style="width:200px;text-align:center;border-style: solid;border-radius: 3px;">3px圆角</p>
 <p style="width:200px;text-align:center;border-style: solid;border-radius: 6px;">6px圆角</p>
 <p style="width:200px;text-align:center;border-style: solid;border-radius: 12px;">12px圆角</p>
-
-
 
 ## 边距
 
@@ -193,11 +179,7 @@ margin 的值**允许负值**
 
 >   padding
 
-
-
 padding 的值**不允许负值**
-
-
 
 ### 内边距和元素宽度
 
@@ -220,7 +202,6 @@ $$
 \\
 元素总高度 = margin_{top}+border_{top}+padding_{top}+height+padding_{bottom}+border_{bottom}+margin_{bottom}
 $$
-
 
 ### 保持元素宽度
 

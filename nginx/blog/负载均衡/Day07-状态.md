@@ -10,10 +10,6 @@
 | fail_timeout | 经过max_fails失败后, 服务暂停时间, 默认10s, 不写单位就是s |
 | max_conns    | 限制最大的接收连接数                                      |
 
-
-
-
-
 -   模拟宕机
 
     ```shell
@@ -25,12 +21,6 @@
     ```shell
     firewall-cmd --permanent --add-port=8003/tcp
     ```
-
-    
-
-    
-
-
 
 ## 设置状态
 

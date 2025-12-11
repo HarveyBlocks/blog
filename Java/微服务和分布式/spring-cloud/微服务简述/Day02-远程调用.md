@@ -42,9 +42,9 @@ Spring提供,可以方便地发送http请求
     String url = String.format("http://localhost:8081/items?ids={%s}", placeholders);
     HttpMethod method = HttpMethod.GET;// enum
     HttpEntity<ItemDTO> requestEntity = null;// 请求实体,对于简单请求直接为null
-    
+
     // Class<ItemDTO> responseType = ItemDTO.class;单个类型可以直接用Class做参数
-    
+
     // 但是由于是集合, 不能直接用泛型,类型会擦除, 也不能之列List.class, 就不知道转成了个啥了
     ParameterizedTypeReference<List<ItemDTO>> responseType =
               new ParameterizedTypeReference<>() {};

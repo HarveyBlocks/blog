@@ -14,8 +14,6 @@
 
 >   😰
 
-
-
 #### 简单使用
 
 ```json
@@ -25,8 +23,6 @@ POST /_analyze
   "analyzer": "pinyin"
 }
 ```
-
-
 
 ```json
 {
@@ -71,10 +67,6 @@ POST /_analyze
 
 ```
 
-
-
-
-
 ### 自定义分词器
 
 #### 拼音分词器的缺陷
@@ -86,8 +78,6 @@ POST /_analyze
   "analyzer": "pinyin"
 }
 ```
-
-
 
 ```json
 {
@@ -119,8 +109,6 @@ POST /_analyze
     将`tokenizer`输出的词条做进一步的处理, 例如大小写转换, 同义词转换, 拼音处理等
 
 ![image-20231228205210021](../assets/Day04-自动补全/image-20231228205210021.png)
-
-
 
 #### 创建自定义分词器
 
@@ -172,8 +160,6 @@ PUT /medcl/
 }
 ```
 
-
-
 稍作改变:
 
 -   会用到的配置
@@ -192,8 +178,6 @@ PUT /medcl/
     -   `keep_none_chinese_in_first_letter` keep non Chinese letters in first letter, eg: `刘德华AT2016`->`ldhat2016`, default: true
     -   `lowercase` lowercase non Chinese letters, default: true
     -   `trim_whitespace` default: true
-
-    
 
 ```json
 PUT /test
@@ -229,8 +213,6 @@ PUT /test
   }
 }
 ```
-
-
 
 测试使用
 
@@ -403,7 +385,6 @@ GET /test/_search
 }
 ```
 
-
 ## 自动补全查询
 
 >   Completion Suggester
@@ -434,8 +415,6 @@ GET /test/_search
     }
     ```
 
-    
-
 -   查询语句不再是`query`而是`suggest`
 
     ```json
@@ -454,8 +433,6 @@ GET /test/_search
       }
     }
     ```
-
-    
 
 比如，一个这样的索引库：
 
@@ -570,8 +547,6 @@ GET /test/_search
             }
             ```
 
-            
-
             ```json
             {
               "tokens" : [
@@ -585,8 +560,6 @@ GET /test/_search
               ]
             }
             ```
-
-            
 
         2.  为每个中文准备拼音
 
@@ -632,12 +605,10 @@ GET /test/_search
             我想suggest是不是应该输入s,只返回以s打头的文档, 所以是没必要分词的?, 从需求上来说, 我不知道
 
         -   `brand`
-        
+
         -   `bussiness`
-        
+
         怎样才能让这些词在suggest里呢? 
-        
-        
 
 #### RestClient
 
@@ -661,7 +632,7 @@ GET /test/_search
         this.location = hotelDto.getLatitude() + ", " + hotelDto.getLongitude();
         this.pic = hotelDto.getPic();
         String[] businesses = business.split("/");
-    
+
         String[] keywords = new String[businesses.length+1];
         keywords[0]=brand;
         System.arraycopy(
@@ -670,7 +641,7 @@ GET /test/_search
         //System.out.println(Arrays.toString(keywords));
         this.setSuggestion(nameSplit,keywords);
     }
-    
+
     private void setSuggestion(String[] nameSplit,String[] keywords) {
         //this.suggestion = new String[]{name,brand,business};
         suggestion = new String[keywords.length+ nameSplit.length];
@@ -682,8 +653,6 @@ GET /test/_search
                 suggestion,keywords.length, nameSplit.length);
     }
     ```
-
-
 
 #### 查询suggestion
 
@@ -703,8 +672,6 @@ GET /hotel/_search
   }
 }
 ```
-
-
 
 ```java
 public HotelDoc[] suggest(String name, String prefix) throws IOException {

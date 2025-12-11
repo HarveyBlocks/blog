@@ -46,7 +46,6 @@ public class Demo01 {
         num = Collections.binarySearch(list,36);
         System.out.println(num);//找到了,5
 
-
         //reverse()
         Collections.reverse(list);//逆序了
         System.out.println(list);

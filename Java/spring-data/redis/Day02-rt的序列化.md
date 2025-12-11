@@ -31,8 +31,6 @@ centos-redis:0>get "\xAC\xED\x00\x05t\x00\x03key"
 
 ## 序列化器
 
-
-
 `org.springframework.data.redis.core.RedisTemplate`
 
 ![image-20240102135851906](../../assets/Day02-rt的序列化/image-20240102135851906.png)
@@ -189,10 +187,9 @@ SpringMVC里头自带Jackson-databind依赖, 不需要在意这个
 @SpringBootTest
 class RedisApplicationTests {
     private final Logger logger = LoggerFactory.getLogger("name");
-    
+
     @Autowired
     private RedisTemplate<String,Object> redisTemplate;
-
 
     @Test
     void testRedisTemplate(){
@@ -201,16 +198,12 @@ class RedisApplicationTests {
 }
 ```
 
-
-
 查询控制台
 
 ```bash
 centos-redis:0>get key
 ""你好""
 ```
-
-
 
 #### 对值是实体的测试
 
@@ -226,8 +219,6 @@ void testSaveEntity(){
     //User{name='小明', age=12}
 }
 ```
-
-
 
 查询控制台
 
@@ -263,8 +254,6 @@ centos-redis:0>get user:001
 
 -   Spring提供了**`StringRedisTemolate`**的类, key和value都是String的序列化方式
 
-
-
 #### 手动序列化
 
 -   待封装
@@ -275,7 +264,6 @@ private StringRedisTemplate stringRedisTemplate;
 @Test
 void testStringRedisTemplate() throws JsonProcessingException {
 
-
     // ObjectMapper,SpringMVC中使用的默认制动序列化工具
     ObjectMapper mapper = new ObjectMapper();
 
@@ -285,13 +273,12 @@ void testStringRedisTemplate() throws JsonProcessingException {
     //有变化的部分↓
     stringRedisTemplate.opsForValue();
     String userKsy = "user:001";
-    
+
     // 存入User
     stringRedisTemplate.opsForValue().set(userKsy, json);
     String jsonUser = stringRedisTemplate.opsForValue().get(userKsy);
 	//有变化的部分↑
-    
-    
+
     // 手动反序列化
     User userValue = mapper.readValue(json, User.class);
     System.out.println(userValue);

@@ -37,8 +37,6 @@ li a:hover:not(.now-active) /*当前的页面不受悬停影响*/{
 }
 ```
 
-
-
 ```html
 <ul>
     <li><a target="_self" href="#home" class="now-active">home</a></li>
@@ -48,11 +46,7 @@ li a:hover:not(.now-active) /*当前的页面不受悬停影响*/{
 </ul>
 ```
 
-
-
 ![image-20250806204217632](../assets/Day03-Demo/image-20250806204217632.png)
-
-
 
 ### 横向导航栏
 
@@ -143,8 +137,6 @@ li a:hover:not(a.now-active) {
 改动`drop-down-content`背景为白, color为黑
 
 ![image-20250806220400244](../assets/Day03-Demo/image-20250806220400244.png)
-
-
 
 ## 表单
 

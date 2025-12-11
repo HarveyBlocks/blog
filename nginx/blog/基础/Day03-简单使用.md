@@ -14,14 +14,12 @@
     ./nginx -h
     ```
 
-    
-
     ```
     [root@harvey-centos sbin]# ./nginx -h
     nginx version: nginx/1.24.0
     Usage: nginx [-?hvVtTq] [-s signal] [-p prefix]
                  [-e filename] [-c filename] [-g directives]
-    
+
     Options:
       -?,-h         : this help
       # 查看版本并退出
@@ -34,29 +32,25 @@
       -T            : test configuration, dump it and exit
       # 在测试配置期间将日志信息级别提高到ERROR, 一般是-tq
       -q            : suppress non-error messages during configuration testing
-      
+
       # 向主进程发送信号：`stop`停止、`quit`退出、`reopen`重新打开、`reload`重新加载
       -s signal     : send signal to a master process: stop, quit, reopen, reload
       					- `stop` 无论请求有无, 直接强制关闭
       					- `quit` Worker进程停止接收请求, 处理完请求后关闭
       					- `reopen` 重新打开日志
                         - `reload`  重新加载配置文件
-      
+
       # 设置nginx文件位置
       -p prefix     : set prefix path (default: /etc/nginx/) 
       # 指定错误日志位置
       -e filename   : set error log file (default: /var/log/nginx/error.log)
       # 指定配置文件位置, -tc 测试指定位置的配置文件
       -c filename   : set configuration file (default: /etc/nginx/nginx.conf)
-      
-      
+
       # 设置配置文件之外的全局指令
       -g directives : set global directives out of configuration file
-    
-    
-    ```
 
-    
+    ```
 
 -   查看各种信息
 
@@ -74,7 +68,7 @@
     [root@harvey-centos sbin]# ./nginx -t
     nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
     nginx: configuration file /etc/nginx/nginx.conf test is successful
-    
+
     ```
 
 ## 设为服务
@@ -85,8 +79,6 @@
     vim /usr/lib/systemd/system/nginx.service
     ```
 
-    
-
 2.  在文件内添加以下内容
 
     ```ini
@@ -94,7 +86,7 @@
     Description=nginx web service
     Documentation=http://nginx.org/en/docs/
     After=network.target
-    
+
     [Service]
     Type=forking
     PIDFile=/usr/local/nginx/logs/nginx.pid
@@ -103,7 +95,7 @@
     ExecReload=/usr/local/nginx/sbin/nginx -s reload
     ExecStop=/usr/local/nginx/sbin/nginx -s stop
     PrivateTmp=true
-    
+
     [Install]
     WantedBy=default.target
     ```
@@ -122,20 +114,18 @@
     Documentation=http://nginx.org/en/docs/
     After=network-online.target remote-fs.target nss-lookup.target
     Wants=network-online.target
-    
+
     [Service]
     Type=forking
     PIDFile=/var/run/nginx.pid
     ExecStart=/usr/sbin/nginx -c /etc/nginx/nginx.conf
     ExecReload=/bin/sh -c "/bin/kill -s HUP $(/bin/cat /var/run/nginx.pid)"
     ExecStop=/bin/sh -c "/bin/kill -s TERM $(/bin/cat /var/run/nginx.pid)"
-    
+
     [Install]
     WantedBy=multi-user.target
-    
-    ```
 
-    
+    ```
 
 ## 设为服务
 
@@ -182,8 +172,6 @@ nginx stop
 ~~这就导致了用服务关闭nginx时, 找不到由二进制文件启动nginx时创建的pid 导致无法关闭~~
 
 所以何不直接使用`nginx`呢? 
-
-
 
 再次测试就没有这种情况了
 

@@ -13,12 +13,6 @@
 <p style="width:200px;text-align:center;border-style: solid;padding: 20px;background: yellow;margin: 20px;">内容</p>
 <p style="width:200px;text-align:center;border-style: solid;padding: 20px;background: yellow;margin: 20px;">内容</p>
 
-
-
-
-
-
-
 -   background-color 背景颜色
 
 -   background-image 背景图片
@@ -40,8 +34,6 @@
 ```
 
 ### 背景图片
-
-
 
 ```css
 body {background-image:url('bgdesert.jpg');}
@@ -88,11 +80,7 @@ body {
 
 背景图像是应该滚动还是固定的, 会不会随页面的其余部分一起滚动
 
-
-
 ## 文本
-
-
 
 | 属性                         | 描述                               |
 | :--------------------------- | :--------------------------------- |
@@ -110,13 +98,9 @@ body {
 | white-space                  | 设置元素中空白的处理方式           |
 | word-spacing                 | 设置字间距                         |
 
-
-
 ### 颜色
 
 >   color
-
-
 
 ```css
 <div style="color:red;">文本1</div>
@@ -127,8 +111,6 @@ body {
 <div style="color:red;">文本1</div>
 <div style="color:blue;">文本2</div>
 <div style="color:green;">文本3</div>
-
-
 
 ### 文本对齐
 
@@ -144,8 +126,6 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 
 <div>The Supreme Court decided not to uphold an earlier ruling which found that hidden commission payments to car dealers were unlawful.However, the ruling left open the possibility of claims for compensation for large commissions that were unfair.The Financial Conduct Authority (FCA) says it will study the court's judgement and decide whether a compensation scheme is needed before 08:00 BST on Monday.The regulator's chief executive Nikhil Rathi told the BBC any compensation scheme would be up and running by next year if it went ahead.The BBC talked to two of the people who brought the case to the Supreme Court, plus a person who is planning to make a claim.</div>
 <div style="text-align:justify;">The Supreme Court decided not to uphold an earlier ruling which found that hidden commission payments to car dealers were unlawful.However, the ruling left open the possibility of claims for compensation for large commissions that were unfair.The Financial Conduct Authority (FCA) says it will study the court's judgement and decide whether a compensation scheme is needed before 08:00 BST on Monday.The regulator's chief executive Nikhil Rathi told the BBC any compensation scheme would be up and running by next year if it went ahead.The BBC talked to two of the people who brought the case to the Supreme Court, plus a person who is planning to make a claim.</div>
-
-
 
 ### 文本修饰
 
@@ -191,8 +171,6 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 <div style="text-indent:50px; text-align:justify;">The Supreme Court decided not to uphold an earlier ruling which found that hidden commission payments to car dealers were unlawful.However, the ruling left open the possibility of claims for compensation for large commissions that were unfair.The Financial Conduct Authority (FCA) says it will study the court's judgement and decide whether a compensation scheme is needed before 08:00 BST on Monday.The regulator's chief executive Nikhil Rathi told the BBC any compensation scheme would be up and running by next year if it went ahead.The BBC talked to two of the people who brought the case to the Supreme Court, plus a person who is planning to make a claim.</div>
 <div style="text-indent:100px;">The Supreme Court decided not to uphold an earlier ruling which found that hidden commission payments to car dealers were unlawful.However, the ruling left open the possibility of claims for compensation for large commissions that were unfair.The Financial Conduct Authority (FCA) says it will study the court's judgement and decide whether a compensation scheme is needed before 08:00 BST on Monday.The regulator's chief executive Nikhil Rathi told the BBC any compensation scheme would be up and running by next year if it went ahead.The BBC talked to two of the people who brought the case to the Supreme Court, plus a person who is planning to make a claim.</div>
 
-
-
 ### 文本阴影
 
 >   text-shadow
@@ -203,13 +181,9 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 </div>
 ```
 
-
-
 <div style="text-shadow: -8px 8px #E9979AFF;font-size:200px;">
     属性
 </div>
-
-
 
 很丑
 
@@ -274,8 +248,6 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 <div style="font-style: italic; font-size: 50px">Hello World</div>
 <div style="font-style: oblique; font-size: 50px">Hello World</div>
 
-
-
 ### 字体大小
 
 >   font-size
@@ -300,8 +272,6 @@ justify的对齐方式: 拉伸一行的文本, 使一行最后不会产生空隙
 ```
 
 ![image-20250803230014903](../assets/Day01-属性/image-20250803230014903.png)
-
-
 
 ### 字体粗细
 
@@ -427,8 +397,6 @@ a:active {
 </ul>
 ```
 
-
-
 ### 列表项定位
 
 >   list-style-position
@@ -473,8 +441,6 @@ outside:
 ```
 
 ![image-20250805200138769](../assets/Day01-元素样式/image-20250805200138769.png)
-
-
 
 ## 表格
 
@@ -540,8 +506,6 @@ tr:hover {background-color: #f5f5f5;}
 ```css
 tr:nth-child(even) {background-color: #f2f2f2;}
 ```
-
-
 
 ## 透明度
 

@@ -2,8 +2,6 @@
 
 >   **D**ocument **T**ype **D**efine 文档类型定义
 
-
-
 ## 声明
 
 ### XML文件内部的声明
@@ -33,15 +31,9 @@
 </note>
 ```
 
-
-
 -   `<!ELEMENT note (from,to,heading,body)> `定义下的元素
 -   `<!ELEMENT to      (#PCDATA)>` 元素和元素类型
 -   `#PCDATA` 一种元素类型
-
-
-
-
 
 ### 外部文件声明
 

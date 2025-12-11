@@ -46,15 +46,11 @@ tar -zxf 文件
 
 ![image-20240425165113084](../assets/Day10-Skywalking/image-20240425165113084.png)
 
-
-
 #### 运行
 
 ```shell
 bin/oapService.sh
 ```
-
-
 
 ### 部署UI界面
 
@@ -66,14 +62,6 @@ bin/webappService.sh
 
 [Apache SkyWalking](http://centos:18080/General-Service/Services)
 
-
-
-
-
-
-
-
-
 ### Agent监控Springboot应用
 
 -   Java Agent Distribution
@@ -81,12 +69,6 @@ bin/webappService.sh
 收集数据上交服务端
 
 ![image-20240425154340853](../assets/Day10-Skywalking/image-20240425154340853.png)
-
-
-
-
-
-
 
 配置在一个服务的IDE的VM option
 
@@ -100,15 +82,7 @@ gRpc的端口是11800, skywalking使用grpc做数据的上报
 
 然后会打印一大堆日志, 然后Spring正常启动
 
-
-
-
-
 ![image-20240426191816862](../assets/Day10-Skywalking/image-20240426191816862.png)
-
-
-
-
 
 #### 网关支持
 
@@ -120,15 +94,9 @@ SpringCloud+Skywalking默认不支持网关
 
 <img src="../assets/Day10-Skywalking/image-20240426150520472.png" alt="image-20240426150520472" style="zoom:60%;" />
 
-
-
 <img src="../assets/Day10-Skywalking/image-20240426151004303.png" alt="image-20240426151004303" style="zoom:50%;" />
 
-
-
 拷贝到plugin
-
-
 
 ### Docker
 
@@ -161,8 +129,6 @@ docker run \
     apache/skywalking-ui:8.9.0
 ```
 
-
-
 ## 组件
 
 ![image-20240425184053764](../assets/Day10-Skywalking/image-20240425184053764.png)
@@ -172,8 +138,6 @@ docker run \
 >   探针
 
 做一个无侵入的增强
-
-
 
 ### OAP
 

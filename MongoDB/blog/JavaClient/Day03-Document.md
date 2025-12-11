@@ -16,8 +16,6 @@ new Document()
 List<Document> documents = Document.parse("{\"docs\": " + json + "}").getList("docs", Document.class);
 ```
 
-
-
 ## Insert
 
 `InsertOne`
@@ -32,7 +30,6 @@ InsertOneResult result = collection.insertOne(doc1);
 System.out.println("Inserted a document with the following id: " +
                    Optional.ofNullable(result.getInsertedId()).map(id -> id.asObjectId().getValue()));
 ```
-
 
 `InsertMany`
 
@@ -54,10 +51,6 @@ try {
 System.out.println("成功的一部分文档的id: " +
                    insertedValues.stream().map(doc -> doc.asInt32().getValue()).collect(Collectors.toList()));
 ```
-
-
-
-
 
 ## Update
 
@@ -126,8 +119,6 @@ collection.updateOne(
 );
 ```
 
-
-
 Updates成员
 
 - `set` Upsert字段
@@ -169,8 +160,6 @@ MongoDB将批量写分为**有序**和**无序**
 collection.bulkWrite(List.of(), new BulkWriteOptions().ordered(false));
 ```
 
-
-
 ### 示例
 
 ```java
@@ -195,8 +184,6 @@ BulkWriteResult bulkWriteResult = collection.bulkWrite(List.of(
 ), new BulkWriteOptions().ordered(false));
 System.out.println(bulkWriteResult);
 ```
-
-
 
 结果输出
 
@@ -227,8 +214,6 @@ System.out.println(bulkWriteResult);
 ## 跨Database的批量写
 
 在MongoDB 8.0以上支持此操作
-
-
 
 ```java
 // Concrete 具体

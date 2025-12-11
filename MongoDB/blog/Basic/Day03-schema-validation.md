@@ -8,8 +8,6 @@ MongoDB的文档在没有模式的情况下是及其自由的
 
 默认情况下，当插入或更新操作将导致文档不符合模式的演示时，MongoDB 会组织插入或更新操作
 
-
-
 不能为`admin`、`local` 和 `config` 数据库中的集合指定模式验证
 
 ## json-schema
@@ -43,8 +41,6 @@ db.createCollection("students", {
    }
 } )
 ```
-
-
 
 可以使用 `title` 和 `description` 字段来解释验证规则。当文档验证失败时，MongoDB 会在错误输出中包含这些字段。
 

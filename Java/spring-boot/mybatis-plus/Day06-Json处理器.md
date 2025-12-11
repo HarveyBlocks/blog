@@ -27,7 +27,5 @@
     @TableName(value = "tb_user" ,autoResultMap = true)
     ```
 
-    
-
 ​	
 

@@ -18,8 +18,6 @@
 
 <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030202719663.png" alt="image-20241030202719663" style="zoom:50%;" />
 
-
-
 让后以Persisten为主要场景
 
 <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241030202841193.png" alt="image-20241030202841193" style="zoom:50%;" />
@@ -34,15 +32,9 @@ Hierarchy->选中场景->右键选择UnloadSence
 
 <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241031103048416.png" alt="image-20241031103048416" style="zoom:80%;" />
 
-
-
 此时添加新的对象时, 优先添加到Persistent, 选中场景, 选择set Active sence, 即可将默认添加位置改变
 
 <img src="../../assets/Day07-%E5%9C%BA%E6%99%AF/image-20241031103250374.png" alt="image-20241031103250374" style="zoom:80%;" />
-
-
-
-
 
 ## 场景转换
 
@@ -84,7 +76,7 @@ Hierarchy->选中场景->右键选择UnloadSence
 
       ```csharp
       using UnityEngine;
-      
+
       namespace SO {
           [CreateAssetMenu(menuName = "Scene/SceneReference")]
           public class SceneReference : ScriptableObject {
@@ -100,7 +92,7 @@ Hierarchy->选中场景->右键选择UnloadSence
       ```csharp
       public class SceneLoadManager : MonoBehaviour {
           public SceneReference init;
-      
+
           public void Awake() {
               // 异步加载场景
               Addressables.LoadSceneAsync(init.reference, LoadSceneMode.Additive);
@@ -126,7 +118,7 @@ Hierarchy->选中场景->右键选择UnloadSence
       public class TeleportInteract : InteractiveScene {
           public SceneReference to;
           public SceneChangeEvent sceneChangeEvent;
-      
+
           public override void Interact(GameObject other) {
               sceneChangeEvent.Execute(to);
           }
@@ -140,26 +132,26 @@ Hierarchy->选中场景->右键选择UnloadSence
           private SceneReference _current;
           public SceneReference init;
           public SceneChangeEvent sceneChangeEvent;
-      
+
           public void Awake() {
               _current = init;
               LoadScene(init);
           }
-      
+
           private void OnEnable() {
               sceneChangeEvent.Action += ChangeScene;
           }
-      
+
           private void OnDisable() {
               sceneChangeEvent.Action -= ChangeScene;
           }
-      
+
           private void ChangeScene(SceneReference targetScene) {
               UnLoadScene(_current);
               LoadScene(targetScene);
               _current = targetScene;
           }
-      
+
           private static void LoadScene(SceneReference sr) {
               // sr.reference.LoadSceneAsync(LoadSceneMode.Additive, true);
               // 写入对象的
@@ -167,9 +159,9 @@ Hierarchy->选中场景->右键选择UnloadSence
               // 不写入对象的, 也就是sr对象没有被加载, 到时候就不能被删除
               sr.reference.LoadSceneAsync(LoadSceneMode.Additive, true);
           }
-      
+
           private static void UnLoadScene(SceneReference sr) {
-      
+
               sr.reference.UnLoadScene();
           }
       }
@@ -181,14 +173,14 @@ Hierarchy->选中场景->右键选择UnloadSence
       private void ChangeScene(SceneReference targetScene) {
           StartCoroutine(Inner()); // 开启协程
           return;
-      
+
           IEnumerator Inner() {
               // 执行渐入渐出
               yield return new WaitForSeconds(1);
               if (_current) {
                   yield return UnLoadScene(_current);
               }
-      
+
               LoadScene(targetScene);
               _current = targetScene;
           }
@@ -209,8 +201,6 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
     Debug.Log(aoh.Result.ToString());
 }
 ```
-
-
 
 ### 场景渐入渐出
 
@@ -251,26 +241,25 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
           public float fadeDuration = 0.5f;
           public VoidInterceptor fadeInterceptor;
           private Image _image;
-      
+
           private void Awake() {
               _image = GetComponent<Image>();
           }
-      
+
           private void OnEnable() {
               fadeInterceptor.PreAction += FadeIn;
               fadeInterceptor.PostAction += FadeOut;
           }
-      
-      
+
           private void OnDisable() {
               fadeInterceptor.PreAction -= FadeIn;
               fadeInterceptor.PostAction -= FadeOut;
           }
-      
+
           private void FadeIn() {
               _image.DOBlendableColor(Color.white, fadeDuration);
           }
-      
+
           private void FadeOut() {
               _image.DOBlendableColor(Color.clear, fadeDuration);
           }
@@ -278,8 +267,6 @@ private void LoadScenePost(AsyncOperationHandle<SceneInstance> aoh) {
       ```
 
 13.   在SceneLoadManager导入SO, 并用SO的API调用代码
-
-
 
 ## 灯光效果
 

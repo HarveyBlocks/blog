@@ -12,7 +12,7 @@ Java原生支持的远程调用
 
     ```java
     import java.rmi.Remote;
-    
+
     public interface RmiService extends Remote {
         User sayHello(String name);
     }
@@ -23,14 +23,13 @@ Java原生支持的远程调用
     ```java
     import java.rmi.RemoteException;
     import java.rmi.server.UnicastRemoteObject;
-    
+
     public class RmiServiceImpl extends UnicastRemoteObject implements RmiService {
         public RmiServiceImpl() throws RemoteException {
             // 必须抛出这个RemoteException异常
-            
+
         }
-    
-    
+
         @Override
         public User sayHello(String name) throws RemoteException{// 每个方法也要抛出RemoteException
             return new User(name);
@@ -48,13 +47,13 @@ Java原生支持的远程调用
         private final String host;
         private final int port;
         private boolean registered = false;
-    
+
         public RmiUtil(String host, int port) throws RemoteException {
             this.host = host;
             this.port = port;
             this.rmiUrl = "rmi://" + host + ":" + port + "/";
         }
-    
+
         public void register()
                 throws RemoteException {
             if (!registered) {
@@ -62,13 +61,13 @@ Java原生支持的远程调用
                 registered = true;
             }
         }
-    
+
         public <T extends Remote, R extends T> void bind(Class<T> serviceClass, R serviceImpl)
                 throws MalformedURLException, AlreadyBoundException, RemoteException {
             Naming.bind(rmiUrl + serviceClass.getSimpleName(), serviceImpl);
         }
     }
-    
+
     ```
 
     ```java
@@ -92,14 +91,14 @@ Java原生支持的远程调用
         private final String rmiUrl;
         private final String host;
         private final int port;
-    
+
         public RmiUtil(String host, int port) throws RemoteException {
             this.host = host;
             this.port = port;
             this.rmiUrl = "rmi://" + host + ":" + port + "/";
         }
     	// ...
-        
+
         public <T extends Remote> T getProxy(Class<T> serviceClass)
                 throws MalformedURLException, RemoteException, NotBoundException {
             return (T) Naming.lookup(rmiUrl + serviceClass.getSimpleName());

@@ -6,8 +6,6 @@ end while;
 
 -   条件控制
 
-
-
 -   repeat 满足条件就退出
 
 ```mydql
@@ -16,10 +14,6 @@ repeat
 	Until 条件
 End repeat;
 ```
-
-
-
-
 
 -   loop
 
@@ -65,24 +59,6 @@ drop  procedure if exists p3;
 
 call p3(100);
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 如果不增加
 

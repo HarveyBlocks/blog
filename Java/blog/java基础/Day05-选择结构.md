@@ -30,30 +30,17 @@ public class Main {
 }
 ```
 
-
-
 直接输入一个字符串，成功的输出了
 
 [图片]<src=>
 
-
-
-
-
 ### ？？？
 
-
-
 先输入一个整型，再输入一个字符串的情况，str直接没有被赋到值
-
-
-
-
 
 ### 解决方法
 
 - 因为在输入字符串之前输入别的东西，会遗留下一个\n，scanner就会把\n作为一个字符读进去
-
 
 ``` java
 import java.util.Scanner;
@@ -85,8 +72,6 @@ public class Main {
 }
 
 ```
-
-
 
 ## swich
 

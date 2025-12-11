@@ -1,7 +1,5 @@
 # Spring整合自定义标签
 
-
-
 ```xml
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -20,8 +18,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 ```
 
 ​	
-
-
 
 -   自己的项目包装到Spring
 
@@ -96,10 +92,6 @@ http\://www.harvey.com/spring/harveyAnnotation.xsd=com/harvey/spring/config/harv
 http\://www.harvey.com/spring/handler=com.harvey.handlers.HarveyNamespaceHandler
 ```
 
-
-
-
-
 ### 4.编写命名空间解析器
 
 ```java
@@ -119,8 +111,6 @@ public class HarveyNamespaceHandler extends NamespaceHandlerSupport {
     }
 }
 ```
-
-
 
 ### 5.编写标签解析器
 

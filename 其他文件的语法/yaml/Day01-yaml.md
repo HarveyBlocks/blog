@@ -1,7 +1,5 @@
 # yaml配置文件
 
-
-
 ## 基本概念
 
 >   YAML Ain't Markup Language
@@ -16,8 +14,6 @@
 -   比properties更清晰
 -   比xml更简洁
 
-
-
 ## 基本语法
 
 -   大小写敏感
@@ -31,8 +27,6 @@
         -   但是**聪明的idea会出手**
     -   缩进的空格数不重要, 只要相同层级的元素左对齐即可
 -   使用#表示**行注释**
-
-
 
 <img src="../assets/Day01-yaml/image-20231204180559797.png" alt="image-20231204180559797" style="zoom:67%;" />
 
@@ -87,10 +81,6 @@
     person.name: "张三"
     ```
 
-    
-
-
-
 ### 参数引用
 
 `${key}` 
@@ -102,12 +92,6 @@ server:
 myServer:
   port: ${server.port}
 ```
-
-
-
-
-
-
 
 ## 读取配置yaml文件里的内容
 
@@ -172,8 +156,6 @@ address:
   - shanghai
 ```
 
-
-
 ```java
 @Autowired
 private Environment env;//只需要注意一个对象,value看起来更零散
@@ -207,28 +189,28 @@ public String yaml() {
 
     ```java
     package com.harvey.springweb.springboot.demos.web;
-    
+
     import org.springframework.boot.context.properties.ConfigurationProperties;
     import org.springframework.stereotype.Component;
-    
+
     import java.util.Arrays;
-    
+
     @Component
     @ConfigurationProperties("person")//指明注入的属性属于哪个对象之下
     public class User {//不必同名
-    
+
         private String name;
         private Integer age;
         private String[] address;//支持注入数组
-    
+
         @Override
         public String toString() {...}
-    
+
         //Setter函数名要一致
         public void setName(String name) {..}
         public void setAge(Integer age) {...}
         public void setAddress(String[] address) {...}
-        
+
         public String getName() {...}
     	public Integer getAge() {...}
         public String[] getAddress() {...}
@@ -244,7 +226,7 @@ public String yaml() {
     ```java
     @Autowired
     private User user;
-    
+
     // http://127.0.0.1:8080/yaml
     @RequestMapping("/yaml")
     @ResponseBody

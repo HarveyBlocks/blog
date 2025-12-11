@@ -13,8 +13,6 @@
 -   访问类
     -   使用单例的类
 
-
-
 ```mermaid
 classDiagram
 class Singleton{
@@ -28,8 +26,6 @@ class SingletonUser{
 SingletonUser --> Singleton
 ```
 
-
-
 ## 分类
 
 饿汉式: 类加载就会导致该单实例对象被创建
@@ -38,11 +34,7 @@ SingletonUser --> Singleton
 
 ## 饿汉式
 
-
-
 ### 构建流程
-
-
 
 1.  私有构造方法
 
@@ -62,7 +54,7 @@ SingletonUser --> Singleton
 
     ```java
     private static final HungrySingletonObject SINGLETON;
-    
+
     static {
         SINGLETON = new HungrySingletonObject();
     }
@@ -88,14 +80,6 @@ SingletonUser --> Singleton
     }
     ```
 
-
-
-
-
-
-
-
-
 ![image-20240604134849975](../../assets/Day02-单例/image-20240604134849975.png)
 
 ### 缺陷
@@ -103,8 +87,6 @@ SingletonUser --> Singleton
 instance对象是随着类的加载而创建的。
 
 如果该对象足够大的话，而一直没有使用就会造成内存的浪费。
-
-
 
 ### 代码清单
 
@@ -119,7 +101,6 @@ public class HungrySingletonObject {
     private HungrySingletonObject() {
         System.out.println("构造方法被调用");
     }
-
 
     public static HungrySingletonObject getInstance() {
         return SINGLETON;
@@ -189,7 +170,7 @@ public class HungrySingletonObject {
 
         ```java
         private static volatile LazySingletonObject singleton = null;
-        
+
         public synchronized static LazySingletonObject getInstance() {
             //第一次判断，如果instance不为null，不进入抢锁阶段，直接返回实际
             if (singleton == null) {
@@ -200,7 +181,7 @@ public class HungrySingletonObject {
                     }
                 }
             }
-        
+
             return singleton;
         }
         ```
@@ -217,15 +198,11 @@ public class HungrySingletonObject {
     }
     ```
 
-
-
 ### 静态内部类的懒汉式实现流程
 
 JVM在加载外部类的时候不会加载内部类, 静态内部类的属性或方法被调用才会被加载
 
 **静态内部类保证只被实例化一次, 且严格保证实例化顺序**
-
-
 
 1.  私有构造方法
 
@@ -251,8 +228,6 @@ JVM在加载外部类的时候不会加载内部类, 静态内部类的属性或
     }
     ```
 
-
-
 ## 枚举类实现单例
 
 枚举类是线程安全的
@@ -260,8 +235,6 @@ JVM在加载外部类的时候不会加载内部类, 静态内部类的属性或
 枚举类只会加载一次, 是懒汉式
 
 枚举是单例实现中唯一一种不会被破坏的单例模式
-
-
 
 ```java
 public enum EnumSingletonObject {

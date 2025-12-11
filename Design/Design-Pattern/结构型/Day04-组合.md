@@ -22,13 +22,9 @@
 
 组合模式依据树形结构(整体分为部分, 部分里又能分出整体)来组合对象, 用来表示部分以及整体层次
 
-
-
 组合模式让客户端忽略层次的差异, 方便对整个层次进行大一统的操作
 
 组合模式中增加新种树枝和新种叶子都不会产生侵入, 符合开闭原则
-
-
 
 ## 结构
 
@@ -62,8 +58,6 @@
 
 没有任何意义, 千万不要去了解, 会觉得脑子的一部分被塞了屎
 
-
-
 ### 奇怪的想法
 
 在抽象节点定义:
@@ -76,15 +70,13 @@
 
 已经完全失去组合模式的意义啦
 
-
-
 ## 文件树实现流程
 
 ### 根
 
 ```java
 public abstract class FileRoot {
-    
+
     private final String name;
     private int level;
 
@@ -92,7 +84,6 @@ public abstract class FileRoot {
         this.name = name;
         this.level = 0;
     }
-
 
     public final int level() {
         return level;
@@ -265,8 +256,6 @@ public class FileTree {
 ```
 
 ### Demo
-
-
 
 ```java
 public static void demo() {

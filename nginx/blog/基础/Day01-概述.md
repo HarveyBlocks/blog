@@ -7,8 +7,6 @@
 -   `Igor Sysoev`开发(因为Nginx版权问题被不[万恶的资本])
 -   04.10.4发布
 
-
-
 -   Web服务器
 -   网页服务器
     -   WebServer
@@ -24,17 +22,12 @@
     -   Internet Mail Access Protocol
     -   交互式邮件传输协议
 
-
-
 ## 反向代理
-
-
 
 ### 正向代理
 
 ```mermaid
 graph LR
-
 
 Client --> Proxy
 Proxy --> Server
@@ -43,11 +36,7 @@ Server --> Proxy
 
 ```
 
-
-
 服务端不会直接和客户端连接(VPN)
-
-
 
 ### 反向代理
 
@@ -55,7 +44,6 @@ Server --> Proxy
 graph LR
 Client --> Proxy
 Proxy --> Client
-
 
 Proxy --> Server1
 Server1 --> Proxy
@@ -67,15 +55,11 @@ Proxy --> Server4
 Server4 --> Proxy
 ```
 
-
-
 将服务端隐藏, 使服务端更加安全
 
 将请求分发给服务器, 将低服务端的压力
 
 ## Web服务器
-
-
 
 -   Tomcat
     -   Apache
@@ -99,8 +83,6 @@ Server4 --> Proxy
     -   Internet Information Service
     -   基于Windows系统
     -   Microsoft
-
-
 
 ## Nginx优点
 

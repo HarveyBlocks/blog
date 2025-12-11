@@ -14,8 +14,6 @@ private final ByteBuffer buffer = ByteBuffer.allocate(16);
 private final List<SocketChannel> channels = new ArrayList<>();
 ```
 
-
-
 使用`ServerSocketChannel`创建服务器
 
 ```java
@@ -36,7 +34,6 @@ public void doServer() throws IOException {
     }
 }
 ```
-
 
 ```java
 /**

@@ -2,8 +2,6 @@
 
 创建新场景, 为新场景创建一个普通Camera
 
-
-
 ## 文本
 
 Text Mesh Pro
@@ -46,8 +44,6 @@ Unity中的字体和图片类似, 是渲染出来的, 所以需要有相关的�
 
 组件. 统一管理一组文本框
 
-
-
 ## 按钮
 
 Create->Ui->Button(Text Mesh Pro)或Create->Ui->(Text Mesh Pro)->Add Component->Button
@@ -57,8 +53,6 @@ Create->Ui->Button(Text Mesh Pro)或Create->Ui->(Text Mesh Pro)->Add Component->
     - Pressed Color 被点击不松开时的颜色
     - Selected Color 被选中后的颜色
     - 该颜色的设置是图像原有的颜色进行叠加
-
-
 
 ## 游戏进度保存
 

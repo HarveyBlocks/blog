@@ -56,8 +56,6 @@ XSD的声明
 </xs:element>
 ```
 
-
-
 XML使用
 
 ```xml

@@ -47,7 +47,7 @@ class Outer { // 隐式标签 @Outer
                 println(this@Outer.msg)
                 return this.msg[i]
             }
-            
+
             println(msg) // method 的 局部变量
             println(this.msg) // 指OtherClass
             println(this@method.msg) // 指OtherClass

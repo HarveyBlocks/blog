@@ -4,35 +4,23 @@
 
 XML 处理器就不会更改字符串数据类型中的值
 
-
-
 ```xml
 <xs:element name="customer" type="xs:string"/>
 ```
-
-
 
 ```xml
 <customer>	John Smith	</customer>
 ```
 
-
-
 ## 规格化
 
 >NormalizedString Data Type 规格化字符串数据类型
 
-
-
 **XML 处理器会移除规格化字符串数据类型的折行，回车以及制表符**
-
-
 
 ```xml
 <xs:element name="customer" type="xs:normalizedString"/>
 ```
-
-
 
 ```xml
 <customer>	John Smith	</customer>
@@ -46,13 +34,9 @@ XML 处理器就不会更改字符串数据类型中的值
 
 但是 XML 处理器会移除Token的换行符、回车、制表符、开头和结尾的空格以及（连续的）空格。
 
-
-
 ```xml
 <xs:element name="customer" type="xs:token"/>
 ```
-
-
 
 ```xml
 <customer>	John Smith	</customer>

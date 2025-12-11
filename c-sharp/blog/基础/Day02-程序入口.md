@@ -21,7 +21,7 @@ C# 程序中只能有一个入口点
 ```C#
 [public|protected internal|protected|internal|private protected|private(默认)] 
 static void|int|[async] Task|[async] Task<int> Main([string[] args]){
-    
+
 }
 ```
 
@@ -55,8 +55,6 @@ class Program {
 }
 ```
 
-
-
 ## 顶级语句
 
 无需在控制台应用程序项目中显式包含 Main 方法
@@ -65,7 +63,6 @@ class Program {
 
 ```go
 using System;
-
 
 Console.WriteLine("Hello World!");
 ```

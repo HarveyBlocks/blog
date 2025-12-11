@@ -28,8 +28,6 @@ no such file or directory
 mkdir ~Desktop/test/diy
 ```
 
-
-
 ## 注意
 
 mkdir命令有修改的**权限**;

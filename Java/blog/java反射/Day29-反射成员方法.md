@@ -1,7 +1,5 @@
 # 反射成员方法
 
-
-
 ```java
 private void say() {
     System.out.println("Student "+ name + " is "+ age + " now ");

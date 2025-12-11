@@ -1,11 +1,5 @@
 ![image-20231113165957123](../../assets/Day10-JavaWeb三大组件/image-20231113165957123.png)
 
-
-
-
-
-
-
 ## 特点与生命周期
 
 ### Servlet
@@ -17,8 +11,6 @@
 -   服务器启动时不创建,客户端访问时创建,然后缓存放入容器
     -   缓存之后在容器找
     -   像延迟加载的Bean
-
-
 
 ### Filter
 
@@ -37,10 +29,6 @@ Session
 ServletContext/Application 代表整个Web应用->服务器启动时创建
 
 -   监听域对象的创建与销毁
-
-
-
-
 
 ```java
 package com.harvey.web.listener;
@@ -64,10 +52,6 @@ public class ContextLoaderListener  implements ServletContextListener {
     public void contextDestroyed(ServletContextEvent sce) {}
 }
 ```
-
-
-
-
 
 ```java
 package com.harvey.web.servlet;
@@ -105,8 +89,6 @@ public class AccountServlet extends HttpServlet {
 
 >   由于我使用了全注解,而他又不讲全注解,我这里就只能大概的写一下xml的配置方法
 
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
@@ -132,7 +114,7 @@ public void contextInitialized(ServletContextEvent sce) {
     CONTEXT_CONFIG_LOCATION_XML = servletContext.getInitParameter("contextConfigLocationClass");
     // 模拟解析配置文件的名称的过程
     CONTEXT_CONFIG_LOCATION_XML = CONTEXT_CONFIG_LOCATION_XML.substring("classpath".length());
-    
+
     // 1. 创建Spring容器
     ApplicationContext applicationContext =
             new AnnotationConfigApplicationContext(CONTEXT_CONFIG_LOCATION_XML);
@@ -141,10 +123,6 @@ public void contextInitialized(ServletContextEvent sce) {
     servletContext.setAttribute("applicationContext",applicationContext);
 }
 ```
-
-
-
-
 
 -   也大概模仿了一下配置类的写法
 
@@ -157,15 +135,15 @@ public void contextInitialized(ServletContextEvent sce) {
 
 -   ```java
     package com.harvey.web.listener;
-    
+
     import ...
-    
+
     /**
      * ...
      */
     @WebListener
     public class ContextLoaderListener  implements ServletContextListener {
-    
+
         @Override
         public void contextInitialized(ServletContextEvent sce) {
             // 0.解析web.xml文件,获取ConfigClassPath
@@ -185,36 +163,30 @@ public void contextInitialized(ServletContextEvent sce) {
             }catch (ClassNotFoundException e) {
                 throw new RuntimeException(e);
             }
-    
+
             // 1. 创建Spring容器
             ApplicationContext applicationContext =
                     new AnnotationConfigApplicationContext(config);
-    
+
             // 2. 存入Application域
             sce.getServletContext().setAttribute("applicationContext",applicationContext);
         }
-    
+
         @Override
         public void contextDestroyed(ServletContextEvent sce) {
         }
     }
     ```
 
-
-
-
-
 #### applicationContext的键"applicationContext"写死了
-
-
 
 -   Util
 
     ```java
     package com.harvey.utils;
-    
+
     import ...
-    
+
     /**
      * ...
      */

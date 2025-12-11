@@ -5,7 +5,6 @@
 
 - 存储结构:哈希表=数组+链表+红黑树(数组的元素是链表这样?)
 
-
 ## Hash的使用
 
 ```java
@@ -54,8 +53,6 @@ public class Demo04 {
 }
 ```
 
-
-
 ## HashSet的存储原理
 
 Student类:
@@ -82,10 +79,10 @@ public class Student {
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-    
+
     public int getAge() {return age;}
     public void setAge(int age) {this.age = age;}
-    
+
     public int getScore() {return score;}
     public void setScore(int score) {this.score = score;}
 
@@ -205,7 +202,6 @@ public boolean equals(Object o) {
 ```
 
 ### 重写hushCode():
-
 
 ```java
 @Override

@@ -35,7 +35,7 @@
         if (exampleParam < 0) {
             throw new Exception();
         }
-    
+
         return (exampleParam, exampleParamOut);
     }
     ```

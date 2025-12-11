@@ -21,7 +21,6 @@ public class GenericMethod {
         return t;
     }
 
-    
     public <T,K> E showIt(E e) {// 所有E都编译时异常
         E e1;
         System.out.println(e.toString());
@@ -30,11 +29,7 @@ public class GenericMethod {
 }
 ```
 
-
-
 ## 测试类
-
-
 
 ```java
 package GenericLearning;
@@ -53,10 +48,6 @@ public class TestGeneric {
     }
 }
 ```
-
-
-
-
 
 ## 泛型可变参数的方法
 

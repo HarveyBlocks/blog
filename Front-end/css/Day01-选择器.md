@@ -14,8 +14,6 @@ span {
 }
 ```
 
-
-
 ## id 选择器
 
 >`#id`
@@ -37,10 +35,6 @@ CSS 中的选择器应当是`#id`的形式
     font-family: "Times New Roman";
 }
 ```
-
-
-
-
 
 ## class 选择器
 
@@ -98,8 +92,6 @@ div * {
 -   `~` 普通兄弟选择器
 -   `, ` 两个独立的选择器共用一个样式
 
-
-
 ### 后代选择器
 
 选取某元素的后代元素
@@ -128,8 +120,6 @@ div>p {
 
 所有`<div>`的孩子`<p>`元素被匹配
 
-
-
 ### 相邻兄弟选择器
 
 >   Adjacent sibling selector
@@ -141,8 +131,6 @@ div+p {
   background-color:yellow;
 }
 ```
-
-
 
 ### 普通兄弟选择器
 
@@ -175,7 +163,6 @@ div~p {
 }
 ```
 
-
 ```html
 <body>
 <h1 class="red">A red heading</h1>
@@ -184,8 +171,6 @@ div~p {
 </body>
 </html>
 ```
-
-
 
 ## 伪类
 
@@ -258,8 +243,6 @@ a:active {color:#0000FF;} /* 已选中的链接 */
 
 `a:active` 必须被置于 `a:hover` 之后，才是有效的。
 
-
-
 ### 不同语言下的引号
 
 由于lang 可以在html的head中设置, 不止是可以在attribute上设置
@@ -280,8 +263,6 @@ q:lang(jp) {
     quotes: "⌈" "⌋";
 }
 ```
-
-
 
 ```html
 <div>有一句叫做<q lang="en">识时务者为俊杰</q>的话</div>
@@ -336,8 +317,6 @@ selector.class::pseudo-element {
 
 ### 将鼠标选中的部分变色
 
-
-
 ```css
 ::selection {
     color: red;
@@ -346,8 +325,6 @@ selector.class::pseudo-element {
 ```
 
 ![image-20250804210229045](../assets/Day01-选择器/image-20250804210229045.png)
-
-
 
 ### 每段话结尾加上图片
 

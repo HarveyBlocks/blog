@@ -36,8 +36,6 @@ arch
 -   预热之后, 通过Graal即时编译器优化热点代码
 -   生成比Hotspot JIT更高性能的机器码
 
-
-
 关闭GraalVM中的Graal编译器
 
 ```shell
@@ -63,11 +61,9 @@ arch
     There are two installation options:
     * Install the Visual Studio Build Tools with the Windows 11 SDK (or later version)
     * Install Visual Studio with the Windows 11 SDK (or later version)
-    
+
     Native Image runs in both a PowerShell or Command Prompt and will automatically set up build environments on Windows, given that it can find a suitable Visual Studio installation.
     ```
-
-    
 
 2.  制作Class字节码文件
 
@@ -92,12 +88,10 @@ arch
     ```shell
     # Ring the terminal bell (press Ctrl+G to enter ^G)
     native-image.exe -jar App.jar & echo ^G
-    
+
     # Open an info dialog box with text
     native-image.exe -jar App.jar & msg "%username%" GraalVM Native Image build completed
     ```
-
-    
 
 4.  运行本地镜像(可以脱离JDK, 在没有任何配置的机器上运行)
 

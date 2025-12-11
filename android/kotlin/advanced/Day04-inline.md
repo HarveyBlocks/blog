@@ -43,8 +43,6 @@ value class Name(private val fullName: String) {
 }
 ```
 
-
-
 内联类属性不能有幕后字段
 
 只能有简单的可计算属性（没有 `lateinit` /委托属性）
@@ -53,19 +51,13 @@ value class Name(private val fullName: String) {
 
 禁止内联类继承类或者被继承
 
-
-
 由于装箱拆箱的存在, 因此引用相等对内敛类无意义
-
-
 
 inline也可以使用委托
 
 ```kotlin
 class Derive(base: Base) : Base by base
 ```
-
-
 
 ## 内联函数
 
@@ -124,8 +116,6 @@ fun main() {
 内联只能对**有函数类型做参数**的函数才有比较好的优化
 
 内联的lambda 表达式**被拆开**, 因此**只能**在内联函数内部**调用**或者**作为可内联的参数传递,** 而不能作为一个一般的变量传递
-
-
 
 ### `noinline`
 
@@ -209,7 +199,6 @@ inline fun inlineFunction(runnable: () -> Unit) {
     println("out post")
 }
 
-
 fun main() {
     inlineFunction {
         print("run")
@@ -250,8 +239,6 @@ fun main() {
     // ------------
 }
 ```
-
-
 
 ### return
 

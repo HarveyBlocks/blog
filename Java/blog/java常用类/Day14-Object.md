@@ -79,8 +79,6 @@ class Student
 *=========================
 true
 
-
-
 ### 有关Class的几个方法
 
 ```java
@@ -88,7 +86,7 @@ package Generic;
 public class Demo {
     public static void main(String[] args) {
         Demo demo = new Demo();
-        
+
         System.out.println(demo.getClass());//class Generic.Demo
         System.out.println(demo.getClass().getName());//Generic.Demo
         System.out.println(demo.getClass().getSimpleName());Demo
@@ -237,14 +235,14 @@ public boolean equals(Object obj) {
     //判断obj是否为null
     if(obj==null){return false;}
     //判断两个引用指向的实际对象类型是否一致
-    
+
     /*if (obj.getClass()==this.getClass()){
         return false;
     } else if () {
 
     }
     */
-    
+
     if(obj instanceof Student){
         //强制类型转换
         Student studentObj=(Student) obj;
@@ -257,8 +255,6 @@ public boolean equals(Object obj) {
     return false;
 }
 ```
-
-
 
 ## finalize()方法
 

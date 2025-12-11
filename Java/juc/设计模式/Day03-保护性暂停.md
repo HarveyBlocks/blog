@@ -19,8 +19,6 @@ t1--wait, 直到response有值-->GO
 t2--任务完成, 为response赋值, 通知线程1-->GO
 ```
 
-
-
 ## 实现
 
 ### 标记结果类
@@ -57,7 +55,6 @@ public final class GuardedSuspensionWaitPattern<R> extends AbstractWaitStandardP
     @Getter
     @Setter
     private Consumer<R> listener;
-
 
     public GuardedSuspensionWaitPattern(FutureResponse<R> futureResponse) {
         super(futureResponse);
@@ -132,7 +129,6 @@ public class GuardedSuspension<R> {
         this.notifyPattern.setSupplier(supplier);
     }
 
-
     @SuppressWarnings("unchecked")
     public GuardedSuspension() {
         this((Supplier<R>) DEFAULT_SUPPLIER, (Consumer<R>) DEFAULT_LISTENER);
@@ -164,11 +160,7 @@ public class GuardedSuspension<R> {
 }
 ```
 
-
-
 ## 使用
-
-
 
 ```java
 Random random = new Random(System.currentTimeMillis());
@@ -192,9 +184,6 @@ new Thread(guardedSuspension.getSupplier(), "supplier").start();
 // log.info(guardedSuspension.getResult().toString());
 log.info("end");
 ```
-
-
-
 
 ## 拓展-超时
 

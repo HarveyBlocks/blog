@@ -7,8 +7,6 @@
 -   content - 插入生成的内容
 -   counter() 或 counters() 函数 - 将计数器的值添加到元素
 
-
-
 ## 示例
 
 ```css
@@ -16,8 +14,6 @@ h1 {
     /*创建一个计数器*/
     counter-reset: 二级标题计数器;
 }
-
-
 
 h2::before {
     counter-increment: 二级标题计数器; /*在每个h2标签前递增*/

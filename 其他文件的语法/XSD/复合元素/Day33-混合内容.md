@@ -4,11 +4,9 @@
 
 ```xml
 <xs:complexType mixed="true">
-    
+
 </xs:complexType>
 ```
-
-
 
 示例: 
 

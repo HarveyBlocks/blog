@@ -204,11 +204,11 @@ let func4: (m: string | number) => number = pickCard;
     class A extends C {
         private b: number;
     }
-    
+
     class B {
         private b: number;
     }
-    
+
     let a: A;
     let b: B;
     let c: C;
@@ -242,10 +242,6 @@ let reverse = function<U>(y: U): U {
 
 identity = reverse; // OK
 ```
-
-
-
-
 
 ## any
 

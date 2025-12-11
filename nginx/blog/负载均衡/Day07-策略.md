@@ -13,8 +13,6 @@
 
 ### 轮询
 
-
-
 ### 加权
 
 常用于基于服务器硬件性能
@@ -103,11 +101,9 @@ yum已经安装了`--with-stream`
 
 ```nginx
 stream{
-    
+
 }
 ```
-
-
 
 ### upstream
 
@@ -119,14 +115,12 @@ stream{
 
 端口81指向Server1,Server2, 端口82指向Server3
 
-
-
 ### 基础配置
 
 ```nginx
 http {
 	# ...
-	
+
     # 不一定使用http{}里的server作为目标, 仅仅是因为便于测试
     server {
 		listen   8001;
@@ -152,8 +146,7 @@ http {
 			return 200 '<h1>8003</h1>';
 		}
 	}
-    
-	
+
 }
 stream {
     upstream test_stream1 {
@@ -177,10 +170,6 @@ stream {
 ```
 
 能负载均衡, 但不是轮询, 周期有点长
-
-
-
-
 
 `http`里的`server`和`stream`里的`server`如果监听同一个端口, 那么会代理到哪里去?
 

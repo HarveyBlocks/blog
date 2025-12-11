@@ -28,17 +28,11 @@ centos-redis:0>zAdd stu 63 Mary 99 Salary
 "2"
 ```
 
-
-
-
-
 ### 删除
 
 ```bash
 zRem zSet member
 ```
-
-
 
 ### 获取
 
@@ -56,11 +50,7 @@ centos-redis:0>zRevRank stu Jhon
 "2"
 ```
 
-
-
 #### score值
-
-
 
 ```bash
 zScore zSet member
@@ -71,16 +61,12 @@ centos-redis:0>zScore stu Jhon
 "79"
 ```
 
-
-
 #### *score值* 范围内的元素
 
 ```bash
 zRangeByScore zSetmin max
 zRevRangeByScore zSet min max
 ```
-
-
 
 越往下, 成绩越高
 
@@ -98,18 +84,12 @@ centos-redis:0>zRangeByScore stu 60 100
 6) "Jay"
 ```
 
-
-
-
-
 #### *排名* 范围内的元素
 
 ```bash
 zRange zSet last first
 zRevRange zSet last first
 ```
-
-
 
 -   前三名
 
@@ -120,11 +100,7 @@ centos-redis:0>zRevRange stu 0 2
 3) "Mike"
 ```
 
-
-
 ### 元素个数
-
-
 
 #### 所有元素个数
 
@@ -137,17 +113,11 @@ centos-redis:0>zCard stu
 "6"
 ```
 
-
-
 #### *score值* 范围内的元素个数
-
-
 
 ```bash
 zCount zSet min max
 ```
-
-
 
 ```bash
 centos-redis:0>zCount stu 0 60
@@ -155,10 +125,6 @@ centos-redis:0>zCount stu 0 60
 centos-redis:0>zCount stu 0 59
 "0"
 ```
-
-
-
-
 
 ### 自增自减
 
@@ -173,10 +139,6 @@ centos-redis:0>zIncrBy stu -1 Amy
 "59"
 ```
 
-
-
-
-
 ### 倒置
 
 -   这些命令有关排序的都是默认升序
@@ -189,10 +151,6 @@ centos-redis:0>zIncrBy stu -1 Amy
 
 -   这些范围查询都是左闭右闭
 
-
-
-
-
 ## 集合关系
 
 ### 交
@@ -201,23 +159,13 @@ centos-redis:0>zIncrBy stu -1 Amy
 zInter zSet1 zSet2
 ```
 
-
-
-
-
 ### 并
 
 ```bash
 zUnion zSet1 zSet2
 ```
 
-
-
-
-
 ### 差
-
-
 
 ```bash
 zDiff zSet1 zSet2

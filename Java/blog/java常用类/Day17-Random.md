@@ -11,12 +11,6 @@
 | int        | nextInt()          | 返回下一个伪随机数，均匀分布 int值。 正负21个亿。            |
 | int        | nextInt(int bound) | 返回伪随机的，均匀分布 int值,0（含）和指定值（不包括）       |
 
-
-
-
-
-
-
 ```java
 package LearnCollections;
 

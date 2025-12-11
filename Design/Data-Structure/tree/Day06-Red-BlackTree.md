@@ -87,8 +87,6 @@ bool RedBlackTree<T>::isRedBlackTree(BinaryTreeNode<T> *root) {
 
 AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树, AVL为了达到严格的平衡, 插入和删除更加复杂
 
-
-
 ## 哨兵Nil
 
 ![image-20240628001742607](../../assets/Day05-Red-BlackTree/image-20240628001742607.png)
@@ -124,11 +122,11 @@ AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树,
             对旋转点和旋转中心点红变黑黑变红
 
             在LR型中, 旋转点和旋转中心点指第二步的右旋中的旋转点和旋转中心点
-        
+
         3.  将指针指向节点, 继续判定
 
     -   A的叔节点是红色的
-    
+
         1.  将爷, 父, 叔变色(红变黑, 黑变红)
         2.  将指针指向爷爷节点, 继续判定
 
@@ -246,9 +244,6 @@ switch (removeType) {
 return false;
 ```
 
-
-
-
 ### 无子节点的黑色节点的删除
 
 ### 黑色的兄弟节点
@@ -260,8 +255,6 @@ return false;
 父亲是根节点, 根节点变黑, 结束调整
 
 父亲是黑色节点, 将黑色节点作为新一次无子节点的黑色节点删除后的调整的起点, 进入循环
-
-
 
 #### 兄弟有红孩子
 
@@ -408,8 +401,6 @@ void RedBlackTree<T>::fixBlackNoneChildNodeRemove(Stack<BinaryTreeNode<T> *> tra
     }
 }
 ```
-
-
 
 ```cpp
 template<class T>

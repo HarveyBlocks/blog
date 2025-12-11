@@ -2,8 +2,6 @@
 
 >   aggregations
 
-
-
 ## 聚合种类
 
 >   聚合的字段一定不能用来分词
@@ -20,8 +18,6 @@
     -   `stats`
 -   管道 ( pipeliine ) 聚合
     -   其他聚合结果为基础做聚合
-
-
 
 高
 
@@ -48,8 +44,6 @@ GET /索引库名/_search
   }
 }
 ```
-
-
 
 ```json
 GET /hotel/_search
@@ -134,10 +128,6 @@ GET /hotel/_search
 }
 ```
 
-
-
-
-
 -   `range`也可以用在聚合类型
 
 ```json
@@ -169,8 +159,6 @@ GET /hotel/_search
 }
 ```
 
-
-
 **默认情况下, Bucket聚合会对索引库的所有文档做聚合, 可以限定聚合文档范围, 减少对内存的压力**
 
 ```json
@@ -182,7 +170,7 @@ GET /hotel/_search
         "value": "上海"
       }
     }
-    
+
   }, 
   "size": 0,
   "aggs": {
@@ -198,8 +186,6 @@ GET /hotel/_search
   }
 }
 ```
-
-
 
 ### Metric 聚合
 
@@ -218,7 +204,7 @@ GET /索引库名/_search
           "需要被排序的聚合结果名": "排序方式"
         }
       },
-        
+
       "aggs": {
         "聚合结果名": {
           "聚合统计方式名,如avg,max,min,sum,stats(包含前四)": {
@@ -231,14 +217,10 @@ GET /索引库名/_search
 }
 ```
 
-
-
-
-
 ```json
 GET /hotel/_search
 {
-  
+
   "size": 0,
   "aggs": {
     "brandAgg": {
@@ -249,7 +231,7 @@ GET /hotel/_search
           "scoreAvg": "desc"
         }
       },
-      
+
       "aggs": {
         "scoreAvg": {
           "avg": {
@@ -262,12 +244,10 @@ GET /hotel/_search
 }
 ```
 
-
-
 ```json
 GET /hotel/_search
 {
-  
+
   "size": 0,
   "aggs": {
     "brandAgg": {
@@ -278,7 +258,7 @@ GET /hotel/_search
           "scoreStatus.avg": "desc"
         }
       },
-      
+
       "aggs": {
         "scoreStatus": {
           "stats": {
@@ -290,8 +270,6 @@ GET /hotel/_search
   }
 }
 ```
-
-
 
 ## Rust Client
 
@@ -335,8 +313,6 @@ public void getData() throws IOException {
     });
 }
 ```
-
-
 
 ## 聚合的应用
 

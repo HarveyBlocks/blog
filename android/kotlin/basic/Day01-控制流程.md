@@ -14,8 +14,6 @@ var|val identifier[: type] = initialization;
 
 Kotlin居然不支持声明和初始化分开, 还必须在声明的时候初始化
 
-
-
 可以在文件层声明变量
 
 ```ts
@@ -30,8 +28,6 @@ fun main() {
     println("main"); // 后
 }
 ```
-
-
 
 文件级的变量是在什么时机被加载的呢? 文件加载的时候
 
@@ -63,8 +59,6 @@ const val SUBSYSTEM_DEPRECATED: String = "This subsystem is deprecated"
 -   可用于局部变量
 -   可用于文件级变量
 -   可用于类的属性成员
-
-
 
 使用反射技术判断有关变量是否已经初始化
 
@@ -160,8 +154,6 @@ when (x) {
 }
 ```
 
-
-
 在when的主体上, 可以进行声明语句
 
 ```kotlin
@@ -169,8 +161,6 @@ when (val a = x + y) {
     1 -> "1"
 }
 ```
-
-
 
 #### 返回值
 
@@ -194,7 +184,7 @@ val a = when {
 
 ```kotlin
 for (variable[: Type] in Iterable|Iterator){
-    
+
 } 
 ```
 

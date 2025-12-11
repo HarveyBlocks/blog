@@ -26,8 +26,6 @@ SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 条件;
 
 -   显式内连接有DataGrip智能加持
 
-
-
 -   你就说JOIN-WHERE配能不能运行吧
 
 ```mysql

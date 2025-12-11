@@ -51,8 +51,6 @@
 
     ![image-20240101132353864](../assets/Day06-netstat/image-20240101132353864.png)
 
-    
-
 ## netstat命令
 
 -   安装

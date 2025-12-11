@@ -27,8 +27,7 @@
     public void test(){
         ApplicationContext applicationContext =
             new ClassPathXmlApplicationContext("beans.xml");//这一步就完成创建
-    
-    
+
         UserService userService = (UserService) applicationContext.getBean("userService");
         TestLogger.LOGGER.info(""+userService);
     }
@@ -44,8 +43,6 @@
 
 # BeanFactory的继承体系
 
-
-
 ## DefaultListableBeanFactory
 
 -   看上面张图的第二个框灰色的字
@@ -57,10 +54,6 @@ private final Map<String, BeanDefinition> beanDefinitionMap;
 
 -   BeanDefinition
     -   Bean定义对象,对xml文件标签里的内容进行解析,并封装到一个实体类里
-
-
-
-
 
 ## ApplicationContext的继承体系
 

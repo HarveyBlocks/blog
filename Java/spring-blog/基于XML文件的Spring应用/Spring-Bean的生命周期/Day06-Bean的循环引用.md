@@ -10,7 +10,6 @@
 
 -   这个死循环,这个不好
 
-
 ## 解决方案-三级缓存
 
 ### 简介
@@ -27,20 +26,18 @@ public class
     extends SimpleAliasRegistry 
     implements SingletonBeanRegistry {
     ...
-        
+
     //一级缓存->存储完整Bean的单例池
     private final Map<String, Object> singletonObjects = new ConcurrentHashMap(256);
-    
+
     //二级缓存->早期单例池,Bean还没有创建完毕,不是完整的Bean
     private final Map<String, Object> earlySingletonObjects = new ConcurrentHashMap(16);
-    
+
     //三级缓存->单例Bean的工厂池,缓存半成品对象,对象未被引用,使用时在通过工厂创建Bean
     private final Map<String, ObjectFactory<?>> singletonFactories = new HashMap(16);
     ...
 }
 ```
-
-
 
 -   补充ObjectFactory函数式接口
 

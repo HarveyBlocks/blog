@@ -36,8 +36,6 @@ Poller --socketProcessor--> work2
 
 TaskQueue拓展了阻塞队列
 
-
-
 ```mermaid
 graph LR
 a(添加新任务)-->cc{{提交任务<核心线程数}}
@@ -46,8 +44,6 @@ cc--否-->cm{{提交任务<最大线程数}}
 cm--是-->create[创建IDLE线程]
 cm--否-->p
 ```
-
-
 
 ### 异常处理机制
 
@@ -60,8 +56,6 @@ cm--否-->p
 ### 配置
 
 `server.xml`
-
-
 
 ```xml
 <conector port="8080" protocol="HTTP/1.1" 
@@ -76,9 +70,6 @@ cm--否-->p
 |`minSpareThreads`		|	10 	|	核心线程数|
 |`maxThreads `		|	200 |	最大线程数|
 |`executor` 		|	-	| Executor  name引用，用来引用下面的 Executor |
-
-
-
 
 ```xml
 <Executor name="tomcatThreadPool" namePrefix="catalina-exec" 

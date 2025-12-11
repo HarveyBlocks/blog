@@ -19,8 +19,6 @@ STL是泛型程序设计的一个范例
     -   双向链表
     -   有序
 
-
-
 -   set
     -   hash_set
     -   multimap 多重集合
@@ -31,8 +29,6 @@ STL是泛型程序设计的一个范例
     -   无序
 
 ### 运算符
-
-
 
 ### iterator
 
@@ -46,8 +42,6 @@ container#end() ;// 指向容器尾的下一个(不存在)的迭代器
 ```cpp
 T operator *(); // 被重载的运算符方法
 ```
-
-
 
 ### 顺序容器
 
@@ -94,15 +88,11 @@ assign(beg,end) //将[beg; end)区间中的数据赋值给c。
 assign(index,element) //将n个elem的拷贝赋值给c
 ```
 
-
-
 #### 判断
 
 ```cpp
 empty(); // 是否为空
 ```
-
-
 
 #### vector
 
@@ -141,8 +131,6 @@ empty(); // 是否为空
     }
     ```
 
-
-
 #### deque
 
 双端队列, 允许插队, 允许从头入, 从尾出
@@ -154,15 +142,11 @@ push_front();
 pup_back();
 ```
 
-
-
 stl的\<algorithm\>
 
 ```cpp
 copy(values.begin(), values.end(), output); // 左闭右开
 ```
-
-
 
 ```cpp
 deque<double> values;    //声明一个双精度型deque序列容器
@@ -204,8 +188,6 @@ void splice (iterator position, list& x);
 void splice (iterator position, list& x, iterator i);
 void splice (iterator position, list& x, iterator first, iterator last);  // target src start end
 ```
-
-
 
 ```java
 list<int> my_list1, my_list2;
@@ -275,8 +257,6 @@ copy(intMultiset.begin(), intMultiset.end(), output); //输出容器中全部元
 cout << endl;
 ```
 
-
-
 #### cmp
 
 法一定义新类cmp, 重载括号表明比较方式
@@ -325,8 +305,6 @@ int main() {
 
 法二, 在类中重载小于号运算符
 
-
-
 #### map
 
 ```cpp
@@ -349,8 +327,6 @@ for (const auto &item: intStrMap) {
 }
 cout << endl;
 ```
-
-
 
 ### multimap
 
@@ -385,21 +361,21 @@ multimap<int, string>::iterator it = m_map.equal_range(2).first;
         ```cpp
         #include <iostream>
         #include <queue>
-        
+
         using namespace std;
-        
+
         struct Node {
             int x, y;
-        
+
             explicit Node(int a = 0, int b = 0) : x(a), y(b) {}
         };
-        
+
         struct cmp {
             bool operator()(Node a, Node b) {
                 return a.x == b.x ? a.y > b.y : a.x > b.x;
             }
         };
-        
+
         int main() {
             priority_queue<Node, vector<Node>, cmp> q;
             for (int i = 0; i < 10; ++i) {
@@ -426,10 +402,6 @@ multimap<int, string>::iterator it = m_map.equal_range(2).first;
 classDiagram
 Dqueue<|--stack
 ```
-
-
-
-
 
 ## Iterator
 
@@ -501,8 +473,6 @@ int main(){
     return 0;
 }
 ```
-
-
 
 # 例
 

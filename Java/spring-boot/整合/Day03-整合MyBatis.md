@@ -40,8 +40,6 @@
 
 6.  测试
 
-
-
 ## 注解开发
 
 -   不需要配置MyBatis的信息
@@ -100,19 +98,17 @@ class BootMybatisApplicationTests {
     spring.datasource.url: jdbc:mysql://localhost:3306/company?serverIimezone-UTC
     ```
 
-    
-
 ## XML文件开发
 
 -   去掉注解的Mapper, 其余一样
 
     ```java
     package com.harvey.bootmybatis.dao;
-    
+
     import com.harvey.bootmybatis.domain.User;
     import org.apache.ibatis.annotations.Mapper;
     import java.util.List;
-    
+
     @Mapper
     public interface UserMapper {
         List<User> findAll();
@@ -126,7 +122,7 @@ class BootMybatisApplicationTests {
     <!DOCTYPE mapper
             PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-    
+
     <mapper namespace="com.harvey.bootmybatis.dao.UserMapper">
         <select id="findAll" resultType="com.harvey.bootmybatis.domain.User">
             select * from user;
@@ -144,14 +140,14 @@ class BootMybatisApplicationTests {
         url: jdbc:mysql://localhost:3306/company
         username: root
         password: 123456
-    
+
     #mybatis配置
     mybatis:
       # config-location: 指定MyBatis的核心配置文件,但是这里没有这个文件
-      
+
       # mapper映射文件路径,但是我把Mapper接口和XML映射文件放在同一个包下,这个不用写
       # mapper-locations: classpath:com/harvey/bootmybatis/dao/*.xml
-      
+
       # 包扫描实体类
       type-aliases-package: com.harvey.bootmybatis.domain
     ```

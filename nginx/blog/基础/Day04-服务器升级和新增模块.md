@@ -4,8 +4,6 @@
 2.  对压缩包解压缩
 3.  安装两个Nginx, 由于默认的文件目录是`/usr/sbin/Nginx`, 和版本无关, 所以还是指定一下
 
-
-
 1.  老版本的Nginx进行备份
 
     ````shell
@@ -29,10 +27,6 @@
     ```shell
     /usr/sbin/nginx -s quit
     ```
-
-
-
-
 
 ### 使用Nginx的安装目录的make命令完成升级
 

@@ -4,8 +4,6 @@
 - 无下标
 - 元素可重复
 
-
-
 E -  此集合中元素的类型 (?)
 
 ## 实例化
@@ -24,8 +22,6 @@ public class Demo01 {
 }
 ```
 
-
-
 ## 方法
 
 没有用于"替换"的方法
@@ -37,15 +33,12 @@ public class Demo01 {
 | int               | size()    | 返回a中的元素数。            | a.size()    |
 | boolean           | isEmpty() | 若此集合为空，则返回 true 。 | a.isEmpty() |
 
-
 ### 增加元素
 
 | Modifier and Type | Method                            | Description                  | Example            |
 | ----------------- | --------------------------------- | ---------------------------- | ------------------ |
 | boolean           | add(E e)                          | 添加e对象。                  | a.add(e)/=a.add(e) |
 | boolean           | addAll(Collection<? extends E> c) | 将b中的所有元素添加到a集合。 | a.addAll(c)        |
-
-
 
 ```java
 collection.add("苹果");
@@ -68,8 +61,6 @@ System.out.println(collection);
 | void              | clear()                    | 从此集合中删除所有元素。                                | a.clear()      |
 | boolean           | removeAll(Collection<?> c) | 在a中移除ac同时存在的元素                               | a.removeAll(c) |
 | boolean           | remove(Object o)           | **从前往后**从该集合中删除o的**单个**实例（如果存在）。 | a.remove(o)    |
-
-
 
 ```java
 collection.remove("西瓜");
@@ -138,18 +129,12 @@ System.out.println(collection.size());//0
 it = collection.iterator();
 ```
 
-
-
-
-
 ### 判断
 
 | Modifier and Type | Method             | Description                                | Example       |
 | ----------------- | ------------------ | ------------------------------------------ | ------------- |
 | boolean           | contains(Object o) | 如果此集合包含指定的o元素，则返回 true 。  | a.contains(o) |
 | boolean           | equals(Object o)   | 将指定的对象与此集合进行比较以获得相等性。 | a.equals(o)   |
-
-
 
 ```java
 System.out.println(collection.contains("西瓜"));//true
@@ -160,9 +145,6 @@ System.out.println(collection.contains("西瓜"));//true
 | Modifier and Type | Method    | Description                          | Example     |
 | ----------------- | --------- | ------------------------------------ | ----------- |
 | Object[]          | toArray() | 返回一个包含此集合中所有元素的数组。 | a.toArray() |
-
-
-
 
 ## 以自建类为元素
 

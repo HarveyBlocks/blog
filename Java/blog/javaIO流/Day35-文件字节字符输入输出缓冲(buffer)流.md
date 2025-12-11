@@ -6,19 +6,11 @@
 
 ## 字节缓冲输入输出流
 
-
-
 ![image-20231014145430962](../../assets/Day35/image-20231014145430962.png)
 
 ### API
 
-
-
 ![image-20231014145637992](../../assets/Day35/image-20231014145637992.png)
-
-
-
-
 
 ```java
 InputStream bufferedInputStream = 
@@ -34,11 +26,7 @@ InputStream bufferedInputStream =
 
 ### API(功能新增!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
 
-
-
 ![image-20231014151109479](../../assets/Day35/image-20231014151109479.png)
-
-
 
 ![image-20231014152042510](../../assets/Day35/image-20231014152042510.png)
 

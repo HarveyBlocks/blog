@@ -2,13 +2,8 @@
 
 ## 构建神经网络模型
 
-
-
-
-
 ```python
 from util.time import time_advice
-
 
 def create_data():
     import torch
@@ -27,11 +22,9 @@ def create_data():
     labels = labels.view(data_amount, 1).float()
     return inputs, labels
 
-
 # 标准化, 使学习更快
 def standardize(data):
     return (data - data.mean()) / data.std()
-
 
 @time_advice
 def my_module_test():
@@ -64,17 +57,13 @@ def my_module_test():
     module_file = "module.pkl"
     torch.save(module.state_dict(), module_file)
 
-
 if __name__ == "__main__":
     tensor_test()
 
 ```
 
-
-
 ```python
 from torch import nn
-
 
 class MyModule(nn.Module):
 
@@ -216,8 +205,6 @@ class MyModule(nn.Module):
 
 ```
 
-
-
 ## 随机Learning-rate下降
 
 $$
@@ -244,12 +231,6 @@ b = p-pq
 l = \frac{last}{init - last}
 $$
 
-
-
-
-
-
-
 ## 简化Module
 
 ```python
@@ -274,15 +255,10 @@ def mini_batch_test():
     loss_avg = my_sequential.test_data(inputs, labels, cost)
     print("test:", float(1 - loss_avg / labels.var())**0.5 * 100, "%")
 
-
 if __name__ == "__main__":
     mini_batch_test()
 
 ```
-
-
-
-
 
 ```python
 class MySequentialModule(nn.Sequential):
@@ -366,17 +342,11 @@ class MySequentialModule(nn.Sequential):
 
 ```
 
-
-
-
-
 ## 分类算法
 
 识别图片
 
 结果是一个列表, 0-9. 看是该数字的概率
-
-
 
 ### 下载文件
 
@@ -396,8 +366,6 @@ if not (PATH / FILENAME).exists():
         content = requests.get(URL + FILENAME).content
         (PATH / FILENAME).open("wb").write(content)
 ```
-
-
 
 ### 解压文件
 
@@ -514,7 +482,7 @@ class MnistModule(nn.Module):
     loss_fun = functional.cross_entropy
     net = MnistModule(functional)
     print(net)
-    
+
     # 打印参数
     for name, parameter in net.named_parameters():
         print(name, parameter, parameter.size())
@@ -533,7 +501,7 @@ def loss_batch(self, loss_fun, x_batch, y_batch, opt=None):
         opt.zero_grad()
 
     return loss.item(), len(x_batch)python
- 
+
 ```
 #### 训练与测试
 
@@ -555,7 +523,6 @@ def fit(self, steps, loss_fun, opt, train_loader, valid_loader):
         val_loss = np.sum(np.multiply(losses, nums)) / np.sum(nums)
         print('当前step:'+str(step), '验证集损失：'+str(val_loss))
 ```
-
 
 #### 测试代码
 

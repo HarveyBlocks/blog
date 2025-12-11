@@ -26,13 +26,9 @@ Windows菜单 -> Windows系统 -> 命令提示符（*右键*）-> 更多 -> 以�
 
 <img src="assets/image-20230731175600505.png" alt="image-20230731175600505" style="zoom:50%;" />
 
-
-
 ### 作用
 
 可以获得命令的最高权限
-
-
 
 ## 常用的Dos命令
 
@@ -40,8 +36,6 @@ Windows菜单 -> Windows系统 -> 命令提示符（*右键*）-> 更多 -> 以�
 - 右键即粘贴，ctrl+v不管用的
 
 ### 指向文件切换
-
-
 
 ```bush
 #直接输入盘的位置
@@ -81,15 +75,11 @@ cd ..
 cd 目标文件/文件夹名
 ```
 
-
-
 <img src="assets/image-20230731183302925.png" alt="image-20230731183302925" style="zoom:50%;" />
 
 ---
 
 ### 清理屏幕与退出
-
-
 
 ```bush
 #清理屏幕（clear screen）
@@ -98,16 +88,12 @@ cls
 exit
 ```
 
-
-
 ### 查看
 
 ```bush
 #查看电脑IP
 ipconfig
 ```
-
-
 
 ### 打开（可在指向任意文件下）
 
@@ -120,15 +106,11 @@ mspaint
 notepad
 ```
 
-
-
 ### ping命令
 
 ```bush
 ping www.baidu.com
 ```
-
-
 
 ### 文件与文件夹操作
 

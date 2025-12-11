@@ -4,8 +4,6 @@
 
 ## 引入依赖
 
-
-
 ```xml
 <!--自定义链路追踪-->
 <dependency>
@@ -14,8 +12,6 @@
     <version>8.14.0</version>
 </dependency>
 ```
-
-
 
 ## API
 

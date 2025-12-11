@@ -17,8 +17,6 @@
 
 健康=心跳检测
 
-
-
 ## 安装
 
 1.  [keepalived](https://keepalived.org)
@@ -38,8 +36,6 @@
     ./configure --syconf=/etc --prefix=/usr/local
     make && make install
     ```
-
-
 
 yum也有, 不过版本很低, 17年的版本
 
@@ -111,7 +107,7 @@ global_defs {
    smtp_connect_timeout 30
    # 运行keepalived服务器的一个标识，可以用作发送邮件的主题信息, 随意, 不重复
    router_id LVS_DEVEL										# 需改, 唯一
-   
+
    # 默认是不跳过检查。检查收到的VRRP通告中的所有地址可能会比较耗时，设置此命令的意思是，如果通告与接收的上一个通告来自相同的master路由器，则不执行检查(跳过检查)
    vrrp_skip_check_adv_addr
    # 严格遵守VRRP协议。
@@ -156,10 +152,6 @@ vrrp_instance VI_1 {
 }
 ```
 
-
-
-
-
 ## 启动
 
 两台服务器都要装keepalived,都要配置, 启动后 Master上会有一个虚拟IP, 然后两边都启动
@@ -189,8 +181,6 @@ vrrp_script 脚本名称
 	# 降低起优先级
 }
 ```
-
-
 
 ### 编写shell脚本
 

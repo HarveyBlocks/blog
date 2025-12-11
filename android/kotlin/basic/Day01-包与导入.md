@@ -30,8 +30,6 @@ package org.example
 -   顶层属性
 -   `object`声明中的属性和函数(优点类似于静态成员)
 
-
-
 ```kotlin
 import org.example.Message 
 ```

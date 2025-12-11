@@ -29,13 +29,7 @@
 
 3.  Tomcat把Cookie的数据拿出来,再响应到浏览器中去
 
-
-
-
-
 #### 试验
-
-
 
 ```java
 @WebServlet(value = "/Servlet1")
@@ -58,41 +52,21 @@ public class Servlet1 extends HttpServlet {
 }
 ```
 
-
-
 ### 在浏览器查看Cookie
 
 <img src="../../../assets/Day41-Cookie/image-20231119131528346.png" alt="image-20231119131528346" style="zoom:50%;" />
 
-
-
 ![image-20231119131610881](../../../assets/Day41-Cookie/image-20231119131610881.png)
-
-
 
 ![image-20231119131643180](../../../assets/Day41-Cookie/image-20231119131643180.png)
 
-
-
 ![image-20231119131734333](../../../assets/Day41-Cookie/image-20231119131734333.png)
-
-
 
 ![image-20231119131803846](../../../assets/Day41-Cookie/image-20231119131803846.png)
 
-
-
 ![image-20231119131859935](../../../assets/Day41-Cookie/image-20231119131859935.png)
 
-
-
-
-
-
-
 ![image-20231119131934893](../../../assets/Day41-Cookie/image-20231119131934893.png)
-
-
 
 ![image-20231119131952562](../../../assets/Day41-Cookie/image-20231119131952562.png)
 
@@ -110,8 +84,6 @@ public class Servlet1 extends HttpServlet {
     Cookie.getName();
     Cookie.getValue();
     ```
-
-    
 
 #### 实践
 
@@ -184,10 +156,6 @@ public class Servlet2 extends HttpServlet {
 -   设置了1小时
 -   但实际上我设置了每次关闭时删除所有Cookie记录,所以没法实验
 
-
-
-
-
 ### Cookie存储中文
 
 -   Cookie不能直接存储中文(尊嘟假嘟?0.o)
@@ -206,10 +174,6 @@ cookie.setMaxAge(60*60);
 // 2. 发送Cookie数据
 response.addCookie(cookie);
 ```
-
-
-
-
 
 然后获取Cookie的地方记得解码就行
 

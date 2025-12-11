@@ -76,7 +76,6 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.Arrays;
 
-
 /**
  * 客户端,和Service类连接
  * @author HarveyBlocks
@@ -116,10 +115,6 @@ public class Client {
     }
 }
 ```
-
-
-
-
 
 ### 多发多收
 
@@ -179,7 +174,6 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.Scanner;
 
-
 /**
  * 客户端,和Service类连接
  * @author HarveyBlocks
@@ -214,7 +208,6 @@ public class Client {
 
     }
 
-
     public void sendMessage(String string) throws IOException {
         byte[] bytes = string.getBytes();
         DatagramPacket packet = new DatagramPacket(
@@ -226,7 +219,6 @@ public class Client {
 
         System.out.println("Client send message succeed");
         //释放资源
-
 
     }
 }

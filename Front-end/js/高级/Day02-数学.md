@@ -40,8 +40,6 @@ Infinity （或 -Infinity）是 JavaScript 在计算数时超出最大可能数�
     console.log((123).toFixed(6)); // 123.000000
     ```
 
-
-
 ## 数值属性
 
 | 属性              | 描述                             |
@@ -55,8 +53,6 @@ Infinity （或 -Infinity）是 JavaScript 在计算数时超出最大可能数�
 ```js
 console.log(Number.POSITIVE_INFINITY);
 ```
-
-
 
 ## 数学
 

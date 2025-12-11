@@ -7,8 +7,6 @@
 -   查找快
 -   支持交集并集差集
 
-
-
 ## 操作
 
 ### 增
@@ -22,8 +20,6 @@ Sadd Set member
 "3"
 ```
 
-
-
 ### 移除
 
 ```bash
@@ -34,8 +30,6 @@ SRem Set member
 0.0.0.0:0>sRem Set1 a
 "1"
 ```
-
-
 
 ### 获取
 
@@ -50,23 +44,17 @@ SCARD Set
 
 返回set中元素个数
 
-
-
 ```bash
 sMember Set
 ```
 
 查看元素
 
-
-
 ```bash
 SisMember Set member
 ```
 
 判断一个成员是否存在于set中
-
-
 
 ```
 0.0.0.0:0>sMembers Set1
@@ -79,11 +67,7 @@ SisMember Set member
 "2"
 ```
 
-
-
 ## 集合关系
-
-
 
 ![image-20231029120848794](../../assets/image-20231029120848794.png)
 
@@ -93,23 +77,13 @@ SisMember Set member
 sInter Set1 Set2
 ```
 
-
-
-
-
 ### 并
 
 ```bash
 sUnion Set1 Set2
 ```
 
-
-
-
-
 ### 差
-
-
 
 ```bash
 sDiff Set1 Set2

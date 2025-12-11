@@ -17,17 +17,11 @@
 -   如何动画
     -   定义*缓动函数*`transition-timing-function`，比如线性或先快后
 
-
-
 ## 动画性
 
 为某些属性赋予动画无意义，称这些属性[*无动画性*](Day05-动画#动画性)
 
-
-
 ## 语法
-
-
 
 | property                     | description                                                | detail                                                       |
 | ---------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------ |
@@ -57,8 +51,6 @@ div {
   transition: perspective-origin 1s;
 }
 ```
-
-
 
 <video src="../assets/Day05-过渡/演示给透视原点属性增加过渡.mp4" style="border: 2px solid"></video>
 
@@ -101,8 +93,6 @@ div {
   transition-duration: 3s, 5s, 3s, 5s;
 }
 ```
-
-
 
 如果属性列表不如其他配置长
 
@@ -162,8 +152,6 @@ document.addEventListener(
   transition: transform 1s;
 }
 ```
-
-
 
 ## 监听渐变结束
 

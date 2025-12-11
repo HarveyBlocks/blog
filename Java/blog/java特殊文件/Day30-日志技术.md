@@ -31,8 +31,6 @@
 
 -   logback.xml
 
-
-
 # 日志技术
 
 ## 日志的作用
@@ -78,8 +76,6 @@
 - logback-access
   - 提供HTTP访问日志功能
 
-
-
 ### 使用Logback
 
 > 需求:记录系统运行信息
@@ -88,8 +84,6 @@
   - slf4j-api日志接口
   - logback-core
   - logback-class
-
-
 
 ```java
 package learnSpecialDoc;
@@ -176,7 +170,6 @@ public class LearnLog {
         <appender-ref ref="FILE" />
     </root>
 
-
 </configuration>
 ```
 
@@ -185,8 +178,6 @@ public class LearnLog {
 ![image-20231005010410191](../../assets/Day31/image-20231005010410191.png)
 
 为**OFF、FATAL(严重错误)、ERROR、WARN、INFO、DEBUG、ALL**或者您定义的级别。Log4j建议只使用四个级别，优先级 从高到低分别是 **ERROR、WARN、INFO、DEBUG**。 
-
-
 
 - 只有日志级别**高于等于核心配置文件配置的日志级别**,才会被记录
 

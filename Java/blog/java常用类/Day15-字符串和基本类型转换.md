@@ -10,8 +10,7 @@ public class Main {
         String str1 = n1 + "";
         //法二：Integer中的静态方法toString()
         String str2 = Integer.toString(n1);
-        
-        
+
         //进制转换,把15转化为16进制(任意进制)
         String str3 = Integer.toString(15, 16);//str3=f
         //进制转换,把15转化为二进制
@@ -71,7 +70,7 @@ public class Main {
         System.out.println(Integer.parseInt(str1)-1);//149
         int num = Integer.parseInt(str1);
         System.out.println(num-1);//149
-        
+
         /*
         String str1="15O";//十五欧
         System.out.println(Integer.parseInt(str1)-1);
@@ -81,8 +80,6 @@ public class Main {
 
 }
 ```
-
-
 
 double亦如此，其余自己推
 
@@ -108,10 +105,10 @@ boolean转换成字符类型的时候
 public class Main {
     public static void main(String[] args) {
         String string = "true";
-        
+
         boolean flag = Boolean.parseBoolean(string);
         System.out.println(flag);//true
-        
+
         flag = Boolean.parseBoolean("stupid");
         System.out.println(flag);//false
     }

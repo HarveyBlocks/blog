@@ -14,8 +14,6 @@
 
 ![image-20240502230845405](../../assets/Day10-Ribbon/image-20240502230845405.png)
 
-
-
 ```xml
 <dependency>
     <groupId>com.netflix.ribbon</groupId>
@@ -32,11 +30,7 @@ public RestTemplate restTemplate(){
 }
 ```
 
-
-
 ## 负载均衡原理
-
-
 
 ### 流程
 

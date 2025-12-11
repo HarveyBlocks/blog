@@ -1,7 +1,5 @@
 # 列表
 
-
-
 | short | for all                | description    |
 | ----- | ---------------------- | -------------- |
 | li    | list item              | 列表项目       |
@@ -11,8 +9,6 @@
 | dt    | definition term        | 自定义列表组   |
 | dd    | definition description | 自定义列表描述 |
 | nl    | navigation lists       | 导航列表       |
-
-
 
 ## 无序列表示例
 
@@ -41,8 +37,6 @@
     <li>Coffee</li>
     <li>Milk</li>
 </ol>
-
-
 
 ## 自定义列表示例
 

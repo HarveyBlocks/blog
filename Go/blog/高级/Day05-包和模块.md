@@ -24,15 +24,11 @@ go run main.go
 
 ```
 
-
-
 编译多个文件
 
 ```go
 go run main.go calc.go
 ```
-
-
 
 编译运行包下所有文件
 
@@ -56,9 +52,9 @@ go run .
 
     ```
     module Hello
-    
+
     go 1.22
-    
+
     ```
 
     这个文件记录当前模块的模块名以及所有依赖包的版本。
