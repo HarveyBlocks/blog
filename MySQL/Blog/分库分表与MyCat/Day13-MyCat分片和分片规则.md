@@ -464,7 +464,7 @@ tb_log
 
     依此创造一个数组做映射:
 
-    ![image-20231211152247072](D:\IT_study\blog\MySQL\assets/Day13-MyCat分片和分片规则/image-20231211152247072.png)
+    ![image-20231211152247072](..\..\assets/Day13-MyCat分片和分片规则/image-20231211152247072.png)
 
 
 

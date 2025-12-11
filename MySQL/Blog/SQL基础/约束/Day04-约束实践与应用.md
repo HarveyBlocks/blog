@@ -1,8 +1,10 @@
+# 约束实践
+
 ![image-20231007195655689](../../../assets/Day04/image-20231007195655689.png)
 
 允许空值null                                                                                                                                NULL
 
-![image-20231008012617909](../../../assets/Day04/image-20231008012617909.png)
+
 
 ```mysql
 CREATE TABLE 表名(

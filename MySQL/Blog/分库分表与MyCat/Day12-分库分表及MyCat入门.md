@@ -138,7 +138,7 @@ chmod 777 指定文件jar包
 
 MyCat中间件服务器
 
-![image-20231210155621931](D:\IT_study\blog\MySQL\assets/Day12-分库分表/image-20231210155621931.png)
+![image-20231210155621931](../..\assets/Day12-分库分表/image-20231210155621931.png)
 
  
 
@@ -252,21 +252,21 @@ CREATE TABLE TB_ORDER(
 
 >   使用NotePad++的插件,连接服务器,直接打开文本文件,编辑之后自动同步到服务器
 
-![image-20231210173121183](C:/Users/27970/Desktop/Day12-分库分表及MyCat入门/image-20231210173121183.png)
+![image-20231210173121183](../../assets/Day12-分库分表/image-20231210173121183.png)
 
 安装下
 
-![image-20231210173229031](C:/Users/27970/Desktop/Day12-分库分表及MyCat入门/image-20231210173229031-17479905069081.png)
+![image-20231210173229031](../../../cg/assets/Day12-分库分表及MyCat入门/image-20231210173229031.png)
 
 使用**Show NppFTP Window**
 
 -   **Profile settings**设置要连接的服务器
 
-![image-20231210173449152](D:\IT_study\blog\MySQL\assets/Day12-分库分表/image-20231210173449152.png)
+![image-20231210173449152](../../assets/Day12-分库分表/image-20231210173449152.png)
 
 填入相关信息即可
 
-![image-20231210173614966](D:\IT_study\blog\MySQL\assets/Day12-分库分表/image-20231210173614966.png)
+![image-20231210173614966](../..\assets/Day12-分库分表/image-20231210173614966.png)
 
 ### 基本配置
 

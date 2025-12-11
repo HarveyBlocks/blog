@@ -20,7 +20,7 @@ ln -s /etc/yum.conf ~/yum.conf        链接文件
 ln -s /etc/yum ~/yum                  链接文件夹
 ```
 
-![image-20231231202010501](../../Kubernetes/assets/Day05-软连接/image-20231231202010501.png)
+![image-20231231202010501](../assets/Day05-软连接/image-20231231202010501.png)
 
 l表示软连接
 

@@ -452,9 +452,7 @@ select * from employee limit 1,1;
 select * from employee limit 2,2;
 ```
 
-![image-20231007005448251](../../../../../../../AppData/Roaming/Typora/assets/image-20231007005448251.png)
 
--   看这个图想象一下
 
 ```mysql
 select * from employee 

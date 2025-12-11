@@ -358,9 +358,9 @@ Ctrl+Alt+R=>Maven插件
 
 New Goal
 
-<img src="../assetss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetss/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assets/Day02-Protobuf/image-20240413153017562.png)
 
-<img src="../assetss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetss/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assets/Day02-Protobuf/image-20240413153017562.png)
 
 ```shell
 mvn protobuf:compile protobuf:compile-custom
