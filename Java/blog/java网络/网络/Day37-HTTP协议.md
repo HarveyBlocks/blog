@@ -10,7 +10,7 @@
 
 ## 请求协议
 
-![image-20231029203703592](../../../assets/Day37-HTTP协议/image-20231029203703592.png)
+![image-20231029203703592](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day37-HTTP协议/image-20231029203703592.png)
 
 ### 请求行
 

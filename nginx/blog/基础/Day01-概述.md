@@ -124,7 +124,7 @@ Server4 --> Proxy
 
         张图来解释下：
 
-        ![1585139995444](../../assets/Day01-概述/1585139995444.png)
+        ![1585139995444](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/基础/Day01-概述/1585139995444.png)
 
         可以免费地将Nginx应用在商业领域
 

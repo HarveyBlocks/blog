@@ -1,4 +1,4 @@
-![image-20230928202002809](../assets/Day02/image-20230928202002809.png)
+![image-20230928202002809](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/Linux基础/Day02-基础命令/image-20230928202002809.png)
 
 默认先会加载用户的HOME(~)目录,作为当前工作目录
 

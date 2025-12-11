@@ -12,17 +12,17 @@ grep [-n] 关键字 文件路径
 
 ## 示例
 
-![image-20230929222413269](../assets/Day03/image-20230929222413269.png)
+![image-20230929222413269](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-过滤文件内容命令/image-20230929222413269.png)
 
 ```Linux
 grep "know" ./test.txt
 ```
 
-![image-20230929222830246](../assets/Day03/image-20230929222830246.png)
+![image-20230929222830246](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-过滤文件内容命令/image-20230929222830246.png)
 
 ```Linux
 grep -n "know" ./test.txt
 ```
 
-![image-20230929223030108](../assets/Day03/image-20230929223030108.png)
+![image-20230929223030108](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-过滤文件内容命令/image-20230929223030108.png)
 

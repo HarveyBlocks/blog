@@ -1,4 +1,4 @@
-![image-20231109122346761](../../../assets/Day09-@Import再解/image-20231109122346761.png)
+![image-20231109122346761](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/整合第三方/Day09-@Import再解/image-20231109122346761.png)
 
 # @Import
 

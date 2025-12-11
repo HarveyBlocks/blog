@@ -4,7 +4,7 @@
 
 G1出现之前的垃圾回收器内存结构一般是连续的
 
-![image-20240520204000259](../assets/Day16-G1/image-20240520204000259.png)
+![image-20240520204000259](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240520204000259.png)
 
 G1的整个内存划分为多个大小相等的**Region**, 分为Eden, Survivor, Old
 
@@ -16,7 +16,7 @@ Region的大小通过对空间的大小/2048获得
 -XX:G1HeapRegionSize=32M
 ```
 
-<img src="../assets/Day08-垃圾回收器/image-20240520204607319.png" alt="image-20240520204607319" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240520204607319.png" alt="image-20240520204607319" style="zoom:67%;" />
 
 ## 年轻代垃圾回收
 
@@ -36,9 +36,9 @@ Region的大小通过对空间的大小/2048获得
 
 3.  G1根据最大暂停时间选择某些区域将存活对象复制到一个**新的Survivor区**中(年龄+1), 清空未存活对象
 
-    <img src="../assets/Day08-垃圾回收器/image-20240520205542577.png" alt="image-20240520205542577" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240520205542577.png" alt="image-20240520205542577" style="zoom:67%;" />
 
-    <img src="../assets/Day08-垃圾回收器/image-20240520205638070.png" alt="image-20240520205638070" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240520205638070.png" alt="image-20240520205638070" style="zoom:67%;" />
 
 4.  根据每一个Region的耗时计算平均值, 这个平均值和配置做比较, 对每次回收几个区域做调整
 
@@ -51,7 +51,7 @@ Region的大小通过对空间的大小/2048获得
 
 如果一个对象被老年代的对象引用, 在年轻代GC的时候, 必不会被回收
 
-![image-20240602225815782](../assets/Day16-G1/image-20240602225815782.png)
+![image-20240602225815782](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240602225815782.png)
 
 由于标记使用从GCRoot开始, 在引用链上的标记为引用, 然后再回收没有被标记为引用的
 
@@ -81,7 +81,7 @@ Region的大小通过对空间的大小/2048获得
 
 -   如果产生了跨代引用(老年代引用年轻代), 此时这个Region对应的卡表上就会将字节内容进行修改, JDK8源码中0代表引用了, 称为脏卡
 
-    ![image-20240602231652098](../assets/Day16-G1/image-20240602231652098.png)
+    ![image-20240602231652098](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240602231652098.png)
 
     -   一个字节卡表-512字节卡页是固定配置
 
@@ -274,7 +274,7 @@ G1对老年代的清理会原则存货度最低(存活的最少)的区域来进�
 
 如果出现内存内没有Region可以用来拷贝
 
-<img src="../assets/Day08-垃圾回收器/image-20240521003847341.png" alt="image-20240521003847341" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-G1/image-20240521003847341.png" alt="image-20240521003847341" style="zoom:67%;" />
 
 就会触发**Full GC**对整个区域做一个回收, 导致**用户线程的暂停**
 

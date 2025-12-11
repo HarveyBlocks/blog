@@ -176,7 +176,7 @@ void reverse(LinkList *list) {
 
 ## 链表相交
 
-![img](../../assets/Day03-LinkList/20211219221657.png)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day03-LinkList/20211219221657.png)
 
 求相交节点的位置, 保证不会循环
 
@@ -192,7 +192,7 @@ void reverse(LinkList *list) {
 
 ### 判断链表有环
 
-![141.环形链表](../../assets/Day03-LinkList/141.环形链表.gif)
+![141.环形链表](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day03-LinkList/141.环形链表.gif)
 
 快慢俩指针, 一个一轮走俩, 一个一轮走一, 终会在环内相遇, 如果快的那个都NULL了, 还没相遇, 就是无环了
 
@@ -232,7 +232,7 @@ Node *hasCircle(LinkList *list) {
    x = z;
    $$
 
-   ![img](../../assets/Day03-LinkList/20220925103433.png)
+   ![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day03-LinkList/20220925103433.png)
 
 2. 从头结点出发一个指针
 

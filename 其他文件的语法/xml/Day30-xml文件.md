@@ -60,14 +60,14 @@
 ## 注意
 
 - 不要乱在xml文件里写>,<,&啥的(><会被认定是标签)
-  - 平替:![image-20231004004846059](../assets/Day30-xml文件/image-20231004004846059.png)
+  - 平替:![image-20231004004846059](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004004846059.png)
   - 可以用浏览器查看是否替换成功:
-    - xml文件里的样子:<img src="../assets/Day30-xml文件/image-20231004005029309.png" alt="image-20231004005029309" style="zoom: 50%;" />
+    - xml文件里的样子:<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004005029309.png" alt="image-20231004005029309" style="zoom: 50%;" />
     - ​												↓
-    - 浏览器里的样子:<img src="../assets/Day30-xml文件/image-20231004005058669.png" alt="image-20231004005058669" style="zoom:50%;" />
+    - 浏览器里的样子:<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004005058669.png" alt="image-20231004005058669" style="zoom:50%;" />
 
-  - 也可以输入"CD"一回车![image-20231004005522775](../assets/Day30-xml文件/image-20231004005522775.png)
-  - 召唤出特殊数据区:![image-20231004005636626](../assets/Day30-xml文件/image-20231004005636626.png)
+  - 也可以输入"CD"一回车![image-20231004005522775](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004005522775.png)
+  - 召唤出特殊数据区:![image-20231004005636626](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004005636626.png)
 
 ## 应用场景
 
@@ -107,7 +107,7 @@
 - Dom4j框架运用文档对象模型
 - Dom4j框架(通过SAXReader解析器)解析XML文档后,将其转为**Document类**
 
-![image-20231004144127769](../assets/Day30-xml文件/image-20231004144127769.png)
+![image-20231004144127769](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004144127769.png)
 
 #### 使用Dom4j框架
 
@@ -115,7 +115,7 @@
 
 - Dom4j框架**解析XML文档,获取Document对象**常用API:
 
-  ![image-20231004144243331](../assets/Day30-xml文件/image-20231004144243331.png)
+  ![image-20231004144243331](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004144243331.png)
 
 ```java
 package learnSpecialDoc;
@@ -148,7 +148,7 @@ public class ParseXml {
 
 #### 获取元素及其相关信息
 
-![a](../assets/Day30-xml文件/image-20231004150648774.png)
+![a](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004150648774.png)
 
 | 方法名                              | 说明                                              |
 | ----------------------------------- | ------------------------------------------------- |
@@ -231,9 +231,9 @@ public class ParseXml {
 - Dom4j可以做到,但很麻烦
 - 推荐把数据写成XML格式,再用IO流写进去就行了
 
-![image-20231004160651541](../assets/Day30-xml文件/image-20231004160651541.png)
+![image-20231004160651541](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004160651541.png)
 
-![image-20231004160730603](../assets/Day30-xml文件/image-20231004160730603.png)
+![image-20231004160730603](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004160730603.png)
 
 ## 约束XML文件的书写
 
@@ -262,17 +262,17 @@ public class ParseXml {
 
   约束后的正确格式:
 
-  ![image-20231004162355349](../assets/Day30-xml文件/image-20231004162355349.png)
+  ![image-20231004162355349](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004162355349.png)
 
 ### Schema约束文档
 
 - 后缀必须是.xsd
 
-  ![image-20231004163619730](../assets/Day30-xml文件/image-20231004163619730.png)
+  ![image-20231004163619730](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004163619730.png)
 
-  ![image-20231004163530192](../assets/Day30-xml文件/image-20231004163530192.png)
+  ![image-20231004163530192](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004163530192.png)
 
   约束后的正确格式:
 
-  ![image-20231004163722984](../assets/Day30-xml文件/image-20231004163722984.png)
+  ![image-20231004163722984](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/xml/Day30-xml文件/image-20231004163722984.png)
 

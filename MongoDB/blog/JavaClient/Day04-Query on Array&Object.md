@@ -68,7 +68,7 @@ try (MongoCursor<Document> cursor = iterable.cursor()) {
 }
 ```
 
-![image-20251119183651547](../../assets/Day04-Array&Object/image-20251119183651547.png)
+![image-20251119183651547](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/JavaClient/Day04-Query on Array&Object/image-20251119183651547.png)
 
 ### 比较
 

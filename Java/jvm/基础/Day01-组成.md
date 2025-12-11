@@ -1,6 +1,6 @@
 # 组成
 
-![JVM组成](../assets/Day01-组成/JVM组成.png)
+![JVM组成](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/基础/Day01-组成/JVM组成.png)
 
 ## 类加载器
 
@@ -24,7 +24,7 @@
 
 Java程序在执行时需要调用底层用C/C++实现的代码, 不存在字节码文件中
 
-![image-20240512134215674](../assets/Day01-组成/image-20240512134215674.png)
+![image-20240512134215674](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/基础/Day01-组成/image-20240512134215674.png)
 
 执行引擎会执行本地接口的方法, 本地接口也会在运行数据区域创建对象
 

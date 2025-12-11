@@ -48,13 +48,13 @@ public boolean updateCache(Shop shop) {
 
 记得关闭用户登录权限啥都
 
-![image-20240104130207986](../../../../assets/Day04-实现更新缓存逻辑/image-20240104130207986.png)
+![image-20240104130207986](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-实现更新缓存/image-20240104130207986.png)
 
-![image-20240104130343610](../../../../assets/Day04-实现更新缓存逻辑/image-20240104130343610.png)
+![image-20240104130343610](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-实现更新缓存/image-20240104130343610.png)
 
 成功删除缓存
 
-![image-20240104130227962](../../../../assets/Day04-实现更新缓存逻辑/image-20240104130227962.png)
+![image-20240104130227962](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-实现更新缓存/image-20240104130227962.png)
 
 成功更新
 

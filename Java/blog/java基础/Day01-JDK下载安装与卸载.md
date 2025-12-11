@@ -2,7 +2,7 @@
 
 ## 卸载
 
-1. 我的电脑->属性->高级系统设置->环境变量<img src="../../assets/image-20230731222919394.png" alt="image-20230731222919394" style="zoom:50%;" />
+1. 我的电脑->属性->高级系统设置->环境变量<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day01-JDK下载安装与卸载/image-20230731222919394.png" alt="image-20230731222919394" style="zoom:50%;" />
 
 2. 从**JAVE_HOME**得到文件路径，删除
 
@@ -23,12 +23,12 @@
 6. 配置环境变量
    1. 我的电脑->属性->高级系统设置->环境变量
 
-   2. 在系统变量中新建**JAVA_HOME**                                                <img src="../../assets/image-20230731224250095.png" alt="image-20230731224250095" style="zoom:50%;" />
+   2. 在系统变量中新建**JAVA_HOME**                                                <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day01-JDK下载安装与卸载/image-20230731224250095.png" alt="image-20230731224250095" style="zoom:50%;" />
 
    3. 配置**path**变量（*%*表示引用）   
 
-         <img src="../../assets/image-20230731225026116.png" alt="image-20230731225026116" style="zoom:50%;" />
+         <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day01-JDK下载安装与卸载/image-20230731225026116.png" alt="image-20230731225026116" style="zoom:50%;" />
 7. 检查是否安装成功                                           
 
-<img src="../../assets/image-20230731225203082.png" alt="image-20230731225203082" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day01-JDK下载安装与卸载/image-20230731225203082.png" alt="image-20230731225203082" style="zoom:50%;" />
 

@@ -102,7 +102,7 @@ String d = a + b; // heap
 System.out.println(d == c);// false
 ```
 
-![image-20240518221220278](../assets/Day06-方法区/image-20240518221220278.png)
+![image-20240518221220278](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-方法区/image-20240518221220278.png)
 
 ```java
 String a = "12"; // string table
@@ -110,7 +110,7 @@ String b = "1" + "2"; //string table
 System.out.println(a == b);// true
 ```
 
-![image-20240518221520522](../assets/Day06-方法区/image-20240518221520522.png)
+![image-20240518221520522](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-方法区/image-20240518221520522.png)
 
 ### 将字符串放入字符串常量池
 

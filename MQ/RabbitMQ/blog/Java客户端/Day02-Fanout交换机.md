@@ -2,13 +2,13 @@
 
 >   Fanout 广播
 
-![img](../../assets/Day02-Fanout交换机/python-three-overall.png)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Fanout交换机/python-three-overall.png)
 
 一服务, 一队列
 
 ## 创建Fanout交换机
 
-![image-20240112193143733](../../assets/Day02-Fanout交换机/image-20240112193143733.png)
+![image-20240112193143733](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Fanout交换机/image-20240112193143733.png)
 
 ## 发送到消息交换机
 

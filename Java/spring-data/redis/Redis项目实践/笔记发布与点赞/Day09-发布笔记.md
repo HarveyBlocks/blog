@@ -2,15 +2,15 @@
 
 ## Blog表
 
-![image-20240127193921756](../../../assets/Day09-发布笔记/image-20240127193921756.png)
+![image-20240127193921756](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/笔记发布与点赞/Day09-发布笔记/image-20240127193921756.png)
 
 ## 前端交互
 
 1.  图片是单独传一次的`UploadController`,已完成
 
-    ![image-20240127194241015](../../../assets/Day09-发布笔记/image-20240127194241015.png)
+    ![image-20240127194241015](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/笔记发布与点赞/Day09-发布笔记/image-20240127194241015.png)
 
-    ![image-20240127194329582](../../../assets/Day09-发布笔记/image-20240127194329582.png)
+    ![image-20240127194329582](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/笔记发布与点赞/Day09-发布笔记/image-20240127194329582.png)
 
 2.  发布笔记
 
@@ -18,7 +18,7 @@
 
 3.  查看笔记
 
-    ![image-20240128114423571](../../../assets/Day09-发布笔记/image-20240128114423571.png)
+    ![image-20240128114423571](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/笔记发布与点赞/Day09-发布笔记/image-20240128114423571.png)
 
     `BlogController`
 

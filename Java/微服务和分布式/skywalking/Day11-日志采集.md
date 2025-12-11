@@ -53,5 +53,5 @@
 
 来了
 
-![image-20240426191540949](../assets/Day11-日志采集/image-20240426191540949.png)
+![image-20240426191540949](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/skywalking/Day11-日志采集/image-20240426191540949.png)
 

@@ -8,7 +8,7 @@
 
 ## 原理
 
-![image-20240120135627045](../../../assets/Day07-超卖问题/image-20240120135627045.png)
+![image-20240120135627045](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-超卖问题/image-20240120135627045.png)
 
 并发安全问题, 多条线程操作一个资源
 
@@ -20,7 +20,7 @@
 
 -   乐观锁
 
-    ![image-20240120142544858](../../../assets/Day07-超卖问题/image-20240120142544858.png)
+    ![image-20240120142544858](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-超卖问题/image-20240120142544858.png)
 
 在本方案中, 使用库存的变化代替版本号的变化
 

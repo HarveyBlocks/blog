@@ -8,7 +8,7 @@
 
     -   拦截器为**FilterSecurityInterceptor**
 
-        ![image-20231219124632028](../../assets/Day03-自定义授权/image-20231219124632028.png)
+        ![image-20231219124632028](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day03-自定义授权/image-20231219124632028.png)
 
     -   在
 

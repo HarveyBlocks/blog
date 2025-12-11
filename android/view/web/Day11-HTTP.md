@@ -229,5 +229,5 @@ Connection.enqueue(request, callback)
 
 获取有`JSONArray.get(Int)`, `JSONObject.get(String)`, `JSONObject.getString(String)` 等
 
-<img src="../../assets/Day11-HTTP/image-20250921200150579.png" alt="image-20250921200150579" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/web/Day11-HTTP/image-20250921200150579.png" alt="image-20250921200150579" style="zoom:50%;" />
 

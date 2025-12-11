@@ -2,7 +2,7 @@
 
 [官网]([mybatis – MyBatis 3 | 配置⁤](https://mybatis.org/mybatis-3/zh/configuration.html))
 
-![image-20231016163640903](../assets/Day34-MyBatis核心配置文件/image-20231016163640903.png)
+![image-20231016163640903](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis核心配置文件/image-20231016163640903.png)
 
 -   直接上mybatis-config.xml
 

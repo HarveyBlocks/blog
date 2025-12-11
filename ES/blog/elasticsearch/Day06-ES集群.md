@@ -11,7 +11,7 @@
 
 -   将数据备份(replica), 放在独立的机器
 
-    ![image-20240115184808726](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115184808726.png)
+    ![image-20240115184808726](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115184808726.png)
 
     主分片和备份分片不在同一个机器上, 有机器宕机了,仍能保证数据的完整性
 
@@ -107,7 +107,7 @@ vm.max_map_count=262144
 sysctl -p
 ```
 
-![image-20240115190851152](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115190851152.png)
+![image-20240115190851152](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115190851152.png)
 
 ### 启动docker-campose
 
@@ -125,35 +125,35 @@ docker-compose up -d
 
 启动(.\cerebro-0.9.4\bin\cerebro.bat)
 
-![image-20240115192614798](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115192614798.png)
+![image-20240115192614798](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192614798.png)
 
 访问[cerebro](http://localhost:9000)
 
-![image-20240115192659457](../../../java/微服务和分布式/assets/Day06-ES集群/image-20240115192659457.png)
+![image-20240115192659457](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192659457.png)
 
 输入es节点地址
 
-![image-20240115192758104](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115192758104.png)
+![image-20240115192758104](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192758104.png)
 
 连一个,则全连
 
-![image-20240115192825445](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115192825445.png)
+![image-20240115192825445](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192825445.png)
 
 ### 主节点与备选节点
 
 slave, 哟, 有机会上位master啦? 
 
-![image-20240115192949971](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115192949971.png)
+![image-20240115192949971](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192949971.png)
 
 ## 创建索引库
 
-![image-20240115193939208](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115193939208.png)
+![image-20240115193939208](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115193939208.png)
 
-![image-20240115194209075](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115194209075.png)
+![image-20240115194209075](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115194209075.png)
 
 创建成功
 
-![image-20240115194248150](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115194248150.png)
+![image-20240115194248150](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115194248150.png)
 
 ## 节点角色
 
@@ -165,7 +165,7 @@ slave, 哟, 有机会上位master啦?
 
 主节点决定分片落在哪个节点, 处理,创建和删除索引库的请求
 
-![image-20240115194606955](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115194606955.png)
+![image-20240115194606955](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115194606955.png)
 
 -   预处理
     -   对文档删除一个字段, 加一个字段, 对字段做删除
@@ -180,7 +180,7 @@ slave, 哟, 有机会上位master啦?
 
 职责分配示例
 
-![image-20240115195247546](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115195247546.png)
+![image-20240115195247546](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115195247546.png)
 
 -   `LB`  
 
@@ -213,11 +213,11 @@ $$
 
 新增
 
-![image-20240115201304512](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115201304512.png)
+![image-20240115201304512](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115201304512.png)
 
 查询
 
-![image-20240115201859567](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115201859567.png)
+![image-20240115201859567](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115201859567.png)
 
 查询文档落于哪个节点
 
@@ -300,11 +300,11 @@ $$
 3.  迁移宕机节点上的数据迁移到健康节点上
     -   迁移之后的结果, 一台节点上的分片数据依旧能做到不重复
 
-![image-20240115205013882](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115205013882.png)
+![image-20240115205013882](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115205013882.png)
 
 关闭es01, 又重启es01(因为一开始我用es01连接的cerebro, cerebro也没反应了, 我一下子慌了, 我就重启了qwq)
 
-![image-20240115205152751](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115205152751.png)
+![image-20240115205152751](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115205152751.png)
 
-![image-20240115205713370](../../../Java/微服务和分布式/assets/Day06-ES集群/image-20240115205713370.png)
+![image-20240115205713370](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115205713370.png)
 

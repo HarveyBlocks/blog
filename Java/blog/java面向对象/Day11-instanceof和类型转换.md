@@ -10,7 +10,7 @@ boolean isSonOrThis = 对象 instanceof 类/接口;
 
 类之间的关系如下：
 
-![image-20230809194306605](../../assets/Day11/image-20230809194306605.png)
+![image-20230809194306605](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day11-instanceof和类型转换/image-20230809194306605.png)
 
 ``` java
 public class Main {

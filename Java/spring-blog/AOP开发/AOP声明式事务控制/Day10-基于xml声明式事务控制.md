@@ -16,7 +16,7 @@
 
 -   配置目标类AccountService(**O了**)
 
-    ![image-20231111153046475](../../../assets/Day10-基于xml声明式事务控制/image-20231111153046475.png)
+    ![image-20231111153046475](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-基于xml声明式事务控制/image-20231111153046475.png)
 
 -   使用advisor配置切面(接口实现)
 
@@ -154,7 +154,7 @@ name="*"表示所有方法
 
 -   isolation的五个参数
 
-![image-20231111164745806](../../../assets/Day10-基于xml声明式事务控制/image-20231111164745806.png)
+![image-20231111164745806](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-基于xml声明式事务控制/image-20231111164745806.png)
 
 ### timeout
 
@@ -176,7 +176,7 @@ name="*"表示所有方法
 
 -   A调用B,那么上面的设置听谁的?
 
-    ![image-20231111165232669](../../../assets/Day10-基于xml声明式事务控制/image-20231111165232669.png)
+    ![image-20231111165232669](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-基于xml声明式事务控制/image-20231111165232669.png)
 
     -   一般记默认值就行(B一定要有事务)
     -   偶尔用SUPPORTS

@@ -6,7 +6,7 @@
 
 ## 思路
 
-![image-20240619145529865](../../assets/Day02-基数排序/image-20240619145529865.png)
+![image-20240619145529865](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day03-基数排序/image-20240619145529865.png)
 
 低位先排, 高位后排
 

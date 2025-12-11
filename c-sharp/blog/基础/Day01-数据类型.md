@@ -86,7 +86,7 @@ Console.WriteLine($"max: {double.PositiveInfinity/*正无穷*/}, min: {double.Ne
 
 ## 引用类型
 
-<img src="../../assets/Day01-数据类型/image-20240925112608694.png" alt="image-20240925112608694" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/c-sharp/基础/Day01-数据类型/image-20240925112608694.png" alt="image-20240925112608694" style="zoom:50%;" />
 
 ### object
 

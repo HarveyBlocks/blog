@@ -18,7 +18,7 @@ Java对象头(*Object Header*), 以32位虚拟机为例
 
 -   Mark Word (32位虚拟机)
 
-    ![image-20240601211952277](../assets/Day02-管程/image-20240601211952277-1725637387119.png)
+    ![image-20240601211952277](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/共享模型/Day02-管程/image-20240601211952277-1725637387119.png)
 
     锁状态
 
@@ -35,7 +35,7 @@ Java对象头(*Object Header*), 以32位虚拟机为例
 
 Monitor对象由操作系统提供
 
-![image-20240907003307780](../assets/Day02-管程/image-20240907003307780.png)
+![image-20240907003307780](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/共享模型/Day02-管程/image-20240907003307780.png)
 
 1.  当线程Thread对象遇到`synchronized(obj)`
 

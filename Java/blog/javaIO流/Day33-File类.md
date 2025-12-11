@@ -1,4 +1,4 @@
-![image-20231013143531240](../../assets/Day33/image-20231013143531240.png)
+![image-20231013143531240](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day33-File类/image-20231013143531240.png)
 
-![image-20231013150142904](../../assets/Day33/image-20231013150142904.png)
+![image-20231013150142904](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day33-File类/image-20231013150142904.png)
 

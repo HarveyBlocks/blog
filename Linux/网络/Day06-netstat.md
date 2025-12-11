@@ -49,7 +49,7 @@
     nmap IP地址
     ```
 
-    ![image-20240101132353864](../assets/Day06-netstat/image-20240101132353864.png)
+    ![image-20240101132353864](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day06-netstat/image-20240101132353864.png)
 
 ## netstat命令
 
@@ -65,7 +65,7 @@
     netstat -anp | grep 6000
     ```
 
-    ![image-20240101132933601](../assets/Day06-netstat/image-20240101132933601.png)
+    ![image-20240101132933601](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day06-netstat/image-20240101132933601.png)
 
     ```bash
     netstat -anp | grep 1919
@@ -73,5 +73,5 @@
 
     无人占用
 
-    ![image-20240101132910182](../assets/Day06-netstat/image-20240101132910182.png)
+    ![image-20240101132910182](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day06-netstat/image-20240101132910182.png)
 

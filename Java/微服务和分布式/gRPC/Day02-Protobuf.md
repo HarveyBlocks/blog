@@ -24,7 +24,7 @@
 
 文件`.proto`
 
-![image-20240413151620041](../assets/Day02-Protobuf/image-20240413151620041.png)
+![image-20240413151620041](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413151620041.png)
 
 ## 辅助代码
 
@@ -283,16 +283,16 @@ maven的插件, 也可以对protobuf文件进行编译
 
 Ctrl+Alt+R=>Maven插件
 
-![image-20240413151051980](../assets/Day02-Protobuf/image-20240413151051980.png)
+![image-20240413151051980](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413151051980.png)
 
 -   compile+compile-customer
 
-![image-20240413151856122](../assets/Day02-Protobuf/image-20240413151856122.png)
+![image-20240413151856122](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413151856122.png)
 
 -   UserServiceGrpc存放服务代理
 -   UserProto存放各式Message
 
-![image-20240413152231808](../assets/Day02-Protobuf/image-20240413152231808.png)
+![image-20240413152231808](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413152231808.png)
 
 ### 优化编译步骤
 
@@ -300,13 +300,13 @@ Ctrl+Alt+R=>Maven插件
 
 >   其实直接按compile就可以直接生成了
 
-<img src="../assets/Day02-Protobuf/image-20240413152837277.png" alt="image-20240413152837277" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413152837277.png" alt="image-20240413152837277" style="zoom: 50%;" />
 
 New Goal
 
-<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assets/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413153017562.png)
 
-<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assets/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assets/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413153017562.png)
 
 ```shell
 mvn protobuf:compile protobuf:compile-custom
@@ -396,7 +396,7 @@ mvn protobuf:compile protobuf:compile-custom
 
 ### 结构
 
-![image-20240413160133239](../assets/Day02-Protobuf/image-20240413160133239.png)
+![image-20240413160133239](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/gRPC/Day02-Protobuf/image-20240413160133239.png)
 
 ### [ServiceName]ImplBase
 

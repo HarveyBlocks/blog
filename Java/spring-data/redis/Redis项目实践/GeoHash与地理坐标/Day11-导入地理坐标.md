@@ -2,7 +2,7 @@
 
 ## 数据库分析
 
-![image-20240131113439577](../../../assets/Day11-导入地理坐标/image-20240131113439577.png)
+![image-20240131113439577](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/GeoHash与地理坐标/Day11-导入地理坐标/image-20240131113439577.png)
 
 ## Redis数据结构设计
 

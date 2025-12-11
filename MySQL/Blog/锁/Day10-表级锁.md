@@ -37,19 +37,19 @@
 
 -   上锁的客户端
 
-    ![image-20231026132758734](../../assets/Day10-表级锁/image-20231026132758734.png)
+    ![image-20231026132758734](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-表级锁/image-20231026132758734.png)
 
     -   报错
 
 -   其他客户端
 
-    ![image-20231026132845347](../../assets/Day10-表级锁/image-20231026132845347.png)
+    ![image-20231026132845347](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-表级锁/image-20231026132845347.png)
 
     -   等待
 
     -   如果接触锁,这个客户端
 
-        ![image-20231026132944378](../../assets/Day10-表级锁/image-20231026132944378.png)
+        ![image-20231026132944378](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-表级锁/image-20231026132944378.png)
 
     -   瞬间执行
 
@@ -87,7 +87,7 @@
     -   (执行**修改表语句**)加MDL写锁(**排他**)
     -   写锁和写锁,写锁和读锁(**Shared_Read,Shared_Write和Exclusive**)是冲突的
 
-![image-20231026134429398](../../assets/Day10-表级锁/image-20231026134429398.png)
+![image-20231026134429398](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-表级锁/image-20231026134429398.png)
 
 -   在**增删改查**的事务执行时,会体现出他有在自动加锁
 
@@ -119,7 +119,7 @@ from Performance_Schema.MetaData_Locks;
 
 3.  线程A的意向锁回来检查线程B的表锁是什么锁:
 
-    ![image-20231026140518580](../../assets/Day10-表级锁/image-20231026140518580.png)
+    ![image-20231026140518580](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-表级锁/image-20231026140518580.png)
 
     -   IS是和共享锁兼容的,与IX锁是不兼容的
     -   IX锁是和所有锁都不兼容的

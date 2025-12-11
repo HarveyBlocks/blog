@@ -68,7 +68,7 @@
 
 ## 操作
 
-![image-20231104163216477](../../../assets/Day06-整合MyBatis/image-20231104163216477.png)
+![image-20231104163216477](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/整合第三方框架/Day06-整合MyBatis/image-20231104163216477.png)
 
 ### 导入第三方jar包
 
@@ -103,7 +103,7 @@ mybatis-spring.jar
 
     向Spring容器中提供SqlSessionFactory
 
-    ![image-20231104164117507](../../../assets/Day06-整合MyBatis/image-20231104164117507.png)
+    ![image-20231104164117507](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/整合第三方框架/Day06-整合MyBatis/image-20231104164117507.png)
 
     ```java
     public class SqlSessionFactoryBean implements 
@@ -166,7 +166,7 @@ mybatis-spring.jar
 
 -   然后加上Mapper的Bean;
 
-![image-20231104170959104](../../../assets/Day06-整合MyBatis/image-20231104170959104.png)
+![image-20231104170959104](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/整合第三方框架/Day06-整合MyBatis/image-20231104170959104.png)
 
 ***问 :***
 
@@ -181,7 +181,7 @@ mybatis-spring.jar
 
 -   实现Mybatis搭建的几个主要有关类
 
-![image-20231105181000505](../../../assets/Day06-整合MyBatis/image-20231105181000505.png)
+![image-20231105181000505](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/整合第三方框架/Day06-整合MyBatis/image-20231105181000505.png)
 
 ## 加载Propertis文件到Spring容器
 

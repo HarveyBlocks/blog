@@ -4,9 +4,9 @@
 
 1.  在VMware Workstation中配置IP地址的网关或网段(IP地址的范围)
 
-    ![image-20231231222240072](../assets/Day05-虚拟机配置固定IP/image-20231231222240072.png)
+    ![image-20231231222240072](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-虚拟机配置固定IP/image-20231231222240072.png)
 
-    ![image-20231231222728988](../assets/Day05-虚拟机配置固定IP/image-20231231222728988.png)
+    ![image-20231231222728988](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-虚拟机配置固定IP/image-20231231222728988.png)
 
 2.  在Linux系统中手动修改文件, 固定IP
 
@@ -64,7 +64,7 @@ systemctl restart network
 ifconfig
 ```
 
-![image-20231231224329030](../assets/Day05-虚拟机配置固定IP/image-20231231224329030.png)
+![image-20231231224329030](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-虚拟机配置固定IP/image-20231231224329030.png)
 
 ## Mac的富哥就自求多福吧
 

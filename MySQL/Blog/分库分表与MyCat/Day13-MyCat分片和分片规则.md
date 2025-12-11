@@ -430,7 +430,7 @@ tb_log
 
     依此创造一个数组做映射:
 
-    ![image-20231211152247072](..\..\assets/Day13-MyCat分片和分片规则/image-20231211152247072.png)
+    ![image-20231211152247072](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day13-MyCat分片和分片规则/image-20231211152247072.png)
 
 ### 和取模分片的区别:
 

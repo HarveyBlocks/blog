@@ -28,7 +28,7 @@ public class AjaxServlet extends HttpServlet {
 2.  向服务器发送请求
 3.  获取服务器的响应数据
 
-![image-20231119224436304](../../../assets/Day41-AJAX使用/image-20231119224436304.png)
+![image-20231119224436304](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day41-AJAX使用/image-20231119224436304.png)
 
 ```html
 <!DOCTYPE html>
@@ -60,13 +60,13 @@ public class AjaxServlet extends HttpServlet {
 </html>
 ```
 
-![image-20231119225422322](../../../assets/Day41-AJAX使用/image-20231119225422322.png)
+![image-20231119225422322](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day41-AJAX使用/image-20231119225422322.png)
 
-![image-20231119225507593](../../../assets/Day41-AJAX使用/image-20231119225507593.png)
+![image-20231119225507593](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day41-AJAX使用/image-20231119225507593.png)
 
 ## 结果
 
-![image-20231119225900393](../../../assets/Day41-AJAX使用/image-20231119225900393.png)
+![image-20231119225900393](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day41-AJAX使用/image-20231119225900393.png)
 
 ### xhr - 异步请求
 

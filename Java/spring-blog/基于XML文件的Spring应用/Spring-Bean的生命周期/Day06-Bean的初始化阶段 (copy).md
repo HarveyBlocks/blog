@@ -28,7 +28,7 @@
 
 ### 后四步起承上文
 
-![image-20231104110909139](../../../assets/Day06-Bean的初始化阶段/image-20231104110909139.png)
+![image-20231104110909139](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring-Bean的生命周期/Day06-Bean的初始化阶段 (copy)/image-20231104110909139.png)
 
 ## 属性注入的三种情况
 

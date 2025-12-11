@@ -6,11 +6,11 @@
 
 >   条件构造器
 
-![image-20231208161542475](../../assets/Day4/image-20231208161542475.png)
+![image-20231208161542475](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/mybatis-plus/Day05-条件构造器/image-20231208161542475.png)
 
 -   AbstractWrapper
 
-    ![image-20231208161900349](../../assets/Day4/image-20231208161900349.png)
+    ![image-20231208161900349](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/mybatis-plus/Day05-条件构造器/image-20231208161900349.png)
 
 -   UpdateWrapper
 

@@ -71,7 +71,7 @@ const changeButtonValue = function (buttonElement) {
 </script>
 ```
 
-![image-20250807160443280](../../assets/Day01-基础/image-20250807160443280.png)
+![image-20250807160443280](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-基础/image-20250807160443280.png)
 
 ### document.write
 
@@ -85,7 +85,7 @@ const changeButtonValue = function (buttonElement) {
 <div>post</div>
 ```
 
-![image-20250807162110117](../../assets/Day01-基础/image-20250807162110117.png)
+![image-20250807162110117](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-基础/image-20250807162110117.png)
 
 在 HTML 文档完全加载后使用 document.write() 将**删除所有已有的 HTML** :
 
@@ -109,7 +109,7 @@ const changeButtonValue = function (buttonElement) {
 };
 ```
 
-![image-20250807163724666](../../assets/Day01-基础/image-20250807163724666.png)
+![image-20250807163724666](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-基础/image-20250807163724666.png)
 
 ### window.print()
 
@@ -119,7 +119,7 @@ const changeButtonValue = function (buttonElement) {
 <button onclick="window.print()">打印此页</button>
 ```
 
-![image-20250807163954817](../../assets/Day01-基础/image-20250807163954817.png)
+![image-20250807163954817](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-基础/image-20250807163954817.png)
 
 ## 注释
 

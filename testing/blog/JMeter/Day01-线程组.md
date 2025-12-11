@@ -12,11 +12,11 @@
 
 ### 顺序
 
-![image-20240417183334025](../../assets/Day01-线程组/image-20240417183334025.png)
+![image-20240417183334025](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-线程组/image-20240417183334025.png)
 
 ## setUp和tearDown线程组
 
-![image-20240417185019683](../../assets/Day01-线程组/image-20240417185019683.png)
+![image-20240417185019683](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-线程组/image-20240417185019683.png)
 
 -   setUp线程组
     -   最优先执行的线程组
@@ -25,7 +25,7 @@
 
 ## 线程组配置
 
-![image-20240417185744341](../../assets/Day01-线程组/image-20240417185744341.png)
+![image-20240417185744341](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-线程组/image-20240417185744341.png)
 
 -   持续时间
     -   当我们需要限定时间而不是循环次数时, 我们就可以将上面的循环次数设定为永远, 然后设定持续时间

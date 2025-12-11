@@ -6,7 +6,7 @@ JDK8之前的版本中, 扩展类加载器和应用程序类加载器的源码�
 
 JDK9引入了module的概念, Java类会放到jmod文件, jmod会放在jmods的文件夹下
 
-![image-20240518125932560](../assets/Day06-JDK9之后的类加载器/image-20240518125932560.png)
+![image-20240518125932560](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/类加载/Day06-JDK9之后的类加载器/image-20240518125932560.png)
 
 ## Bootstrap
 

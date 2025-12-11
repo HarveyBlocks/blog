@@ -22,11 +22,11 @@ public class Main {
 }
 ```
 ***
-![屏幕截图 2023-08-03 125619](../../assets/屏幕截图 2023-08-03 125619.png)
+![屏幕截图 2023-08-03 125619](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-Scanner/屏幕截图 2023-08-03 125619.png)
 
 ---
 
-![屏幕截图 2023-08-03 125850](../../assets/屏幕截图 2023-08-03 125850.png)
+![屏幕截图 2023-08-03 125850](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-Scanner/屏幕截图 2023-08-03 125850.png)
 
 ***
 
@@ -49,7 +49,7 @@ public class Main {
 }
 ```
 
-![屏幕截图 2023-08-03 130104](../../assets/屏幕截图 2023-08-03 130104.png)
+![屏幕截图 2023-08-03 130104](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-Scanner/屏幕截图 2023-08-03 130104.png)
 
 ## next()
 
@@ -63,7 +63,7 @@ public class Main {
 1. 以Enter为结束符
 2. 可以获得空白
 
-![屏幕截图 2023-08-03 130735](../../assets/屏幕截图 2023-08-03 130735.png)
+![屏幕截图 2023-08-03 130735](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-Scanner/屏幕截图 2023-08-03 130735.png)
 
 ## 用法
 

@@ -9,7 +9,7 @@ System.out.println((1.4-0.5)/0.9);
 
 输出结果如下：
 
-![image-20230819152145367](../../assets/Day16/image-20230819152145367.png)
+![image-20230819152145367](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java常用类/Day16-BigDecimal/image-20230819152145367.png)
 
 解决此类问题的方法是使用类**BigDecimal**
 

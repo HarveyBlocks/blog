@@ -1,6 +1,6 @@
 # 单表查询(select)
 
-![image-20231028142923462](../../assets/Day03-单表查询/image-20231028142923462.png)
+![image-20231028142923462](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231028142923462.png)
 
 ```mysql
 /*-------------基本查询-------------*/
@@ -49,7 +49,7 @@ SELECT * FROM 表名;
 select name,age,level,entrydate from employee ;
 ```
 
-![image-20231007133528469](../../../assets/Day03/image-20231007133528469.png)
+![image-20231007133528469](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231007133528469.png)
 
 **返回的字段顺序是按照指定的顺序来的**
 
@@ -78,7 +78,7 @@ SELECT DISTINCT 列名1, 列名2... FROM 表名;
 -   对同属一列的重复内容去重
     -   例如:对性别列去重,就只会留下**性别列列名 **, **男** , **女**,**null**,顶多三行
 
-![image-20231006232229692](../../../assets/Day03/image-20231006232229692.png)
+![image-20231006232229692](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006232229692.png)
 
 ## 条件(where)查询条件/筛选
 
@@ -275,11 +275,11 @@ select name,gender,count(*) from employee group by gender;
 
 视频里写的:
 
-![image-20231006233731006](../../../assets/Day03/image-20231006233731006.png)
+![image-20231006233731006](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006233731006.png)
 
 我写的:
 
-![image-20231006233826666](../../../assets/Day03/image-20231006233826666.png)
+![image-20231006233826666](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006233826666.png)
 
 -   应该是版本问题
 
@@ -287,7 +287,7 @@ select name,gender,count(*) from employee group by gender;
 select gender from employee where age<30 group by gender ;
 ```
 
-![image-20231006231741758](../../../assets/Day03/image-20231006231741758.png)
+![image-20231006231741758](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006231741758.png)
 
 -   没啥意义,不如DISTINCT
 
@@ -304,7 +304,7 @@ select count(*) from employee;
 
 -   聚合函数的内容,此处用作对照
 
-![image-20231006195337973](../../../assets/Day03/image-20231006195337973.png)
+![image-20231006195337973](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006195337973.png)
 
 ```mysql
 select * , count(*) from employee;/*error*/
@@ -318,19 +318,19 @@ select * , count(*) from employee;/*error*/
 select count(*) from employee group by gender;
 ```
 
-![image-20231006195417783](../../../assets/Day03/image-20231006195417783.png)
+![image-20231006195417783](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006195417783.png)
 
 ```mysql
 select avg(age) from employee group by gender;
 ```
 
-![image-20231006230104732](../../../assets/Day03/image-20231006230104732.png)
+![image-20231006230104732](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006230104732.png)
 
 ```mysql
 select gender,avg(age) from employee group by gender;
 ```
 
-![image-20231006195919233](../../../assets/Day03/image-20231006195919233.png)
+![image-20231006195919233](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006195919233.png)
 
 ```mysql
 select age,avg(age) from employee group by gender;/*error*/
@@ -342,7 +342,7 @@ select age , count(gender) from employee group by gender/*error*/;
 select gender , count(gender) from employee group by gender;
 ```
 
-![image-20231006195549187](../../../assets/Day03/image-20231006195549187.png)
+![image-20231006195549187](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231006195549187.png)
 
 -   查询年龄小于30的员工,根据性别分组,获得员工人数大于3的性别
 
@@ -360,7 +360,7 @@ select
 ;
 ```
 
-![image-20231007133231463](../../../assets/Day03/image-20231007133231463.png)
+![image-20231007133231463](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231007133231463.png)
 
 ## 排序查询
 
@@ -400,7 +400,7 @@ select * from employee order by name,age;
 
 ## 分页查询
 
-![image-20231007000426132](../../../assets/Day03/image-20231007000426132.png)
+![image-20231007000426132](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-单表查询/image-20231007000426132.png)
 
 -   可以用来拿"前五个"这种
 

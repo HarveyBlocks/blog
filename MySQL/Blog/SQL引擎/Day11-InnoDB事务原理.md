@@ -19,9 +19,9 @@
 
 [并发事务问题](..\SQL基础\事务\Day06-并发事务.md)
 
-![image-20231027151123534](../../assets/Day11-InnoDB事务原理/image-20231027151123534.png)
+![image-20231027151123534](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDB事务原理/image-20231027151123534.png)
 
-![image-20231027151239058](../../assets/Day11-InnoDB事务原理/image-20231027151239058.png)
+![image-20231027151239058](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDB事务原理/image-20231027151239058.png)
 
 -   MVCC多版本并发控制
 

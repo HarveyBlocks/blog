@@ -17,7 +17,7 @@ console.log(1.2/*f*/);
 console.log(1e30===(1e30+1e-30));
 ```
 
-![image-20250807172318439](../../assets/Day01-过程控制/image-20250807172318439.png)
+![image-20250807172318439](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-过程控制/image-20250807172318439.png)
 
 所有数字（Number 类型）都是以 64 位（8 字节）双精度浮点数格式存储
 
@@ -30,7 +30,7 @@ for (let i = 0; i < 32; i++) {
 }
 ```
 
-![image-20250807172726598](../../assets/Day01-过程控制/image-20250807172726598.png)
+![image-20250807172726598](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-过程控制/image-20250807172726598.png)
 
 ### 标识符
 
@@ -60,7 +60,7 @@ for (let i = 0; i < 32; i++) {
 
     在运行时异常
 
-    ![image-20250807181139058](../../assets/Day01-过程控制/image-20250807181139058.png)
+    ![image-20250807181139058](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-过程控制/image-20250807181139058.png)
 
 -   var 变量, 类似Python的变量
 
@@ -73,7 +73,7 @@ for (let i = 0; i < 32; i++) {
 
     输出2
 
-    ![image-20250807181331888](../../assets/Day01-过程控制/image-20250807181331888.png)
+    ![image-20250807181331888](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-过程控制/image-20250807181331888.png)
 
 -   const 常量
 
@@ -132,7 +132,7 @@ console.log(value); // value
 
 但let和const不能, 会直接报错
 
-![image-20250807201247594](../../assets/Day01-过程控制/image-20250807201247594.png)
+![image-20250807201247594](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/基础/Day01-过程控制/image-20250807201247594.png)
 
 ## 分支
 

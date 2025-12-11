@@ -197,7 +197,7 @@ public static class FlagsEnumExample {
 
 发出警告
 
-![image-20240929195619817](../../assets/Day01-多态性/image-20240929195619817.png)
+![image-20240929195619817](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/c-sharp/面向对象/Day01-多态性/image-20240929195619817.png)
 
 使用`new`或`override`指定本方法与其父类同名方法处于哪种关系, "重载"or"覆盖"
 

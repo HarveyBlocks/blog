@@ -18,7 +18,7 @@ console.log('Hello World')
 tsc greeter.ts
 ```
 
-![image-20250827091825585](../../assets/Untitled/image-20250827091825585.png)
+![image-20250827091825585](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/ts/Day01-简介/image-20250827091825585.png)
 
 编译结果是一个js文件
 
@@ -36,11 +36,11 @@ let user = [0, 1, 2];
 console.log(greeter(user));
 ```
 
-![image-20250827092321011](../../assets/Untitled/image-20250827092321011.png)
+![image-20250827092321011](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/ts/Day01-简介/image-20250827092321011.png)
 
 空参也会错误
 
-![image-20250827092427643](../../assets/Untitled/image-20250827092427643.png)
+![image-20250827092427643](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/ts/Day01-简介/image-20250827092427643.png)
 
 ## 实质性的类型检查
 

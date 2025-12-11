@@ -1,6 +1,6 @@
 -   按顺序存入主键
 
-![image-20231023131957064](../../assets/Day09-主键优化/image-20231023131957064.png)
+![image-20231023131957064](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL其他优化/Day09-主键优化/image-20231023131957064.png)
 
 ## 页分裂
 

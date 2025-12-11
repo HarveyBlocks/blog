@@ -2,7 +2,7 @@
 
 >   **J**ava**S**cript **O**bject **N**otation   -JAvaScript对象表示法
 
-![image-20231120011506651](../../../assets/Day42-JSON/image-20231120011506651.png)
+![image-20231120011506651](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day42-JSON/image-20231120011506651.png)
 
 ## 用处
 
@@ -218,7 +218,7 @@ objectMapper.configure(
 
 但配置了不报错, 就会有无法检查出隐藏错误的危险, 所以: 
 
-![image-20240426151237738](../../../微服务和分布式/assets/Day42-JSON/image-20240426151237738.png)
+![image-20240426151237738](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day42-JSON/image-20240426151237738.png)
 
 当然, FastJson也有
 

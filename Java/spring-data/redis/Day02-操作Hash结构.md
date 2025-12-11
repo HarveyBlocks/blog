@@ -1,6 +1,6 @@
 # 操作Hash结构
 
-![image-20240102151216355](../../assets/Day02-操作Hash结构/image-20240102151216355.png)
+![image-20240102151216355](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Day02-操作Hash结构/image-20240102151216355.png)
 
 与指令略有不同
 
@@ -30,7 +30,7 @@ void testHash(){
 [小明, 21]
 ```
 
-![image-20240102152119229](../../assets/Day02-操作Hash结构/image-20240102152119229.png)
+![image-20240102152119229](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Day02-操作Hash结构/image-20240102152119229.png)
 
 其实我觉得有了Json之后, 好像什么Hash啊, List啊,好像每必要了啊
 

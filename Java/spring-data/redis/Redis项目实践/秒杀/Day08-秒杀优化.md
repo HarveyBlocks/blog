@@ -80,7 +80,7 @@ private static String toMillion(LocalDateTime time) {
 
 ### 脚本流程
 
-![image-20240126193708610](../../../assets/Day08-秒杀优化/image-20240126193708610.png)
+![image-20240126193708610](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day08-秒杀优化/image-20240126193708610.png)
 
 ### 脚本
 
@@ -328,7 +328,7 @@ public long saveOrderDb(VoucherOrder order) {
 
 ## Controller逻辑
 
-![image-20240126200614368](../../../assets/Day08-秒杀优化/image-20240126200614368.png)
+![image-20240126200614368](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day08-秒杀优化/image-20240126200614368.png)
 
 Controller逻辑
 
@@ -369,7 +369,7 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId,
 
 ## 测试
 
-![image-20240127011420541](../../../assets/Day08-秒杀优化/image-20240127011420541.png)
+![image-20240127011420541](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day08-秒杀优化/image-20240127011420541.png)
 
 36ms, 很快
 

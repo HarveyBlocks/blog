@@ -1,6 +1,6 @@
 # 事务
 
-![image-20231009123907084](../../../assets/Day06/image-20231009123907084.png)
+![image-20231009123907084](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/事务/Day06-事务简介/image-20231009123907084.png)
 
 -   每一条指令都是小事务
 

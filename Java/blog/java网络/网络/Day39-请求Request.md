@@ -1,6 +1,6 @@
 # Request&Response
 
-![image-20231117180624023](../../../assets/Day39-请求和响应/image-20231117180624023.png)
+![image-20231117180624023](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117180624023.png)
 
 -   请求数据就是一个字符串嘛
 -   都是字符串嘛
@@ -24,7 +24,7 @@ public class Application extends HttpServlet {
 }
 ```
 
-![image-20231117181708837](../../../assets/Day39-请求和响应/image-20231117181708837.png)
+![image-20231117181708837](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117181708837.png)
 
 # Request
 
@@ -50,7 +50,7 @@ public class Application extends HttpServlet {
 GET/request-demo/req1?username=Mike HTTP/1.1
 ```
 
-![image-20231117182818643](../../../assets/Day39-请求和响应/image-20231117182818643.png)
+![image-20231117182818643](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117182818643.png)
 
 ```java
 String method = request.getMethod();
@@ -108,7 +108,7 @@ Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
 
 ### 请求体(POST)
 
-![image-20231117183720581](../../../assets/Day39-请求和响应/image-20231117183720581.png)
+![image-20231117183720581](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117183720581.png)
 
 ```java
 @Override
@@ -123,7 +123,7 @@ protected void doPost(
 }
 ```
 
-![image-20231117185016955](../../../assets/Day39-请求和响应/image-20231117185016955.png)
+![image-20231117185016955](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117185016955.png)
 
 ### 通过统一的方式获取请求参数
 
@@ -140,7 +140,7 @@ Map<String,String[]>
 
 -   方法
 
-    ![image-20231117205435672](../../../assets/Day39-请求和响应/image-20231117205435672.png)
+    ![image-20231117205435672](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117205435672.png)
 
     ```java
     @Override
@@ -161,7 +161,7 @@ Map<String,String[]>
     }
     ```
 
-![image-20231117211013430](../../../assets/Day39-请求和响应/image-20231117211013430.png)
+![image-20231117211013430](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117211013430.png)
 
 -   底层还是朴素的BufferedReader(POST)和QueryString(GET)
 
@@ -177,11 +177,11 @@ Map<String,String[]>
 
     -   通过URL传输数据,但是嘞,浏览器也不懂中文,浏览器直接就把信息转成**URL编码**了
 
-        ![image-20231117214851924](../../../assets/Day39-请求和响应/image-20231117214851924.png)
+        ![image-20231117214851924](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117214851924.png)
 
         所以,我们要做的不是给Java高七搞八,而是编写进行**URL解码**
 
-    -   ![image-20231117234358326](../../../assets/Day39-请求和响应/image-20231117234358326.png)
+    -   ![image-20231117234358326](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231117234358326.png)
 
         二进制一样的,懂了吧?
 
@@ -220,7 +220,7 @@ Map<String,String[]>
 2.  **将request的处理转给了资源器B**
 3.  资源B又依据request做了一些处理,将书记response给了浏览器
 
-![image-20231118131517789](../../../assets/Day39-请求Request/image-20231118131517789.png)
+![image-20231118131517789](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231118131517789.png)
 
 -   实现方法:
 
@@ -255,7 +255,7 @@ Map<String,String[]>
 
 ### 共享资源
 
-![image-20231118001306302](../../../assets/Day39-请求和响应/image-20231118001306302.png)
+![image-20231118001306302](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day39-请求Request/image-20231118001306302.png)
 
 -   是键值对哒
 

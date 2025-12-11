@@ -25,7 +25,7 @@ g(\theta^T x) = \frac{1}{1+e^{-\theta^T x}}\\
 sigmoid \space function
 $$
 
-![image-20240307224117257](../assets/Day06-逻辑回归和二分法/image-20240307224117257.png)
+![image-20240307224117257](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day06-逻辑回归和二分法/image-20240307224117257.png)
 
 -   `\theta^T^x` = **线性回归方程**或预测值
 
@@ -265,7 +265,7 @@ $$
 
 一条以FPR为x轴, TPR为y轴形成的曲线
 
-![image-20240308003856249](../assets/Day06-逻辑回归和二分法/image-20240308003856249.png)
+![image-20240308003856249](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day06-逻辑回归和二分法/image-20240308003856249.png)
 
 ### AUC
 

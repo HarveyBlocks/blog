@@ -4,7 +4,7 @@
 
 >   在邮箱会在新邮件过来时提示
 
-![image-20231229220524642](../assets/Day02-websocket介绍/image-20231229220524642.png)
+![image-20231229220524642](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/WebSocket/Day01-消息推送/image-20231229220524642.png)
 
 服务器如何把消息主动给浏览器(客户端)
 

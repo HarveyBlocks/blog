@@ -34,11 +34,11 @@ public User res5() {
 
     **真的传了个字符串,人家浏览器还不知道你是Json嘞**
 
-    ![image-20231128234747623](../../assets/Day04-异步响应/image-20231128234747623.png)
+    ![image-20231128234747623](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day04-异步响应/image-20231128234747623.png)
 
 -   相比之下的Spring:
 
-    ![image-20231128234921879](../../assets/Day04-异步响应/image-20231128234921879.png)
+    ![image-20231128234921879](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day04-异步响应/image-20231128234921879.png)
 
     看看人家,多长志气
 

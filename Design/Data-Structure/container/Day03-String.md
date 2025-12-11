@@ -32,7 +32,7 @@ fgabcde
 1.  不申请新内存
 2.  减少移动次数(`第一轮g移到最前, 第二轮f移到最前`这种策略不能采用)
 
-<img src="../../assets/Day03-String/image-20240615203841717.png" alt="image-20240615203841717" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/container/Day03-String/image-20240615203841717.png" alt="image-20240615203841717" style="zoom:50%;" />
 
 1.  reverse(string[0:length])
 2.  reverse(string[0:n])

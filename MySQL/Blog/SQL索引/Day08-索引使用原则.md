@@ -100,5 +100,5 @@ explain select * from user where name like 'A%B%';
 
 -   所以`is null`和`is not null`是否用索引也是这个知识点
 
-![image-20231022153019409](../../assets/Day08-索引使用原则/image-20231022153019409.png)
+![image-20231022153019409](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day08-索引使用原则/image-20231022153019409.png)
 

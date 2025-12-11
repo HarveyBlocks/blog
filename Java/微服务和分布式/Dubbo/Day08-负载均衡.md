@@ -2,7 +2,7 @@
 
 ## 策略
 
-![image-20240406220436331](../assets/Day08-负载均衡/image-20240406220436331.png)
+![image-20240406220436331](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/Dubbo/Day08-负载均衡/image-20240406220436331.png)
 
 ### Random(Default)
 
@@ -22,7 +22,7 @@ public class HelloServiceImpl implements HelloService {
 
 开启多台机器
 
-<img src="../assets/Day08-负载均衡/image-20240406214809791.png" alt="image-20240406214809791" style="zoom: 45%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/Dubbo/Day08-负载均衡/image-20240406214809791.png" alt="image-20240406214809791" style="zoom: 45%;" />
 
 测试用比例1:10:100
 
@@ -104,7 +104,7 @@ public class HelloController {
 
 ### 选择策略
 
-![image-20240406220512732](../assets/Day08-负载均衡/image-20240406220512732.png)
+![image-20240406220512732](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/Dubbo/Day08-负载均衡/image-20240406220512732.png)
 
 ```java
 @com.alibaba.dubbo.config.annotation.Reference(loadbalance = RandomLoadBalance.NAME)

@@ -30,7 +30,7 @@ public class TestThread implements Runnable{
 }
 ```
 
-![image-20230825090730601](../../assets/Day18/image-20230825090730601.png)
+![image-20230825090730601](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java多綫程/Day18-并发问题/image-20230825090730601.png)
 
 ## 阻塞
 

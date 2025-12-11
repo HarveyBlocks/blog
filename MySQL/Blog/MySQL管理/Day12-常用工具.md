@@ -4,7 +4,7 @@
 
 >   MySQL客户端工具,this one ↓
 
-![image-20231027193814309](../../assets/Day12-常用工具/image-20231027193814309.png)
+![image-20231027193814309](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027193814309.png)
 
 ```DOS
 mysql [options] [dataBase] 
@@ -23,7 +23,7 @@ mysql -h127.0.0.1 -P3306 -uroot -p123456 company -e "select * from user"
 
 -    -h可以不写
 
-![image-20231027194209292](../../assets/Day12-常用工具/image-20231027194209292.png)
+![image-20231027194209292](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027194209292.png)
 
 -   主打一个一次过
 
@@ -37,7 +37,7 @@ mysql -h127.0.0.1 -P3306 -uroot -p123456 company -e "select * from user"
 mysqladmin --help
 ```
 
-![image-20231027194650053](../../assets/Day12-常用工具/image-20231027194650053.png)
+![image-20231027194650053](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027194650053.png)
 
 -   先来康康帮助文档,(不写就主机IP:3306)
 
@@ -55,7 +55,7 @@ mysqladmin --help
 mysqlbinlog [option] logfile1 logfile2...
 ```
 
-![image-20231027195304029](../../assets/Day12-常用工具/image-20231027195304029.png)
+![image-20231027195304029](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027195304029.png)
 
 ```DOS
 D:\IT_study\MySQL\MySQL Server 8.0\Data>mysqlbinlog -s PC-LUCIFER-SHAN-bin.000005
@@ -69,25 +69,25 @@ D:\IT_study\MySQL\MySQL Server 8.0\Data>mysqlbinlog -s PC-LUCIFER-SHAN-bin.00000
     mysqlshow [option] [db_name[ table_name[ col_name]]]
     ```
 
-    ![image-20231027203008145](../../assets/Day12-常用工具/image-20231027203008145.png)
+    ![image-20231027203008145](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027203008145.png)
 
     ```dos
     mysqlshow -uroot -p123456 --count company tb_user
     ```
 
-    ![image-20231027203458876](../../assets/Day12-常用工具/image-20231027203458876.png)
+    ![image-20231027203458876](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027203458876.png)
 
     ```dos
     mysqlshow -uroot -p123456 --count company
     ```
 
-    ![image-20231027203610665](../../assets/Day12-常用工具/image-20231027203610665.png)
+    ![image-20231027203610665](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027203610665.png)
 
     ```dos
     mysqlshow -uroot -p123456 --count company tb_user name
     ```
 
-    ![image-20231027203234545](../../assets/Day12-常用工具/image-20231027203234545.png)
+    ![image-20231027203234545](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027203234545.png)
 
     ```dos
     mysqlshow -uroot -p123456 -i company tb_user
@@ -97,7 +97,7 @@ D:\IT_study\MySQL\MySQL Server 8.0\Data>mysqlbinlog -s PC-LUCIFER-SHAN-bin.00000
 
 -   用于数据备份
 
-![image-20231027204104584](../../assets/Day12-常用工具/image-20231027204104584.png)
+![image-20231027204104584](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027204104584.png)
 
 ```dos
 mysqldump -uroot -p123456 company > company.sql
@@ -107,9 +107,9 @@ mysqldump -uroot -p123456 company > company.sql
 
 ## mysqlimport/Source 导入
 
-![image-20231027205731529](../../assets/Day12-常用工具/image-20231027205731529.png)
+![image-20231027205731529](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027205731529.png)
 
-![image-20231027210259759](../../assets/Day12-常用工具/image-20231027210259759.png)
+![image-20231027210259759](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-常用工具/image-20231027210259759.png)
 
 ```dos
 mysqlimport -uroot -p1234 course.txt

@@ -11,7 +11,7 @@
     -   例如: 会飞的就是天鹅
     -   在训练集上表现得不好, 在测试集上表现差(模型过于简单)
 
-![image-20240307205603212](../assets/Day06-欠拟合和过拟合/image-20240307205603212.png)
+![image-20240307205603212](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day06-欠拟合和过拟合/image-20240307205603212.png)
 
 ## 解决
 
@@ -65,7 +65,7 @@ $$
 
 #### 正则化力度对最终结果的影响
 
-![image-20240307220106607](../assets/Day06-欠拟合和过拟合/image-20240307220106607.png)
+![image-20240307220106607](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day06-欠拟合和过拟合/image-20240307220106607.png)
 
 ## 岭回归
 

@@ -29,7 +29,7 @@
 
 -   给业务添加多级缓存
 
-    ![image-20240104180457242](../../../../assets/Day04-雪崩/image-20240104180457242.png)
+    ![image-20240104180457242](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-雪崩/image-20240104180457242.png)
 
     ⟪我抄我自己⟫
 

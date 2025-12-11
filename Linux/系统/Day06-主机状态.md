@@ -10,11 +10,11 @@
 
     默认**每5s刷新一次** ,按**q或CTRL+C**关闭
 
-    ![image-20240101142104487](../assets/Day06-主机状态/image-20240101142104487.png)
+    ![image-20240101142104487](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101142104487.png)
 
 ### 五行置顶信息
 
-![image-20240101142213469](../assets/Day06-主机状态/image-20240101142213469.png)
+![image-20240101142213469](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101142213469.png)
 
 -   第一行
     -   `top`:命令名称
@@ -57,7 +57,7 @@
 
 ### 列表信息
 
-![image-20240101144359870](../assets/Day06-主机状态/image-20240101144359870.png)
+![image-20240101144359870](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101144359870.png)
 
 -   `PID` : 进程ID
 -   `USER` : 进程所属用户
@@ -103,7 +103,7 @@
 
     -   以非交互**非全屏**模式运行, 以批次方式执行top
 
-        ![image-20240101150322369](../assets/Day06-主机状态/image-20240101150322369.png)
+        ![image-20240101150322369](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101150322369.png)
 
     -   一般配合 `-n` 指定输出几次统计信息, 将输出重定向到指定文件
 
@@ -146,7 +146,7 @@
 
     -   显示需要展示的项目
 
-        ![image-20240101151336896](../assets/Day06-主机状态/image-20240101151336896.png)
+        ![image-20240101151336896](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101151336896.png)
 
         前面有`*`的是会显示的字段
 
@@ -194,7 +194,7 @@
 
     -   切换显示内存信息
 
-    ![image-20240101151845490](../assets/Day06-主机状态/image-20240101151845490.png)
+    ![image-20240101151845490](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101151845490.png)
 
 ## 磁盘信息监控
 
@@ -206,7 +206,7 @@ df [-h]
 
 -   `-h` 以更人性化的单位显示
 
-![image-20240101152108332](../assets/Day06-主机状态/image-20240101152108332.png)
+![image-20240101152108332](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101152108332.png)
 
 查看CPU, 磁盘的相关信息
 
@@ -214,13 +214,13 @@ df [-h]
 iostat [-x] [刷新间隔秒数] [刷新次数]
 ```
 
-![image-20240101152640328](../assets/Day06-主机状态/image-20240101152640328.png)
+![image-20240101152640328](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101152640328.png)
 
 `tps`表示设备每秒的传输次数
 
 -   `-x` 显示更多信息
 
-![image-20240101152737400](../assets/Day06-主机状态/image-20240101152737400.png)
+![image-20240101152737400](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101152737400.png)
 
 `rKB` 每秒发送到设备的读取请求数
 
@@ -240,7 +240,7 @@ sar -n DEV [刷新间隔] [查看次数]
 
 `DEV`查看网络接口
 
-![image-20240101153256665](../assets/Day06-主机状态/image-20240101153256665.png)
+![image-20240101153256665](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101153256665.png)
 
 -   `IFACE` 
 
@@ -270,7 +270,7 @@ sar -n DEV [刷新间隔] [查看次数]
 
     接收的多播数据包/s
 
-![image-20240101153941166](../assets/Day06-主机状态/image-20240101153941166.png)
+![image-20240101153941166](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-主机状态/image-20240101153941166.png)
 
 emmm
 

@@ -66,7 +66,7 @@ taskkill # 杀死进程
     jconsole
     ```
 
-    <img src="../assets/Day01-查看进程线程/image-20240905180926383.png" alt="image-20240905180926383" style="zoom: 50%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程与进程/Day01-查看进程线程/image-20240905180926383.png" alt="image-20240905180926383" style="zoom: 50%;" />
 
     这是Jconsole的进程信息(用jconsole看jconsole😂)
 

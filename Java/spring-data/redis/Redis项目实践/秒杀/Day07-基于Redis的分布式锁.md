@@ -180,7 +180,7 @@ String identification = UUID.randomUUID().toString(true)+"-"+Thread.currentThrea
 
 那么, 此时后来的线程的锁又在其不之情的情况下被删除了
 
-![image-20240121164103073](../../../assets/Day07-基于Redis的分布式锁/image-20240121164103073.png)
+![image-20240121164103073](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-基于Redis的分布式锁/image-20240121164103073.png)
 
 #### 解决方案
 

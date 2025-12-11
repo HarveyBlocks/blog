@@ -14,7 +14,7 @@
 >
 >   ​	是哪个组件最终解析的视图?
 
-![image-20231123223811630](../../assets/Day01-浅析SpringMVC关键组件/image-20231123223811630.png)
+![image-20231123223811630](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-浅析SpringMVC关键组件/image-20231123223811630.png)
 
 -   接口规范------------------------------------------------------------------实现
 
@@ -52,13 +52,13 @@
 -   但是我们传Json分装了的对象啦,一般不会直接去返回一个视图文件
 -   (不过作为测试返回的视图不错)
 
-![image-20231123230514106](../../assets/Day01-浅析SpringMVC关键组件/image-20231123230514106.png)
+![image-20231123230514106](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-浅析SpringMVC关键组件/image-20231123230514106.png)
 
 ## SpringMVC默认采用的组件实现类
 
 查看配置文件:**org.springframework.web.servlet.DispatcherServlet.properties**
 
-![image-20231123232423773](../../assets/Day01-浅析SpringMVC关键组件/image-20231123232423773.png)
+![image-20231123232423773](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-浅析SpringMVC关键组件/image-20231123232423773.png)
 
 ```properties
 接口全限定名=默认的实现
@@ -98,7 +98,7 @@
 
 -   然后打断点,它不会进入给默认HandlerMappering的那个分支里去
 
-![image-20231124015035115](../../assets/Day01-浅析SpringMVC关键组件/image-20231124015035115.png)
+![image-20231124015035115](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-浅析SpringMVC关键组件/image-20231124015035115.png)
 
 -   所以以后用自己的HandlerMapping的时候,它就不会加载默认的HandlerMappering了!
 

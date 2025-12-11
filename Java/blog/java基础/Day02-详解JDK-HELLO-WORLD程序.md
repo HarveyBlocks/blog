@@ -22,7 +22,7 @@ javac 文件名.java  #进行编译，会出现“文件名.class”
 java 文件名        #运行文件，不要输.class
 ```
 
-<img src="../../assets/image-20230801135535684.png" alt="image-20230801135535684" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day02-详解JDK-HELLO-WORLD程序/image-20230801135535684.png" alt="image-20230801135535684" style="zoom:50%;" />
 
 ## 可能会出现的问题
 
@@ -38,5 +38,5 @@ java 文件名        #运行文件，不要输.class
    }
    ```
 
-<img src="../../assets/image-20230801140511235.png" alt="image-20230801140511235" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day02-详解JDK-HELLO-WORLD程序/image-20230801140511235.png" alt="image-20230801140511235" style="zoom:50%;" />
 

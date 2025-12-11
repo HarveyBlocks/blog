@@ -58,7 +58,7 @@
 
 这是一个本地图片文件：
 
-![homeschool-f10a98](assets/homeschool-f10a98.png)
+![homeschool-f10a98](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他/Day01-MarkDown/homeschool-f10a98.png)
 
 这是一个网页图片文件(转自https://i0.hdslb.com/bfs/new_dyn/5af0ddea6370c05b54e36a5bfa63b91e168687092.jpg)：
 

@@ -8,11 +8,11 @@
 
 小根堆
 
-![image-20240701222022505](../../assets/Day07-配对堆/image-20240701222022505.png)
+![image-20240701222022505](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day07-配对堆/image-20240701222022505.png)
 
 化为: 
 
-![image-20240701222030417](../../assets/Day07-配对堆/image-20240701222030417.png)
+![image-20240701222030417](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day07-配对堆/image-20240701222030417.png)
 
 以链表的形式存储处于同一父节点下, 同一深度的所有孩子节点
 
@@ -22,7 +22,7 @@
 
 堆A,堆B, 根节点小的那个指向根节点大的那个, 让根节点大的那个成为根节点小的那个的孩子
 
-<img src="../../assets/Day07-配对堆/image-20240701222541263.png" alt="image-20240701222541263" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day07-配对堆/image-20240701222541263.png" alt="image-20240701222541263" style="zoom:50%;" />
 
 ## 删除根
 

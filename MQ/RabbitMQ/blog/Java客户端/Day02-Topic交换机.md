@@ -2,11 +2,11 @@
 
 >   Topic 话题
 
-![Topic Exchange illustration, which is all explained in the following text.](../../assets/Day02-Topic交换机/python-five.png)
+![Topic Exchange illustration, which is all explained in the following text.](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Topic交换机/python-five.png)
 
 多个单词, 以`.`分隔
 
-![image-20240112203043906](../../assets/Day02-Topic交换机/image-20240112203043906.png)
+![image-20240112203043906](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Topic交换机/image-20240112203043906.png)
 
 ## 通配符
 
@@ -17,7 +17,7 @@
 
 -   每一个**Queue**都要Exchange设置一个**Bindingkey**
 
-    <img src="../../assets/Day02-Topic交换机/image-20240112203757111.png" alt="image-20240112203757111" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Topic交换机/image-20240112203757111.png" alt="image-20240112203757111" style="zoom:50%;" />
 
 -   **发布者**发送消息时, **指定消息的RoutingKey**
 

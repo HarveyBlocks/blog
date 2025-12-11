@@ -10,7 +10,7 @@ slave宕机之后, 只要再次连接master, 就能恢复数据
 
 当发现Master宕机的哪一刻, 立刻选一个Slave成为新的Mater
 
-![image-20240210192209884](../../assets/Day06-哨兵机制/image-20240210192209884.png)
+![image-20240210192209884](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/分布式缓存/Day06-哨兵机制/image-20240210192209884.png)
 
 ## 作用
 

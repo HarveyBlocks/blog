@@ -1,6 +1,6 @@
 # 下载
 
-<img src="../../assets/Day02-功能特性和常用功能/image-20240415130550387.png" alt="image-20240415130550387" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/基础/Day02-下载安装/image-20240415130550387.png" alt="image-20240415130550387" style="zoom:50%;" />
 
 -   pgp
     -   判断从其他途径获取的Nginx是否被别人进行过更改
@@ -105,7 +105,7 @@ whereis nginx
 
 启动
 
-<img src="../../assets/Day02-下载安装/image-20240416125402251.png" alt="image-20240416125402251" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/基础/Day02-下载安装/image-20240416125402251.png" alt="image-20240416125402251" style="zoom:50%;" />
 
 启动成功
 

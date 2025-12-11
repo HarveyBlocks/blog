@@ -49,7 +49,7 @@ last指size的最后
 
 end指capacity的最后
 
-![image-20240529182839335](../../Java/jvm/assets/Class11-标准模板库/image-20240529182839335.png)
+![image-20240529182839335](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/cpp/Class11-标准模板库/image-20240529182839335.png)
 
 #### 增
 
@@ -435,7 +435,7 @@ bidirectional-->
 randomAcess
 ```
 
-![image-20240612143049176](../assets/Class11-标准模板库/image-20240612143049176.png)
+![image-20240612143049176](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/cpp/Class11-标准模板库/image-20240612143049176.png)
 
 ### find()
 

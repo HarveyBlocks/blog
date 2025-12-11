@@ -21,7 +21,7 @@
 
 ## 执行流程
 
-![image-20240421115857529](..\..\assets\Day04-缓存处理\image-20240421115857529.png)
+![image-20240421115857529](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-缓存处理/image-20240421115857529.png)
 
 ## 相关指令
 

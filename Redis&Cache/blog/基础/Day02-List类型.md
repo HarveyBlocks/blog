@@ -173,7 +173,7 @@ centos-redis:0>BLpop id 100
 
 如果id被删完了, 就会阻塞, 停在哪里了,卡死了
 
-![image-20240102010501165](../../assets/Day02-List类型/image-20240102010501165.png)
+![image-20240102010501165](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day02-List类型/image-20240102010501165.png)
 
 然后再一个客户端B
 

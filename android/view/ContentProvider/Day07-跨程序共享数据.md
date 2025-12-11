@@ -20,7 +20,7 @@ ContentProvider 可以选择只对哪一部分数据进行共享，从而保证�
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 ```
 
-<img src="../../assets/Day07-跨程序共享数据/image-20250917104128131.png" alt="image-20250917104128131" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/ContentProvider/Day07-跨程序共享数据/image-20250917104128131.png" alt="image-20250917104128131" style="zoom:50%;" />
 
 Android6.0之后也支持运行时权限
 
@@ -69,7 +69,7 @@ Caused by: java.lang.SecurityException: Permission Denial: starting Intent { act
 
 会提示需要什么权限
 
-![image-20250917112626165](../../assets/Day01-跨程序共享数据/image-20250917112626165.png)
+![image-20250917112626165](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/ContentProvider/Day07-跨程序共享数据/image-20250917112626165.png)
 
 接下来在Manifest
 
@@ -129,7 +129,7 @@ private fun call() {
 }
 ```
 
-<img src="../../assets/Day01-跨程序共享数据/image-20250917113224629.png" alt="image-20250917113224629" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/ContentProvider/Day07-跨程序共享数据/image-20250917113224629.png" alt="image-20250917113224629" style="zoom:50%;" />
 
 ## 动态权限申请的代码封装
 
@@ -357,7 +357,7 @@ fun afterRequestPermission(
 
 在model的gradle 配置文件中查看版本信息
 
-![image-20250920003941891](../../assets/Day07-跨程序共享数据/image-20250920003941891.png)
+![image-20250920003941891](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/ContentProvider/Day07-跨程序共享数据/image-20250920003941891.png)
 
 minSdk 表示版本其之下的系统禁止安装本应用
 

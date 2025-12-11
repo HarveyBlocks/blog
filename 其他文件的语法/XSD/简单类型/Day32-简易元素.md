@@ -17,7 +17,7 @@
 
 ### 常用文件类型
 
-![img](../../assets/Day32-简易元素/05104256-eb9c5f9945f34d92af0c1e31added34d.jpg)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/XSD/简单类型/Day32-简易元素/05104256-eb9c5f9945f34d92af0c1e31added34d.jpg)
 
 -   缺省->空
 -   xs:string

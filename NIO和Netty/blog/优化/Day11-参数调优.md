@@ -125,7 +125,7 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 
     -   要使任务堆积, 可以在此处打断点:
 
-        ![image-20240331191130803](../../assets/Day11-参数调优/image-20240331191130803.png)
+        ![image-20240331191130803](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/优化/Day11-参数调优/image-20240331191130803.png)
 
     -   或者使用BIO
 
@@ -166,7 +166,7 @@ TCP-Nagle算法: 将小数据包攒一批了再发送
 -   属于SocketChannel参数
 -   用来分配`ByteBuf`, `ctx.alloc()`
 
-![image-20240331193534666](../../assets/Day11-参数调优/image-20240331193534666.png)
+![image-20240331193534666](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/优化/Day11-参数调优/image-20240331193534666.png)
 
 配置方法:
 
@@ -180,7 +180,7 @@ TCP-Nagle算法: 将小数据包攒一批了再发送
 
 `不首选直接内存`
 
-![image-20240331193911168](../../assets/Day11-参数调优/image-20240331193911168.png)
+![image-20240331193911168](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/优化/Day11-参数调优/image-20240331193911168.png)
 
 ```powershell
 -Dio.netty.noPreferDirec=True
@@ -192,13 +192,13 @@ TCP-Nagle算法: 将小数据包攒一批了再发送
 -   控制netty接收缓冲区的大小
 -   负责入站数据的分配, 决定入站缓冲区的大小(可动态调整), 统一采用direct直接内存, 具体池化还是非池化由allocator决定
 
-![image-20240331202159281](../../assets/Day11-参数调优/image-20240331202159281.png)
+![image-20240331202159281](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/优化/Day11-参数调优/image-20240331202159281.png)
 
 -   ByteBufAllocator决定池化还是非池化
 
 -   RecvByteBufAllocator决定ByteBUf 的大小
 
-    ![image-20240331202725841](../../assets/Day11-参数调优/image-20240331202725841.png)
+    ![image-20240331202725841](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/优化/Day11-参数调优/image-20240331202725841.png)
 
     根据数据, 猜测ByteBuf的大小, 然后分配内存
 

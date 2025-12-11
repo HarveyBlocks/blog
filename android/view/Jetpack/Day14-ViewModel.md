@@ -14,7 +14,7 @@ ViewModel的生命周期和Activity不同，它可以保证在手机屏幕发生
 
 **只有当Activity退出的时候ViewModel才会跟着Activity一起销毁**
 
-![image-20250924214223206](../../assets/Day14-ViewModel/image-20250924214223206.png)
+![image-20250924214223206](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day14-ViewModel/image-20250924214223206.png)
 
 ## 基本用法
 
@@ -92,11 +92,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 翻转屏幕也不会丢失点击的数据
 
-![image-20250925110925500](../../assets/Day14-ViewModel/image-20250925110925500.png)
+![image-20250925110925500](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day14-ViewModel/image-20250925110925500.png)
 
 翻转
 
-![image-20250925110913668](../../assets/Day14-ViewModel/image-20250925110913668.png)
+![image-20250925110913668](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day14-ViewModel/image-20250925110913668.png)
 
 ## 工厂
 
@@ -132,7 +132,7 @@ viewModel =
 
 Model-View-ViewModel 架构
 
-![image-20250927001537619](../../assets/Day14-ViewModel/image-20250927001537619.png)
+![image-20250927001537619](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day14-ViewModel/image-20250927001537619.png)
 
 ### 实践
 

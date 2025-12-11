@@ -32,7 +32,7 @@
     docker save --help
     ```
 
-    ![image-20231213144408840](../../../Java/spring-data/assets/Day15-Docker命令/image-20231213144408840.png)
+    ![image-20231213144408840](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker命令/image-20231213144408840.png)
 
     ```bash
     docker save -o dockers/mysql.tar mysql:latest
@@ -130,7 +130,7 @@
         mysql -uroot -p
         ```
 
-        ![image-20231213151435278](../../../Java/spring-data/assets/Day15-Docker命令/image-20231213151435278.png)
+        ![image-20231213151435278](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker命令/image-20231213151435278.png)
 
         退出mysql
 
@@ -161,7 +161,7 @@
     -   `rmi`删除镜像
     -   `rm`删除容器
 
-![image-20231213142652668](../../../Java/spring-data/assets/Day15-Docker命令/image-20231213142652668.png)
+![image-20231213142652668](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker命令/image-20231213142652668.png)
 
 剩下的看官方文档
 

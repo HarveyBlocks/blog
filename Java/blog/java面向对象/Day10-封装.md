@@ -13,17 +13,17 @@
 
 protect子类不同包,可行
 
-![image-20230808142426147](../../assets/Day09/image-20230808142426147.png)
+![image-20230808142426147](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-封装/image-20230808142426147.png)
 
 - ↑报红啦
 
- ![image-20230808143436251](../../assets/Day09/image-20230808143436251.png)
+ ![image-20230808143436251](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-封装/image-20230808143436251.png)
 
 - get-set的用法
 
 为什么说这么做更安全了呢?
 
-![image-20230901135447447](../../assets/Day10/image-20230901135447447.png)
+![image-20230901135447447](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-封装/image-20230901135447447.png)
 
 ## 意义
 

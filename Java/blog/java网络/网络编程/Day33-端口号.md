@@ -4,7 +4,7 @@
 -   端口号确定主机上的哪个应用程序
 -   **被规定为16位的二进制,范围是[0,65535]**
 
-![image-20231011191254136](../../../assets/Day33/image-20231011191254136.png)
+![image-20231011191254136](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-端口号/image-20231011191254136.png)
 
 在防火墙上开放端口号
 

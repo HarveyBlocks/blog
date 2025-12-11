@@ -113,13 +113,13 @@ binlog_expire_logs_seconds=1145141414810
 show variables like '%general_log%';
 ```
 
-![image-20231028101445087](../../assets/Day12-日志/image-20231028101445087.png)
+![image-20231028101445087](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day12-日志/image-20231028101445087.png)
 
 -    
 
 ### 开启
 
-![image-20231028101701926](../../assets/Day12-日志/image-20231028101701926.png)
+![image-20231028101701926](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day12-日志/image-20231028101701926.png)
 
 -   1和on都行
 

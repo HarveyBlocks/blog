@@ -10,7 +10,7 @@
 
 ### 继承体现
 
-![image-20231201190619330](../../assets/Day06-前端控制器/image-20231201190619330.png)
+![image-20231201190619330](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC组件原理/Day06-前端控制器初始化/image-20231201190619330.png)
 
 # 初始化
 

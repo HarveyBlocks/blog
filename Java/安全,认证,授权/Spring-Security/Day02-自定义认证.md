@@ -18,7 +18,7 @@ public void addViewControllers(ViewControllerRegistry registry) {
 
 -   login.html
 
-![image-20231218194854743](../../assets/Day02-SpringSecurity生产/image-20231218194854743.png)
+![image-20231218194854743](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-自定义认证/image-20231218194854743.png)
 
 -   指定登录界面的URL
 
@@ -38,7 +38,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 这里会有问题
 
-![image-20231218194831968](../../assets/Day02-SpringSecurity生产/image-20231218194831968.png)
+![image-20231218194831968](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-自定义认证/image-20231218194831968.png)
 
 -   原因是SpringSecurity为了防止**CSRF**( Cross-site request forery **跨站请求伪造**), 限制了除了get意外的大多数的方法
 

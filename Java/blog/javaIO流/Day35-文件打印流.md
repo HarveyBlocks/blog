@@ -1,6 +1,6 @@
 -   写什么就打印什么,嘎嘎牛逼
 
-![image-20231014173908574](../../assets/Day35/image-20231014173908574.png)
+![image-20231014173908574](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day35-文件打印流/image-20231014173908574.png)
 
 ```java
 public class PrintStream extends FilterOutputStream
@@ -15,7 +15,7 @@ class FilterOutputStream extends OutputStream
 -   缝合怪
 -   男人的梦想
 
-![image-20231014174306643](../../assets/Day35/image-20231014174306643.png)
+![image-20231014174306643](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day35-文件打印流/image-20231014174306643.png)
 
 ```java
 public class PrintWriter extends Writer

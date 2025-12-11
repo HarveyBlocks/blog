@@ -53,7 +53,7 @@ db.<collection>.createIndex( { <field>: <sort-order> } )
 String indexName = collection.createIndex(Indexes.ascending("title"));
 ```
 
-![Diagram of an index on the ``score`` field (ascending).](../../assets/Day07-Index/index-ascending.bakedsvg.svg)
+![Diagram of an index on the ``score`` field (ascending).](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/JavaClient/Day07-Index/index-ascending.bakedsvg.svg)
 
 ## 复合索引
 
@@ -70,7 +70,7 @@ db.<collection>.createIndex( {
 
 - `sortOrder` 可选`1` (升序)和`-1`
 
-![Diagram of a compound index on the ``userid`` field (ascending) and the ``score`` field (descending). The index sorts first by the ``userid`` field and then by the ``score`` field.](../../assets/Day07-Index/index-compound-key.bakedsvg.svg)
+![Diagram of a compound index on the ``userid`` field (ascending) and the ``score`` field (descending). The index sorts first by the ``userid`` field and then by the ``score`` field.](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/JavaClient/Day07-Index/index-compound-key.bakedsvg.svg)
 
 ```java
 // {"a": 1, "b": 1}
@@ -104,7 +104,7 @@ collection.createIndex(indexBson);
 db.<collection>.createIndex( { <arrayField>: <sortOrder> } )
 ```
 
-![Diagram of a multikey index on the ``addr.zip`` field. The ``addr`` field contains an array of address documents. The address documents contain the ``zip`` field.](../../assets/Day07-Index/index-multikey.bakedsvg.svg)
+![Diagram of a multikey index on the ``addr.zip`` field. The ``addr`` field contains an array of address documents. The address documents contain the ``zip`` field.](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/JavaClient/Day07-Index/index-multikey.bakedsvg.svg)
 
 图为使用addr.zip创建Index而自动构建的`Multikey`
 

@@ -2,7 +2,7 @@
 
 -   注解集合先别着急,我觉着Json比较合适,但时候未到
 
-![image-20231106163320232](../../../assets/Day07-注入/image-20231106163320232.png)
+![image-20231106163320232](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/Bean基本注解开发/Day07-注入/image-20231106163320232.png)
 
 ```java
 package com.harvey.impl;

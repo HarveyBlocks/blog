@@ -193,7 +193,7 @@ public static boolean demo() {
 }
 ```
 
-![image-20240605005402515](../../assets/Day02-建造者模式/image-20240605005402515.png)
+![image-20240605005402515](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/创建者/Day02-建造者模式/image-20240605005402515.png)
 
 ## 缺点
 

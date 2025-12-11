@@ -2,11 +2,11 @@
 
 ## 配置Mappper文件
 
-![image-20231016154437216](../assets/Day34-Mapper代理/image-20231016154437216.png)
+![image-20231016154437216](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-Mapper代理/image-20231016154437216.png)
 
 1.  在resource下创建这个**目录**,和对应接口Mapper一致
 
-![image-20231016154752652](../assets/Day34-Mapper代理/image-20231016154752652.png)
+![image-20231016154752652](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-Mapper代理/image-20231016154752652.png)
 
 -   注意是斜杠
 
@@ -14,11 +14,11 @@
 
 3.  打开classes:
 
-    ![image-20231016155532157](../assets/Day34-Mapper代理/image-20231016155532157.png)
+    ![image-20231016155532157](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-Mapper代理/image-20231016155532157.png)
 
 可以看到,其实是在同一个目录下的.
 
-![image-20231016155604856](../assets/Day34-Mapper代理/image-20231016155604856.png)
+![image-20231016155604856](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-Mapper代理/image-20231016155604856.png)
 
 ## 写UerMapper代理接口
 

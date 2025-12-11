@@ -183,7 +183,7 @@ false
 
 哈希表=数组 + 字符串
 
-![new了一个HashSet对象](../../assets/Day21/new了一个HashSet对象.png)
+![new了一个HashSet对象](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java集合/Day21-HashSet/new了一个HashSet对象.png)
 
 老规矩 Alt + Insert  偷懒大法
 

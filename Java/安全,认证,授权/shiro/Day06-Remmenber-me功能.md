@@ -23,7 +23,7 @@ public static SimpleCookie getCookie(){
 
 ```
 
-![image-20231222223442306](../../assets/Day06-Remmenber-me功能/image-20231222223442306.png)
+![image-20231222223442306](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/shiro/Day06-Remmenber-me功能/image-20231222223442306.png)
 
 ## 准备Manager
 
@@ -68,7 +68,7 @@ public DefaultWebSecurityManager defaultWebSecurityManager(){
 
 ## 修改Controller
 
-![image-20231222194130648](../../assets/Day06-Remmenber-me功能/image-20231222194130648.png)
+![image-20231222194130648](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/shiro/Day06-Remmenber-me功能/image-20231222194130648.png)
 
 ## 注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意注意
 

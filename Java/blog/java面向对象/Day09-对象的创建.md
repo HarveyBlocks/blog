@@ -69,11 +69,11 @@ this关键字是指向当前**对象**的
 
 ## 内存分析
 
-![image-20230901142342338](../../assets/Day09/image-20230901142342338.png)
+![image-20230901142342338](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day09-对象的创建/image-20230901142342338.png)
 
 ### 对象之间的属性一般不会相互影响除非:
 
-![image-20230901143406259](../../assets/Day09/image-20230901143406259.png)
+![image-20230901143406259](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day09-对象的创建/image-20230901143406259.png)
 
 内存分析一下就理解了
 

@@ -7,7 +7,7 @@
 
 -   数据库的实现类也叫做**驱动**的.jar包
 
-![image-20231009193046103](../../assets/Day32/homeschool-f10a98.png)
+![image-20231009193046103](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day32-JDBC简介/homeschool-f10a98.png)
 
 ```java
 import java.sql.Connection;

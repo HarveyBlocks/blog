@@ -6,7 +6,7 @@
 
 用于存放网页导航
 
-![image-20250826203012328](../assets/Day06-语义化标签/image-20250826203012328.png)
+![image-20250826203012328](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day06-语义化标签/image-20250826203012328.png)
 
 ## footer
 

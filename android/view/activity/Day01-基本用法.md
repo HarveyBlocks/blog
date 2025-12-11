@@ -10,11 +10,11 @@ Activity 是一种可以包含用户界面的组件
 
 ### 添加Activity类
 
-![image-20250907153442377](../../assets/Day01-基本用法/image-20250907153442377.png)
+![image-20250907153442377](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907153442377.png)
 
 选择Empty Views Activity
 
-![image-20250907155850868](../../assets/Day01-基本用法/image-20250907155850868.png)
+![image-20250907155850868](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907155850868.png)
 
 ```kotlin
 package org.harvey.android.first
@@ -42,15 +42,15 @@ manifest自动添加
 
 选择Layout Resource File
 
-![image-20250907155559108](../../assets/Day01-基本用法/image-20250907155559108.png)
+![image-20250907155559108](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907155559108.png)
 
 设置文件名和根元素
 
-<img src="../../assets/Day01-基本用法/image-20250907155519895.png" alt="image-20250907155519895" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907155519895.png" alt="image-20250907155519895" style="zoom:50%;" />
 
 创建完成
 
-<img src="../../assets/Day01-基本用法/image-20250907155251682.png" alt="image-20250907155251682" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907155251682.png" alt="image-20250907155251682" style="zoom:50%;" />
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -88,7 +88,7 @@ manifest自动添加
     -   `wrap_content `当前元素的高度刚好包含里面的内容
 -   `android:text`指定了元素中显示的文字内容
 
-![image-20250907163055625](../../assets/Day01-基本用法/image-20250907163055625.png)
+![image-20250907163055625](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907163055625.png)
 
 ### 加载布局
 
@@ -171,11 +171,11 @@ class FirstActivity : AppCompatActivity() {
 
 使用`android:label`指定Activity中标题栏(Bar)的内容，标题栏是显示在Activity最顶部的
 
-![image-20250907231636447](../../assets/Day01-基本用法/image-20250907231636447.png)
+![image-20250907231636447](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907231636447.png)
 
 给**主Activity**指定的label不仅会成为标题栏中的内容，还会成为启动器（Launcher）中应用程序显示的名称
 
-<img src="../../assets/Day01-基本用法/image-20250907191259972.png" alt="image-20250907191259972" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907191259972.png" alt="image-20250907191259972" style="zoom:50%;" />
 
 ## Toast
 
@@ -214,7 +214,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-<img src="../../assets/Day01-基本用法/image-20250907205525044.png" alt="image-20250907205525044" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907205525044.png" alt="image-20250907205525044" style="zoom:33%;" />
 
 ## menu
 
@@ -222,11 +222,11 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 在res目录下新建一个menu文件夹
 
-![image-20250907223926629](../../assets/Day01-基本用法/image-20250907223926629.png)
+![image-20250907223926629](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907223926629.png)
 
 menu文件夹下新建一个名叫“main”的菜单文件(右键->NEW->Menu Resource File)
 
-<img src="../../assets/Day01-基本用法/image-20250907224017008.png" alt="image-20250907224017008" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907224017008.png" alt="image-20250907224017008" style="zoom:50%;" />
 
 添加代码
 
@@ -243,7 +243,7 @@ menu文件夹下新建一个名叫“main”的菜单文件(右键->NEW->Menu Re
 
 效果
 
-![image-20250907224235603](../../assets/Day01-基本用法/image-20250907224235603.png)
+![image-20250907224235603](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907224235603.png)
 
 ### 注册资源
 
@@ -287,7 +287,7 @@ private fun toastShow(resId:Int) {
 
 Android的Back键有自动销毁的功能
 
-![image-20250907230452370](../../assets/Day01-基本用法/image-20250907230452370.png)
+![image-20250907230452370](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day01-基本用法/image-20250907230452370.png)
 
 在代码中使用Activity的方法`finish()`, 实现在代码中销毁activity, 效果与Back键一致
 

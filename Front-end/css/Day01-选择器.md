@@ -271,7 +271,7 @@ q:lang(jp) {
 <div>有一句叫做<q lang="jp">识时务者为俊杰</q>的话</div>
 ```
 
-![image-20250804204822938](../assets/Day01-选择器/image-20250804204822938.png)
+![image-20250804204822938](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day01-选择器/image-20250804204822938.png)
 
 ### 表格斑马纹
 
@@ -283,7 +283,7 @@ q:lang(jp) {
 tr:nth-child(even) {background-color: #f2f2f2;}
 ```
 
-![image-20250805203436758](../assets/Day01-选择器/image-20250805203436758.png)
+![image-20250805203436758](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day01-选择器/image-20250805203436758.png)
 
 ## 伪元素
 
@@ -324,7 +324,7 @@ selector.class::pseudo-element {
 }
 ```
 
-![image-20250804210229045](../assets/Day01-选择器/image-20250804210229045.png)
+![image-20250804210229045](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day01-选择器/image-20250804210229045.png)
 
 ### 每段话结尾加上图片
 
@@ -334,7 +334,7 @@ div.s::after {
 }
 ```
 
-![image-20250804211633061](../assets/Day01-选择器/image-20250804211633061.png)
+![image-20250804211633061](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day01-选择器/image-20250804211633061.png)
 
 ## 属性选择器
 

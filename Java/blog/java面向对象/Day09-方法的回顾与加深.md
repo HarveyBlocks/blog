@@ -10,7 +10,7 @@ public void readFile (String file) throws IOExpection{
 
 静态方法--加static      	类名.方法名-->在另一个类中调用方法
 
-![image-20230807142807201](../../assets/Day09/image-20230807142807201.png)
+![image-20230807142807201](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day09-方法的回顾与加深/image-20230807142807201.png)
 
 非静态方法   					先实例化这个类（new）
 
@@ -19,7 +19,7 @@ public void readFile (String file) throws IOExpection{
 对象名.方法名;
 ```
 
-![image-20230807143459592](../../assets/Day09/image-20230807143459592.png)
+![image-20230807143459592](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day09-方法的回顾与加深/image-20230807143459592.png)
 
 ``` java
 package com.pac;
@@ -67,7 +67,7 @@ public class Student {
 
 static方法中不能有this调用属性,实例方法中可以
 
-![image-20230901001456683](../../assets/Day09/image-20230901001456683.png)
+![image-20230901001456683](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day09-方法的回顾与加深/image-20230901001456683.png)
 
 static是和类一起加载的
 

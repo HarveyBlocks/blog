@@ -91,11 +91,11 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
 <xs:element name="name" type="xs:string" block="substitution"/>
 ```
 
-![image-20240613210939704](../../assets/Day33-元素替换/image-20240613210939704.png)
+![image-20240613210939704](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/XSD/复合元素/Day33-元素替换/image-20240613210939704.png)
 
 看似一切安好
 
-![image-20240613210954431](../../assets/Day33-元素替换/image-20240613210954431.png)
+![image-20240613210954431](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/XSD/复合元素/Day33-元素替换/image-20240613210954431.png)
 
 其实已经不生效了
 

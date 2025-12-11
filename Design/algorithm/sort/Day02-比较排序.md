@@ -10,7 +10,7 @@
 
 决策树是一棵完全二叉树(?没有吧?)
 
-![image-20240619011537791](../../assets/Day02-比较排序/image-20240619011537791.png)
+![image-20240619011537791](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day02-比较排序/image-20240619011537791.png)
 
 该图是三个元素使用插入排序的过程, 在决策树上的体现
 

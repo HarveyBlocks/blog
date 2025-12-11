@@ -116,7 +116,7 @@ export default defineConfig({
 
 exclude非常方便
 
-![image-20250827064251206](../../../assets/ElementPlus/image-20250827064251206.png)
+![image-20250827064251206](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/通用型组件/ElementPlus/image-20250827064251206.png)
 
 ```vue
 <template>

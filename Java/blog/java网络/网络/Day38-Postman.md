@@ -43,7 +43,7 @@ public class Request {
 
 -   原始逻辑
 
-![image-20231113011712681](../../../assets/Untitled/image-20231113011712681.png)
+![image-20231113011712681](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-Postman/image-20231113011712681.png)
 
 -   学Spring需要先学JavaWeb
 -   学JavaWeb会教SpringBoot(不会教你Spring和SpringMVC)

@@ -33,7 +33,7 @@ get 键名
  keys 模板		## 知道符合模板的key
 ```
 
-![image-20231028205659090](../../assets/Day01-字符串/image-20231028205659090.png)
+![image-20231028205659090](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-字符串/image-20231028205659090.png)
 
 -   由于Radis是单线程,肯定阻塞啊,**不建议在生产中使用这种查法**
 
@@ -97,7 +97,7 @@ incrbyfloat 整型值的key -步长
 -   浮点数没有默认增长,必须指定步长
 -   没有decr
 
-![image-20231028232000682](../../Assets/image-20231028232000682.png)
+![image-20231028232000682](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day01-字符串/image-20231028232000682.png)
 
 -   产生问题:
     -   数据类型转换

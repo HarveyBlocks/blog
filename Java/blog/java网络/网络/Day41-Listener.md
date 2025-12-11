@@ -4,7 +4,7 @@
 
 ## Listener分类
 
-![image-20231119220224870](../../../assets/Day41-Listener/image-20231119220224870.png)
+![image-20231119220224870](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day41-Listener/image-20231119220224870.png)
 
 -    ServletContextListener是后面会用到的Listener,其他的不怎么用
 -    ServletContextListener就是对整个Web对象进行监听

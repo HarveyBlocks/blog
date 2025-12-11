@@ -53,7 +53,7 @@ Session黏贴：当用户访问集群中某台服务器后，强制指定后续�
 
 ## 分布式系统架构
 
-![image-20231220155308590](../../assets/Day04-方案/image-20231220155308590.png)
+![image-20231220155308590](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/分布式系统认证方案/Day04-方案/image-20231220155308590.png)
 
 网关会先验证接入方(客户端, 第三方)的权限
 

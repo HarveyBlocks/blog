@@ -4,11 +4,11 @@
 
 ## 示例
 
-![image-20250819030256048](../../../assets/Day7-router/image-20250819030256048.png)
+![image-20250819030256048](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day07-router/image-20250819030256048.png)
 
 这是w3shools的网页, 框出来的部分是每个教程文档不变的部分
 
-![image-20250819030328384](../../../assets/Day7-router/image-20250819030328384.png)
+![image-20250819030328384](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day07-router/image-20250819030328384.png)
 
 但是每一个教程后面的网页是会改变的
 
@@ -119,7 +119,7 @@ app.mount('#root');
 
 效果
 
-<video src="../../../assets/Day7-router/router演示.mp4" style="border: 2px dashed"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day07-router/router演示.mp4" style="border: 2px dashed"></video>
 
 ## 原理
 

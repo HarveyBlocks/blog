@@ -67,7 +67,7 @@ vi /usr/bin/yum
 
 ## 关键字
 
-![image-20240302095611412](../assets/Day01-概述/image-20240302095611412.png)
+![image-20240302095611412](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-概述/image-20240302095611412.png)
 
 pass : 方法/ 类/ 循环/ 分支没有实质的代码, 就可以使用pass而不会报错, 到时候就是调用而不会有别的效果
 

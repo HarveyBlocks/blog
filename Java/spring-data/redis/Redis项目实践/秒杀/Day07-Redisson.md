@@ -191,7 +191,7 @@ method释放锁
         1.  重置有效期
         2.  执行业务
 
-![image-20240122101107534](../../../assets/Day07-Redisson/image-20240122101107534.png)
+![image-20240122101107534](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-Redisson/image-20240122101107534.png)
 
 采用Lua脚本保证业务的原子性
 
@@ -242,7 +242,7 @@ method释放锁
     return nil;
     ```
 
-![image-20240122154057663](../../../assets/Day07-Redisson/image-20240122154057663.png)
+![image-20240122154057663](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-Redisson/image-20240122154057663.png)
 
 ## 可重试锁原理
 
@@ -276,7 +276,7 @@ end;
 return redis.call('pttl', KEYS[1]);
 ```
 
-![image-20240124190534264](../../../assets/Day07-Redisson/image-20240124190534264.png)
+![image-20240124190534264](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-Redisson/image-20240124190534264.png)
 
 ## 主从一致性
 
@@ -294,13 +294,13 @@ Redisson解决主从一致性问题原理`Multilock`连锁机制
 
 -   即使是
 
-    ![image-20240124193858608](../../../assets/Day07-Redisson/image-20240124193858608.png)
+    ![image-20240124193858608](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-Redisson/image-20240124193858608.png)
 
 的结构, 用形成锁的节点去给其从节点做主从同步
 
 宕机时,其从节点变成主节点
 
-![image-20240124194059035](../../../assets/Day07-Redisson/image-20240124194059035.png)
+![image-20240124194059035](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-Redisson/image-20240124194059035.png)
 
 依旧无法从新的主节点成功获取资源. 因为要获取所有的(3个)锁,其他线程就不能拿到锁,就不会有锁失效的问题
 

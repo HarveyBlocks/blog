@@ -126,13 +126,13 @@ public static SocketChannel accept(final ServerSocketChannel serverSocketChannel
 
 #### 加入readBuf
 
-![image-20240403213323201](../../assets/Day11-事件执行流程/image-20240403213323201.png)
+![image-20240403213323201](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/源码与流程/Day11-事件执行流程/image-20240403213323201.png)
 
 #### 将readBuf加入ServerSocketChannel流水线
 
 获取流水线`pipeline`
 
-![](../../assets/Day11-事件执行流程/image-20240403213739764.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/源码与流程/Day11-事件执行流程/image-20240403213739764.png)
 
 ```java
 @Override

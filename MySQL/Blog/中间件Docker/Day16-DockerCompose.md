@@ -63,7 +63,7 @@ net-work: #定义网络
 docker compose [OPTION] [COMMAND] [-d]
 ```
 
-![image-20231214003828453](../../../Java/spring-data/assets/Day16-DockerCompose/image-20231214003828453.png)
+![image-20231214003828453](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day16-DockerCompose/image-20231214003828453.png)
 
 -   `-f`缺省,默认是当前工作目录
 -   `-p`缺省,默认是root

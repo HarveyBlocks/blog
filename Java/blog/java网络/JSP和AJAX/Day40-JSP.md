@@ -25,7 +25,7 @@
 
 ### 创建JSP文件
 
-![image-20231118184339031](../../../assets/Day40-JSP/image-20231118184339031.png)
+![image-20231118184339031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day40-JSP/image-20231118184339031.png)
 
 ### 改字符集
 

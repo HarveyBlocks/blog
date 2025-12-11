@@ -23,9 +23,9 @@ Hotspot中的并没有对两种栈做区分
 
 ↓此乃栈帧
 
-<img src="../assets/Day06-栈/image-20240518134635609.png" alt="image-20240518134635609" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518134635609.png" alt="image-20240518134635609" style="zoom:50%;" />
 
-<img src="../assets/Day06-栈/image-20240518134924041.png" alt="image-20240518134924041" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518134924041.png" alt="image-20240518134924041" style="zoom:50%;" />
 
 JVM栈随线程创建而创建
 
@@ -50,9 +50,9 @@ JVM栈随线程创建而创建
 
 用于做安全校验等(例如局部变量的作用域)
 
-![image-20240518171130841](../assets/Day06-栈/image-20240518171130841.png)
+![image-20240518171130841](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518171130841.png)
 
-![image-20240518171155974](../assets/Day06-栈/image-20240518171155974.png)
+![image-20240518171155974](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518171155974.png)
 
 ### `Nr`
 
@@ -73,7 +73,7 @@ JVM栈随线程创建而创建
 
 -   栈帧中的局部变量表是一个数组, 数组中的每一个位置称为**槽slot**, long和double类型占2个槽, 其他类型占1个槽
 
-    ![image-20240518171908071](../assets/Day06-栈/image-20240518171908071.png)
+    ![image-20240518171908071](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518171908071.png)
 
     ```java
     public static void test(){
@@ -82,7 +82,7 @@ JVM栈随线程创建而创建
     }
     ```
 
-    ![image-20240518172633937](../assets/Day06-栈/image-20240518172633937.png)
+    ![image-20240518172633937](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518172633937.png)
 
     ```java
     public static void test(){
@@ -167,7 +167,7 @@ JVM的做法是, 在上一个栈帧中存放了外层方法的下一行字节码
 
 其中包含了异常捕获的生效范围和异常发生后跳转到的字节码指令位置
 
-![image-20240518195153900](../assets/Day06-栈/image-20240518195153900.png)
+![image-20240518195153900](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/运行时数据区域/Day06-栈/image-20240518195153900.png)
 
 ## 栈内存溢出
 

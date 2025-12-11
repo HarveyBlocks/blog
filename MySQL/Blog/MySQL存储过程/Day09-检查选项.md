@@ -6,7 +6,7 @@ Create [Or Replace] View 要改的视图名[(列名列表)] As Select语句 [wit
 
 -   **with cascaded check option**检查选项
 
-![image-20231023211713062](../../assets/Day09-检查选项/image-20231023211713062.png)
+![image-20231023211713062](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day09-检查选项/image-20231023211713062.png)
 
 -   cascaded - 检查到最底层,检查每一个有check的
 -   local - 检查到最上层没有check的,然后就不检查了

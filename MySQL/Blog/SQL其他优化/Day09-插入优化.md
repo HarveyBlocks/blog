@@ -52,5 +52,5 @@
 
 -   主键顺序插入的性能高于乱序插入
 
-![image-20231023132140085](../../assets/Day09-插入优化/image-20231023132140085.png)
+![image-20231023132140085](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL其他优化/Day09-插入优化/image-20231023132140085.png)
 

@@ -1,6 +1,6 @@
 # 搭建转账环境
 
-![image-20231111005627345](../../../assets/Day10-搭建测试环境/image-20231111005627345.png)
+![image-20231111005627345](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-搭建测试环境/image-20231111005627345.png)
 
 ## 前期准备
 
@@ -146,9 +146,9 @@ public class App {
 }
 ```
 
-![image-20231111014434520](../../../assets/Day10-搭建测试环境/image-20231111014434520.png)
+![image-20231111014434520](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-搭建测试环境/image-20231111014434520.png)
 
-![image-20231111014803189](../../../assets/Day10-搭建测试环境/image-20231111014803189.png)
+![image-20231111014803189](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-搭建测试环境/image-20231111014803189.png)
 
 成功
 

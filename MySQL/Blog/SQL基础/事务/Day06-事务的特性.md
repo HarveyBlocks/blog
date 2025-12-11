@@ -1,6 +1,6 @@
 # 事务的四大特性(ACID)
 
-![image-20231009155146287](../../../assets/Day06/image-20231009155146287.png)
+![image-20231009155146287](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/事务/Day06-事务的特性/image-20231009155146287.png)
 
 -   原子性
     -   **转账案例**,存钱失败了,取钱的行为也不应该被执行

@@ -2,7 +2,7 @@
 
 ## 基本数据类型
 
-![image-20240601192410740](../assets/Day12-栈上的数据存储/image-20240601192410740.png)
+![image-20240601192410740](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/原理/Day15-栈上的数据存储/image-20240601192410740.png)
 
 -   此处的内存占用指堆上, 或者数组中内存分配的空间大小, 而非栈上的
 
@@ -32,7 +32,7 @@ return				# 返回
 -   这种会产生浪费的设计原因是为了Java字节码的跨平台性
 -   同时, 基本每个Slot, 无论什么类型都是对齐的, 拿出什么长度的数据, 不需要判断, 空间换时间
 
-![image-20240601194058990](../assets/Day12-栈上的数据存储/image-20240601194058990.png)
+![image-20240601194058990](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/原理/Day15-栈上的数据存储/image-20240601194058990.png)
 
 ```java
 boolean flag = true;

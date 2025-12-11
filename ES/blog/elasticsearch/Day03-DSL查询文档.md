@@ -96,7 +96,7 @@ GET /索引库/_search
 
 >   常用于在搜索框的搜索
 
-![image-20231226130826609](../assets/Untitled/image-20231226130826609.png)
+![image-20231226130826609](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226130826609.png)
 
 #### `match`查询
 
@@ -171,7 +171,7 @@ GET /hotel/_search
 
 >   常用于
 
-![image-20231226130920606](../assets/Untitled/image-20231226130920606.png)
+![image-20231226130920606](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226130920606.png)
 
 #### `ids`根据id查询
 
@@ -526,7 +526,7 @@ GET /hotel/_search
     }
     ```
 
-    ![image-20231226194417748](../assets/Day03-DSL查询文档/image-20231226194417748.png)
+    ![image-20231226194417748](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226194417748.png)
 
 #### `bool` 复合条件查询
 
@@ -685,7 +685,7 @@ GET /hotel/_search
 }
 ```
 
-![image-20231226204701509](../assets/Day03-DSL查询文档/image-20231226204701509.png)
+![image-20231226204701509](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226204701509.png)
 
 -   还有相差距离的提示
 
@@ -717,7 +717,7 @@ es集群, 把数据拆分, 放到不同的机器上, **每台机器上的数据�
 
 (想到mycat在添加数据时就可以配置指定数据所在的机器, 我真的好感动)
 
-![image-20231226213145557](../assets/Day03-DSL查询文档/image-20231226213145557.png)
+![image-20231226213145557](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226213145557.png)
 
 -   突发奇想
 
@@ -738,7 +738,7 @@ GET /hotel/_search
 }
 ```
 
-![image-20231226214338144](../assets/Day03-DSL查询文档/image-20231226214338144.png)
+![image-20231226214338144](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226214338144.png)
 
 在实际的业务中, 会限制用户的搜索页数的深度(例如百度最多查70页, 每页大概15条, 顶多一千多条, 再往后查相关度也低, 没必要,很合理), 来避免出现这种错误
 
@@ -772,7 +772,7 @@ GET /hotel/_search
     }
     ```
 
-    ![image-20231226220935889](../assets/Day03-DSL查询文档/image-20231226220935889.png)
+    ![image-20231226220935889](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226220935889.png)
 
     他会返回`sort`值来提示你,`sort`里的,就是`search_after`里的
 
@@ -788,9 +788,9 @@ GET /hotel/_search
 
 -   虽然但是, 我们明明能在自己的Dao层做,自由度还更高, 不用记这么多配置(虽然不多),写一次就一劳永逸, 也不难, 为什么要让es帮我们做啊 .....哦,它有分词, 我没有....欸嘿
 
-![image-20231226221306731](../assets/Day03-DSL查询文档/image-20231226221306731.png)
+![image-20231226221306731](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226221306731.png)
 
-![image-20231226221535279](../assets/Day03-DSL查询文档/image-20231226221535279.png)
+![image-20231226221535279](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226221535279.png)
 
 -   查询结果是动态的, 如果在前端实现了给词条加标签, emmmm ......我不懂前端啊, 我不造啊
 
@@ -820,7 +820,7 @@ GET /hotel/_search
 }
 ```
 
-![image-20231226223317625](../assets/Day03-DSL查询文档/image-20231226223317625.png)
+![image-20231226223317625](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-DSL查询文档/image-20231226223317625.png)
 
 -   我似乎对高亮有些误解: 
 

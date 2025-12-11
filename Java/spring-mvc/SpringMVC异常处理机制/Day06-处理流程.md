@@ -10,7 +10,7 @@
 
 ->然后我们可以即使用户搞得不对头了,也可以给他看我们自己做的页面,而不是给他看500或404之类的
 
-![image-20231201215903211](../../assets/Day06-处理流程/image-20231201215903211.png)
+![image-20231201215903211](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC异常处理机制/Day06-处理流程/image-20231201215903211.png)
 
 就像这样
 
@@ -24,5 +24,5 @@
 
 ## 流程
 
-![image-20231201220301158](../../assets/Day06-处理流程/image-20231201220301158.png)
+![image-20231201220301158](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC异常处理机制/Day06-处理流程/image-20231201220301158.png)
 

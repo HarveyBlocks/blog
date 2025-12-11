@@ -1,7 +1,7 @@
 
 # 外键约束
 
-![image-20231007233400872](../../../assets/Day04/image-20231007233400872.png)
+![image-20231007233400872](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/约束/Day04-外键约束/image-20231007233400872.png)
 
 ## 语法
 
@@ -53,7 +53,7 @@ SHOW CREATE TABLE table_name;
 
 ## 存在外键删除记录
 
-![image-20231008005919930](../../../assets/Day04/image-20231008005919930.png)
+![image-20231008005919930](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/约束/Day04-外键约束/image-20231008005919930.png)
 
 -   当父表中删除/更新记录时,首先检查记录是否对应外键,如果有:
 

@@ -113,7 +113,7 @@ OAuth2.0
 
 ### 主体, 资源, 权限的关系
 
-![image-20231215140916962](../assets/Day01-Spring Security概述/image-20231215140916962.png)
+![image-20231215140916962](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Day01-认证授权/image-20231215140916962.png)
 
 ### 角色
 
@@ -125,9 +125,9 @@ OAuth2.0
 
 ### 授权的数据模型
 
-![image-20231215141056932](../assets/Day01-Spring Security概述/image-20231215141056932.png)
+![image-20231215141056932](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Day01-认证授权/image-20231215141056932.png)
 
-由于权限与资源高度相关, 可以把资源和权限合成一张表<img src="../assets/Day01-Spring Security概述/image-20231215141541560.png" alt="image-20231215141541560" style="zoom:50%;" />
+由于权限与资源高度相关, 可以把资源和权限合成一张表<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Day01-认证授权/image-20231215141541560.png" alt="image-20231215141541560" style="zoom:50%;" />
 
 ### RBAC技术
 

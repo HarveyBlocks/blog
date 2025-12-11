@@ -1,6 +1,6 @@
 # 文档CRUD
 
-![image-20231125204155130](../assets/Day02-文档操作/image-20231125204155130.png)
+![image-20231125204155130](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-文档操作/image-20231125204155130.png)
 
 ## 新增文档(插入)
 

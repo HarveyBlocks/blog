@@ -2,7 +2,7 @@
 
 -   真正应用的是TCP/IP网络模型
 
-![image-20231011191600327](../../../assets/Day33/image-20231011191600327.png)
+![image-20231011191600327](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day33-TCP和UDP协议/image-20231011191600327.png)
 
 ## T(ransmission)C(ontrol)P(rotocol)通信协议
 

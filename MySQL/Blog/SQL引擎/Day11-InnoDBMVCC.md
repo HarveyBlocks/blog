@@ -44,7 +44,7 @@ MVCC的**具体实现**,依赖于数据库记录中的 **三个隐式字段** , 
 
 InnoDB隐式地为自建表创建的字段
 
-![image-20231027162638112](../../assets/Day11-InnoDBMVCC/image-20231027162638112.png)
+![image-20231027162638112](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027162638112.png)
 
 #### 查看
 
@@ -52,7 +52,7 @@ InnoDB隐式地为自建表创建的字段
 ibd2sdi 文件名.ibd
 ```
 
-![image-20231027163642114](../../assets/Day11-InnoDBMVCC/image-20231027163642114.png)
+![image-20231027163642114](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027163642114.png)
 
 -   我是在这个文件夹下打开的控制台,别的地方我不好说
 -   绝对路径不好用
@@ -108,13 +108,13 @@ ptr->point
 
 ### Undo Log 版本链
 
-![image-20231027165217214](../../assets/Day11-InnoDBMVCC/image-20231027165217214.png)
+![image-20231027165217214](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027165217214.png)
 
-![image-20231027165051793](../../assets/Day11-InnoDBMVCC/image-20231027165051793.png)
+![image-20231027165051793](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027165051793.png)
 
-![image-20231027165153357](../../assets/Day11-InnoDBMVCC/image-20231027165153357.png)
+![image-20231027165153357](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027165153357.png)
 
- ![image-20231027165330207](../../assets/Day11-InnoDBMVCC/image-20231027165330207.png)
+ ![image-20231027165330207](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027165330207.png)
 
 -   链表的头部是最新的记录
 -   链表的尾部是最旧的记录
@@ -129,7 +129,7 @@ ptr->point
 
 ### readView 的核心字段
 
-![image-20231027175849727](../../assets/Day11-InnoDBMVCC/image-20231027175849727.png)
+![image-20231027175849727](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027175849727.png)
 
 -   **Max_trx_id 不是最大当前活跃事务集合里的最大ID**
 

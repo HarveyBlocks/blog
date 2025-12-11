@@ -248,11 +248,11 @@ AtomicReferenceFieldUpdater<Student, MyNumber> studentScoreUpdater = AtomicRefer
         .newUpdater(Student.class, MyNumber.class, "score");
 ```
 
-![image-20240911150554078](../assets/Day06-Atomic/image-20240911150554078.png)
+![image-20240911150554078](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day06-Atomic/image-20240911150554078.png)
 
 修饰了volatile之后
 
-![image-20240911151436327](../assets/Day06-Atomic/image-20240911151436327.png)
+![image-20240911151436327](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day06-Atomic/image-20240911151436327.png)
 
 尝试过了, 真的对private毫无办法, 真的菜!
 

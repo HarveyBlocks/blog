@@ -67,7 +67,7 @@ for (i in 1..1000) {
 
 阅读日志发现, 最多打开了20条线程
 
-![image-20250922004003011](../../assets/Day05-协程/image-20250922004003011.png)
+![image-20250922004003011](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/kotlin/advanced/Day05-协程/image-20250922004003011.png)
 
 线程安全问题依然存在
 
@@ -86,7 +86,7 @@ Thread.sleep(3000)
 log("end")
 ```
 
-![image-20250922004134018](../../assets/Day05-协程/image-20250922004134018.png)
+![image-20250922004134018](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/kotlin/advanced/Day05-协程/image-20250922004134018.png)
 
 协程代码块中的代码在1秒钟之内不能运行结束，那么就会被强制 中断
 
@@ -127,7 +127,7 @@ log("end")
 
 日志打印顺序如下
 
-![image-20250922005515745](../../assets/Day05-协程/image-20250922005515745.png)
+![image-20250922005515745](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/kotlin/advanced/Day05-协程/image-20250922005515745.png)
 
 ### launch
 
@@ -151,7 +151,7 @@ log("end")
 
 其中, CoroutineScope是协程作用域(block lambda)的Receiver
 
-![image-20250922010137570](../../assets/Day05-协程/image-20250922010137570.png)
+![image-20250922010137570](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/kotlin/advanced/Day05-协程/image-20250922010137570.png)
 
 由于runBlocking, 其内部的子协程都运行在Main线程上, 但两个协程并发运行了
 

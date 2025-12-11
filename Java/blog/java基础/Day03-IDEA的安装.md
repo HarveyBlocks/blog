@@ -10,7 +10,7 @@
 
 不得不该文件名
 
-![image-20240510203700249](../../../Kubernetes/assets/Day03-IDEA的安装/image-20240510203700249.png)
+![image-20240510203700249](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day03-IDEA的安装/image-20240510203700249.png)
 
 很智障
 

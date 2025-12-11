@@ -7,7 +7,7 @@ select 'hello world';
 
 -   直观上来看实现了打印字符串的功能
 
-![image-20231007153131817](../../../assets/Day04/image-20231007153131817.png)
+![image-20231007153131817](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/函数/Day04-字符串函数/image-20231007153131817.png)
 
 ## 字符串拼接(concat)
 

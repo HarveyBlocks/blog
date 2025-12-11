@@ -35,7 +35,7 @@ AMQP与语言无关, 任何语言都能用AMQP收发消息
 
 ### 需求分析
 
-![python-one.png (392×59)](../../assets/Day02-AMPQ/python-one.png)
+![python-one.png (392×59)](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-AMQP/python-one.png)
 
 -   创建队列`simple.queue`
     -   略
@@ -75,9 +75,9 @@ public class QueueTest {
 
 #### 运行测试
 
-![image-20240112170955573](../../assets/Day02-AMPQ/image-20240112170955573.png)
+![image-20240112170955573](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-AMQP/image-20240112170955573.png)
 
-![image-20240112171224074](../../assets/Day02-AMPQ/image-20240112171224074.png)
+![image-20240112171224074](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-AMQP/image-20240112171224074.png)
 
 ### 消息接收
 

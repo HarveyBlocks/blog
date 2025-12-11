@@ -35,7 +35,7 @@ public class UserDaoImpl implements UserDao {
 
 ### 属性注解
 
-![image-20231106161845099](../../../assets/Day07-注解开发/image-20231106161845099.png)
+![image-20231106161845099](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/Bean基本注解开发/Day07-注解配置Bean/image-20231106161845099.png)
 
 #### @Scope
 

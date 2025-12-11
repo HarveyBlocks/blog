@@ -4,9 +4,9 @@
 
 ## 组件继承结构
 
-<img src="../../assets/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/layout/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
 
-<img src="../../assets/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/layout/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
 
 所用的所有布局都是直接或间接继承自ViewGroup
 
@@ -110,7 +110,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 以下是运行效果
 
-![image-20250913214400033](../../assets/Day04-自定义控件/image-20250913214400033.png)
+![image-20250913214400033](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/layout/Day04-自定义控件/image-20250913214400033.png)
 
 在代码中调用目标控件
 

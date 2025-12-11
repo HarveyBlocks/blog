@@ -25,7 +25,7 @@
     yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     ```
 
-    ![image-20231212204154850](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212204154850.png)
+    ![image-20231212204154850](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231212204154850.png)
 
 4.  安装Docker
 
@@ -33,7 +33,7 @@
     yum install -y docker-ce-cli contain.io docker-buildx-plugin docker-compose-plugin
     ```
 
-    ![image-20231212204552663](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212204552663.png)
+    ![image-20231212204552663](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231212204552663.png)
 
     莫慌, 不重要这个
 
@@ -43,7 +43,7 @@
     docker -v
     ```
 
-    ![image-20231212204637270](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212204637270.png)
+    ![image-20231212204637270](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231212204637270.png)
 
 ## 启动Docker
 
@@ -79,7 +79,7 @@
 
 如果启动失败了
 
-![image-20231212212521247](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212212521247.png)
+![image-20231212212521247](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231212212521247.png)
 
 就再用下面的命令再下载一次
 
@@ -103,9 +103,9 @@ yum install docker-ce docker-ce-cli containerd.io
 
 因为原来默认是国外的地址, 就会很慢
 
-![image-20231224172658595](../../../ES/blog/assets/Day15-Docker安装与配置MySQL/image-20231224172658595.png)
+![image-20231224172658595](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231224172658595.png)
 
-![image-20231212214452778](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212214452778.png)
+![image-20231212214452778](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day15-Docker安装与配置MySQL/image-20231212214452778.png)
 
 把加速器地址配置到Docker
 

@@ -1,6 +1,6 @@
-![image-20231024120944892](../../assets/Day09-用户变量/image-20231024120944892.png)
+![image-20231024120944892](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day09-用户变量/image-20231024120944892.png)
 
-![image-20231024121256356](../../assets/Day09-用户变量/image-20231024121256356.png)
+![image-20231024121256356](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day09-用户变量/image-20231024121256356.png)
 
 -   mysql里**'='**可以是赋值也可以是比较
     -   这不好吧?

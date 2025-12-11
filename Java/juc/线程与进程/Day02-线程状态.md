@@ -43,7 +43,7 @@ end
 
 基于Java的Thread.Status中的枚举
 
-<img src="../assets/Day02-线程状态/image-20240906001602777.png" alt="image-20240906001602777" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程与进程/Day02-线程状态/image-20240906001602777.png" alt="image-20240906001602777" style="zoom:67%;" />
 
 -   `NEW`
 
@@ -62,9 +62,9 @@ end
         log.info("你好");
         ```
 
-        <img src="../assets/Day02-线程状态/image-20240906002300556.png" alt="image-20240906002300556" style="zoom:50%;" />
+        <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程与进程/Day02-线程状态/image-20240906002300556.png" alt="image-20240906002300556" style="zoom:50%;" />
 
-        <img src="../assets/Day02-线程状态/image-20240906002159429.png" alt="image-20240906002159429" style="zoom:50%;" />
+        <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程与进程/Day02-线程状态/image-20240906002159429.png" alt="image-20240906002159429" style="zoom:50%;" />
 
         Thread为 *正在运行* 表示RUNNABLE
 
@@ -112,7 +112,7 @@ end
 
 ## 状态转换
 
-<img src="../assets/Day02-线程状态/image-20240906001602777.png" alt="image-20240906001602777" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程与进程/Day02-线程状态/image-20240906001602777.png" alt="image-20240906001602777" style="zoom:67%;" />
 
 1.  `NEW`-->`RUNNABLE`  调用`Thread#start()`
 2.  `WAITING`<-->`RUNNABLE`  调用`Object#wait()`-`Object#notify()`, `Thread#interrupt()`

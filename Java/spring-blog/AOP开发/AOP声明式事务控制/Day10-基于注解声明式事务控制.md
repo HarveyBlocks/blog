@@ -204,7 +204,7 @@ public class SpringConfig {
 
 ### 事务失效的几种情况
 
-![img](../../../spring-data/assets/Day10-基于注解声明式事务控制/072ab6acff291410a5979f9276cde5fb.png)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-基于注解声明式事务控制/072ab6acff291410a5979f9276cde5fb.png)
 
 事务不生效
 

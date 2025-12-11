@@ -31,7 +31,7 @@
 
 2.  根据服务器配置计算最大堆内存
 
-    ![image-20240527190030076](../assets/Day11-GC调优/image-20240527190030076.png)
+    ![image-20240527190030076](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day11-GC调优/image-20240527190030076.png)
 
     堆, 即可配置的部分, 是年轻代+老年区
 
@@ -144,7 +144,7 @@ JDK8下的默认组合, 注重并发量, 不适合高并发, 响应时间长
 
 如果在并发清理的过程中出现老年代的空间不足里放入新的对象, 会产生并发模式失败
 
-![image-20240527203400084](../assets/Day11-GC调优/image-20240527203400084.png)
+![image-20240527203400084](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day11-GC调优/image-20240527203400084.png)
 
 其下场, 是JVM使用Serial Old单线程进行FullGC对老年代的回收, 会出现长时间的停顿
 

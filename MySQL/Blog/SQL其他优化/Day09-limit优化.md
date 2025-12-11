@@ -4,7 +4,7 @@
 
 越往后速度越慢
 
-![image-20231023162750619](../../assets/Day09-limit优化/image-20231023162750619.png)
+![image-20231023162750619](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL其他优化/Day09-limit优化/image-20231023162750619.png)
 
 ## 解决方案: 覆盖索引+子查询
 

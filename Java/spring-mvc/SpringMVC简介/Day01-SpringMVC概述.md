@@ -6,7 +6,7 @@
 >
 >   可以简化JavaBean的封装,Json的转化,文件的上传等操作
 
-![image-20231123133417036](../../assets/SpringMVC/image-20231123133417036.png)
+![image-20231123133417036](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-SpringMVC概述/image-20231123133417036.png)
 
 -   这个SpringMVC是一前端控制器
 

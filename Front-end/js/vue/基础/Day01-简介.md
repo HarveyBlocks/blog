@@ -257,7 +257,7 @@ onMounted(() => {
 
 ### 测试
 
-![image-20250813002021477](../../../assets/Day01-简介/image-20250813002021477.png)
+![image-20250813002021477](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day01-简介/image-20250813002021477.png)
 
 完成计数器按钮
 

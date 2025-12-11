@@ -222,7 +222,7 @@ const images = ref([
 
 ```
 
-![image-20250814210605833](../../../assets/Day02-指令/image-20250814210605833.png)
+![image-20250814210605833](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814210605833.png)
 
 ### 遍历对象
 
@@ -244,7 +244,7 @@ const image = ref(
 </template>
 ```
 
-![image-20250814211243697](../../../assets/Day02-指令/image-20250814211243697.png)
+![image-20250814211243697](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814211243697.png)
 
 ### 带索引的遍历
 
@@ -276,7 +276,7 @@ const image = ref(
 </template>
 ```
 
-![image-20250814211345220](../../../assets/Day02-指令/image-20250814211345220.png)
+![image-20250814211345220](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814211345220.png)
 
 下面是index-element的遍历
 
@@ -301,7 +301,7 @@ const images = ref([
 </template>
 ```
 
-![image-20250814211655189](../../../assets/Day02-指令/image-20250814211655189.png)
+![image-20250814211655189](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814211655189.png)
 
 ### Generator的遍历
 
@@ -327,7 +327,7 @@ function* range(start, end, step) {
 </template>
 ```
 
-![image-20250814212109448](../../../assets/Day02-指令/image-20250814212109448.png)
+![image-20250814212109448](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814212109448.png)
 
 ### `key` 属性
 
@@ -345,7 +345,7 @@ function* range(start, end, step) {
 
 这样, 被删除元素后面的props都往前填入了一个组件里, 这个组件内的data值是不会被刷新的
 
-<video src="../../../assets/Day02-指令/v-for存在问题演示.mp4" style="border: 2px solid"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/v-for存在问题演示.mp4" style="border: 2px solid"></video>
 
 每次删除第二行的out的内容, 但实际上out删除的却不是第二行, 而是最后一行
 
@@ -507,7 +507,7 @@ const lightOn = ref(false);
 </style>
 ```
 
-![image-20250814223239007](../../../assets/Day04-响应式布局/image-20250814223239007.png)
+![image-20250814223239007](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814223239007.png)
 
 ### input
 
@@ -530,7 +530,7 @@ function redInput(e) {
 </template>
 ```
 
-![image-20250814225210497](../../../assets/Day02-指令/image-20250814225210497.png)
+![image-20250814225210497](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day02-指令/image-20250814225210497.png)
 
 ### mousemove
 

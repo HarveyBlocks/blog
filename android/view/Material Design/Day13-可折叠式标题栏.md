@@ -6,7 +6,7 @@
 
 ## 创建详情页
 
-<img src="../../assets/Day13-可折叠式标题栏/image-20250923203353995.png" alt="image-20250923203353995" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day13-可折叠式标题栏/image-20250923203353995.png" alt="image-20250923203353995" style="zoom: 33%;" />
 
 ### CoordinatorLayout
 
@@ -247,7 +247,7 @@ class FruitRecyclerAdapter(val context: Context, data: List<Fruit>) :
 
 ### 效果展示
 
-<video src="../../assets/Day13-可折叠式标题栏/折叠式标题栏演示.mp4"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day13-可折叠式标题栏/折叠式标题栏演示.mp4"></video>
 
 标题栏上的演示可以更加丰富, 然后可以根据滚动进行折叠
 
@@ -327,5 +327,5 @@ Android 16在不进行下面配置的情况下已经是很好地融合了, 但�
 
 ### 效果演示
 
-![image-20250924012314630](../../assets/Day13-可折叠式标题栏/image-20250924012314630.png)
+![image-20250924012314630](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day13-可折叠式标题栏/image-20250924012314630.png)
 

@@ -36,11 +36,11 @@ Netty提供了HTTP, Redis, Https协议, Web操作协议.....
 pipeline.addLast(new HttpServerCodec()); // Codec 一般是组合式的编解码器
 ```
 
-![image-20240229153827182](../../assets/Day08-协议的解析和设计/image-20240229153827182.png)
+![image-20240229153827182](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229153827182.png)
 
 客户端发送
 
-![image-20240229154638331](../../assets/Day08-协议的解析和设计/image-20240229154638331.png)
+![image-20240229154638331](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229154638331.png)
 
 服务端接收
 
@@ -164,11 +164,11 @@ pipeline.addLast(new SimpleChannelInboundHandler<HttpRequest>() {
 });
 ```
 
-![image-20240229161119749](../../assets/Day08-协议的解析和设计/image-20240229161119749.png)
+![image-20240229161119749](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229161119749.png)
 
 但是, 浏览器不知道实际内容有多长, 就一直等
 
-![image-20240229161407560](../../assets/Day08-协议的解析和设计/image-20240229161407560.png)
+![image-20240229161407560](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229161407560.png)
 
 ```java
 String result = "<h1>Hello, " + uri + "<h1>";
@@ -335,7 +335,7 @@ serverBootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
 
 Netty提供**`@Sharable`注解**, 指示是否可以交给多条Channel
 
-![image-20240229205112468](../../assets/Day08-协议的解析和设计/image-20240229205112468.png)
+![image-20240229205112468](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229205112468.png)
 
 **我们自定义的编解码器能否被提出呢?**
 
@@ -345,7 +345,7 @@ public class MessageCodec extends ByteToMessageCodec<Message>{}
 
 父类`ByteToMessageCodec`: 
 
-![image-20240229205834088](../../assets/Day08-协议的解析和设计/image-20240229205834088.png)
+![image-20240229205834088](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229205834088.png)
 
 怎么办呢?
 
@@ -356,7 +356,7 @@ public class MessageCodec extends ByteToMessageCodec<Message>{}
 public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message> {}
 ```
 
-![image-20240229205912064](../../assets/Day08-协议的解析和设计/image-20240229205912064.png)
+![image-20240229205912064](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day08-协议的解析和设计/image-20240229205912064.png)
 
 ```java
 @ChannelHandler.Sharable

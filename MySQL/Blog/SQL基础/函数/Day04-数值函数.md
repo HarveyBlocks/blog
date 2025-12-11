@@ -6,7 +6,7 @@ select 1.5;
 
 -   尊滴流批
 
-![image-20231007155701876](../../../assets/Day04/image-20231007155701876.png)
+![image-20231007155701876](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/函数/Day04-数值函数/image-20231007155701876.png)
 
 ```mysql
 select floor(-1.2);         -- -2

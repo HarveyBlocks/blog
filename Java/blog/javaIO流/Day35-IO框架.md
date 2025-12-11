@@ -1,11 +1,11 @@
 # IO框架
 
-![image-20231014201424697](../../assets/Day35/image-20231014201424697.png)
+![image-20231014201424697](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day35-IO框架/image-20231014201424697.png)
 
 -   IO框架
 -   封装了java提供的对文件,数据进行操作的代码,对外提供了更简单的方式进行操作,对数据进行读写
 
-![image-20231014201813558](../../assets/Day35/image-20231014201813558.png)
+![image-20231014201813558](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/javaIO流/Day35-IO框架/image-20231014201813558.png)
 
 -   它会帮我们把性能提到最高qwq
 

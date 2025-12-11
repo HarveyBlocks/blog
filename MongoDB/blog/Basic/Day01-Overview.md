@@ -13,7 +13,7 @@ MongoDB是一个文档数据库, NoSQL
 - **事务（Transactions）**：从 MongoDB 4.0 开始支持，允许一组操作作为一个原子单元执行
 - **TTL（Time-To-Live）**：可以为集合中的某些字段设置 TTL，以自动删除旧数据
 
-![A MongoDB document.](../../assets/Day01-Overview/crud-annotated-document.svg)
+![A MongoDB document.](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Overview/crud-annotated-document.svg)
 
 | MongoDB 术语/概念 | 解释/说明                                  |
 | :---------------- | :----------------------------------------- |

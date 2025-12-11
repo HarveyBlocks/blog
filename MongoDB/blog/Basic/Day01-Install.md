@@ -34,11 +34,11 @@ mongosh是一个 JavaScript 和 Node.js REPL 的命令行环境，用于与 Mong
 
 安装Windows版本
 
-![image-20251103122225028](../../assets/Day01-Install/image-20251103122225028.png)
+![image-20251103122225028](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Install/image-20251103122225028.png)
 
 输入服务器信息
 
-![image-20251105163302764](../../assets/Day01-Install/image-20251105163302764.png)
+![image-20251105163302764](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Install/image-20251105163302764.png)
 
 上面是无权限的游客进行登录
 
@@ -48,11 +48,11 @@ mongosh是一个 JavaScript 和 Node.js REPL 的命令行环境，用于与 Mong
 mongosh mongodb://MongoRoot:123456@centos:27017/test?authSource=admin
 ```
 
-![image-20251105165919784](../../assets/Day01-Install/image-20251105165919784.png)
+![image-20251105165919784](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Install/image-20251105165919784.png)
 
 在控制台`TAB`会有指令提示
 
-![image-20251105170631700](../../assets/Day01-Install/image-20251105170631700.png)
+![image-20251105170631700](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Install/image-20251105170631700.png)
 
 ```bash
 console.clear()
@@ -60,7 +60,7 @@ console.clear()
 
 清除控制面板
 
-![image-20251105170705608](../../assets/Day01-Install/image-20251105170705608.png)
+![image-20251105170705608](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/Basic/Day01-Install/image-20251105170705608.png)
 
 可以使用`//`和`/**/`作为注释
 

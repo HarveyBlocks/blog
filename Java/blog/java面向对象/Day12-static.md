@@ -174,9 +174,9 @@ public class Main {
   - 定义一个static类变量记住类的一个对象
   - 定义一个static类方法,返回对象
 
-![image-20230901213045997](../../assets/Day12/image-20230901213045997.png)
+![image-20230901213045997](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day12-static/image-20230901213045997.png)
 
-![image-20230901212223408](../../assets/Day12/image-20230901212223408.png)
+![image-20230901212223408](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day12-static/image-20230901212223408.png)
 
 因为java程序在运行的时候只需要一套运行环境,所以Runtime被设计成单例模式
 
@@ -190,7 +190,7 @@ public class Main {
   - 定义一个类变量用于存储对象,不要实例化
   - 提供一个类方法,保证第一次使用创建对象,后面调用返回的是同一个对象
 
-![image-20230901214453733](../../assets/Day12/image-20230901214453733.png)
+![image-20230901214453733](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day12-static/image-20230901214453733.png)
 
 #### 什么时候饿汉,什么时候懒汉?
 

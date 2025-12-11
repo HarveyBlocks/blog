@@ -1,10 +1,10 @@
 # 列子查询
 
-![image-20231008172151490](../../../../assets/Day05/image-20231008172151490.png)
+![image-20231008172151490](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/子查询/Day05-列子查询/image-20231008172151490.png)
 
 ## 常用操作符
 
-![image-20231008172209881](../../../../assets/Day05/image-20231008172209881.png)
+![image-20231008172209881](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/子查询/Day05-列子查询/image-20231008172209881.png)
 
 ## 实践
 
@@ -12,7 +12,7 @@
     1.  查询**开发部**和**销售部**的ID
     2.  查询ID的所有员工信息
 
-![image-20231008172841020](../../../../assets/Day05/image-20231008172841020.png)
+![image-20231008172841020](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/子查询/Day05-列子查询/image-20231008172841020.png)
 
 -   ↑能运行
 

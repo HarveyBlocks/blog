@@ -2,7 +2,7 @@
 
 通过`ls -l`查看文件信息,显示权限细节
 
-![image-20231001233311641](../assets/Day04/image-20231001233311641.png)
+![image-20231001233311641](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-查看权限控制/image-20231001233311641.png)
 
 - 信息
 
@@ -12,9 +12,9 @@
 
 ## 看懂权限控制信息
 
-![image-20231001233345232](../assets/Day04/image-20231001233345232.png)
+![image-20231001233345232](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-查看权限控制/image-20231001233345232.png)
 
-![image-20231001233430158](../assets/Day04/image-20231001233430158.png)
+![image-20231001233430158](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-查看权限控制/image-20231001233430158.png)
 
 ### 文件属性位
 

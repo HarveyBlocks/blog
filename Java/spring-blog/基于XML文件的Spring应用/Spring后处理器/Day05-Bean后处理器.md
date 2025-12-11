@@ -67,7 +67,7 @@ public interface BeanPostProcessor {
 
 -   结果
 
-    ![image-20231102235738999](../../../assets/Day05-Bean后处理器/image-20231102235738999.png)
+    ![image-20231102235738999](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Bean后处理器/image-20231102235738999.png)
 
 ### 执行顺序与生命周期
 
@@ -99,7 +99,7 @@ public class UserDaoImpl implements UserDao, InitializingBean {
 
 -   结果:
 
-    ![image-20231103001459846](../../../assets/Day05-Bean后处理器/image-20231103001459846.png)
+    ![image-20231103001459846](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Bean后处理器/image-20231103001459846.png)
 
 ## 实践:用动态代理对Bean进行时间日志增强
 
@@ -141,5 +141,5 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
 
 ## 生命周期
 
--   ![image-20231104022943450](../../../assets/Day05-Bean后处理器/image-20231104022943450.png)
+-   ![image-20231104022943450](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Bean后处理器/image-20231104022943450.png)
 

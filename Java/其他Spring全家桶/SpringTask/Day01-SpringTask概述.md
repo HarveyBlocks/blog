@@ -186,7 +186,7 @@ public class TaskServiceImpl implements TaskService {
 | *W*  | 表示离给定日期最近的工作日, 例如***"15W"***放在每月(day-of-month)表示"离本月15日最近的工作日" |
 | *#*  | 表示该月的第几个周几,例如***"6#3"***表示该月的第三个周五     |
 
-![image-20240117122047590](../assets/Day01-SpringTask概述/image-20240117122047590.png)
+![image-20240117122047590](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/其他Spring全家桶/SpringTask/Day01-SpringTask概述/image-20240117122047590.png)
 
 ```xml
 <task:scheduled ref="taskService" method="secondTask" cron="*/5 * * * * ?"/>
@@ -234,7 +234,7 @@ public class TaskApplication {
 
 ### 测试运行
 
-![image-20240117123609275](../assets/Day01-SpringTask概述/image-20240117123609275.png)
+![image-20240117123609275](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/其他Spring全家桶/SpringTask/Day01-SpringTask概述/image-20240117123609275.png)
 
 ### 自行开启关闭
 

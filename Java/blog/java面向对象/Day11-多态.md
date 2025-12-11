@@ -73,7 +73,7 @@ ps:解耦合-紧耦合(轮胎和车焊死)
 Object object=new Human();//父类引用指向子类对象
 ```
 
-![image-20230809191429158](../../assets/Day11/image-20230809191429158.png)
+![image-20230809191429158](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day11-多态/image-20230809191429158.png)
 
 如果子类重写了父类的方法，就调用子类的
 
@@ -85,7 +85,7 @@ Object object=new Human();//父类引用指向子类对象
 
 多态是方法的多态，属性没有多态
 
-![image-20230902192809583](../../assets/Day11/image-20230902192809583.png)
+![image-20230902192809583](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day11-多态/image-20230902192809583.png)
 
 ## 缺点及其解决
 

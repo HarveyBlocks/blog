@@ -40,5 +40,5 @@ typedef struct redisObject {
 
 ### 类型和编码
 
-![image-20240405194043887](../../assets/Day13-RedisObject/image-20240405194043887.png)
+![image-20240405194043887](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/原理/Day13-RedisObject/image-20240405194043887.png)
 

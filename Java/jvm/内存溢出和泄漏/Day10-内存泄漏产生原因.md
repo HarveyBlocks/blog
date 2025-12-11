@@ -136,7 +136,7 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-![image-20240525203208615](../assets/Day10-内存泄漏产生原因/image-20240525203208615.png)
+![image-20240525203208615](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day10-内存泄漏产生原因/image-20240525203208615.png)
 
 ### 线程池的线程不回收造成的内存溢出
 
@@ -165,11 +165,11 @@ public static void main(String[] args) throws InterruptedException {
 
 ` Executors.newSingleThreadExecutor()`
 
-![image-20240525204914637](../assets/Day10-内存泄漏产生原因/image-20240525204914637.png)
+![image-20240525204914637](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day10-内存泄漏产生原因/image-20240525204914637.png)
 
 `ThreadPoolExecutor`
 
-![image-20240525205325730](../assets/Day10-内存泄漏产生原因/image-20240525205325730.png)
+![image-20240525205325730](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day10-内存泄漏产生原因/image-20240525205325730.png)
 
 ### 解决
 

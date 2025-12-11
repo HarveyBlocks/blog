@@ -1,6 +1,6 @@
 # 约束实践
 
-![image-20231007195655689](../../../assets/Day04/image-20231007195655689.png)
+![image-20231007195655689](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/约束/Day04-约束实践与应用/image-20231007195655689.png)
 
 允许空值null                                                                                                                                NULL
 
@@ -13,7 +13,7 @@ CREATE TABLE 表名(
 )[COMMENT '表注释'];
 ```
 
-![image-20231007201232437](../../../assets/Day04/image-20231007201232437.png)
+![image-20231007201232437](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/约束/Day04-约束实践与应用/image-20231007201232437.png)
 
 -   看得出来,可有多个约束
 

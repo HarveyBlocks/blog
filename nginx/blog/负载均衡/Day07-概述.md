@@ -55,7 +55,7 @@ graph TD
 
 高效率的F5负载均衡器, 不能自己拓展
 
-![image-20240423221249848](../../assets/Day07-概述/image-20240423221249848.png)
+![image-20240423221249848](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/负载均衡/Day07-概述/image-20240423221249848.png)
 
 好好好
 

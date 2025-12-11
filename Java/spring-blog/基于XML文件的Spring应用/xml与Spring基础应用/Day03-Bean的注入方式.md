@@ -1,6 +1,6 @@
 # 注入
 
-![image-20231031003436670](../../../assets/Day03-Bean的注入方式/image-20231031003436670.png)
+![image-20231031003436670](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-Bean的注入方式/image-20231031003436670.png)
 
 -   ref->reference
 -   对象引用就用ref="id"
@@ -8,7 +8,7 @@
 
 ## 注入的数据类型
 
-![image-20231031003557367](../../../assets/Day03-Bean的注入方式/image-20231031003557367.png)
+![image-20231031003557367](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-Bean的注入方式/image-20231031003557367.png)
 
 ### List的注入
 
@@ -63,7 +63,7 @@
 -   使用子标签
 -   List\<String\>,String是普通值,可以直接value
 
-![image-20231031011307971](../../../assets/Day03-Bean的注入方式/image-20231031011307971.png)
+![image-20231031011307971](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-Bean的注入方式/image-20231031011307971.png)
 
 -   结果
 
@@ -269,5 +269,5 @@ public void setMap(Map<String, UserService> map) {
 
 -    出大问题
 
-    ![image-20231031112732918](../../../assets/Day03-Bean的注入方式/image-20231031112732918.png)
+    ![image-20231031112732918](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-Bean的注入方式/image-20231031112732918.png)
 

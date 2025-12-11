@@ -22,7 +22,7 @@ Docker在安装时, 自动在宿主机创建了一张**虚拟网卡Docker0**`172
 
 所有容器都是以**bridge(桥接)**的方式连接到Docker的一个虚拟网卡上
 
-![image-20231213204622005](../../../Java/spring-data/assets/Day16-网络/image-20231213204622005.png)
+![image-20231213204622005](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day16-网络/image-20231213204622005.png)
 
 -   **但是!** 
 
@@ -46,7 +46,7 @@ Docker在安装时, 自动在宿主机创建了一张**虚拟网卡Docker0**`172
 
 ## 网络命令
 
-![image-20231213205153369](../../../Java/assets/Day16-网络/image-20231213205153369.png)
+![image-20231213205153369](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/中间件Docker/Day16-网络/image-20231213205153369.png)
 
 -   在创建容器时就把容器放入网络
 

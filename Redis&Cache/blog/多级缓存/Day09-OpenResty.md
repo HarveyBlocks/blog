@@ -13,7 +13,7 @@
 
 ## 接收请求
 
-![image-20240219135505931](../../assets/Day09-OpenResty/image-20240219135505931.png)
+![image-20240219135505931](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/多级缓存/Day09-OpenResty/image-20240219135505931.png)
 
 1.  接收请求
 
@@ -58,21 +58,21 @@ ngx.say('{"id":10001,"name":"SALSA AIR"}')
 -- ngx.say()就是写数据到Response中
 ```
 
-![image-20240219142639404](../../assets/Day09-OpenResty/image-20240219142639404.png)
+![image-20240219142639404](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/多级缓存/Day09-OpenResty/image-20240219142639404.png)
 
 ## 获取请求参数
 
 ### 获取不同形式的参数
 
-![image-20240219142948143](../../assets/Day09-OpenResty/image-20240219142948143.png)
+![image-20240219142948143](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/多级缓存/Day09-OpenResty/image-20240219142948143.png)
 
 -   正则表达式匹配, `()`表示分组, 一个`()`内是一个正则表达式
 
 ### 分析案例
 
-![image-20240219143434572](../../assets/Day09-OpenResty/image-20240219143434572.png)
+![image-20240219143434572](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/多级缓存/Day09-OpenResty/image-20240219143434572.png)
 
-![image-20240219143836741](../../assets/Day09-OpenResty/image-20240219143836741.png)
+![image-20240219143836741](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/多级缓存/Day09-OpenResty/image-20240219143836741.png)
 
 ### 编写OpenResty配置
 

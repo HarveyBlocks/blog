@@ -41,7 +41,7 @@
         <!ATTLIST note type (int|float)>
 ```
 
-![image-20240611224806424](../assets/Day31-属性/image-20240611224806424.png)
+![image-20240611224806424](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/DTD/Day31-属性/image-20240611224806424.png)
 
 检查报错
 
@@ -68,7 +68,7 @@
 </notes>
 ```
 
-![image-20240611225210411](../assets/Day31-属性/image-20240611225210411.png)
+![image-20240611225210411](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/DTD/Day31-属性/image-20240611225210411.png)
 
 ### XXX的列表
 

@@ -26,7 +26,7 @@
 -   TransactionStatus
     -   事物状态
 
-![image-20231111004955953](../../../assets/Day10-Spring事物编程概述/image-20231111004955953.png)
+![image-20231111004955953](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP声明式事务控制/Day10-Spring事物编程概述/image-20231111004955953.png)
 
 不同的底层实现,可能会提供不同的实现
 

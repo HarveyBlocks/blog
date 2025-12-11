@@ -46,7 +46,7 @@ li a:hover:not(.now-active) /*当前的页面不受悬停影响*/{
 </ul>
 ```
 
-![image-20250806204217632](../assets/Day03-Demo/image-20250806204217632.png)
+![image-20250806204217632](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-Demo/image-20250806204217632.png)
 
 ### 横向导航栏
 
@@ -126,17 +126,17 @@ li a:hover:not(a.now-active) {
 
 默认:
 
-![image-20250806220047333](../assets/Day03-Demo/image-20250806220047333.png)
+![image-20250806220047333](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-Demo/image-20250806220047333.png)
 
 悬停后:
 
-![image-20250806220054066](../assets/Day03-Demo/image-20250806220054066.png)
+![image-20250806220054066](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-Demo/image-20250806220054066.png)
 
 在`drop-down-content`添加迫真阴影` box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);`
 
 改动`drop-down-content`背景为白, color为黑
 
-![image-20250806220400244](../assets/Day03-Demo/image-20250806220400244.png)
+![image-20250806220400244](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-Demo/image-20250806220400244.png)
 
 ## 表单
 

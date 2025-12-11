@@ -15,9 +15,9 @@
 
 #### 多文件
 
-![image-20231204200507795](../../assets/Day01-pofile环境配置/image-20231204200507795.png)
+![image-20231204200507795](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231204200507795.png)
 
-![image-20231205224320349](../../assets/Day01-pofile环境配置/image-20231205224320349.png)
+![image-20231205224320349](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205224320349.png)
 
 ```properties
 spring.profiles.active=dev
@@ -62,17 +62,17 @@ spring:
 
 新UI找不到了?
 
-![image-20231205230307062](../../assets/Day01-pofile环境配置/image-20231205230307062.png)![image-20231205230319642](../../assets/Day01-pofile环境配置/image-20231205230319642.png)
+![image-20231205230307062](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230307062.png)![image-20231205230319642](../../assets/Day01-pofile环境配置/image-20231205230319642.png)
 
-![image-20231205230309571](../../assets/Day01-pofile环境配置/image-20231205230309571.png)
+![image-20231205230309571](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230309571.png)
 
 ### 命令行参数
 
-![image-20231205230509859](../../assets/Day01-pofile环境配置/image-20231205230509859.png)
+![image-20231205230509859](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230509859.png)
 
 -   这个还在
 
-![image-20231205230345941](../../assets/Day01-pofile环境配置/image-20231205230345941.png)
+![image-20231205230345941](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230345941.png)
 
 ### 脱离idea工具
 
@@ -109,9 +109,9 @@ spring:
 
 2.  去到maven打包的地址
 
-    ![image-20231205230827953](../../assets/Day01-pofile环境配置/image-20231205230827953.png)
+    ![image-20231205230827953](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230827953.png)
 
-    ![image-20231205230908949](../../assets/Day01-pofile环境配置/image-20231205230908949.png)
+    ![image-20231205230908949](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-pofile环境配置/image-20231205230908949.png)
 
 3.  在jar包同级目录下打开控制台
 

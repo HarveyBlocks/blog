@@ -4,7 +4,7 @@
 
 -   添加的数值大小不能超过指定数据类型
     -   ↓把年龄写成负数就报错:超出范围了
-    -   ![image-20231006112808892](../../../assets/Day03/image-20231006112808892.png)
+    -   ![image-20231006112808892](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DML/Day03-记录增删改/image-20231006112808892.png)
 -   字符串和日期应包含在'`'引号'`内
 -   一一对应
 
@@ -77,5 +77,5 @@ update 表名 set 字段1=值1,字段名2=值2,....[where 条件];
 delete form 表名 [where 条件];
 ```
 
-![image-20231017005457782](../assets/Day03-记录增删改/image-20231017005457782.png)
+![image-20231017005457782](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DML/Day03-记录增删改/image-20231017005457782.png)
 

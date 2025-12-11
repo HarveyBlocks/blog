@@ -2,7 +2,7 @@
 
 Type的子类有
 
-![image-20240802153350200](../../assets/Day30-Type/image-20240802153350200.png)
+![image-20240802153350200](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day30-运行时类型/image-20240802153350200.png)
 
 -   `Class ` 字节码类
 

@@ -10,13 +10,13 @@
 3. 返回值类型可以不同,但在子类重写的方法的返回值类型必须是父类方法的返回值类型的子类
 4. 子类重写方法作用域不得低于父类方法
 
-![image-20230808181918677](../../assets/Day09/image-20230808181918677.png)
+![image-20230808181918677](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-重写/image-20230808181918677.png)
 
 - 对父类的引用，指向子类，这其实是多态
 
-当去掉A()的static，出现了这个![image-20230808182359371](../../assets/Day09/image-20230808182359371.png)
+当去掉A()的static，出现了这个![image-20230808182359371](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-重写/image-20230808182359371.png)
 
-![image-20230808182756279](../../assets/Day09/image-20230808182756279.png)
+![image-20230808182756279](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-重写/image-20230808182756279.png)
 
 !?：**重写**了父类的代码
 

@@ -199,7 +199,7 @@ android {
 }
 ```
 
-![image-20250926094127802](../../assets/Day14-Room/image-20250926094127802.png)
+![image-20250926094127802](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day15-Room/image-20250926094127802.png)
 
 ## 升级
 

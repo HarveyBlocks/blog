@@ -9,7 +9,7 @@
 
 ## navigation
 
-<img src="../../../assets/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/项目实例/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
 
 1.   nav内部使用`<div class="container">`, container样式在common.scss
 
@@ -124,7 +124,7 @@
 
 ## header
 
-![image-20250827021837835](../../../assets/Day09-Layout/image-20250827021837835.png)
+![image-20250827021837835](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/项目实例/Day09-Layout/image-20250827021837835.png)
 
 1.   准备容器
 
@@ -265,7 +265,7 @@
 
 "联系我们"的部分
 
-![image-20250827030442933](../../../assets/Day09-Layout/image-20250827030442933.png)
+![image-20250827030442933](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/项目实例/Day09-Layout/image-20250827030442933.png)
 
 1.   容器
 
@@ -411,7 +411,7 @@
 
 ### 其他
 
-![image-20250827033107380](../../../assets/Day09-Layout/image-20250827033107380.png)
+![image-20250827033107380](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/项目实例/Day09-Layout/image-20250827033107380.png)
 
 上面是口号
 

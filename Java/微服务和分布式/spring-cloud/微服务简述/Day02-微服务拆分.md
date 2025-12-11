@@ -2,7 +2,7 @@
 
 ## 模块熟悉
 
-![image-20240106143654296](../../assets/Day02-微服务拆分/image-20240106143654296.png)
+![image-20240106143654296](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/微服务简述/Day02-微服务拆分/image-20240106143654296.png)
 
 ## 服务拆分原则
 
@@ -254,11 +254,11 @@ public class ItemServiceApplication {
 
 #### Service
 
-![image-20240106200647528](../../assets/Day02-微服务拆分/image-20240106200647528.png)
+![image-20240106200647528](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/微服务简述/Day02-微服务拆分/image-20240106200647528.png)
 
 代码中的包路径得换(话说路径不是应该配成常量吗)
 
-![image-20240106204827858](../../assets/Day02-微服务拆分/image-20240106204827858.png)
+![image-20240106204827858](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/微服务简述/Day02-微服务拆分/image-20240106204827858.png)
 
 对别的服务产生了依赖
 

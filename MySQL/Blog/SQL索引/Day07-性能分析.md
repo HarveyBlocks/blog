@@ -21,9 +21,9 @@ show global status like 'Com_____';
 
 -   也是没问题的
 
-    ![image-20231021213930746](../../assets/Day07-SQL性能优化/image-20231021213930746.png)
+    ![image-20231021213930746](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231021213930746.png)
 
-![image-20231021214624293](../../assets/Day07-性能分析/image-20231021214624293.png)
+![image-20231021214624293](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231021214624293.png)
 
 ## 慢查询日志
 
@@ -121,13 +121,13 @@ set profiling = 1;
 	show profile [cpu] for query Query的ID;
 	```
 
-	<img src="../../assets/Day07-SQL性能优化/image-20231022095639488.png" alt="image-20231022095639488" style="zoom:50%;" />
+	<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022095639488.png" alt="image-20231022095639488" style="zoom:50%;" />
 
 -   ​												↑它
 
 -   cpu 多俩列字段显示CPU占用
 
-    ![image-20231022100410085](../../assets/Day07-SQL性能优化/image-20231022100410085.png)
+    ![image-20231022100410085](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022100410085.png)
 
 ## explain获取如何执行SELECT信息
 
@@ -155,19 +155,19 @@ desc
 
 -   一样的
 
-![image-20231022112156938](../../assets/Day07-SQL性能优化/image-20231022112156938.png)
+![image-20231022112156938](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022112156938.png)
 
 ### explain各字段解释
 
-![image-20231022114344785](../../assets/Day07-SQL性能优化/image-20231022114344785.png)
+![image-20231022114344785](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022114344785.png)
 
-![image-20231022114605780](../../assets/Day07-SQL性能优化/image-20231022114605780.png)
+![image-20231022114605780](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022114605780.png)
 
 #### ID
 
-  ![ ](../../assets/Day07-SQL性能优化/image-20231022113002451.png)
+  ![ ](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022113002451.png)
 
-![image-20231022112923901](../../assets/Day07-SQL性能优化/image-20231022112923901.png)
+![image-20231022112923901](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022112923901.png)
 
 ```mysql
 # 选了MySQL课程的学生
@@ -186,7 +186,7 @@ explain
 ;
 ```
 
-![image-20231022113329707](../../assets/Day07-SQL性能优化/image-20231022113329707.png)
+![image-20231022113329707](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-性能分析/image-20231022113329707.png)
 
 c -> sc -> subquery2 -> s
 

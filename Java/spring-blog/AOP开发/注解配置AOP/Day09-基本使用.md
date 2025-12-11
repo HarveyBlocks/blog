@@ -165,7 +165,7 @@ public class App {
 }
 ```
 
-![image-20231110193611810](../../../assets/Day09-基本使用/image-20231110193611810.png)
+![image-20231110193611810](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/注解配置AOP/Day09-基本使用/image-20231110193611810.png)
 
 #### 再见了,最后的XML战士🥺
 

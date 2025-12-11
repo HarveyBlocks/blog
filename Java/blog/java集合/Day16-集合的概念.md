@@ -3,7 +3,7 @@
 - 可变长度的数组
 - 数组可以存储基本类型和引用类型，集合只能存储引用类型（用装箱把基本类型转换成引用类型）
 
-![Interface Collection](../../assets/Day16/Interface Collection.png)
+![Interface Collection](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java集合/Day16-集合的概念/Interface Collection.png)
 
 ## Interface Collection
 
@@ -37,7 +37,7 @@
 
 存储结构红黑树
 
-![Map集合体系](../../assets/Day22/Map集合体系.png)
+![Map集合体系](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java集合/Day16-集合的概念/Map集合体系.png)
 
 ## Interface Map
 

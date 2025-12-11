@@ -75,7 +75,7 @@ MyInterceptor0::afterCompletion
 
 ### 看看图解
 
-![image-20231129155637307](../../assets/Day05-执行顺序/image-20231129155637307.png)
+![image-20231129155637307](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC拦截器/Day05-执行顺序/image-20231129155637307.png)
 
- ![image-20231129200410668](../../assets/Day05-执行顺序/image-20231129200410668.png)
+ ![image-20231129200410668](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC拦截器/Day05-执行顺序/image-20231129200410668.png)
 

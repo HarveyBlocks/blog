@@ -4,13 +4,13 @@
 
 此乃平板
 
-![image-20250915215654786](../assets/Day01-简介/image-20250915215654786.png)
+![image-20250915215654786](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915215654786.png)
 
 ## Android 系统
 
 ### 架构
 
-![Android 架构](../assets/Day01-简介/android_architecture.jpg)
+![Android 架构](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/android_architecture.jpg)
 
 -   Linux 内核
 
@@ -65,7 +65,7 @@
 
 ## 应用的界面结构
 
-![image-20250915215801511](../assets/Day01-简介/image-20250915215801511.png)
+![image-20250915215801511](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915215801511.png)
 
 -   `ViewGroup` 不可见的容器，定义 `View` 和其他 `ViewGroup` 的布局结构 对象
 -   `View`  绘制用户可见的内容, `View` 对象通常称为*微件*，可以是诸多组件, `Button`, `TextView`等
@@ -152,11 +152,11 @@ class MainActivity : AppCompatActivity() {
 
 Android Studio依照一般的项目结构整理后的展示样式
 
-<img src="../assets/Day01-简介/image-20250915215829559.png" alt="image-20250915215829559" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915215829559.png" alt="image-20250915215829559" style="zoom:50%;" />
 
 下面的展示的是物理结构
 
-<img src="../assets/Day01-简介/image-20250915215849250.png" alt="image-20250915215849250" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915215849250.png" alt="image-20250915215849250" style="zoom:50%;" />
 
 ### 有关配置文件
 
@@ -282,7 +282,7 @@ gradle构建脚本
 
 有两个build.gradle, 一个是project目录下的, 一个是app目录下的
 
-<img src="../assets/Day01-简介/image-20250915220014594.png" alt="image-20250915220014594" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915220014594.png" alt="image-20250915220014594" style="zoom:50%;" />
 
 其实gradle的语法都是Kotlin的构建器语法模式
 
@@ -292,11 +292,11 @@ gradle构建脚本
 
 ### res
 
-<img src="../assets/Day01-简介/image-20250915220027468.png" alt="image-20250915220027468" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915220027468.png" alt="image-20250915220027468" style="zoom:50%;" />
 
 下面是物理的项目结构
 
-<img src="../assets/Day01-简介/image-20250915220057378.png" alt="image-20250915220057378" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915220057378.png" alt="image-20250915220057378" style="zoom:50%;" />
 
 -   `drawable` 图像
 
@@ -344,9 +344,9 @@ gradle构建脚本
 
 两个参数, tag, 和message, tag用于对日志进行一定分类
 
-![image-20250915220131673](../assets/Day01-简介/image-20250915220131673.png)
+![image-20250915220131673](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250915220131673.png)
 
 自定义日志样式
 
-![image-20250926140734485](../assets/Day01-简介/image-20250926140734485.png)
+![image-20250926140734485](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day01-简介/image-20250926140734485.png)
 

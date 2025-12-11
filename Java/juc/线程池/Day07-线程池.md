@@ -2,7 +2,7 @@
 
 线程池在出异常后(没有被捕捉) 会创建新线程顶替, 保证始终有线程执行任务
 
-![image-20240912164945165](../assets/Day07-线程池/image-20240912164945165.png)
+![image-20240912164945165](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程池/Day07-线程池/image-20240912164945165.png)
 
 Scheduled定时任务
 
@@ -109,7 +109,7 @@ public ThreadPoolExecutor(int corePoolSize,  // 核心线程数
 
 ## 拒绝策略
 
-![image-20240912182626056](../assets/Day07-线程池/image-20240912182626056.png)
+![image-20240912182626056](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程池/Day07-线程池/image-20240912182626056.png)
 
 -   AbortPolicy 抛出RejectedExceutionException 默认
 -   CallerRunsPolicy 提供任务的线程执行该任务
@@ -139,7 +139,7 @@ public ThreadPoolExecutor(int corePoolSize,  // 核心线程数
 
     -   FinalizableDelegatedExecutorService
 
-        ![image-20240912202632394](../assets/Day07-线程池/image-20240912202632394.png)
+        ![image-20240912202632394](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/线程池/Day07-线程池/image-20240912202632394.png)
 
         包装类`FinalizableDelegatedExecutorService`是一个私有内部类
 

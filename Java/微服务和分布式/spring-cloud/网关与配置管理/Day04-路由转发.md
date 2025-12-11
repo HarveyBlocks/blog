@@ -154,17 +154,17 @@ logging:
 
 [路由断言工厂](https://docs.spring.io/spring-cloud-gateway/docs/3.1.8/reference/html/#gateway-request-predicates-factories)
 
-![image-20240110143440419``](../../assets/Day04-Gateway技术/image-20240110143440419.png)
+![image-20240110143440419``](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-路由转发/image-20240110143440419.png)
 
 -   `-Path=/red/{segment}`,传递参数, 要求路径要符合有参数这一规则
 
-![image-20240110144422092](../../assets/Day04-路由转发/image-20240110144422092.png)
+![image-20240110144422092](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-路由转发/image-20240110144422092.png)
 
 ### 路由过滤器
 
 [过滤器工厂](https://docs.spring.io/spring-cloud-gateway/docs/3.1.8/reference/html/#gatewayfilter-factories)
 
-![image-20240110144501258](../../assets/Day04-路由转发/image-20240110144501258.png)
+![image-20240110144501258](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-路由转发/image-20240110144501258.png)
 
 -   `StripPrefix`
 
@@ -174,7 +174,7 @@ logging:
 
     就可以剔除前缀`/api` 这个用处
 
-![image-20240110145050509](../../assets/Day04-路由转发/image-20240110145050509.png)
+![image-20240110145050509](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-路由转发/image-20240110145050509.png)
 
 ```yaml
 spring:

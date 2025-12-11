@@ -11,13 +11,13 @@ void testRabbitTemplate() {
 }
 ```
 
-![image-20240112224116222](../../assets/Day02-消息转换器/image-20240112224116222.png)
+![image-20240112224116222](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112224116222.png)
 
 使用了JDK的序列化方式(Redis: 这该死的熟悉感)
 
 ## 消息序列化
 
-![image-20240112225409617](../../assets/Day02-消息转换器/image-20240112225409617.png)
+![image-20240112225409617](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112225409617.png)
 
 ```java
 protected Message convertMessageIfNecessary(final Object object) {
@@ -30,7 +30,7 @@ protected Message convertMessageIfNecessary(final Object object) {
 
 -   默认选择的消息转换器
 
-![image-20240112225605070](../../assets/Day02-消息转换器/image-20240112225605070.png)
+![image-20240112225605070](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112225605070.png)
 
 ```java
 protected Message createMessage(Object object, MessageProperties messageProperties) throws MessageConversionException {
@@ -69,11 +69,11 @@ protected Message createMessage(Object object, MessageProperties messageProperti
 
 原罪
 
-![image-20240112230435325](../../assets/Day02-消息转换器/image-20240112230435325.png)
+![image-20240112230435325](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112230435325.png)
 
 说起来`createMessage`是
 
-![image-20240112230521401](../../assets/Day02-消息转换器/image-20240112230521401.png)
+![image-20240112230521401](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112230521401.png)
 
 所以seialize(Object)使用了ObjectOutputStream(见Redis)
 
@@ -108,9 +108,9 @@ public MessageConverter jackson2JsonMessageConverter(){
 
 #### 发送测试
 
-![image-20240112232458686](../../assets/Day02-消息转换器/image-20240112232458686.png)
+![image-20240112232458686](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240112232458686.png)
 
 #### 接收测试
 
-![image-20240113124301003](../../assets/Day02-消息转换器/image-20240113124301003.png)
+![image-20240113124301003](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-消息转换器/image-20240113124301003.png)
 

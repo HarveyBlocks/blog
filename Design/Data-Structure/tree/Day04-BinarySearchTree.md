@@ -251,7 +251,7 @@ bool BinaryTree<T>::isLeftChild(const BinaryTreeNode<T> *node, const BinaryTreeN
 
 为每一个版本提供一个根节点, 新版本只存储和新节点有关的树信息, 其他数据和节点复用老版本的
 
-<img src="../../assets/Day04-BinarySearchTree/image-20240629235929849.png" alt="image-20240629235929849" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day04-BinarySearchTree/image-20240629235929849.png" alt="image-20240629235929849" style="zoom:67%;" />
 
 该策略下: 
 

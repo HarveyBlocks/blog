@@ -2,19 +2,19 @@
 
 ## 算数运算符
 
-![image-20240302095953890](../assets/Day01-字符串/image-20240302095953890.png)
+![image-20240302095953890](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-运算符/image-20240302095953890.png)
 
 ## 赋值运算符
 
 -   复合赋值运算符
 
-![image-20240302100107610](../assets/Day01-字符串/image-20240302100107610.png)
+![image-20240302100107610](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-运算符/image-20240302100107610.png)
 
 ## 条件运算符
 
 值为布尔`True`或`False`
 
-![image-20240302103315833](../assets/Day01-运算符/image-20240302103315833.png)
+![image-20240302103315833](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-运算符/image-20240302103315833.png)
 
 "1"和1是不相等的, 但可以比而不会报错
 

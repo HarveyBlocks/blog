@@ -1,6 +1,6 @@
 # Map集合体系
 
-![Map集合体系](../../assets/Day22/Map集合体系.png)
+![Map集合体系](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java集合/Day23-Map集合体系/Map集合体系.png)
 
 ## Map接口的特点:
 

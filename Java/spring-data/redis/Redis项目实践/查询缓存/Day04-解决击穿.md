@@ -153,7 +153,7 @@ public Shop queryMutexFixByLock(Long id)  {
 ....几百条缓存存在
 ```
 
-![image-20240104223747612](../../../../assets/Day04-解决击穿/image-20240104223747612.png)
+![image-20240104223747612](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-解决击穿/image-20240104223747612.png)
 
 ```
 缓存存在

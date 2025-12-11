@@ -6,15 +6,15 @@
 - 背景层用来衬托应用图标的Logo
 - mask 来定义图标的形状, 视具体手机厂商而定
 
-![image-20250927033939320](../assets/Day16-App图标/image-20250927033939320.png)
+![image-20250927033939320](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day16-App图标/image-20250927033939320.png)
 
 ## 制作
 
-![image-20250927034119117](../assets/Day16-App图标/image-20250927034119117.png)
+![image-20250927034119117](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day16-App图标/image-20250927034119117.png)
 
 页面
 
-![image-20250927034144978](../assets/Day16-App图标/image-20250927034144978.png)
+![image-20250927034144978](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Day16-App图标/image-20250927034144978.png)
 
 操作部分
 

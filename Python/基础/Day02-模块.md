@@ -52,17 +52,17 @@ sleep(20)
 
 ## 自定义模块
 
-![image-20240303124236111](../assets/Day02-模块/image-20240303124236111.png)
+![image-20240303124236111](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day02-模块/image-20240303124236111.png)
 
 当读到import的时候, 就会把模块文件执行一遍
 
-![image-20240303125524568](../assets/Day02-模块/image-20240303125524568.png)
+![image-20240303125524568](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day02-模块/image-20240303125524568.png)
 
 调用了函数, 就执行了函数里的内容
 
 不想要自己写的代码在被导入的时候运行, 怎么办
 
-![image-20240303125652825](../assets/Day02-模块/image-20240303125652825.png)
+![image-20240303125652825](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day02-模块/image-20240303125652825.png)
 
 **当执行文件的是当前文件时, 执行以下代码**
 
@@ -85,7 +85,7 @@ if __name__ == '__main__':
 
 `__all__`参数, 在使用`import *`的时候起作用, 到时候只会把指定的**参数和函数**和暴露处理
 
-![image-20240303130444700](../assets/Day02-模块/image-20240303130444700.png)
+![image-20240303130444700](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day02-模块/image-20240303130444700.png)
 
 ```python
 from model import *

@@ -2,7 +2,7 @@
 
 ## 签到卡
 
--   ![image-20240131163648604](../../../assets/Day11-签到卡/image-20240131163648604.png)
+-   ![image-20240131163648604](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/签到与统计/Day11-签到卡/image-20240131163648604.png)
 
 干脆用unsigned int, 差不多一个月
 

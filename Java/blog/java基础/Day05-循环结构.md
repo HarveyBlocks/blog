@@ -90,7 +90,7 @@ public class Main {
 }
 ```
 
-![屏幕截图 2023-08-03 190344](../../assets/屏幕截图 2023-08-03 190344.png)
+![屏幕截图 2023-08-03 190344](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-循环结构/屏幕截图 2023-08-03 190344.png)
 
 ***
 这是break加标签
@@ -112,7 +112,7 @@ public class Main {
 }
 ```
 
-![屏幕截图 2023-08-03 190522](../../assets/屏幕截图 2023-08-03 190522.png)
+![屏幕截图 2023-08-03 190522](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day05-循环结构/屏幕截图 2023-08-03 190522.png)
 
 ***
 - continue加标签，回到标签处，标签冒号后的循环**再次**执行

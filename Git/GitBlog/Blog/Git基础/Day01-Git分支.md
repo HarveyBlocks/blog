@@ -41,7 +41,7 @@ git merge 分支名
 
   把发生冲突的文件进行一定的更改,把俩分支上的内容共同写进文件内
 
-  - ![image-20231002225347203](../../assets/Day01/image-20231002225347203.png)
+  - ![image-20231002225347203](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Git/GitBlog/Git基础/Day01-Git分支/image-20231002225347203.png)
   - **这里对HEAD和master分支的认识还不够清晰**
 
 - 解决方法

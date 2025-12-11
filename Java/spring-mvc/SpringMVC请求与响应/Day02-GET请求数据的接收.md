@@ -42,7 +42,7 @@ public String getParam(String username,Integer age){//但又一个要求:参数�
 
     -   返回400错误
 
-        ![image-20231125133342017](../../assets/Day2-请求数据的接收/image-20231125133342017.png)
+        ![image-20231125133342017](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125133342017.png)
 
 >   我就是要对name匹配给username,咋办捏?
 
@@ -56,15 +56,15 @@ public String getParam(@RequestParam("name") String username, int age){...}
 
 -   `name=张三&age=李四`
 
-    ![image-20231125133306886](../../assets/Day2-请求数据的接收/image-20231125133306886.png)
+    ![image-20231125133306886](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125133306886.png)
 
 -   `?username=张三&age=18`
 
-    ![image-20231125133342017](../../assets/Day2-请求数据的接收/image-20231125133342017.png)
+    ![image-20231125133342017](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125133342017.png)
 
 -   `register?name=张三`
 
-    ![image-20231125133501490](../../assets/Day2-请求数据的接收/image-20231125133501490.png)
+    ![image-20231125133501490](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125133501490.png)
 
 ### Get请求一键对多值
 
@@ -98,7 +98,7 @@ public String getParam( List<String> hobby){
 
 -   非法状态异常
 
-![image-20231125135202896](../../assets/Day2-请求数据的接收/image-20231125135202896.png)
+![image-20231125135202896](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125135202896.png)
 
 -   啥情况捏\~\(￣▽￣\)\~\*
     -   Spring会尝试帮我们把传入的类型封装成对象
@@ -120,7 +120,7 @@ public String getParam( List<String> hobby){
         }
         ```
 
-    -   ![image-20231125142020160](../../assets/Day2-请求数据的接收/image-20231125142020160.png)
+    -   ![image-20231125142020160](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125142020160.png)
 
         他说:不能把填入的数据:String转成ArrayList
 
@@ -147,7 +147,7 @@ public String getParam( List<String> hobby){
 
 -   但是List成功了ArrayList能成功吗?
 
-    ![image-20231125142354594](../../assets/Day2-请求数据的接收/image-20231125142354594.png)
+    ![image-20231125142354594](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125142354594.png)
 
     狠狠地报错
 
@@ -155,13 +155,13 @@ public String getParam( List<String> hobby){
 
 -   这种情况也时有发生
 
-    ![image-20231125143217725](../../assets/Day2-请求数据的接收/image-20231125143217725.png)
+    ![image-20231125143217725](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125143217725.png)
 
 ### 用Map接收Get的各色键值对请求
 
 `/register4?hobbies=张三&hobbies=李四`
 
-![image-20231125143352169](../../assets/Day2-请求数据的接收/image-20231125143352169.png)
+![image-20231125143352169](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125143352169.png)
 
 -   这是个啥原理?它说李四到还好理解...
 
@@ -179,13 +179,13 @@ public String getParam( List<String> hobby){
     }
     ```
 
-    ![image-20231125143641819](../../assets/Day2-请求数据的接收/image-20231125143641819.png)
+    ![image-20231125143641819](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125143641819.png)
 
     可能在解析URL的时候是从后往前解析的
 
     `?hobbies=李四&hobbies=张三`
 
-    ![image-20231125143747028](../../assets/Day2-请求数据的接收/image-20231125143747028.png)
+    ![image-20231125143747028](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125143747028.png)
 
 -   `register4?hobbies=李四&hobbies=张三&username=王五&age=18`当集合和普通的参数共存呢?
 
@@ -232,7 +232,7 @@ public String getParam(@RequestParam("name") String username, int age) {
 
 -   **value**:键名指定
 
-    ![image-20231125145442594](../../assets/Day2-请求数据的接收/image-20231125145442594.png)
+    ![image-20231125145442594](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-GET请求数据的接收/image-20231125145442594.png)
 
 -   **required = true(default)**
 

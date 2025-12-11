@@ -14,13 +14,13 @@ OAuth（开放授权）是一个开放标准，**允许用户授权**第三方�
 
 我们拿到令牌, 认为用户身份信息被认证成功, 就进入系统
 
-![微信认证流程图](../../assets/Day04-OAuth2.0/微信认证流程图.png)
+![微信认证流程图](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/OAuth2.0和SpringCloudSecurity/Day04-OAuth2.0/微信认证流程图.png)
 
 ### OAauth2.0原理流程
 
-![image-20231220190146942](../../assets/Day04-OAuth2.0/image-20231220190146942.png)
+![image-20231220190146942](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/OAuth2.0和SpringCloudSecurity/Day04-OAuth2.0/image-20231220190146942.png)
 
-![Oauth](../../assets/Day04-OAuth2.0/Oauth.webp)
+![Oauth](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/OAuth2.0和SpringCloudSecurity/Day04-OAuth2.0/Oauth.webp)
 
 1.  客户端(我的系统)向资源拥有者(用户)提出授权申请
 

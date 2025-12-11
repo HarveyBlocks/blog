@@ -6,9 +6,9 @@
 
 -   POSTMAN里有Body
 
-![image-20231125165710280](../../assets/Day02-/image-20231125165710280.png)
+![image-20231125165710280](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-Body请求数据/image-20231125165710280.png)
 
-![image-20231126150021882](../../assets/Day02-Body请求数据/image-20231126150021882.png)
+![image-20231126150021882](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-Body请求数据/image-20231126150021882.png)
 
 -   row就是一长串字符串
 -   这个row没有格式的限制,也可以做一些选择
@@ -172,7 +172,7 @@ public enum Gender {
 
 但是!
 
-![image-20231125200927149](../../assets/Day02-/image-20231125200927149.png)
+![image-20231125200927149](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-Body请求数据/image-20231125200927149.png)
 
 要来回new ObjectMapper,要调用函数,要传参,真是不好!😥
 
@@ -190,7 +190,7 @@ public enum Gender {
 
 -   有参数要配置
 
-![image-20231125195756713](../../assets/Day02-/image-20231125195756713.png)
+![image-20231125195756713](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-Body请求数据/image-20231125195756713.png)
 
 -   HttpMessageConverter:Http消息中的参数的转换器
 
@@ -210,7 +210,7 @@ public enum Gender {
     -   我们需要配它的实现类org.springframework.http.converter.json.**MappingJackson2HttpMessageConverter**
     -   着就是一个JSON转换器
 
-![image-20231125200104578](../../assets/Day02-/image-20231125200104578.png)
+![image-20231125200104578](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day02-Body请求数据/image-20231125200104578.png)
 
 ```xml
 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">

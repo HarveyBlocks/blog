@@ -10,11 +10,11 @@ Service默认运行在主线程, 必须手动开启线程才能实现"在后台�
 
 ## 创建
 
-![image-20250920185312744](../../assets/Day10-Service/image-20250920185312744.png)
+![image-20250920185312744](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920185312744.png)
 
 进入创建页面
 
-![image-20250920185403498](../../assets/Day10-Service/image-20250920185403498.png)
+![image-20250920185403498](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920185403498.png)
 
 kotlin代码
 
@@ -137,19 +137,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 按下Start
 
-![image-20250920191344402](../../assets/Day10-Service/image-20250920191344402.png)
+![image-20250920191344402](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920191344402.png)
 
 再次按下Start, `onStart()`方法没有反复执行, 只执行了`onStartCommand()`方法
 
-![image-20250920191403017](../../assets/Day10-Service/image-20250920191403017.png)
+![image-20250920191403017](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920191403017.png)
 
 按下Stop
 
-![image-20250920191419876](../../assets/Day10-Service/image-20250920191419876.png)
+![image-20250920191419876](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920191419876.png)
 
 再次start
 
-![image-20250920191724660](../../assets/Day10-Service/image-20250920191724660.png)
+![image-20250920191724660](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920191724660.png)
 
 默认情况下, 这些Service都是在主线程执行的
 
@@ -162,7 +162,7 @@ binding.start.setOnClickListener {
 }
 ```
 
-![image-20250920192724658](../../assets/Day10-Service/image-20250920192724658.png)
+![image-20250920192724658](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920192724658.png)
 
 看来是将Service的执行任务放入Queue, 然后本回调函数执行完毕后才会执行Service
 
@@ -300,21 +300,21 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 而没有执行Service的onCommandService
 
-![image-20250920201132046](../../assets/Day10-Service/image-20250920201132046.png)
+![image-20250920201132046](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920201132046.png)
 
 多次点击bind, 并不会多次onBind, 也不会多次connect
 
 手动start了Service之后再bind, 则不会重复create, 但由于是手动start的Service, 因此必定调用onCommandService
 
-![image-20250920201334037](../../assets/Day10-Service/image-20250920201334037.png)
+![image-20250920201334037](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920201334037.png)
 
 点击一次unbind, 正常unbind了, 调用了Service的destory方法(但没有disconnect)
 
-![image-20250920200348495](../../assets/Day10-Service/image-20250920200348495.png)
+![image-20250920200348495](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920200348495.png)
 
 unbind之后再次bind, service重新创建, onBind方法重新调用, connection重新链接
 
-![image-20250920200436920](../../assets/Day10-Service/image-20250920200436920.png)
+![image-20250920200436920](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/image-20250920200436920.png)
 
 unbind之后再次点击unbind, **程序崩溃**
 
@@ -326,7 +326,7 @@ unbind之后再次点击unbind, **程序崩溃**
 
 onCreate方法会先于onBind方法执行
 
-![img](../../assets/Day10-Service/service_binding_tree_lifecycle.png)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Service/service_binding_tree_lifecycle.png)
 
 ## Foreground Service
 

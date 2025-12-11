@@ -43,7 +43,7 @@ public Result queryShopById(@PathVariable("id") Long id) {
         2.  将数据写到缓存中
         3.  将新写入的数据设置时效
 
-![image-20240103210133106](../../../../assets/Day03-缓存/image-20240103210133106.png)
+![image-20240103210133106](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day03-缓存/image-20240103210133106.png)
 
 ### 实现商铺的存储
 
@@ -117,9 +117,9 @@ shopJson = JSONUtil.toJsonStr(shop);
 
 ### 测试
 
-![image-20240104015028762](../../../../assets/Day03-缓存/image-20240104015028762.png)
+![image-20240104015028762](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day03-缓存/image-20240104015028762.png)
 
-![image-20240104015056013](../../../../assets/Day03-缓存/image-20240104015056013.png)
+![image-20240104015056013](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day03-缓存/image-20240104015056013.png)
 
 ### ShopType的业务实现
 

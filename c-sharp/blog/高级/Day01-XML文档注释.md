@@ -40,5 +40,5 @@
     }
     ```
 
-    ![image-20241010220128197](../../assets/Day01-XML文档注释/image-20241010220128197.png)
+    ![image-20241010220128197](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/c-sharp/高级/Day01-XML文档注释/image-20241010220128197.png)
 

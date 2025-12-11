@@ -42,7 +42,7 @@ CREATE TABLE `tb_hotel` (
 
 #### 字段分析
 
--   `id`, 依据**es的`id`是字符串**<img src="../assets/Day02-Java操作es/image-20231225165355121.png" alt="image-20231225165355121" style="zoom:33%;" />
+-   `id`, 依据**es的`id`是字符串**<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-RestClient/image-20231225165355121.png" alt="image-20231225165355121" style="zoom:33%;" />
 
     我们的`id`也作为字符串, 且为`keyword`
 
@@ -167,7 +167,7 @@ PUT /hotel
 
 -   Spring boot自带的ES版本是7.6.2
 
-    ![image-20231225184045258](../assets/Day02-Java操作es/image-20231225184045258.png)
+    ![image-20231225184045258](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-RestClient/image-20231225184045258.png)
 
     诈骗啊! 妥妥的诈骗啊!
 
@@ -180,7 +180,7 @@ PUT /hotel
 </properties>
 ```
 
-![image-20231225184512865](../assets/Day02-Java操作es/image-20231225184512865.png)
+![image-20231225184512865](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-RestClient/image-20231225184512865.png)
 
 ### 分词的方法
 

@@ -61,7 +61,7 @@ tail [-f,-num] 路径
 
 ### 示例:
 
-![image-20231001175003567](../assets/Day02/image-20231001175003567.png)
+![image-20231001175003567](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/Linux基础/Day02-文件操作命令/image-20231001175003567.png)
 
 ## cp 复制文件(夹)
 

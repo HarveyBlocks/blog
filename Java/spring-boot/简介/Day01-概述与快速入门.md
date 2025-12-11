@@ -108,23 +108,23 @@ public class StartApplication {
 
 ### 测试运行
 
-![image-20231204143804650](../../assets/Day11-快速入门/image-20231204143804650.png)
+![image-20231204143804650](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/简介/Day01-概述与快速入门/image-20231204143804650.png)
 
 内置了Tomcat
 
 `http://localhost:8080/index`
 
-![image-20231204144101236](../../assets/Day01-概述与快速入门/image-20231204144101236.png)
+![image-20231204144101236](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/简介/Day01-概述与快速入门/image-20231204144101236.png)
 
 ## 快速构建Spring模块
 
 -   start,spring.io在JDK版本上优点问题,用[Cloud Native App Initializer (aliyun.com)](https://start.aliyun.com/)为佳
 
-![image-20231204150836688](../../assets/Day01-概述与快速入门/image-20231204150836688.png)
+![image-20231204150836688](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/简介/Day01-概述与快速入门/image-20231204150836688.png)
 
 -   一步到位
 
-![image-20231204170023258](../../assets/Day01-概述与快速入门/image-20231204170023258.png)
+![image-20231204170023258](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/简介/Day01-概述与快速入门/image-20231204170023258.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

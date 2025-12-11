@@ -2,7 +2,7 @@
 
 名为Class的一个类
 
-![image-20230908231201469](../../assets/Day28/image-20230908231201469.png)
+![image-20230908231201469](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day28-获取Class对象/image-20230908231201469.png)
 
 ## 获取Class对象
 
@@ -38,11 +38,11 @@ Class.forName("全.包.名.类名")
 
 全类名的复制:
 
-<img src="../../assets/Day28/image-20230908234010367.png" alt="image-20230908234010367" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day28-获取Class对象/image-20230908234010367.png" alt="image-20230908234010367" style="zoom:50%;" />
 
 全类名的粘贴:
 
-<video src="../../assets/Day28/LearnLambda – Demo.java 2023-09-08 23-45-14.mp4"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day28-获取Class对象/LearnLambda – Demo.java 2023-09-08 23-45-14.mp4"></video>
 
 ```java
 /*LearnReflection.Student*/

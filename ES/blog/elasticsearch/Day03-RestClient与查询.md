@@ -1,6 +1,6 @@
 # RestClient与查询
 
-![image-20231226231949796](../assets/Day03-RestClient与查询/image-20231226231949796.png)
+![image-20231226231949796](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-RestClient与查询/image-20231226231949796.png)
 
 -   从查询到对查询数据的处理, 都有
 
@@ -318,7 +318,7 @@ GET /hotel/_search
 
     -   真相大白
 
-        ![image-20231227155850234](../assets/Day03-RestClient与查询/image-20231227155850234.png)
+        ![image-20231227155850234](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day03-RestClient与查询/image-20231227155850234.png)
 
 ```java
 s.query(QueryBuilders.geoDistanceQuery("location")

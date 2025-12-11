@@ -9,13 +9,13 @@
 
 ## 添加断言
 
-![image-20240418144724646](../../assets/Day02-断言/image-20240418144724646.png)
+![image-20240418144724646](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-断言/image-20240418144724646.png)
 
 ## 设置断言
 
-![image-20240418144942161](../../assets/Day02-断言/image-20240418144942161.png)
+![image-20240418144942161](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-断言/image-20240418144942161.png)
 
 ## 测试断言
 
-![image-20240418145109991](../../assets/Day02-断言/image-20240418145109991.png)
+![image-20240418145109991](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-断言/image-20240418145109991.png)
 

@@ -20,7 +20,7 @@ chmod u=rwx,g=rx,o=x test.txt
 - g 用户组(group)
 - o 其他(other)用户
 
-![image-20231002000937523](../assets/Day04/image-20231002000937523.png)
+![image-20231002000937523](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-修改文件权限/image-20231002000937523.png)
 
 - ugo之间用**逗号**
 - ugo顺序随便
@@ -39,7 +39,7 @@ chmod 751 test.txt
 4. 第二位数字表示用户组权限
 5. 第三位数字表示其他用户权限
 
-   ![image-20231002001842820](../assets/Day04/image-20231002001842820.png)
+   ![image-20231002001842820](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-修改文件权限/image-20231002001842820.png)
 
 - 就纯纯一二进制,高到低rwx嘛
 

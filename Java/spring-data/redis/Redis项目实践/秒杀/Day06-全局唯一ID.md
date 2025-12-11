@@ -36,7 +36,7 @@
 
 ### 设计ID
 
-![image-20240120091229673](../../../assets/Day06-全局唯一ID/image-20240120091229673.png)
+![image-20240120091229673](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day06-全局唯一ID/image-20240120091229673.png)
 
 -   符号位
     -    `0`表示正数

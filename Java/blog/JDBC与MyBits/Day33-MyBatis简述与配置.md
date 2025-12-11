@@ -1,6 +1,6 @@
 #  MyBatis简述
 
-![image-20231011164923807](../../assets/Day33/image-20231011164923807.png)
+![image-20231011164923807](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day33-MyBatis简述与配置/image-20231011164923807.png)
 
 -   表现层 - 前端
 -   业务层 -  逻辑处理
@@ -8,7 +8,7 @@
 
 ## JDBC的缺点
 
-![image-20231011171552479](../../assets/Day33/image-20231011171552479.png)
+![image-20231011171552479](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day33-MyBatis简述与配置/image-20231011171552479.png)
 
 -   硬编码:改变需求就要改变源码,重新编译,工作量太大
 

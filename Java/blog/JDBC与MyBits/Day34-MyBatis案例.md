@@ -43,7 +43,7 @@
 
 省流:打个CD
 
-![image-20231004004846059](../assets/Day34-MyBatis案例/image-20231004004846059.png)
+![image-20231004004846059](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis案例/image-20231004004846059.png)
 
 ### 自动包装出现问题
 
@@ -126,7 +126,7 @@
 
 ## 查看详情
 
-![image-20231016173804553](../assets/Day34-MyBatis案例/image-20231016173804553.png)
+![image-20231016173804553](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis案例/image-20231016173804553.png)
 
 ```xml
 <select id ="selectById" resultMAp="userResultMap">
@@ -220,7 +220,7 @@ for (User user :users2) System.out.println(user);
 
 [动态SQL](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
 
-![image-20231016200657399](../assets/Day34-MyBatis案例/image-20231016200657399.png)
+![image-20231016200657399](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis案例/image-20231016200657399.png)
 
 -   先来一个有问题的
 
@@ -313,7 +313,7 @@ for (User user :users2) System.out.println(user);
 
 -   举个例子:
 
-![image-20231016204227068](../assets/Day34-MyBatis案例/image-20231016204227068.png)
+![image-20231016204227068](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis案例/image-20231016204227068.png)
 
 语法:
 
@@ -561,7 +561,7 @@ System.out.println(userMapper.update(user));
 
 -   不知道删除几个->动态->动态sql
 
-![image-20231017005756566](../assets/Day34-MyBatis案例/image-20231017005756566.png)
+![image-20231017005756566](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day34-MyBatis案例/image-20231017005756566.png)
 
 ```java
 void delByIds(@Param("ids")List<Integer> ids);

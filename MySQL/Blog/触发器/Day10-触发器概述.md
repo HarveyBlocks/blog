@@ -3,13 +3,13 @@
 -   在数据库端来完成数据的完整性保证
 -   在服务器端来完成数据校验(before)和记录日志(after)等操作
 
-![image-20231025191129030](../../assets/Untitled/image-20231025191129030.png)
+![image-20231025191129030](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/触发器/Day10-触发器概述/image-20231025191129030.png)
 
 -   Old,New针对的是记录(行触发器)
 
 ## 触发器类型
 
-![image-20231025191207677](../../assets/Untitled/image-20231025191207677.png)
+![image-20231025191207677](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/触发器/Day10-触发器概述/image-20231025191207677.png)
 
 -   **目前只支持行级触发器**
 

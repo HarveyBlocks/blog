@@ -17,7 +17,7 @@ Intent用于Android程序中各组件之间的交互
 
 创建一个新的Activity
 
-<img src="../../assets/Day03-Intent/image-20250908094943709.png" alt="image-20250908094943709" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-Intent/image-20250908094943709.png" alt="image-20250908094943709" style="zoom: 33%;" />
 
 注册Manifest
 

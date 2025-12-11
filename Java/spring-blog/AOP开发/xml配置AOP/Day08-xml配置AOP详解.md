@@ -41,10 +41,10 @@ execution([访问修饰符] 返回值类型 包名.类名.方法(参数列表))
 pointcut="execution(public * com.harvey.service..UserServiceImpl.*(..))"
 ```
 
--   小练习![image-20231110110720348](../../../assets/Day08-xml配置AOP详解/image-20231110110720348.png)
+-   小练习![image-20231110110720348](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110110720348.png)
 -   织入可以叠加
 
-![image-20231110110435402](../../../assets/Day08-xml配置AOP详解/image-20231110110435402.png)
+![image-20231110110435402](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110110435402.png)
 
 ```xml
 <aop:before method="before" pointcut="execution(* *..*.*(..))"/>
@@ -53,7 +53,7 @@ pointcut="execution(public * com.harvey.service..UserServiceImpl.*(..))"
 
 # 通知的类型(五种)
 
-![image-20231110110900189](../../../assets/Day08-xml配置AOP详解/image-20231110110900189.png)
+![image-20231110110900189](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110110900189.png)
 
 ## 测试
 
@@ -226,7 +226,7 @@ public Object around(ProceedingJoinPoint point) throws  Throwable{
 }
 ```
 
-![image-20231110131212861](../../../assets/Day08-xml配置AOP详解/image-20231110131212861.png)
+![image-20231110131212861](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110131212861.png)
 
 ### 小测试
 
@@ -336,7 +336,7 @@ public Object around(ProceedingJoinPoint point) throws  Throwable{
 
 -   给around之外的配,会狠狠地报错
 
-![image-20231110134859631](../../../assets/Day08-xml配置AOP详解/image-20231110134859631.png)
+![image-20231110134859631](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110134859631.png)
 
 ### Throwable
 
@@ -344,7 +344,7 @@ public Object around(ProceedingJoinPoint point) throws  Throwable{
 >
 >需要进行响应的配置
 
-![image-20231110134324744](../../../assets/Day08-xml配置AOP详解/image-20231110134324744.png)
+![image-20231110134324744](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110134324744.png)
 
 -   不配置,就报错
 
@@ -365,7 +365,7 @@ public void afterThrowing(Throwable throwable){
 }
 ```
 
-![image-20231110134558895](../../../assets/Day08-xml配置AOP详解/image-20231110134558895.png)
+![image-20231110134558895](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110134558895.png)
 
 -   报错地心满意足
 -   它的生命周期很怪
@@ -400,7 +400,7 @@ around:java.lang.NullPointerException
 
 #### 康康源码
 
-![image-20231110141411743](../../../assets/Day08-xml配置AOP详解/image-20231110141411743.png)
+![image-20231110141411743](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110141411743.png)
 
 >   啥都没有的接口------标示(Serializable)接口
 
@@ -451,7 +451,7 @@ public class MyAdvice2 implements MethodBeforeAdvice, AfterReturningAdvice {
 
 ### 结果
 
-![image-20231110142335511](../../../assets/Day08-xml配置AOP详解/image-20231110142335511.png)
+![image-20231110142335511](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110142335511.png)
 
 ### 详解MethodInterceptor
 
@@ -475,7 +475,7 @@ public class MyAdvice2 implements MethodInterceptor {
 
 #### 结果
 
-![image-20231110143108353](../../../assets/Day08-xml配置AOP详解/image-20231110143108353.png)
+![image-20231110143108353](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP详解/image-20231110143108353.png)
 
 ### 与\<aspect\>的区别
 

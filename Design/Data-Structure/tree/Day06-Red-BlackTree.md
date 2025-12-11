@@ -83,13 +83,13 @@ bool RedBlackTree<T>::isRedBlackTree(BinaryTreeNode<T> *root) {
 
 可得
 
-![image-20240626154341310](../../assets/Untitled/image-20240626154341310.png)
+![image-20240626154341310](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day06-Red-BlackTree/image-20240626154341310.png)
 
 AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树, AVL为了达到严格的平衡, 插入和删除更加复杂
 
 ## 哨兵Nil
 
-![image-20240628001742607](../../assets/Day05-Red-BlackTree/image-20240628001742607.png)
+![image-20240628001742607](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day06-Red-BlackTree/image-20240628001742607.png)
 
 所有叶子节点都指向哨兵, 根节点的父节点为哨兵节点(什么好处?)
 
@@ -113,9 +113,9 @@ AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树,
 
             LR,LL,RL,RR...
 
-            <img src="../../assets/Day06-Red-BlackTree/image-20240628125057656.png" alt="image-20240628125057656" style="zoom:50%;" />
+            <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day06-Red-BlackTree/image-20240628125057656.png" alt="image-20240628125057656" style="zoom:50%;" />
 
-            <img src="../../assets/Day06-Red-BlackTree/image-20240628125116045.png" alt="image-20240628125116045" style="zoom:50%;" />
+            <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day06-Red-BlackTree/image-20240628125116045.png" alt="image-20240628125116045" style="zoom:50%;" />
 
         2.  变色
 

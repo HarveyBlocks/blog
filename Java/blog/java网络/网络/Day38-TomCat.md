@@ -8,19 +8,19 @@
 
 # Web项目结构
 
--   ![image-20231116190517288](../../../assets/Day38-TomCat/image-20231116190517288.png)
+-   ![image-20231116190517288](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-TomCat/image-20231116190517288.png)
 
 Web项目的War包
 
 -   POM.xml
 
-![image-20231116190857842](../../../assets/Day38-TomCat/image-20231116190857842.png)
+![image-20231116190857842](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-TomCat/image-20231116190857842.png)
 
 Idea集成Tomcat
 
-![image-20231116202021810](../../../assets/Day38-TomCat/image-20231116202021810.png)
+![image-20231116202021810](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-TomCat/image-20231116202021810.png)
 
-<img src="../../../assets/Day38-TomCat/image-20231116202056294.png" alt="image-20231116202056294" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-TomCat/image-20231116202056294.png" alt="image-20231116202056294" style="zoom:50%;" />
 
 -   这么配,就可以直接打开index.html了
 
@@ -61,5 +61,5 @@ Idea集成Tomcat
 
 -   随便找个文件左键
 
-![image-20231116200450164](../../../assets/Day38-TomCat/image-20231116200450164.png)
+![image-20231116200450164](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day38-TomCat/image-20231116200450164.png)
 

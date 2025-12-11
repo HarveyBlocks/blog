@@ -1,6 +1,6 @@
 # 集群容错
 
-![image-20240406221817459](../assets/Day08-集群容错/image-20240406221817459.png)
+![image-20240406221817459](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/Dubbo/Day08-集群容错/image-20240406221817459.png)
 
 ## failover(默认)
 

@@ -69,7 +69,7 @@ SisMember Set member
 
 ## 集合关系
 
-![image-20231029120848794](../../assets/image-20231029120848794.png)
+![image-20231029120848794](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day02-Set/image-20231029120848794.png)
 
 ### 交
 

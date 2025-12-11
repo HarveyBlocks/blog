@@ -6,15 +6,15 @@
 
 -   创建Socket对象,构建客户端
 
-![image-20231012002905000](../../../assets/Day33/image-20231012002905000.png)
+![image-20231012002905000](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012002905000.png)
 
 -   常用方法
 
-![image-20231012002947289](../../../assets/Day33/image-20231012002947289.png)
+![image-20231012002947289](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012002947289.png)
 
 -   实现步骤
 
-![image-20231012003934057](../../../assets/Day33/image-20231012003934057.png)
+![image-20231012003934057](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012003934057.png)
 
 ### 实例代码
 
@@ -51,11 +51,11 @@ public class Client {
 
 ## 服务端ServerSocket
 
-![image-20231012010641405](../../../assets/Day33/image-20231012010641405.png)
+![image-20231012010641405](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012010641405.png)
 
 -   实现步骤
 
-![image-20231012012021534](../../../assets/Day33-基于TCP通信实现java网络编程/image-20231012012021534.png)
+![image-20231012012021534](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012012021534.png)
 
 ### 案例实现
 
@@ -215,7 +215,7 @@ public class Server {
 -   客户端退出后, 服务端报出异常
 -   由于`dis.readUTF()`一直在等待客户端的消息,客户端却断开了连接
 
-![image-20231012120052754](../../../assets/Day33-基于TCP通信实现java网络编程/image-20231012120052754.png)
+![image-20231012120052754](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络编程/Day33-基于TCP通信实现java网络编程/image-20231012120052754.png)
 
 -   用try-catch
 

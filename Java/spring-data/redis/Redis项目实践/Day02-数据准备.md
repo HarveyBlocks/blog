@@ -33,7 +33,7 @@
 
 前端部署在NGINX上
 
-![image-20240102192238092](../../../assets/Day01-点评/image-20240102192238092.png)
+![image-20240102192238092](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/Day02-数据准备/image-20240102192238092.png)
 
 ## 后端项目
 
@@ -102,7 +102,7 @@
 http://localhost:8081/shop-type/list
 ```
 
-![image-20240102195744090](../../../assets/Day01-点评/image-20240102195744090.png)
+![image-20240102195744090](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/Day02-数据准备/image-20240102195744090.png)
 
 ## 前端部署
 
@@ -114,17 +114,17 @@ http://localhost:8081/shop-type/list
 
 以前那些已经在D盘下的文件不知道是怎么跑起来的😓
 
-![image-20240102200050717](../../../assets/Day01-点评/image-20240102200050717.png)
+![image-20240102200050717](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/Day02-数据准备/image-20240102200050717.png)
 
 `html`包下, 就有完整的代码了
 
-![image-20240102200150418](../../../assets/Day01-点评/image-20240102200150418.png)
+![image-20240102200150418](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/Day02-数据准备/image-20240102200150418.png)
 
 配置文件在`conf/nginx.conf`
 
 前端的项目是做了移动端的
 
-![image-20240102200554610](../../../assets/Day01-点评/image-20240102200554610.png)
+![image-20240102200554610](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/Day02-数据准备/image-20240102200554610.png)
 
 可以了
 

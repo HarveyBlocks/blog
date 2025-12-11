@@ -64,7 +64,7 @@ x-dead-letter-exchange=交换机名
 
     -   指定死信交换机
 
-        ![image-20240114115815113](../../assets/Day04-死信交换机/image-20240114115815113.png)
+        ![image-20240114115815113](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-死信交换机/image-20240114115815113.png)
 
 3.  等待, 消息过期
 

@@ -34,5 +34,5 @@
 
 ## SQL语言分类
 
- ![image-20231005155906590](../../../assets/Day02-SQL通用语言/image-20231005155906590.png)
+ ![image-20231005155906590](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DDL/Day02-SQL通用语言/image-20231005155906590.png)
 

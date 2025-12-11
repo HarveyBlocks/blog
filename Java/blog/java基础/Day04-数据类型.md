@@ -6,7 +6,7 @@
 | ---------- | -------------- |
 | 弱类型语言 | VB，JavaScripe |
 ## 数据类型的分类
-![数据类型](../../assets/数据类型.png)
+![数据类型](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/数据类型.png)
 
 ## 整形相关
 
@@ -84,7 +84,7 @@ System.out.println(f1 == f2);//true
 
 输出结果如下：
 
-![screemshot 2023-08-02 221411](../../assets/screemshot 2023-08-02 221411.png)
+![screemshot 2023-08-02 221411](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/screemshot 2023-08-02 221411.png)
 
 ***结论：最好完全避免使用浮点数进行比较***
 
@@ -111,7 +111,7 @@ System.out.println("\u0022+\u0022"+".");//,
 
 ### 信息丢失
 
-![数值类型之间的合法转换](../../assets/数值类型之间的合法转换.png)
+![数值类型之间的合法转换](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/数值类型之间的合法转换.png)
 
 ``` java
 int n = 123456789;
@@ -136,7 +136,7 @@ double d=i;
 System.out.println(d);
 ```
 
-![y'h](../../assets/image-20230802222956611.png)
+![y'h](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/image-20230802222956611.png)
 
 ``` java
 public class Demon01 {
@@ -150,7 +150,7 @@ public class Demon01 {
 }
 ```
 
-![屏幕截图 2023-08-03 120537](../../assets/屏幕截图 2023-08-03 120537.png)
+![屏幕截图 2023-08-03 120537](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/屏幕截图 2023-08-03 120537.png)
 
 ### 高转低
 
@@ -169,7 +169,7 @@ byte b=(byte) i;
 System.out.println(b);
 ```
 
-![image-20230802223038798](../../assets/image-20230802223038798.png)
+![image-20230802223038798](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/image-20230802223038798.png)
 
 ``` java 
 int money=10_0000_0000;
@@ -190,7 +190,7 @@ long tatal2=money*(long)year;//(long)加前加后一个样
 System.out.println(tatal2);//不溢出
 ```
 
-![image-20230802223801578](../../assets/image-20230802223801578.png)
+![image-20230802223801578](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-数据类型/image-20230802223801578.png)
 
 ## 引用类型
 

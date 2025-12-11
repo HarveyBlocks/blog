@@ -175,7 +175,7 @@ public class LearnLog {
 
 - 越往下越高
 
-![image-20231005010410191](../../assets/Day31/image-20231005010410191.png)
+![image-20231005010410191](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java特殊文件/Day30-日志技术/image-20231005010410191.png)
 
 为**OFF、FATAL(严重错误)、ERROR、WARN、INFO、DEBUG、ALL**或者您定义的级别。Log4j建议只使用四个级别，优先级 从高到低分别是 **ERROR、WARN、INFO、DEBUG**。 
 

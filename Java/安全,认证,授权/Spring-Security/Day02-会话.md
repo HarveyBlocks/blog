@@ -1,6 +1,6 @@
 # 会话
 
-![image-20231218222328320](../../assets/Day02-会话/image-20231218222328320.png)
+![image-20231218222328320](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-会话/image-20231218222328320.png)
 
 ## 获取用户身份
 

@@ -116,7 +116,7 @@ System.out.println("pid = " + pid);
 dashboard -i 500 -n 3 
 ```
 
-![image-20240512195204647](../assets/Day01-Arthas/image-20240512195204647.png)
+![image-20240512195204647](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/基础/Day01-Arthas/image-20240512195204647.png)
 
 ## 生成字节码文件
 
@@ -135,7 +135,7 @@ dashboard -i 500 -n 3
  HASHCODE  CLASSLOADER  LOCATION                                                                   null                   C:\Users\27970\Desktop\java\lang\String.class                               Affect(row-cnt:1) cost in 48 ms.
 ```
 
-![image-20240512200358919](../assets/Day01-Arthas/image-20240512200358919.png)
+![image-20240512200358919](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/基础/Day01-Arthas/image-20240512200358919.png)
 
 类的字节码文件和类加载器的字节码文件
 

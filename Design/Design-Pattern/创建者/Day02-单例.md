@@ -80,7 +80,7 @@ SingletonUser --> Singleton
     }
     ```
 
-![image-20240604134849975](../../assets/Day02-单例/image-20240604134849975.png)
+![image-20240604134849975](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/创建者/Day02-单例/image-20240604134849975.png)
 
 ### 缺陷
 
@@ -379,5 +379,5 @@ private HungrySingletonObject() throws InstanceAlreadyExistsException {
 
 ## JDK中的单例
 
-![image-20240604191938965](../../assets/Day02-单例/image-20240604191938965.png)
+![image-20240604191938965](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/创建者/Day02-单例/image-20240604191938965.png)
 

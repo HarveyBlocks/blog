@@ -61,7 +61,7 @@ Props 属性用破折号 `-` 编写（kebab-case）
 
 但这样可以给IDE提供的信息太少了, 不推荐
 
-<img src="../../../assets/Day05-props 选项/image-20250817215122384.png" alt="image-20250817215122384" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-props 选项/image-20250817215122384.png" alt="image-20250817215122384" style="zoom:50%;" />
 
 ### 组合式
 

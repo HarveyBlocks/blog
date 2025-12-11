@@ -35,9 +35,9 @@ public class UserServiceImpl implements UserService {
 
 -   "不能注册到Spring环境"是以`NoSuchBeanDefinitionException`的形式报错给你的
 
-![image-20231107132648728](../../../assets/Day07-其他注解/image-20231107132648728.png)
+![image-20231107132648728](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/Bean基本注解开发/Day07-其他注解/image-20231107132648728.png)
 
-![image-20231107132354465](../../../assets/Day07-其他注解/image-20231107132354465.png)
+![image-20231107132354465](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/Bean基本注解开发/Day07-其他注解/image-20231107132354465.png)
 
 -   翻翻以前的笔记
 

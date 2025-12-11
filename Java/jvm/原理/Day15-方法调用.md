@@ -66,7 +66,7 @@ graph LR
 
 数组, 在方法区的InstanceKlass对象中,每个节点记录方法所在的地址
 
-![image-20240602204319964](../assets/Day15-方法调用/image-20240602204319964.png)
+![image-20240602204319964](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/原理/Day15-方法调用/image-20240602204319964.png)
 
 ### 调用流程
 

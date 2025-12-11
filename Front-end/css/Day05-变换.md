@@ -45,7 +45,7 @@
 </style>
 ```
 
-![image-20250819213902643](../assets/Day05-变换/image-20250819213902643.png)
+![image-20250819213902643](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/image-20250819213902643.png)
 
 ### 旋转
 
@@ -71,7 +71,7 @@
 </style>
 ```
 
-![image-20250819213930464](../assets/Day05-变换/image-20250819213930464.png)
+![image-20250819213930464](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/image-20250819213930464.png)
 
 ### 倾斜
 
@@ -94,7 +94,7 @@
 </style>
 ```
 
-![image-20250819214159345](../assets/Day05-变换/image-20250819214159345.png)
+![image-20250819214159345](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/image-20250819214159345.png)
 
 ### 位移
 
@@ -114,7 +114,7 @@
 </style>
 ```
 
-![image-20250819214326039](../assets/Day05-变换/image-20250819214326039.png)
+![image-20250819214326039](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/image-20250819214326039.png)
 
 ### 缩放
 
@@ -150,7 +150,7 @@
 </style>
 ```
 
-![image-20250819214751232](../assets/Day05-变换/image-20250819214751232.png)
+![image-20250819214751232](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/image-20250819214751232.png)
 
 ## 三维属性
 
@@ -358,5 +358,5 @@ const perspectiveOriginWidth = ref(0);
 
 ### 演示
 
-<video src="../assets/Day05-变换/演示3D属性.mp4" style="border: 2px solid"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-变换/演示3D属性.mp4" style="border: 2px solid"></video>
 

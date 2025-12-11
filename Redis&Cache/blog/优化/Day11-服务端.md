@@ -20,7 +20,7 @@
 
         在Redis底层, 会判断AOF的过程是否出现问题, 如果fsync超过2s,认为是出问题了, **阻塞主线程**
 
-        ![image-20240220171941152](../../assets/Day11-服务端/image-20240220171941152.png)
+        ![image-20240220171941152](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/优化/Day11-服务端/image-20240220171941152.png)
 
         阻塞主线程将影响性能
 
@@ -86,7 +86,7 @@
 
 RESP-GUI也好用,多探索探索
 
-![image-20240220203154154](../../assets/Day11-服务端/image-20240220203154154.png)
+![image-20240220203154154](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/优化/Day11-服务端/image-20240220203154154.png)
 
 ## 敏感的命令及安全配置
 

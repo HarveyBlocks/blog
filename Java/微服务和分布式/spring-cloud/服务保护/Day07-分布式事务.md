@@ -122,7 +122,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 #### 原理
 
-![img](../../assets/Day07-分布式事务/solution-1bdadb80e54074aa3088372c17f0244b.png)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/solution-1bdadb80e54074aa3088372c17f0244b.png)
 
 ##### 思想
 
@@ -133,7 +133,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 ##### 角色
 
-<img src="../../assets/Day07-分布式事务/TB1hSpccIVl614jSZKPXXaGjpXa-1330-924.png" alt="Overview of a global transaction" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/TB1hSpccIVl614jSZKPXXaGjpXa-1330-924.png" alt="Overview of a global transaction" style="zoom:67%;" />
 
 -   TC    `Transaction Coordinator`
     -   事务协调者
@@ -148,7 +148,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
     -   管理分支事务
     -   与TC交谈以注册分支事务和报告分支事务的状态
 
-![image-20240116163219427](../../assets/Day07-分布式事务/image-20240116163219427.png)
+![image-20240116163219427](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116163219427.png)
 
 ## Seata的使用
 
@@ -424,7 +424,7 @@ seata:
 
     2.2.2版本没有登录模仿(听不清)
 
-    ![image-20240116172633874](../../assets/Day07-分布式事务/image-20240116172633874.png)
+    ![image-20240116172633874](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116172633874.png)
 
     用户名`admin`密码`admin`登录网页控制台
 
@@ -533,7 +533,7 @@ seata:
 
 #### 测试运行
 
-![](../../assets/Day07-分布式事务/image-20240116222538583.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116222538583.png)
 
 成功地失败了
 
@@ -622,19 +622,19 @@ seata:
 
 ---
 
-![image-20240116231509942](../../assets/Day07-分布式事务/image-20240116231509942.png)
+![image-20240116231509942](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116231509942.png)
 
 ---
 
-![image-20240116231907335](../../assets/Day07-分布式事务/image-20240116231907335.png)
+![image-20240116231907335](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116231907335.png)
 
 ---
 
-![image-20240116231355051](../../assets/Day07-分布式事务/image-20240116231355051.png)
+![image-20240116231355051](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116231355051.png)
 
 ---
 
-![image-20240116231345817](../../assets/Day07-分布式事务/image-20240116231345817.png)
+![image-20240116231345817](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Day07-分布式事务/image-20240116231345817.png)
 
 ==**成功地失败了**==
 

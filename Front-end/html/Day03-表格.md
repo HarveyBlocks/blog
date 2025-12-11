@@ -265,7 +265,7 @@
 </table>
 ```
 
-![image-20250730170536063](../assets/Day03-表格/image-20250730170536063.png)
+![image-20250730170536063](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day03-表格/image-20250730170536063.png)
 
 ## 二维表
 
@@ -415,7 +415,7 @@
             行1，列1<br>
             你可以嵌套任意文本<br>
             甚至一张图片:<br>
-            <img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" >
+            <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day03-表格/javascript.svg" alt="图片失效" >
         </td>
         <td>行1，列2的表格
             <table border="2">
@@ -515,5 +515,5 @@
 </table>
 ```
 
-![image-20250730172133714](../assets/Day03-表格/image-20250730172133714.png)
+![image-20250730172133714](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day03-表格/image-20250730172133714.png)
 

@@ -52,7 +52,7 @@ div {
 }
 ```
 
-<video src="../assets/Day05-过渡/演示给透视原点属性增加过渡.mp4" style="border: 2px solid"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-过渡/演示给透视原点属性增加过渡.mp4" style="border: 2px solid"></video>
 
 调整透视深度, 没有过渡动画; 而调整透视原点会有过渡
 
@@ -72,7 +72,7 @@ div {
 }
 ```
 
-<video src="../assets/Day05-过渡/演示给多个属性增加过渡.mp4" style="border: 2px solid"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day05-过渡/演示给多个属性增加过渡.mp4" style="border: 2px solid"></video>
 
 ## 属性值列表长度不一致
 

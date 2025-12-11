@@ -4,7 +4,7 @@
 
 ## Follow数据表
 
-![image-20240129143837368](../../../assets/Untitled/image-20240129143837368.png)
+![image-20240129143837368](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注/image-20240129143837368.png)
 
 ## 关注和取关
 

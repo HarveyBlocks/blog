@@ -64,7 +64,7 @@ void fun2(void) {
 }
 ```
 
-![image-20231108161208362](../../java/assets/头文件/image-20231108161208362.png)
+![image-20231108161208362](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/c/Day01-头文件/image-20231108161208362.png)
 
 宏无论定义在哪里,都是**到文件末尾**
 
@@ -108,7 +108,7 @@ void fun2(void) {
 }
 ```
 
--   输出![image-20231108162207984](../../java/assets/头文件/image-20231108162207984.png)
+-   输出![image-20231108162207984](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/c/Day01-头文件/image-20231108162207984.png)
 
 不会对重复定义报错和警告
 
@@ -231,7 +231,7 @@ int main(){
 
 -   编译之后
 
-    ![image-20231108172328001](../../java/assets/头文件/image-20231108172328001.png)
+    ![image-20231108172328001](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/c/Day01-头文件/image-20231108172328001.png)
 
 **重复啦?没关系!已经准备好啦**
 

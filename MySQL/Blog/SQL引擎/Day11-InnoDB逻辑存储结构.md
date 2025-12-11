@@ -1,6 +1,6 @@
 # 逻辑存储结构
 
-![image-20231026165529839](../../assets/Day11-InnoDB引擎逻辑存储结构/image-20231026165529839.png)
+![image-20231026165529839](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDB逻辑存储结构/image-20231026165529839.png)
 
 ## 表空间(TableSpace)
 

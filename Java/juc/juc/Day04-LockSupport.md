@@ -52,7 +52,7 @@ log.info("<====================================>");
 2.  线程进入`_cond`, Condition阻塞
 3.  设置`_counter`为0
 
-<img src="../assets/Day04-LockSupport/image-20240908202816280.png" alt="image-20240908202816280" style="zoom:57%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day04-LockSupport/image-20240908202816280.png" alt="image-20240908202816280" style="zoom:57%;" />
 
 调用unpark
 
@@ -61,7 +61,7 @@ log.info("<====================================>");
 3.  线程恢复运行
 4.  设置`_counter`为0
 
-![image-20240908203232080](../assets/Day04-LockSupport/image-20240908203232080.png)
+![image-20240908203232080](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day04-LockSupport/image-20240908203232080.png)
 
 ### unpark->park
 
@@ -72,7 +72,7 @@ log.info("<====================================>");
 5.  设置`_counter`为0
 6.  不等待, 继续运行
 
-![image-20240908203559200](../assets/Day04-LockSupport/image-20240908203559200.png)
+![image-20240908203559200](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day04-LockSupport/image-20240908203559200.png)
 
 ## `parkNanos(long)` 和`parkUntil(long millis)`
 

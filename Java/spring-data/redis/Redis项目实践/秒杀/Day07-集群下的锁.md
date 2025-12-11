@@ -32,7 +32,7 @@
 
 ### 不同分布式锁的实现方案差异
 
-![image-20240120201440555](../../../assets/Day07-集群下的并发/image-20240120201440555.png)
+![image-20240120201440555](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-集群下的锁/image-20240120201440555.png)
 
 #### MySQL实现互斥
 

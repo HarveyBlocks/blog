@@ -8,7 +8,7 @@
 
 ## 常用是Aware接口
 
-![image-20231104142314254](../../../assets/Day07-Aware接口回调/image-20231104142314254.png)
+![image-20231104142314254](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring-Bean的生命周期/Day07-Aware接口回调/image-20231104142314254.png)
 
 ## 使用
 
@@ -54,5 +54,5 @@ public class UserServiceImpl implements UserService{
 
 -   输出结果
 
-    ![image-20231104144431855](../../../assets/Day07-Aware接口回调/image-20231104144431855.png)
+    ![image-20231104144431855](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring-Bean的生命周期/Day07-Aware接口回调/image-20231104144431855.png)
 

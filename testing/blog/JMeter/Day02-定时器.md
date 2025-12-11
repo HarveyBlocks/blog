@@ -2,9 +2,9 @@
 
 ## 同步定时器-高并发
 
-![image-20240418165308467](../../assets/Day02-定时器/image-20240418165308467.png)
+![image-20240418165308467](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-定时器/image-20240418165308467.png)
 
-![image-20240418165441037](../../assets/Day02-定时器/image-20240418165441037.png)
+![image-20240418165441037](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-定时器/image-20240418165441037.png)
 
 线程数200, 模拟用户组数是100, 也就是发送两组, 一组100人
 
@@ -14,9 +14,9 @@
 
 一个用户20QPS->20次/s的频率发起请求, 持续15s
 
-![image-20240418165927174](../../assets/Day02-定时器/image-20240418165927174.png)
+![image-20240418165927174](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-定时器/image-20240418165927174.png)
 
-![image-20240418170054095](../../assets/Day02-定时器/image-20240418170054095.png)
+![image-20240418170054095](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-定时器/image-20240418170054095.png)
 
-![image-20240418170112903](../../assets/Day02-定时器/image-20240418170112903.png)
+![image-20240418170112903](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day02-定时器/image-20240418170112903.png)
 

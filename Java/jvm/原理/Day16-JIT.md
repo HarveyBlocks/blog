@@ -20,7 +20,7 @@ Hotspot中的三款即时编译器
 
 ## 即时编译
 
-![image-20240602213634738](../assets/Day17-JIT/image-20240602213634738.png)
+![image-20240602213634738](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/原理/Day16-JIT/image-20240602213634738.png)
 
 1.  字节码指令有解释器解释执行
 2.  方法或循环执行次数多

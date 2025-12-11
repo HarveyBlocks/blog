@@ -7,7 +7,7 @@
 ALTER TABLE 表名 ADD 字段名 类型[(长度)] [comment '注释'] [约束];
 ```
 
-![image-20231006105845263](../../../assets/Day03/image-20231006103820194.png)
+![image-20231006105845263](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DDL/Day02-列的操作/image-20231006103820194.png)
 
 -   命名也不区分大小写
 -   **duplicate重复**

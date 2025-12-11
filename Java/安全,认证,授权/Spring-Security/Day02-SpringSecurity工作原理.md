@@ -8,7 +8,7 @@
 
 初始化SpringSecurity时创建FilterChain 的Servlet过滤器
 
-<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132401100.png" alt="image-20231219132401100" style="zoom:150%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231219132401100.png" alt="image-20231219132401100" style="zoom:150%;" />
 
 SpringSecurity有FilterChainProxy的代理类,产生很多Filter
 
@@ -19,11 +19,11 @@ Filter
 -   会委托AuthenticationManager去校验用户的身份
 -   会委托AccessDecisionManager去校验用户的权限
 
-<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132420639.png" alt="image-20231219132420639" style="zoom:200%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231219132420639.png" alt="image-20231219132420639" style="zoom:200%;" />
 
 ## 几个重要的Filter
 
-<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132438050.png" alt="image-20231219132438050" style="zoom:200%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231219132438050.png" alt="image-20231219132438050" style="zoom:200%;" />
 
 ### SecurityContextPersistenceFilter
 
@@ -49,7 +49,7 @@ FilterChain的所有Filter的异常, 并进行处理
 
 ## 认证流程
 
-<img src="../../assets/Day02-SpringSecurity工作原理/图片1.jpg" alt="图片1" style="zoom:150%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/图片1.jpg" alt="图片1" style="zoom:150%;" />
 
 1.  用户提交用户名密码
 
@@ -205,7 +205,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 你看,它给你的警告也很有意思
 
-![image-20231218161614766](../../assets/Day02-SpringSecurity工作原理/image-20231218161614766.png)
+![image-20231218161614766](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231218161614766.png)
 
 它只知道这是字符串, 咱知道这是明文还是密文嘞
 
@@ -276,7 +276,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 ## 授权流程
 
-![image-20231218184035761](../../assets/Day02-SpringSecurity工作原理/image-20231218184035761.png)
+![image-20231218184035761](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231218184035761.png)
 
 **FilterSecurityInterceptor**
 
@@ -318,7 +318,7 @@ public interface AccessDecisionManager {
 
 #### 投票决策
 
-![image-20231218190027223](../../assets/Day02-SpringSecurity工作原理/image-20231218190027223.png)
+![image-20231218190027223](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/Spring-Security/Day02-SpringSecurity工作原理/image-20231218190027223.png)
 
 随便一个实现类都可以看看
 

@@ -7,7 +7,7 @@
 
 ### 下面我们来看看Extra
 
-![image-20231022161522770](../../assets/Day08-覆盖索引/image-20231022161522770.png)
+![image-20231022161522770](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day08-覆盖索引/image-20231022161522770.png)
 
 ```mysql
 create index user_age_gender on user(age,gender);

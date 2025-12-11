@@ -10,7 +10,7 @@ Android 使用任务（task）来管理Activity
 
 一个任务就是一组存放在栈里的 Activity 的集合，这个栈也被称作返回栈（back stack）
 
-<img src="../../assets/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
 
 ## 状态
 
@@ -84,7 +84,7 @@ Android 使用任务（task）来管理Activity
 
     -   Activity由**停止状态**变为**运行状态**之前调用，也就是Activity被重新启动了
 
-<img src="../../assets/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
 
 ### 完整生存期
 
@@ -345,25 +345,25 @@ class MainActivity : AppCompatActivity() {
 
 1.  打开应用
 
-    ![image-20250908233849631](../../assets/Day02-生命周期/image-20250908233849631.png)
+    ![image-20250908233849631](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908233849631.png)
 
 2.  打开 Normal Activity
 
-    ![image-20250908233938881](../../assets/Day02-生命周期/image-20250908233938881.png)
+    ![image-20250908233938881](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908233938881.png)
 
 3.  返回 Normal Activity 到Main Activity
 
-    ![image-20250908234001902](../../assets/Day02-生命周期/image-20250908234001902.png)
+    ![image-20250908234001902](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908234001902.png)
 
 4.  打开Dialog Activity
 
-    ![image-20250908234054742](../../assets/Day02-生命周期/image-20250908234054742.png)
+    ![image-20250908234054742](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908234054742.png)
 
 5.  此时返回Dialog Activity 到 Main Activity
 
-    ![image-20250908234144846](../../assets/Day02-生命周期/image-20250908234144846.png)
+    ![image-20250908234144846](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908234144846.png)
 
 6.  退出程序
 
-    ![image-20250908234536141](../../assets/Day02-生命周期/image-20250908234536141.png)
+    ![image-20250908234536141](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/activity/Day02-生命周期/image-20250908234536141.png)
 

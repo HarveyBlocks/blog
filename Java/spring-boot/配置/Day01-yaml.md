@@ -28,11 +28,11 @@
     -   缩进的空格数不重要, 只要相同层级的元素左对齐即可
 -   使用#表示**行注释**
 
-<img src="../../assets/Day01-yaml/image-20231204180559797.png" alt="image-20231204180559797" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-yaml/image-20231204180559797.png" alt="image-20231204180559797" style="zoom:67%;" />
 
-<img src="../../assets/Day01-yaml/image-20231204180625733.png" alt="image-20231204180625733" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-yaml/image-20231204180625733.png" alt="image-20231204180625733" style="zoom:67%;" />
 
-<img src="../../assets/Day01-yaml/image-20231204180650748.png" alt="image-20231204180650748" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-yaml/image-20231204180650748.png" alt="image-20231204180650748" style="zoom:67%;" />
 
 ## 数据格式
 
@@ -217,7 +217,7 @@ public String yaml() {
     }
     ```
 
-    ![image-20231204191833904](../../assets/Day01-yaml/image-20231204191833904.png)
+    ![image-20231204191833904](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day01-yaml/image-20231204191833904.png)
 
     正确配置之后会有插件提示
 

@@ -14,7 +14,7 @@
 
 可以理解为Hash表差不多的结构
 
-![image-20240619213416481](../../assets/Day03-桶排序/image-20240619213416481.png)
+![image-20240619213416481](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day03-桶排序/image-20240619213416481.png)
 
 因为是均匀分布的, 所以每个节点落下的数据不会太多, 节点不会太长
 

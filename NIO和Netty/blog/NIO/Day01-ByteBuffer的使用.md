@@ -131,7 +131,7 @@ public void testByteBufferWrite() {
 
 一开始, 写模式
 
-![](../../assets/Day01-ByteBuffer的使用/0021.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0021.png)
 
 写模式下，position 是写入位置，limit 等于容量
 
@@ -139,7 +139,7 @@ public void testByteBufferWrite() {
 
 写入了 4 个字节后:
 
-![](../../assets/Day01-ByteBuffer的使用/0018.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0018.png)
 
 -   Position指针时刻指向下一个写入的位置
 
@@ -151,13 +151,13 @@ public void testByteBufferWrite() {
 2.  position 移至Buffer的开头
 3.  切换为读模式
 
-![](../../assets/Day01-ByteBuffer的使用/0019.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0019.png)
 
 ### 读取
 
 读取 4 个字节后，状态
 
-![](../../assets/Day01-ByteBuffer的使用/0020.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0020.png)
 
 ### Clear切换
 
@@ -170,7 +170,7 @@ clear 动作发生后
 
 ==下图有误==
 
-![](../../assets/Day01-ByteBuffer的使用/0021.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0021.png)
 
 ### Compact切换
 
@@ -184,7 +184,7 @@ clear 动作发生后
 
 ==下图有误==
 
-![](../../assets/Day01-ByteBuffer的使用/0022.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day01-ByteBuffer的使用/0022.png)
 
 -   由于不会清空数据, 一定要按照规范去操作Buffer
 

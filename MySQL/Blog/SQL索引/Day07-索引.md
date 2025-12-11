@@ -11,13 +11,13 @@
     -   把age提出来,索引指向数据,排序,然后二分查找
     -   数据结构  查找,高效
 
-![image-20231021153207238](../../assets/Day07-索引/image-20231021153207238.png)
+![image-20231021153207238](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021153207238.png)
 
 -   空间不值钱
 
-![image-20231021160222504](../../assets/Day07-索引/image-20231021160222504.png)
+![image-20231021160222504](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021160222504.png)
 
-![image-20231021160244453](../../assets/Day07-索引/image-20231021160244453.png)
+![image-20231021160244453](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021160244453.png)
 
 -   默认是B+tree索引
 
@@ -29,13 +29,13 @@
 
 -   Mysql优化
 
-![image-20231021162615122](../../assets/Day07-索引/image-20231021162615122.png)
+![image-20231021162615122](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021162615122.png)
 
 ### Hash索引
 
 Hash冲突->在Hash值处增加链表->Hash树
 
-![image-20231021163244402](../../assets/Day07-索引/image-20231021163244402.png)
+![image-20231021163244402](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021163244402.png)
 
 只支持等值匹配(= , in),不支持范围查询(BETWEEN < >)
 
@@ -45,11 +45,11 @@ Hash冲突->在Hash值处增加链表->Hash树
 
 ## 索引分类
 
-![image-20231021165532718](../../assets/Day07-索引/image-20231021165532718.png)
+![image-20231021165532718](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021165532718.png)
 
 -   InnoDB中
 
-![image-20231021165856031](../../assets/Day07-索引/image-20231021165856031.png)
+![image-20231021165856031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021165856031.png)
 
 ### 聚集索引
 
@@ -59,14 +59,14 @@ Hash冲突->在Hash值处增加链表->Hash树
 
 -   二叉树的叶子挂(聚集索引连带着一行记录)
 
-![image-20231021170710598](../../assets/Day07-索引/image-20231021170710598.png)
+![image-20231021170710598](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021170710598.png)
 
 ### 二级索引
 
 -   针对某一列作为索引,抽取出来
 -   叶子下面挂(这一列的数据,附带着聚集索引)
 
-![image-20231021170700912](../../assets/Day07-索引/image-20231021170700912.png)
+![image-20231021170700912](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021170700912.png)
 
 1.  拿到这列的记录
 
@@ -76,5 +76,5 @@ Hash冲突->在Hash值处增加链表->Hash树
 
 -   这叫做**回表查询**
 
-![image-20231021171912382](../../assets/Day07-索引/image-20231021171912382.png)
+![image-20231021171912382](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021171912382.png)
 

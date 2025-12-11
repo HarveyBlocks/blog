@@ -30,7 +30,7 @@
 
 本例中是在关注列表下接收推送, 因此使用Timeline
 
-![image-20240130093522726](../../../assets/Day11-关注推送/image-20240130093522726.png)
+![image-20240130093522726](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130093522726.png)
 
 #### 拉模式
 
@@ -48,7 +48,7 @@
 5.  将拉来的消息按照时间排序后展示给用户
 6.  用户退出关注页面后立刻清除收件箱里的消息, 减少内存的占用
 
-![image-20240130094717893](../../../assets/Day11-关注推送/image-20240130094717893.png)
+![image-20240130094717893](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130094717893.png)
 
 -   优点
     -   占用内存空间少
@@ -66,7 +66,7 @@
 -   缺点:
     -   每个Fan都有一份消息, 造成消息的冗余
 
-![image-20240130095101766](../../../assets/Day11-关注推送/image-20240130095101766.png)
+![image-20240130095101766](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130095101766.png)
 
 #### 推拉结合
 
@@ -85,11 +85,11 @@
 -   大V对活跃粉丝, 采用推模式, 请求怎么多, 都只有一次数据传输; 活跃粉丝人数少, 不会有太多数据冗余
 -   大V对普通粉丝, 采用拉模式
 
-![image-20240130100148485](../../../assets/Day11-关注推送/image-20240130100148485.png)
+![image-20240130100148485](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130100148485.png)
 
 #### 三种模式的总结
 
-![image-20240130100212214](../../../assets/Day11-关注推送/image-20240130100212214.png)
+![image-20240130100212214](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130100212214.png)
 
 千万以下用户量都算少
 
@@ -154,7 +154,7 @@ public void sendBlogToFans(Long blogId) {
 
 ### 获取关注笔记实现
 
-![image-20240130163927814](../../../assets/Day11-关注推送/image-20240130163927814.png)
+![image-20240130163927814](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/好友关注/Day11-关注推送/image-20240130163927814.png)
 
 -   Redis模拟分页
 

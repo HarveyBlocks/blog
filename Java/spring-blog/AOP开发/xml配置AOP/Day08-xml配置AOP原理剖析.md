@@ -1,21 +1,21 @@
- ![image-20231110153343057](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153343057.png)
+ ![image-20231110153343057](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110153343057.png)
 
 基于JDK
 
-![image-20231110153756303](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153756303.png)
+![image-20231110153756303](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110153756303.png)
 
 基于Cglib
 
-![image-20231110153722294](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153722294.png)
+![image-20231110153722294](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110153722294.png)
 
 -   默认false,基于JDK
 -   
 
-![image-20231110153823145](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153823145.png)
+![image-20231110153823145](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110153823145.png)
 
-![image-20231110153946550](../../../assets/Day08-xml配置AOP原理剖析/image-20231110153946550.png)
+![image-20231110153946550](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110153946550.png)
 
-![image-20231110154123034](../../../assets/Day08-xml配置AOP原理剖析/image-20231110154123034.png)
+![image-20231110154123034](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/xml配置AOP/Day08-xml配置AOP原理剖析/image-20231110154123034.png)
 
 -   ```java
     class App2 {

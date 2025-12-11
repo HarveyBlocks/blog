@@ -1,6 +1,6 @@
 # 用户和用户组
 
-![image-20231001225929808](../assets/Day04/image-20231001225929808.png)
+![image-20231001225929808](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/权限与用户/Day04-用户和用户组/image-20231001225929808.png)
 
 - **以下命令皆仅root用户可执行**
 

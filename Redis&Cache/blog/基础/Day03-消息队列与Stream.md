@@ -250,7 +250,7 @@ redis(pc2):1>xadd 这是一个Steam的Key  * 这是field 这是value
 "1706331746559-0" # 返回ID
 ```
 
-![image-20240127131226613](../../assets/Day09-消息队列/image-20240127131226613-1706356013827.png)
+![image-20240127131226613](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day03-消息队列与Stream/image-20240127131226613-1706356013827.png)
 
 还拼错了😅
 
@@ -588,7 +588,7 @@ while(true){
 
 ### Redis消息队列
 
-![image-20240127154611146](../../assets/Day09-消息队列/image-20240127154611146.png)
+![image-20240127154611146](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/基础/Day03-消息队列与Stream/image-20240127154611146.png)
 
 是否支持多消费者, 多生产者? 
 

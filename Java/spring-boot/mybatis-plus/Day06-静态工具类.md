@@ -1,6 +1,6 @@
 # 静态工具Db
 
-![image-20231209163852306](../../assets/Day06-静态工具/image-20231209163852306.png)
+![image-20231209163852306](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/mybatis-plus/Day06-静态工具类/image-20231209163852306.png)
 
 ## 和IService的区别
 
@@ -24,13 +24,13 @@
 
     -   **循环注入**
 
-        ![image-20231209170220388](../../assets/Day06-静态工具/image-20231209170220388.png)
+        ![image-20231209170220388](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/mybatis-plus/Day06-静态工具类/image-20231209170220388.png)
 
     -   **Db静态工具解决这个问题**
 
 可是,这很奇怪,不是有三级缓存吗?
 
-![image-20231209170137929](../../assets/Day06-静态工具/image-20231209170137929.png)
+![image-20231209170137929](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/mybatis-plus/Day06-静态工具类/image-20231209170137929.png)
 
 纳尼,SpringBoot没有三级缓存?!
 

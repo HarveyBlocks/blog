@@ -45,7 +45,7 @@ for (int i = 0; i < 10; i++) {
 
 Caffine有使用`SoftReference`的软引用的API
 
-<img src="../assets/Day07-对象引用方式/image-20240519165528163.png" alt="image-20240519165528163" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day07-对象引用方式/image-20240519165528163.png" alt="image-20240519165528163" style="zoom:50%;" />
 
 ```java
 Cache<String, Object> cache = Caffeine.newBuilder().softValues().build();
@@ -96,7 +96,7 @@ private static WeakReference<byte[]> getWeakReference() {
 
 PhantomReference
 
-<img src="../assets/Day07-对象引用方式/image-20240519204535900.png" alt="image-20240519204535900" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day07-对象引用方式/image-20240519204535900.png" alt="image-20240519204535900" style="zoom:50%;" />
 
 写死了
 
@@ -110,5 +110,5 @@ PhantomReference
 
 一个对象的finalize方法只会被调用一次
 
-![image-20240519210940014](../assets/Day07-对象引用方式/image-20240519210940014.png)
+![image-20240519210940014](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day07-对象引用方式/image-20240519210940014.png)
 

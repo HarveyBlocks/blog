@@ -71,7 +71,7 @@ TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户�
 
 消息发送是串行的, 这种应答的机制影响了吞吐量
 
-![](../../assets/Day07-粘包和半包/0049.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day07-粘包和半包/0049.png)
 
 #### 滑动窗口原理
 
@@ -85,7 +85,7 @@ TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户�
 
 第一个请求回来之后, 窗口可以往下一个, 就可以发送窗口之外的一个请求
 
-![](../../assets/Day07-粘包和半包/0051.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day07-粘包和半包/0051.png)
 
 **接收方也会维护一个窗口**,  窗口里数据才会被允许接收
 

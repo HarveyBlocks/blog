@@ -14,7 +14,7 @@ gzip
 
 我准备了一张[png图片](big.png), 二进制文件应该更好压缩吧?
 
-![image-20240420212915296](..\..\assets\Day04-压缩指令\image-20240420212915296.png)
+![image-20240420212915296](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240420212915296.png)
 
 ## 压缩配置
 
@@ -64,7 +64,7 @@ gzip_types image/png text/html  text/css text/xml  application/javascript ;
 gzip_types * ;
 ```
 
-<img src="..\..\assets\Day04-压缩指令\image-20240420215312717.png" alt="image-20240420215312717" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240420215312717.png" alt="image-20240420215312717" style="zoom: 50%;" />
 
 ### `gzip_com_level`
 
@@ -91,11 +91,11 @@ gzip_vary on | off ;
 
 **默认关闭**
 
-<img src="..\..\assets\Day04-压缩指令\image-20240420221716843.png" alt="image-20240420221716843" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240420221716843.png" alt="image-20240420221716843" style="zoom:50%;" />
 
 打开之前↑
 
-<img src="..\..\assets\Day04-压缩指令\image-20240420220807169.png" alt="image-20240420220807169" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240420220807169.png" alt="image-20240420220807169" style="zoom:50%;" />
 
 这是打开之后的效果↑
 
@@ -131,7 +131,7 @@ gzip_disable regex ...;
 
     -   Edge(Chrome内核)
 
-        <img src="..\..\assets\Day04-压缩指令\image-20240420222822724.png" alt="image-20240420222822724" style="zoom:70%;" />
+        <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240420222822724.png" alt="image-20240420222822724" style="zoom:70%;" />
 
 可以把一些版本低的浏览器过滤掉, 版本低的浏览器不一定支持gzip
 
@@ -341,7 +341,7 @@ gzip /usr/share/nginx/html/*.html
 
 ```
 
-![image-20240421114751437](..\..\assets\Day04-压缩指令\image-20240421114751437.png)
+![image-20240421114751437](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-压缩指令/image-20240421114751437.png)
 
 ### 指令语法
 

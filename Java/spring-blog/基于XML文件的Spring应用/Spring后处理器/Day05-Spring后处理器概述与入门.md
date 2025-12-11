@@ -79,7 +79,7 @@
 
 -   输出结果:
 
-    ![gs](../../../assets/Day05-Spring后处理器概述与入门/image-20231102165327882.png)
+    ![gs](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Spring后处理器概述与入门/image-20231102165327882.png)
 
   -   SO FAST
 
@@ -136,7 +136,7 @@
 
 -   输出结果
 
-    ![image-20231102171532946](../../../assets/Day05-Spring后处理器概述与入门/image-20231102171532946.png)
+    ![image-20231102171532946](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Spring后处理器概述与入门/image-20231102171532946.png)
 
 ### 注册
 
@@ -204,9 +204,9 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
 
 -   输出结果
 
-    ![image-20231102211816134](../../../assets/Day05-Spring后处理器概述与入门/image-20231102211816134.png)
+    ![image-20231102211816134](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Spring后处理器概述与入门/image-20231102211816134.png)
 
-![image-20231102211937555](../../../assets/Day05-Spring后处理器概述与入门/image-20231102211937555.png)
+![image-20231102211937555](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Spring后处理器概述与入门/image-20231102211937555.png)
 
 ## 最终实战! 使用后处理器编写@MyComponent注解实现自动注册Bean
 

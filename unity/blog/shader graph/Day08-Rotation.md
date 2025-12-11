@@ -4,13 +4,13 @@
 
 旋转输入UV值
 
-<img src="../../assets/Day08-Rotate/image-20250929161016216.png" alt="image-20250929161016216" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Rotation/image-20250929161016216.png" alt="image-20250929161016216" style="zoom:50%;" />
 
 - `Center` 旋转的中心
 - `Rotation` 旋转角度
 - `Unit` `Radians`/`Degree`
 
-<img src="../../assets/Day08-Rotate/image-20250929161246821.png" alt="image-20250929161246821" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Rotation/image-20250929161246821.png" alt="image-20250929161246821" style="zoom: 67%;" />
 
 旋转90度
 
@@ -20,14 +20,14 @@
 
 旋转+扭曲
 
-![image-20250929161354789](../../assets/Day08-Rotate/image-20250929161354789.png)
+![image-20250929161354789](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Rotation/image-20250929161354789.png)
 
 ## 制作漩涡
 
 1. 把一副图扭曲(Twirl)
 2. 把扭曲的图旋转(Rotate)
 
-![image-20250929163205228](../../assets/Day08-Rotate/image-20250929163205228.png)
+![image-20250929163205228](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Rotation/image-20250929163205228.png)
 
 3. 中间镂空, 四周透明
 

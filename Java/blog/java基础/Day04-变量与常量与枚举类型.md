@@ -87,7 +87,7 @@ public class Main {
 }
 ```
 
-![image-20230802232613177](../../assets/image-20230802232613177.png)
+![image-20230802232613177](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-变量与常量与枚举类型/image-20230802232613177.png)
 
 ## 枚举类型
 

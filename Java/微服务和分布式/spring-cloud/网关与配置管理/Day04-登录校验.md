@@ -7,7 +7,7 @@
 
 >   思考如何在路由转发之前完成登录校验
 
-![spring_cloud_gateway_diagram.png (443×595)](../../assets/Day04-登录校验/spring_cloud_gateway_diagram.png)
+![spring_cloud_gateway_diagram.png (443×595)](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/spring_cloud_gateway_diagram.png)
 
 -   `Handler Mapping`
 
@@ -138,7 +138,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
 
 -   `NettyRoutingFilter`的优先级
 
-    ![image-20240110161728900](../../assets/Day04-登录校验/image-20240110161728900.png)
+    ![image-20240110161728900](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240110161728900.png)
 
 #### 自定义`GlobalFilter`
 
@@ -262,7 +262,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
 
         -   在启动时
 
-            ![image-20240110170350953](../../assets/Day04-登录校验/image-20240110170350953.png)
+            ![image-20240110170350953](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240110170350953.png)
 
             突然发现Nacos每次向我们请求都会调用好多次FilterFactory耶
 
@@ -433,15 +433,15 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
 #### 测试
 
-![image-20240110200814038](../../assets/Day04-登录校验/image-20240110200814038.png)
+![image-20240110200814038](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240110200814038.png)
 
 401~(当然自动转到登录页面就是前端的事情啦)
 
-![image-20240110200903666](../../assets/Day04-登录校验/image-20240110200903666.png)
+![image-20240110200903666](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240110200903666.png)
 
 -   登录之后变成404了
 
-    ![image-20240110201012176](../../assets/Day04-登录校验/image-20240110201012176.png)
+    ![image-20240110201012176](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240110201012176.png)
 
 ### 网关传递用户信息
 
@@ -526,13 +526,13 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
     4.  不在同一个目录下, 如何让Spring自动加载Interceptor?
 
-        ![image-20240111124045242](../../assets/Day04-登录校验/image-20240111124045242.png)
+        ![image-20240111124045242](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240111124045242.png)
 
         配置自动加载
 
     5.  出现版本冲突
 
-        ![image-20240111124158260](../../assets/Day04-登录校验/image-20240111124158260.png)
+        ![image-20240111124158260](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day04-登录校验/image-20240111124158260.png)
 
         原因是Gateway和WebMVC的依赖冲突, 但是Gateway又不需要Interceptor, 所以不需要WebMVC的依赖, Gateway只是需要工具模块下的几个方法罢了
 

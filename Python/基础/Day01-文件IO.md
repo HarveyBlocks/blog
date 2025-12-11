@@ -40,7 +40,7 @@ file_output.close()
 file_input.close()
 ```
 
-![image-20240303011633527](../assets/Day01-文件IO/image-20240303011633527.png)
+![image-20240303011633527](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-文件IO/image-20240303011633527.png)
 
 ```python
 """

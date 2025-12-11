@@ -34,7 +34,7 @@ mkdir命令有修改的**权限**;
 
 所以只能在HOME目录内操作,而不要在HOME外操作
 
-![image-20230928231939496](../assets/Day02/image-20230928211948628.png)
+![image-20230928231939496](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/Linux基础/Day02-mkdir/image-20230928211948628.png)
 
 **权限**以后讲
 

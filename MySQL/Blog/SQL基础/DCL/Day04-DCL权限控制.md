@@ -1,6 +1,6 @@
 # 权限控制
 
-![image-20231007123238713](../../../assets/Day04/image-20231007123238713.png)
+![image-20231007123238713](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DCL/Day04-DCL权限控制/image-20231007123238713.png)
 
 ## 查询权限
 

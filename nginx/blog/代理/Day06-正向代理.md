@@ -44,7 +44,7 @@ location / {
 
 7.  勾选为LAN使用代理服务器(这些设置不用于拨号或VPN连接)
 
-    ![image-20240422203643240](..\..\assets\Day06-代理\image-20240422203643240.png)
+    ![image-20240422203643240](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/代理/Day06-正向代理/image-20240422203643240.png)
 
     配置`Proxy`的HOST和IP
 

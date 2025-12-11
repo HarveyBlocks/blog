@@ -40,7 +40,7 @@ theme中的主题颜色属性
 
 其中, 不同标签表示的部分是
 
-<img src="../../assets/Day12-Material Design/image-20250922114958312.png" alt="image-20250922114958312" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day12-Toolbar/image-20250922114958312.png" alt="image-20250922114958312" style="zoom:50%;" />
 
 - 此处的colorAccent修改为colorSecondary
 
@@ -100,7 +100,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 样式如下
 
-![image-20250922162524115](../../assets/Day12-Toolbar/image-20250922162524115.png)
+![image-20250922162524115](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day12-Toolbar/image-20250922162524115.png)
 
 ## label
 
@@ -181,13 +181,13 @@ class MainActivity : AppCompatActivity() {
 
 ### 效果
 
-<img src="../../assets/Day12-Toolbar/image-20250922165045594.png" alt="image-20250922165045594" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day12-Toolbar/image-20250922165045594.png" alt="image-20250922165045594" style="zoom:50%;" />
 
 显示效果
 
-![image-20250922165114031](../../assets/Day12-Toolbar/image-20250922165114031.png)
+![image-20250922165114031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day12-Toolbar/image-20250922165114031.png)
 
 有一个item被隐藏了
 
-![image-20250922165255220](../../assets/Day12-Toolbar/image-20250922165255220.png)
+![image-20250922165255220](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day12-Toolbar/image-20250922165255220.png)
 

@@ -18,7 +18,7 @@
 2. 运行时异常(RuntimeExcption及其子类)：可以被程序员避免的异常，运行时异常可以在编译时不报错
 3. 错误（Error）：错误不是异常（Exception），二十脱离程序员控制的问题。错误在代码中通常被忽略。如：栈溢出。它们在编译时也检查不到.这是开发java时要考虑的,与程序员无关.
 
-![Throwable](../../assets/Day13/Throwable.png)
+![Throwable](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/Throwable.png)
 
 ## 异常处理框架
 
@@ -89,7 +89,7 @@ public class Main {
 
 这就很友好:
 
-![image-20230903112250255](../../assets/Day14/image-20230903112250255.png)
+![image-20230903112250255](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/image-20230903112250255.png)
 
 ### 抛出异常有关关键字
 
@@ -136,7 +136,7 @@ public class Main {
 
 **注意代码块执行的顺序**
 
-![image-20230814211209729](../../assets/Day13/image-20230814211209729.png)
+![image-20230814211209729](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/image-20230814211209729.png)
 
 有shit.printStackTrace();打印错误的栈信息
 
@@ -170,7 +170,7 @@ public class Main {
 
 **注意代码块执行的顺序**
 
-![image-20230814211503421](../../assets/Day13/image-20230814211503421.png)
+![image-20230814211503421](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/image-20230814211503421.png)
 
 ### finally,主动修复异常
 
@@ -200,7 +200,7 @@ public class Main {
 }
 ```
 
-![image-20230814212824621](../../assets/Day13/image-20230814212824621.png)
+![image-20230814212824621](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/image-20230814212824621.png)
 
 ```java
 public class Main {
@@ -217,7 +217,7 @@ public class Main {
 }
 ```
 
-![image-20230814212927884](../../assets/Day13/image-20230814212927884.png)
+![image-20230814212927884](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java异常机制/Day13-Error和Exception/image-20230814212927884.png)
 
 ### throws
 

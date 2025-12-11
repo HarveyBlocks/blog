@@ -251,11 +251,11 @@ public class MyBeanFactory implements FactoryBean<UserService> {
     23-10-30 16:25 [main] INFO  TestSpring - 成功创建com.harvey.Impl.UserServiceImpl@290dbf45
     ```
 
-![image-20231030163230085](../../../assets/Day02-Spring实例化的方式/image-20231030163230085.png)
+![image-20231030163230085](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-Spring实例化的方式/image-20231030163230085.png)
 
 -   啊?你怎么是MyBeanFactory捏?
 
-![image-20231030163544481](../../../assets/Day02-Spring实例化的方式/image-20231030163544481.png)
+![image-20231030163544481](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-Spring实例化的方式/image-20231030163544481.png)
 
 -   此乃真身😀
 

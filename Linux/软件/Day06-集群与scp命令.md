@@ -16,7 +16,7 @@ init 0
 
 在VM中创建虚拟机集群的文件夹
 
-![image-20240101203126765](../assets/Day06-集群与scp命令/image-20240101203126765.png)
+![image-20240101203126765](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/软件/Day06-集群与scp命令/image-20240101203126765.png)
 
 -   选择`虚拟机中的当前状态`
 -   选择`创建完整克隆`

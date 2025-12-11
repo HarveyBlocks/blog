@@ -84,11 +84,11 @@
 
 2.  对应的类加载路径(`src/main/java`下)的`META-INF/services`目录下创建一个名为`javax.servlet.ServletContainerInitializer`的文件
 
-    ![image-20231201155137320](../../assets/Day06-消除web.xml/image-20231201155137320.png)
+    ![image-20231201155137320](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day06-消除web.xml/image-20231201155137320.png)
 
 3.  文件内容指定具体的ServletContainerInitializer实现类
 
-    ![image-20231201155154340](../../assets/Day06-消除web.xml/image-20231201155154340.png)
+    ![image-20231201155154340](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day06-消除web.xml/image-20231201155154340.png)
 
 -> web容器启动就会酝酿下这个初始化器做的一些组件内的初始化工作
 
@@ -105,11 +105,11 @@ Spring定义了一个实现类`SpringServletContainerInitializer`(它定义实�
 
 #### SpringServletContainerInitializer
 
-![image-20231201160043897](../../assets/Day06-消除web.xml/image-20231201160043897.png)
+![image-20231201160043897](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day06-消除web.xml/image-20231201160043897.png)
 
 #### WebApplicationInitializer
 
-![image-20231201160333641](../../assets/Day06-消除web.xml/image-20231201160333641.png)
+![image-20231201160333641](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day06-消除web.xml/image-20231201160333641.png)
 
 #### 自己的WebApplicationInitializer
 

@@ -50,7 +50,7 @@ const show = ref(false);
 
 class 添加之后, 可以被CSS触发
 
-![过渡图示](../../../assets/Day07-动画/transition-classes.DYG5-69l.png)
+![过渡图示](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day08-动画/transition-classes.DYG5-69l.png)
 
 | class            | desciprtion                                | add timing                                                   | remove timing                |
 | ---------------- | ------------------------------------------ | ------------------------------------------------------------ | ---------------------------- |

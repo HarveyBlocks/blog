@@ -28,7 +28,7 @@ bin/kafka-producer-perf-test.sh
 
 测试结果: 
 
-![image-20240408194146415](../assets/Day05-基准测试/image-20240408194146415.png)
+![image-20240408194146415](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/Kafka/Day05-基准测试/image-20240408194146415.png)
 
 ```log
 1126 records sent, 219.6 records/sec (0.21 MB/sec), 1524.1 ms avg latency, 2914.0 ms max latency.

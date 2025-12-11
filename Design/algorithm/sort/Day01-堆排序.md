@@ -10,7 +10,7 @@
 
 将根节点拿出后, 把堆最后的节点放到根, 然后调整新根节点的位置
 
-![image-20240618141627982](../../assets/Day01-堆排序/image-20240618141627982.png)
+![image-20240618141627982](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-堆排序/image-20240618141627982.png)
 
 ```cpp
 template<class T>

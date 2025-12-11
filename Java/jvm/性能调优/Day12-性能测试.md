@@ -16,7 +16,7 @@ mvn archetype:generate -DinteractiveMode=false   -DarchetypeGroupId=org.openjdk.
 
 修改版本
 
-![image-20240528212406405](../assets/Day13-性能调优/image-20240528212406405.png)
+![image-20240528212406405](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/性能调优/Day12-性能测试/image-20240528212406405.png)
 
 ### 测试代码
 
@@ -64,7 +64,7 @@ mvn clean verify
 java -jar .\target\benchmarks.jar
 ```
 
-![image-20240528213725695](../assets/Day13-性能调优/image-20240528213725695.png)
+![image-20240528213725695](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/性能调优/Day12-性能测试/image-20240528213725695.png)
 
 ### main启动
 
@@ -88,11 +88,11 @@ JIT会把那些没有被使用的代码从代码层面上消去, 以增加效率
 
 但是这样可能会和预想的不一样, 导致速度大小的变化
 
-![image-20240528214410353](../assets/Day13-性能调优/image-20240528214410353.png)
+![image-20240528214410353](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/性能调优/Day12-性能测试/image-20240528214410353.png)
 
 可以返回这个值, 以保证不会被JIT消去
 
-![image-20240528214457272](../assets/Day13-性能调优/image-20240528214457272.png)
+![image-20240528214457272](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/性能调优/Day12-性能测试/image-20240528214457272.png)
 
 ### 黑洞
 

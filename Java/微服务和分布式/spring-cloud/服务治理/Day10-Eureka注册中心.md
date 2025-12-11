@@ -10,7 +10,7 @@
 
 在父工程指定SpringCloud版本
 
-![image-20240502140346642](../../assets/Day03-Eureka注册中心/image-20240502140346642.png)
+![image-20240502140346642](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Eureka注册中心/image-20240502140346642.png)
 
 Eureka依赖
 
@@ -56,7 +56,7 @@ eureka:
 
 [eureka界面](http://localhost:10086)
 
-![image-20240502151310015](../../assets/Day03-Eureka注册中心/image-20240502151310015.png)
+![image-20240502151310015](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Eureka注册中心/image-20240502151310015.png)
 
 ## 服务注册
 
@@ -95,11 +95,11 @@ eureka:
 
 ### 启动
 
-![image-20240502154655928](../../assets/Day03-Eureka注册中心/image-20240502154655928.png)
+![image-20240502154655928](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Eureka注册中心/image-20240502154655928.png)
 
 ### 多个服务实例
 
-![image-20240502155549871](../../assets/Day03-Eureka注册中心/image-20240502155549871.png)
+![image-20240502155549871](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Eureka注册中心/image-20240502155549871.png)
 
 ## 服务发现
 

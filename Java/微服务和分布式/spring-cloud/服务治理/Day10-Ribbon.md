@@ -12,7 +12,7 @@
 
 直接引入原生的Ribben依赖**也不能解决问题**, 体现是依旧使用了Spring原生的负载均衡策略
 
-![image-20240502230845405](../../assets/Day10-Ribbon/image-20240502230845405.png)
+![image-20240502230845405](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Ribbon/image-20240502230845405.png)
 
 ```xml
 <dependency>
@@ -56,11 +56,11 @@ public ClientHttpResponse intercept(final HttpRequest request, final byte[] body
 }
 ```
 
-<img src="../../assets/Day10-Ribbon/image-20240502223037299.png" alt="image-20240502223037299" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Ribbon/image-20240502223037299.png" alt="image-20240502223037299" style="zoom:60%;" />
 
 ## 负载均衡策略
 
-<img src="../../assets/Day10-Ribbon/image-20240502222713811.png" alt="image-20240502222713811" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day10-Ribbon/image-20240502222713811.png" alt="image-20240502222713811" style="zoom:50%;" />
 
 -   `RoundRobinRule`
 

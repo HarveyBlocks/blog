@@ -4,15 +4,15 @@
 
 ### 定义
 
-![image-20240417215932578](../../assets/Day01-参数化/image-20240417215932578.png)
+![image-20240417215932578](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417215932578.png)
 
 ### 配置
 
-![image-20240417220602529](../../assets/Day01-参数化/image-20240417220602529.png)
+![image-20240417220602529](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417220602529.png)
 
 ### 调用
 
-![image-20240417215959406](../../assets/Day01-参数化/image-20240417215959406.png)
+![image-20240417215959406](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417215959406.png)
 
 ## CSV批量添加
 
@@ -31,35 +31,35 @@ ypivuznmPvsg,xhDzsuzrrbTt,15272697641
 
 #### 创建
 
-![image-20240417215708168](../../assets/Day01-参数化/image-20240417215708168.png)
+![image-20240417215708168](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417215708168.png)
 
 #### 配置
 
-![image-20240417215855458](../../assets/Day01-参数化/image-20240417215855458.png)
+![image-20240417215855458](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417215855458.png)
 
 ### 调用
 
-![image-20240417215830835](../../assets/Day01-参数化/image-20240417215830835.png)
+![image-20240417215830835](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417215830835.png)
 
 ## 用户参数
 
 ### 创建
 
-![image-20240417220417451](../../assets/Day01-参数化/image-20240417220417451.png)
+![image-20240417220417451](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417220417451.png)
 
 ### 配置
 
-![image-20240417220401296](../../assets/Day01-参数化/image-20240417220401296.png)
+![image-20240417220401296](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417220401296.png)
 
-![image-20240417220829901](../../assets/Day01-参数化/image-20240417220829901.png)
+![image-20240417220829901](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417220829901.png)
 
 ### 调用
 
-![image-20240417220916577](../../assets/Day01-参数化/image-20240417220916577.png)
+![image-20240417220916577](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417220916577.png)
 
 三个线程数模拟三个用户, 个数不匹配就算轮询
 
-![image-20240417221454360](../../assets/Day01-参数化/image-20240417221454360.png)
+![image-20240417221454360](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417221454360.png)
 
 ## 函数
 
@@ -76,11 +76,11 @@ ypivuznmPvsg,xhDzsuzrrbTt,15272697641
 
 ### 函数对话框助手
 
-![image-20240417223612923](../../assets/Day01-参数化/image-20240417223612923.png)
+![image-20240417223612923](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417223612923.png)
 
-![image-20240417223730616](../../assets/Day01-参数化/image-20240417223730616.png)
+![image-20240417223730616](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417223730616.png)
 
 ### 使用函数
 
-![image-20240417223751874](../../assets/Day01-参数化/image-20240417223751874.png)
+![image-20240417223751874](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/testing/JMeter/Day01-参数化/image-20240417223751874.png)
 

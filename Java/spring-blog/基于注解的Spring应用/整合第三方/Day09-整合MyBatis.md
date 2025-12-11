@@ -128,7 +128,7 @@ public interface UserMapper {
 }
 ```
 
-![image-20231206145356561](../../../assets/Day09-整合MyBatis/image-20231206145356561.png)
+![image-20231206145356561](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于注解的Spring应用/整合第三方/Day09-整合MyBatis/image-20231206145356561.png)
 
 #### org/test/mapper/UserMapper.xml
 

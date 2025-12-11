@@ -147,5 +147,5 @@ ZGC在用户线程和GC线程更改转移映射表时(用户线程不是只对�
 3.  12位颜色位
 4.  最低4位未使用
 
-![image-20240603133227550](../assets/Day16-ZGC/image-20240603133227550.png)
+![image-20240603133227550](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day16-ZGC/image-20240603133227550.png)
 

@@ -67,7 +67,7 @@ ${expresion}
     -   当前应用有效
     -   太大了不用
 
-![image-20231118221923354](../../../assets/Day40-EL表达式和JSTL标签/image-20231118221923354.png)
+![image-20231118221923354](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/JSP和AJAX/Day40-EL表达式和JSTL标签/image-20231118221923354.png)
 
 ***EL表达式获取数据,会依次从范围小到范围大的四个域中寻找,直到找到为止***
 

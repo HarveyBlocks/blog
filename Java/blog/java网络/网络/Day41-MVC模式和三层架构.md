@@ -14,7 +14,7 @@
     -   浏览器请求的对象
     -   Servlet
 
-![image-20231119025609574](../../../assets/Day41-MVC模式和三层架构/image-20231119025609574.png)
+![image-20231119025609574](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day41-MVC模式和三层架构/image-20231119025609574.png)
 
 ## 优点
 
@@ -36,7 +36,7 @@
 
 ### MVC模式和三层架构的区别
 
-![image-20231119025805669](../../../assets/Day41-MVC模式和三层架构/image-20231119025805669.png)
+![image-20231119025805669](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java网络/网络/Day41-MVC模式和三层架构/image-20231119025805669.png)
 
 -   M
     -   Dao层(持久层)

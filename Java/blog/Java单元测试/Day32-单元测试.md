@@ -2,17 +2,17 @@
 
 -   用psvm测试之坏处
 
-    ![image-20231029140915283](../../assets/Untitled/image-20231029140915283.png)
+    ![image-20231029140915283](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/Java单元测试/Day32-单元测试/image-20231029140915283.png)
 
 IDEA已经集成了Junit
 
 ## 优点
 
-![image-20231029141033993](../../assets/Untitled/image-20231029141033993.png)
+![image-20231029141033993](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/Java单元测试/Day32-单元测试/image-20231029141033993.png)
 
 ## 使用
 
-![image-20231029141314389](../../assets/Untitled/image-20231029141314389.png)
+![image-20231029141314389](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/Java单元测试/Day32-单元测试/image-20231029141314389.png)
 
 对AaaaAaAaa类的测试类->AaaaAaAaaTest
 
@@ -47,7 +47,7 @@ junit.framework.AssertionFailedError: 方法内部有Bug expected:<1> but was:<1
 
 ## 常用注解
 
-![image-20231029145418402](../../assets/Untitled/image-20231029145418402.png)
+![image-20231029145418402](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/Java单元测试/Day32-单元测试/image-20231029145418402.png)
 
 ```
 @BeforeClass
@@ -67,7 +67,7 @@ junit.framework.AssertionFailedError: 方法内部有Bug expected:<1> but was:<1
 @AfterClass
 ```
 
-![image-20231029150158876](../../assets/Untitled/image-20231029150158876.png)
+![image-20231029150158876](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/Java单元测试/Day32-单元测试/image-20231029150158876.png)
 
 玩弄我感情是吧
 

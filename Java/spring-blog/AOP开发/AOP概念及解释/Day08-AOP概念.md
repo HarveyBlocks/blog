@@ -16,5 +16,5 @@
 -   再临时组装成一个???
 -   再去执行
 
-![image-20231109150958282](../../../assets/Day08-AOP简介/image-20231109150958282.png)
+![image-20231109150958282](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP概念及解释/Day08-AOP概念/image-20231109150958282.png)
 

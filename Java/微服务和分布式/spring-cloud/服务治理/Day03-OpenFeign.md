@@ -142,7 +142,7 @@ OpenFeign底层使用Client发起请求(`feign.Client.Default#convertResponse`)
 
 从源码可以看出, OpenFeign使用的是JDK自带的发送请求的方式, 使用IO流
 
-![image-20240107191921681](../../assets/Day03-OpenFeign/image-20240107191921681.png)
+![image-20240107191921681](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day03-OpenFeign/image-20240107191921681.png)
 
 需要每次都创建连接, 效率极低
 
@@ -174,7 +174,7 @@ feign:
     enabled: true
 ```
 
-![image-20240107192618287](../../assets/Day03-OpenFeign/image-20240107192618287.png)
+![image-20240107192618287](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day03-OpenFeign/image-20240107192618287.png)
 
 连接成功生效了
 

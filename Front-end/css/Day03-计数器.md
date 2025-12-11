@@ -32,7 +32,7 @@ h3::before {
 
 效果
 
-![image-20250806234406720](../assets/Day03-计数器/image-20250806234406720.png)
+![image-20250806234406720](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-计数器/image-20250806234406720.png)
 
 如果要一个0开始的计数器咋办?
 
@@ -52,5 +52,5 @@ h2::after {
 }
 ```
 
-![image-20250806234707683](../assets/Day03-计数器/image-20250806234707683.png)
+![image-20250806234707683](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day03-计数器/image-20250806234707683.png)
 

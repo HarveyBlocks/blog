@@ -79,7 +79,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 一分钟变化一次
 
-![image-20250916090744618](../../assets/Day06-接收系统广播/image-20250916090744618.png)
+![image-20250916090744618](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/broudcast/Day06-接收系统广播/image-20250916090744618.png)
 
 ### 父类抽象
 
@@ -144,11 +144,11 @@ Android 8.0系统之后，所有隐式广播都不允许使用静态注册的方
 
 ### 创建BroadcastReceiver
 
-![image-20250916095216392](../../assets/Day06-接收系统广播/image-20250916095216392.png)
+![image-20250916095216392](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/broudcast/Day06-接收系统广播/image-20250916095216392.png)
 
 创建页面
 
-![image-20250916095157092](../../assets/Day06-接收系统广播/image-20250916095157092.png)
+![image-20250916095157092](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/broudcast/Day06-接收系统广播/image-20250916095157092.png)
 
 以这种方式创建的Receiver, 将会**自动注册到manifest**
 

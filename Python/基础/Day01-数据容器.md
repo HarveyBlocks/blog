@@ -130,7 +130,7 @@ print(ls[0:2:1])  # [0->起始索引,2->结尾索引), 1->步长(可负,不可0)
 ```
 #### 列表的方法
 
-![image-20240302143632281](../assets/Day01-数据容器/image-20240302143632281.png)
+![image-20240302143632281](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-数据容器/image-20240302143632281.png)
 
 函数在类里就称为方法
 
@@ -406,7 +406,7 @@ if __name__ == '__main__':
 
 #### 方法
 
-![image-20240302161213588](../assets/Day01-数据容器/image-20240302161213588.png)
+![image-20240302161213588](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-数据容器/image-20240302161213588.png)
 
 -   替换, 将所有指定字符串换成新字符串
 
@@ -528,7 +528,7 @@ if __name__ == '__main__':
 
 不支持下标, 不支持切片
 
-![image-20240302165529563](../assets/Day01-数据容器/image-20240302165529563.png)
+![image-20240302165529563](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-数据容器/image-20240302165529563.png)
 
 -   添加`add()`
 

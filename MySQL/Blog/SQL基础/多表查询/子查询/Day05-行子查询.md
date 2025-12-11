@@ -1,6 +1,6 @@
 # a行子查询
 
-![image-20231008174902627](../../../../assets/Day05/image-20231008174902627.png)
+![image-20231008174902627](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/子查询/Day05-行子查询/image-20231008174902627.png)
 
 -   查询与Mike年龄相同的(非Mike)同部门员工;
     1.  查询Mike的年龄和部门;

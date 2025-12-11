@@ -5,7 +5,7 @@
 
 分布式, 分布在微服务层, 有了许多微服务
 
-![image-20231220144226856](../../assets/Day04-分布式系统简述/image-20231220144226856.png)
+![image-20231220144226856](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/安全,认证,授权/分布式系统认证方案/Day04-分布式系统简述/image-20231220144226856.png)
 
 ## 基本特点
 

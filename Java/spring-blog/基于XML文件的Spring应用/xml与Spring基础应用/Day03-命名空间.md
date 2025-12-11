@@ -10,13 +10,13 @@
 
 >   不用导入其他命名约束的标签 ,如\<bean\>标签
 
-![image-20231031202624445](../../../assets/Day03-配置标签/image-20231031202624445.png)
+![image-20231031202624445](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-命名空间/image-20231031202624445.png)
 
 #### \<beans\>创造环境
 
 >   beans可以嵌套beans
 
-![image-20231031212011380](../../../assets/Day03-配置标签/image-20231031212011380.png)
+![image-20231031212011380](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-命名空间/image-20231031212011380.png)
 
 -   指定环境
 
@@ -67,13 +67,13 @@ reader.loadBeanDefinitions("beans.xml");
 
 >   引入其他命名空间约束,并通过前缀引用的标签
 
-![image-20231031202351864](../../../assets/Day03-配置标签/image-20231031202351864.png)
+![image-20231031202351864](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-命名空间/image-20231031202351864.png)
 
 -   解释一下这个**context**:
 
     -   一言以蔽之,是自己取的别名,所以:
 
-        ![image-20231031202527263](../../../assets/Day03-配置标签/image-20231031202527263.png)
+        ![image-20231031202527263](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-命名空间/image-20231031202527263.png)
 
         abc也没事
 
@@ -93,7 +93,7 @@ reader.loadBeanDefinitions("beans.xml");
     <context:property-placeholder></context:property-placeholder>
 ```
 
-![image-20231031205937511](../../../assets/Day03-配置标签/image-20231031205937511.png)
+![image-20231031205937511](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day03-命名空间/image-20231031205937511.png)
 
 -   这样报错
 

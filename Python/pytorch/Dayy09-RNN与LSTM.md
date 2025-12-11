@@ -10,11 +10,11 @@
 
 将越前面一点的训练结果适当遗忘
 
-![image-20240325130146872](../assets/Untitled/image-20240325130146872.png)
+![image-20240325130146872](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/pytorch/Dayy09-RNN与LSTM/image-20240325130146872.png)
 
-![image-20240325130016393](../assets/Untitled/image-20240325130016393.png)
+![image-20240325130016393](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/pytorch/Dayy09-RNN与LSTM/image-20240325130016393.png)
 
-![image-20240325130246531](../assets/Untitled/image-20240325130246531.png)
+![image-20240325130246531](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/pytorch/Dayy09-RNN与LSTM/image-20240325130246531.png)
 
-![image-20240325130045154](../assets/Untitled/image-20240325130045154.png)
+![image-20240325130045154](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/pytorch/Dayy09-RNN与LSTM/image-20240325130045154.png)
 

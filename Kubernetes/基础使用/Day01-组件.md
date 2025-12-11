@@ -29,7 +29,7 @@
     -   命名空间
     -   用来隔离pod的运行环境
 
-![组件结构](../assets/Day01-组件/image-20200406184656917.png)
+![组件结构](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Kubernetes/基础使用/Day01-组件/image-20200406184656917.png)
 
 ## Master
 

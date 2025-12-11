@@ -8,7 +8,7 @@
 
 二叉堆是一个数组, 可以看作完全二叉树
 
-![image-20240617183858408](../../assets/Day05-Heap/image-20240617183858408.png)
+![image-20240617183858408](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day05-Heap/image-20240617183858408.png)
 
 可以方便地找到左孩子`(i<<1)+1`, 和右孩子`(i<<1)+2`和父亲`i>>1`
 
@@ -42,7 +42,7 @@ Array[i]可能小于其左右孩子导致不符合最大堆的性质
 
 通过让 Array[i] 的值 在最大堆中“逐级下降“，从而使得以下标 i 为根结点的子树重新遵循最大堆的性质。
 
-![image-20240617194316063](../../assets/Day05-Heap/image-20240617194316063.png)
+![image-20240617194316063](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day05-Heap/image-20240617194316063.png)
 
 的时间复杂度是 O(h)
 
@@ -97,7 +97,7 @@ if (leftIndex < this->heapSize && this->cmp(heap[leftIndex],heap[largest])>0) {
 
 考虑到调整叶子节点没有意义, 对于长度为len的堆来说, 叶子节点的范围在heap[len/2+1:len], 那么只调整非叶子的节点
 
-![image-20240618135615533](../../assets/Day05-Heap/image-20240618135615533.png)
+![image-20240618135615533](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Data-Structure/tree/Day05-Heap/image-20240618135615533.png)
 
 ```cpp
 template<class T>

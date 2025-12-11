@@ -1,6 +1,6 @@
 # 自动补全
 
-![image-20231228200907319](../assets/Day04-自动补全/image-20231228200907319.png)
+![image-20231228200907319](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231228200907319.png)
 
 -   当然, 打了第一个字, 出现后面的词条也很正常是吧
 
@@ -108,7 +108,7 @@ POST /_analyze
 
     将`tokenizer`输出的词条做进一步的处理, 例如大小写转换, 同义词转换, 拼音处理等
 
-![image-20231228205210021](../assets/Day04-自动补全/image-20231228205210021.png)
+![image-20231228205210021](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231228205210021.png)
 
 #### 创建自定义分词器
 
@@ -132,7 +132,7 @@ PUT /test
 -   但是这样还不够! 还是会分成一个字一个拼音!
 -   pinyin分词器官网的解决方案:
 
-![image-20231228205943265](../assets/Day04-自动补全/image-20231228205943265.png)
+![image-20231228205943265](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231228205943265.png)
 
 ```json
 PUT /medcl/ 
@@ -355,7 +355,7 @@ GET /test/_search
 
 3.  es创建倒排索引
 
-    ![image-20231228220821152](../assets/Day04-自动补全/image-20231228220821152.png)
+    ![image-20231228220821152](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231228220821152.png)
 
 4.  将搜索的文本分词: 
 
@@ -490,7 +490,7 @@ GET /test/_search
 
 结果查出了**"Sony","SK-II",switch"**
 
-![image-20231228225843685](../assets/Day04-自动补全/image-20231228225843685.png)
+![image-20231228225843685](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231228225843685.png)
 
 ### 拼音和自动补全
 
@@ -687,9 +687,9 @@ public HotelDoc[] suggest(String name, String prefix) throws IOException {
 
 -   解析有所不同
 
-![image-20231229204215457](../assets/Day04-自动补全/image-20231229204215457.png)
+![image-20231229204215457](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231229204215457.png)
 
-![image-20231229204302820](../assets/Day04-自动补全/image-20231229204302820.png)
+![image-20231229204302820](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day04-自动补全/image-20231229204302820.png)
 
 ```java
 private HotelDoc[] parseSuggest(SearchResponse response, String name) {

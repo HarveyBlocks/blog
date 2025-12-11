@@ -326,7 +326,7 @@ DEventLoop2((EventLoop2))
 
 执行）
 
-![](../../assets/Day05-EventLoop/0041.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/Netty/Day05-EventLoop/0041.png)
 
 #### 💡
 

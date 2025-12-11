@@ -18,7 +18,7 @@
 
 ------------------------------------------------------------------------------------------------------------------------------------------==@OnClose==
 
-![image-20231230134913166](../assets/Day02-在线聊天室/image-20231230134913166.png)
+![image-20231230134913166](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/WebSocket/Day02-在线聊天室/image-20231230134913166.png)
 
 ## 消息格式
 
@@ -306,7 +306,7 @@ public class ChatEndpoint {
 
 ##### onOPen主要方法
 
-![image-20231230152632195](../assets/Day02-在线聊天室/image-20231230152632195.png)
+![image-20231230152632195](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/WebSocket/Day02-在线聊天室/image-20231230152632195.png)
 
 ```java
 /**

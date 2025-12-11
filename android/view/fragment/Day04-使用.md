@@ -124,7 +124,7 @@ class RightFragment: BaseFragment<FragmentRightBinding>(FragmentRightBinding::in
 
 ### 结果展示
 
-![image-20250914233619324](../../assets/Day04-使用/image-20250914233619324.png)
+![image-20250914233619324](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/fragment/Day04-使用/image-20250914233619324.png)
 
 ## 动态添加
 

@@ -4,7 +4,7 @@
 
 ## 类型
 
-![image-20240302012543128](../assets/字面量/image-20240302012543128.png)
+![image-20240302012543128](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-字面量与变量/image-20240302012543128.png)
 
 ```python
 type() # 查看数据类型 

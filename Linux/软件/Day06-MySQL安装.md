@@ -39,7 +39,7 @@
     cat /var/log/mysqld.log | grep "temporary password"
     ```
 
-    ![image-20240101192940263](../assets/Day06-MySQL安装/image-20240101192940263.png)
+    ![image-20240101192940263](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/软件/Day06-MySQL安装/image-20240101192940263.png)
 
 5.  进入mysql
 
@@ -121,7 +121,7 @@
     grep "temporary password" /var/log/mysqld.log
     ```
 
-    ![image-20240101192940263](../assets/Day06-MySQL安装/image-20240101192940263.png)
+    ![image-20240101192940263](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/软件/Day06-MySQL安装/image-20240101192940263.png)
 
 5.  进入mysql
 

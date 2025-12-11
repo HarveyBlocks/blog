@@ -158,9 +158,9 @@ private void accept(ServerSocketChannel ssc) throws IOException {
 
     如果服务器与客户端建立之后, 客户端强制关闭, 连接中断, 服务器将产生异常
 
-    ![image-20240224134344053](../../assets/Day03-Selector/image-20240224134344053.png)
+    ![image-20240224134344053](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day03-Selector/image-20240224134344053.png)
 
-    ![image-20240224134434923](../../assets/Day03-Selector/image-20240224134434923.png)
+    ![image-20240224134434923](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day03-Selector/image-20240224134434923.png)
 
     read出现了IO异常
 

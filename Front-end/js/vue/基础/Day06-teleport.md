@@ -33,7 +33,7 @@ const backgroundColor = computed(() => {
 </template>
 ```
 
-![image-20250818230630405](../../../assets/Day06-teleport/image-20250818230630405.png)
+![image-20250818230630405](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day06-teleport/image-20250818230630405.png)
 
 目标似乎有很多限制, 暂时未知
 

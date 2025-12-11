@@ -40,11 +40,11 @@ Arrays.stream(studentClass.getDeclaredConstructors()).forEach(System.out::printl
 
 输出结果:
 
-<img src="../../assets/Day29/image-20230909090226902.png" alt="image-20230909090226902" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day29-反射构造方法/image-20230909090226902.png" alt="image-20230909090226902" style="zoom:67%;" />
 
 ### 返回指定构造方法
 
-<img src="../../assets/Day29/image-20230909091832816.png" alt="image-20230909091832816" style="zoom:35%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day29-反射构造方法/image-20230909091832816.png" alt="image-20230909091832816" style="zoom:35%;" />
 
 ```java
 studentClass.getConstructor()
@@ -57,7 +57,7 @@ studentClass.getDeclaredConstructor(String.class,int.class)
     								//顺序调转,编译时不报错,运行时报错
 ```
 
-<img src="../../assets/Day29/image-20230909092055965.png" alt="image-20230909092055965" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day29-反射构造方法/image-20230909092055965.png" alt="image-20230909092055965" style="zoom:50%;" />
 
 ### 获取构造方法的信息
 

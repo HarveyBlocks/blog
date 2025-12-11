@@ -77,5 +77,5 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-![image-20250918172004473](../../assets/Day07-ContentResolver/image-20250918172004473-1758191266943.png)
+![image-20250918172004473](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/ContentProvider/Day07-ContentResolver/image-20250918172004473-1758191266943.png)
 

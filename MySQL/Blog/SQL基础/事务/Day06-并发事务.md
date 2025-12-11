@@ -4,7 +4,7 @@
 
 ## 并发事务问题
 
-![image-20231009155620510](../../../assets/Day06/image-20231009155620510.png)
+![image-20231009155620510](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/事务/Day06-并发事务/image-20231009155620510.png)
 
 -   脏读
     -   对数据库产生更改的事务还**未提交**,就被另一个事务录取到了更改后的数据
@@ -15,7 +15,7 @@
 
 ## 事务隔离级别
 
-![image-20231009161629487](../../../assets/Day06/image-20231009161629487.png)
+![image-20231009161629487](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/事务/Day06-并发事务/image-20231009161629487.png)
 
 -   默认是指MySQL的默认
 -   **数据的安全性越高,性能就越差**

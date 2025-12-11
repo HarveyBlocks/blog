@@ -30,9 +30,9 @@ public class Main {
 
 输出结果：
 
-![image-20230813192525169](../../assets/Day12/image-20230813192525169.png)
+![image-20230813192525169](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day12-代码块/image-20230813192525169.png)
 
-![image-20230901164123132](../../assets/Day12/image-20230901164123132.png)
+![image-20230901164123132](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day12-代码块/image-20230901164123132.png)
 
 方法里也能写代码块
 

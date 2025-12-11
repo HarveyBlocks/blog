@@ -19,7 +19,7 @@
 
 ## 安装
 
-![image-20231210140438274](../../assets/Day12-分库分表及MyCat入门/image-20231210140438274.png)
+![image-20231210140438274](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210140438274.png)
 
 先装JDK,再装MyCat
 
@@ -104,9 +104,9 @@ chmod 777 指定文件jar包
 -   物理结构
     -   节点主机
 
-![image-20231210144416258](../../assets/Day12-分库分表及MyCat入门/image-20231210144416258-17479906311752.png)
+![image-20231210144416258](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210144416258-17479906311752.png)
 
-![image-20231210144416258](../../assets/Day12-分库分表及MyCat入门/image-20231210144416258.png)
+![image-20231210144416258](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210144416258.png)
 
 ## MyCat 入门
 
@@ -114,7 +114,7 @@ chmod 777 指定文件jar包
 
 对tb_order表进行分片, 分为三个数据节点,每一个节点主机位于不同的服务器上
 
-![image-20231210144533279](../../assets/Day12-分库分表及MyCat入门/image-20231210144533279.png)
+![image-20231210144533279](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210144533279.png)
 
 -   水平拆分
 
@@ -122,7 +122,7 @@ chmod 777 指定文件jar包
 
 MyCat中间件服务器
 
-![image-20231210155621931](../..\assets/Day12-分库分表/image-20231210155621931.png)
+![image-20231210155621931](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210155621931.png)
 
 #### 检查防火墙
 
@@ -228,7 +228,7 @@ CREATE TABLE TB_ORDER(
 
 >   使用NotePad++的插件,连接服务器,直接打开文本文件,编辑之后自动同步到服务器
 
-![image-20231210173121183](../../assets/Day12-分库分表/image-20231210173121183.png)
+![image-20231210173121183](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210173121183.png)
 
 安装下
 
@@ -238,11 +238,11 @@ CREATE TABLE TB_ORDER(
 
 -   **Profile settings**设置要连接的服务器
 
-![image-20231210173449152](../../assets/Day12-分库分表/image-20231210173449152.png)
+![image-20231210173449152](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210173449152.png)
 
 填入相关信息即可
 
-![image-20231210173614966](../..\assets/Day12-分库分表/image-20231210173614966.png)
+![image-20231210173614966](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210173614966.png)
 
 ### 基本配置
 

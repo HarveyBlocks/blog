@@ -4,7 +4,7 @@
 
 Kafka的消息都基于topic
 
-![image-20240408133524862](../assets/Day06-topic/image-20240408133524862.png)
+![image-20240408133524862](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/Kafka/Day05-topic与消息/image-20240408133524862.png)
 
 kafka的消息保存在topic中
 
@@ -65,17 +65,17 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-
 
 -   生产者
 
-    ![image-20240408135745449](../assets/Day05-topic与消息/image-20240408135745449.png)
+    ![image-20240408135745449](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/Kafka/Day05-topic与消息/image-20240408135745449.png)
 
 -   消费者
 
     缺省`--from-beginning`
 
-    ![image-20240408135836011](../assets/Day05-topic与消息/image-20240408135836011.png)
+    ![image-20240408135836011](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/Kafka/Day05-topic与消息/image-20240408135836011.png)
 
     `--from-beginning`
 
-    ![image-20240408140112296](../assets/Day05-topic与消息/image-20240408140112296.png)
+    ![image-20240408140112296](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/Kafka/Day05-topic与消息/image-20240408140112296.png)
 
 ## Kafka tools
 

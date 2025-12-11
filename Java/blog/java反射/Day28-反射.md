@@ -34,5 +34,5 @@
 
 - 将其信息保存到本地文件当中(IO流)
 
-![image-20231015100424376](../../assets/Day28/image-20231015100424376.png)
+![image-20231015100424376](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java反射/Day28-反射/image-20231015100424376.png)
 

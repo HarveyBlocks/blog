@@ -52,7 +52,7 @@
 
 Nacos将实例分为临时实例(默认)和非临时实例
 
-![image-20240503144715068](../../assets/Day03-注册中心/image-20240503144715068.png)
+![image-20240503144715068](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务治理/Day03-注册中心/image-20240503144715068.png)
 
 临时实例, 实例做心跳
 

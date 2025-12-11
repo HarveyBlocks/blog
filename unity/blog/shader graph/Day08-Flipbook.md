@@ -10,7 +10,7 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 
 ## IO
 
-<img src="../../assets/Day08-动画/image-20250929151510253.png" alt="image-20250929151510253" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Flipbook/image-20250929151510253.png" alt="image-20250929151510253" style="zoom:50%;" />
 
 ### 输入
 
@@ -29,7 +29,7 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 
 平铺和偏移节点通过调整UV映射, 间接影响纹理的外观
 
-<img src="../../assets/Day08-动画/image-20250929152150534.png" alt="image-20250929152150534" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Flipbook/image-20250929152150534.png" alt="image-20250929152150534" style="zoom: 33%;" />
 
 - `Tiling` 平铺值
 - `Offset` 偏移值
@@ -54,11 +54,11 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 - `Mirrot Once` 单次镜像
 - `Per-Axis` 自定义
 
-![image-20250929152850212](../../assets/Day08-动画/image-20250929152850212.png)
+![image-20250929152850212](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Flipbook/image-20250929152850212.png)
 
 ## 实现动画
 
-![image-20250929155123943](../../assets/Day08-动画/image-20250929155123943.png)
+![image-20250929155123943](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/unity/shader graph/Day08-Flipbook/image-20250929155123943.png)
 
 Time变量, 作为时间轴
 

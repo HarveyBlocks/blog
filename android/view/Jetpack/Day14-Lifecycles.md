@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
 Event和状态之间的关系
 
-![image-20250925145520614](../../assets/Day14-Lifecycles/image-20250925145520614.png)
+![image-20250925145520614](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Jetpack/Day14-Lifecycles/image-20250925145520614.png)
 
 State.Created表示onCreate方法**已经执行**, 而Event.ON_CREATE表示OnCreate方法**还没有执行**
 

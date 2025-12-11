@@ -54,7 +54,7 @@
     -   map.put("param2",值2);
 -   也就是说,不给他命名键,它也有键给你装好了可以用(arg0,arg1,param1,param2都可以用)
 
-![image-20231017094329940](../assets/Untitled/image-20231017094329940.png)
+![image-20231017094329940](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day35-MyBatis参数传递/image-20231017094329940.png)
 
 ```java
  class ParamNameResolver

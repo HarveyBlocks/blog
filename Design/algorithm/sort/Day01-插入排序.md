@@ -2,17 +2,17 @@
 
 >   Insertion Sort
 
-![image-20240617183323122](../../assets/Day01-插入排序/image-20240617183323122.png)
+![image-20240617183323122](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-插入排序/image-20240617183323122.png)
 
 ## 思想
 
 想要升序, 遍历到当前元素, 检查这个元素前面的元素, 如果比当前元素大, 就将当前元素和前面的元素互换
 
-![image-20240617144204834](../../assets/Day01-插入排序/image-20240617144204834.png)
+![image-20240617144204834](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-插入排序/image-20240617144204834.png)
 
 ## 流程
 
- ![img](../../assets/Day01-插入排序/insertionSort.gif)
+ ![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-插入排序/insertionSort.gif)
 
 ## 实现
 

@@ -15,13 +15,13 @@
 
 >   Spring默认
 
-![image-20240113151832936](../../assets/Day03-消息代理的可靠性/image-20240113151832936.png)
+![image-20240113151832936](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113151832936.png)
 
 ### 队列持久化
 
 >   Spring默认
 
-![image-20240113151904982](../../assets/Day03-消息代理的可靠性/image-20240113151904982.png)
+![image-20240113151904982](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113151904982.png)
 
 ### 消息持久化
 
@@ -31,11 +31,11 @@
 
     -   queue
 
-        ![image-20240113152330222](../../assets/Day03-消息代理的可靠性/image-20240113152330222.png)
+        ![image-20240113152330222](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113152330222.png)
 
     -   exchange
 
-        ![image-20240113152141125](../../assets/Day03-消息代理的可靠性/image-20240113152141125.png)
+        ![image-20240113152141125](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113152141125.png)
 
 ### 测试PageOut的场景
 
@@ -78,7 +78,7 @@ void testPageOut() throws InterruptedException {
 }
 ```
 
-![image-20240113175421939](../../assets/Day03-消息代理的可靠性/image-20240113175421939.png)
+![image-20240113175421939](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113175421939.png)
 
 ```java
 @Test
@@ -95,7 +95,7 @@ void testPageOut() throws InterruptedException {
 }
 ```
 
-![image-20240113175551169](../../assets/Day03-消息代理的可靠性/image-20240113175551169.png)
+![image-20240113175551169](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113175551169.png)
 
 ## 改变队列模式
 
@@ -114,7 +114,7 @@ void testPageOut() throws InterruptedException {
 
 #### 指定
 
-![image-20240113163404482](../../assets/Day03-消息代理的可靠性/image-20240113163404482.png)
+![image-20240113163404482](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113163404482.png)
 
 ```java
 @Bean
@@ -140,7 +140,7 @@ public void lazyQueue(String msg) {
 }
 ```
 
-![image-20240113164315620](../../assets/Day03-消息代理的可靠性/image-20240113164315620.png)
+![image-20240113164315620](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-消息代理的可靠性/image-20240113164315620.png)
 
 不经过memory直接写硬盘
 

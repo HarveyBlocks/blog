@@ -12,5 +12,5 @@
 
 # 线程
 
-![image-20240303223128168](../../assets/Day30-并行与并发,线程和进程/image-20240303223128168.png)
+![image-20240303223128168](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java多綫程/Day30-并行与并发,线程和进程/image-20240303223128168.png)
 

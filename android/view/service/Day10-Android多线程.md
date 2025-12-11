@@ -49,7 +49,7 @@ thread {
 logInfo("hello")
 ```
 
-![image-20250920170820188](../../assets/Day10-Android多线程/image-20250920170820188.png)
+![image-20250920170820188](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/service/Day10-Android多线程/image-20250920170820188.png)
 
 ## 异步消息
 

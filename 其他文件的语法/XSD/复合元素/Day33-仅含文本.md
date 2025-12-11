@@ -58,5 +58,5 @@
 </xs:element>
 ```
 
-![image-20240613154455430](../../assets/Day33-仅含文本/image-20240613154455430.png)
+![image-20240613154455430](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/XSD/复合元素/Day33-仅含文本/image-20240613154455430.png)
 

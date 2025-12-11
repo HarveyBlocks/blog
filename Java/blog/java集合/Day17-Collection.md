@@ -52,7 +52,7 @@ System.out.println(collection);
 
 居然不带引号?!
 
-![image-20230826160202305](../../assets/Day17/image-20230826160202305.png)
+![image-20230826160202305](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java集合/Day17-Collection/image-20230826160202305.png)
 
 ### 删除与清空元素
 

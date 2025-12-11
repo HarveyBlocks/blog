@@ -26,7 +26,7 @@ Spring提供,可以方便地发送http请求
 
 2.  拷贝实体类
 
-    <img src="../../assets/Day02-远程调用/image-20240107120415053.png" alt="image-20240107120415053" style="zoom:77%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/微服务简述/Day02-远程调用/image-20240107120415053.png" alt="image-20240107120415053" style="zoom:77%;" />
 
 3.  注入
 

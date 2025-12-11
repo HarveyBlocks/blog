@@ -115,19 +115,19 @@ public class SpringMVCConfig {
 
 **@EnableWebMvc的源码:**
 
-![image-20231129232248290](../../assets/Day05-消除spring-mvc.xml/image-20231129232248290.png)
+![image-20231129232248290](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129232248290.png)
 
 **DelegatingWebMvcConfiguration的源码:**
 
-![image-20231129232343443](../../assets/Day05-消除spring-mvc.xml/image-20231129232343443.png)
+![image-20231129232343443](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129232343443.png)
 
 **WebMvcConfigurationSupport的源码:**
 
-![image-20231129232517689](../../assets/Day05-消除spring-mvc.xml/image-20231129232517689.png)
+![image-20231129232517689](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129232517689.png)
 
 -   资源映射器,get
 
-![image-20231129232432189](../../assets/Day05-消除spring-mvc.xml/image-20231129232432189.png)
+![image-20231129232432189](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129232432189.png)
 
 -   视图解析器,get
 
@@ -135,7 +135,7 @@ public class SpringMVCConfig {
 
 **DelegatingWebMvcConfiguration的源码:**
 
-![image-20231129233036748](../../assets/Day05-消除spring-mvc.xml/image-20231129233036748.png)
+![image-20231129233036748](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129233036748.png)
 
 -   附:@Autowire知识点
 
@@ -152,9 +152,9 @@ public class SpringMVCConfig {
 
 **WebMvcConfigurer的源码:**
 
-![image-20231129233141469](../../assets/Day05-消除spring-mvc.xml/image-20231129233141469.png)
+![image-20231129233141469](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129233141469.png)
 
-![image-20231129233223082](../../assets/Day05-消除spring-mvc.xml/image-20231129233223082.png)
+![image-20231129233223082](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129233223082.png)
 
 >   实现WebMvcConfigurer接口
 
@@ -162,7 +162,7 @@ public class SpringMVCConfig {
 
 **WebMvcConfigurer的源码:**
 
-![image-20231129233640118](../../assets/Day05-消除spring-mvc.xml/image-20231129233640118.png)
+![image-20231129233640118](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231129233640118.png)
 
 #### 配置非Bean
 
@@ -242,7 +242,7 @@ public class SpringMVCConfig {
     </servlet>
     ```
 
-![image-20231130004343898](../../assets/Day05-消除spring-mvc.xml/image-20231130004343898.png)
+![image-20231130004343898](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC全注解开发/Day05-消除spring-mvc.xml/image-20231130004343898.png)
 
 -   删了俩
 

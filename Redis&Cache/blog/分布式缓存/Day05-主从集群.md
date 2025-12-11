@@ -188,7 +188,7 @@ redis-6380:0>del key
 
 4.  `repl_baklog`的存储方式是**环形的**, 是有上限的, 当未同步的数据超出上限(**超过上一次从节点记录的Offset**), **增量同步将会失败**, 将**转为全量同步**
 
-    ![image-20240210185241834](../../assets/Day05-主从集群/image-20240210185241834.png)
+    ![image-20240210185241834](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/分布式缓存/Day05-主从集群/image-20240210185241834.png)
 
 ## 主从同步优化
 
@@ -233,5 +233,5 @@ repl-backlog-size 10mb
 
 -   限制一个master上的slave数量, 如果太多slave, 可以采用`主-从-从`链式结构, 减少master压力
 
-    ![image-20240210190538330](../../assets/Day05-主从集群/image-20240210190538330.png)
+    ![image-20240210190538330](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/分布式缓存/Day05-主从集群/image-20240210190538330.png)
 

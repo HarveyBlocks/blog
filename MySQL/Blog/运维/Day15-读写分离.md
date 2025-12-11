@@ -18,7 +18,7 @@
 -   对于增删改语句, mycat把sql语句路由给主库,并进行主从复制
 -   对于查询操作, mycat把sql语句路由给从节点
 
-![image-20231230164000181](../../assets/Day15-读写分离/image-20231230164000181.png)
+![image-20231230164000181](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231230164000181.png)
 
 ### MyCat支持读写分离的组件
 
@@ -32,7 +32,7 @@ MySQL的主从复制是基于二进制(Binlog)实现的
 
 其中包括了DDL语句和DML语句
 
-![image-20231230164312200](../../assets/Day15-读写分离/image-20231230164312200.png)
+![image-20231230164312200](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231230164312200.png)
 
 [主从复制](Day12-主从复制.md)
 
@@ -165,7 +165,7 @@ mycat也连接不上主库了
 
   master1和master2会互相复制同步
 
-![image-20231230210044899](../../assets/Day15-读写分离/image-20231230210044899.png)
+![image-20231230210044899](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231230210044899.png)
 
 写入任意一个master库, 其他三个库中的数据全都会发生变化
 
@@ -175,7 +175,7 @@ mycat也连接不上主库了
 
 -   当M1主机宕机后, M2主机分则写请求, M,M2互为备用机
 
-![image-20231231160158227](../../assets/Day15-读写分离/image-20231231160158227.png)
+![image-20231231160158227](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231231160158227.png)
 
 ### 搭建
 
@@ -222,7 +222,7 @@ mycat也连接不上主库了
     Show Master status
     ```
 
-    ![image-20231231162248535](../../assets/Day15-读写分离/image-20231231162248535.png)
+    ![image-20231231162248535](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231231162248535.png)
 
 #### 从库配置
 
@@ -239,7 +239,7 @@ mycat也连接不上主库了
     systemctl restart mysqld
     ```
 
-3.  在从库中设置对应的主库, 注意s1对应m1,s2对应m2,对应关系不能乱![image-20231231162821098](../../assets/Day15-读写分离/image-20231231162821098.png)
+3.  在从库中设置对应的主库, 注意s1对应m1,s2对应m2,对应关系不能乱![image-20231231162821098](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231231162821098.png)
 
     ```mysql
     Change 
@@ -248,7 +248,7 @@ mycat也连接不上主库了
     Master_log_File='binlog.000002',Master_LOG_POSITION=663;-- 见上文master配置的查询结果
     ```
 
-    ![image-20231231162248535](../../assets/Day15-读写分离/image-20231231162248535.png)
+    ![image-20231231162248535](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231231162248535.png)
 
 4.  启动主从复制
 
@@ -262,7 +262,7 @@ mycat也连接不上主库了
     show slave status\G;
     ```
 
-    ![image-20231231163325008](../../assets/Day15-读写分离/image-20231231163325008.png)
+    ![image-20231231163325008](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/运维/Day15-读写分离/image-20231231163325008.png)
 
     确保两个Slave_XX_Running为yes
 

@@ -272,7 +272,7 @@ public:
 
 -   当子类从多个父类派生，而这些父类又从同一个父类派生，则在访问此共同父类中的成员时，将产生二义性
 
-    ![image-20240410153224920](../../java/微服务和分布式/assets/Day05-继承/image-20240410153224920.png)
+    ![image-20240410153224920](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/cpp/Class07-继承/image-20240410153224920.png)
 
     采用虚基类来解决。
 

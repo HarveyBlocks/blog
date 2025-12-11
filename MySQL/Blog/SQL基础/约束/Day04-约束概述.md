@@ -10,7 +10,7 @@
 
 ## 分类
 
-![image-20231007195655689](../../../assets/Day04/image-20231007195655689.png)
+![image-20231007195655689](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/约束/Day04-约束概述/image-20231007195655689.png)
 
 -   primary主要
 

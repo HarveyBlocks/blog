@@ -19,7 +19,7 @@ echo '输出的内容'
 
 ### 示例
 
-![image-20231001174651391](../assets/Day04/image-20231001174651391.png)
+![image-20231001174651391](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day04-输出与定向符/image-20231001174651391.png)
 
 如果想echo内容为 你"好，下面是2中方法
 

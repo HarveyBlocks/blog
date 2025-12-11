@@ -3,7 +3,7 @@
 -   讲究一个资源复用
 -   原理还是看[b站](https://www.bilibili.com/video/BV1s3411K7jH?p=9)吧
 
-![image-20231010204722650](../../assets/Day32/image-20231010204722650.png)
+![image-20231010204722650](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day32-Druid数据库连接池/image-20231010204722650.png)
 
 # 使用Druid
 

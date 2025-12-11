@@ -67,7 +67,7 @@ ChildNode.vue
 </style>
 ```
 
-![image-20250818193434925](../../../assets/Day05-slot/image-20250818193434925.png)
+![image-20250818193434925](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818193434925.png)
 
 slot 名字可以重复: ChildNode.vue
 
@@ -85,7 +85,7 @@ slot 名字可以重复: ChildNode.vue
 </template>
 ```
 
-![image-20250818193517532](../../../assets/Day05-slot/image-20250818193517532.png)
+![image-20250818193517532](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818193517532.png)
 
 但是v-slot不能重复
 
@@ -156,7 +156,7 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-![image-20250818194654972](../../../assets/Day05-slot 插槽/image-20250818194654972.png)
+![image-20250818194654972](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818194654972.png)
 
 ## v-slot in `<template>`
 
@@ -180,7 +180,7 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-![image-20250818194636972](../../../assets/Day05-slot 插槽/image-20250818194636972.png)
+![image-20250818194636972](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818194636972.png)
 
 ## v-slot 的简写 #
 
@@ -232,7 +232,7 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-![image-20250818201508078](../../../assets/Day05-slot 插槽/image-20250818201508078.png)
+![image-20250818201508078](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818201508078.png)
 
 -   v-bind 冒号之后是字段名
 
@@ -278,11 +278,11 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-![image-20250818210319480](../../../assets/Day05-slot 插槽/image-20250818210319480.png)
+![image-20250818210319480](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818210319480.png)
 
 会产生警告(我更相信是WebStorm对Vue的支持不好)
 
-![image-20250818210400712](../../../assets/Day05-slot 插槽/image-20250818210400712.png)
+![image-20250818210400712](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818210400712.png)
 
 ### 带name的作用域slot
 
@@ -322,7 +322,7 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-![image-20250818203047654](../../../assets/Day05-slot 插槽/image-20250818203047654.png)
+![image-20250818203047654](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day05-slot/image-20250818203047654.png)
 
 ## v-for和作用域插槽的联合使用
 

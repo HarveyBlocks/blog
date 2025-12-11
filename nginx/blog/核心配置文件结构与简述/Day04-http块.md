@@ -21,7 +21,7 @@ default_type application/octet-stream
 
 引入该文件, 之后就可以直接使用mime.type中的所有类型了
 
-<img src="../../assets/Day04-http块/image-20240420134254738.png" alt="image-20240420134254738" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/核心配置文件结构与简述/Day04-http块/image-20240420134254738.png" alt="image-20240420134254738" style="zoom:50%;" />
 
 ### `default_type`
 

@@ -1,8 +1,8 @@
 # BeanFactory和ApplicationContext的关系
 
-![image-20231030015316068](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030015316068.png)
+![image-20231030015316068](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030015316068.png)
 
-![image-20231030015614966](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030015614966.png)
+![image-20231030015614966](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030015614966.png)
 
 对于4)
 
@@ -35,9 +35,9 @@
 
 -   可以在UserService的无参构造里加一句打印测试上面的事情
 
-![image-20231030020726370](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030020726370.png)
+![image-20231030020726370](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030020726370.png)
 
-![image-20231030020739480](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030020739480.png)
+![image-20231030020739480](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030020739480.png)
 
 -   ApplicationContext内部维护着一个BeanFactory
 
@@ -57,12 +57,12 @@ private final Map<String, BeanDefinition> beanDefinitionMap;
 
 ## ApplicationContext的继承体系
 
-![image-20231030021550777](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030021550777.png)
+![image-20231030021550777](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030021550777.png)
 
 -   XMl配置方案
 -   注解(Annotation)配置方案
 
-![image-20231030022015315](../../assets/Day02-AppplicationContest和BeanFactory/image-20231030022015315.png)
+![image-20231030022015315](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030022015315.png)
 
 -   配置文件放在D盘了,你用FileSystemXMLApplicationContext
     -   翻译:一辈子用不到几回

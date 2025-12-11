@@ -1,5 +1,5 @@
 
-![image-20231008013839662](../../../assets/Day04/image-20231008013839662.png)
+![image-20231008013839662](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/Day05-多表关系/image-20231008013839662.png)
 
 # 多表关系
 
@@ -21,7 +21,7 @@ where s.id = sc.student_id && sc.course_id = c.id;
 
 -   图片是大概意思下,和文字没啥关系,看个思路
 
-![image-20231009012449793](../../../assets/Day05/image-20231009012449793.png)
+![image-20231009012449793](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/Day05-多表关系/image-20231009012449793.png)
 
 ## 一对一
 

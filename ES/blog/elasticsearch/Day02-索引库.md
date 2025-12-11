@@ -6,7 +6,7 @@
 
 >   mapping , 对索引库文档的约束
 
-![image-20231225140447331](../assets/Day02-索引库/image-20231225140447331.png)
+![image-20231225140447331](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-索引库/image-20231225140447331.png)
 
 ### 常见属性讲解
 
@@ -105,7 +105,7 @@ PUT /索引库名称
 
 [**和Rust风格一致**](..\..\..\JDK\JavaDailyBlog\spring-mvc\SpringMVC请求与响应\Day02-Rest风格.md)
 
-![image-20231125204155130](../assets/Day02-索引库/image-20231125204155130.png)
+![image-20231125204155130](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day02-索引库/image-20231125204155130.png)
 
 ## 查看索引库
 

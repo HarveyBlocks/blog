@@ -44,7 +44,7 @@ Connect getConnection(String url,String username,String password)
 
 #### 参数url
 
-![image-20231009202026261](../../assets/Day32/image-20231009202026261.png)
+![image-20231009202026261](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day32-JDBCAPI介绍/image-20231009202026261.png)
 
 ## Connect 接口
 
@@ -355,7 +355,7 @@ class EmployeeField{
 
 2.  设置参数值
 
-    ![image-20231010195748753](../../assets/Day32/image-20231010195748753.png)
+    ![image-20231010195748753](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/JDBC与MyBits/Day32-JDBCAPI介绍/image-20231010195748753.png)
 
 3.  执行sql
 

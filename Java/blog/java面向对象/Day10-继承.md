@@ -6,15 +6,15 @@
 
 子类可以继承父类的所有方法(因为子之类的构造器会先super.父类构造器(),再执行自己的)
 
-![image-20230808153845384](../../assets/Day09/image-20230808153845384.png)
+![image-20230808153845384](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230808153845384.png)
 
 私有的是无法继承的
 
-![image-20230808154425415](../../assets/Day09/image-20230808154425415.png)
+![image-20230808154425415](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230808154425415.png)
 
 当然不止是方法,属性也可以继承
 
-![image-20230808154758757](../../assets/Day09/image-20230808154758757.png)
+![image-20230808154758757](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230808154758757.png)
 
 ## Object类
 
@@ -119,7 +119,7 @@ Human
 
 执行构造器
 
-![image-20230808163452662](../../assets/Day09/image-20230808163452662.png)
+![image-20230808163452662](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230808163452662.png)
 
 由此可以得出，Student类（子类）隐藏了super(),会调用父类的无参构造器,且一定在构造器的最前端
 
@@ -137,7 +137,7 @@ public class Student extends Person{
 
 不在第一行还会报错
 
-![image-20230808163919804](../../assets/Day09/image-20230808163919804.png)
+![image-20230808163919804](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230808163919804.png)
 
 由此，调用父类的构造器，必须在子类构造器的第一行
 
@@ -149,11 +149,11 @@ public class Student extends Person{
 
 然后无参去掉了,子类构造器**通通保错**啦!
 
-![image-20230902184916077](../../assets/Day10/image-20230902184916077.png)
+![image-20230902184916077](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230902184916077.png)
 
 ### 用super()调用父类的有参构造
 
-![image-20230902185517310](../../assets/Day10/image-20230902185517310.png)
+![image-20230902185517310](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java面向对象/Day10-继承/image-20230902185517310.png)
 
 **如果父类没有无参构造,就要这样在子类手搓一个super(有参)了**
 

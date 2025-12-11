@@ -128,7 +128,7 @@ public Shop queryById(Long id) throws JsonProcessingException {
 }
 ```
 
-![image-20240104135629680](../../../../assets/Day04-缓存穿透/image-20240104135629680.png)
+![image-20240104135629680](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/查询缓存/Day04-穿透及其解决/image-20240104135629680.png)
 
 ## 其他防止缓存穿透的方案
 

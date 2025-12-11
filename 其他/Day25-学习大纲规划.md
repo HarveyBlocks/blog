@@ -1041,7 +1041,7 @@ C:\USERS\27970\DESKTOP\BLOG
 
     [解决](axios.min.js)
 
-    ![image-20231120010525801](assets/Day25-学习大纲规划/image-20231120010525801.png)
+    ![image-20231120010525801](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他/Day25-学习大纲规划/image-20231120010525801.png)
 
 7.  RabbitMQ的持久化和非持久化的结果都会PageOut
 
@@ -1093,7 +1093,7 @@ SpringMVC（Web应用MVC）
 
 **Maven 高级 2h**(完成)
 
-![image-20231203220648273](assets/Day25-学习大纲规划/image-20231203220648273.png)
+![image-20231203220648273](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他/Day25-学习大纲规划/image-20231203220648273.png)
 
 ### SpringBoot
 

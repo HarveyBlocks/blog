@@ -9,7 +9,7 @@
 
 ## 架构
 
-![architecture-2.png (2364×1370)](../assets/Day01-Dubbo/architecture-2.png)
+![architecture-2.png (2364×1370)](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/Dubbo/Day08-Dubbo/architecture-2.png)
 
 ## ZooKepper安装
 

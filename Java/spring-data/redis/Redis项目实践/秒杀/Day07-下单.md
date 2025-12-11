@@ -18,7 +18,7 @@
 
 ## 请求分析
 
-![image-20240120111459617](../../../assets/Day07-优惠券秒杀下单功能/image-20240120111459617.png)
+![image-20240120111459617](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-下单/image-20240120111459617.png)
 
 ```java
 @RestController
@@ -164,7 +164,7 @@ public long seckillVoucher(SeckillVoucher voucher) {
 
 #### 测试
 
-![image-20240120132041697](../../../assets/Day07-优惠券秒杀下单功能/image-20240120132041697.png)
+![image-20240120132041697](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-下单/image-20240120132041697.png)
 
-![image-20240120132103012](../../../assets/Day07-优惠券秒杀下单功能/image-20240120132103012.png)
+![image-20240120132103012](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/秒杀/Day07-下单/image-20240120132103012.png)
 

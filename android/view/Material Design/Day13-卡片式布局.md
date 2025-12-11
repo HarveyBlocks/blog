@@ -186,7 +186,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 ```
 
-<img src="../../assets/Day12-卡片式布局/image-20250923104845891.png" alt="image-20250923104845891" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/Material Design/Day13-卡片式布局/image-20250923104845891.png" alt="image-20250923104845891" style="zoom: 67%;" />
 
 Toolbar 被遮挡
 

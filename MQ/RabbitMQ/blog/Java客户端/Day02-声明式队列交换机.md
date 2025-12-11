@@ -24,7 +24,7 @@
 
     -   是接口
 
-        <img src="../../assets/Day02-声明式队列交换机/image-20240112210804877.png" alt="image-20240112210804877" style="zoom:50%;" />
+        <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-声明式队列交换机/image-20240112210804877.png" alt="image-20240112210804877" style="zoom:50%;" />
 
     -   可以用`ExchangeBuilder`
 
@@ -81,7 +81,7 @@ public class RabbitConfig {
 
 翻了源码, 确实代理了, 也会去判断, 但是没有被认定是存在aaa的confusing
 
-![image-20240112214832017](../../assets/Day02-声明式队列交换机/image-20240112214832017.png)
+![image-20240112214832017](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-声明式队列交换机/image-20240112214832017.png)
 
 往深里翻了翻源码, 虽然在beanDefinitionMap和singletonObjects里有aaa, 但实际上Spring是依据`ref`里存在的Bean来判断是否存在bean的, 而`ref=null`(啊??????????)
 

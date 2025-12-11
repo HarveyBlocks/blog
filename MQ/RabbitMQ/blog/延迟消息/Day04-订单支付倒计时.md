@@ -7,7 +7,7 @@
     -   那么**我们给用户预留出30分钟的支付时间**
     -   没搞懂扣减库存和给时间有什么关系,无语
     -   
-    -   ![image-20240114133639766](../../assets/Day04-订单支付倒计时/image-20240114133639766.png)
+    -   ![image-20240114133639766](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-订单支付倒计时/image-20240114133639766.png)
     -   
     -   预留时间是为了防止用户反悔, 创造了订单,但最终没有支付
     -   订单超时就自动自动删除订单, 并不会扣减库存
@@ -25,7 +25,7 @@
 
 -   没支付的, 再发送十秒延时消息, 十秒后再次检查
 
-    ![image-20240114133535533](../../assets/Day04-订单支付倒计时/image-20240114133535533.png)
+    ![image-20240114133535533](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-订单支付倒计时/image-20240114133535533.png)
 
 -   检查指从数据库检查订单状态
 
@@ -34,7 +34,7 @@
     -   支付服务说已支付, 就改订单状态为已支付,退出
     -   支付服务说未支付, 就继续发送延迟消息
 
--   ![image-20240114133948727](../../assets/Day04-订单支付倒计时/image-20240114133948727.png)
+-   ![image-20240114133948727](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-订单支付倒计时/image-20240114133948727.png)
 
 -   也就是说, 秒杀这种东西, 第一波抢不到,可以等30m后第二波?但是估计没啥人第一波会后悔😓
 
@@ -54,5 +54,5 @@
 
 -   而 `@GlobalTransactional` 是 **Seata** **分布式事务框架**中用来管理分布式事务的注解
 
--   <img src="../../assets/Day04-订单支付倒计时/image-20240114141022774.png" alt="image-20240114141022774" style="zoom:33%;" />
+-   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-订单支付倒计时/image-20240114141022774.png" alt="image-20240114141022774" style="zoom:33%;" />
 

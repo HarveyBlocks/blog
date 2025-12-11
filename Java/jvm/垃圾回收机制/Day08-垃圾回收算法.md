@@ -126,7 +126,7 @@ arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就�
 
 ### 内存分配配置
 
-![image-20240520132606187](../assets/Day08-垃圾回收算法/image-20240520132606187.png)
+![image-20240520132606187](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/垃圾回收机制/Day08-垃圾回收算法/image-20240520132606187.png)
 
 ```shell
 -XX:+PrintGCDetails

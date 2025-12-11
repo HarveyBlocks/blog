@@ -102,9 +102,9 @@ public static void demo() {
 
 2.  Java命令行, `jconsol`
 
-    <img src="../assets/Day01-锁的活跃性/image-20240908215640636.png" alt="image-20240908215640636" style="zoom:40%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/共享模型/Day04-锁的活跃性/image-20240908215640636.png" alt="image-20240908215640636" style="zoom:40%;" />
 
-    <img src="../assets/Day01-锁的活跃性/image-20240908215704768.png" alt="image-20240908215704768" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/共享模型/Day04-锁的活跃性/image-20240908215704768.png" alt="image-20240908215704768" style="zoom:50%;" />
 
 ### 哲学家就餐
 

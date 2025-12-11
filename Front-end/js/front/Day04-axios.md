@@ -112,7 +112,7 @@ function logCategory(){
 }
 ```
 
-![image-20250826160247330](../../assets/Day04-axios/image-20250826160247330.png)
+![image-20250826160247330](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/front/Day04-axios/image-20250826160247330.png)
 
 ## 渲染
 

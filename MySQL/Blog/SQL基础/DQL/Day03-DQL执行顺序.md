@@ -26,9 +26,9 @@ SELECT
 
 -   区分编写顺序和执行顺序
 
-![image-20231007011121151](../../../assets/Day03/image-20231007011121151.png)
+![image-20231007011121151](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-DQL执行顺序/image-20231007011121151.png)
 
-![image-20231007013213035](../../../assets/Day03/开始.png)
+![image-20231007013213035](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/DQL/Day03-DQL执行顺序/开始.png)
 
 ## 验证方法---------取别名
 

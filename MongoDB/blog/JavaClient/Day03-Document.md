@@ -242,7 +242,7 @@ ClientBulkWriteResult clientBulkWriteResult = mongoClient.bulkWrite(clientNamesp
 System.out.println(clientBulkWriteResult);
 ```
 
-![image-20251120212007035](../../assets/Day03-Document/image-20251120212007035.png)
+![image-20251120212007035](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MongoDB/JavaClient/Day03-Document/image-20251120212007035.png)
 
 输出结果
 

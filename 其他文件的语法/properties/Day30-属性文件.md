@@ -83,7 +83,7 @@ public class ParsePro {
 
 ```
 
-![image-20231004002959039](../assets/Day30-属性文件/image-20231004002959039.png)
+![image-20231004002959039](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/properties/Day30-属性文件/image-20231004002959039.png)
 
-![image-20231004003114458](../assets/Day30-属性文件/image-20231004003114458.png)
+![image-20231004003114458](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他文件的语法/properties/Day30-属性文件/image-20231004003114458.png)
 

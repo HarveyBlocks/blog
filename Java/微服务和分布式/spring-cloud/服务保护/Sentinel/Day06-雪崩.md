@@ -4,7 +4,7 @@
 
 -   一个服务崩了(或者特别慢)
 
-    ![image-20240115215927818](../../../assets/Day06-雪崩/image-20240115215927818.png)
+    ![image-20240115215927818](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Sentinel/Day06-雪崩/image-20240115215927818.png)
 
 ## 服务保护
 
@@ -50,5 +50,5 @@
 -   SpringCloudCircuitBreaker
     -   Spring出品
 
-![image-20240115223527847](../../../assets/Day06-雪崩/image-20240115223527847.png)
+![image-20240115223527847](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/服务保护/Sentinel/Day06-雪崩/image-20240115223527847.png)
 

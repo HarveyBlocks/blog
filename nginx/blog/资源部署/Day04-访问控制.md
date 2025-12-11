@@ -60,7 +60,7 @@ server{
 }
 ```
 
-![1588004913681](..\..\assets\Day04-访问控制\1588004913681.png)
+![1588004913681](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/nginx/资源部署/Day04-访问控制/1588004913681.png)
 
 没有一个`Control-Allow_Origin`的头信息在你的请求资源里
 

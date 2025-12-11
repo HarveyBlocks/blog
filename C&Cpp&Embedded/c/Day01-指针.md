@@ -8,7 +8,9 @@
 
 我是64位的平台啦
 
-![image-20231108204229030](../../java/assets/指针/image-20231108204229030.png)
+![image-20231108204229030](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C%26Cpp%26Embedded/c/Day01-指针/image-20231108204229030.png)
+
+
 
 每一个存储单元是一个字节
 
@@ -259,7 +261,7 @@ int main() {
 
 ## 类型转化
 
-![image-20231108214441843](../../NIO和Netty/assets/Day01-指针/image-20231108214441843.png)
+![image-20231108214441843](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/C&Cpp&Embedded/c/Day01-指针/image-20231108214441843.png)
 
 -   例如char->int,一个字节转四个字节,**char的地址作为低地址,再往上加三个高地址**
 -   例如int->char,四个字节转一个字节,**int低地址作为char的地址**

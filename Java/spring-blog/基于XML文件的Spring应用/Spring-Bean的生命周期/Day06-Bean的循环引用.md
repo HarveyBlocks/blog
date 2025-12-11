@@ -6,7 +6,7 @@
 
 >   解决你依赖我,我依赖你的问题
 
-![image-20231104123244652](../../../assets/Day06-Bean的循环引用/image-20231104123244652.png)
+![image-20231104123244652](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring-Bean的生命周期/Day06-Bean的循环引用/image-20231104123244652.png)
 
 -   这个死循环,这个不好
 

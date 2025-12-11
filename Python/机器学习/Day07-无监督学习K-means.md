@@ -50,7 +50,7 @@ $$
 -   a~i~ 某一样本到族群的所有样本的平均
 -   SC~i~ 属于 (-1,1) , 越接近1, 模型越好; 越接近-1, 模型越差
 
-![image-20240308020544423](../assets/Day07-无监督学习K-means/image-20240308020544423.png)
+![image-20240308020544423](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day07-无监督学习K-means/image-20240308020544423.png)
 
 #### API
 

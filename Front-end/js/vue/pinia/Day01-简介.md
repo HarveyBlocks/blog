@@ -8,7 +8,7 @@ Vue.js 的状态管理库
 
 使用组合式API
 
-![image-20250825171352702](../../../assets/Day01-简介/image-20250825171352702.png)
+![image-20250825171352702](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/pinia/Day01-简介/image-20250825171352702.png)
 
 ```shell
 npm install pinia
@@ -292,5 +292,5 @@ export default defineComponent({
 
 ## DevTools
 
-![image-20250826000216460](../../../assets/Day01-简介/image-20250826000216460.png)
+![image-20250826000216460](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/pinia/Day01-简介/image-20250826000216460.png)
 

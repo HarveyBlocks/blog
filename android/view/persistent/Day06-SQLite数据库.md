@@ -63,7 +63,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 数据库文件会存放在`/data/data/<package name>/databases/`目录下
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916222441574.png" alt="image-20250916222441574" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916222441574.png" alt="image-20250916222441574" style="zoom:50%;" />
 
 BookStore.db 就是数据库文件
 
@@ -73,27 +73,27 @@ BookStore.db-journal文件，是一个为了让数据库能够支持事务而产
 
 插件Database Navigator, 用于在UI上查看数据库数据
 
-![image-20250916222730712](../../assets/Day06-SQLite数据库/image-20250916222730712.png)
+![image-20250916222730712](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916222730712.png)
 
 将Virtual Device 上的db文件到出到物理机上
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223832883.png" alt="image-20250916223832883" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916223832883.png" alt="image-20250916223832883" style="zoom:50%;" />
 
 使用DB Browser
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223405296.png" alt="image-20250916223405296" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916223405296.png" alt="image-20250916223405296" style="zoom:50%;" />
 
 选择SQL方言
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223451348.png" alt="image-20250916223451348" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916223451348.png" alt="image-20250916223451348" style="zoom:50%;" />
 
 选择导出的文件
 
-![image-20250916224156057](../../assets/Day06-SQLite数据库/image-20250916224156057.png)
+![image-20250916224156057](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916224156057.png)
 
 查看数据库信息, or使用Consoles(但是Consoles没有实质作用, 因为实际上是对生产环境上数据库的修改, 并不是对Android应用的数据库的修改)
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916224257375.png" alt="image-20250916224257375" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916224257375.png" alt="image-20250916224257375" style="zoom:50%;" />
 
 ## version 与 升级
 
@@ -152,19 +152,19 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 将Virtual Device导出, 覆盖原来的数据库文件, 用以查看
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230227841.png" alt="image-20250916230227841" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916230227841.png" alt="image-20250916230227841" style="zoom:50%;" />
 
 刷新一下
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230319706.png" alt="image-20250916230319706" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916230319706.png" alt="image-20250916230319706" style="zoom:50%;" />
 
 成功创建
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230349155.png" alt="image-20250916230349155" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916230349155.png" alt="image-20250916230349155" style="zoom:50%;" />
 
 此时版本回退会异常
 
-![image-20250917002641156](../../assets/Day06-SQLite数据库/image-20250917002641156.png)
+![image-20250917002641156](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250917002641156.png)
 
 ### 最佳实践
 
@@ -246,7 +246,7 @@ fun SQLiteDatabase.addBook() {
 
 查看一下
 
-![image-20250916232208866](../../assets/Day06-SQLite数据库/image-20250916232208866.png)
+![image-20250916232208866](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916232208866.png)
 
 ContentValue对象的创建, 进行封装
 
@@ -302,7 +302,7 @@ fun SQLiteDatabase.updateBook() {
 }
 ```
 
-![image-20250916234751731](../../assets/Day06-SQLite数据库/image-20250916234751731.png)
+![image-20250916234751731](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250916234751731.png)
 
 ### `delete()`
 
@@ -361,7 +361,7 @@ fun SQLiteDatabase.queryBookAll() {
 
 结果日志查看
 
-![image-20250917001711898](../../assets/Day06-SQLite数据库/image-20250917001711898.png)
+![image-20250917001711898](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/persistent/Day06-SQLite数据库/image-20250917001711898.png)
 
 ## 事务
 

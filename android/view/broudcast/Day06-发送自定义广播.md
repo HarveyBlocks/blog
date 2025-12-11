@@ -20,7 +20,7 @@
 
 优先级高的BroadcastReceiver可以先收到广播, 也可以阶段信息
 
-![image-20250916000423453](../../assets/Day06-发送自定义广播/image-20250916000423453.png)
+![image-20250916000423453](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/android/view/broudcast/Day06-发送自定义广播/image-20250916000423453.png)
 
 ## 准备Receiver
 

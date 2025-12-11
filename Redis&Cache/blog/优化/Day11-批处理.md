@@ -65,7 +65,7 @@ Redis的原生命令具有**原子性**
 
 在集群下, 批处理的多个key必须处于**同一个插槽**内, 否则就会执行失败
 
-![image-20240220162600174](../../assets/Day11-批处理/image-20240220162600174.png)
+![image-20240220162600174](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/优化/Day11-批处理/image-20240220162600174.png)
 
 ### 在客户端计算key的slot
 

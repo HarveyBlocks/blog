@@ -30,7 +30,7 @@
 
 [Spring官网spring-boot配置文档](https://docs.spring.io/spring-boot/docs/current/reference/html/)
 
-![image-20231206000313637](../../assets/Day02-配置生效顺序/image-20231206000313637.png)
+![image-20231206000313637](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-boot/配置/Day02-配置生效顺序/image-20231206000313637.png)
 
 命令行优先级4(比内部配置都高)
 

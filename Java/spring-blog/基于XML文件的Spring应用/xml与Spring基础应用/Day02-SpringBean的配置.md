@@ -1,7 +1,7 @@
 
 # SpringBean 的配置
 
-![image-20231030130011011](../../../assets/Untitled/image-20231030130011011.png)
+![image-20231030130011011](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-SpringBean的配置/image-20231030130011011.png)
 
 这些配置不分先后
 
@@ -34,7 +34,7 @@
 <bean id="userService" class="com.harvey.Impl.UserServiceImpl"/>
 ```
 
-![image-20231030131034992](../../../assets/Untitled/image-20231030131034992.png)
+![image-20231030131034992](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-SpringBean的配置/image-20231030131034992.png)
 
 -   其实是在BeanFactory里形成了key-value
 
@@ -45,7 +45,7 @@
         <!--id="userService"-->
 ```
 
-![image-20231030131340505](../../../assets/Untitled/image-20231030131340505.png)
+![image-20231030131340505](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-SpringBean的配置/image-20231030131340505.png)
 
 -   它也是有Key的,是**全类名**
 
@@ -77,7 +77,7 @@
         (UserService) beanFactory.getBean("UserService");
     ```
 
-![image-20231030132328860](../../../assets/Untitled/image-20231030132328860.png)
+![image-20231030132328860](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/xml与Spring基础应用/Day02-SpringBean的配置/image-20231030132328860.png)
 
 -   BeanFactory使用了映射
 

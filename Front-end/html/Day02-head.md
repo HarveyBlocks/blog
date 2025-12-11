@@ -26,7 +26,7 @@
 <title>head的title是在这里</title>
 ```
 
-![image-20250729225536830](../assets/Day02-head/image-20250729225536830.png)
+![image-20250729225536830](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day02-head/image-20250729225536830.png)
 
 ### `<base>`
 
@@ -68,7 +68,7 @@
 </head>
 ```
 
-![image-20250729233659775](../assets/Day02-head/image-20250729233659775.png)
+![image-20250729233659775](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day02-head/image-20250729233659775.png)
 
 ### `<style>`
 

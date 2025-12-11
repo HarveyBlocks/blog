@@ -30,9 +30,9 @@ Declare [continue|exit] Handler for 状态值1[,状态值2...] statement;
 
 [MySQL ERROR状态码](https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html) - ctrl + F 查找
 
-![image-20231025142016920](../../assets/Day11-条件处理程序/image-20231025142016920.png)
+![image-20231025142016920](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day11-条件处理程序/image-20231025142016920.png)
 
-![image-20231025142105898](../../assets/Day11-条件处理程序/image-20231025142105898.png)
+![image-20231025142105898](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day11-条件处理程序/image-20231025142105898.png)
 
 ```mysql
 declare exit handler for SQLSTATE '02000'

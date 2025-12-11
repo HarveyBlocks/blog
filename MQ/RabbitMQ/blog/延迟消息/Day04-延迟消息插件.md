@@ -9,7 +9,7 @@
 docker inspect mq
 ```
 
-![image-20240114120911576](../../assets/Day04-延迟消息插件/image-20240114120911576.png)
+![image-20240114120911576](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-延迟消息插件/image-20240114120911576.png)
 
 执行命令,启动插件
 
@@ -17,7 +17,7 @@ docker inspect mq
 docker exec -it mq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 
-![image-20240114121318904](../../assets/Day04-延迟消息插件/image-20240114121318904.png)
+![image-20240114121318904](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-延迟消息插件/image-20240114121318904.png)
 
 ## 使用延迟消息插件
 
@@ -70,9 +70,9 @@ rabbitTemplate.convertAndSend(delayExchange,routingKey,message,(msg)->{
 
 ## 测试运行
 
-![image-20240114125856807](../../assets/Day04-延迟消息插件/image-20240114125856807.png)
+![image-20240114125856807](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-延迟消息插件/image-20240114125856807.png)
 
-![image-20240114125925064](../../assets/Day04-延迟消息插件/image-20240114125925064.png)
+![image-20240114125925064](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/延迟消息/Day04-延迟消息插件/image-20240114125925064.png)
 
 ## 缺陷
 

@@ -120,7 +120,7 @@ if __name__ == '__main__':
 2.  每次跟换验证集, 直到所有训练集都做过验证集
 3.  全部轮完后的准确率取平均值
 
-![image-20240307100716924](../assets/Day05-分类算法/image-20240307100716924.png)
+![image-20240307100716924](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day05-分类算法/image-20240307100716924.png)
 
 -   四份称为四则交叉验证
 
@@ -483,7 +483,7 @@ export_graphviz(
 
 [dot文件转树](http://webgraphviz.com/)
 
-![image-20240307163131403](../assets/Day05-分类算法/image-20240307163131403.png)
+![image-20240307163131403](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/机器学习/Day05-分类算法/image-20240307163131403.png)
 
 ### 优缺点
 

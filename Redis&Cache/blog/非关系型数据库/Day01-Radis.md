@@ -70,7 +70,7 @@ redis-cli  [-h 127.0.0.1 -p 6379] shutdown
 
 ## 图形化界面
 
-![image-20240102120030263](../../../MySQL/assets/Day01-Radis/image-20240102120030263.png)
+![image-20240102120030263](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis&Cache/非关系型数据库/Day01-Radis/image-20240102120030263.png)
 
 懂?
 

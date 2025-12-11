@@ -51,7 +51,7 @@ date -d "+1 day -1year" "+%Y-%m-%d %H:%M:%S"
 
 ## 改时区
 
-![image-20231231203520851](../assets/Day05-时间和时区/image-20231231203520851.png)
+![image-20231231203520851](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-时间和时区/image-20231231203520851.png)
 
 PST, 非东八区也
 
@@ -63,7 +63,7 @@ rm -f /etc/localtime
 ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
-![image-20231231203549518](../assets/Day05-时间和时区/image-20231231203549518.png)
+![image-20231231203549518](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-时间和时区/image-20231231203549518.png)
 
 CST,东八区也
 
@@ -92,5 +92,5 @@ CST,东八区也
 pin
 ```
 
-![image-20231002183501723](../assets/Day05/image-20231002183501723.png)
+![image-20231002183501723](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/网络/Day05-时间和时区/image-20231002183501723.png)
 

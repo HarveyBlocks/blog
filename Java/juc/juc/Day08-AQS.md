@@ -4,7 +4,7 @@
 
 阻塞所和相关的同步器工具的框架/抽象父类
 
-![image-20240913184445815](../assets/Day08-AQS/image-20240913184445815.png)
+![image-20240913184445815](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/juc/Day08-AQS/image-20240913184445815.png)
 
 ## 特点
 

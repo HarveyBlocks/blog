@@ -20,13 +20,13 @@ top
 
 生产环境不要用VisualVM, 给JVM产生不稳定
 
-![image-20240521194021773](../assets/Day09-解决方案/image-20240521194021773.png)
+![image-20240521194021773](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240521194021773.png)
 
 这俩按钮会阻塞用户进程
 
 通过Sample查看内存占用最大的对象
 
-![image-20240525180238094](../assets/Day09-解决方案/image-20240525180238094.png)
+![image-20240525180238094](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240525180238094.png)
 
 ### JMX
 
@@ -189,7 +189,7 @@ GET localhost:8081/actuator/prometheus
 
 -   正常情况
 
-    <img src="../assets/Day09-解决方案/image-20240525144520162.png" alt="image-20240525144520162" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240525144520162.png" alt="image-20240525144520162" style="zoom:50%;" />
 
     -   上下起伏(Minor GC)
     -   手动FullGC后内存大小骤降
@@ -197,7 +197,7 @@ GET localhost:8081/actuator/prometheus
 
 -   内存泄漏
 
-    <img src="../assets/Day09-解决方案/image-20240525144633385.png" alt="image-20240525144633385" style="zoom:50%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240525144633385.png" alt="image-20240525144633385" style="zoom:50%;" />
 
     -   持续内存升高, MinorGC不能把大部分对象回收
     -   手动Full GC之后内存使用没有好转
@@ -327,9 +327,9 @@ end
 
 查看支配树
 
-![image-20240526151849619](../assets/Day09-解决方案/image-20240526151849619.png)
+![image-20240526151849619](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240526151849619.png)
 
-![image-20240526152252508](../assets/Day09-解决方案/image-20240526152252508.png)
+![image-20240526152252508](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240526152252508.png)
 
 #### MAT对堆的划分
 
@@ -342,7 +342,7 @@ end
     -   某一对象及其所有子树(包括孙子等)的空间
     -   深堆的大小-------该对象如果可以被回收, 能释放多大的内存空间
 
-![image-20240526152342603](../assets/Day09-解决方案/image-20240526152342603.png)
+![image-20240526152342603](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240526152342603.png)
 
 单位: 字节
 
@@ -381,7 +381,7 @@ System.out.print(printable);
 -Djdk.attach.allowAttachSelf
 ```
 
-![image-20240526153128011](../assets/Day09-解决方案/image-20240526153128011.png)
+![image-20240526153128011](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/内存溢出和泄漏/Day09-解决方案/image-20240526153128011.png)
 
 对齐, 笨蛋
 

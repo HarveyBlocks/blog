@@ -15,5 +15,5 @@
 5.  将Proxy装入**单例池**当中
 6.  测试
 
-![image-20231109152215240](../../../assets/Day8-模拟AOP基础代码/image-20231109152215240.png)
+![image-20231109152215240](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/AOP开发/AOP概念及解释/Day8-模拟AOP基础代码/image-20231109152215240.png)
 

@@ -8,7 +8,7 @@
 
 ### 同步调用
 
-![image-20231229214114839](../assets/Day05-数据同步/image-20231229214114839.png)
+![image-20231229214114839](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day05-数据同步/image-20231229214114839.png)
 
 #### 流程
 
@@ -27,7 +27,7 @@
 
 ### 异步通知
 
-![image-20240114160733141](../../../java/微服务和分布式/assets/Day05-数据同步/image-20240114160733141.png)
+![image-20240114160733141](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day05-数据同步/image-20240114160733141.png)
 
 解除业务的耦合
 
@@ -41,7 +41,7 @@ MySQL的用于主从同步的Binlog, 每当MySQL做增删改时,都会改变Binl
 
 利用canal中间件监听Binlog, 发送消息给微服务
 
-![image-20240114161124813](../../../Java/微服务和分布式/assets/Day05-数据同步/image-20240114161124813.png)
+![image-20240114161124813](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day05-数据同步/image-20240114161124813.png)
 
 完全解除了服务间的耦合
 

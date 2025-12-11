@@ -4,7 +4,7 @@
 
 传输的是字节, 一个字符往往不是一个字节, 而由于buffer长度固定, 字符可能被切割
 
-![](../../assets/Day04-消息边界/0023.png)
+![](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day04-消息边界/0023.png)
 
 -   Message1->需要扩容
 -   Message3,Message6->半包
@@ -72,7 +72,7 @@ b2 ->> b2: 01234567890abcdef3333\r
 
 >   attachment
 
-![image-20240224144309363](../../assets/Day04-消息边界/image-20240224144309363.png)
+![image-20240224144309363](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day04-消息边界/image-20240224144309363.png)
 
 每个SocketChannel都有自己的附件
 

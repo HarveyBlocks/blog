@@ -402,7 +402,7 @@ def fun(a, b):
     return max(a, b)
 ```
 
-![image-20240302130556065](../assets/Day01-函数/image-20240302130556065.png)
+![image-20240302130556065](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/基础/Day01-函数/image-20240302130556065.png)
 
 ## 匿名函数
 

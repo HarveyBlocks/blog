@@ -39,7 +39,7 @@
 
 ## 缺点
 
-![image-20231025234350967](../../assets/Day10-全局锁/image-20231025234350967.png)
+![image-20231025234350967](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/锁/Day10-全局锁/image-20231025234350967.png)
 
 -   不加全局锁:
 

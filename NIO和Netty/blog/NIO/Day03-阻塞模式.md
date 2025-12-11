@@ -78,7 +78,7 @@ public void doClient() throws IOException, InterruptedException {
 
 3.  再次使用客户端发送内容
 
-    <img src="../../assets/Day03-阻塞式编程/image-20240223200935792.png" alt="image-20240223200935792" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day03-阻塞模式/image-20240223200935792.png" alt="image-20240223200935792" style="zoom:67%;" />
 
     表达式: 
 
@@ -94,7 +94,7 @@ public void doClient() throws IOException, InterruptedException {
 
 4.  启动一个新的客户端
 
-    ![image-20240223201134379](../../assets/Day03-阻塞式编程/image-20240223201134379.png)
+    ![image-20240223201134379](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/NIO和Netty/NIO/Day03-阻塞模式/image-20240223201134379.png)
 
     -   \[日志\]服务器连接第二个客户端
     -   \[日志\]服务器输出第一个客户端的表达式

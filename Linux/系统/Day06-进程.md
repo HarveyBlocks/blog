@@ -8,7 +8,7 @@
 
 操作系统有一个任务管理器
 
-![image-20240101135011197](../assets/Day06-进程/image-20240101135011197.png)
+![image-20240101135011197](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101135011197.png)
 
 ## 查看进程
 
@@ -18,12 +18,12 @@
     ps -ef
     ```
 
-    ![image-20240101135323022](../assets/Day06-进程/image-20240101135323022.png)
+    ![image-20240101135323022](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101135323022.png)
 
     -   `-e`显示全部进程
     -   `-f`以完全格式化的形式展示信息
 
-    ![image-20240101135544174](../assets/Day06-进程/image-20240101135544174.png)
+    ![image-20240101135544174](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101135544174.png)
 
     -   `UID`进程所属用户ID
     -   `PID`进程号
@@ -40,15 +40,15 @@
     ps -ef | grep docker
     ```
 
-    ![image-20240101140631962](../assets/Day06-进程/image-20240101140631962.png)
+    ![image-20240101140631962](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101140631962.png)
 
     可以看到使用管道符的指令也成为了一条进程
 
-    ![image-20240101140816447](../assets/Day06-进程/image-20240101140816447.png)
+    ![image-20240101140816447](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101140816447.png)
 
     当然也可以用管道符来查父进程也是不错的
 
-    ![image-20240101140953565](../assets/Day06-进程/image-20240101140953565.png)
+    ![image-20240101140953565](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-进程/image-20240101140953565.png)
 
 ## 关闭进程
 

@@ -16,7 +16,7 @@ A : 系统为这些程序文件注册了环境变量
 env
 ```
 
-![image-20240101160649062](../assets/Day06-环境变量/image-20240101160649062.png)
+![image-20240101160649062](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101160649062.png)
 
 PATH的值就是程序的搜索路径, 这些路径由`:`分隔
 
@@ -26,13 +26,13 @@ PATH的值就是程序的搜索路径, 这些路径由`:`分隔
 echo $PATH
 ```
 
-![image-20240101160909860](../assets/Day06-环境变量/image-20240101160909860.png)
+![image-20240101160909860](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101160909860.png)
 
-![image-20240101160934783](../assets/Day06-环境变量/image-20240101160934783.png)
+![image-20240101160934783](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101160934783.png)
 
 拼接
 
-![image-20240101161351841](../assets/Day06-环境变量/image-20240101161351841.png)
+![image-20240101161351841](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101161351841.png)
 
 ### 用处
 
@@ -48,7 +48,7 @@ echo $PATH
     export 变量名=变量值
     ```
 
-    ![image-20240101162046447](../assets/Day06-环境变量/image-20240101162046447.png)
+    ![image-20240101162046447](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101162046447.png)
 
 -   永久生效
 
@@ -78,7 +78,7 @@ vim pi
 
 输入命令
 
-![image-20240101162743556](../assets/Day06-环境变量/image-20240101162743556.png)
+![image-20240101162743556](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101162743556.png)
 
 授予可执行权限
 
@@ -98,7 +98,7 @@ chmod 755 pi
 vim /etc/profile
 ```
 
-![image-20240101163836256](../assets/Day06-环境变量/image-20240101163836256.png)
+![image-20240101163836256](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101163836256.png)
 
 **记得`$PATH:`, 原有的PATH不能丢**
 
@@ -108,5 +108,5 @@ vim /etc/profile
 source /etc/profile
 ```
 
-![image-20240101164149607](../assets/Day06-环境变量/image-20240101164149607.png)
+![image-20240101164149607](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/系统/Day06-环境变量/image-20240101164149607.png)
 

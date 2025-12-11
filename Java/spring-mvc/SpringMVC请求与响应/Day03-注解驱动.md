@@ -4,11 +4,11 @@
 
 ## 拆东墙,补西墙
 
-![image-20231127212633539](../../assets/Day03-注解驱动/image-20231127212633539.png)
+![image-20231127212633539](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127212633539.png)
 
-![image-20231127212857803](../../assets/Day03-注解驱动/image-20231127212857803.png)
+![image-20231127212857803](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127212857803.png)
 
-![image-20231127204631699](../../assets/Day03-注解驱动/image-20231127204631699.png)
+![image-20231127204631699](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127204631699.png)
 
 -   **动态资源反而不能加载啦??????????**
 -   发生什么事了?
@@ -21,19 +21,19 @@
 <mvc:default-servlet-handler/>
 ```
 
-![image-20231127204151203](../../assets/Day03-注解驱动/image-20231127204151203.png)
+![image-20231127204151203](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127204151203.png)
 
-![image-20231127204238082](../../assets/Day03-注解驱动/image-20231127204238082.png)
+![image-20231127204238082](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127204238082.png)
 
 -   在使用`<mvc:default-servlet-handler/>`时,它会自动帮你注入一个**SimpleUrlHandlerMapping**
 
-    ![image-20231127204900217](../../assets/Day03-注解驱动/image-20231127204900217.png)
+    ![image-20231127204900217](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127204900217.png)
 
     你看它也实现了HandlerMapping
 
 -   所以,注入了一个**SimpleUrlHandlerMaping**之后,就不会帮你注入**默认的HandlerMapping**了
 
-![image-20231127204448759](../../assets/Day03-注解驱动/image-20231127204448759.png)
+![image-20231127204448759](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127204448759.png)
 
 -   可是,解析我们动态资源的HandlerMapping是谁呢?
 
@@ -52,7 +52,7 @@
 <mvc:default-servlet-handler/>
 ```
 
-![image-20231127213057855](../../assets/Day03-注解驱动/image-20231127213057855.png)
+![image-20231127213057855](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day03-注解驱动/image-20231127213057855.png)
 
 -   启动成功
 

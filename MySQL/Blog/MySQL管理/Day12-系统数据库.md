@@ -11,7 +11,7 @@
     -   元数据
         -   我们数据库本身的一些数据
 
-![image-20231027191842418](../../assets/Day12-系统数据库介绍/image-20231027191842418.png)
+![image-20231027191842418](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL管理/Day12-系统数据库/image-20231027191842418.png)
 
 ## mysql
 

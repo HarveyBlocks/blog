@@ -64,7 +64,7 @@ HTML5 引入
 
 页面被分割为几列, 用于更好地布局
 
-<img src="../assets/Day04-响应式布局/image-20250811231659388.png" alt="image-20250811231659388" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250811231659388.png" alt="image-20250811231659388" style="zoom:33%;" />
 
 响应式网格视图通常有 12 列
 
@@ -128,11 +128,11 @@ HTML5 引入
      </p>
      ```
 
-     <img src="../assets/Day04-响应式布局/image-20250811233942322.png" alt="image-20250811233942322" style="zoom: 40%;" />
+     <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250811233942322.png" alt="image-20250811233942322" style="zoom: 40%;" />
 
      希望结构是:
 
-     <img src="../assets/Day04-响应式布局/image-20250811234225607.png" alt="image-20250811234225607" style="zoom:50%;" />
+     <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250811234225607.png" alt="image-20250811234225607" style="zoom:50%;" />
 
      在`class='raw'`的元素上**添加清除流的样式**, 然后将放在`class='col-*'`上的元素放入`class='raw'`中
 
@@ -188,17 +188,17 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 </html>
 ```
 
-<img src="../assets/Day04-响应式布局/image-20250812011109826.png" alt="image-20250812011109826" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250812011109826.png" alt="image-20250812011109826" style="zoom:30%;" />
 
 ### 各组成
 
 -   网格列 Grid Cols
 
-    <img src="../assets/Day04-响应式布局/grid_columns.png" alt="img" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/grid_columns.png" alt="img" style="zoom:67%;" />
 
 -   网格行 Grid Rows
 
-    <img src="../assets/Day04-响应式布局/grid_rows.png" alt="img" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/grid_rows.png" alt="img" style="zoom:67%;" />
 
 -   网格间隙 Grid Gaps
 
@@ -206,7 +206,7 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
     -   `grid-row-gap`
     -   `grid-gap`
 
-    <img src="../assets/Day04-响应式布局/grid_gaps.png" alt="img" style="zoom: 67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/grid_gaps.png" alt="img" style="zoom: 67%;" />
 
 -   网格行Grid Lines
 
@@ -215,7 +215,7 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
     -   `grid-row-start`
     -   `grid-row-end
 
-    <img src="../assets/Day04-响应式布局/grid_lines.png" alt="img" style="zoom:67%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/grid_lines.png" alt="img" style="zoom:67%;" />
 
     把网格项目放在列线 1，并在列线 3 结束它
 
@@ -226,7 +226,7 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
     }
     ```
 
-    <img src="../assets/Day04-响应式布局/image-20250812011657185.png" alt="image-20250812011657185" style="zoom: 33%;" />
+    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250812011657185.png" alt="image-20250812011657185" style="zoom: 33%;" />
 
 ### 网格容器
 
@@ -260,7 +260,7 @@ CSS Grid Layout Module 提供了带有行和列的基于网格的布局系统，
 
 下面就是左侧导航栏固定宽度, 右侧内容栏自动改变长度
 
-<video src="../assets/Day04-响应式布局/演示column布局.mp4"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/演示column布局.mp4"></video>
 
 #### grid-template-rows
 
@@ -391,7 +391,7 @@ div[class*='grid-item'] {
 }
 ```
 
-<img src="../assets/Day04-响应式布局/image-20250812025509386.png" alt="image-20250812025509386" style="zoom:30%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day04-响应式布局/image-20250812025509386.png" alt="image-20250812025509386" style="zoom:30%;" />
 
 ```css
 .item1 { grid-area: header; }

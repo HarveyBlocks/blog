@@ -2,7 +2,7 @@
 
 ## 作用
 
-![image-20231024003725381](../../assets/Day09-视图概述和简单应用/image-20231024003725381.png)
+![image-20231024003725381](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/MySQL存储过程/Day09-视图概述和简单应用/image-20231024003725381.png)
 
 -   隐蔽
 -   封装 

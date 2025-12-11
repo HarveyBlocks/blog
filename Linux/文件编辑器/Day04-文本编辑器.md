@@ -15,13 +15,13 @@ vi 文件路径
 
 ### vi/vim的三种工作模式
 
-![image-20231001180628191](../assets/Day04/image-20231001180628191.png)
+![image-20231001180628191](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/文件编辑器/Day04-文本编辑器/image-20231001180628191.png)
 
 ### 命令模式(Commond Mode)
 
 上下左右/jkhl改变光标位置
 
-![image-20231001185937363](../assets/Day04/image-20231001185937363.png)
+![image-20231001185937363](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/文件编辑器/Day04-文本编辑器/image-20231001185937363.png)
 
 i键 ->  在当前光标          转输入模式
 
@@ -29,7 +29,7 @@ a键 -> 在当前光标 之后 转输入模式
 
 o键 -> 转输入模式
 
-![image-20231001181846245](../assets/Day04/image-20231001181846245.png)
+![image-20231001181846245](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/文件编辑器/Day04-文本编辑器/image-20231001181846245.png)
 
 : 键-> 转底线命令模式
 
@@ -41,7 +41,7 @@ d键+d键->删除
 
 u键->撤销
 
-![image-20231001190054017](../assets/Day04/image-20231001190054017.png)
+![image-20231001190054017](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/文件编辑器/Day04-文本编辑器/image-20231001190054017.png)
 
 - d$ 删除到本行结尾
 
@@ -53,5 +53,5 @@ Esc->任意情况下返回命令模式
 
 输入wq(w->保存q->退出)
 
-![image-20231001190446514](../assets/Day04/image-20231001190446514.png)
+![image-20231001190446514](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/文件编辑器/Day04-文本编辑器/image-20231001190446514.png)
 

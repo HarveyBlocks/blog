@@ -9,7 +9,7 @@
 
 ## 传统的同步响应
 
-![image-20231128205640812](../../assets/Untitled/image-20231128205640812.png)
+![image-20231128205640812](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day04-同步响应/image-20231128205640812.png)
 
 -   请求资源转发
 
@@ -33,7 +33,7 @@
 
     地址变了
 
-    ![image-20231128205746031](../../assets/Untitled/image-20231128205746031.png)
+    ![image-20231128205746031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day04-同步响应/image-20231128205746031.png)
 
 -   响应模型数据request.setAttribute
 
@@ -162,5 +162,5 @@ public class MyResponse{
 
 ### 康康源码
 
-![image-20231128235627206](../../assets/Day04-同步响应/image-20231128235627206.png)
+![image-20231128235627206](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC请求与响应/Day04-同步响应/image-20231128235627206.png)
 

@@ -28,7 +28,7 @@
 
 说淘宝垃圾,不必要的功能一推, 说Nacos牛逼, 喜欢的功能一应俱全
 
-![image-20240111141038973](../../assets/Day05-Nacos配置管理/image-20240111141038973.png)
+![image-20240111141038973](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240111141038973.png)
 
 ### 配置共享
 
@@ -59,7 +59,7 @@ ${hm.db.name}
 ${hm.db.host:centos}:${hm.db.port:3306} # 设定默认值3306
 ```
 
-![image-20240111141937018](../../assets/Day05-Nacos配置管理/image-20240111141937018.png)
+![image-20240111141937018](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240111141937018.png)
 
 ##### jdbc-mybatis.yml
 
@@ -243,7 +243,7 @@ private void checkCartsFull(Long userId) {
 
 nacos
 
-![image-20240111160727083](../../assets/Day05-Nacos配置管理/image-20240111160727083.png)
+![image-20240111160727083](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240111160727083.png)
 
 ### 动态路由
 
@@ -297,7 +297,7 @@ spring:
 
 由于我们采用了`spring-cloud-starter-alibaba-nacos-config`自动装配, 所以`ConfigService`已经在`com.alibaba.cloud.nacos.NacosConfigAutoConfiguration`中自动创建好了
 
-![image-20240116120559235](../../assets/Day05-Nacos配置管理/image-20240116120559235.png)
+![image-20240116120559235](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240116120559235.png)
 
 -   因此，只要我们拿到`NacosConfigManager`就等于拿到了`ConfigService`，就算是创建ConfigService
 
@@ -496,9 +496,9 @@ public class DybanucRouteLoaderListener {
 
 #### 测试
 
-![image-20240116123628643](../../assets/Day05-Nacos配置管理/image-20240116123628643.png)
+![image-20240116123628643](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240116123628643.png)
 
 访问[localhost:8080/search/list](http://localhost:8080/search/list?pageNo=1&pageSize=1)
 
-![image-20240116124502212](../../assets/Day05-Nacos配置管理/image-20240116124502212.png)
+![image-20240116124502212](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/微服务和分布式/spring-cloud/网关与配置管理/Day05-Nacos配置管理/image-20240116124502212.png)
 

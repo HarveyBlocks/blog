@@ -2,7 +2,7 @@
 
 ## 前端交互
 
-![image-20240131121346926](../../../assets/Day11-依照位置排序/image-20240131121346926.png)
+![image-20240131121346926](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Redis项目实践/GeoHash与地理坐标/Day11-依照位置排序/image-20240131121346926.png)
 
 ## 修改Redis依赖版本
 

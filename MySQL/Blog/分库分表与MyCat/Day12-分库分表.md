@@ -20,7 +20,7 @@
 
 ## 拆分策略
 
-![image-20231028144602317](../../assets/Day12-分库分表/image-20231028144602317.png)
+![image-20231028144602317](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028144602317.png)
 
 ### 垂直拆分
 
@@ -28,13 +28,13 @@
 
     -   以表为单位拆分
 
-        ![image-20231028144811622](../../assets/Day12-分库分表/image-20231028144811622.png)
+        ![image-20231028144811622](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028144811622.png)
 
 -   垂直分表
 
     -   以**字段**单位拆分
 
-        ![image-20231028144822040](../../assets/Day12-分库分表/image-20231028144822040.png)
+        ![image-20231028144822040](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028144822040.png)
 
 ### 水平拆分
 
@@ -42,21 +42,21 @@
 
     -   都存表,但记录被分散了
 
-        ![image-20231028145001692](../../assets/Day12-分库分表/image-20231028145001692.png)
+        ![image-20231028145001692](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028145001692.png)
 
 -   水平分表
 
     -   都存字段,但记录被分散了
 
-        ![image-20231028145053202](../../assets/Day12-分库分表/image-20231028145053202.png)
+        ![image-20231028145053202](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028145053202.png)
 
 ## 分库分表的实现技术
 
 -   ShardingJDBC
 
-    ![image-20231028145220081](../../assets/Day12-分库分表/image-20231028145220081.png)
+    ![image-20231028145220081](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028145220081.png)
 
 -   MyCat
 
-    ![image-20231028145248427](../../assets/Day12-分库分表/image-20231028145248427.png)
+    ![image-20231028145248427](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028145248427.png)
 

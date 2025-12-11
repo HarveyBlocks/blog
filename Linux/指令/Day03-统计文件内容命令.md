@@ -14,20 +14,20 @@ wc [-c][-m][-l][-w] 文件路径
 
 ## 示例
 
-![image-20230929222413269](../assets/Day03/image-20230929222413269.png)
+![image-20230929222413269](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-统计文件内容命令/image-20230929222413269.png)
 
 ```Linux
 wc ~/test.txt
 ```
 
-![image-20230929223823999](../assets/Day03/image-20230929223823999.png)
+![image-20230929223823999](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-统计文件内容命令/image-20230929223823999.png)
 
 - 6:行数
 - 30:单词数
 - **字节**数
 - 文件绝对路径
 
-![image-20230929224138763](../assets/Day03/image-20230929224138763.png)
+![image-20230929224138763](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Linux/指令/Day03-统计文件内容命令/image-20230929224138763.png)
 
 - 雷打不动的输出顺序:
   - line word [字节大小?字符个数?] (分不出来)

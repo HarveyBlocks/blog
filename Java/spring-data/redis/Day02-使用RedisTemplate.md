@@ -1,6 +1,6 @@
 # RedisTemplate
 
-![image-20240102130147837](../../assets/Day02-使用RedisTemplate/image-20240102130147837.png)
+![image-20240102130147837](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Day02-使用RedisTemplate/image-20240102130147837.png)
 
 ## 快速入门
 
@@ -8,7 +8,7 @@
 
 使用SpringBoot
 
-<img src="../../assets/Day02-使用RedisTemplate/image-20240102130922548.png" alt="image-20240102130922548" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-data/redis/Day02-使用RedisTemplate/image-20240102130922548.png" alt="image-20240102130922548" style="zoom:50%;" />
 
 ### 引入依赖
 

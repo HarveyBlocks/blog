@@ -6,9 +6,9 @@
 
 分治
 
-![img](../../assets/Day01-归井排序/20200524221406526.gif)
+![img](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-归井排序/20200524221406526.gif)
 
-<img src="../../assets/Day01-归井排序/image-20240617145849061.png" alt="image-20240617145849061" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/algorithm/sort/Day01-归井排序/image-20240617145849061.png" alt="image-20240617145849061" style="zoom:67%;" />
 
 ## 实现
 

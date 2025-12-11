@@ -98,5 +98,5 @@
 
 -   成功注入
 
-![image-20231123222801047](../../assets/Day01-在Controller中访问容器中的Bean/image-20231123222801047.png)
+![image-20231123222801047](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-mvc/SpringMVC简介/Day01-web层注入service层/image-20231123222801047.png)
 

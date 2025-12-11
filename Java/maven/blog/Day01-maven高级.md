@@ -139,7 +139,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 </dependency>
 ```
 
-![image-20231202173918669](..\assets\Day01-maven高级/image-20231202173918669.png)
+![image-20231202173918669](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231202173918669.png)
 
 把这里的复制过来
 
@@ -178,7 +178,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 -   聚合的工程不做其他的任何功能,仅仅管理其他工程
 
-![image-20231203150138422](..\assets\/Day01-maven高级/image-20231203150138422.png)
+![image-20231203150138422](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203150138422.png)
 
 -   没有代码,删除src
 
@@ -197,7 +197,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
     </modules>
     ```
 
-![image-20231203150736778](../assets/Day01-maven高级/image-20231203150736778.png)
+![image-20231203150736778](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203150736778.png)
 
 ```txt
 [INFO] pojo ............................................... SUCCESS [  0.996 s]
@@ -221,7 +221,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 -   一个新工程,管理这些工程的依赖,介于只有版本冲突会引发依赖冲突,被管理工程将**失去对版本的决定**,都交由总工程管理
 
-![image-20231203161555356](../assets/Day01-maven高级/image-20231203161555356.png)
+![image-20231203161555356](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203161555356.png)
 
 ### 父工程与子工程
 
@@ -419,7 +419,7 @@ controller模块!!!!!!!!!!
 </project>
 ```
 
-![image-20231203170026899](../assets/Day01-maven高级/image-20231203170026899.png)
+![image-20231203170026899](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203170026899.png)
 
 -   SNAPSHOT
     -   快照版本
@@ -454,7 +454,7 @@ controller模块!!!!!!!!!!
 3.  jdbc.properties
 4.  AccountMapper.xml
 
-![image-20231203172553742](../assets/Day01-maven高级/image-20231203172553742.png)
+![image-20231203172553742](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203172553742.png)
 
 -   pom.xml
 
@@ -486,7 +486,7 @@ controller模块!!!!!!!!!!
 jdbc.url=${jdbc.url}
 ```
 
-![image-20231203173326014](../assets/Day01-maven高级/image-20231203173326014.png)
+![image-20231203173326014](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203173326014.png)
 
 #### 动态配置路径
 
@@ -557,9 +557,9 @@ jdbc.url=${jdbc.url}
 </profiles>
 ```
 
-![image-20231203185018362](../assets/Day01-maven高级/image-20231203185018362.png)
+![image-20231203185018362](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203185018362.png)
 
-![image-20231203184951408](../assets/Day01-maven高级/image-20231203184951408.png)
+![image-20231203184951408](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203184951408.png)
 
 #### 设置默认环境
 
@@ -590,7 +590,7 @@ jdbc.url=${jdbc.url}
 
 #### idea实现
 
-![image-20231203195728412](../assets/Day01-maven高级/image-20231203195728412.png)
+![image-20231203195728412](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203195728412.png)
 
 #### 指令实现
 
@@ -650,7 +650,7 @@ mvn -install -D skipTests
 
 >   公共服务器建立关系
 
-![image-20231203202103192](../assets/Day01-maven高级/image-20231203202103192.png)
+![image-20231203202103192](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203202103192.png)
 
 >   注意把私服和中央的服务器区分开
 
@@ -666,27 +666,27 @@ mvn -install -D skipTests
 
 [下载地址](https://help.sonatype.com/repomanager3/product-information/download)
 
-![image-20231203203144883](../assets/Day01-maven高级/image-20231203203144883.png)
+![image-20231203203144883](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203203144883.png)
 
-![image-20231203203321049](../assets/Day01-maven高级/image-20231203203321049.png)
+![image-20231203203321049](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203203321049.png)
 
 ```bash
 nexus /run 服务器名称
 ```
 
-![image-20231203203507782](../assets/Day01-maven高级/image-20231203203507782.png)
+![image-20231203203507782](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203203507782.png)
 
 -   成功
 
 在浏览器上访问`localhost:8081`
 
-![image-20231203203557241](../assets/Day01-maven高级/image-20231203203557241.png)
+![image-20231203203557241](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203203557241.png)
 
 `D:\IT_study\maven\nexus\nexus-3.62.0-01\bin\nexus /run nexux`
 
 #### 右上角登录
 
-![image-20231203205327569](../assets/Day01-maven高级/image-20231203205327569.png)
+![image-20231203205327569](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203205327569.png)
 
 跟着提示做
 
@@ -696,13 +696,13 @@ nexus /run 服务器名称
 
 可以配端口号和IP地址
 
-![image-20231203203852410](../assets/Day01-maven高级/image-20231203203852410.png)
+![image-20231203203852410](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203203852410.png)
 
 #### 服务器的相关配置
 
 [服务器的配置文件](D:\IT_study\maven\nexus\nexus-3.62.0-01\bin\nexus.vmoptions)
 
-![image-20231203204112380](../assets/Day01-maven高级/image-20231203204112380.png)
+![image-20231203204112380](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203204112380.png)
 
 ### 私服资源的获取
 
@@ -712,21 +712,21 @@ nexus /run 服务器名称
 
 这样**不统一**啊
 
-![image-20231203204356102](../assets/Day01-maven高级/image-20231203204356102.png)
+![image-20231203204356102](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203204356102.png)
 
 #### 私服管理仓库
 
 拓展一下私服的功能
 
-![image-20231203204511355](../assets/Day01-maven高级/image-20231203204511355.png)
+![image-20231203204511355](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203204511355.png)
 
 再建立一个仓库,管理测试版的
 
-![image-20231203204635678](../assets/Day01-maven高级/image-20231203204635678.png)
+![image-20231203204635678](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203204635678.png)
 
 仓库组管理仓库
 
-![image-20231203204726931](../assets/Day01-maven高级/image-20231203204726931.png)
+![image-20231203204726931](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203204726931.png)
 
 #### 仓库分类
 
@@ -806,5 +806,5 @@ pom.xml
 
 然后使用deploy发布
 
-![image-20231203223145557](../assets/Day01-maven高级/image-20231203223145557.png)
+![image-20231203223145557](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/maven/Day01-maven高级/image-20231203223145557.png)
 

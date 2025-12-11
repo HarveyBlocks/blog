@@ -65,7 +65,7 @@ public class Main {
 }
 ```
 
-![image-20230802234251023](../../assets/image-20230802234251023.png)
+![image-20230802234251023](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/java基础/Day04-运算符/image-20230802234251023.png)
 
 ## 逻辑运算符
 

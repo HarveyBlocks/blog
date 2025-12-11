@@ -1,6 +1,6 @@
 # 责任链
 
-![image-20240607163814675](../../assets/Day05-责任链/image-20240607163814675.png)
+![image-20240607163814675](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/行为型/Day05-责任链/image-20240607163814675.png)
 
 甩锅链-不负责任链
 

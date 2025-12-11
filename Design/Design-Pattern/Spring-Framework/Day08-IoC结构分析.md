@@ -83,7 +83,7 @@ Bean用于对一个类进行封装
 ```
 ### BeanFactory
 
-![image-20240610201609602](../../assets/Day08-IoC/image-20240610201609602.png)
+![image-20240610201609602](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/Spring-Framework/Day08-IoC结构分析/image-20240610201609602.png)
 
 Bean工厂, 也就是IoC容器, 使用简单工厂+配置
 
@@ -108,11 +108,11 @@ Bean工厂, 也就是IoC容器, 使用简单工厂+配置
 
 BeanDefinition是接口
 
-![image-20240610212906046](../../assets/Day08-IoC/image-20240610212906046.png)
+![image-20240610212906046](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/Spring-Framework/Day08-IoC结构分析/image-20240610212906046.png)
 
 ### BeanDefinitionReader
 
-![image-20240610213034388](../../assets/Day08-IoC/image-20240610213034388.png)
+![image-20240610213034388](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/Spring-Framework/Day08-IoC结构分析/image-20240610213034388.png)
 
 解析Bean的配置文件
 
@@ -137,13 +137,13 @@ public interface BeanDefinitionReader {
 
 往注册表中注册Bean信息
 
-![image-20240610222127613](../../assets/Day08-IoC/image-20240610222127613.png)
+![image-20240610222127613](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/Spring-Framework/Day08-IoC结构分析/image-20240610222127613.png)
 
 ## 创建容器-ApplicationContext
 
 `ClassPathXmlApplicationContext`通过调用父类`AbstractApplicationContext`的`refresh()`方法载入Bean的配置资源 
 
-![image-20240610221724797](../../assets/Day08-IoC/image-20240610221724797.png)
+![image-20240610221724797](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Design/Design-Pattern/Spring-Framework/Day08-IoC结构分析/image-20240610221724797.png)
 
 ```java
 public ClassPathXmlApplicationContext(

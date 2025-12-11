@@ -1,6 +1,6 @@
 # 表子查询
 
-![image-20231009001258973](../../../../assets/Day05/image-20231009001258973.png)
+![image-20231009001258973](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL基础/多表查询/子查询/Day05-表子查询/image-20231009001258973.png)
 
 -   缝合怪: 结合了行子查询的()元组和列子查询的IN
 

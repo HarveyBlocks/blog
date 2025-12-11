@@ -10,7 +10,7 @@ JVM在不影响程序正确性的情况下, 会调整语句的执行顺序, 以�
 
 CPU流水线技术, 将一个指令操作分成了多个小指令(取指令, 指令译码, 执行指令, 内存访问, 数据写回)
 
-![image-20240909181245606](../assets/Day05-有序性/image-20240909181245606.png)
+![image-20240909181245606](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/内存模型/Day05-有序性/image-20240909181245606.png)
 
 不会缩短单条指令的执行顺序, 但增大了指令的吞吐量, 提高了效率
 

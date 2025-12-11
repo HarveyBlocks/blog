@@ -16,7 +16,7 @@
 
     -   深度学习适合用于人工不好进行特征提取的领域, 例如图像, 语音, 自然语言
 
-![image-20240308133941988](../assets/Untitled/image-20240308133941988.png)
+![image-20240308133941988](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/深度学习/Day07-概述/image-20240308133941988.png)
 
 -   对计算机和计算性能的要求
 
@@ -41,7 +41,7 @@
 
 ## 深度学习框架
 
-![image-20240308134432780](../assets/Untitled/image-20240308134432780.png)
+![image-20240308134432780](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Python/深度学习/Day07-概述/image-20240308134432780.png)
 
 -   PyTorch 适用于动态图像
 -   TensenFlow在动态图像和静态图像下都实用

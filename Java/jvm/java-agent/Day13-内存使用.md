@@ -17,7 +17,7 @@ MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
 -   运行时配置的获取和更改
 -   应用程序运行时信息的获取(线程栈, 内存, 类信息)
 
-![image-20240530154020503](../assets/Day13-内存使用/image-20240530154020503.png)
+![image-20240530154020503](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/java-agent/Day13-内存使用/image-20240530154020503.png)
 
 ## JVM内存信息
 
@@ -48,7 +48,7 @@ private static String getMemoryInfo(MemoryPoolMXBean bean) {
 }
 ```
 
-![image-20240530161350361](../assets/Day13-内存使用/image-20240530161350361.png)
+![image-20240530161350361](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/java-agent/Day13-内存使用/image-20240530161350361.png)
 
 -   0M是因为使用了默认配置`-1`.
 
@@ -76,11 +76,11 @@ private static String getMemoryInfo(BufferPoolMXBean bean) {
 
 在被监控程序处使用直接内存
 
-![image-20240530164031478](../assets/Day13-内存使用/image-20240530164031478.png)
+![image-20240530164031478](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/java-agent/Day13-内存使用/image-20240530164031478.png)
 
 实验结果
 
-![image-20240530164021958](../assets/Day13-内存使用/image-20240530164021958.png)
+![image-20240530164021958](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/jvm/java-agent/Day13-内存使用/image-20240530164021958.png)
 
 ## 生成内存快照
 

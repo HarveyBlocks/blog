@@ -62,7 +62,7 @@ $$
 
     测试
 
-    ![image-20240113204435988](../../assets/Day03-业务幂等/image-20240113204435988.png)
+    ![image-20240113204435988](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/可靠性/Day03-业务幂等/image-20240113204435988.png)
 
 -   使用其他唯一ID(自己配置)
 

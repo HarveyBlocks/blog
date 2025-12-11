@@ -40,7 +40,7 @@ const choose = ref(false);
 
 那么, 上面的例子, 按下两次`switch`按钮之后, 原本在ChildNode中存在的数据就会被刷新掉
 
-<video src="../../../assets/Day06-动态组件/组件转换刷新导致的问题.mp4" style="border:2px solid black"></video>
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/js/vue/基础/Day06-动态组件/组件转换刷新导致的问题.mp4" style="border:2px solid black"></video>
 
 使用`<keep-alive>`标签包裹`<component>`来解决
 
