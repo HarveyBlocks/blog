@@ -99,7 +99,7 @@ encoding以`11`开头, 表示content是字符串, 剩余6个比特位用来表�
 
 现在假设我们有连续n个连续的长度为250~253字节之间的entry, 因此entry 的previus_length属性都用一个字节即可表示
 
-[ZipList连锁更新原理](D:\IT_study\blog\Redis&Cache\blog\原理\ZipList连续更新问题.mp4)
+<video src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Redis%26Cache/原理/Day12-ZipList/ZipList连续更新问题.mp4" style="border:2px black solid">
 
 ZipList这种特殊情况下产生的连续多次空间拓展操作称之为**连锁更新(Cascade Update)**. 新增, 删除都可能导致连锁更新的发生
 

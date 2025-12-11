@@ -2,34 +2,34 @@
 
 ```txt
 https://github.com/HarveyBlocks/blog
+|   dir-tree.txt
+|   LICENSE
 +---android
 |   +---kotlin
 |   |   +---advanced
 |   |   \---basic
-|   |           Day01-运算符
 |   \---view
-|   |       +---activity
-|   |       +---broudcast
-|   |       +---ContentProvider
-|   |       +---fragment
-|   |       +---glide
-|   |       +---Jetpack
-|   |       +---layout
-|   |       +---Material Design
-|   |       +---Multimedia
-|   |       +---persistent
-|   |       +---service
-|   |       \---web
+|       +---activity
+|       +---broudcast
+|       +---ContentProvider
+|       +---fragment
+|       +---glide
+|       +---Jetpack
+|       +---layout
+|       +---Material Design
+|       +---Multimedia
+|       +---persistent
+|       +---service
+|       \---web
 +---C&Cpp&Embedded
 |   +---c
 |   +---cpp
 |   +---embedded
 |   \---qt
 +---c-sharp
-|   +---blog
-|       +---基础
-|           +---面向对象
-|           \---高级
+|   +---基础
+|   +---面向对象
+|   \---高级
 +---cg
 +---compiler
 +---Design
@@ -42,18 +42,15 @@ https://github.com/HarveyBlocks/blog
 |   |   \---tree
 |   \---Design-Pattern
 |       +---Spring-Framework
-|           +---创建者
-|           +---概述
-|           +---结构型
-|           \---行为型
+|       +---创建者
+|       +---概述
+|       +---结构型
+|       \---行为型
 +---ES
-|   \---blog
-|       +---elasticsearch
+|   \---elasticsearch
 +---Front-end
 |   +---css
 |   +---fore
-|   |   +---image
-|   |   \---Text
 |   +---html
 |   +---js
 |   |   +---front
@@ -69,15 +66,13 @@ https://github.com/HarveyBlocks/blog
 |           Day08-@mixin和@include
 +---Git
 |   \---GitBlog
-|       +---Blog
-|           +---Git与IDEA
-|           +---Git基础
-|           \---Git远程仓库
+|       +---Git与IDEA
+|       +---Git基础
+|       \---Git远程仓库
 +---Go
-|   \---blog
-|       +---Gin
-|           +---基础
-|           \---高级
+|   +---Gin
+|   +---基础
+|   \---高级
 +---Java
 |   +---blog
 |   |   +---javaIO流
@@ -87,13 +82,14 @@ https://github.com/HarveyBlocks/blog
 |   |   +---java多綫程
 |   |   |   +---ExecutorLearning
 |   |   |   +---LearnLock
-|   |   |   |       CAS
 |   |   |   \---RestaurantSimulation
 |   |   +---java常用类
 |   |   +---java异常机制
 |   |   +---java泛型
 |   |   +---java注解
+|   |   |   \---LearnAnnotation
 |   |   +---java特殊文件
+|   |   |   \---learnSpecialDoc
 |   |   +---java玩儿
 |   |   +---java简化代码的方式
 |   |   +---java网络
@@ -105,6 +101,7 @@ https://github.com/HarveyBlocks/blog
 |   |   +---java集合
 |   |   +---java面向对象
 |   |   +---JDBC与MyBits
+|   |   |       logback.xml
 |   |   \---Redis的Java客户端
 |   +---juc
 |   |   +---juc
@@ -141,11 +138,10 @@ https://github.com/HarveyBlocks/blog
 |   |   |   \---整合第三方框架
 |   |   \---基于注解的Spring应用
 |   |       +---Bean基本注解开发
-|   |               +---整合第三方
-|   |               \---注解解析原理
+|   |       +---整合第三方
+|   |       \---注解解析原理
 |   +---spring-boot
 |   |   +---mybatis-plus
-|   |   |       Day04-入门案例md
 |   |   +---原理分析
 |   |   +---整合
 |   |   +---监控
@@ -157,7 +153,7 @@ https://github.com/HarveyBlocks/blog
 |   |   \---redis
 |   |       \---Redis项目实践
 |   |           +---GeoHash与地理坐标
-|   |           +--  好友关
+|   |           +---好友关注
 |   |           +---查询缓存
 |   |           +---短信登录
 |   |           +---秒杀
@@ -172,25 +168,26 @@ https://github.com/HarveyBlocks/blog
 |   |   \---SpringMVC请求与响应
 |   +---swagger
 |   +---其他Spring全家桶
-|   |   +---SpringTask
+|   |   \---SpringTask
 |   +---安全,认证,授权
+|   |   +---OAuth2.0和SpringCloudSecurity
 |   |   +---shiro
 |   |   +---Spring-Security
 |   |   \---分布式系统认证方案
 |   \---微服务和分布式
 |       +---Dubbo
-|           +---gRPC
-|           +---Hessian
-|           +---RPC概述
-|           +---skywalking
-|           +---spring-cloud
-|           +---微服务简述
-|           |   +---服务保护
-|           |   +---Hystrix
-|           |   \---Sentinel
-|           |   +---服务治理
-|           |   \---网关与配置管理
-|           \---zookeeper
+|       +---gRPC
+|       +---Hessian
+|       +---RPC概述
+|       +---skywalking
+|       +---spring-cloud
+|       |   +---微服务简述
+|       |   +---服务保护
+|       |   |   +---Hystrix
+|       |   |   \---Sentinel
+|       |   +---服务治理
+|       |   \---网关与配置管理
+|       \---zookeeper
 +---Kubernetes
 |   +---基础使用
 |   \---资源管理
@@ -204,93 +201,84 @@ https://github.com/HarveyBlocks/blog
 |   +---网络
 |   \---软件
 +---MongoDB
-|   \---blog
-|           +---Basic
-|           +---JavaClient
-|           +---schematic
-|           +---search
-|           \---slice
+|   +---Basic
+|   +---JavaClient
+|   +---schematic
+|   +---search
+|   \---slice
 +---MQ
 |   +---Kafka
-|   |   +---blog
 |   \---RabbitMQ
-|       +---blog
-|           +---Java客户端
-|                   +---可靠性
-|                   +---基本介绍
-|                   \---延迟消息
+|       +---Java客户端
+|       +---可靠性
+|       +---基本介绍
+|       \---延迟消息
 +---MySQL
-|   +---Blog
-|   |   +---MySQL存储过程
-|   |   +---MySQL管理
-|   |   +---SQL其他优化
-|   |   +---SQL基础
-|   |   |   +---DCL
-|   |   |   +---DDL
-|   |   |   +---DML
-|   |   |   +---DQL
-|   |   |   +---事务
-|   |   |   +---函数
-|   |   |   +---多表查询
-|   |   |   |   \---子查询
-|   |   |   \---约束
-|   |   +---SQL引擎
-|   |   +---SQL概述
-|   |   +---SQL索引
-|   |   +---中间件Docker
-|   |   +---分库分表与MyCat
-|   |   +---存储函数
-|   |   +---触发器
-|   |   +---运维
-|   |   \---锁
-|   \---blog
-|       +---代理
-|           +---基础
-|           +---核心配置文件结构与简述
-|           +---缓存集成
-|           +---负载均衡
-|           +---资源部署
-|           +---重写
-|           \---集群及其他
+|   +---MySQL存储过程
+|   +---MySQL管理
+|   +---SQL其他优化
+|   +---SQL基础
+|   |   +---DCL
+|   |   +---DDL
+|   |   +---DML
+|   |   +---DQL
+|   |   +---事务
+|   |   +---函数
+|   |   +---多表查询
+|   |   |   \---子查询
+|   |   \---约束
+|   +---SQL引擎
+|   +---SQL概述
+|   +---SQL索引
+|   +---中间件Docker
+|   +---分库分表与MyCat
+|   +---存储函数
+|   +---触发器
+|   +---运维
+|   \---锁
++---nginx
+|   +---代理
+|   +---基础
+|   +---核心配置文件结构与简述
+|   +---缓存集成
+|   +---负载均衡
+|   +---资源部署
+|   +---重写
+|   \---集群及其他
 +---NIO和Netty
-|   \---blog 
-|       +---Netty
-|           +---NIO
-|           +---优化
-|           +---源码与流程
-|           \---聊天业务
+|   +---Netty
+|   +---NIO
+|   +---优化
+|   +---源码与流程
+|   \---聊天业务
 +---Python
 |   +---pytorch
 |   +---基础
 |   +---机器学习
 |   \---深度学习
 +---Redis&Cache
-|   +---blog
-|       +---优化
-|       +---分布式缓存
-|       +---原理
-|       +---基础
-|       +---多级缓存
-|       \---非关系型数据库
+|   +---优化
+|   +---分布式缓存
+|   +---原理
+|   +---基础
+|   +---多级缓存
+|   \---非关系型数据库
 +---testing
-|   \---blog
-|       \---JMeter
+|   \---JMeter
 +---unity
-|   \---blog
-|       +---2DRPG基础
-|        \---shader graph
+|   +---2DRPG基础
+|   \---shader graph
 +---WebSocket
 +---其他
 |   \---解决MP分页全查
 \---其他文件的语法
-    +---DTD
-    +---properties
-    +---xml
-    +---XSD
-    |   +---复合元素
-    |   +---数据类型
-    |   \---简单类型
-    \---yaml
-            Day01-yaml.md
++---DTD
++---properties
++---xml
++---XSD
+|   +---复合元素
+|   +---数据类型
+|   \---简单类型
+\---yaml
 ```
 

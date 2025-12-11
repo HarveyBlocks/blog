@@ -1,5 +1,6 @@
 https://github.com/HarveyBlocks/blog
-|   make_dir_tree.bat
+|   dir-tree.txt
+|   LICENSE
 |   README.md
 |
 +---android
@@ -28,7 +29,7 @@ https://github.com/HarveyBlocks/blog
 |   |           Day01-控制流程.md
 |   |           Day01-数组.md
 |   |           Day01-类型.md
-|   |           Day01-运算符
+|   |           Day01-运算符.md
 |   |           Day02-函数.md
 |   |           Day02-接口.md
 |   |           Day02-类与对象.md
@@ -143,41 +144,40 @@ https://github.com/HarveyBlocks/blog
 |           Day03-元对象.md
 |
 +---c-sharp
-|   +---blog
-|       +---基础
-|       |       Day01-变量.md
-|       |       Day01-字符串.md
-|       |       Day01-常量.md
-|       |       Day01-控制结构.md
-|       |       Day01-数据类型.md
-|       |       Day01-概述.md
-|       |       Day01-程序结构.md
-|       |       Day01-编码样式.md
-|       |       Day01-运算符.md
-|       |       Day02-数组和集合.md
-|       |       Day02-程序入口.md
-|       |       Day03-IO.md
-|       |       Day03-预编译.md
-|       |
-|       +---面向对象
-|       |       Day01-多态性.md
-|       |       Day01-实例化对象.md
-|       |       Day02-异常.md
-|       |       Day02-泛型.md
-|       |       Day02-访问修饰.md
-|       |
-|       \---高级
-|               Day01-XML文档注释.md
-|               Day01-委托与lambda表达式.md
-|               Day01-弃元.md
-|               Day01-模式匹配.md
-|               Day02-LINQ.md
-|               Day02-方法高级.md
-|               Day03-分部.md
-|               Day03-扩展方法.md
+|   +---基础
+|   |       Day01-变量.md
+|   |       Day01-字符串.md
+|   |       Day01-常量.md
+|   |       Day01-控制结构.md
+|   |       Day01-数据类型.md
+|   |       Day01-概述.md
+|   |       Day01-程序结构.md
+|   |       Day01-编码样式.md
+|   |       Day01-运算符.md
+|   |       Day02-数组和集合.md
+|   |       Day02-程序入口.md
+|   |       Day03-IO.md
+|   |       Day03-预编译.md
+|   |
+|   +---面向对象
+|   |       Day01-多态性.md
+|   |       Day01-实例化对象.md
+|   |       Day02-异常.md
+|   |       Day02-泛型.md
+|   |       Day02-访问修饰.md
+|   |
+|   \---高级
+|           Day01-XML文档注释.md
+|           Day01-委托与lambda表达式.md
+|           Day01-弃元.md
+|           Day01-模式匹配.md
+|           Day02-LINQ.md
+|           Day02-方法高级.md
+|           Day03-分部.md
+|           Day03-扩展方法.md
 |
 +---cg
-|   +---G.md
+|       CG.md
 |
 +---compiler
 |       FileIo.md
@@ -272,20 +272,18 @@ https://github.com/HarveyBlocks/blog
 |               Day07-访问者.md
 |
 +---ES
-|   \---blog
-|       +---elasticsearch
-|               Day01-ES介绍和安装.md
-|               Day02-RestClient.md
-|               Day02-文档操作.md
-|               Day02-索引库.md
-|               Day03-DSL查询文档.md
-|               Day03-RestClient与查询.md
-|               Day04-数据聚合.md
-|               Day04-自动补全.md
-|               Day05-数据同步.md
-|               Day06-ES集群.md
-|               tb_hotel.sql
-|
+|   \---elasticsearch
+|           Day01-ES介绍和安装.md
+|           Day02-RestClient.md
+|           Day02-文档操作.md
+|           Day02-索引库.md
+|           Day03-DSL查询文档.md
+|           Day03-RestClient与查询.md
+|           Day04-数据聚合.md
+|           Day04-自动补全.md
+|           Day05-数据同步.md
+|           Day06-ES集群.md
+|           tb_hotel.sql
 |
 +---Front-end
 |   |   axios-0.18.0.js
@@ -316,6 +314,8 @@ https://github.com/HarveyBlocks/blog
 |   |   |   testJS.js
 |   |   |
 |   |   +---image
+|   |   |       cat-cat-insect.jpg
+|   |   |       warma.jpg
 |   |   |
 |   |   \---Text
 |   |           114514.html
@@ -427,59 +427,57 @@ https://github.com/HarveyBlocks/blog
 |
 +---Git
 |   \---GitBlog
-|       +---Blog
-|           |   commit message格式.md
-|           |   Git.md
-|           |
-|           +---Git与IDEA
-|           |       Day02-IDEA配置Git.md
-|           |
-|           +---Git基础
-|           |       Day01-Git分支.md
-|           |       Day01-Git分支使用流程规范.md
-|           |       Day01-Git基本原理图.md
-|           |       Day01-Git基本命令.md
-|           |       Day01-Git本地仓库.md
-|           |       Day01-简洁指令.md
-|           |
-|           \---Git远程仓库
-|                   Day02-clone.md
-|                   Day02-公私钥对.md
-|                   Day02-抓取和拉取.md
-|                   Day02-提交,获取远程仓库文件.md
+|       |   commit message格式.md
+|       |   Git.md
+|       |
+|       +---Git与IDEA
+|       |       Day02-IDEA配置Git.md
+|       |
+|       +---Git基础
+|       |       Day01-Git分支.md
+|       |       Day01-Git分支使用流程规范.md
+|       |       Day01-Git基本原理图.md
+|       |       Day01-Git基本命令.md
+|       |       Day01-Git本地仓库.md
+|       |       Day01-简洁指令.md
+|       |
+|       \---Git远程仓库
+|               Day02-clone.md
+|               Day02-公私钥对.md
+|               Day02-抓取和拉取.md
+|               Day02-提交,获取远程仓库文件.md
 |
 +---Go
-|   \---blog
-|       +---Gin
-|       |       Day01-安装第三方依赖.md
-|       |
-|       +---基础
-|       |       Day01-关键字.md
-|       |       Day01-变量.md
-|       |       Day01-基本数据类型.md
-|       |       Day01-字符串.md
-|       |       Day01-常量.md
-|       |       Day01-标识符.md
-|       |       Day01-概述.md
-|       |       Day01-注释.md
-|       |       Day01-流程控制.md
-|       |       Day01-运算符.md
-|       |       Day02-动态分配内存.md
-|       |       Day02-指针.md
-|       |       Day02-数组与切片.md
-|       |       Day03-map.md
-|       |       Day03-动态内存.md
-|       |       Day03-枚举.md
-|       |       Day03-类型别名与类型定义.md
-|       |       Day04-函数.md
-|       |
-|       \---高级
-|               Day03-文件IO.md
-|               Day04-异常机制.md
-|               Day05-伪面向对象.md
-|               Day05-包和模块.md
-|               Day05-单元测试.md
-|               Day05-并发编程.md
+|   +---Gin
+|   |       Day01-安装第三方依赖.md
+|   |
+|   +---基础
+|   |       Day01-关键字.md
+|   |       Day01-变量.md
+|   |       Day01-基本数据类型.md
+|   |       Day01-字符串.md
+|   |       Day01-常量.md
+|   |       Day01-标识符.md
+|   |       Day01-概述.md
+|   |       Day01-注释.md
+|   |       Day01-流程控制.md
+|   |       Day01-运算符.md
+|   |       Day02-动态分配内存.md
+|   |       Day02-指针.md
+|   |       Day02-数组与切片.md
+|   |       Day03-map.md
+|   |       Day03-动态内存.md
+|   |       Day03-枚举.md
+|   |       Day03-类型别名与类型定义.md
+|   |       Day04-函数.md
+|   |
+|   \---高级
+|           Day03-文件IO.md
+|           Day04-异常机制.md
+|           Day05-伪面向对象.md
+|           Day05-包和模块.md
+|           Day05-单元测试.md
+|           Day05-并发编程.md
 |
 +---Java
 |   |   Interface Collection.xmind
@@ -546,6 +544,7 @@ https://github.com/HarveyBlocks/blog
 |   |   |       Day07-小阳人，快捷键.md
 |   |   |       Day08-数组.md
 |   |   |       Day15-关键字大全.md
+|   |   |       image-20231007162807543.png
 |   |   |
 |   |   +---java多綫程
 |   |   |   |   Day17-多綫程概念.md
@@ -696,7 +695,7 @@ https://github.com/HarveyBlocks/blog
 |   |   |       Day21-Set.md
 |   |   |       Day21-泛型集合.md
 |   |   |       Day22-TreeSet.md
-|   |   |       Day23-HashMap[重点]
+|   |   |       Day23-HashMap[重点].md
 |   |   |       Day23-Map父接口.md
 |   |   |       Day23-Map集合体系.md
 |   |   |       Day23-Properties.md
@@ -873,9 +872,8 @@ https://github.com/HarveyBlocks/blog
 |   |           Day06-组成部分.md
 |   |
 |   +---maven
-|   |   +---blog
-|   |           Day01-maven概述.md
-|   |           Day01-maven高级.md
+|   |       Day01-maven概述.md
+|   |       Day01-maven高级.md
 |   |
 |   +---spring-blog
 |   |   +---AOP开发
@@ -956,7 +954,7 @@ https://github.com/HarveyBlocks/blog
 |   |
 |   +---spring-boot
 |   |   +---mybatis-plus
-|   |   |       Day04-入门案例md
+|   |   |       Day04-入门案例.md
 |   |   |       Day05-Service接口.md
 |   |   |       Day05-条件构造器.md
 |   |   |       Day05-自定义SQL.md
@@ -1088,13 +1086,12 @@ https://github.com/HarveyBlocks/blog
 |   |           Day04-异步响应.md
 |   |
 |   +---swagger
-|   |   +---blog
-|   |           Day01-Knife4j.md
-|   |           Day01-Swagger概述.md
-|   |           Day01-使用Swagger.md
+|   |       Day01-Knife4j.md
+|   |       Day01-Swagger概述.md
+|   |       Day01-使用Swagger.md
 |   |
 |   +---其他Spring全家桶
-|   |   +---SpringTask
+|   |   \---SpringTask
 |   |           Day01-SpringTask概述.md
 |   |
 |   +---安全,认证,授权
@@ -1290,445 +1287,437 @@ https://github.com/HarveyBlocks/blog
 |           Day06-集群与scp命令.md
 |
 +---MongoDB
-|   +---blog
-|       |   CheckList.md
-|       |
-|       +---Basic
-|       |       Day01-Install.md
-|       |       Day01-Overview.md
-|       |       Day02-BSON.md
-|       |       Day02-Collection.md
-|       |       Day02-CRUD.md
-|       |       Day02-Database.md
-|       |       Day02-Document.md
-|       |       Day03-schema-validation.md
-|       |
-|       +---JavaClient
-|       |       Day03-Connection.md
-|       |       Day03-Database&Collection.md
-|       |       Day03-Demo.md
-|       |       Day03-Document.md
-|       |       Day04-Query on Array&Object.md
-|       |       Day04-Query.md
-|       |       Day05-Aggregate.md
-|       |       Day06-Aggregate optimization.md
-|       |       Day06-lookup.md
-|       |       Day06-View.md
-|       |       Day07-Geography.md
-|       |       Day07-Index.md
-|       |       Day08-事务.md
-|       |
-|       +---schematic
-|       |       Day02-Store.md
-|       |
-|       +---search
-|       |       Day07-地理查询.md
-|       |       index.md
-|       |
-|       \---slice
-|               aggregation.md
-|               bulk.md
+|   |   CheckList.md
+|   |
+|   +---Basic
+|   |       Day01-Install.md
+|   |       Day01-Overview.md
+|   |       Day02-BSON.md
+|   |       Day02-Collection.md
+|   |       Day02-CRUD.md
+|   |       Day02-Database.md
+|   |       Day02-Document.md
+|   |       Day03-schema-validation.md
+|   |
+|   +---JavaClient
+|   |       Day03-Connection.md
+|   |       Day03-Database&Collection.md
+|   |       Day03-Demo.md
+|   |       Day03-Document.md
+|   |       Day04-Query on Array&Object.md
+|   |       Day04-Query.md
+|   |       Day05-Aggregate.md
+|   |       Day06-Aggregate optimization.md
+|   |       Day06-lookup.md
+|   |       Day06-View.md
+|   |       Day07-Geography.md
+|   |       Day07-Index.md
+|   |       Day08-事务.md
+|   |
+|   +---schematic
+|   |       Day02-Store.md
+|   |
+|   +---search
+|   |       Day07-地理查询.md
+|   |       index.md
+|   |
+|   \---slice
+|           aggregation.md
+|           bulk.md
 |
 +---MQ
 |   +---Kafka
-|   |   +---blog
-|   |           Day05-Kafka简介.md
-|   |           Day05-topic与消息.md
-|   |           Day05-基准测试.md
+|   |       Day05-Kafka简介.md
+|   |       Day05-topic与消息.md
+|   |       Day05-基准测试.md
 |   |
 |   \---RabbitMQ
-|       +---blog
-|           +---Java客户端
-|           |       Day02-AMQP.md
-|           |       Day02-Direct交换机.md
-|           |       Day02-Fanout交换机.md
-|           |       Day02-Topic交换机.md
-|           |       Day02-声明式队列交换机.md
-|           |       Day02-工作队列.md
-|           |       Day02-消息转换器.md
-|           |       Day02-用消息队列代替OpenFeign.md
-|           |
-|           +---可靠性
-|           |       Day02-可靠性问题.md
-|           |       Day03-业务幂等.md
-|           |       Day03-消息代理的可靠性.md
-|           |       Day03-消费者的可靠性.md
-|           |       Day03-生产者的可靠性.md
-|           |
-|           +---基本介绍
-|           |       Day01-异步通讯组件.md
-|           |       Day02-MQ技术选型.md
-|           |       Day02-RabbitMQ简介.md
-|           |
-|           \---延迟消息
-|                   Day03-概念.md
-|                   Day04-延迟消息插件.md
-|                   Day04-死信交换机.md
-|                   Day04-订单支付倒计时.md
+|       +---Java客户端
+|       |       Day02-AMQP.md
+|       |       Day02-Direct交换机.md
+|       |       Day02-Fanout交换机.md
+|       |       Day02-Topic交换机.md
+|       |       Day02-声明式队列交换机.md
+|       |       Day02-工作队列.md
+|       |       Day02-消息转换器.md
+|       |       Day02-用消息队列代替OpenFeign.md
+|       |
+|       +---可靠性
+|       |       Day02-可靠性问题.md
+|       |       Day03-业务幂等.md
+|       |       Day03-消息代理的可靠性.md
+|       |       Day03-消费者的可靠性.md
+|       |       Day03-生产者的可靠性.md
+|       |
+|       +---基本介绍
+|       |       Day01-异步通讯组件.md
+|       |       Day02-MQ技术选型.md
+|       |       Day02-RabbitMQ简介.md
+|       |
+|       \---延迟消息
+|               Day03-概念.md
+|               Day04-延迟消息插件.md
+|               Day04-死信交换机.md
+|               Day04-订单支付倒计时.md
 |
 +---MySQL
 |   |   SELECT语句执行顺序.xmind
 |   |   SQL指令汇总1.0.xlsx
+|   |   数据库概述.md
 |   |
-|   +---Blog
-|   |   |   数据库概述.md
-|   |   |   用户变量.md
-|   |   |
-|   |   +---MySQL存储过程
-|   |   |       Day09-变量.md
-|   |   |       Day09-存储过程.md
-|   |   |       Day09-存储过程基本语法.md
-|   |   |       Day09-检查选项.md
-|   |   |       Day09-用户变量.md
-|   |   |       Day09-视图概述和简单应用.md
-|   |   |       Day10-分支语句.md
-|   |   |       Day10-局部变量.md
-|   |   |       Day10-循环语句.md
-|   |   |       Day11-条件处理程序.md
-|   |   |       Day11-游标.md
-|   |   |
-|   |   +---MySQL管理
-|   |   |       Day12-常用工具.md
-|   |   |       Day12-系统数据库.md
-|   |   |
-|   |   +---SQL其他优化
-|   |   |       Day09-count优化.md
-|   |   |       Day09-groupby优化.md
-|   |   |       Day09-limit优化.md
-|   |   |       Day09-orderby优化.md
-|   |   |       Day09-Update优化.md
-|   |   |       Day09-主键优化.md
-|   |   |       Day09-插入优化.md
-|   |   |
-|   |   +---SQL基础
-|   |   |   |   Day02-MySQL数据类型.md
-|   |   |   |   Day03-DataGrip.md
-|   |   |   |   Day03-where条件判断语句.md
-|   |   |   |   DML,DDL数据库增删改查指令总结.md
-|   |   |   |
-|   |   |   +---DCL
-|   |   |   |       Day04-DCL权限控制.md
-|   |   |   |       Day04-DCL概述.md
-|   |   |   |       Day04-DCL用户增删改查.md
-|   |   |   |
-|   |   |   +---DDL
-|   |   |   |       Day02-DDL概述.md
-|   |   |   |       Day02-SQL通用语言.md
-|   |   |   |       Day02-列的操作.md
-|   |   |   |       Day02-数据库操作.md
-|   |   |   |       Day02-数据表操作.md
-|   |   |   |
-|   |   |   +---DML
-|   |   |   |       Day03-DML概述
-|   |   |   |       Day03-记录增删改.md
-|   |   |   |
-|   |   |   +---DQL
-|   |   |   |       Day03-DQL执行顺序.md
-|   |   |   |       Day03-DQL概述.md
-|   |   |   |       Day03-单表查询.md
-|   |   |   |
-|   |   |   +---事务
-|   |   |   |       Day06-事务操作.md
-|   |   |   |       Day06-事务的特性.md
-|   |   |   |       Day06-事务简介.md
-|   |   |   |       Day06-并发事务.md
-|   |   |   |
-|   |   |   +---函数
-|   |   |   |       Day04-函数概述.md
-|   |   |   |       Day04-字符串函数.md
-|   |   |   |       Day04-数值函数.md
-|   |   |   |       Day04-日期函数.md
-|   |   |   |       Day04-流程函数.md
-|   |   |   |
-|   |   |   +---多表查询
-|   |   |   |   |   Day05-内连接.md
-|   |   |   |   |   Day05-外连接.md
-|   |   |   |   |   Day05-多表关系.md
-|   |   |   |   |   Day05-多表查询概述.md
-|   |   |   |   |   Day05-联合查询.md
-|   |   |   |   |   Day05-自连接.md
-|   |   |   |   |
-|   |   |   |   \---子查询
-|   |   |   |           Day05-列子查询.md
-|   |   |   |           Day05-子查询概述和分类.md
-|   |   |   |           Day05-标量子查询.md
-|   |   |   |           Day05-行子查询.md
-|   |   |   |           Day05-表子查询.md
-|   |   |   |
-|   |   |   \---约束
-|   |   |           Day04-外键约束.md
-|   |   |           Day04-约束实践与应用.md
-|   |   |           Day04-约束概述.md
-|   |   |
-|   |   +---SQL引擎
-|   |   |       Day07-MySQL存储引擎.md
-|   |   |       Day11-InnoDBMVCC.md
-|   |   |       Day11-InnoDB事务原理.md
-|   |   |       Day11-InnoDB架构.md
-|   |   |       Day11-InnoDB逻辑存储结构.md
-|   |   |
-|   |   +---SQL概述
-|   |   |       Day01-关系型数据库.md
-|   |   |       Day02-MySQL数据模型.md
-|   |   |       Day02-启动MySQL.md
-|   |   |       Day06-数据库设计范式.md
-|   |   |       Day06-更改核心配置文件添加日志.md
-|   |   |
-|   |   +---SQL索引
-|   |   |       Day07-InnoDB索引增删查.md
-|   |   |       Day07-性能分析.md
-|   |   |       Day07-索引.md
-|   |   |       Day08-SQL提示.md
-|   |   |       Day08-前缀索引.md
-|   |   |       Day08-单列索引和联合索引.md
-|   |   |       Day08-索引使用原则.md
-|   |   |       Day08-索引的设计原则.md
-|   |   |       Day08-覆盖索引.md
-|   |   |
-|   |   +---中间件Docker
-|   |   |       Day15-Docker命令.md
-|   |   |       Day15-Docker安装与配置MySQL.md
-|   |   |       Day16-DockerCompose.md
-|   |   |       Day16-数据卷.md
-|   |   |       Day16-网络.md
-|   |   |       Day16-自定义镜像.md
-|   |   |       Day16-部署应用.md
-|   |   |
-|   |   +---分库分表与MyCat
-|   |   |       Day12-MyCat中间件.md
-|   |   |       Day12-分库分表.md
-|   |   |       Day12-分库分表及MyCat入门.md
-|   |   |       Day13-MyCat分片和分片规则.md
-|   |   |       Day14-MyCat管理及监控.md
-|   |   |       Day14-MyCat配置.md
-|   |   |
-|   |   +---存储函数
-|   |   |       Day10-存储函数.md
-|   |   |
-|   |   +---触发器
-|   |   |       Day10-触发器操作.md
-|   |   |       Day10-触发器概述.md
-|   |   |
-|   |   +---运维
-|   |   |       Day12-主从复制.md
-|   |   |       Day12-日志.md
-|   |   |       Day15-读写分离.md
-|   |   |
-|   |   \---锁
-|   |           Day10-全局锁.md
-|   |           Day10-行级锁.md
-|   |           Day10-表级锁.md
-|   |           Day10-锁的概述.md
+|   +---MySQL存储过程
+|   |       Day09-变量.md
+|   |       Day09-存储过程.md
+|   |       Day09-存储过程基本语法.md
+|   |       Day09-检查选项.md
+|   |       Day09-用户变量.md
+|   |       Day09-视图概述和简单应用.md
+|   |       Day10-分支语句.md
+|   |       Day10-局部变量.md
+|   |       Day10-循环语句.md
+|   |       Day11-条件处理程序.md
+|   |       Day11-游标.md
 |   |
-|   \---blog
-|       +---代理
-|       |       Day06-反向代理.md
-|       |       Day06-正向代理.md
-|       |       Day07-SSL安全.md
-|       |       Day07-系统优化.md
-|       |
-|       +---基础
-|       |       Day01-概述.md
-|       |       Day02-下载安装.md
-|       |       Day02-功能特性和常用功能.md
-|       |       Day03-简单使用.md
-|       |       Day04-服务器升级和新增模块.md
-|       |
-|       +---核心配置文件结构与简述
-|       |       Day04-events块.md
-|       |       Day04-http块.md
-|       |       Day04-全局块.md
-|       |       Day04-核心配置文件.md
-|       |
-|       +---缓存集成
-|       |       Day08-Nginx本地缓存.md
-|       |       Day08-配置.md
-|       |
-|       +---负载均衡
-|       |       Day07-DNS轮询.md
-|       |       Day07-概述.md
-|       |       Day07-状态.md
-|       |       Day07-策略.md
-|       |
-|       +---资源部署
-|       |       Day04-压缩指令.md
-|       |       Day04-缓存处理.md
-|       |       Day04-访问控制.md
-|       |       Day04-配置优化.md
-|       |       Day04-配置指令.md
-|       |       Day04-静态资源与动态资源.md
-|       |
-|       +---重写
-|       |       Day05-break.md
-|       |       Day05-if指令.md
-|       |       Day05-return.md
-|       |       Day05-Rewrite.md
-|       |       Day05-变量.md
-|       |
-|       \---集群及其他
-|               Day08-Keepalived.md
-|               Day08-下载站点.md
-|               Day08-代理服务器集群.md
-|               Day08-动静分离.md
-|               Day08-用户认证.md
+|   +---MySQL管理
+|   |       Day12-常用工具.md
+|   |       Day12-系统数据库.md
+|   |
+|   +---SQL其他优化
+|   |       Day09-count优化.md
+|   |       Day09-groupby优化.md
+|   |       Day09-limit优化.md
+|   |       Day09-orderby优化.md
+|   |       Day09-Update优化.md
+|   |       Day09-主键优化.md
+|   |       Day09-插入优化.md
+|   |
+|   +---SQL基础
+|   |   |   Day02-MySQL数据类型.md
+|   |   |   Day03-DataGrip.md
+|   |   |   Day03-where条件判断语句.md
+|   |   |   DML,DDL数据库增删改查指令总结.md
+|   |   |
+|   |   +---DCL
+|   |   |       Day04-DCL权限控制.md
+|   |   |       Day04-DCL概述.md
+|   |   |       Day04-DCL用户增删改查.md
+|   |   |
+|   |   +---DDL
+|   |   |       Day02-DDL概述.md
+|   |   |       Day02-SQL通用语言.md
+|   |   |       Day02-列的操作.md
+|   |   |       Day02-数据库操作.md
+|   |   |       Day02-数据表操作.md
+|   |   |
+|   |   +---DML
+|   |   |       Day03-DML概述.md
+|   |   |       Day03-记录增删改.md
+|   |   |
+|   |   +---DQL
+|   |   |       Day03-DQL执行顺序.md
+|   |   |       Day03-DQL概述.md
+|   |   |       Day03-单表查询.md
+|   |   |
+|   |   +---事务
+|   |   |       Day06-事务操作.md
+|   |   |       Day06-事务的特性.md
+|   |   |       Day06-事务简介.md
+|   |   |       Day06-并发事务.md
+|   |   |
+|   |   +---函数
+|   |   |       Day04-函数概述.md
+|   |   |       Day04-字符串函数.md
+|   |   |       Day04-数值函数.md
+|   |   |       Day04-日期函数.md
+|   |   |       Day04-流程函数.md
+|   |   |
+|   |   +---多表查询
+|   |   |   |   Day05-内连接.md
+|   |   |   |   Day05-外连接.md
+|   |   |   |   Day05-多表关系.md
+|   |   |   |   Day05-多表查询概述.md
+|   |   |   |   Day05-联合查询.md
+|   |   |   |   Day05-自连接.md
+|   |   |   |
+|   |   |   \---子查询
+|   |   |           Day05-列子查询.md
+|   |   |           Day05-子查询概述和分类.md
+|   |   |           Day05-标量子查询.md
+|   |   |           Day05-行子查询.md
+|   |   |           Day05-表子查询.md
+|   |   |
+|   |   \---约束
+|   |           Day04-外键约束.md
+|   |           Day04-约束实践与应用.md
+|   |           Day04-约束概述.md
+|   |
+|   +---SQL引擎
+|   |       Day07-MySQL存储引擎.md
+|   |       Day11-InnoDBMVCC.md
+|   |       Day11-InnoDB事务原理.md
+|   |       Day11-InnoDB架构.md
+|   |       Day11-InnoDB逻辑存储结构.md
+|   |
+|   +---SQL概述
+|   |       Day01-关系型数据库.md
+|   |       Day02-MySQL数据模型.md
+|   |       Day02-启动MySQL.md
+|   |       Day06-数据库设计范式.md
+|   |       Day06-更改核心配置文件添加日志.md
+|   |
+|   +---SQL索引
+|   |       Day07-InnoDB索引增删查.md
+|   |       Day07-性能分析.md
+|   |       Day07-索引.md
+|   |       Day08-SQL提示.md
+|   |       Day08-前缀索引.md
+|   |       Day08-单列索引和联合索引.md
+|   |       Day08-索引使用原则.md
+|   |       Day08-索引的设计原则.md
+|   |       Day08-覆盖索引.md
+|   |
+|   +---中间件Docker
+|   |       Day15-Docker命令.md
+|   |       Day15-Docker安装与配置MySQL.md
+|   |       Day16-DockerCompose.md
+|   |       Day16-数据卷.md
+|   |       Day16-网络.md
+|   |       Day16-自定义镜像.md
+|   |       Day16-部署应用.md
+|   |
+|   +---分库分表与MyCat
+|   |       Day12-MyCat中间件.md
+|   |       Day12-分库分表.md
+|   |       Day12-分库分表及MyCat入门.md
+|   |       Day13-MyCat分片和分片规则.md
+|   |       Day14-MyCat管理及监控.md
+|   |       Day14-MyCat配置.md
+|   |
+|   +---存储函数
+|   |       Day10-存储函数.md
+|   |
+|   +---触发器
+|   |       Day10-触发器操作.md
+|   |       Day10-触发器概述.md
+|   |
+|   +---运维
+|   |       Day12-主从复制.md
+|   |       Day12-日志.md
+|   |       Day15-读写分离.md
+|   |
+|   \---锁
+|           Day10-全局锁.md
+|           Day10-行级锁.md
+|           Day10-表级锁.md
+|           Day10-锁的概述.md
+|
++---nginx
+|   +---代理
+|   |       Day06-反向代理.md
+|   |       Day06-正向代理.md
+|   |       Day07-SSL安全.md
+|   |       Day07-系统优化.md
+|   |
+|   +---基础
+|   |       Day01-概述.md
+|   |       Day02-下载安装.md
+|   |       Day02-功能特性和常用功能.md
+|   |       Day03-简单使用.md
+|   |       Day04-服务器升级和新增模块.md
+|   |
+|   +---核心配置文件结构与简述
+|   |       Day04-events块.md
+|   |       Day04-http块.md
+|   |       Day04-全局块.md
+|   |       Day04-核心配置文件.md
+|   |
+|   +---缓存集成
+|   |       Day08-Nginx本地缓存.md
+|   |       Day08-配置.md
+|   |
+|   +---负载均衡
+|   |       Day07-DNS轮询.md
+|   |       Day07-概述.md
+|   |       Day07-状态.md
+|   |       Day07-策略.md
+|   |
+|   +---资源部署
+|   |       big.png
+|   |       Day04-压缩指令.md
+|   |       Day04-缓存处理.md
+|   |       Day04-访问控制.md
+|   |       Day04-配置优化.md
+|   |       Day04-配置指令.md
+|   |       Day04-静态资源与动态资源.md
+|   |
+|   +---重写
+|   |       Day05-break.md
+|   |       Day05-if指令.md
+|   |       Day05-return.md
+|   |       Day05-Rewrite.md
+|   |       Day05-变量.md
+|   |
+|   \---集群及其他
+|           Day08-Keepalived.md
+|           Day08-下载站点.md
+|           Day08-代理服务器集群.md
+|           Day08-动静分离.md
+|           Day08-用户认证.md
 |
 +---NIO和Netty
+|   +---Netty
+|   |       Day05-Channel.md
+|   |       Day05-EventLoop.md
+|   |       Day05-Netty的简单使用.md
+|   |       Day05-概述.md
+|   |       Day06-ByteBuf.md
+|   |       Day06-Future&Promise.md
+|   |       Day06-Pipeline&Handler.md
+|   |       Day07-粘包和半包.md
+|   |       Day08-协议的解析和设计.md
 |   |
-|   \---blog
-|       +---Netty
-|       |       Day05-Channel.md
-|       |       Day05-EventLoop.md
-|       |       Day05-Netty的简单使用.md
-|       |       Day05-概述.md
-|       |       Day06-ByteBuf.md
-|       |       Day06-Future&Promise.md
-|       |       Day06-Pipeline&Handler.md
-|       |       Day07-粘包和半包.md
-|       |       Day08-协议的解析和设计.md
+|   +---NIO
+|   |       Day01-ByteBuffer的使用.md
+|   |       Day01-NIO和三大组件.md
+|   |       Day02-Channel.md
+|   |       Day02-Paths与Files.md
+|   |       Day03-Selector.md
+|   |       Day03-阻塞模式.md
+|   |       Day03-非阻塞模式.md
+|   |       Day04-可写事件.md
+|   |       Day04-多线程优化.md
+|   |       Day04-消息边界.md
+|   |       Day05-异步IO.md
+|   |
+|   +---优化
+|   |       Day10-序列化.md
+|   |       Day11-RPC.md
+|   |       Day11-参数调优.md
+|   |
+|   +---源码与流程
+|   |       Day10-启动流程.md
+|   |       Day11-NioEventLoop.md
+|   |       Day11-事件执行流程.md
+|   |
+|   \---聊天业务
+|       |   Day08-介绍.md
+|       |   Day08-登录.md
+|       |   Day08-解析命令.md
+|       |   Day09-私信.md
+|       |   Day09-空闲.md
+|       |   Day09-群聊.md
+|       |   Day09-退出.md
 |       |
-|       +---NIO
-|       |       Day01-ByteBuffer的使用.md
-|       |       Day01-NIO和三大组件.md
-|       |       Day02-Channel.md
-|       |       Day02-Paths与Files.md
-|       |       Day03-Selector.md
-|       |       Day03-阻塞模式.md
-|       |       Day03-非阻塞模式.md
-|       |       Day04-可写事件.md
-|       |       Day04-多线程优化.md
-|       |       Day04-消息边界.md
-|       |       Day05-异步IO.md
-|       |
-|       +---优化
-|       |       Day10-序列化.md
-|       |       Day11-RPC.md
-|       |       Day11-参数调优.md
-|       |
-|       +---源码与流程
-|       |       Day10-启动流程.md
-|       |       Day11-NioEventLoop.md
-|       |       Day11-事件执行流程.md
-|       |
-|       \---聊天业务
-|           |   Day08-介绍.md
-|           |   Day08-登录.md
-|           |   Day08-解析命令.md
-|           |   Day09-私信.md
-|           |   Day09-空闲.md
-|           |   Day09-群聊.md
-|           |   Day09-退出.md
+|       \---src
+|           +---main
+|           |   +---java
+|           |   |   |   lombok.config
+|           |   |   |
+|           |   |   \---com
+|           |   |       \---harvey
+|           |   |           \---netty
+|           |   |               +---client
+|           |   |               |   |   ChatClient.java
+|           |   |               |   |   RpcClient.java
+|           |   |               |   |   RpcClientManager.java
+|           |   |               |   |
+|           |   |               |   +---handler
+|           |   |               |   |       ClientLoginHandler.java
+|           |   |               |   |       GroupCreateResultHandler.java
+|           |   |               |   |       GroupJoinResultHandler.java
+|           |   |               |   |       GroupMembersResultHandler.java
+|           |   |               |   |       GroupQuitResultHandler.java
+|           |   |               |   |       Handlers.java
+|           |   |               |   |       OnlineOfflineHandler.java
+|           |   |               |   |       ParseCommand.java
+|           |   |               |   |       PongHandler.java
+|           |   |               |   |       ReceiveGroupChatHandler.java
+|           |   |               |   |       ReceivePersonChatHandler.java
+|           |   |               |   |       RpcResponseMessageHandler.java
+|           |   |               |   |
+|           |   |               |   \---proxy
+|           |   |               |           ServiceProxy.java
+|           |   |               |
+|           |   |               +---message
+|           |   |               |       AbstractResponseMessage.java
+|           |   |               |       ChatRequestMessage.java
+|           |   |               |       ChatResponseMessage.java
+|           |   |               |       GroupChatRequestMessage.java
+|           |   |               |       GroupChatResponseMessage.java
+|           |   |               |       GroupCreateRequestMessage.java
+|           |   |               |       GroupCreateResponseMessage.java
+|           |   |               |       GroupJoinRequestMessage.java
+|           |   |               |       GroupJoinResponseMessage.java
+|           |   |               |       GroupMembersRequestMessage.java
+|           |   |               |       GroupMembersResponseMessage.java
+|           |   |               |       GroupQuitRequestMessage.java
+|           |   |               |       GroupQuitResponseMessage.java
+|           |   |               |       LoginRequestMessage.java
+|           |   |               |       LoginResponseMessage.java
+|           |   |               |       Message.java
+|           |   |               |       OnlineOfflineMessage.java
+|           |   |               |       PingMessage.java
+|           |   |               |       RpcRequestMessage.java
+|           |   |               |       RpcResponseMessage.java
+|           |   |               |
+|           |   |               +---protocol
+|           |   |               |       GsonClassSerializer.java
+|           |   |               |       MessageCodec.java
+|           |   |               |       MessageCodecSharable.java
+|           |   |               |       ProtocolFrameDecoder.java
+|           |   |               |       Serializer.java
+|           |   |               |       Snowflake.java
+|           |   |               |
+|           |   |               \---server
+|           |   |                   |   ChatServer.java
+|           |   |                   |   RpcServer.java
+|           |   |                   |
+|           |   |                   +---config
+|           |   |                   |       Config.java
+|           |   |                   |
+|           |   |                   +---handler
+|           |   |                   |       ChatHandler.java
+|           |   |                   |       GroupChatHandler.java
+|           |   |                   |       GroupCreateHandler.java
+|           |   |                   |       GroupJoinHandler.java
+|           |   |                   |       GroupMembersHandler.java
+|           |   |                   |       GroupQuitHandler.java
+|           |   |                   |       PingHandler.java
+|           |   |                   |       QuitHandler.java
+|           |   |                   |       RpcRequestMessageHandler.java
+|           |   |                   |       ServiceLoginHandler.java
+|           |   |                   |
+|           |   |                   +---service
+|           |   |                   |       HelloService.java
+|           |   |                   |       HelloServiceImpl.java
+|           |   |                   |       ServiceFactory.java
+|           |   |                   |       UserService.java
+|           |   |                   |       UserServiceFactory.java
+|           |   |                   |       UserServiceMemoryImpl.java
+|           |   |                   |
+|           |   |                   \---session
+|           |   |                           Group.java
+|           |   |                           GroupSession.java
+|           |   |                           GroupSessionFactory.java
+|           |   |                           GroupSessionMemoryImpl.java
+|           |   |                           Session.java
+|           |   |                           SessionFactory.java
+|           |   |                           SessionMemoryImpl.java
+|           |   |
+|           |   \---resources
+|           |           application.properties
+|           |           logback.xml
 |           |
-|           \---src
-|               +---main
-|               |   +---java
-|               |   |   |   lombok.config
-|               |   |   |
-|               |   |   \---com
-|               |   |       \---harvey
-|               |   |           \---netty
-|               |   |               +---client
-|               |   |               |   |   ChatClient.java
-|               |   |               |   |   RpcClient.java
-|               |   |               |   |   RpcClientManager.java
-|               |   |               |   |
-|               |   |               |   +---handler
-|               |   |               |   |       ClientLoginHandler.java
-|               |   |               |   |       GroupCreateResultHandler.java
-|               |   |               |   |       GroupJoinResultHandler.java
-|               |   |               |   |       GroupMembersResultHandler.java
-|               |   |               |   |       GroupQuitResultHandler.java
-|               |   |               |   |       Handlers.java
-|               |   |               |   |       OnlineOfflineHandler.java
-|               |   |               |   |       ParseCommand.java
-|               |   |               |   |       PongHandler.java
-|               |   |               |   |       ReceiveGroupChatHandler.java
-|               |   |               |   |       ReceivePersonChatHandler.java
-|               |   |               |   |       RpcResponseMessageHandler.java
-|               |   |               |   |
-|               |   |               |   \---proxy
-|               |   |               |           ServiceProxy.java
-|               |   |               |
-|               |   |               +---message
-|               |   |               |       AbstractResponseMessage.java
-|               |   |               |       ChatRequestMessage.java
-|               |   |               |       ChatResponseMessage.java
-|               |   |               |       GroupChatRequestMessage.java
-|               |   |               |       GroupChatResponseMessage.java
-|               |   |               |       GroupCreateRequestMessage.java
-|               |   |               |       GroupCreateResponseMessage.java
-|               |   |               |       GroupJoinRequestMessage.java
-|               |   |               |       GroupJoinResponseMessage.java
-|               |   |               |       GroupMembersRequestMessage.java
-|               |   |               |       GroupMembersResponseMessage.java
-|               |   |               |       GroupQuitRequestMessage.java
-|               |   |               |       GroupQuitResponseMessage.java
-|               |   |               |       LoginRequestMessage.java
-|               |   |               |       LoginResponseMessage.java
-|               |   |               |       Message.java
-|               |   |               |       OnlineOfflineMessage.java
-|               |   |               |       PingMessage.java
-|               |   |               |       RpcRequestMessage.java
-|               |   |               |       RpcResponseMessage.java
-|               |   |               |
-|               |   |               +---protocol
-|               |   |               |       GsonClassSerializer.java
-|               |   |               |       MessageCodec.java
-|               |   |               |       MessageCodecSharable.java
-|               |   |               |       ProtocolFrameDecoder.java
-|               |   |               |       Serializer.java
-|               |   |               |       Snowflake.java
-|               |   |               |
-|               |   |               \---server
-|               |   |                   |   ChatServer.java
-|               |   |                   |   RpcServer.java
-|               |   |                   |
-|               |   |                   +---config
-|               |   |                   |       Config.java
-|               |   |                   |
-|               |   |                   +---handler
-|               |   |                   |       ChatHandler.java
-|               |   |                   |       GroupChatHandler.java
-|               |   |                   |       GroupCreateHandler.java
-|               |   |                   |       GroupJoinHandler.java
-|               |   |                   |       GroupMembersHandler.java
-|               |   |                   |       GroupQuitHandler.java
-|               |   |                   |       PingHandler.java
-|               |   |                   |       QuitHandler.java
-|               |   |                   |       RpcRequestMessageHandler.java
-|               |   |                   |       ServiceLoginHandler.java
-|               |   |                   |
-|               |   |                   +---service
-|               |   |                   |       HelloService.java
-|               |   |                   |       HelloServiceImpl.java
-|               |   |                   |       ServiceFactory.java
-|               |   |                   |       UserService.java
-|               |   |                   |       UserServiceFactory.java
-|               |   |                   |       UserServiceMemoryImpl.java
-|               |   |                   |
-|               |   |                   \---session
-|               |   |                           Group.java
-|               |   |                           GroupSession.java
-|               |   |                           GroupSessionFactory.java
-|               |   |                           GroupSessionMemoryImpl.java
-|               |   |                           Session.java
-|               |   |                           SessionFactory.java
-|               |   |                           SessionMemoryImpl.java
-|               |   |
-|               |   \---resources
-|               |           application.properties
-|               |           logback.xml
-|               |
-|               \---test
-|                   \---java
-|                       \---com
-|                           \---harvey
-|                               \---netty
-|                                   \---protocal
-|                                           MessageCodecTest.java
-|                                           TimeoutTest.java
+|           \---test
+|               \---java
+|                   \---com
+|                       \---harvey
+|                           \---netty
+|                               \---protocal
+|                                       MessageCodecTest.java
+|                                       TimeoutTest.java
 |
 +---Python
-|   |
 |   +---pytorch
 |   |       Day04-概述.md
 |   |       Day06-Tensor.md
@@ -1776,102 +1765,97 @@ https://github.com/HarveyBlocks/blog
 |           Day07-概述.md
 |
 +---Redis&Cache
-|   +---blog
-|       |   redis.conf
-|       |
-|       +---优化
-|       |       Day11-批处理.md
-|       |       Day11-服务端.md
-|       |       Day11-键值设计.md
-|       |       Day11-集群选择.md
-|       |
-|       +---分布式缓存
-|       |       Day05-AOF持久化.md
-|       |       Day05-RDB持久化.md
-|       |       Day05-主从集群.md
-|       |       Day05-分布式缓存.md
-|       |       Day06-哨兵机制.md
-|       |       Day07-分片集群.md
-|       |
-|       +---原理
-|       |       Day12-Dict.md
-|       |       Day12-IntSet.md
-|       |       Day12-SDS.md
-|       |       Day12-ZipList.md
-|       |       Day13-QuickList.md
-|       |       Day13-RedisObject.md
-|       |       Day13-SkipList.md
-|       |       Day13-数据类型和编码.md
-|       |       ZipList连续更新问题.mp4
-|       |
-|       +---基础
-|       |       Day01-Hash类型.md
-|       |       Day01-字符串.md
-|       |       Day01-层级结构.md
-|       |       Day01-数据结构与通用命令.md
-|       |       Day02-List类型.md
-|       |       Day02-Set.md
-|       |       Day02-SortedSet.md
-|       |       Day02-客户端.md
-|       |       Day03-消息队列与Stream.md
-|       |       Day04-BitMap.md
-|       |       Day04-Geo数据结构.md
-|       |       Day04-HyperLogLog.md
-|       |
-|       +---多级缓存
-|       |       Day07-多级缓存概述.md
-|       |       Day08-JVM进程缓存.md
-|       |       Day09-Lua.md
-|       |       Day09-OpenResty.md
-|       |       Day10-缓存同步.md
-|       |       安装Canal.md
-|       |       安装OpenResty.md
-|       |
-|       \---非关系型数据库
-|               Day01-NoSQL.md
-|               Day01-Radis.md
+|   |   redis.conf
+|   |
+|   +---优化
+|   |       Day11-批处理.md
+|   |       Day11-服务端.md
+|   |       Day11-键值设计.md
+|   |       Day11-集群选择.md
+|   |
+|   +---分布式缓存
+|   |       Day05-AOF持久化.md
+|   |       Day05-RDB持久化.md
+|   |       Day05-主从集群.md
+|   |       Day05-分布式缓存.md
+|   |       Day06-哨兵机制.md
+|   |       Day07-分片集群.md
+|   |
+|   +---原理
+|   |       Day12-Dict.md
+|   |       Day12-IntSet.md
+|   |       Day12-SDS.md
+|   |       Day12-ZipList.md
+|   |       Day13-QuickList.md
+|   |       Day13-RedisObject.md
+|   |       Day13-SkipList.md
+|   |       Day13-数据类型和编码.md
+|   |
+|   +---基础
+|   |       Day01-Hash类型.md
+|   |       Day01-字符串.md
+|   |       Day01-层级结构.md
+|   |       Day01-数据结构与通用命令.md
+|   |       Day02-List类型.md
+|   |       Day02-Set.md
+|   |       Day02-SortedSet.md
+|   |       Day02-客户端.md
+|   |       Day03-消息队列与Stream.md
+|   |       Day04-BitMap.md
+|   |       Day04-Geo数据结构.md
+|   |       Day04-HyperLogLog.md
+|   |
+|   +---多级缓存
+|   |       Day07-多级缓存概述.md
+|   |       Day08-JVM进程缓存.md
+|   |       Day09-Lua.md
+|   |       Day09-OpenResty.md
+|   |       Day10-缓存同步.md
+|   |       安装Canal.md
+|   |       安装OpenResty.md
+|   |
+|   \---非关系型数据库
+|           Day01-NoSQL.md
+|           Day01-Radis.md
 |
 +---testing
-|   \---blog
-|       \---JMeter
-|               Day01-参数化.md
-|               Day01-概述.md
-|               Day01-线程组.md
-|               Day01-请求默认值.md
-|               Day02-关联.md
-|               Day02-图形化测试报告.md
-|               Day02-定时器.md
-|               Day02-断言.md
-|               Day02-直连数据库.md
-|               Day02-调试取样器.md
-|               Day02-逻辑控制器.md
+|   \---JMeter
+|           Day01-参数化.md
+|           Day01-概述.md
+|           Day01-线程组.md
+|           Day01-请求默认值.md
+|           Day02-关联.md
+|           Day02-图形化测试报告.md
+|           Day02-定时器.md
+|           Day02-断言.md
+|           Day02-直连数据库.md
+|           Day02-调试取样器.md
+|           Day02-逻辑控制器.md
 |
 +---unity
-|   \---blog
-|       +---2DRPG基础
-|       |       Day01-编辑器.md
-|       |       Day02-角色.md
-|       |       Day03-动画.md
-|       |       Day03-受击.md
-|       |       Day03-敌人.md
-|       |       Day04-攻击.md
-|       |       Day05-UGUI.md
-|       |       Day06-场景道具.md
-|       |       Day06-摄像头.md
-|       |       Day06-音效系统.md
-|       |       Day07-场景.md
-|       |       Day08-开始页面.md
-|       |
-|       \---shader graph
-|               Day08-Flipbook.md
-|               Day08-Rotation.md
-|               Day08-UV节点.md
+|   +---2DRPG基础
+|   |       Day01-编辑器.md
+|   |       Day02-角色.md
+|   |       Day03-动画.md
+|   |       Day03-受击.md
+|   |       Day03-敌人.md
+|   |       Day04-攻击.md
+|   |       Day05-UGUI.md
+|   |       Day06-场景道具.md
+|   |       Day06-摄像头.md
+|   |       Day06-音效系统.md
+|   |       Day07-场景.md
+|   |       Day08-开始页面.md
+|   |
+|   \---shader graph
+|           Day08-Flipbook.md
+|           Day08-Rotation.md
+|           Day08-UV节点.md
 |
 +---WebSocket
-|   \---blog
-|           Day01-消息推送.md
-|           Day02-websocket介绍.md
-|           Day02-在线聊天室.md
+|       Day01-消息推送.md
+|       Day02-websocket介绍.md
+|       Day02-在线聊天室.md
 |
 +---其他
 |   |   ANSI转义序列以及输出颜色字符详解.md
