@@ -14,8 +14,6 @@ ZooKeeper 动物管理员
 -   Hive 蜜蜂
 -   Pig 小猪
 
-
-
 Zookeeper是一个**分布式**的, 开源的分布式应用程序的协调服务
 
 ## 功能
@@ -23,14 +21,6 @@ Zookeeper是一个**分布式**的, 开源的分布式应用程序的协调服�
 -   配置管理
 -   分布式锁
 -   集群管理
-
-
-
-
-
-
-
-
 
 ## 安装
 
@@ -65,8 +55,6 @@ Dubbo推荐的注册中心
     ```bash
     chmod -R 777 /root/docker-data
     ```
-
-    
 
 4.  启动
 
@@ -104,7 +92,7 @@ Dubbo推荐的注册中心
     standaloneEnabled=true
     admin.enableServer=true
     server.1=localhost:2888:3888
-    
+
     ```
 
 7.  访问端口
@@ -128,7 +116,7 @@ Dubbo推荐的注册中心
     Using config: /conf/zoo.cfg
     Client port found: 2181. Client address: localhost. Client SSL: false.
     Mode: standalone # 没有使用集群
-    
+
     ```
 
 9.  配置日志
@@ -140,7 +128,7 @@ Dubbo推荐的注册中心
     ```properties
     log4j.rootLogger=INFO,console,dailyFile,im
     log4j.additivity.org.apache=true
-    
+
     # 控制台(console)
     log4j.appender.console=org.apache.log4j.ConsoleAppender
     log4j.appender.console.Threshold=INFO

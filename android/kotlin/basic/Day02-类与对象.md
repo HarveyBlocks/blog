@@ -1,7 +1,5 @@
 # 类
 
-
-
 ## 声明
 
 ```kotlin
@@ -116,8 +114,6 @@ class Person {
 ```
 
 标记为`abstract`的属性不用给定初始值, 或者在构造函数中初始化的不需要赋初始值
-
-
 
 ### Getter 和 Setter
 
@@ -327,10 +323,6 @@ class Person private constructor(
 }
 ```
 
-
-
-
-
 ## 实例化
 
 -   一般的实例化
@@ -352,8 +344,6 @@ class Person private constructor(
      -   初始化块中的代码实际上会成为主构造器的函数体
 3.   次构造器上的`this`(this指向次构造器的情况)的函数体
 4.   次构造器的函数体
-
-
 
 ## 继承
 
@@ -410,8 +400,6 @@ class Child : Parent() {
 ```
 
 即使父类没有open, 子类也不能出现同签名的方法
-
-
 
 ### override 属性
 
@@ -478,8 +466,6 @@ class Child(
 
 由于是基类先初始化的, open的成员不会走子类的重载逻辑, 可能导致一些错误, 仁者见仁, 智者见智吧
 
-
-
 ### 调用super成员
 
 使用`super`关键字调用super成员
@@ -524,8 +510,6 @@ show child
 show parent
 
 ```
-
-
 
 ### 菱形继承
 

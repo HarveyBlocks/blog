@@ -40,8 +40,6 @@ public class MyRealm extends AuthorizingRealm {
         Object principal = token.getPrincipal();
         System.out.println("输入的身份用户名信息: " + principal);
 
-
-
         // 2. 伪造数据库
         Map<String, String> users = new HashMap<>();
         users.put("zhangsan", cryptography("zhangsan", salt));
@@ -51,7 +49,7 @@ public class MyRealm extends AuthorizingRealm {
         // 验证密码
         String salt = "salt";
         String pwd;
-        
+
         AuthenticationInfo info = null;
 
         if ((pwd = users.get(principal.toString())/*从数据库中取信息*/) != null) {//如果用户存在
@@ -65,7 +63,6 @@ public class MyRealm extends AuthorizingRealm {
             );
 
         }
-
 
         return info;//如返回null则表示用户不存在(shiro也会这么认为)
     }
@@ -81,7 +78,6 @@ public class MyRealm extends AuthorizingRealm {
         Md5Hash md5Hash = new Md5Hash(password, salt);
         return md5Hash.toHex();
     }
-
 
     /**
      * 赋予权限的方法, 在checkRole(),hasRole(),checkPermission()等方法被调用的时候调用

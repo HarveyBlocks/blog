@@ -7,8 +7,6 @@
 
 ## 用法
 
-
-
 ```java
 package CollectionLearning;
 
@@ -94,9 +92,8 @@ import java.util.ListIterator;
 //List接口的使用
 public class Demo02 {
     public static void main(String[] args) {
-       
-        ArrayList arrayList = new ArrayList();
 
+        ArrayList arrayList = new ArrayList();
 
         //添加
         Student s1 = new Student("张三",15);
@@ -144,7 +141,7 @@ public ArrayList() {
 public boolean add(E e) {
     ensureCapacityInternal(size + 1);  // 增长修改个数
     //↑确保  内部    容量
-    
+
     elementData[size++] = e;
     return true;
 }

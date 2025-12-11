@@ -6,11 +6,7 @@
 
 子类可以不改变该算法结构的情况下重定义该算法的某些特定步骤
 
-
-
 提高代码的复用性, 父类调用子类的实现实现了反向控制, 符合开闭原则
-
-
 
 ## 结构
 
@@ -65,8 +61,6 @@ class ConcreteClass{
 AbstractClass <|-- ConcreteClass : extends
 
 ```
-
-
 
 ## 缺点
 

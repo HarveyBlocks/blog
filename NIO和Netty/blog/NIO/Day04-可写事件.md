@@ -81,10 +81,6 @@ if (key.isAcceptable()) {
 } 
 ```
 
-
-
-
-
 ```java
 else if (key.isWritable()) {
     ByteBuffer buffer = (ByteBuffer) key.attachment();
@@ -123,19 +119,11 @@ else if (key.isReadable()) {
 } 
 ```
 
-
-
-
-
 `int ops = key.interestOps() - SelectionKey.OP_WRITE;`
 
 对于可写事件的监听需要及时去除, 因为它监听的是**能否有空间写数据**, 
 
 如果没有写数据的需求, 而又打开了对可写的监听, 则会一直监听到可写的事件
-
-
-
-
 
 ```text
 如果在往客户端写的时候,写到一半, 不可写了,而暂时终止

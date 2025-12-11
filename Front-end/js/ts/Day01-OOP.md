@@ -48,8 +48,6 @@ function printLabel(labelledObj: LabelledValue) {
 
 ![image-20250828004617702](../../assets/Day01-OOP/image-20250828004617702.png)
 
-
-
 ```typescript
 let myObj = { size: 10, label: "Size 10 Object" };
 printLabel(myObj);
@@ -142,16 +140,12 @@ interface Point {
 }
 ```
 
-
-
 ```typescript
 let p1: Point = {x: 10, y: 20};
 p1.x = 5; // error!
 ```
 
 接口和类都可以在属性上使用
-
-
 
 ### 函数式接口
 
@@ -202,11 +196,11 @@ interface StudentConstructor {
      ```typescript
      class Student {
          name: string;
-     
+
          constructor(name: string) {
              this.name = name;
          }
-     
+
          toString() {
              return this.name;
          }
@@ -225,35 +219,33 @@ interface StudentConstructor {
      interface StudentConstructor {
          new(name: string): StudentInterface;
      }
-     
+
      interface StudentInterface {
          name: string;
-     
+
          study(): void;
      }
-     
+
      class Student implements StudentInterface {
          name: string;
-     
+
          constructor(name: string) {
              this.name = name;
          }
-     
+
          study(): void {
              console.log(this.name + " is studying");
          }
-     
+
      }
-     
+
      function askStudy(studentConstructor: StudentConstructor): void {
          let student: StudentInterface = new studentConstructor("A");
          student.study();
      }
-     
+
      askStudy(Student);
      ```
-
-
 
 ## 索引签名
 
@@ -262,7 +254,6 @@ interface StudentConstructor {
 ### 索引签名
 
 用于描述那些能够“通过索引得到”的类型，比如*数组*或*映射*
-
 
 $$
 [identifier:number|string|symbol]: type;
@@ -486,8 +477,6 @@ class Button extends Control implements SelectableControl {
 }
 ```
 
-
-
 ## class
 
 JavaScript程序使用函数和基于原型的继承
@@ -500,8 +489,6 @@ typescript支持单继承
 -   protected 子类中可访问
 -   private 类外无法访问
 -   没有文件和包位置的概念, protect和private一样, 在类外无法访问
-
-
 
 ### readonly
 
@@ -573,8 +560,6 @@ class GenericNumber<T> {
 let myGenericNumber = new GenericNumber<number>();
 ```
 
-
-
 ### 泛型函数式接口/构造签名
 
 可以在定义的函数签名上加泛型
@@ -608,8 +593,6 @@ interface Constructor {
 ```
 
 ![image-20250828155815909](../../assets/Day01-OOP/image-20250828155815909.png)
-
-
 
 但是在接口上定义泛型就有意义了
 
@@ -678,11 +661,7 @@ interface AnyConstructor<T> {
 }
 ```
 
-
-
 ## enum
-
-
 
 ### 语法
 
@@ -693,8 +672,6 @@ enum Color {Red, Green, Blue}
 
 let c: Color = Color.Green;
 ```
-
-
 
 ```typescript
 let c0:Color = Color.Red; // 0
@@ -796,8 +773,6 @@ enum Color {
 }
 ```
 
-
-
 ### 异构枚举
 
 不建议使用
@@ -893,8 +868,6 @@ console.log(E.X);
 ```js
 console.log(0 /* E.X */);
 ```
-
-
 
 同时也不允许number进行运算了
 

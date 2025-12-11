@@ -42,13 +42,7 @@ redis(pc2):0>del lockIsOpen# 释放锁
 
 解决方法: 给锁增加有效期, 如十秒钟(业务执行一般在一秒钟以内)
 
-
-
-
-
 ### 代码实现
-
-
 
 #### 准备锁
 
@@ -62,8 +56,6 @@ private boolean lock(String lockKey) {
     return exit != null && exit;
 }
 ```
-
-
 
 #### 释放锁的逻辑
 
@@ -95,8 +87,6 @@ private Shop getShopFromDbAndWriteToRedis(Long id, String shopKey) {
     return shop;
 }
 ```
-
-
 
 #### 互斥锁逻辑
 
@@ -146,8 +136,6 @@ public Shop queryMutexFixByLock(Long id)  {
 }
 ```
 
-
-
 ### 测试
 
 ```
@@ -166,8 +154,6 @@ public Shop queryMutexFixByLock(Long id)  {
 ```
 
 ![image-20240104223747612](../../../../assets/Day04-解决击穿/image-20240104223747612.png)
-
-
 
 ```
 缓存存在
@@ -196,8 +182,6 @@ public Shop queryMutexFixByLock(Long id)  {
 ```
 
 如果缓存被~~有意~~意外删除一次, "缓存不存在"的数量应该总是""等待...."的数量+1
-
-
 
 效果最好的一次: (用上面代码的等待时长, 十条线程, 两秒内创建, 循环永远)
 
@@ -478,12 +462,6 @@ public Shop queryMutexFixByLock(Long id)  {
 缓存存在
 ```
 
-
-
-
-
-
-
 ## 逻辑过期的实现
 
 我觉着吧, hash, 一个field是json(不太会改), 一个field是expire(经常改)
@@ -505,24 +483,23 @@ public Shop queryMutexFixByLock(Long id)  {
         }
         String json = JSONUtil.toJsonStr(shop);
         String key = RedisConstants.HOT_SHOP_KEY + id;
-    
+
         long exSec = expireSecond / 10;// 10 是瞎掰的
         LocalDateTime time = LocalDateTime.now()
             .plusSeconds(expireSecond + RandomUtil.randomLong(-exSec, exSec));
         // 对雪崩的一点小实现
         long timestamp = time.toEpochSecond(ZoneOffset.of("+8"));
-    
+
         stringRedisTemplate.opsForHash().putAll(key, Map
                 .of(
                         RedisConstants.HOT_SHOP_DATA_FIELD, json,
                         RedisConstants.HOT_SHOP_EXPIRE_FIELD, String.valueOf(timestamp)
                 )
         );
-    
+
         return stringRedisTemplate.opsForHash().entries(key);
     }
     ```
-
 
 ### 数据过期后重新存入
 
@@ -550,8 +527,6 @@ private void saveShopToRedis(Long id, long expireSecond) {
     );
 }
 ```
-
-
 
 ### 从缓存查询
 
@@ -590,8 +565,6 @@ private Shop getHashShopFromRedis(Long id) {
     return shop;
 }
 ```
-
-
 
 ### 逻辑过期时间的使用
 

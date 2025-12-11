@@ -31,8 +31,6 @@ create index user_age_name_gender on user(age,name,gender);
 >
 >   后面字段的索引将失效
 
-
-
 -   测出不一样啊
 
 ## 范围查询法则

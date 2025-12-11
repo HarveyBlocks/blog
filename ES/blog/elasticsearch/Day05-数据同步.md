@@ -116,8 +116,6 @@ public class HotelListener {
 }
 ```
 
-
-
 ### 发送消息
 
 >   在对数据库做增删改除增加消息发送
@@ -143,8 +141,6 @@ rabbitTemplate.convertAndSend(
     HotelMqConstants.DELETE_KEY, //routingKey不同
     hotel.getId());
 ```
-
-
 
 更改/增加消息(Long HotelId)
 

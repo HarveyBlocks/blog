@@ -34,8 +34,6 @@
 
     同理,可以把MVC各层都拆开来(甚至更细)
 
-
-
 一个工程多个包,每个包都可以拆成模块
 
 -   靠接口通信
@@ -130,8 +128,6 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 ### dao
 
-
-
 把自己的资源项目当作资源引入
 
 ```xml
@@ -143,23 +139,15 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 </dependency>
 ```
 
-
-
 ![image-20231202173918669](..\assets\Day01-maven高级/image-20231202173918669.png)
 
-
-
 把这里的复制过来
-
-
 
 但没有这么简单,因为maven回去repositiry仓库找,找不到资源去中央仓库找,但是这个pojo不在上述任何一个地方,maven会找不到的
 
 所以要**先用pojo的install插件**,把pojo上传了(**注意要上传jar包**,可能上传war包也行,但会麻烦,要配置一些别的东西,以后再说)
 
 ### service
-
-
 
 ### controller
 
@@ -192,11 +180,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 ![image-20231203150138422](..\assets\/Day01-maven高级/image-20231203150138422.png)
 
-
-
 -   没有代码,删除src
-
-
 
 -   POM.xml
 
@@ -213,13 +197,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
     </modules>
     ```
 
-    
-
-
-
 ![image-20231203150736778](../assets/Day01-maven高级/image-20231203150736778.png)
-
-
 
 ```txt
 [INFO] pojo ............................................... SUCCESS [  0.996 s]
@@ -230,10 +208,6 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 ```
 
 -   对于这几个是线性关系,一条线的依赖,它会自动帮你拍好
-
-
-
-
 
 ## 继承
 
@@ -246,8 +220,6 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 >   依赖冲突就此产生
 
 -   一个新工程,管理这些工程的依赖,介于只有版本冲突会引发依赖冲突,被管理工程将**失去对版本的决定**,都交由总工程管理
-
-
 
 ![image-20231203161555356](../assets/Day01-maven高级/image-20231203161555356.png)
 
@@ -265,14 +237,14 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
         <!--所有的依赖-->
         <dependencies>
             <!--具体的依赖-->
-    		
+
             <!--自己的依赖-->
             <dependency>
                 <groupId>com.harvey</groupId>
                 <artifactId>pojo</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
-            
+
             <!--test-->
             <dependency>
                 <groupId>junit</groupId>
@@ -280,7 +252,7 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
                 <version>4.13.2</version>
                 <scope>test</scope>
             </dependency>
-    		
+
             ...
         </dependencies>
     </dependencyManagement>
@@ -307,8 +279,6 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
     </pluginManagement>
     ```
 
-    
-
 #### 子工程
 
 -   定义该工程的父工程
@@ -333,10 +303,6 @@ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in 
 
 -   将自己的插件去掉版本和配置(对于tomcat-maven来说是port之类的)
 
-
-
-
-
 ### 注意
 
 **启动的时候是启动父工程还是controller模块?**
@@ -357,8 +323,6 @@ controller模块!!!!!!!!!!
     -   聚合在当前模块中配置关系, 可以感知到参组聚合的模块有哪些
     -   继承是在子模块中配置关系, 父模块无法感知到哪些模块继承自己
 
-
-
 ## 属性
 
 ### 版本同一问题
@@ -366,8 +330,6 @@ controller模块!!!!!!!!!!
 >   对于Spring全家桶里的依赖, 版本应该是一致的,但手贱不一致了呢?
 >
 >   一个地方改了版本,另一个地方没改,这不是要凉凉?
-
-
 
 -   解决:属性(类似于变量)
 
@@ -384,8 +346,6 @@ controller模块!!!!!!!!!!
 </properties>
 ```
 
-
-
 ### 引用属性
 
 `${spring.version}`
@@ -398,8 +358,6 @@ controller模块!!!!!!!!!!
     <scope>compile</scope>
 </dependency>
 ```
-
-
 
 ### 内置属性
 
@@ -434,8 +392,6 @@ controller模块!!!!!!!!!!
 
     其中一个属性是`sun.jnu.encoding:GBK`这样的
 
-
-
 ## Maven高级功能
 
 ### 版本管理
@@ -465,15 +421,11 @@ controller模块!!!!!!!!!!
 
 ![image-20231203170026899](../assets/Day01-maven高级/image-20231203170026899.png)
 
-
-
 -   SNAPSHOT
     -   快照版本
 -   RELEASE
     -   发布版本
 -   以及各个企业都用的不太一样
-
-
 
 #### 工程版本号的约定
 
@@ -504,14 +456,12 @@ controller模块!!!!!!!!!!
 
 ![image-20231203172553742](../assets/Day01-maven高级/image-20231203172553742.png)
 
-
-
 -   pom.xml
 
 ```xml
 <build>   
     ...
-    
+
 	<resources>
         <resource>
             <!--从pom.xml开始找-->
@@ -566,8 +516,6 @@ jdbc.url=${jdbc.url}
 </testResources>
 ```
 
-
-
 ### 多环境开发配置
 
 >   例如,我们在个人电脑上开发,测试的时候, 把最大线程写了5,因为我们的个人电脑比较逊
@@ -611,15 +559,7 @@ jdbc.url=${jdbc.url}
 
 ![image-20231203185018362](../assets/Day01-maven高级/image-20231203185018362.png)
 
-
-
-
-
-
-
 ![image-20231203184951408](../assets/Day01-maven高级/image-20231203184951408.png)
-
-
 
 #### 设置默认环境
 
@@ -640,10 +580,6 @@ jdbc.url=${jdbc.url}
 </profile>
 ```
 
-
-
-
-
 ### 跳过测试
 
 >   就是我明知道这个测试会报错, 可能是我没做完, 我只关系部分功能是否正确
@@ -651,8 +587,6 @@ jdbc.url=${jdbc.url}
 >   如果全部测试, install起来也要半天
 
 ***测试是很重要的 ! 知道跳过测试就行 , 不要滥用 !***
-
-
 
 #### idea实现
 
@@ -685,8 +619,6 @@ mvn -install -D skipTests
 </profile>
 ```
 
-
-
 -   指定需要跳过的测试
 
     ```xml
@@ -713,12 +645,6 @@ mvn -install -D skipTests
     支持通配符
 
     `**/Service*Test.java`
-
-
-
-
-
-
 
 ## 私服
 
@@ -748,8 +674,6 @@ mvn -install -D skipTests
 nexus /run 服务器名称
 ```
 
-
-
 ![image-20231203203507782](../assets/Day01-maven高级/image-20231203203507782.png)
 
 -   成功
@@ -765,8 +689,6 @@ nexus /run 服务器名称
 ![image-20231203205327569](../assets/Day01-maven高级/image-20231203205327569.png)
 
 跟着提示做
-
-
 
 #### 修改访问服务器的配置
 

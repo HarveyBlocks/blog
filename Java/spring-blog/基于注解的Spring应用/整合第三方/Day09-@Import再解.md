@@ -35,8 +35,6 @@ public class MyImportSelect implements ImportSelector {
 }
 ```
 
-
-
 -   在SpringConfig注解@Import
 
     ```java
@@ -45,7 +43,7 @@ public class MyImportSelect implements ImportSelector {
     @Import(MyImportSelect.class)
     public class SpringConfig {
     }
-    
+
     ```
 
 -   测试
@@ -102,8 +100,6 @@ public class MyImportSelect implements ImportSelector {
     public class SpringConfig {
     }
     ```
-
-    
 
 2.  把@Import(MyRegiter.class)注解给自己的注解(此处以MapperScan注解的自定义注解为例)
 

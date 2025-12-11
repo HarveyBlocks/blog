@@ -17,16 +17,11 @@
     <!--注解组件扫描:扫描基本包及其子包,看它有没有配@Component-->
     <context:component-scan base-package="com.harvey"/>
 
-
     <context:property-placeholder location="classpath:JDBC.properties"/>
 </beans>
 ```
 
-
-
 ## 核心配置类
-
-
 
 ```java
 @Configuration //标注当前类是一个配置类(代替配置文件) + @Component
@@ -47,12 +42,6 @@ public class SpringConfig {
 }
 ```
 
-
-
-
-
-
-
 ### \<import/\>的平替@Import
 
 ```java
@@ -64,8 +53,6 @@ public class SpringConfig {
 
 }
 ```
-
-
 
 -   这样,UserServiceImpl.class的@Component可以爱写不写了
 -   UserServiceImpl的name是其全类名
@@ -97,10 +84,6 @@ public class ApplicationContextTest {
 
 }
 ```
-
-
-
-
 
 ## 成果
 

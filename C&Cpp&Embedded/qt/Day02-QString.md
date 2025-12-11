@@ -29,8 +29,6 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-
-
 ## `QString`简介
 
 ### `QChar`简介
@@ -50,8 +48,6 @@ int main(int argc, char *argv[]) {
     -   UTF-8 缺点就是一个字符的长度不固定，对字符串操作效率是有影响的，因为得先确定每个字符的长度。
     -   `QString` 采用**固定长度字符单元**的 UTF-16 编码，运行时字符串比较、查询操作效率更高。
 
-    
-
 **`tr` 函数就是将 UTF-8 变长编码的字符串转成 QString 运行时的内码**。
 
 支持加法重载
@@ -62,7 +58,7 @@ int main(int argc, char *argv[]) {
     QString qStrPlus = "难学";
     qDebug() << qStr + qStrPlus;
     qDebug() << qStr + "不好学";
-    
+
     string str = "English";
     string strPlus = " hard";
     qDebug() << str + strPlus;
@@ -82,8 +78,6 @@ int main(int argc, char *argv[]) {
 
 #### 需求
 
-
-
 字符串之间经常有手动复制或者通过函数参数、函数返回值等**复制操作**
 
 QString 为了优化内存使用效率，避免出现大量相同内容的字符串副本
@@ -92,16 +86,12 @@ QString 对复制过程采用**隐式共享机制**
 
 #### 原理
 
-
-
 比如执行字符串对象 str1 = str2 时
 
 -   如果这两个对象字符串内容都没有后续改变
     -   那么它们会指向同一块字符串数据
 -   而如果其中之一发生改变
     -   字符串数据块的复制过程才会发生
-
-
 
 ## 基本类型与字符串互相转换
 
@@ -167,10 +157,6 @@ QString arg(const QString & a, int fieldWidth = 0, QChar fillChar = QLatin1Char(
 -   `fillChar` 填充字符，如果设置的域宽比较大，多余的空位就会使用这个填充字符填满。
 -   `QLatin1Char ` 一个字节长度的拉丁字符,` QLatin1Char` 有对应的类 `QLatin1String`
 
-
-
-
-
 -   `arg(int)`
 
     ```cpp
@@ -194,7 +180,7 @@ QString arg(const QString & a, int fieldWidth = 0, QChar fillChar = QLatin1Char(
         strResult = QObject::tr("Oct: %1").arg(numOct, 4, 8, QChar('0'));  //numOct转换后为4字符域宽，8进制，填充0
         qDebug() << strResult;
         // "Oct: 0077"
-        
+
         ```
 
     -   Hex
@@ -263,8 +249,6 @@ int QString::toInt(bool * ok = 0, int base = 10) const;
 std::string QString::toStdString() const;
 ```
 
-
-
 ## 字符串运算符
 
 | **operator**                                               | **描述**                                                     |
@@ -327,13 +311,7 @@ std::string QString::toStdString() const;
     }
     ```
 
-    
-
-
-
 ### 判断
-
-
 
 -   判断字符串是否以某个子串**打头**
 
@@ -354,8 +332,6 @@ std::string QString::toStdString() const;
     ```cpp
     bool  contains(const QString & str, Qt::CaseSensitivity cs = Qt::CaseSensitive) const
     ```
-
-
 
 ### 删
 
@@ -403,8 +379,6 @@ std::string QString::toStdString() const;
     -   只保留 0 ~ position-1 位置的字符串
     -   position 位置被设为 NULL，后面的全移除。
 
-
-
 ### 改
 
 -   从 position 序号开始的 n 个字符的子串替换成 after 字符串。
@@ -418,8 +392,6 @@ std::string QString::toStdString() const;
     ```cpp
     QString &   replace(const QString & before, const QString & after, Qt::CaseSensitivity cs = Qt::CaseSensitive)
     ```
-
-
 
 ### 查
 
@@ -483,8 +455,6 @@ QStringList   split(const QString & sep, SplitBehavior behavior = KeepEmptyParts
 
 -   可以从返回的列表提取各个子串。
 -   behavior 是分隔模式，是否保留空白字符区域等
-
-
 
 返回第 start 段到第 end 段之间的内容
 

@@ -49,8 +49,6 @@ date -d "+1 day" +"%Y-%m-%d %H:%M:%S"
 date -d "+1 day -1year" "+%Y-%m-%d %H:%M:%S"
 ```
 
-
-
 ## 改时区
 
 ![image-20231231203520851](../assets/Day05-时间和时区/image-20231231203520851.png)

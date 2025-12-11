@@ -12,8 +12,6 @@
         -   FactoryBean规范延迟实例化Bean
 2.  是否需要必要的注入
 
-
-
 ##  配实例化对象-以Druid为例
 
 -   DruidTest.java
@@ -28,7 +26,7 @@
         dataSource.setUsername("root");
         dataSource.setPassword("123456");
         TestLogger.info(dataSource);
-        
+
         TestLogger.info("==============Spring帮我们管理的================");
         DruidDataSource druidDataSource =
                 (DruidDataSource)
@@ -53,9 +51,6 @@
     </bean>
     ```
 
-
-
-
 ## 配静态工厂-以Connection为例
 
 -   jarBeanTest.java
@@ -70,15 +65,15 @@
                         "root",
                         "123456"
                 );//类似静态工厂
-        
+
         TestLogger.info(conn);
         conn.close();
         TestLogger.LOGGER.info("==========================");
-        
+
         Connection conn2 =
                 (Connection) new ClassPathXmlApplicationContext("JarBeans.xml")
                         .getBean("connection");
-        
+
         TestLogger.info(conn2);
         conn2.close();
     }
@@ -114,7 +109,7 @@
                 (Date) new ClassPathXmlApplicationContext("JarBeans.xml")
                         .getBean("date");
         TestLogger.info(date);
-    
+
     }
     ```
 
@@ -129,8 +124,6 @@
     </bean>
     ```
 
-    
-
 ## 综合使用:以配置MyBatis为例
 
 -   MyBatis很多东西要写,很无语
@@ -142,10 +135,10 @@
     public void testMybatis() throws IOException {
         //静态工厂方式
         InputStream resource = Resources.getResourceAsStream("mybatis-config.xml");
-    
+
         //无参构造实例化
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-    
+
         //实例工厂方法
         SqlSessionFactory factory = builder.build(resource);
         //实例工厂方法
@@ -155,23 +148,20 @@
                 //resource
                 UserMapper.class
         );
-    
-    
+
         TestLogger.info(userMapper.selectAll());
-    
+
         TestLogger.LOGGER.info("================================");
-    
+
         try (ClassPathXmlApplicationContext applicationContext = 
                         new ClassPathXmlApplicationContext("JarBeans.xml")) {
             UserMapper userMapper1 = (UserMapper)
                     applicationContext.getBean("userMapper");
             TestLogger.info(userMapper1.selectAll());
         }
-    
+
     }
     ```
-
-    
 
 -   jarBeans.xml
 
@@ -206,14 +196,14 @@
           lazy-init="true">
         <constructor-arg name="inputStream" ref="resource"/>
     </bean>
-    
+
     <bean id="sqlSession"
           factory-bean="factory"
           factory-method="openSession"
           lazy-init="true"
           destroy-method="close"/>
          <!--优雅!实在是太优雅了!-->
-    
+
     <bean id="userMapperClazz"
           class="java.lang.Class"
           factory-method="forName"
@@ -222,7 +212,7 @@
                 name="className"
                 value="com.harvey.mapper.UserMapper"/>
     </bean>
-    
+
     <bean id="userMapper"
           factory-bean="sqlSession"
           factory-method="getMapper"

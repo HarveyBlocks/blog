@@ -2,8 +2,6 @@
 
 ZooKeeper的Java客户端框架
 
-
-
 ## 介绍
 
 ZooKeeper的Java客户端
@@ -15,8 +13,6 @@ ZooKeeper的Java客户端
 Zookeeper是Apache的Hadoop旗下的子项目
 
 Zookeeper的Java客户端Curator是Apache的顶级项目
-
-
 
 [Apache Curator](https://curator.apache.org/docs/about)
 
@@ -38,11 +34,7 @@ Zookeeper的Java客户端Curator是Apache的顶级项目
 
 Curator对Zookeeper向下兼容, Curator版本宜高不宜低
 
-
-
 ## 建立连接
-
-
 
 ```java
 private CuratorFramework CLIENT;
@@ -184,8 +176,6 @@ public void testDelete() throws Exception {
 }
 ```
 
-
-
 ## Watch事件监听机制
 
 ### 概念
@@ -325,8 +315,6 @@ private static void printType(PathChildrenCacheEvent.Type type) {
 }
 ```
 
-
-
 ### TreeCache
 
 孙子啥的都能监听
@@ -405,8 +393,6 @@ private static void printType(TreeCacheEvent.Type type) {
 }
 ```
 
-
-
 ## 分布式锁
 
 Redis锁的不可靠性: Master节点挂掉之后, 其子节点可能让好多人都获取到锁
@@ -444,8 +430,6 @@ Redis锁的性能比Zookeeper更好
 -   `InterProcessReadWriteLock` 分布式读写锁
 -   `InterProcessMultiLock` 将多个锁作为单个实体管理的容器
 -   `InterProcessSemaphoreV2` 共享信号量
-
-
 
 ```java
 package com.harvey.dubbo.api;

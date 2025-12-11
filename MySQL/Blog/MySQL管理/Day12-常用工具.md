@@ -1,16 +1,10 @@
 # 常用工具
 
-
-
 ## MySQL
 
 >   MySQL客户端工具,this one ↓
 
 ![image-20231027193814309](../../assets/Day12-常用工具/image-20231027193814309.png)
-
-
-
-
 
 ```DOS
 mysql [options] [dataBase] 
@@ -30,8 +24,6 @@ mysql -h127.0.0.1 -P3306 -uroot -p123456 company -e "select * from user"
 -    -h可以不写
 
 ![image-20231027194209292](../../assets/Day12-常用工具/image-20231027194209292.png)
-
-
 
 -   主打一个一次过
 
@@ -55,8 +47,6 @@ mysqladmin --help
     mysqladmin -uroot -p123456 drop db01 #创建数据库
     ```
 
-    
-
 ## mysqlbinlog
 
 二进制日志以二进制保存,如果要查看这些文本的文本格式,就要 mysqlbinlog 日志管理
@@ -71,8 +61,6 @@ mysqlbinlog [option] logfile1 logfile2...
 D:\IT_study\MySQL\MySQL Server 8.0\Data>mysqlbinlog -s PC-LUCIFER-SHAN-bin.000005
 ```
 
-
-
 ## mysqlshow
 
 -   客户端对象查找工具,用来很快的查找存在哪些数据库 , 数据库中的表 , 表中的列或索引
@@ -82,25 +70,25 @@ D:\IT_study\MySQL\MySQL Server 8.0\Data>mysqlbinlog -s PC-LUCIFER-SHAN-bin.00000
     ```
 
     ![image-20231027203008145](../../assets/Day12-常用工具/image-20231027203008145.png)
-    
+
     ```dos
     mysqlshow -uroot -p123456 --count company tb_user
     ```
-    
+
     ![image-20231027203458876](../../assets/Day12-常用工具/image-20231027203458876.png)
-    
+
     ```dos
     mysqlshow -uroot -p123456 --count company
     ```
 
     ![image-20231027203610665](../../assets/Day12-常用工具/image-20231027203610665.png)
-    
+
     ```dos
     mysqlshow -uroot -p123456 --count company tb_user name
     ```
-    
+
     ![image-20231027203234545](../../assets/Day12-常用工具/image-20231027203234545.png)
-    
+
     ```dos
     mysqlshow -uroot -p123456 -i company tb_user
     ```
@@ -119,19 +107,13 @@ mysqldump -uroot -p123456 company > company.sql
 
 ## mysqlimport/Source 导入
 
-
-
 ![image-20231027205731529](../../assets/Day12-常用工具/image-20231027205731529.png)
-
-
 
 ![image-20231027210259759](../../assets/Day12-常用工具/image-20231027210259759.png)
 
 ```dos
 mysqlimport -uroot -p1234 course.txt
 ```
-
-
 
 Mysqlimport 怎么知道我要导入的是哪个表?
 
@@ -154,10 +136,6 @@ mysqlimport -uroot -p1234 course.txt
 假设数据库中已经存在名为`course`的表，那么 `mysqlimport` 将会将数据导入到该表。
 
 注意，如果数据库中存在多个与数据文件名部分匹配的表，则可能会出现错误或数据被导入到错误的表中。
-
-
-
-
 
 非常奇怪, 我当时为啥会问这个问题, SQL的插入语句不是会指定表名, 如果加上数据库前缀, 也不需要指定数据库了..
 

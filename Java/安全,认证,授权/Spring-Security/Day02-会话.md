@@ -17,16 +17,12 @@ SessionId更合理吧?
 助理
 	SecurityContextHolder.getContext是根据当前线程获取安全上下文的。它使用ThreadLocal来存储安全上下文，因此它是基于线程的而不是基于SessionId的。
 
-
-
 用户
 	可是, 我用同一个账户, 同一个Ip测试, 发现访问同一个资源, 即使是刷新, 也不是同一个线程,这是为什么, 如果同一个账号访问同一个资源用的不是同一个线程, 那怎么依据这个线程获取上下文?
 
 助理
 	对于基于线程的安全上下文，即使是同一个账户、同一个IP，每次访问同一个资源时，都有可能由于服务器的线程池管理等因素导致使用不同的线程处理请求。在这种情况下，SecurityContextHolder.getContext
 会依据当前处理请求的线程来获取安全上下文。这也解释了为什么即使是相同的账户访问同一资源，每次都可能使用不同的线程，而根据线程获取的安全上下文仍然是有效的。
-
-
 
 用户
  "SecurityContextHolder.getContext会依据当前处理请求的线程来获取安全上下文"嗯?我不是告诉过你,请求的线程和登录的线程不是同一条线程了吗?那它是怎么知道这条线程的上下文的内容是这个账号呢?除非请求提供了SessionID,让这条线程能够得到用户信息, 那么, 追根揭底还是依靠SessionID嘛, 哪里来的线程啊?
@@ -37,11 +33,7 @@ SessionId更合理吧?
 
 GPT立场不坚定啊
 
-
-
 翻了源码, 很奇怪, 总感觉多线程还有很多没学到的东西,很奇怪, 解决不了我的问题
-
-
 
 ## 提示用户名登录成功(获取用户名)
 
@@ -71,8 +63,6 @@ private String getUsername() {
 }
 ```
 
-
-
 ## 会话控制
 
 | 机制       | 描述                                                         |
@@ -90,24 +80,17 @@ private String getUsername() {
 @Override
 protected void configure(HttpSecurity http) throws Exception {
     http.csrf().disable()// 取消对CSRF的保护
-        
-        
-        
+
             .sessionManagement().sessionCreationPolicy(
                     SessionCreationPolicy.IF_REQUIRED
             )//配置会话机制
         .and()
-        
-        
-        
-        
+
         	.authorizeRequests()
             .antMatchers("/resource/r0").hasAnyAuthority("r0")
 			...
 }
 ```
-
-
 
  默认情况下，Spring Security会为每个登录成功的用户会新建一个Session，就是ifRequired 。
 
@@ -116,8 +99,6 @@ protected void configure(HttpSecurity http) throws Exception {
 若使用stateless，则说明Spring Security对登录成功的用户不会创建Session了，你的应用程序也不会允许新建
 
 session。并且它会暗示不使用cookie，所以每个请求都需要重新进行身份验证。这种无状态架构适用于REST API 及其无状态认证机制。
-
- 
 
 ### 会话超时
 
@@ -130,8 +111,6 @@ server:
       timeout: 3600
 ```
 
-
-
 session超时之后，可以通过Spring Security 设置跳转的路径。
 
 ```java
@@ -141,11 +120,7 @@ http.sessionManagement()
 	...
 ```
 
-
-
 expired指session过期，invalidSession指传入的sessionid无效。
-
- 
 
 ## 安全会话cookie
 

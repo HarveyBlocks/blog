@@ -22,10 +22,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 <img src="../../assets/Day04-ListView/image-20250914142015873.png" alt="image-20250914142015873" style="zoom:50%;" />
 
-
-
-
-
 ## 定制Item
 
 ### 创建Item的Layout
@@ -53,8 +49,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             android:layout_marginStart="10dp" />
 </LinearLayout>
 ```
-
-
 
 ### Item的Adapter
 
@@ -207,7 +201,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         )
 
     }
-
 
 }
 ```

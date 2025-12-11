@@ -39,8 +39,6 @@ JDK中凡是涉及`transferTo`的都会采用操作系统的**零拷贝**进行�
     }
     ```
 
-    
-
 ## 零拷贝
 
 ### HeapByteBuffer
@@ -78,10 +76,6 @@ ByteBuffer buffer = ByteBuffer.allocateDirect(16);
     -   一次读写操作, 依旧是三次环境转换
     -   DirectByteBuffer创造的这块缓冲区, **JVM能访问, 操作系统能访问**.
     -   对于DirectByteBuffer来说, **用户缓存区和内核缓冲区可以认为是同一块内存**, 减少了一次数据拷贝
-
-
-
-
 
 ### 操作系统的优化
 

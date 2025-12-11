@@ -28,8 +28,6 @@ MongoCollection<Document> collection = database.getCollection("testCollection");
 
 如果提供的集合名称在数据库中尚不存在，则当首次将数据插入该集合时，MongoDB 会隐式创建该集合。
 
-
-
 ### 创建集合
 
 ```java
@@ -57,15 +55,11 @@ for (String name : database.listCollectionNames()) {
 }
 ```
 
-
-
 ### 删除集合
 
 ```java
 collection.drop();
 ```
-
-
 
 ## 文档验证
 
@@ -79,8 +73,6 @@ ValidationOptions collOptions = new ValidationOptions().validator(
 database.createCollection("ships",
         new CreateCollectionOptions().validationOptions(collOptions));
 ```
-
-
 
 ## Capped Collections[文档-实践, 三者严重冲突](TODO)
 
@@ -108,8 +100,6 @@ cappedDb.createCollection("log", new CreateCollectionOptions().capped(true).size
 // 最多5000个文档
 cappedDb.createCollection("log", new CreateCollectionOptions().capped(true).sizeInBytes(5242880).maxDocuments(5000));
 ```
-
-
 
 ### 更新
 

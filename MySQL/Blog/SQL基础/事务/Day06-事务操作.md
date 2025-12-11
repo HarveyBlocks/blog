@@ -1,7 +1,5 @@
 # 事务操作
 
-
-
 ## 语法
 
 ## 方式一
@@ -14,8 +12,6 @@ SET @@autocommit = 0;-- 改为手动提交,改为手动后,任何更改数据库
 ```
 
 -   @@是指当前客户端窗口的状态信息
-
-
 
 -   手动提交时需要写的提交指令,任何更改数据库的指令都要加
 
@@ -59,8 +55,6 @@ rollback ;
 SET @@autocommit = 1;
 ```
 
-
-
 ### 回滚事务
 
 如果出现异常了,事务自然会停止,为何还要回滚事务呢?
@@ -85,16 +79,12 @@ START TRANSCATION;
 BEGIN;
 ```
 
-
-
 -   提交,回滚
 
 ```mysql
 commit;
 rollback;
 ```
-
-
 
 ### 示例
 
@@ -111,8 +101,6 @@ START Transaction;
 	rollback ;
 SET @@autocommit = 1;
 ```
-
-
 
 ## 案例
 

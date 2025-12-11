@@ -22,8 +22,6 @@ java -XX:PrintCommandLineFlags -version
 -XX:+PrintFlagsFinal
 ```
 
-
-
 ## Java源代码运行原理
 
 ```mermaid
@@ -66,8 +64,6 @@ graph LR
 
 ## JVM版本
 
-
-
 |名称							|作者			|支持版本						|社区活跃度<br>github star	|特性																								|适用场景|
 | ---- | ---- | ---- | ---- | ---- | ---- |
 |HotSpot (Oracle JDK版)			|Oracle			|所有版本						|高(闭源)					|使用最广泛，稳定可靠，社区活跃<br>JIT支持<br>Oracle JDK默认虚拟机									|默认|
@@ -75,8 +71,6 @@ graph LR
 |GraalVM						|Oracle			|11, 17,19<br>企业版支持8		|高（18.7k）				|多语言支持<br>高性能、JIT、AOT支持																	|微服务、云原生架构<br>需要多语言混合编程|
 |Dragonwell JDK龙井				|Alibaba		|标准版 8,11,17<br>扩展版11,17	|低(3.9k)					|基于OpenJDK的增强<br>高性能、bug修复、安全性提升<br>JWarmup、ElasticHeap、Wisp特性支持				|电商、物流、金融领域<br>对性能要求比较高|
 |Eclipse OpenJ9 (原 IBM J9)		|IBM			|8,11,17,19,20					|低(3.1k)					|高性能、可扩展<br>JIT、AOT特性支持																	|微服务、云原生架构|
-
-
 
 ### *Java虚拟机规范*
 

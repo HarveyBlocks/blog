@@ -1021,8 +1021,6 @@ C:\USERS\27970\DESKTOP\BLOG
 
         1.  Docker
 
-    
-
 1.  客户端连不上本机
 
 2.  Redis不能配置密码
@@ -1049,21 +1047,13 @@ C:\USERS\27970\DESKTOP\BLOG
 
     是真他妈该死啊
 
-
-
 ## 未完成
 
-
-
 API调用
-
-
 
 Reddis(40h)
 
 SpringBoot还欠深入(<34h)
-
-
 
 需要分布式和微服务
 
@@ -1071,11 +1061,7 @@ SpringSecurity需要SpringCloud
 
 SpringCloude差集群和分布式
 
-
-
 # 作业
-
-
 
 ## 第三次
 
@@ -1084,8 +1070,6 @@ SpringCloude差集群和分布式
 ​		c：数据库
 
 API调用
-
-
 
 ## 第四次
 
@@ -1117,15 +1101,9 @@ SpringMVC（Web应用MVC）
 
 2h
 
-
-
 ### 持久层
 
 **MyBatisPlus** 5h
-
-
-
-
 
 -   SpringData JPA（持久层技术）
     -   优先级较低
@@ -1135,8 +1113,6 @@ SpringMVC（Web应用MVC）
 
 -   SSM(完成)
     -   Spring +SpringMVC + MyBatis
-
-
 
 ### 中间件
 
@@ -1150,13 +1126,6 @@ Docker 3h(完成)
 
 -   ❤️组❤️长❤️推❤️荐❤️
 
-
-
-
-
-
-
-
 ### Spring安全*
 
 SpringSecurity 8h(完成)
@@ -1164,8 +1133,6 @@ SpringSecurity 8h(完成)
 -   SpringCloud
 
 Shiro 4h(完成)
-
-
 
 ### SpringBoot
 
@@ -1183,11 +1150,7 @@ Shiro 4h(完成)
 
 -   寒假前大抵完成作业(放弃)
 
-
-
 security/JWT->消息队列->ES->Redis->SpringCloud高级
-
-
 
 ## 第五次
 
@@ -1200,10 +1163,6 @@ WebSocket(1.5h)(完成)
 Mysql运维剩余(完成)
 
 Linux剩余(完成)
-
-
-
-
 
 JWT(完成)
 
@@ -1229,8 +1188,6 @@ JWT(完成)
 
 ->Netty (完成)
 
-
-
 ->Dubbo(完成)
 
 ->Zookeeper(完成)
@@ -1239,23 +1196,15 @@ JWT(完成)
 
 ->Shell(完成)
 
-
-
 ->gRPC(GO的知识点纳尼???)(完成)
 
-
-
 ->Nginx(19h, 完成)
-
-
 
 使用Benchmark(基准)性能测试(Jmeter,, 3h完成)
 
 传输的安全性（Telegram(暂无)) SSL?完成
 
 ->RocketMQ(19.5h)
-
-
 
 ->SpringCloudNetflex(无)
 
@@ -1280,35 +1229,21 @@ JWT(完成)
 7. 项目架构关系图 
     -   [好用的画图工具Excalidraw ](https://excalidraw.com/)
 
-
-
-
-
 **SpringCloud-alibaba/netflex**（微服务架构）
 
 **Dubbo**（微服务架构）(需复习)
-
-
 
 RPC调度方法(**Dubbo**或gRPC等方式实现RPC通信请求, 完成)
 
 **docker**-compose(使用**docker**-compose启动你的mysql、redis等)完成
 
-
-
 [Skywalking](https://skywalking.apache.org/) (6h, 完成)
 
 ----------------周末前---------------
 
-
-
-
-
 BASE、CAP理论 , (完成)
 
 -----------------周末-----------------
-
-
 
 -   Spring-Cloud-NetFlix
 
@@ -1332,8 +1267,6 @@ BASE、CAP理论 , (完成)
 
 -----------------五一------------------
 
-
-
 ## 第七次
 
 -   JVM虚拟机(30h)
@@ -1348,13 +1281,9 @@ BASE、CAP理论 , (完成)
 
 -   源码
 
-
-
 底层源码的学习,实现一个简单框架
 
 开源活动，例如开源之夏、GSoC（Google Summer of Code）
-
-
 
 # 其余感兴趣的方向
 
@@ -1371,8 +1300,6 @@ python-AI(需复习)
 区块链
 
 Go
-
-
 
 Qt(不得不)
 

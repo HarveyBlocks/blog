@@ -170,8 +170,6 @@ select * from employee where idcard like '%X';
 select * from employee where gender = '女' and age in (21,23,25,27,29);
 ```
 
-
-
 ## 聚合函数
 
 ### 特点和语法
@@ -222,10 +220,6 @@ select avg(age) from employee where employee_id like '00%';
 当为鉴
 */
 ```
-
-
-
-
 
 ## 分组查询
 
@@ -289,19 +283,13 @@ select name,gender,count(*) from employee group by gender;
 
 -   应该是版本问题
 
-
-
 ```mysql
 select gender from employee where age<30 group by gender ;
 ```
 
-
-
 ![image-20231006231741758](../../../assets/Day03/image-20231006231741758.png)
 
 -   没啥意义,不如DISTINCT
-
-
 
 ```mysql
 select gender  from employee  group by gender ;
@@ -326,13 +314,9 @@ select * , count(*) from employee;/*error*/
     1.  **使用GROUPBY**
     2.  **字段和GROUPBY的分组字段一致**
 
-
-
 ```mysql
 select count(*) from employee group by gender;
 ```
-
-
 
 ![image-20231006195417783](../../../assets/Day03/image-20231006195417783.png)
 
@@ -342,15 +326,11 @@ select avg(age) from employee group by gender;
 
 ![image-20231006230104732](../../../assets/Day03/image-20231006230104732.png)
 
-
-
 ```mysql
 select gender,avg(age) from employee group by gender;
 ```
 
 ![image-20231006195919233](../../../assets/Day03/image-20231006195919233.png)
-
-
 
 ```mysql
 select age,avg(age) from employee group by gender;/*error*/
@@ -358,17 +338,11 @@ select * , count(gender) from employee group by gender;/*error*/
 select age , count(gender) from employee group by gender/*error*/;
 ```
 
-
-
 ```mysql
 select gender , count(gender) from employee group by gender;
 ```
 
 ![image-20231006195549187](../../../assets/Day03/image-20231006195549187.png)
-
-
-
-
 
 -   查询年龄小于30的员工,根据性别分组,获得员工人数大于3的性别
 
@@ -451,8 +425,6 @@ select * from employee limit 1;
 select * from employee limit 1,1;
 select * from employee limit 2,2;
 ```
-
-
 
 ```mysql
 select * from employee 

@@ -8,8 +8,6 @@
 
 ### 选项式
 
-
-
 ```vue
 <script>
 export default {

@@ -25,8 +25,6 @@
 
 可写事件
 
-
-
 ## Selector基本用法
 
 ### 创建Selector对象
@@ -75,11 +73,6 @@ Selector selector = Selector.open();
     }
     ```
 
-
-
-
-
-
 ### Cancel
 
 #### 问题的产生与需求
@@ -113,7 +106,7 @@ while (sKeyIt.hasNext()){
 ```java
 // 区分事件类型
 if (key.isAcceptable()) {
-    
+
 }
 ```
 
@@ -186,9 +179,9 @@ private void accept(ServerSocketChannel ssc) throws IOException {
         key.cancel();
     }
     ```
-    
+
     但是客户端用`sc.close()`正常断开之后, 依旧会产生读事件
-    
+
     ```java
     int read = channel.read(buffer);
     if (read == -1) {
@@ -206,8 +199,6 @@ private void accept(ServerSocketChannel ssc) throws IOException {
 int count = selector.select();
 ```
 
-
-
 方法2，阻塞直到绑定事件发生，或是超时（时间单位为 ms）
 
 ```java
@@ -216,8 +207,6 @@ int count = selector.select(long timeout);
 
 -   干嘛用? 或许count=0在所有count的占比可以估计网站的热门程度?
 
-
-
 方法3，不会阻塞，也就是不管有没有事件，立刻返回，自己根据返回值检查是否有事件
 
 ```java
@@ -225,8 +214,6 @@ int count = selector.selectNow();
 ```
 
 -   那不是要累死CPU?干嘛呢?
-
-
 
 ### select() 何时不阻塞
 
@@ -240,8 +227,6 @@ int count = selector.selectNow();
 * 调用 selector.wakeup()
 * 调用 selector.close()
 * selector 所在线程 interrupt
-
-
 
 ## 程序清单
 
@@ -310,7 +295,6 @@ public class SelectorServer {
 
     // ByteBuffer
     private final ByteBuffer buffer = ByteBuffer.allocate(16);
-
 
     /**
      * 完成与客户端之间的通讯

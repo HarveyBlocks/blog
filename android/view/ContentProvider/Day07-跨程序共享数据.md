@@ -10,8 +10,6 @@ ContentProvider 主要用于在不同的应用程序之间实现**数据共享**
 
 ContentProvider 可以选择只对哪一部分数据进行共享，从而保证程序中的隐私数据不会有泄漏的风险
 
-
-
 ## 运行时权限
 
 在限定了权限之后, Android会对Android 6.0 以下的用户**建议升级系统**, 同时会在安装应用的时候**提示用户**本应用可能对系统申请了哪些权限
@@ -22,19 +20,11 @@ ContentProvider 可以选择只对哪一部分数据进行共享，从而保证�
 <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 ```
 
-
-
 <img src="../../assets/Day07-跨程序共享数据/image-20250917104128131.png" alt="image-20250917104128131" style="zoom:50%;" />
-
-
 
 Android6.0之后也支持运行时权限
 
 用户不需要在安装软件的时候一次性授权所有申请的权限，可以在软件的使用过程中再对某一项权限申请进行授权
-
-
-
-
 
 ### 普通权限和危险权限
 
@@ -44,8 +34,6 @@ Android6.0之后也支持运行时权限
   - 涉及用户隐私/安全, 必须用户手动确认
 
 Android 10以下所有危险权限
-
-
 
 | 权限组               | 权限                                                         |
 | -------------------- | ------------------------------------------------------------ |
@@ -112,7 +100,6 @@ private fun safeCall() {
     }
 }
 
-
 /**
  * @param requestCode 和ActivityCompat.requestPermissions的参数requestCode对应
  * @param grantResults 响应, 和ActivityCompat.requestPermissions的参数permissions的元素请求一一对应
@@ -142,15 +129,7 @@ private fun call() {
 }
 ```
 
-
-
 <img src="../../assets/Day01-跨程序共享数据/image-20250917113224629.png" alt="image-20250917113224629" style="zoom:50%;" />
-
-
-
-
-
-
 
 ## 动态权限申请的代码封装
 
@@ -250,14 +229,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         safeCall()
     }
 
-
     private fun call() {
         // ...
     }
 }
 ```
-
-
 
 ## Permission封装(提取)
 
@@ -268,12 +244,10 @@ package org.harvey.android.first.common.util
 
 import org.harvey.android.first.common.IntIdGenerator
 
-
 /**
  * UnsafeExecutable 表示动态申请后依旧没有获取到的权限
  */
 typealias PermissionsUngranted = (UnsafeExecutable) -> Unit
-
 
 /**
  * @param ungrantedPermissions 未申请到的权限
@@ -389,10 +363,6 @@ minSdk 表示版本其之下的系统禁止安装本应用
 
 targetSdk表示本应用最高支持到版本36
 
-
-
-
-
 ```kotlin
 object ApiVersion {
     const val SUPPORT_LOWER = 24
@@ -410,8 +380,6 @@ object ApiVersion {
 ```
 
 ### 封装优化(部分)
-
-
 
 ```kotlin
 @SuppressLint("InlinedApi")

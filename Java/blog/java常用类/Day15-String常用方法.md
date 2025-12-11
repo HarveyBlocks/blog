@@ -8,23 +8,21 @@
 public class Main {
     public static void main(String[] args) {
         String str = "hiDE BEhind yoUR bACk";
-        
+
         System.out.println(str.toUpperCase());
         //HIDE BEHIND YOUR BACK
-        
+
         System.out.println(str);
         //hiDE BEhind yoUR bACk
-        
+
         System.out.println(str.toLowerCase());
         //hide behind your back
-        
+
         System.out.println(str);
         //hiDE BEhind yoUR bACk
     }
 }
 ```
-
-
 
 ##  获取String信息
 
@@ -45,7 +43,6 @@ public int length() {
 ```java
 System.out.println("hide behind your back".length());//21
 ```
-
 
 ## 查找下标
 
@@ -68,8 +65,6 @@ public int indexOf(String str, int fromIndex) {
             str.value, 0, str.value.length, fromIndex);
 }
 ```
-
-
 
 查找str首次出现的，str的首字符一致的下标。存在，则返回该下标；不存在，则返回-1
 
@@ -99,8 +94,6 @@ public int lastIndexOf(String str, int fromIndex) {
 }
 ```
 
-
-
 查找str最后一次出现的，str的首字符一致的下标。存在，则返回该下标；不存在，则返回-1
 
 ```java
@@ -113,11 +106,6 @@ System.out.println("hide behind your back".lastIndexOf("hi"));//7
 ```java
 System.out.println("hide behind your back".lastIndexOf("hi",4));//0
 ```
-
-
-
-
-
 
 ## 获取元素/切片
 
@@ -150,7 +138,6 @@ System.out.println("hide behind your back".charAt(21));
 ```
 
 异常：***java.lang.StringIndexOutOfBoundsException***
-
 
 ### substring(int beginIndex, int endIndex)
 
@@ -206,8 +193,6 @@ public static void main(String[] args) throws UnsupportedEncodingException {
 }
 ```
 
-
-
 ### toCharArray()
 
 ```java
@@ -239,7 +224,6 @@ public class Main {
 
 输出结果：
 
-
 ```java
 /*
 hide behind your back
@@ -263,7 +247,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-       
+
         System.out.println(
                 Arrays.toString(
                         "hide behind your back"
@@ -271,9 +255,9 @@ public class Main {
                 )
         );
         //[hide, behind, your, back]
-        
+
         //多种分隔符的情况
-        
+
         System.out.println(
                 Arrays.toString(
                         "Hide behind yours.Your what?Your back."
@@ -281,10 +265,9 @@ public class Main {
                 )
         );
         //[Hide, behind, yours, Your, what, Your, back]
-    
-        
+
       //连续多个分隔符的情况  
-        
+
        System.out.println(
                 Arrays.toString(
                         "hide..behind.your.....back....."
@@ -296,7 +279,6 @@ public class Main {
 }
 ```
 
-
 ## 修改(含删除)
 
 | Modifier Type | Method | Description |
@@ -305,8 +287,6 @@ public class Main {
 | String   | toUpperCase()                                          | 将小写转换成大写                                             |
 | String   | toLowerCase()                                          | 将大写转换成小写                                             |
 | String   | replace(CharSequence target, CharSequence replacement) | 将target字符串转化为replacement字符串（字符转字符也行）      |
-
-
 
 ### trim()
 
@@ -340,8 +320,6 @@ System.out.println("         hide behind your back        ".trim());
 System.out.println("         hide behind your back        ".trim());
 ```
 
-
-
 ### toUpperCase()/toLowerCase()
 
 - 不会对原字符串做更改,而是返回一个新的字符串
@@ -350,7 +328,6 @@ System.out.println("         hide behind your back        ".trim());
 public String toUpperCase() {
     return toUpperCase(Locale.getDefault());
 }
-
 
 public String toLowerCase() {
     return toLowerCase(Locale.getDefault());
@@ -380,12 +357,9 @@ public String replace(CharSequence target, CharSequence replacement) {
 System.out.println("hide behind your back".replace("hi","HIIIIIII"));
 //HIIIIIIIde beHIIIIIIInd your back
 
-
 System.out.println("hide behind your back".replace('h','H'));
 //Hide beHind your back
 ```
-
-
 
 ## 判断
 
@@ -416,7 +390,6 @@ public boolean endsWith(String suffix) {
     return startsWith(suffix, value.length - suffix.value.length);
 }
 
-
 public boolean startsWith(String prefix) {
     return startsWith(prefix, 0);
 }
@@ -428,11 +401,9 @@ public boolean startsWith(String prefix) {
 System.out.println("hiDE BEhind yoUR bACk".endsWith("Ck"));//true
 System.out.println("hiDE BEhind yoUR bACk".endsWith("cK"));//false
 
-
 System.out.println("hiDE BEhind yoUR bACk".startsWith("hi"));//true
 System.out.println("hiDE BEhind yoUR bACk".startsWith("HI"));//false
 ```
-
 
 ## 比较
 
@@ -441,7 +412,6 @@ System.out.println("hiDE BEhind yoUR bACk".startsWith("HI"));//false
 | boolean  | equals(Object anObject)                                | 比较                                                         |
 | boolean  | equalsIgnoreCase(String anotherString)                 | 比较忽略大小写                                               |
 | int      | compareTo(String anotherString) | 比较，返回字典表差值         |
-
 
 ### equals(Object anObject)
 

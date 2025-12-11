@@ -110,10 +110,6 @@ insert into tb_user(id,name,sex) value(1,'Dawn','1');
 </writeHost>  
 ```
 
-
-
-
-
 `server.xml`
 
 ```xml
@@ -124,8 +120,6 @@ insert into tb_user(id,name,sex) value(1,'Dawn','1');
 </user>
 ```
 
-
-
 一测试, 发现两个库都被增加了数据, 一查, 也确实查到了数据
 
 那怎么知道读写分离了嘞?
@@ -135,8 +129,6 @@ insert into tb_user(id,name,sex) value(1,'Dawn','1');
 那么, 你改变从库的值之后, 再去查询数据, 出现的是主库的数据还是从库更改后的数据? 
 
 答: 从库更改后的数据
-
-
 
 ## 读写分离对异常情况的处理
 
@@ -175,11 +167,7 @@ mycat也连接不上主库了
 
 ![image-20231230210044899](../../assets/Day15-读写分离/image-20231230210044899.png)
 
-
-
 写入任意一个master库, 其他三个库中的数据全都会发生变化
-
-
 
 -   一个主机M1处理所有的写请求
 
@@ -212,8 +200,6 @@ mycat也连接不上主库了
     # 当前数据库作为从数据库的时候, 有写入操作也要更新二进制日志文件
     log-slave-updates
     ```
-
-    
 
 2.  重启MySQL数据库
 
@@ -255,8 +241,6 @@ mycat也连接不上主库了
 
 3.  在从库中设置对应的主库, 注意s1对应m1,s2对应m2,对应关系不能乱![image-20231231162821098](../../assets/Day15-读写分离/image-20231231162821098.png)
 
-    
-
     ```mysql
     Change 
     Master_HOST='xxx.xxx.xxx.xxx',-- 不要对应错了
@@ -271,8 +255,6 @@ mycat也连接不上主库了
     ```mysql
     start skave;
     ```
-
-    
 
 5.  查看从库状态
 
@@ -338,7 +320,7 @@ Master_log_File='binlog.000002',Master_LOG_POSITION=663;
               url="jdbc:mysql://192.168.171.138:3306?useSSL=false"
               user="root" password="123456"/>
 	</writeHost>
-    
+
     <writeHost host="master2" 
            url="jdbc:mysql://192.168.171.139:3306?useSSL=false" 
            user="root" password="123456">

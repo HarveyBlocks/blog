@@ -40,10 +40,6 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) { // 进行版本检查
 
 重要程度从高到低
 
-
-
-
-
 优化NotificationManager的获取
 
 ```kotlin
@@ -65,8 +61,6 @@ val manager = NotificationManagerCompat.from(this)
 低重要等级的可能会在某些情况下被隐藏，可能会改变显示的顺序，被排在更重要的通知之后
 
 开发者只能在创建通知渠道的时候指定初始的重要等级，如果用户不认可这个重要等级，可以随时进行修改，开发者对此无权再进行调整和变更
-
-
 
 ## 通知
 
@@ -97,8 +91,6 @@ val notification =
      .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.drawable.large_icon))
      .build()
 ```
-
-
 
 ## 发送通知
 
@@ -200,8 +192,6 @@ private fun createPendingIntent(): PendingIntent {
 
 ![image-20250919014633868](../../assets/Day08-Notification/image-20250919014633868.png)
 
-
-
 自动取消
 
 ```kotlin
@@ -245,8 +235,6 @@ private fun createPendingIntent(intent: Intent): PendingIntent = PendingIntent.g
 ```kotlin
 NotificationManagerCompat.from(this).cancel(intent.getIntExtra("__notify_request_code__", -100))
 ```
-
-
 
 ## NotificationCompat.Builder
 
@@ -298,8 +286,6 @@ val notification = NotificationCompat.Builder(this, NotificationChannelId.PUSH_F
 
 <img src="../../assets/Day08-Notification/image-20250919093648863.png" alt="image-20250919093648863" style="zoom:50%;" />
 
-
-
 ## 封装
 
 考虑到Notify能在Servie, Broadcast中都能使用, 于是将其从Activity中抽象出来
@@ -336,7 +322,6 @@ class IntIdGenerator(start: Int = InnerConstants.DEFAULT_START) {
 ```kotlin
 package org.harvey.android.first.common.util
 
-
 import org.harvey.android.first.common.IntIdGenerator
 import org.harvey.android.first.lint.unsafeNotify
 
@@ -362,7 +347,6 @@ private object NotificationConstant {
     val SUPPORT_NOTIFICATION_POST_NOTIFICATIONS_PERMISSION: Boolean =
         ApiVersion.support(Build.VERSION_CODES.TIRAMISU)
 }
-
 
 /**
  * 使用NotificationChannel类构建一个通知渠道
@@ -396,7 +380,6 @@ fun NotificationManagerCompat.safelyNotify(
         unsafeNotify(intent.notifyRequestCode, notification)
     }
 }
-
 
 /**
  * @param intent the intent in PendingIntent while the PendingIntent is in the [notification]
@@ -466,8 +449,6 @@ private fun Intent.initializedNotifyRequestCode(): Boolean {
     return requestCode != NotificationConstant.INTENT_REQUEST_CODE_NOT_FOUND
 }
 ```
-
-
 
 ### 对封装的使用示例
 

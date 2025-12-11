@@ -8,8 +8,6 @@
 
 ## 引入方式
 
-
-
 ### 内部脚本
 
 在Html页面里
@@ -46,22 +44,16 @@ alert("Hello JavaScripe");//弹出警告窗
 <script src="testJS.js"></script>
 ```
 
-
-
 ![image-20231113185734025](../Java/assets/Untitled/image-20231113185734025.png)
 
 -   **这个自闭和是不会生效的!**
 
 ## 基础语法
 
-
-
 -   区分大小写
 -   分号可有可无
 -   //单行注释,/\*多行注释\*/
 -   {表示代码块}
-
-
 
 ### 输出语句
 
@@ -98,13 +90,9 @@ console.log("写入浏览器控制台(F12)")
 
 ![image-20231113191204275](../Java/assets/JavaScrip/image-20231113191204275.png)
 
-
-
 -   **报错信息这里看的干活**
 
 <img src="../Java/assets/JavaScrip/image-20231113191341817.png" alt="image-20231113191341817" style="zoom:50%;" />
-
-
 
 -   真是屌炸了
 
@@ -114,21 +102,11 @@ console.log("写入浏览器控制台(F12)")
 
 ### const表示常量
 
-
-
 ### 原始类型和引用类型
 
 ![image-20231113191559389](../Java/assets/JavaScrip/image-20231113191559389.png)
 
-
-
-
-
 ![image-20231113191636543](../Java/assets/JavaScrip/image-20231113191636543.png)
-
-
-
-
 
 #### number
 
@@ -146,8 +124,6 @@ alert(typeof price);//number
     alert(+"num");//NaN
     ```
 
-
-
 #### string
 
 ```js
@@ -159,8 +135,6 @@ alert(typeof name);//string
 alert(typeof str);//string
 ```
 
-
-
 #### boolean
 
 ```js
@@ -169,10 +143,6 @@ var flag0 = false;
 alert(typeof flag1);//boolean
 alert(typeof flag0);//boolean
 ```
-
-
-
-
 
 #### null?
 
@@ -198,8 +168,6 @@ alert(typeof obj);//object
         alert(parseInt("21")-1);//20
         ```
 
-        
-
     -   boolean转number
 
         -   true->1
@@ -219,26 +187,22 @@ alert(typeof obj);//object
         -   其他->true
 
 	-   string
-    
+
         -   ""(空字符串)->false
         -   其他->true
-    
+
     -   null->false
-    
+
     -   undefine->false
     -   其他->true
-    
+
     用处:
-    
+
     ![image-20231113194717753](../Java/assets/JavaScrip/image-20231113194717753.png)
-    
+
     ![image-20231113194726287](../Java/assets/JavaScrip/image-20231113194726287.png)
-    
+
     简化了
-    
-    
-
-
 
 ### 运算符
 
@@ -247,11 +211,7 @@ alert(typeof obj);//object
 -   与或非
 -   条件运算符
 
-
-
 ### ===全等于运算符
-
-
 
 ```js
 alert(20=="20");//true
@@ -287,8 +247,6 @@ alert(20==="20");//false
 
 -   do{}while;
 
-
-
 ### 函数
 
 ```js
@@ -308,15 +266,11 @@ var 函数名 = function(参数1,参数2){
 
 -   ![image-20231113195800520](../Java/assets/JavaScrip/image-20231113195800520.png)
 
-    
-
 -   输出都是3
 
     ```js
     alert(add(1));//NaN
     ```
-
-    
 
 ## 常用对象
 
@@ -342,17 +296,11 @@ var 函数名 = function(参数1,参数2){
 
 ![image-20231113202746976](../Java/assets/JavaScrip/image-20231113202746976.png)
 
-
-
-
-
 ## BOM对象
 
 >   **B**rowser **O**bject **M**odel 浏览器对象模型
 
 ![image-20231113203322614](../Java/assets/JavaScrip/image-20231113203322614.png)
-
-
 
 ### Window
 
@@ -385,19 +333,13 @@ var 函数名 = function(参数1,参数2){
 
     -   非常的折磨人
 
-
-
 ### History和Location
 
 ![image-20231113205030333](../Java/assets/JavaScrip/image-20231113205030333.png)
 
-
-
 ![image-20231113205043873](../Java/assets/JavaScrip/image-20231113205043873.png)
 
 ![image-20231113205128144](../Java/assets/JavaScrip/image-20231113205128144.png)
-
-
 
 ## DOM对象
 
@@ -412,13 +354,7 @@ var 函数名 = function(参数1,参数2){
 
 ![image-20231113221442557](../Java/assets/JavaScrip/image-20231113221442557.png)
 
-
-
-
-
 ![image-20231113221902768](../Java/assets/JavaScrip/image-20231113221902768.png)
-
-
 
 ## 事件监听
 
@@ -428,8 +364,6 @@ Html事件是发送再Html的事情
 
 1.  检测
 2.  执行代码
-
-
 
 ### 事件绑定
 
@@ -460,12 +394,6 @@ Html事件是发送再Html的事情
     ```
 
     解耦合
-
-
-
-
-
-
 
 ### 常见事件
 

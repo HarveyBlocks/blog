@@ -2,14 +2,11 @@
 
 无论异常与否, 都会关闭对象
 
-
-
 ```python
 with open(file=file_name, mode="r", encoding=encoding) as file_input:
     while file_input.readable():
         print(file_input.read(1), end="")
 ```
-
 
 ## 上下文管理器
 
@@ -18,10 +15,6 @@ with的关闭基于上下文管理器
 一句代码在执行之前的操作和执行之后的操作称为上下文
 
 管理上下文的就是上下文管理器
-
-
-
-
 
 一个类只要实现了`__enter()__`上文方法和`__exit__()`下文方法, 其创建的对象就是上下文管理器
 
@@ -46,7 +39,6 @@ class Context(object):
         self.__name = None
         print(f'{self.__name} is exit')
         return
-
 
 if __name__ == '__main__':
     with Context('a') as a:

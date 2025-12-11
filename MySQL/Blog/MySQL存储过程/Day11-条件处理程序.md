@@ -6,8 +6,6 @@
 
 ## 语法
 
-
-
 ```mysql
 Declare [continue|exit] Handler for 状态值1[,状态值2...] statement;
 ```
@@ -27,7 +25,7 @@ Declare [continue|exit] Handler for 状态值1[,状态值2...] statement;
     			-- 类似于所有的RuntimeException都能被Exception捕获
     Not Found -- 所有以02开头的SQLstate代码的简写
     SQLexception -- 所有没有被 SQLwarning和Not Found捕获的代码的简写
-    
+
     ```
 
 [MySQL ERROR状态码](https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html) - ctrl + F 查找

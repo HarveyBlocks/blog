@@ -1,7 +1,5 @@
 # Android 协程优化
 
-
-
 ## 引入依赖
 
 ```kotlin
@@ -27,7 +25,6 @@ class ContinuationCallback<T : Any>(private val continuation: Continuation<Respo
         continuation.resumeWithException(t)
     }
 }
-
 
 suspend fun <T : Any> Call<T>.suspendExecute(): Response<T> = suspendCoroutine { continuation ->
     try {

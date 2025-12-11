@@ -8,7 +8,6 @@
 ```java
 package Generic;
 
-
 public class Demo {
     public static void main(String[] args) {
         Person<Number> person1 = new Person<>();
@@ -46,19 +45,15 @@ public class Demo {
         Object t = person.getT();
         System.out.println(t.toString());
     }
-    
+
 }
 ```
-
-
 
 ### 尝试用方法重载解决
 
 要怎么解决这个异常?想到方法重载:
 
 重载showPerson()方法
-
- 
 
 ```java
 public static void showPerson(Person<Integer> person) {
@@ -136,8 +131,6 @@ public static void showPerson(ArrayList<? extends Person> arrayList) {
 
 #### 使用示例二
 
-
-
 ```java
 public static void main(String[] args) {
     //Person
@@ -148,15 +141,12 @@ public static void main(String[] args) {
     ArrayList<Student> studentArrayList=new ArrayList<>();
     personArrayList.addAll(studentArrayList);
 
-
     //Person之父
     ArrayList<Object> objectArrayList=new ArrayList<>();
     personArrayList.addAll(objectArrayList);//编译时异常
 
 }
 ```
-
-
 
 **看看addAll()的源码**
 
@@ -168,8 +158,6 @@ public boolean addAll(Collection<? extends E> c) {...}
 
 在定义了通配符上限的方法内无关父子类,都会编译时异常
 
-
-
 ```java
 public static void showPerson(ArrayList<? extends Person> arrayList) {
     arrayList.add(new Person());
@@ -179,16 +167,11 @@ public static void showPerson(ArrayList<? extends Person> arrayList) {
     arrayList.add(new Object());//Person之父
     //编译时异常
 
-
     System.out.println(arrayList.toString());
 }
 ```
 
 **因为不知道传进来的arraylist的<>内的类是啥**
-
-
-
-
 
 ## 类型通倍符下线限
 
@@ -205,11 +188,7 @@ public static void showPerson(ArrayList<? extends Person> arrayList) {
 public static void showPerson(ArrayList<? super Person> arrayList)
 ```
 
-
-
 ### 使用示例
-
-
 
 ```java
 public static void main(String[] args) {
@@ -228,13 +207,10 @@ public static void main(String[] args) {
 
 }
 
-
 public static void showPerson(ArrayList<? super Person> arrayList) {//定义下线是Person
     System.out.println(arrayList.toString());
 }
 ```
-
-
 
 ### 注意
 
@@ -269,7 +245,7 @@ public class Demo {
         //使用了下限,E即:
         //public class TreeSet<E> extends AbstractSet<E>
         //也就是说只能用Person的父类,子类不能用
-        
+
         TreeSet<Person> persons = new TreeSet<>(new MyComparator1());
         persons.add(new Person("A",41));
         {

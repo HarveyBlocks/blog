@@ -42,11 +42,7 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 Connect getConnection(String url,String username,String password)
 ```
 
-
-
 #### 参数url
-
-
 
 ![image-20231009202026261](../../assets/Day32/image-20231009202026261.png)
 
@@ -60,8 +56,6 @@ Connect getConnection(String url,String username,String password)
 Statement createStatement() throws SQLException;
 ```
 
-
-
 #### 预编译SQL的执行SQL对象:防止
 
 ```java
@@ -69,15 +63,11 @@ PreparedStatement prepareStatement(String sql)
     throws SQLException;
 ```
 
-
-
 #### 执行存储过程的对象
 
 ```java
 CallableStatement prepareCall(String sql, int resultSetType,                                  int resultSetConcurrency) throws SQLException;
 ```
-
-
 
 ### 事务管理
 
@@ -179,27 +169,26 @@ ResultSet executeQuery(sql);
     ```java
     boolean next()
     ```
-    
+
     -   将光标从当前一行移到下一行
     -   返回当前行是否为有效值的判断:
     -   true:当前行有效
         -   false:当前行无效
-    
-    
+
     ```java
     *** get***(String 列名)
 *** get***(int 从一开始的列编号)
     ```
-    
+
     -   ***表示该列的数据类型;如:
         -   int getInt(....)
         -   String getString(....)
         -   byte getByte(...)
-    
+
     ```java
     RS.close()
     ```
-    
+
     -   释放资源
 
 ```java
@@ -258,8 +247,6 @@ public class JDBCDemo {
     }
 }
 
-
-
 class Employee{
     private String employeeId;
     private String name;
@@ -293,7 +280,6 @@ class Employee{
         this.name = name;
     }
 }
-
 
 class EmployeeField{
     private String fieldName;
@@ -347,13 +333,11 @@ class EmployeeField{
     ```java
     String userName = "gfahjb dfahjzcbn " ;//随便输
     String passWord = "' or '1'='1" ;//特定的代码,注入的其中一种
-    
+
     String sql = "select * from tb_user " +
         "where username = '"+userName+"' and pwd = '"+passWord+"'";
             //被注入的原因:拼字符串
     ```
-
-    
 
 #### 解决注入
 
@@ -361,9 +345,9 @@ class EmployeeField{
 
     ```Java
     Connection conn = DriverManager.getConnection(url, username, password);
-    
+
     String sql = "select * from tb_user where username = ? and pwd = ?";
-     
+
     PreparedStatement pstmt = conn.prepareStatement(sql);
     ```
 
@@ -425,7 +409,6 @@ pstmt.executeUpdate();
 ```java
 //String url = "jdbc:mysql:///company";这句需要改↓
 String url = "jdbc:mysql:///company[这里可以从网页上拿参数,待等我去学网络编程]&useServerPrepStmt=true";
-
 
 //下面还是一样
 String username = "root";

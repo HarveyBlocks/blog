@@ -17,10 +17,6 @@ char getEle(char *arr, int len, int index) {
 }
 ```
 
-
-
-
-
 ### 遍历
 
 ```c
@@ -31,8 +27,6 @@ void showArr(char *arr, int len) {
     printf("%d\n", arr[len - 1]);
 }
 ```
-
-
 
 ### 删
 

@@ -1,7 +1,5 @@
 # MP分页插件
 
-
-
 ## 基本使用
 
 1.  定义配置类
@@ -12,8 +10,7 @@
 
     ```java
     public class MyBatisConfig {
-    
-    
+
         /**
          * 插件
          * @return 拦截器
@@ -47,20 +44,16 @@
                 new OrderItem("age",false),// 降序
                 new OrderItem("name",true) // 升序
         );//也可以用集合做参数
-    
+
         //分页查询
         page = this.page(page);
-    
+
         // 解析
         System.out.println("记录总条数 = "+page.getTotal());
         System.out.println("分页总页数 = "+page.getPages());
         return page.getRecords();
     }
     ```
-
-
-
-
 
 ## 通用分页实体
 
@@ -80,7 +73,7 @@ public class PageQuery  {
     private Integer pageSize;// 页码
     private String[] sortBy;// 排序字段
     private Boolean[] isAsc;// 排序方式
-    
+
     Getter And Setter...
 }
 ```
@@ -94,7 +87,7 @@ public class UserQuery extends PageQuery{
     private Integer lowAge;
     private Integer highAge;
     private String name;
-    
+
     Getter And Setter...
 }
 ```
@@ -137,9 +130,7 @@ public PageDto<User> pageWithOrder(int pageNo, int pageSize){
             new OrderItem("age",false),// 降序
             new OrderItem("name",true) // 升序
     );//也可以用集合做参数
-    
-    
-    
+
     //分页查询
     page = this.page(page);
 
@@ -151,7 +142,6 @@ public PageDto<User> pageWithOrder(int pageNo, int pageSize){
                 (int) userPage.getTotal(),(int) userPage.getPages(),users
         );//long转int转Integer
 
-    
 }
 ```
 

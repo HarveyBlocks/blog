@@ -2,27 +2,19 @@
 
 ## while循环
 
-
-
 ``` java
 while(){
     循环体
 }
 ```
 
-
-
 ## do-while循环
-
-
 
 ``` java
 do{
     循环体
 }while()
 ```
-
-
 
 ## for循环
 
@@ -34,11 +26,7 @@ for (初始化[int i =0];布尔值;更新){
 }
 ```
 
-
-
 ## 增强for循环
-
-
 
 - 常用于遍历数组或集合
 - 注意冒号
@@ -49,8 +37,6 @@ for (声明语句：表达式) {
     [循环体]
 }
 */
-
-
 
 public class Main {
     public static void main(String[] args) {
@@ -127,7 +113,6 @@ public class Main {
 ```
 
 ![屏幕截图 2023-08-03 190522](../../assets/屏幕截图 2023-08-03 190522.png)
-
 
 ***
 - continue加标签，回到标签处，标签冒号后的循环**再次**执行

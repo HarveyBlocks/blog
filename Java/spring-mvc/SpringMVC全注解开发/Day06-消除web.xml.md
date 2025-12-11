@@ -16,18 +16,18 @@
             <page-encoding>UTF-8</page-encoding>
         </jsp-property-group>
     </jsp-config>    
-    
+
     <!--配置ContextLoaderListener的初始化参数-->
     <context-param>
         <param-name>contextClass</param-name>
         <param-value>com.harvey.config.MyAnnotationConfigWebApplicationContext</param-value>
     </context-param>
-    
+
     <!--配置Spring的ContextLoaderListener-->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>    
-    
+
     <servlet>
         <servlet-name>DispatcherServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -37,7 +37,7 @@
             <param-value>com.harvey.config.MyAnnotationConfigWebApplicationContext</param-value>
         </init-param>
     </servlet>
-  
+
     <!--前端控制器-->
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
@@ -81,8 +81,6 @@
             servletContext.addListener(ContextLoaderListener.class);//就像这样加入监听器
         }
     ```
-
-    
 
 2.  对应的类加载路径(`src/main/java`下)的`META-INF/services`目录下创建一个名为`javax.servlet.ServletContainerInitializer`的文件
 
@@ -164,8 +162,6 @@ public class MyAnnoConfigDispatcherServletInitializer
     }
 }
 ```
-
-
 
 -   可以删除MyServletContainerInitializer(SpringServletContainerInitializer已经继承ServletContainerInitializer)
 

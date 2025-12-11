@@ -8,8 +8,6 @@
 
 检索(淘宝找商品)
 
-
-
 传统神经网络, 对权重的占用空间太高
 
 卷积其实就是一种特征提取方法
@@ -88,7 +86,7 @@ class CnnModule(nn.Module):
             nn.ReLU(),                      
             nn.MaxPool2d(2),                # 输出 (32, 7, 7)
         )
-        
+
         # 下注各个参数之间的关系
         # 传入数据带的条件
         out_width = 28  # 输出大小out_channels*out_width*out_width
@@ -108,8 +106,7 @@ class CnnModule(nn.Module):
         out_width =\
             ((out_width - kernel_size+2*pading)//stride + 1)//pool_width
         fc_in_feature = out_width*out_width*out_channels
-        
-        
+
 		# FC层
         self.out = nn.Linear(fc_in_feature, 10)   # 全连接层 FC 得到的结果
         # 优化器
@@ -169,7 +166,6 @@ def test_data(self, test_loader):
 
 ```
 
-
 ### 测试
 
 ```python
@@ -180,7 +176,6 @@ def epoch_accuracy(rights):
         sum([tup[1] for tup in rights])
     )
     return r
-
 
 @time_advice
 def cnn_test():
@@ -238,7 +233,6 @@ import torch.optim as optim
 from util.time import time_advice
 from module.MyModule import CnnModule
 
-
 # 根据数据画出对应的图像
 def plot_error(error_list):
     ax = plt.subplot(1, 1, 1)
@@ -249,11 +243,9 @@ def plot_error(error_list):
                s=1, c="blue", marker="s")
     plt.show()
 
-
 # 定义超参数
 # input_size = 28  # 图像的总尺寸28*28
 # num_classes = 10  # 标签的种类数
-
 
 # 一个撮（批次）的大小，64张图片
 def open_file(batch_size=64):
@@ -277,7 +269,6 @@ def open_file(batch_size=64):
                                               shuffle=True)
     return train_loader, test_loader
 
-
 def get_data(x_train, y_train, x_valid, y_valid, batch_set_size):
     train_ds = TensorDataset(x_train, y_train)
     valid_ds = TensorDataset(x_valid, y_valid)
@@ -285,7 +276,6 @@ def get_data(x_train, y_train, x_valid, y_valid, batch_set_size):
         DataLoader(train_ds, batch_size=batch_set_size, shuffle=True),
         DataLoader(valid_ds, batch_size=batch_set_size * 2),
     )
-
 
 def print_result(epoch, batch_idx, loss,
                  train_r, val_r, train_loader,
@@ -301,14 +291,12 @@ def print_result(epoch, batch_idx, loss,
         100. * train_r[0] / train_r[1],
         100. * val_r[0] / val_r[1]))
 
-
 def epoch_accuracy(rights):
     r = (
         sum([tup[0] for tup in rights]),
         sum([tup[1] for tup in rights])
     )
     return r
-
 
 @time_advice
 def cnn_test():
@@ -331,7 +319,6 @@ def cnn_test():
                 val_r = epoch_accuracy(val_rights)
                 print_result(epoch, batch_idx, loss,
                              train_r, val_r, train_loader)
-
 
 if __name__ == "__main__":
     cnn_test()
@@ -427,8 +414,6 @@ class CnnModule(nn.Module):
 
 ```
 
-
-
 ## torchvision
 
 https://pytorch.org/docs/stable/torchvision/index.html
@@ -452,8 +437,6 @@ https://pytorch.org/docs/stable/torchvision/index.html
 #### 网络模型保存与测试
 - 模型保存的时候可以带有选择性，例如在验证集中如果当前效果好则保存
 - 读取模型进行实际测试
-
-
 
 ## 花图像分类识别
 
@@ -492,8 +475,6 @@ def transformer():
 
 ```
 
-
-
 ### 读取数据
 
 ```python
@@ -517,8 +498,6 @@ def open_file(transformer):
 
 ```
 
-
-
 ### 读取类别
 
 ```python
@@ -529,8 +508,6 @@ def get_id2name():
     return flower_id2name
 
 ```
-
-
 
 ### 展示图片
 
@@ -576,8 +553,6 @@ def show_image(class_name_ids, flower_id2name, data_loader):
     plt.show()
 
 ```
-
-
 
 ### 迁移学习
 
@@ -706,7 +681,6 @@ def initialize_resnet(classes_count, feature_extract, use_weights=True):
     return model_ft, input_size
 ```
 
-
 ### 训练
 
 训练
@@ -773,8 +747,6 @@ def train_model(model, data_loaders, filename,
         valid_losses, train_losses
 ```
 
-
-
 一轮训练:
 
 ```python
@@ -840,7 +812,6 @@ log.debug('Optimizer learning rate : {:.7f}'.format(LRs[-1]))
 log.debug()
 ```
 
-
 一次mini batch
 
 ```python
@@ -877,7 +848,6 @@ with torch.set_grad_enabled(phase == 'train'):
 running_loss += loss.item() * inputs.size(0)
 running_corrects += torch.sum(preds == labels.data)
 ```
-
 
 程序清单
 
@@ -1065,8 +1035,6 @@ def classify_image():
                     feature_extract=feature_extract)
 ```
 
-
-
 模型的device
 
 ```python
@@ -1092,9 +1060,6 @@ print(check_device(device))    # TODO
 print(inputs.device)
 print(labels.device)
 ```
-
-
-
 
 ### 训练所有层
 
@@ -1128,12 +1093,6 @@ optimizer.load_state_dict(checkpoint['optimizer'])
 model_ft, val_acc_history, train_acc_history, valid_losses, train_losses, LRs  = train_model(model_ft, dataloaders, criterion, optimizer, num_epochs=10, is_inception=(model_name=="inception"))
 ```
 
-
-
-
-
-
-
 ### 测试
 
 -   针对测试的显示图片改编(兼容普通的显示图片)
@@ -1143,7 +1102,7 @@ model_ft, val_acc_history, train_acc_history, valid_losses, train_losses, LRs  =
         def im_convert(tensor):
             """ 展示数据"""
             image = tensor.to("cpu").clone().detach()
-    
+
             image = image.numpy()
             # squeeze: 拉平, 挤压
             # image = image.squeeze()     # ?意义不明, 加和去效果一样
@@ -1153,7 +1112,7 @@ model_ft, val_acc_history, train_acc_history, valid_losses, train_losses, LRs  =
             image = image * np.array((0.229, 0.224, 0.225)) + \
                 np.array((0.485, 0.456, 0.406))
             image = image.clip(0, 1)
-    
+
             return image
         rows = 2
         columns = batch_size//rows
@@ -1180,7 +1139,7 @@ model_ft, val_acc_history, train_acc_history, valid_losses, train_losses, LRs  =
                 correct = preds_flower == true_flower
                 ax.set_title("{} ({})".format(preds_flower, true_flower),
                              color=("green" if correct else "red"))
-    
+
         plt.show()
     ```
 
@@ -1212,27 +1171,23 @@ model_ft, val_acc_history, train_acc_history, valid_losses, train_losses, LRs  =
     flower_id2name = get_id2name()
     model_ft, input_size = initialize_resnet(
         len(class_name_ids), feature_extract=True, use_weights=True)
-    
+
     # GPU模式
     train_on_gpu = True
     device = torch.device("cuda:0")
     model = model_ft.to(device)
-    
+
     # 保存文件的名字
     filename = './cnn_plus_check_point.pth'
-    
+
     # 加载模型
     checkpoint = torch.load(filename)
     best_acc = checkpoint['best_acc']
     model.load_state_dict(checkpoint['state_dict'])
-    
+
     test_model(model, test_loader, class_name_ids, flower_id2name)
     ```
     也可以在训练之后来一波测试
-
-
-
-
 
 ### 程序清单
 
@@ -1244,10 +1199,8 @@ import torch
 import torch.optim as optim
 from util.log import Log, log_advice
 
-
 batch_size = 16
 image_size = (3, 224, 224)
-
 
 def plot_error(error_list):
     """
@@ -1271,7 +1224,6 @@ def plot_error(error_list):
     ax.scatter(range(len(error_list)), error_list,
                s=1, c="blue", marker="s")
     plt.show()
-
 
 def show_image(class_name_ids, flower_id2name, inputs, target, preds=None):
     def im_convert(tensor):
@@ -1316,7 +1268,6 @@ def show_image(class_name_ids, flower_id2name, inputs, target, preds=None):
                          color=("green" if correct else "red"))
 
     plt.show()
-
 
 def open_file():
 
@@ -1366,13 +1317,11 @@ def open_file():
     class_name_ids = image_datasets['train'].classes
     return data_loaders, dataset_sizes, class_name_ids
 
-
 def get_id2name():
     import json
     with open('flower_to_name.json', 'r') as f:
         flower_id2name = json.load(f)
     return flower_id2name
-
 
 @log_advice("test_cnn_plus")
 def test_cnn_plus():
@@ -1403,7 +1352,6 @@ def test_cnn_plus():
         # print(batch_idx, data[batch_idx].size(), target[batch_idx])
         break
 
-
 def initialize_resnet(classes_count, feature_extract, use_weights=True):
     """
     Resnet152 残差神经网络, 152层
@@ -1432,7 +1380,6 @@ def initialize_resnet(classes_count, feature_extract, use_weights=True):
 
     return model_ft, input_size
 
-
 def update_params(model_ft, feature_extract):
     log = Log("update_params")
     # 是否训练所有层
@@ -1450,7 +1397,6 @@ def update_params(model_ft, feature_extract):
                 params_to_update.append(param)
                 log.info("\t"+name)
     return params_to_update
-
 
 def check_device(model, stadard_device):
     def cal_gpu(module, model_devices):
@@ -1471,7 +1417,6 @@ def check_device(model, stadard_device):
             return False
     return True
 
-
 def test_model(model, test_loader, class_name_ids, flower_id2name):
     data_iter = iter(test_loader)
     inputs, target = data_iter.__next__()
@@ -1487,7 +1432,6 @@ def test_model(model, test_loader, class_name_ids, flower_id2name):
     # preds_tensor = preds_tensor.cpu()
     preds = np.squeeze(preds_tensor.numpy())
     show_image(class_name_ids, flower_id2name, inputs, target, preds)
-
 
 @log_advice("classify_image")
 def classify_image():
@@ -1514,7 +1458,6 @@ def classify_image():
     # 每次训练完, 来一波测试
     flower_id2name = get_id2name()  # ID和种类名的对应关系
     test_model(model, data_loaders['valid'], class_name_ids, flower_id2name)
-
 
 def train_model(model, data_loaders, filename,
                 num_epochs=1, is_inception=False, feature_extract=True):
@@ -1672,17 +1615,10 @@ def train_model(model, data_loaders, filename,
         val_acc_history, train_acc_history,\
         valid_losses, train_losses
 
-
-
-
 if __name__ == '__main__':
     classify_image()
 
 ```
-
-
-
-
 
 -   对自己写的CNN的尝试, 未完成
 
@@ -1801,7 +1737,6 @@ class CnnPlusModule(nn.Module):
             print("RELU()")
         print("\n")
         print("out: ", self.__out)
-
 
 @log_advice("test_cnn_plus")
 def test_cnn_plus():

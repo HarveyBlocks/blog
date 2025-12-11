@@ -16,8 +16,6 @@
 
     -   深度学习适合用于人工不好进行特征提取的领域, 例如图像, 语音, 自然语言
 
- 
-
 ![image-20240308133941988](../assets/Untitled/image-20240308133941988.png)
 
 -   对计算机和计算性能的要求
@@ -35,21 +33,15 @@
     -   朴素贝叶斯, 决策树
     -   神经网络
 
-
-
 ## 应用场景
 
 图像识别
 
 人脸识别跟踪
 
-
-
 ## 深度学习框架
 
 ![image-20240308134432780](../assets/Untitled/image-20240308134432780.png)
-
-
 
 -   PyTorch 适用于动态图像
 -   TensenFlow在动态图像和静态图像下都实用
@@ -76,8 +68,6 @@ GPU全方面计算,`Graph Processing Unit`图像处理单元, 核心数量多
 GPU的核心数量可以达到好几千, 可以处理多个不同的任务, 适合并行任务
 
 CPU, 核心少 , 但是每个核心的处理速度块, 适合做连续的任务
-
-
 
 ```
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple keras_applications==1.0.6 tensorflow

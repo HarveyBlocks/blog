@@ -29,10 +29,6 @@
 
 1.  zk的顺序创建, 就能有一个id, `node-00000001`
 
-
-
-
-
 ## DNS服务
 
 域名配置
@@ -58,41 +54,30 @@
     ```java
     @Resource
     privite DruidDataScource dataSource;
-    
+
     public void reconn(){
         String username = userMapper.getUserNameById(1); // 使用连接到的数据库
-    	
+
         (/*锁*/){
             dataSource.restart(); // 重启的一个API
-    
+
             // 如果执行restart后，有程序执行了mapper，则下方会报错.
             // 在重启连接的时候需要确认不会进行其他操作(锁)
             String username = userMapper.getUserNameById(1);
-    
-    
+
             //由于上方执行了mapper，导致dataSource被init，所以这里会报错；详情见源码
             //执行set时必须在dataSource刚restart后才行(此时还没有被init)
             dataSource.setUrl("jdbc:mysql://127.0.0.1:3306/nobase?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true");
         }
-    
+
     }
     ```
-
-    
-
-    
 
 ## 集群管理
 
 -   集群控制(注册中心)
 -   集群监控(心跳?zk是否存在这种功能)
 -   节点上下限(用Agent在上下线的时候在zk上增删节点)
-
-
-
-
-
-
 
 ## 分布式锁
 

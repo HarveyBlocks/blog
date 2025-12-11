@@ -56,13 +56,9 @@ management:
 -   "UP"表示程序服务器正常运行
 -   diskSpace:磁盘
 
-
-
 #### 检查数据库
 
 -   以Redis为例
-
-
 
 -   引入Redis之后,不打开redis服务器
 
@@ -90,14 +86,10 @@ management:
 >
 >   **Spring Boot Admin**(开源项目),提供UI界面, 用于管理和监控SpringBoot应用程序
 
-
-
 Spring Boot Admin有客户端(Client)和服务端(Server)
 
 -   Client: 想被监控的Spring项目
 -   Server: Admin的UI界面的提供
-
-
 
 -   一般只在produce的时候用, 看看运行情况啥的, 放到deploy环境上就不会用admin了
 
@@ -124,15 +116,13 @@ Spring Boot Admin有客户端(Client)和服务端(Server)
     @EnableAdminServer
     @SpringBootApplication
     public class AdminServerApplication {
-    
+
         public static void main(String[] args) {
             SpringApplication.run(AdminServerApplication.class, args);
         }
-    
+
     }
     ```
-
-
 
 ### admin-client使用步骤
 
@@ -159,8 +149,6 @@ Spring Boot Admin有客户端(Client)和服务端(Server)
           client:
             url: http://localhost:9000
     ```
-
-    
 
 4.  启动server和client服务, 访问server
 

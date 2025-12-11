@@ -28,8 +28,6 @@
 
 ## 结构
 
-
-
 -   抽象处理类
     -   Handler
     -   包含抽象处理方法和一个后继连接
@@ -66,7 +64,7 @@ public abstract class Handler {
     public final void setPost(Handler post) {
         this.post = post;
     }
-    
+
     public static final Handler HEAD = new Handler() {
         @Override
         protected boolean in(Request request) {
@@ -90,7 +88,7 @@ public abstract class Handler {
         }
     };
     private Handler post = TAIL;
-    
+
 }
 ```
 

@@ -10,7 +10,7 @@ cpp支持多继承
 
 ```cpp
 class 子类名:继承方式 父类{
-    
+
 };
 ```
 
@@ -111,8 +111,6 @@ int main() {
 
 ```
 
-
-
 ## 类型兼容规则
 
 在继承规则为**公有**时, 有: 
@@ -202,7 +200,6 @@ public:
     }
 };
 
-
 int main() {
     Vehicle* car = new Car();
     car->run(); // 交通工具运行
@@ -233,7 +230,6 @@ public:
         cout<<"车运行"<<endl;
     }
 };
-
 
 int main() {
     Vehicle* car = new Car();
@@ -269,8 +265,6 @@ public:
 不同父类有同名的成员, 到时候调用哪个成员? 不知道
 
 直接调用, 编译异常
-
-
 
 -   在多继承时，父类之间出现同名成员时，将出现访问时的二义性（不确定性）
 
@@ -331,8 +325,6 @@ public:
 注意：
 **在第一级继承时就要将共同父类设计为虚基类。**
 
-
-
 ```cpp
 #include<iostream>
 
@@ -388,8 +380,6 @@ int main() {
     -   `B1::field`的值是`B1更改B1的field`
     -   `B2::field`的值是`B2更改B2的field`
 
-
-
 ## 类的构建
 
 对子类的构建必须先经过父类的构建, 否则子类构造不出来
@@ -413,7 +403,7 @@ int main() {
     	public:
         	Son():Father(),Mother(){}//和这里无关
         // 构造父类时, 需要使用↑这种方法, 在函数体外声明, 如果要调用本类的其他构造函数帮助构造, 也要放在外面才能生效! 
-        	
+
     };
     ```
 
@@ -476,8 +466,6 @@ C::C(C &c1):B(c1){…}
 
 顶端父类的成员只会构造一份
 
-
-
 ## 类型转换
 
 兄弟, 叔侄不能转换
@@ -500,7 +488,6 @@ int main(){
     stu.say();
     stu.eat(1000);
 
-
    //  Student  s = (Student) ( *person); 编译错误
 
 }
@@ -518,17 +505,11 @@ int main(){
 -   `new_type` 目标类型
 -   `expression` 源类型, 即被转换的类型
 
-
-
 附: 异常`bad_cast`, 有`try-catch`
-
-
 
 #### `static_cast`
 
 >   静态转化
-
-
 
 ```
 static_cast<new_type> (expression)
@@ -556,8 +537,6 @@ static_cast<new_type> (expression)
     //正确，将double指针转换成void指针 
     ```
 
-    
-
 -   把任何类型的表达式转换成void类型。
 
 -   注意：能增加`const`这种buff, 但**不能去掉expression的const、volatile等属性**。
@@ -566,15 +545,11 @@ static_cast<new_type> (expression)
     int e = 10;
     const int f = static_cast<const int>(e);
     //正确，将int型数据转换成const int型数据 
-    
+
     const int g = 20; 
     int *h = static_cast<int*>(&g); 
     //编译错误，static_cast不能转换掉g的const属性
     ```
-
-    
-
-
 
 #### `dynamic_cast`
 
@@ -599,11 +574,7 @@ void f(const Base &b)
 
 ```
 
-
-
 #### `const_cast`
-
-
 
 -   用于修改类型的const或volatile属性。
 -   源类型与目标类型一致。
@@ -658,8 +629,6 @@ class Derived : public Base {
 
 ```
 
-
-
 ```cpp
 int main() {
     // Base对象
@@ -688,10 +657,8 @@ int main() {
 ```cpp
 class Base { public:virtual ~Base() {} };
 
-
 class Derived : public Base {
 };
-
 
 int main() {
     // Derived对象

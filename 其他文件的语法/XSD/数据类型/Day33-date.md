@@ -12,13 +12,9 @@
     -   DD 表示天数
 -   所有的成分都是必需的
 
-
-
 ```xml
 <xs:element name="start" type="xs:date"/>
 ```
-
-
 
 ```xml
 <start>2002-09-24</start>
@@ -28,21 +24,15 @@
 
 >   Time Data Type
 
-
-
 -   `"hh:mm:ss"`
     -   hh 表示小时
     -   mm 表示分钟
     -   ss 表示秒
 -   所有的成分都是必需的！
 
-
-
 ```xml
 <xs:element name="start" type="xs:time"/>
 ```
-
-
 
 ```xml
 <start>09:00:00</start>
@@ -54,13 +44,9 @@
 <start>09:30:10.5</start>
 ```
 
-
-
 ## 日期时间
 
 >   DateTime Data Type
-
-
 
 -   `"YYYY-MM-DDThh:mm:ss"`
     -   YYYY 表示年份
@@ -72,13 +58,9 @@
     -   ss 表示秒
 -   所有的成分都是必需的！
 
-
-
 ```xml
 <xs:element name="startdate" type="xs:dateTime"/>
 ```
-
-
 
 ```xml
 <startdate>2002-05-30T09:00:00</startdate>
@@ -97,8 +79,6 @@
 ```xml
 <startdate>2002-05-30T09:30:10Z</startdate>
 ```
-
-
 
 或者也可以通过在时间后添加一个正的或负时间的方法，来规定以世界调整时间为准的偏移量
 
@@ -128,13 +108,9 @@
     -   nM 表示分钟数
     -   nS 表示秒数
 
-
-
 ```xml
 <xs:element name="period" type="xs:duration"/>
 ```
-
-
 
 ```xml
 <period>P5Y</period>
@@ -142,15 +118,11 @@
 
 一个 5 年的周期。
 
-
-
 ```xml
 <period>P5Y2M10D</period>
 ```
 
 一个 5 年、2 个月及 10 天的周期。
-
-
 
 ```xml
 <period>P5Y2M10DT15H</period>
@@ -158,15 +130,11 @@
 
 一个 5 年、2 个月、10 天及 15 小时的周期。
 
-
-
 ```xml
 <period>PT15H</period>
 ```
 
 一个 15 小时的周期。
-
-
 
 ### 负的持续时间
 

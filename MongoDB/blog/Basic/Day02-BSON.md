@@ -2,8 +2,6 @@
 
 Binary Json, 二进制序列化格式
 
-
-
 ## 数据类型
 
 | 类型标记 | 别名         | 注意       |
@@ -29,8 +27,6 @@ Binary Json, 二进制序列化格式
 | 127      | "maxKey"     |            |
 
 类型标记(占1byte)在二进制序列的数值之前, 用于标注类型
-
-
 
 ## 二进制数据binData
 
@@ -105,8 +101,6 @@ var my_date2 = ISODate()
 ```js
 var date1_month = my_date1.getMonth()
 ```
-
-
 
 ## `decimal128`
 

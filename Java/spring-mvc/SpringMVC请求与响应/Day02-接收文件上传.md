@@ -26,18 +26,12 @@
 
 -   这个文件上传是这个样子的
 
-
-
 ## Postman模拟文件上传
 
 ![image-20231126150141435](../../assets/Day02-接收文件上传/image-20231126150141435.png)
 
 1.  在key的text/file选择**File**
 2.  选择文件地址
-
-
-
-
 
 ## 文件上传
 
@@ -60,14 +54,12 @@ public String addFile(@RequestBody MultipartFile myFile){
 -   文件解析器没有开启,这是应为Spring认为这个功能难得用到一次,就没有默认配置
 -    需要人为**手动开启文件解析器**
 
-
-
 ### 配置文件上传解析器
 
 -   配置文件上传解析器,**注意id的名字是固定写法**
-  
+
     -   **本来的话**Spring是默认**按照类型**去匹配的,但是人家天生反骨
-    
+
 -   CommonsMultipartResolver
 
     -   通用的,公共的表单的解析器
@@ -76,10 +68,6 @@ public String addFile(@RequestBody MultipartFile myFile){
     <bean id="multipartResolver" 
           class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
     ```
-
-
-
-
 
 -   CommonsMultipartyResolver底层使用Apache的Common-fileuplad等工具API进行上传
 
@@ -93,15 +81,9 @@ public String addFile(@RequestBody MultipartFile myFile){
     </dependency>
     ```
 
-    
-
-
-
 ### Postman测试与运行结果
 
 ![image-20231126154148819](../../assets/Day02-接收文件上传/image-20231126154148819.png)
-
-
 
 -   这个**要和name一致指的是要和参数名一致**,这个是模拟表单输入,以后只要html的form的表单里的name="myFile"就行啦
 
@@ -135,7 +117,6 @@ public String addFile(@RequestBody MultipartFile myFile){
 ```
 
 -   这个依赖里自带了[commons-io框架](..\..\blog\javaIO流\Day35-IO框架.md)
-
 
 ```java
 @PostMapping("/file")

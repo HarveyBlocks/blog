@@ -30,7 +30,6 @@ class MyService(service: Service) : Service by service {
     }
 }
 
-
 fun main() {
     val myService = MyService(ServiceImpl())
     myService.hello()
@@ -48,8 +47,6 @@ greet!
 
 ```
 
-
-
 也可以全部交给外界, 没啥意义
 
 ```kotlin
@@ -58,14 +55,9 @@ interface Service {
     fun greet()
 }
 
-
 class MyService(service: Service) : Service by service
 
 ```
-
-
-
-
 
 ## 属性委托
 
@@ -88,7 +80,7 @@ DelegateEpression 是对应委托
 ```kotlin
 interface Delegate<T : Any, P : Any> { // T其实是Any?也OK, P一定要是字段类型
     operator fun getValue(obj: T, property: KProperty<*>): P
-	
+
     // 对于只读属性来说, setValue没有也OK, 有也没事(不生效)
     operator fun setValue(obj: T, property: KProperty<*>, value: P) 
 }
@@ -124,8 +116,6 @@ class Example {
 }
 ```
 
-
-
 只要delegate的部分实现需要的`getValue`和`setValue`(val 不需要 `setValue`), 就行(返回值类型也要对应...)
 
 ```kotlin
@@ -135,8 +125,6 @@ class A {
     val s by this
 }
 ```
-
-
 
 ## 库实现
 
@@ -165,8 +153,6 @@ val lazyValue2: String by lazy(LazyThreadSafetyMode.NONE) { // 没有任何线�
     "Hello"
 }
 ```
-
-
 
 ### observable
 
@@ -200,8 +186,6 @@ var name: String by Delegates.vetoable("initial name") { property, oldValue, new
 -   同类拓展属性
 -   异类属性
 -   异类拓展属性
-
-
 
 之间可以互相委托
 
@@ -270,15 +254,11 @@ var X.i: Int by y::h // 扩展 by 不同对象的扩展
 var X.k: Int by ::j // 扩展 by top
 ```
 
-
-
 如果委托不当可能造成栈溢出但是不会编译异常
 
 ```kotlin
 var a: Int by ::a // 完全OK
 ```
-
-
 
 可用于废弃一个属性, 而后用另一个属性覆盖
 
@@ -318,7 +298,6 @@ fun main() {
 -   Map 缺少的字段会在第一次使用时抛出`java.util.NoSuchElementException`
 -   Value 类型不匹配的字段会在第一次使用时抛出`java.util.ClassCastException`
 
-
 ## 局部委托
 
 局部变量使用委托
@@ -334,8 +313,6 @@ fun example(computeFoo: () -> Foo) {
 ```
 
 局部变量可以委托别人, 但不能成为别人的委托, 也不能成为局部变量的委托
-
-
 
 ## 重载 by 运算符
 

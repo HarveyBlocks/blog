@@ -13,22 +13,22 @@
     ```java
     public enum A{
     	X,Y,Z;
-        
+
         private String name;
         public String getName(){
             return name;
         }
-        
+
         public void setName(String name){
             this.name = name;
         }
-        
+
     }
     class Demo{
         public static void main(String[] args){
             A a1 = A.X;//A不能调用非静态的方法,但是a1可以
             System.out.println(a1);//X
-    
+
             //额外的API
             A[] as = A.values();
             A a3 = A.valueOf("Z");
@@ -37,12 +37,8 @@
             System.out.println(a3.ordinal());// 2
         }
     }
-    
+
     ```
-
-
-
-
 
 ## 抽象枚举
 

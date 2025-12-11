@@ -34,8 +34,6 @@
 }
 ```
 
-
-
 ## 一对一链接
 
 数据准备
@@ -137,10 +135,6 @@ List<Bson> pipeline = new AggregatePipelineBuilder()
         .build();
 AggregateIterable<Document> aggregate = orders.aggregate(pipeline);
 ```
-
-
-
-
 
 ## 多字段链接
 

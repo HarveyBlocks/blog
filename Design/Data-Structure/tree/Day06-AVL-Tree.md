@@ -23,8 +23,6 @@ static int balanceFactor(BinaryTreeNode<T> *node) {
 }
 ```
 
-
-
 ## 旋转
 
 平衡因子大于1时, 通过旋转树的节点, 使树恢复平衡
@@ -71,8 +69,6 @@ void AvlTree<T>::leftRotate(BinaryTreeNode<T> *node, BinaryTreeNode<T> *parentNo
 }
 ```
 
-
-
 ### 右旋
 
 当左子树比较重, 使用右旋
@@ -113,8 +109,6 @@ void AvlTree<T>::rightRotate(BinaryTreeNode<T> *node, BinaryTreeNode<T> *parentN
 }
 
 ```
-
-
 
 ### 旋转的使用
 
@@ -215,14 +209,11 @@ public:
      */
     virtual void removeNode(Stack<BinaryTreeNode<T> *> &trace);
 
-
     void resetRoot(BinaryTreeNode<T> *newRoot);
 
     static void traceFamily(Stack<BinaryTreeNode<T> *> trace, BinaryTreeNode<T> *root);
 };
 ```
-
-
 
 ```cpp
 template<class T>
@@ -327,19 +318,16 @@ bool BinarySearchTree<T>::removeNode0(Stack<BinaryTreeNode<T> *> &trace) {
     return false;
 }
 
-
 template<class T>
 void BinarySearchTree<T>::resetRoot(BinaryTreeNode<T> *newRoot) {
     delete this->root;
     this->root = newRoot;
 }
 
-
 template<class T>
 void BinarySearchTree<T>::removeNode(Stack<BinaryTreeNode<T> *> &trace) {
     removeNodeByLoop(trace);
 }
-
 
 template<class T>
 void BinarySearchTree<T>::removeNodeByRecursive(Stack<BinaryTreeNode<T> *> &trace) {
@@ -354,7 +342,6 @@ void BinarySearchTree<T>::removeNodeByLoop(Stack<BinaryTreeNode<T> *> &trace) {
     while (removeNode0(trace));
 }
 
-
 template<class T>
 void BinarySearchTree<T>::insert(const T &value) {
     Stack<BinaryTreeNode<T> *> trace;
@@ -367,7 +354,6 @@ void BinarySearchTree<T>::insert(const T &value) {
     trace.push(newNode);
     insertNode(trace);
 }
-
 
 template<class T>
 void BinarySearchTree<T>::insertNode(Stack<BinaryTreeNode<T> *> &trace) {
@@ -394,8 +380,6 @@ void BinarySearchTree<T>::insertNode(Stack<BinaryTreeNode<T> *> &trace) {
     this->size++;
 }
 ```
-
-
 
 用于检查trace栈里的节点是否都有继承关系的函数
 
@@ -424,8 +408,6 @@ void BinarySearchTree<T>::traceFamily(Stack<BinaryTreeNode<T> *> trace, BinaryTr
 }
 
 ```
-
-
 
 ### 增
 

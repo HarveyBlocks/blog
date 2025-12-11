@@ -17,8 +17,6 @@
 <meta charset="UTF-8">
 ```
 
-
-
 ## CSS
 
 层叠样式
@@ -74,7 +72,7 @@
         ```html
         <link rel="styleheet" href="css/news.css">
         ```
-    
+
     -    rel指定文本文件
     -   href指定文本地址
     -   前后可以互换
@@ -82,8 +80,6 @@
 #### 搞颜色
 
 拾色器(那个滴管)
-
-
 
 三种搞颜色的法
 
@@ -94,8 +90,6 @@ color: rgb(26, 42, 103);
 ```
 
 #### 搞字体(font-)
-
-
 
 ```css
 color: aquamarine;
@@ -142,8 +136,7 @@ font-size: 18px;/* 设置字体大小,也可以120%啥的 */
             }
         </style>
     </head>
-    
-    
+
     <body">
         <h1>欢迎使用Html</h1>
         <img src="image\cat-cat-insect.jpg">
@@ -154,7 +147,7 @@ font-size: 18px;/* 设置字体大小,也可以120%啥的 */
             <span class="cls">2023.10.12</span>
             <span id="小标题">Hello World</span>
         </hr>
-        
+
     </body>
 
 </html>
@@ -163,18 +156,6 @@ font-size: 18px;/* 设置字体大小,也可以120%啥的 */
 #### 三种选择器的优先级
 
 ID>类>标签
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 超链接
 
@@ -199,8 +180,6 @@ a{
 }
 ```
 
-
-
 ## 视频和图片
 
 ![image-20231112161542815](../java/assets/html与CSS/image-20231112161542815.png)
@@ -209,15 +188,9 @@ a{
 
 -   写个controls="controls"就使用浏览器默认播放器(?????????????????????????????????我无敌了?)
 
-
-
-
-
 ## 文本
 
 -   &nbsp空格
-
-
 
 ![image-20231112161613705](../java/assets/html与CSS/image-20231112161613705.png)
 
@@ -267,8 +240,6 @@ p{
 
 ## 表格
 
-
-
 ![image-20231112164958687](../Java/assets/html与CSS/image-20231112164958687.png)
 
 -   cellspace="0"表格单元之间变成实心
@@ -289,13 +260,9 @@ p{
 -   Get有长度限制
 -   Post没有
 
-
-
 ### 属性
 
 -   一定要有Name属性,否则这个表单是无法提交给服务端的
-
-
 
 ![image-20231112165526019](../Java/assets/html与CSS/image-20231112165526019.png)
 

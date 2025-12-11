@@ -8,8 +8,6 @@
 
 ![image-20231125165710280](../../assets/Day02-/image-20231125165710280.png)
 
-
-
 ![image-20231126150021882](../../assets/Day02-Body请求数据/image-20231126150021882.png)
 
 -   row就是一长串字符串
@@ -43,8 +41,6 @@ public String getParam(@RequestBody String body) {
 
 然后解析
 
-
-
 ## JSON类型的数据接收
 
 [JSON(字符串)解析实体类](..\..\blog\java网络\JSP和AJAX\Day42-JSON.md)
@@ -62,8 +58,6 @@ public String getParam(@RequestBody String body) {
 ```java
 T com.alibaba.JSON.parseObject(String text, Class<T> clazz){...}
 ```
-
-
 
 -   ```java
     @PostMapping ("/body")
@@ -93,8 +87,6 @@ T com.alibaba.JSON.parseObject(String text, Class<T> clazz){...}
     User{username='张三', age=18, hobby=[足球,  篮球, java], birthday=Sun Nov 11 00:00:00 CST 2018, address=Address{city='霓虹', area='Tokyo'}}
     ```
 
-    
-
 ### Jackson
 
 >   也是一个解析JSON的包,是Spring里集成的是JacksonJson,而不是FastJSON
@@ -107,16 +99,12 @@ T com.alibaba.JSON.parseObject(String text, Class<T> clazz){...}
 </dependency>
 ```
 
-
-
 com.fasterxml.jackson.databind.Object
 
 ```java
 <T> T readValue(String content, Class<T> valueType) 
     throws JsonProcessingException, JsonMappingException{...}
 ```
-
-
 
 -   ```java
     @PostMapping ("/body")
@@ -133,7 +121,7 @@ com.fasterxml.jackson.databind.Object
         return "/index.jsp";
     }
     ```
-    
+
 -   输出结果:
 
     ```
@@ -172,8 +160,7 @@ public enum Gender {
 
     @JsonValue
     private final String desc;// description
-    
-    
+
    Gender(String value, String desc) {
         this.value = value;
         this.desc = desc;
@@ -181,17 +168,11 @@ public enum Gender {
 }
 ```
 
-
-
-
-
 ### 简化JSON的转换
 
 但是!
 
 ![image-20231125200927149](../../assets/Day02-/image-20231125200927149.png)
-
-
 
 要来回new ObjectMapper,要调用函数,要传参,真是不好!😥
 
@@ -217,7 +198,7 @@ public enum Gender {
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="messageConverters">
             <list>
-    
+
             </list>
         </property>
     </bean>
@@ -255,8 +236,6 @@ public enum Gender {
 </bean>
 ```
 
-
-
 然后就可以写一个简洁的方法啦
 
 ```java
@@ -267,8 +246,6 @@ public String getParam2(@RequestBody User user) {
     return "/index.jsp";
 }
 ```
-
-
 
 ```
 -------------/body2-----------

@@ -4,10 +4,6 @@
 
 ![image-20231016163640903](../assets/Day34-MyBatis核心配置文件/image-20231016163640903.png)
 
-
-
-
-
 -   直接上mybatis-config.xml
 
 ```xml
@@ -26,8 +22,7 @@
         <package name="com.harvey.pojo"/><!--这里与其说是起别名,其实是省略了包名,真想看起一个新名字,去看官网-->
         <package name="com.harvey.mapper"/><!--上面这句有用,下面这句没用,看来代理接口如果要省,去看下面的包扫描-->
     </typeAliases>
-    
-    
+
     <!--
     envaroments:
     环境配置
@@ -37,13 +32,10 @@
     -->
     <environments default="development">
 
-
-
         <!--development 开发化境-->
         <environment id="development">
 
             <transactionManager type="JDBC"/>
-
 
             <!-- 默认的数据库连接池  POOLED -->
             <dataSource type="POOLED">
@@ -79,8 +71,6 @@
 
         <!--还有生产库等-->
     </environments>
-
-
 
     <!--对应映射文件-->
     <mappers>

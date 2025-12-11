@@ -1,7 +1,5 @@
 ## 协程
 
-
-
 协程是在线程上的进一步轻量化
 
 **不同协程上的任务可能执行在同一条线程**
@@ -13,8 +11,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
 }
 ```
-
-
 
 ```kotlin
 import kotlinx.coroutines.delay
@@ -35,10 +31,6 @@ fun main() {
     print("done")
 }
 ```
-
-
-
-
 
 ## 简单使用
 
@@ -63,8 +55,6 @@ fun main() {
 }
 ```
 
-
-
 大量启动协程
 
 ```kotlin
@@ -78,8 +68,6 @@ for (i in 1..1000) {
 阅读日志发现, 最多打开了20条线程
 
 ![image-20250922004003011](../../assets/Day05-协程/image-20250922004003011.png)
-
-
 
 线程安全问题依然存在
 
@@ -99,8 +87,6 @@ log("end")
 ```
 
 ![image-20250922004134018](../../assets/Day05-协程/image-20250922004134018.png)
-
-
 
 协程代码块中的代码在1秒钟之内不能运行结束，那么就会被强制 中断
 
@@ -186,8 +172,6 @@ fun main() {
 
 看来IO操作在协程里是非阻塞的
 
-
-
 ## suspend
 
 挂起
@@ -245,8 +229,6 @@ coroutineScope函数**只会阻塞当前协程**，既**不影响其他协程**�
 - CoroutineScope.launch
 - CoroutineScope.coroutineScope
 
-
-
 ### Job
 
 作用域构建器的Job, 在协程作用域外, 可以用Job对对应协程进行关闭
@@ -261,10 +243,6 @@ job.cancel()
 ```
 
 GlobalScope.launch的返回值就是job, 如果需要在GlobalScope.launch的协程作用域外提前关闭GlobalScope.launch的作用域,就使用其返回值Job
-
-
-
-
 
 ### CoroutineScope.async
 
@@ -292,8 +270,6 @@ fun main() = runBlocking {
   - 只能在Android项目中使用
   - **纯 Kotlin 程序使用会出现错误**
 - Dispatchers.IO IO密集型, 大部分时间阻塞or等待, 故提高并行线程数量
-
-
 
 ### withContext
 

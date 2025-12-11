@@ -2,8 +2,6 @@
 
 一个ORM框架
 
-
-
 ## 概念
 
 - Entity 实体, 一个实体对应一个表
@@ -95,7 +93,7 @@ interface UserDao {
      */
     @Delete
     fun deleteUser(user: User): Int
-    
+
     fun deleteById(id: Long): Int {
         return deleteUser(User("", "", 0, id))
     }
@@ -158,8 +156,6 @@ interface UserDao {
 }
 ```
 
-
-
 ### Database
 
 ```kotlin
@@ -189,8 +185,6 @@ abstract class AppDatabase : RoomDatabase() {
 
 }
 ```
-
-
 
 ## 导出数据库架构
 
@@ -246,9 +240,8 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
-
         private var instance: AppDatabase? = null
-        
+
         @Synchronized
         fun Context.getAppDatabase(): AppDatabase {
             instance?.let {

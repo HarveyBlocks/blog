@@ -86,8 +86,6 @@ public static class FlagsEnumExample {
 
 如果子类也是抽象的则不用实现抽象方法
 
-
-
 ## 重载-覆盖
 
 ### 虚方法
@@ -98,11 +96,7 @@ public static class FlagsEnumExample {
 
 不使用虚方法, 就会出现子类成员覆盖父类成员
 
-
-
 字段不能是虚拟的，只有方法、属性、事件和索引器才可以是虚拟的
-
-
 
 ### 重载
 
@@ -173,8 +167,6 @@ public static bool operator ==(StudentClass a, StudentClass b) =>
 
 public static bool operator !=(StudentClass a, StudentClass b) => !(a == b);
 ```
-
-
 
 ### 成员覆盖
 
@@ -301,16 +293,12 @@ s.Say(10000); // 总是会调用double类型
 
 似乎是由于调用虚方法比类型转换更消耗性能(不知道)
 
-
-
 解决方法是, 使用类型转换, 将调用方法的对象转为基类
 
 ```csharp
 Student s = new Student();
 ((Person)s).Say(10000); 
 ```
-
-
 
 ```csharp
 public class Person  {

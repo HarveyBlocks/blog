@@ -73,8 +73,6 @@ server.channel(NioServerSocketChannel.class);
 
 ### 添加事件处理组件
 
-
-
 -   child = worker
 
 -   childHandler用来分配工作,如
@@ -85,10 +83,6 @@ server.channel(NioServerSocketChannel.class);
 ```java
 server.childHandler(childHandler);
 ```
-
-
-
-
 
 #### 创建ChildHandler
 
@@ -109,8 +103,6 @@ ChannelInitializer<NioSocketChannel> childHandler = new ChannelInitializer<>() {
 };
 ```
 
-
-
 #### 创建自定义处理器
 
 自定义Handler
@@ -128,10 +120,6 @@ ChannelInboundHandlerAdapter customHandler = new ChannelInboundHandlerAdapter() 
 };
 ```
 
-
-
-
-
 ### 绑定监听端口
 
 ```java
@@ -146,25 +134,17 @@ server.bind(8080);
 Bootstrap client = new Bootstrap();
 ```
 
-
-
 ### 添加循环事件组
-
-
 
 ```java
 client.group(new NioEventLoopGroup());
 ```
-
-
 
 ### 选择客户端的Channel
 
 ```java
 client.channel(NioSocketChannel.class);
 ```
-
-
 
 ### 添加客户端的处理器
 
@@ -180,8 +160,6 @@ client.handler(new ChannelInitializer<NioSocketChannel>() {
 });
 ```
 
-
-
 ### 连接到服务器
 
 异步非阻塞
@@ -189,8 +167,6 @@ client.handler(new ChannelInitializer<NioSocketChannel>() {
 ```java
 ChannelFuture future = client.connect(new InetSocketAddress("localhost", 8080));
 ```
-
-
 
 ### 发送数据
 

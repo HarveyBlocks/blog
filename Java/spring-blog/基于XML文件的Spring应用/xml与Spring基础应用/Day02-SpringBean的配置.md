@@ -1,5 +1,4 @@
 
-
 # SpringBean 的配置
 
 ![image-20231030130011011](../../../assets/Untitled/image-20231030130011011.png)
@@ -23,15 +22,11 @@
        UserService userService =(UserService) beanFactory.getBean("userService");
        ```
 
-       
-
 ## class
 
 填入全类名
 
 连接实体类
-
-
 
 ### id-class
 
@@ -82,8 +77,6 @@
         (UserService) beanFactory.getBean("UserService");
     ```
 
-    
-
 ![image-20231030132328860](../../../assets/Untitled/image-20231030132328860.png)
 
 -   BeanFactory使用了映射
@@ -102,8 +95,6 @@
 -   默认,业务中也一般这个
 -   Spring容器创建时实例化Bean,并存储到容器的**单例池(singletonObjects)**中
 -   每次getBean都是从单例池中获取相同的Bean
-
-
 
 ### prototype - 原型
 
@@ -124,8 +115,6 @@
 -   init-method 初始化方式 
 -   destroy-method 销毁方式
 
-
-
 -   Java和xml连接起来
 
 ### 在Java文件
@@ -142,8 +131,6 @@ public class UserServiceImpl implements UserService {
     }
 }
 ```
-
-
 
 ### 在xml文件:
 
@@ -167,8 +154,6 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
 
 要创建了再初始化
 
-
-
 -   显式地关闭了容器-->destory114514()
 -   ClassPathXmlApplicationContext里有close()方法,顺带的,会把destroy都执行一遍的
 
@@ -181,16 +166,14 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
 -   **在scope="singleton"(默认)下使用!**否则调用不来
 
 -   **Bean的销毁和Bean的销毁方法的调用是两回事**
-  
+
     -   Bean在销毁方法调用之前就被销毁了,也是完全有可能的
     -   Spring不会知道Bean快要挂掉,就不会调用一些销毁方法帮助我们,但是,你把ApplicationCollection关掉的时候,Spring就知道了
     -   **注意: ApplicationContext没有close(),他的子类ClassPathXmlApplicationContext有**
-    
+
     ```java
     applicationContext.close();
     ```
-
-
 
 -   **我们还可以通过实现InitializingBean接口,完成Bean的初始化操作**
 

@@ -33,8 +33,6 @@
         session.removeAttribute("username");
         ```
 
-
-
 ## 原理
 
 -   Session实现基于Cookie
@@ -56,8 +54,6 @@
 7.  然后依据`id=11451419191810`在服务端找到了对应的Session
 
 -   当然,`id`不一定叫做`id`,`id`的值也不会这么臭
-
-
 
 ### 看看id真实的样子
 
@@ -90,8 +86,6 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 
 -   我没找到
 
-
-
 ### 小问题
 
 ![image-20231119155233359](../../../assets/Day41-Session/image-20231119155233359.png)
@@ -103,8 +97,6 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 
 -   问:获取的Session是同一个吗?
 -   两次会话获得的Session怎么会是同一个呢?
-
-
 
 -   Session钝化,活化包装服务端的数据安全,不会有数据丢失
 -   至于浏览器关闭,导致了数据丢失,就不关服务器的事啦

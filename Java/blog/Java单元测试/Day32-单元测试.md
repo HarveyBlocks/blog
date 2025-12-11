@@ -14,19 +14,11 @@ IDEA已经集成了Junit
 
 ![image-20231029141314389](../../assets/Untitled/image-20231029141314389.png)
 
-
-
-
-
 对AaaaAaAaa类的测试类->AaaaAaAaaTest
 
 对aaaAaaAaa方法的测试方法->testAaaAaaAaa
 
-
-
 对有参数的方法,测试的时候传个null
-
-
 
 ## 断言机制
 
@@ -54,8 +46,6 @@ junit.framework.AssertionFailedError: 方法内部有Bug expected:<1> but was:<1
 ```
 
 ## 常用注解
-
-
 
 ![image-20231029145418402](../../assets/Untitled/image-20231029145418402.png)
 

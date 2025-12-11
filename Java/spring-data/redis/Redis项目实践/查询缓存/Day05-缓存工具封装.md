@@ -33,11 +33,7 @@ public interface Entity {
 }
 ```
 
-
-
 ### 常量类规范
-
-
 
 ```java
 package com.harvey.review_system.utils;
@@ -397,7 +393,6 @@ public class CacheClient<T extends Entity> {
 
 ```java
 package com.harvey.review_system.utils;
-
 
 /**
  * 缓存有关常量类,测试用,有关时间的.统一单位秒

@@ -87,8 +87,6 @@ private class Point {
 
 没有函数名的要求
 
-
-
 ```csharp
 public (int, int, double) ToTuple() {
     return (X, Y, Math.Sqrt(X * X + Y * Y));

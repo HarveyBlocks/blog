@@ -3,8 +3,6 @@
 - 可变长度的数组
 - 数组可以存储基本类型和引用类型，集合只能存储引用类型（用装箱把基本类型转换成引用类型）
 
-
-
 ![Interface Collection](../../assets/Day16/Interface Collection.png)
 
 ## Interface Collection

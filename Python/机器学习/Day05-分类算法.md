@@ -19,8 +19,6 @@ def ignore_worning(ignore_all = False):
         warnings.filterwarnings("ignore", category=FutureWarning)
 ```
 
-
-
 ```python
 import numpy as np
 from numpy import ndarray
@@ -44,7 +42,7 @@ def knn_train(data_train:ndarray,target_train:ndarray)->KNeighborsClassifier:
 
     """
     from sklearn.neighbors import KNeighborsClassifier
-    
+
     classifier = KNeighborsClassifier(
         n_neighbors = 5 ,# 默认5
         algorithm = 'auto' # auto就会根据特征值和目标值选择最好的算法
@@ -80,7 +78,6 @@ def split_dataset(iris:Bunch,show:bool=False):
         ...
     return data_train,data_test,target_train, target_test
 
-
 if __name__ == '__main__':
     ignore_worning()
     iris = get_iris()
@@ -96,7 +93,7 @@ if __name__ == '__main__':
         # print(y_predict)
         # 计算准确率
         score = classifier.score(standarded_data_test,target_test ) 
-        
+
         # print(score) # 每次分数还不一样? 我猜它训练集和测试集在分的时候是随机的
         if(score<min):
             min = score
@@ -180,10 +177,6 @@ print("-------------------------------------------")
 -------------------------------------------
 ```
 
-
-
-
-
 ## 朴素贝叶斯算法
 
 一个东西, 它的成分哪个最高, 就认为它属于什么类
@@ -198,14 +191,8 @@ $$
 P(F_1|C) = \frac{Ni+\alpha}{N+\alpha m}
 $$
 
-
-
 -   `alpha`为指定的系数, 一般为1
 -   m为训练文档中统计处的特征词个数
-
-
-
-
 
 ### 优缺点
 
@@ -213,23 +200,16 @@ $$
     -   不一定独立
     -   要求数据量足够大
 
-
-
 ### 应用场景
 
 文本分类, 关键词作为特诊, 假设词与词之间相互独立
 
-
-
 ### 在文本分类的应用
-
-
 
 ```python
 from sklearn.naive_bayes import MultinomialNB
 classifier = MultinomialNB(alpha=1.0)
 ```
-
 
 测试`featch_dataset`都失败了, 403:forbidden ,使用VPN解决
 
@@ -243,7 +223,7 @@ def get_news_groups(show:bool = False)->Bunch:
         , subset = "all"
     )
     return news_groups
-    
+
 def split_dataset(dataset:Bunch):
     from sklearn.model_selection import train_test_split
     data_train,data_test,target_train, target_test = \
@@ -252,8 +232,6 @@ def split_dataset(dataset:Bunch):
             test_size = 0.2 # 可选, 默认0.25
         )
     return data_train,data_test,target_train, target_test
-
-
 
 def text_vectorizer(data):
     """
@@ -269,7 +247,7 @@ def test_bayes(data,target):
     classifier = MultinomialNB(alpha=1.0)
     classifier.fit(data, target)
     return classifier
-    
+
 def predict_test(classifier,data,target):
     # 计算准确率
     predict = classifier.predict(data)
@@ -280,8 +258,7 @@ def predict_test(classifier,data,target):
     score = classifier.score(data,target) 
     print("测试数据准确率:",score) # 0.85上下
     return score
-    
-    
+
 if __name__ == "__main__" :
     news_groups = get_news_groups()
     data_train,data_test,target_train, target_test = split_dataset(news_groups)
@@ -292,16 +269,6 @@ if __name__ == "__main__" :
     classifier = test_bayes(vectored_data_train,target_train)
     predict_test(classifier,vectored_data_test,target_test)
 ```
-
-
-
-
-
-
-
-
-
-
 
 ## 决策树
 
@@ -343,10 +310,6 @@ if-else结构
     \\
     $$
 
-
-
-
-
 ### API
 
 ```python
@@ -361,7 +324,6 @@ classifier = DecisionTreeClassifier()
 from sklearn.utils import Bunch 
 from numpy import ndarray
 
-
 def ignore_worning(*ignore_warnings, ignore_all = False):
     import warnings
     if ignore_all:
@@ -370,7 +332,6 @@ def ignore_worning(*ignore_warnings, ignore_all = False):
         # 忽略特定类型的警告
         for warn in ignore_warnings:
             warnings.filterwarnings("ignore", category=warn)
-
 
 from sklearn.utils import Bunch
 def get_iris(show:bool=False) -> Bunch:
@@ -386,9 +347,8 @@ def get_iris(show:bool=False) -> Bunch:
         print("target_name",target_name)  
         target = iris.get("target")
         print("target.shape",target.shape) # (150,)
-    
-    return iris
 
+    return iris
 
 def split_dataset(iris:Bunch,show:bool=False):
     from sklearn.model_selection import train_test_split
@@ -431,9 +391,6 @@ def standard_scaler(data:ndarray,show:bool=False)->ndarray:
             print()
     return result
 
-
-
-
 def decision_tree_train(data_train:ndarray,target_train:ndarray):
     """
     将数据用决策树算法分类
@@ -455,7 +412,6 @@ def decision_tree_train(data_train:ndarray,target_train:ndarray):
     classifier = DecisionTreeClassifier(max_depth = 2)
     return classifier.fit(data_train,target_train)
 
-
 def decision_tree_test(classifier,data_test:ndarray,target_test:ndarray,show:bool=False):
     # 直接比对真实值和预测值
     y_predict = classifier.predict(data_test)
@@ -466,11 +422,10 @@ def decision_tree_test(classifier,data_test:ndarray,target_test:ndarray,show:boo
         print("测试数据准确率:",score) # 每次分数还不一样? 我猜它训练集和测试集在分的时候是随机的
     return score
 
-
 def decision_tree_grip_search(data_train,data_test,target_train, target_test,show=False):
     from sklearn.model_selection import GridSearchCV
     from sklearn.tree import DecisionTreeClassifier
-    
+
     classifier = GridSearchCV(
         DecisionTreeClassifier(), 
         param_grid={"max_depth":[i for i in range(20)]},
@@ -486,9 +441,6 @@ def decision_tree_grip_search(data_train,data_test,target_train, target_test,sho
         print("最佳估计器: ",classifier.best_estimator_)
         # print("交叉验证结果: ",classifier.cv_results_)
         print("-------------------------------------------")
-   
-
-
 
 if __name__ == '__main__':
     ignore_worning(FutureWarning)
@@ -502,7 +454,7 @@ if __name__ == '__main__':
     # max_depth = 2 时, score = 1.0 
     decision_tree_grip_search(standarded_data_train,standarded_data_test,
                               target_train, target_test,True)
-    
+
 """
 最佳参数:  {'max_depth': 4}
 最佳准确率:  0.9666666666666667
@@ -515,10 +467,8 @@ One or more of the test scores are non-finite: [
  0.96666667 0.95833333]
 
 """
-    
+
 ```
-
-
 
 决策树的可视化
 
@@ -535,8 +485,6 @@ export_graphviz(
 
 ![image-20240307163131403](../assets/Day05-分类算法/image-20240307163131403.png)
 
-
-
 ### 优缺点
 
 可视化, 可解释能力强
@@ -546,15 +494,7 @@ export_graphviz(
 -   采用cart剪枝算法(决策树API中已实现)
 -   随机森林
 
-
-
-
-
-
-
 ### 随机森林
-
-
 
 #### 集成学习方法
 
@@ -563,8 +503,6 @@ export_graphviz(
 1.  生成多个分类器/模型
 2.  各自独立地学习和做出预测
 3.  这些预测最后结合成组合预测
-
-
 
 #### 随机森林的原理
 
@@ -580,13 +518,9 @@ export_graphviz(
 
 #### API
 
-
-
 ```python
 sklearn.ensemble.RandomForestClassifier(n_estimators=10,criterion='gini',max_depth=None,bootstrap=True,random_state=None,min_samples_split=2)
 ```
-
-
 
 -   随机森林分类器
 -   n＿estimators： integer，optional（default＝10）森林里的树木数量 

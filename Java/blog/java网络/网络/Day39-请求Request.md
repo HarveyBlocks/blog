@@ -37,8 +37,6 @@ public class Application extends HttpServlet {
 -   RequestFacade
     -   Tomecat定义的实现类
 
-
-
 ## 获取请求数据
 
 -   Htttp请求数据
@@ -71,8 +69,6 @@ String queryString = request.getQueryString();
 System.out.println(queryString);
 ```
 
-
-
 ```
 GET
 
@@ -82,8 +78,6 @@ name=Mike
 ```
 
 -   我设置虚拟目录是**/**,它就不给显示contextPath了,很合理
-
-
 
 ### 请求头(GET)
 
@@ -97,36 +91,24 @@ String UserAgent = request.getHeader("User-Agent//根据键获得值
 System.out.println(UserAgent);
 ```
 
-
-
 ```http
 GET/request-demo/req1?username=Mike HTTP/1.1
 User-Agent:Mozilla/5.0 Chrome/91.0.4472.106
 username=superbaby&password=123
 ```
 
-
-
 ```java
 String header = request.getHeader("user-agent");//浏览器版本
 System.out.println(header);
 ```
 
-
-
 ```
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36
 ```
 
-
-
 ### 请求体(POST)
 
-
-
 ![image-20231117183720581](../../../assets/Day39-请求和响应/image-20231117183720581.png)
-
-
 
 ```java
 @Override
@@ -134,18 +116,14 @@ protected void doPost(
         HttpServletRequest request,
         HttpServletResponse response)
         throws ServletException, IOException {
-    
-    
+
     BufferedReader reader = request.getReader();
     System.out.println(reader.readLine());//读取数据
-
 
 }
 ```
 
 ![image-20231117185016955](../../../assets/Day39-请求和响应/image-20231117185016955.png)
-
-
 
 ### 通过统一的方式获取请求参数
 
@@ -153,16 +131,12 @@ protected void doPost(
 -   但是原理和数据处理全是拆字符串
 -   如果要写两份代码,.....
 
-
-
 -   **Request会把键值对存入Map集合**
     -   重复的键有多个值的,会形成一个数组
 
 ```java
 Map<String,String[]>
 ```
-
-
 
 -   方法
 
@@ -186,8 +160,6 @@ Map<String,String[]>
         this.doGet(request,response);
     }
     ```
-
-    
 
 ![image-20231117211013430](../../../assets/Day39-请求和响应/image-20231117211013430.png)
 
@@ -218,15 +190,15 @@ Map<String,String[]>
         public void test2() throws UnsupportedEncodingException {
             String s = "你好";
             //模拟在浏览器输入数据
-        
+
             String encode = java.net.URLEncoder.encode(s, StandardCharsets.UTF_8);
             //模拟浏览器的操作:将UTF-8转URL
             System.out.println(encode);
-        
+
             String decode = java.net.URLDecoder.decode(encode, StandardCharsets.ISO_8859_1);
             //模拟将Tomcat的默认操作:URL转ISO_8859_1
             System.out.println(decode);
-        
+
             //解决乱码问题
             byte[] bytes = decode.getBytes(StandardCharsets.ISO_8859_1);
             //依据ISO_8859_1,将看不懂的中文转换成字节数组
@@ -243,8 +215,6 @@ Map<String,String[]>
 ## 请求转发
 
 -   服务器内部的资源跳转的方式
-
-
 
 1.  资源A接收到浏览器的请求,将请求做了一部分处理
 2.  **将request的处理转给了资源器B**
@@ -282,8 +252,6 @@ Map<String,String[]>
 -   浏览器地址栏路径不发生变化
 -   只能转到服务器的内部
 -   一次请求,可以在转发的资源键是用request共享数据
-
-
 
 ### 共享资源
 

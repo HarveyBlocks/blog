@@ -34,8 +34,6 @@ JMX提供JVM进程信息, 默认不对远程服务器开放, 而VisualVM是可�
 
 配置对远程服务器开放
 
-
-
 ```shell
 # localhost不能用来测试, 悲
 -Djava.rmi.server.hostname=localhost \
@@ -56,8 +54,6 @@ tunnel管理微服务中的多服务多实例项目
 
 通过网页和Arthus对多个实例进行管理
 
-
-
 #### 配置依赖
 
 支持Spirng-boot2.0以上
@@ -70,8 +66,6 @@ tunnel管理微服务中的多服务多实例项目
     <version>3.7.1</version>
 </dependency>
 ```
-
-
 
 #### 配置
 
@@ -93,8 +87,6 @@ server:
       min-spare: 50
       max: 500
 ```
-
-
 
 #### 安装Tunnel
 
@@ -148,8 +140,6 @@ Grafana可视化界面展示监控数据
 </dependency>
 ```
 
-
-
 ```xml
 <!--收集JVM数据, 数据库连接池数据, 磁盘IO等-->
 <dependency>
@@ -183,21 +173,15 @@ management:
 
 #### 查看Prometheus收集的信息
 
-
-
 ```http
 GET localhost:8081/actuator/prometheus
 ```
-
-
 
 #### Ali云版Promethus
 
 只恨财力不足
 
 装MicroMeter组件
-
-
 
 ## 诊断
 
@@ -218,8 +202,6 @@ GET localhost:8081/actuator/prometheus
     -   持续内存升高, MinorGC不能把大部分对象回收
     -   手动Full GC之后内存使用没有好转
 
-
-
 通过分析工具，诊断问题的 产生原因，定位到出现问题 的源代码
 
 ### MAT内存快照
@@ -238,8 +220,6 @@ MAT本身的堆内存只有1G, 要使其检测10G的内存快照, 就要调整�
 -Xmx15G
 ```
 
-
-
 #### 生成内存快照
 
 打开内存快照功能
@@ -255,8 +235,6 @@ MAT本身的堆内存只有1G, 要使其检测10G的内存快照, 就要调整�
 ```shell
 -XX:+HeapDumpBeforeFullGC
 ```
-
-
 
 指定hprof文件的输出路径
 
@@ -364,8 +342,6 @@ end
     -   某一对象及其所有子树(包括孙子等)的空间
     -   深堆的大小-------该对象如果可以被回收, 能释放多大的内存空间
 
-
-
 ![image-20240526152342603](../assets/Day09-解决方案/image-20240526152342603.png)
 
 单位: 字节
@@ -375,12 +351,6 @@ end
 根据支配树, 从叶子节点向根节点遍历
 
 如果发现**深堆的大小超过整个堆内存的一定比例阈值**, 就将其标记为内存泄漏的嫌疑对象
-
-
-
-
-
-
 
 ### Jol查看对象组成
 
@@ -396,8 +366,6 @@ JOL框架
 </dependency>
 ```
 
-
-
 #### 使用
 
 ```java
@@ -412,8 +380,6 @@ System.out.print(printable);
 ```shell
 -Djdk.attach.allowAttachSelf
 ```
-
-
 
 ![image-20240526153128011](../assets/Day09-解决方案/image-20240526153128011.png)
 

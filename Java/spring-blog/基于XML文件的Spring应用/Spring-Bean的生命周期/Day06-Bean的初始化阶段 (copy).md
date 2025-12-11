@@ -17,8 +17,6 @@
 -   Spring的注解功能
 -   等
 
-
-
 ## 步骤
 
 1.  Bean实例的属性填充
@@ -27,8 +25,6 @@
 4.  InitializingBean接口的初始化方法回调 
 5.  自定义初始化方法init回调
 6.  BeanPostProcessor的after（）方法回调 
-
-
 
 ### 后四步起承上文
 

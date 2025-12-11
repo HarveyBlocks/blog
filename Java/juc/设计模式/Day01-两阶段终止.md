@@ -13,8 +13,6 @@
 
 ### 线程B两阶段终止
 
-
-
 ```mermaid
 graph TD
 开始(开始程序)
@@ -66,7 +64,7 @@ public abstract class AbstractTwoPhaseTermination implements TwoPhaseTermination
 	public AbstractTwoPhaseTermination() {
         this(10);
     }
-    
+
     public void run() {
         Thread thread = Thread.currentThread();
         while (true) {

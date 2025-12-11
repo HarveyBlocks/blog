@@ -6,8 +6,6 @@ Date类中的大部分方法已经被Calendar类的方法取代
 
 ？？？？？？？总感觉没必要？？？？？？？
 
-
-
 ## 写了一个读秒器
 
 ```java
@@ -42,7 +40,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         Date date1 = new Date();
-        
+
         /*
         date1.getTime()
         得到一个从1970.1.1.00:00到现在的时间jiange

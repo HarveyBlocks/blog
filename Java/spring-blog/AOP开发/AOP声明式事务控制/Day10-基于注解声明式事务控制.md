@@ -28,8 +28,6 @@ public @interface Transactional {
 }
 ```
 
-
-
 ## 目标:替代xml文件
 
 ```xml
@@ -70,12 +68,6 @@ public @interface Transactional {
     </tx:attributes>
 </tx:advice>
 ```
-
-
-
-
-
-
 
 ## 使用@Transactional
 
@@ -133,11 +125,7 @@ public void transMoney(String outAccountName, String inAccountName, int money) {
 </beans>
 ```
 
-
-
 #### 小细节
-
-
 
 ```xml
 <bean id="transactionManager666"
@@ -150,8 +138,6 @@ public void transMoney(String outAccountName, String inAccountName, int money) {
 
 -   参数**transaction-manager**可以在**transactionManager**的id(或第一个name)是**transactionManager**的时候不写
 
-
-
 ## 全注解(配置类)
 
 当下的任务:
@@ -159,8 +145,6 @@ public void transMoney(String outAccountName, String inAccountName, int money) {
 -   包扫描(早些时候配过了)
 -   创建事务管理器的Bean
 -   扫描被注解的事务方法
-
-
 
 主要是
 
@@ -178,10 +162,6 @@ public class SpringConfig {
 }
 ```
 
-
-
-
-
 ```java
 @Configuration
 @MapperScan("com.harvey.mapper")
@@ -190,7 +170,7 @@ public class SpringConfig {
 @EnableTransactionManagement
 public class SpringConfig {
     private DruidDataSource dataSource;
-    
+
     @Bean
     public DataSourceTransactionManager transactionManager(DataSource dataSource){
         DataSourceTransactionManager transactionManager = new DataSourceTransactionManager();
@@ -212,7 +192,7 @@ public class SpringConfig {
         dataSource.setPassword(password);
         return dataSource;
     }
-    
+
     @Bean
     public SqlSessionFactoryBean sqlSessionFactoryBean(DataSource dataSource) {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
@@ -223,8 +203,6 @@ public class SpringConfig {
 ```
 
 ### 事务失效的几种情况
-
-
 
 ![img](../../../spring-data/assets/Day10-基于注解声明式事务控制/072ab6acff291410a5979f9276cde5fb.png)
 

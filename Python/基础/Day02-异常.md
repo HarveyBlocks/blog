@@ -19,11 +19,7 @@ finally:
     print("无论如果都会做")
 ```
 
-
-
 一般异常都是自动抛出到上级的, 直到捕获它
-
-
 
 ## 主动抛出异常
 
@@ -31,12 +27,6 @@ finally:
 if not file_name:  # 字符串在为None和空时, bool(str)都会是False
     raise ValueError
 ```
-
-
-
-
-
-
 
 ## 异常的继承关系
 

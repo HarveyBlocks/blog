@@ -16,8 +16,6 @@ Extra会提示的两条OrderBy信息:
     -   **不需要额外排序,操作效果高**
     -   不要违背索引的几个法则,法则对ORDER_BY也有效
 
-
-
 -   Backward index scan
     -   倒序扫描
     -   这个就是字面意思理解
@@ -64,8 +62,6 @@ creat unique index user_phone_age on user(
 );#索引二
 
 ```
-
-
 
 ```mysql
 select id,phone,age from user order by phone asc  ,age asc;  # 索引一

@@ -9,8 +9,6 @@
 -   [Apache  SkyWalking](..\..\微服务和分布式\skywalking\Day10-Skywalking.md)
 -   Zipkin
 
-
-
 ## APM的Java Agent组件
 
 静态加载
@@ -21,16 +19,12 @@
 
 ### 增强Controller
 
-
-
 所有被注解`@Controller/@RestController`的方法
 
 ```java
 private static final String ANNOTATION_CONTROLLER = "org.springframework.stereotype.Controller";
 private static final String ANNOTATION_REST_CONTROLLER = "org.springframework.web.bind.annotation.RestController";
 ```
-
-
 
 byteDubby的`AgentBuilder`
 

@@ -17,8 +17,6 @@
 -   简单
 -   解耦合(更换事物的控制的时候,配置方式可能会不变)
 
-
-
 ## 事物编程相关类
 
 -   PlatformTransactionManager

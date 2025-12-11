@@ -45,8 +45,6 @@ Dubbo推荐的注册中心
     chmod -R 777 /root/docker-data
     ```
 
-    
-
 4.  启动
 
     ```bash
@@ -83,7 +81,7 @@ Dubbo推荐的注册中心
     standaloneEnabled=true
     admin.enableServer=true
     server.1=localhost:2888:3888
-    
+
     ```
 
 7.  访问端口
@@ -107,7 +105,7 @@ Dubbo推荐的注册中心
     Using config: /conf/zoo.cfg
     Client port found: 2181. Client address: localhost. Client SSL: false.
     Mode: standalone # 没有使用集群
-    
+
     ```
 
 9.  配置日志
@@ -119,7 +117,7 @@ Dubbo推荐的注册中心
     ```properties
     log4j.rootLogger=INFO,console,dailyFile,im
     log4j.additivity.org.apache=true
-    
+
     # 控制台(console)
     log4j.appender.console=org.apache.log4j.ConsoleAppender
     log4j.appender.console.Threshold=INFO
@@ -144,8 +142,6 @@ Dubbo推荐的注册中心
     ```
 
     成功
-
-
 
 ## Dubbo试用
 
@@ -225,8 +221,6 @@ DUBBO
                                     WebApplicationTests.java
 ```
 
-
-
 ### 引入依赖
 
 版本配置
@@ -280,8 +274,6 @@ spring boot的dubbo依赖
 
 现在要结构上web依赖于service
 
-
-
 #### 配置注册中心Zookeeper
 
 service上
@@ -326,7 +318,6 @@ dubbo:
 package com.harvey.dubbo.service.impl;
 
 import com.harvey.dubbo.service.HelloService;
-
 
 // @org.springframework.stereotype.Service // Spring的Service注解, 将该类的对象创建出来, 放到Spring的IOC容器中, bean定义
 @com.alibaba.dubbo.config.annotation.Service
@@ -404,10 +395,6 @@ API一多, 就很完蛋
 
 可
 
-
-
-
-
 ## 测试
 
 经测试
@@ -415,8 +402,6 @@ API一多, 就很完蛋
 当服务提供者下线后,做更改, 上线后, dubbo能认为其进行了改变, 服务的消费者能使用新的提供者
 
 当服务提供者更改地址之后, dubbo能认为其进行了改变, 服务的消费者能使用新的提供者
-
-
 
 注意!
 
@@ -436,8 +421,6 @@ Dubbo会在启动时检查依赖的服务是否可用，不可用时会抛出异
 
 **默认check=true**
 
-
-
 如果你的Spring容器是**懒加载**的，或者通过API编程延迟引用服务，请关闭check
 
 否则服务临时不可用时，会抛出异常，拿到null引用
@@ -445,8 +428,6 @@ Dubbo会在启动时检查依赖的服务是否可用，不可用时会抛出异
 如果check=false，总是会返回引用
 
 当服务恢复时，能自动连上
-
-
 
 **测试**，对**服务不关心**，或者出现了**循环依赖**,  可以通过check="false"关闭检查
 
@@ -481,8 +462,6 @@ dubbo:
 -   dubbo.reference.check=false，强制改变所有reference的check值，就算提供者配置中有声明，也会**被覆盖**
 -   dubbo.consumer.check=false，是设置check的缺省值，如果配置中有显式的声明，如：dubbo.reference.check=true，不会受影响。
 -   dubbo.registry.check=false 如果注册订阅失败时，也允许启动，将在后台**定时重试**。
-
-
 
 如果需要饥饿加载，即没有人引用也立即生成动态代理，可以配置：
 

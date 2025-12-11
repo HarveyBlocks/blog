@@ -10,8 +10,6 @@
 
 奇数可以先把第一个元素作为max和min的初值
 
-
-
 ```cpp
 if (len <= 0) {
     return;
@@ -57,10 +55,6 @@ for (int i = 0; i < end; ++i) {
 }
 ```
 
-
-
-
-
 ## 选择算法
 
 找出数组中第i小的元素
@@ -84,7 +78,6 @@ T Arrays::tail(Array<T> &arr, const int level) {
     }
     return Arrays::randomSelect(arr, 0, arr.length(), level - 1);
 }
-
 
 template<class T>
 T Arrays::randomSelect(Array<T> &arr, int start, int end, int level) {

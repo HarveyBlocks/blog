@@ -66,10 +66,8 @@
 
     ```shell
     ./kafka-server-start.sh ../config/server.properties
-    
-    ```
 
-    
+    ```
 
 ### Docker安装
 
@@ -94,8 +92,6 @@ docker run -d \
 docker run  -d --name kafka -p 9092:9092 -e KAFKA_BROKER_ID=0 -e KAFKA_ZOOKEEPER_CONNECT=192.168.88.130:2181 -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://192.168.88.130:9092 -e KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9092 -t wurstmeister/kafka
 ```
 
-
-
 集群配置
 
 ```bash
@@ -118,8 +114,6 @@ docker run -d \
 ```
 
 ## 命令
-
-
 
 ```bash
 docker exec -it kafka bash

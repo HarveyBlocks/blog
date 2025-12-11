@@ -1,10 +1,8 @@
 # String类
 
-
 ```java
 private final char value[];
 ```
-
 
 ## String 类概述
 
@@ -21,12 +19,12 @@ private final char value[];
 ```java
 public class Main {
     public static void main(String[] args) {
-        
+
         String str1 = "hello";
         //栈里的name->方法区字符串池里的"hello"，name里包含了"hello"的地址
-        
+
         str1 = "hi";
-        
+
         /*赋值过程是：
         在方法区字符串池重新创建了一个"hi"
         再把name里的地址改成了"hi"的地址

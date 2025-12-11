@@ -13,8 +13,6 @@ System.out.println((1.4-0.5)/0.9);
 
 解决此类问题的方法是使用类**BigDecimal**
 
-
-
 ## 常用方法
 
 ```java
@@ -50,12 +48,11 @@ public class Main {
         1.0/0.9,除不尽，报错：ArithmeticException
         解决方法：指定保留小数位数
         */
-        
+
         //-----------------小数点后几位，好像无上限?↓---------------↓意为四舍五入
         result = bigDecimal1.divide(bigDecimal2,5,BigDecimal.ROUND_HALF_UP);
         System.out.println(result);//1.11111
-        
-        
+
         BigDecimal n1 = new BigDecimal("2.000");
         BigDecimal n2 = new BigDecimal("2");
         System.out.println(n1.compareTo(n2)+1);
@@ -64,11 +61,7 @@ public class Main {
 }
 ```
 
-
-
 ## 取舍方法：
-
-
 
 | 取舍方法                 | 描述     | 示例                                |
 | ------------------------ | -------- | ----------------------------------- |

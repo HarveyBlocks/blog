@@ -27,8 +27,6 @@
             port: 6379
         ```
 
-        
-
     ![image-20231206141746043](../../assets/Day03-整合Redis/image-20231206141746043.png)
 
 4.  注入RedisTemplate模板
@@ -42,19 +40,18 @@
 
     ```java
     import org.springframework.data.redis.core.RedisTemplate;
-    
+
     @SpringBootTest
     class BootRedisApplicationTests {
         @Autowired
         private RedisTemplate redisTemplate;
-    
+
         @Test
         void testSet() {
             //存入一个数据
             redisTemplate.boundValueOps("name").set("张三");
         }
-    
-    
+
         @Test
         void testGet() {
             //存入一个数据

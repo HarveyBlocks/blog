@@ -61,8 +61,6 @@ class 添加之后, 可以被CSS触发
 | `v-leave-active` | 离开动画的生效状态, 应用于整个离开动画阶段 | 离开过渡效果被触发时立即添加                                 | 过渡或动画完成之后移除       |
 | `v-leave-to`     | 离开动画的结束状态                         | 在一个离开动画被**触发后的下一帧**被添加<br/> 也就是 `v-leave-from` 被移除的同时 | 在过渡或动画完成之后移除     |
 
-
-
 `v-enter-active` 和 `v-leave-active`  用于进入和离开动画==指定不同速度曲线==, 可以被用来定义进入动画的持续时间、延迟与速度曲线类型
 
 ## 命名过渡效果
@@ -135,8 +133,6 @@ template
 
 默认false
 
-
-
 ### 类名定义
 
 -   name 用于自动生成CSS类目
@@ -149,8 +145,6 @@ template
 -   appear-from-Class
 -   appear-active-Class
 -   appear-to-Class
-
-
 
 ### 模式
 
@@ -202,8 +196,6 @@ template
 -   `transition`
 -   `animation`
 
-
-
 ### 设置延迟
 
 >   duration
@@ -233,8 +225,6 @@ template
   </TransitionGroup>
 </ul>
 ```
-
-
 
 ### 属性
 

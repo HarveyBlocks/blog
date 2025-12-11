@@ -19,7 +19,6 @@ println(c.simpleName);
 println(c.qualifiedName);
 ```
 
-
 ## 可调用引用
 
 可调用引用的公共超类型是 `KCallable<R>`
@@ -27,8 +26,6 @@ println(c.qualifiedName);
 -   函数 R 是返回值类型
 -   属性 R 是属性类型
 -   构造函数 R 是构造目标类型
-
-
 
 ### 函数引用
 
@@ -64,8 +61,6 @@ fun main() {
     variableM0.set(1)
 }
 ```
-
-
 
 ### 类型成员引用
 
@@ -127,8 +122,6 @@ fun main() {
     println("abc"::lastChar.invoke())
 }
 ```
-
-
 
 ### 构造函数引用
 

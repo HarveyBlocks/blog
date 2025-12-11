@@ -81,8 +81,6 @@ new Thread(new AlwaysLoopWarp(() -> {
 
 ### wait-notify
 
-
-
 ```java
 private enum LogCondition {
     TIME_TO_LOG_1,

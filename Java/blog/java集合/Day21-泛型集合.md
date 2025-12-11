@@ -8,8 +8,6 @@
 
 想要原来的类型,需要**强制转换**,就有判断原来的类型,很容易发生错误
 
-
-
 ```java
 package CollectionLearning;
 
@@ -45,8 +43,6 @@ D:\IT_study\JDK\bin\java.exe "-javaagent:D:\IT_study\IntelliJ IDEA 2023.2\lib\id
 
 报错惹
 
-
-
 ## 概念
 
 参数化类型,类型安全的集合,**强制集合元素类型必须一致**
@@ -81,8 +77,6 @@ for (String str://遍历的时候直接就可以是String了,避免了强制类�
 }
 ```
 
-
-
 ## 示例:ArrayList<Student>
 
 ```java
@@ -109,8 +103,6 @@ while (its.hasNext()) {
     System.out.println(its.next());
 }
 ```
-
-
 
 ### 泛型不同,不能相互赋值
 

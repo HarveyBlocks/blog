@@ -16,8 +16,6 @@ Activity 是一种可以包含用户界面的组件
 
 ![image-20250907155850868](../../assets/Day01-基本用法/image-20250907155850868.png)
 
-
-
 ```kotlin
 package org.harvey.android.first
 
@@ -41,8 +39,6 @@ manifest自动添加
 ```
 
 ### 创建加载布局
-
-
 
 选择Layout Resource File
 
@@ -92,8 +88,6 @@ manifest自动添加
     -   `wrap_content `当前元素的高度刚好包含里面的内容
 -   `android:text`指定了元素中显示的文字内容
 
-
-
 ![image-20250907163055625](../../assets/Day01-基本用法/image-20250907163055625.png)
 
 ### 加载布局
@@ -110,8 +104,6 @@ class FirstActivity : AppCompatActivity() {
     }
 }
 ```
-
-
 
 ### AndroidManifest 注册
 
@@ -154,8 +146,6 @@ class FirstActivity : AppCompatActivity() {
 
 最外层的`<manifest>`标签中已经通过`package`属性指定了程序的包名
 
-
-
 修改theme, 当前版本的Android Studio会生成一个不带Bar的style
 
 ```xml
@@ -186,8 +176,6 @@ class FirstActivity : AppCompatActivity() {
 给**主Activity**指定的label不仅会成为标题栏中的内容，还会成为启动器（Launcher）中应用程序显示的名称
 
 <img src="../../assets/Day01-基本用法/image-20250907191259972.png" alt="image-20250907191259972" style="zoom:50%;" />
-
-
 
 ## Toast
 
@@ -324,7 +312,6 @@ binding.button1.setOnClickListener {
 open class BaseActivity<T : ViewBinding>(val bindingConstructor: (LayoutInflater) -> T) : AppCompatActivity() {
     protected var binding: T by LazyConstant()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i("BaseActivity", "${this.javaClass}")
@@ -342,7 +329,6 @@ open class BaseActivity<T : ViewBinding>(val bindingConstructor: (LayoutInflater
 
 ```kotlin
 class MainActivity : BaseActivity<ActivityMainBinding>({ ActivityMainBinding.inflate(it) }) {
-    
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -384,8 +370,6 @@ object ActivityCollector {
 
 在BaseActivity里统一规范
 
-
-
 ```kotlin
 open class BaseActivity<T : ViewBinding>(val bindingConstructor: (LayoutInflater) -> T) : AppCompatActivity() {
     protected var binding: T by LazyConstant()
@@ -404,15 +388,11 @@ open class BaseActivity<T : ViewBinding>(val bindingConstructor: (LayoutInflater
 }
 ```
 
-
-
 虽然不建议用, 但是本处给出杀死当前进程的API, 此API只能杀死当前进程
 
 ```kotlin
 ndroid.os.Process.killProcess(android.os.Process.myPid()) 
 ```
-
-
 
 ### 启动Activity
 

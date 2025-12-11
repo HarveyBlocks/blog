@@ -22,8 +22,6 @@ public String res4() {
 }
 ```
 
-
-
 ```java
 @GetMapping("/res5")
 @ResponseBody
@@ -31,8 +29,6 @@ public User res5() {
     return user;// Spring会尝试将user转换为Json字符串,如果没问题,就响应字符串
 }
 ```
-
-
 
 -   手动转换为字符串还有一个弊端:
 

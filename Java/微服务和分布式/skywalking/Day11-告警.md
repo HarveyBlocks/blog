@@ -53,8 +53,7 @@ rules:
     expression: sum(endpoint_relation_resp_time > 1000) >= 2
     period: 10
     message: Response time of endpoint relation {name} is more than 1000ms in 2 minutes of last 10 minutes
-    
-    
+
 # 发送警告的目标
 #hooks:
 #  webhook:
@@ -64,10 +63,7 @@ rules:
 #        - http://127.0.0.1/notify/
 #        - http://127.0.0.1/go-wechat/
 
-
 ```
-
-
 
 ## Hook
 
@@ -83,14 +79,10 @@ AlarmMessage的字段
 -   startTime
 -   ruleName
 
-
-
-
-
 ```java
 @PostMapping("/notify")
 public void alert(@RequestBody List<AlarmMessage> message){
-    
+
 }
 ```
 

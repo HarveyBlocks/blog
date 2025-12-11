@@ -42,8 +42,6 @@ const choose = ref(false);
 
 <video src="../../../assets/Day06-动态组件/组件转换刷新导致的问题.mp4" style="border:2px solid black"></video>
 
-
-
 使用`<keep-alive>`标签包裹`<component>`来解决
 
 ```vue
@@ -64,15 +62,11 @@ const choose = ref(false);
 
 如果要指定多个, 就用`,`分割
 
-
-
 ```vue
 <keep-alive exclude="ChildNode1,ChildNode2">
   <component :is="choose?ChildNode:'div'">AAA</component>
 </keep-alive>
 ```
-
-
 
 #### exclude的值
 
@@ -99,10 +93,10 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
      import ChildNode1 from "@/components/ChildNode.vue";
      import ChildNode2 from "@/components/ChildNode.vue";
      import {ref} from "vue";
-     
+
      const choose = ref(false);
      </script>
-     
+
      <template>
        <p>
          <button @click="choose=!choose">switch</button>
@@ -128,7 +122,7 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
 
      ```js
      import {defineComponent, ref} from "vue";
-     
+
      export default defineComponent({
        name: "ChildComponent",
        props: {
@@ -139,11 +133,11 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
        },
        setup(props){
          const count = ref(props.initialCount);
-     
+
          const increment = () => {
            count.value++;
          };
-     
+
          return {
            count,
            increment
@@ -164,7 +158,7 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
      <script setup>
      import ChildNode from "@/components/ChildNode.vue";
      import {defineComponent, ref} from "vue";
-     
+
      const ChildNode1 = defineComponent({
        name: 'cn1',
        extends: ChildNode
@@ -175,7 +169,7 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
      });
      const choose = ref(false);
      </script>
-     
+
      <template>
        <p>
          <button @click="choose=!choose">switch</button>
@@ -187,10 +181,6 @@ exclude不用v-bind修饰也能识别组件, 为何? 它识别的是什么==comp
        </p>
      </template>
      ```
-
-
-
-
 
 ### 'max' 属性
 

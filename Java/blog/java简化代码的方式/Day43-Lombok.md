@@ -7,8 +7,6 @@
 </dependency>
 ```
 
-
-
 ~~~
 @Data == 无参构造+getter+setter+tostring+hashcode+equals
 @AllArgsConstructor

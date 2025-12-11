@@ -24,8 +24,6 @@ for (let item of generator()){
 }
 ```
 
-
-
 ## yield表达式
 
 只能在generator内使用

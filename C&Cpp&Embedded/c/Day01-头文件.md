@@ -32,15 +32,12 @@
 
 -   终止PI的宏定义
 
-
-
 ```C++
 #define A 1
 #include<stdio.h>
 
 #define A 4//[Warning]redefine,但是输出4
 //与头文件的重复定义很难说,以后再说
-
 
 void fun1(void);
 void fun2(void);
@@ -69,21 +66,15 @@ void fun2(void) {
 
 ![image-20231108161208362](../../java/assets/头文件/image-20231108161208362.png)
 
-
-
 宏无论定义在哪里,都是**到文件末尾**
 
 你也可以把宏放在头文件里,让引用头文件的文件使用这个宏
-
-
 
 test.h
 
 ```h
 #define A 5
 ```
-
-
 
 ```C++
 #define A 1
@@ -94,7 +85,6 @@ test.h
 
 void fun1(void);
 void fun2(void);
-
 
 int main() {
 	printf("%d\n", A);
@@ -120,11 +110,7 @@ void fun2(void) {
 
 -   输出![image-20231108162207984](../../java/assets/头文件/image-20231108162207984.png)
 
-
-
 不会对重复定义报错和警告
-
-
 
 ### 带参宏
 
@@ -151,8 +137,6 @@ S(3+4,7)
 ```C
 #define S(a,b) (a)*(b)
 ```
-
-
 
 ### 宏和函数
 
@@ -208,8 +192,6 @@ int main() {
 
 >   ifndef常常用来做防止重复预定义(防止预定义头文件,宏啊之类的,**宏是小事,头文件是大事**)
 
-
-
 ```C
 #define A 1
 #include<stdio.h>
@@ -235,8 +217,6 @@ int main() {
     	extern int fun(int,int);
     #endid
     ```
-
-
 
 例如遇到这种情况:
 

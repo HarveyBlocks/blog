@@ -10,8 +10,6 @@
 映射名称 := make(map[键类型]值类型, size)
 ```
 
-
-
 ```go
 numberMap := make(map[int]string)
 fmt.Println(numberMap)
@@ -35,8 +33,6 @@ fmt.Println(numberMap) // map[1:0001 2:0010 3:0011 4:0100]
 ```go
 映射名称[键] = 值
 ```
-
-
 
 ```go
 numberMap := make(map[int]string, 12)

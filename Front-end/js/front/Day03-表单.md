@@ -76,8 +76,6 @@ function onSubmit() {
 
 原理是, 从输入的文本中查找符合正则表达式的文本, 填入表单. 如果查询不到文本, 就强制把表单清空
 
-
-
 | 属性     | 描述                      |
 | :------- | :------------------------ |
 | disabled | 规定应禁用 input 元素。   |
@@ -112,8 +110,6 @@ function onSubmit() {
 <input type="button" value="按钮" onclick="onClick()">
 ```
 
-
-
 ```js
 function onClick() {
   let inpObj = document.getElementById('age-input');
@@ -144,8 +140,6 @@ validity有以下bool属性, 用于检查是什么情况导致的检查不通过
 | typeMismatch    | 如果元素的值对其 type 属性无效，则设置为 true。       |
 | valueMissing    | 如果元素（具有 required 属性）没有值，则设置为 true。 |
 | valid           | 如果元素的值有效，则设置为 true。                     |
-
-
 
 ```js
 if (document.getElementById("age-input").validity.rangeOverflow) {

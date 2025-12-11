@@ -12,8 +12,6 @@ Root.vue
 </template>
 ```
 
-
-
 ChildNode.vue
 
 ```vue
@@ -21,8 +19,6 @@ ChildNode.vue
   <slot>被覆盖</slot>
 </template>
 ```
-
-
 
 -   当Message部分不设置时, 就显示`被覆盖`
 -   Message部分或slot内部可以是更复杂的html标签结构, 也可以有一些文本插值之类
@@ -93,8 +89,6 @@ slot 名字可以重复: ChildNode.vue
 
 但是v-slot不能重复
 
-
-
 ## 默认插槽
 
 如果ChildNode.vue 的  `<slot>` 没有名称
@@ -164,17 +158,11 @@ import ChildNode from "@/components/ChildNode.vue";
 
 ![image-20250818194654972](../../../assets/Day05-slot 插槽/image-20250818194654972.png)
 
-
-
-
-
 ## v-slot in `<template>`
 
 `<template>` 标签在原生HTML中, 不会被渲染, 用于联合Javascript来显示
 
 在ChildNode标签中使用template标签, ==加之以`v-slot`==, template标签内的内容将显示在slot里
-
- 
 
 Root.vue
 
@@ -192,15 +180,9 @@ import ChildNode from "@/components/ChildNode.vue";
 </template>
 ```
 
-
-
 ![image-20250818194636972](../../../assets/Day05-slot 插槽/image-20250818194636972.png)
 
-
-
 ## v-slot 的简写 #
-
-
 
 ```vue
 <script setup>
@@ -266,8 +248,6 @@ import ChildNode from "@/components/ChildNode.vue";
     </template>
     ```
 
-    
-
 ### 静态数据
 
 自定义标签前不加`v-bind`, 就可以是静态数据
@@ -300,8 +280,6 @@ import ChildNode from "@/components/ChildNode.vue";
 
 ![image-20250818210319480](../../../assets/Day05-slot 插槽/image-20250818210319480.png)
 
-
-
 会产生警告(我更相信是WebStorm对Vue的支持不好)
 
 ![image-20250818210400712](../../../assets/Day05-slot 插槽/image-20250818210400712.png)
@@ -320,8 +298,6 @@ ChildNode.vue
   <slot name="characters" :bindFiled1="'A'" :bindFiled2="'B'"></slot>
 </template>
 ```
-
-
 
 Root.vue
 
@@ -347,8 +323,6 @@ import ChildNode from "@/components/ChildNode.vue";
 ```
 
 ![image-20250818203047654](../../../assets/Day05-slot 插槽/image-20250818203047654.png)
-
-
 
 ## v-for和作用域插槽的联合使用
 

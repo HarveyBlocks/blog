@@ -75,8 +75,6 @@ public class QueueTest {
 
 #### 运行测试
 
-
-
 ![image-20240112170955573](../../assets/Day02-AMPQ/image-20240112170955573.png)
 
 ![image-20240112171224074](../../assets/Day02-AMPQ/image-20240112171224074.png)

@@ -15,8 +15,6 @@
 -   Tomcat类的隔离
 -   使用Arthas不停机解决程序问题
 
-
-
 ## 虚拟机底层实现的类加载器
 
 源代码位于Java虚拟机的源码中, 实现语言与虚拟机底层的语言一致, 比如Hotspot使用C++, Eclipse OpenJ9 (IBM)使用C
@@ -53,15 +51,11 @@ classloader
 |              `c r` | 可选, 用 ClassLoader 去查找 resource             |
 |         `c: load:` | 可选, 用 ClassLoader 去加载指定的类              |
 
-
-
 ## JDK提供或自定义的类加载器
 
 ![image-20240513212249611](../assets/Day04-类加载器/image-20240513212249611.png)
 
 上图是JDK17编译的Springboot项目查看到的类加载器
-
-
 
 JDK中默认提供了多种处理不同渠道的类加载器
 
@@ -75,8 +69,6 @@ JDK中默认提供了多种处理不同渠道的类加载器
 
 加载Java中**比较**通用的拓展类
 
-
-
 ### 应用程序类加载器
 
 >   `Applicaion`
@@ -84,8 +76,6 @@ JDK中默认提供了多种处理不同渠道的类加载器
 加载应用使用的类
 
 例如自己写的类
-
-
 
 ## Bootstrap
 
@@ -101,18 +91,12 @@ JDK中默认提供了多种处理不同渠道的类加载器
 
 其中`rt.jar`中包含由`java.lang.String`, `Integer`, `Long`, `Date`
 
-
-
-
-
 ```cpp
 ClassLoader classLoader = String.class.getClassLoader();
 System.out.println("classLoader = " + classLoader); // null
 ```
 
 不允许在Java中获取启动类加载器, 以确保封装性
-
-
 
 ### 查看类加载器
 
@@ -213,8 +197,6 @@ classloader -c ClassLoaderHashCode
 ```
 
 打印所有由该类加载器加载的Jar包
-
-
 
 应用程序类加载器也会加载扩展类目录下的Jar包(类的双亲委派机制)
 

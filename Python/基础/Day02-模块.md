@@ -8,27 +8,17 @@
 
 模块里也可以包含可执行代码
 
-
-
 ## 导入模块
 
 ```python
 [from 模块名] import [模块 | 类 | 变量 | 函数 | * [模块2....]] [as 别名]
 ```
 
-
-
 ```python
 from astroid.brain.brain_io import TextIOWrapper as io
 ```
 
-
-
 ## 使用模块
-
-
-
-
 
 ```python
 import time
@@ -40,12 +30,6 @@ import time
 time.sleep(20)
 ```
 
-
-
-
-
-
-
 ```python
 from time import sleep
 ```
@@ -55,12 +39,6 @@ from time import sleep
 ```python
 sleep(20)
 ```
-
-
-
-
-
-
 
 ```python
 from time import *
@@ -98,15 +76,10 @@ def test_model():
 
 print(__name__) # model
 print(type(__name__)) # <class 'str'>
- 
 
 if __name__ == '__main__':
     test_model()
 ```
-
-
-
-
 
 ### 模块内的封装
 

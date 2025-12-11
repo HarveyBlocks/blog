@@ -6,11 +6,7 @@
 -   对象引用就用ref="id"
 -   普通数据就用value传递
 
-
-
 ## 注入的数据类型
-
-
 
 ![image-20231031003557367](../../../assets/Day03-Bean的注入方式/image-20231031003557367.png)
 
@@ -20,7 +16,7 @@
 
     ```java
     private List<String> strList;
-    
+
     public void setStrList(List<String> strList) {
         this.strList = strList;
         System.out.println("setStrList()->"+strList);
@@ -31,8 +27,6 @@
         System.out.println("<-show()");
     }
     ```
-
-
 
 -   beans.xml
 
@@ -71,8 +65,6 @@
 
 ![image-20231031011307971](../../../assets/Day03-Bean的注入方式/image-20231031011307971.png)
 
-
-
 -   结果
 
     ```
@@ -83,8 +75,6 @@
     show()->
     strList=[aaa, bbb, ccc, ddd, eee, fff, ggg, hhh, iii, jjj, kkk, lll, mmm, nnn, ooo, ppp, qqq]
     ```
-
-    
 
 ### Set\<UserDao\>,Map\<UserService\>的注入
 
@@ -116,7 +106,7 @@ public void setMap(Map<String, UserService> map) {
     ```xml
     <bean id="userService" class="com.harvey.Impl.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
-    
+
         <property name="userDaoSet">
             <set>
                 <ref bean="userDao"/>
@@ -142,15 +132,13 @@ public void setMap(Map<String, UserService> map) {
                 <entry key="US1" value-ref="userService"/>
             </map>
         </property>
-    
+
     </bean>
-    
+
     <bean id="userDao" class="com.harvey.Impl.UserDaoImpl"/>
     <bean id="userDao1" class="com.harvey.Impl.UserDaoImpl"/>
     <bean id="userDao2" class="com.harvey.Impl.UserDaoImpl"/>
     ```
-
-    
 
 -   输出结果
 
@@ -168,8 +156,6 @@ public void setMap(Map<String, UserService> map) {
     map={US1=UserServiceImpl@157632c9, US2=UserServiceImpl@157632c9}
     ```
 
-    
-
 ### Properties的注入
 
 -   key(String):key(String)的键值对
@@ -183,8 +169,6 @@ public void setMap(Map<String, UserService> map) {
 </property>
 ```
 
-
-
 ## 自动装配
 
 -   这是手动装配
@@ -197,8 +181,6 @@ public void setMap(Map<String, UserService> map) {
         </props>
     </property>
     ```
-
-
 
 >   自动装配是使用autowire属性去配置自动注入方式
 
@@ -215,13 +197,11 @@ public void setMap(Map<String, UserService> map) {
 
 -   这里的**name**是取别名,不取别名就是**id**
 
-
-
 -   UserServiceImpl.java
 
     ```java
     private UserDao userDao;
-    
+
     //Bean工厂去调用 从容器中获取userDao设置到此处
     public void setUserDao(UserDao userDao){
         this.userDao = userDao;
@@ -233,7 +213,7 @@ public void setMap(Map<String, UserService> map) {
 
     ```java
     <bean id="userService" class="com.harvey.Impl.UserServiceImpl" autowire="byName"/>
-    
+
     <bean id="userDao" class="com.harvey.Impl.UserDaoImpl"/>
     ```
 
@@ -248,7 +228,7 @@ public void setMap(Map<String, UserService> map) {
 
     ```xml
     <bean id="userService" class="com.harvey.Impl.UserServiceImpl" autowire="byName"/>
-    
+
     <bean id="userDao2" class="com.harvey.Impl.UserDaoImpl"/>
     ```
 

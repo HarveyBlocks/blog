@@ -124,10 +124,6 @@ Caused by: java.lang.ArithmeticException: / by zero
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-
-
-
-
 ## Thread常见方法
 
 ### 一览

@@ -20,8 +20,6 @@ export default {
 </template>
 ```
 
-
-
 ### 组合式
 
 ```vue
@@ -68,8 +66,6 @@ const childRef = useTemplateRef('child')
   {{ item }}
 </li>
 ```
-
-
 
 ## 引用函数
 

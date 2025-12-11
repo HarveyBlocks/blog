@@ -39,7 +39,7 @@
     public class UserServiceImplTest{
         @Autowired
         UserService userService;
-    
+
         @Test
         public void testShow() {
             userService.show();

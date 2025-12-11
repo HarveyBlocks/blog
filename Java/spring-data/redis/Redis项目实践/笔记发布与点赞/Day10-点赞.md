@@ -1,7 +1,5 @@
 # 点赞
 
-
-
 ## 一人一赞
 
 由前端限制, 点赞之后, 这篇文章和点赞用户建立联系, 此后, 该用户访问此文章, 文章的isLiked=true,将不能点赞
@@ -26,8 +24,6 @@
 
 4.  blog的ikLiked字段为`!isMember`
 
-
-
 ### isLiked字段
 
 ```java
@@ -37,8 +33,6 @@
 @TableField(exist = false)
 private Boolean isLike;
 ```
-
-
 
 ```java
     private void setIsLiked(Blog blog) {
@@ -97,10 +91,6 @@ public void likeBlog(Long blogId) {
 
 -   使用SortedSet
 
-
-
-
-
 ### 添加元素
 
 ```bash
@@ -111,8 +101,6 @@ redis(pc2):0>zScore sortedKey value5
 redis(pc2):0>zScore sortedKey value2
 "2"
 ```
-
-
 
 ```java
 stringRedisTemplate.opsForZSet().add(likedSetKey, userId,System.currentTimeMillis());
@@ -125,15 +113,11 @@ redis(pc2):0>zScore sortedKey value2
 "2"
 ```
 
-
-
 ```java
 private Boolean checkIsMember(String setKey,String userId) {
     return stringRedisTemplate.opsForZSet().score(setKey, userId)!=null;
 }
 ```
-
-
 
 ### 元素排序输出
 

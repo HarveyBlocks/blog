@@ -95,10 +95,10 @@ public int compareTo(Student o) {
     //支持全角字符就离谱
     int ageDifference = age - o.getAge();
     int scoreDifference = score - o.getScore();
-    
+
     //this. - o.get....() 升序
     //o.get....() -this.  降序
-    
+
     return scoreDifference == 0?ageDifference == 0?nameDifference:ageDifference:scoreDifference;
     //够阴间不?
 }
@@ -160,7 +160,7 @@ public class Demo05 {
     public static void main(String[] args) {
         //创建集合
         TreeSet<Student> treeSet = new TreeSet<>(new Comparator<Student>() {//匿名内部类
-            
+
             //自定义排序规则
             @Override
             public int compare(Student o1, Student o2) {//先年龄,再成绩,最后名字
@@ -174,7 +174,7 @@ public class Demo05 {
                         :ageDifference;
 
             }
-            
+
         });
         //添加元素
         {....}

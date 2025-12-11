@@ -2,8 +2,6 @@
 
 >   本来只能依据id操作,条件构造器可以用来制定复杂的条件
 
-
-
 ## Wrapper继承体系
 
 >   条件构造器
@@ -42,7 +40,7 @@
         if (condition && CollectionUtils.isNotEmpty(columns)) {
             this.sqlSelect.setStringValue(String.join(",", columns));
         }
-    
+
         return (QueryWrapper)this.typedThis;
     }
     ```
@@ -59,20 +57,13 @@
 
 >查询tb_user表中,名字中含'o'或'O'的,且年龄大于等于64岁的男性
 
-
-
 ##### MySQL模拟
-
 
 ```mysql
 select from tb_user
     where name like '%o%'
     and age>65 and  gender='男';
 ```
-
-
-
-
 
 ##### select方法查询
 
@@ -101,7 +92,6 @@ userMapper.selectList(queryWrapper).forEach(System.out::println);
 -   虽然是更新,但是还是要用**查询条件构造器**
 
 ##### MySQL模拟
-
 
 ```mysql
 update tb_user set age = 36,gender='女' where name='JbquXjYjb9'
@@ -133,17 +123,12 @@ System.out.println(update);
 
 >更新id为1, 2, 4 的用户的年龄**加5**
 
-
-
 #### MySQL模拟
-
 
 ```mysql
 update user set age = age + 5
 	where id in (1,2,4);
 ```
-
-
 
 #### select方法查询
 

@@ -8,8 +8,6 @@
 
 - 将多个文档中的值组合在一起(Update)。
 
-
-
 ## 单一目的聚合方法
 
 聚合单个集合中的文档。方法很简单，但缺乏聚合管道的丰富功能。
@@ -20,15 +18,11 @@
 | count                  | 返回集合或视图中文档的数量。         |
 | distinct               | 返回具有指定字段的不同值的文档数组。 |
 
-
-
 使用数据库`sample_crud.inventory`进行演示
 
 ```json
 [ { "_id": {"$oid": "691e64cab68e267e646ca990"}, "item": "canvas", "qty": 100, "size": { "h": 28, "w": 35.5, "uom": "cm" }, "status": "A" }, { "_id": {"$oid": "691e64cab68e267e646ca991"}, "item": "journal", "qty": 25, "size": { "h": 14, "w": 21, "uom": "in" }, "status": "P", "lastModified": {"$date": "2025-11-20T02:06:05.688Z"} }, { "_id": {"$oid": "691e64cab68e267e646ca992"}, "item": "mat", "qty": 85, "size": { "h": 27.9, "w": 35.5, "uom": "cm" }, "status": "A" }, { "_id": {"$oid": "691e64cab68e267e646ca993"}, "item": "mousepad", "qty": 25, "size": { "h": 19, "w": 22.85, "uom": "in" }, "status": "P", "lastModified": {"$date": "2025-11-20T02:06:05.688Z"} }, { "_id": {"$oid": "691e64cab68e267e646ca994"}, "item": "notebook", "qty": 50, "size": { "h": 8.5, "w": 11, "uom": "in" }, "status": "P" }, { "_id": {"$oid": "691e64cab68e267e646ca995"}, "item": "paper", "instock": [ { "warehouse": "A", "qty": 60 }, { "warehouse": "B", "qty": 40 } ] }, { "_id": {"$oid": "691e64cab68e267e646ca996"}, "item": "planner", "qty": 75, "size": { "h": 22.85, "w": 30, "uom": "cm" }, "status": "D" }, { "_id": {"$oid": "691e64cab68e267e646ca997"}, "item": "postcard", "qty": 45, "size": { "h": 10, "w": 15.25, "uom": "in" }, "status": "P", "lastModified": {"$date": "2025-11-20T03:06:05.688Z"} }, { "_id": {"$oid": "691e64cab68e267e646ca998"}, "item": "sketchbook", "qty": 80, "size": { "h": 14, "w": 21, "uom": "cm" }, "status": "A" }, { "_id": {"$oid": "691e64cab68e267e646ca999"}, "item": "sketch pad", "qty": 95, "size": { "h": 22.85, "w": 30.5, "uom": "cm" }, "status": "A" } ]
 ```
-
-
 
 ```java
 long estimated = collection.estimatedDocumentCount();
@@ -77,8 +71,6 @@ List<Bson> pipeline = new AggregatePipelineBuilder()
 AggregateIterable<Document> aggregate = collection.aggregate(pipeline);
 ```
 
-
-
 - 阶段不必为每个输入文档输出一个文档。例如，某些阶段可能会产生新文档或过滤掉现有文档。
 - 使用 `MongoCollection#aggregate()` 方法运行的聚合管道不会修改集合中的文档，除非管道包含 `$merge` 或 `$out` 阶段。
 - 同一个阶段可以在管道中多次出现，但阶段(`$out`, `$merge`, `$geoNear`)例外
@@ -96,10 +88,6 @@ AggregateIterable<Document> aggregate = collection.aggregate(pipeline);
 例如`{ $add: [ 3, "$inventory.total" ] }`, 构建抽象语法树这一块
 
 表达式返回3+`$inventory.total`结果
-
-
-
-
 
 ## 字段路径
 
@@ -184,8 +172,6 @@ db.fruits.insertOne({inventory: [
 ]});
 ```
 
-
-
 ```java
 Aggregates.project(Projections.fields(
         Projections.computed("apples", "$inventory.apples"),
@@ -199,8 +185,6 @@ Aggregates.project(Projections.fields(
 ```json
 {"apples": [["macintosh", "golden delicious"], ["braeburn", "honeycrisp"]]}
 ```
-
-
 
 ### $CURRENT
 
@@ -259,10 +243,6 @@ Aggregates.project(Projections.fields(
 
 - `$limit`
 
-
-
-
-
 ## 限制
 
 - 返回结果大小限制
@@ -274,10 +254,6 @@ Aggregates.project(Projections.fields(
 - 阶段数量限制: 1000个
 
   一个聚合管道里最多有1000个聚合阶段
-
-
-
-
 
 ## Update
 
@@ -293,8 +269,6 @@ db.students.updateOne(
     }}] 
 )
 ```
-
-
 
 如果值是以美元字符开头的字符串, 为了防止将其解析为对字段的引用，则需要将该值传递给 `$literal`聚合操作符。
 

@@ -42,7 +42,6 @@ public static void task2() {
     }
 }
 
-
 public static void demo() {
     new Thread(MultipleLock::task1,"Thread1").start();
     new Thread(MultipleLock::task2,"Thread2").start();
@@ -62,7 +61,7 @@ public static void demo() {
             - locked <0x0000000713995638> (a java.lang.Object)
             at org.harvey.juc.demo.DeathLockDemo$$Lambda$5/0x00000008000be840.run(Unknown Source)
             at java.lang.Thread.run(java.base@11.0.21/Thread.java:829)
-    
+
     "Thread2" #22 prio=5 os_prio=0 cpu=0.00ms elapsed=102.00s tid=0x000001d4b5c0c800 nid=0xbec waiting for monitor entry  [0x000000add42ff000]
        java.lang.Thread.State: BLOCKED (on object monitor)
             at org.harvey.juc.demo.DeathLockDemo.task2(DeathLockDemo.java:45)
@@ -70,9 +69,9 @@ public static void demo() {
             - locked <0x0000000713995648> (a java.lang.Object)
             at org.harvey.juc.demo.DeathLockDemo$$Lambda$6/0x00000008000bec40.run(Unknown Source)
             at java.lang.Thread.run(java.base@11.0.21/Thread.java:829)
-    
+
     ...
-    
+
     Found one Java-level deadlock:
     =============================
     "Thread1":
@@ -81,7 +80,7 @@ public static void demo() {
     "Thread2":
       waiting to lock monitor 0x000001d4b5616a00 (object 0x0000000713995638, a java.lang.Object),
       which is held by "Thread1"
-    
+
     Java stack information for the threads listed above:
     ===================================================
     "Thread1":
@@ -96,20 +95,16 @@ public static void demo() {
             - locked <0x0000000713995648> (a java.lang.Object)
             at org.harvey.juc.demo.DeathLockDemo$$Lambda$6/0x00000008000bec40.run(Unknown Source)
             at java.lang.Thread.run(java.base@11.0.21/Thread.java:829)
-    
-    Found 1 deadlock.
-    
-    ```
 
-    
+    Found 1 deadlock.
+
+    ```
 
 2.  Java命令行, `jconsol`
 
     <img src="../assets/Day01-%E9%94%81%E7%9A%84%E6%B4%BB%E8%B7%83%E6%80%A7/image-20240908215640636.png" alt="image-20240908215640636" style="zoom:40%;" />
 
     <img src="../assets/Day01-%E9%94%81%E7%9A%84%E6%B4%BB%E8%B7%83%E6%80%A7/image-20240908215704768.png" alt="image-20240908215704768" style="zoom:50%;" />
-
-
 
 ### 哲学家就餐
 
@@ -207,7 +202,6 @@ public static void task2() {
     }
 }
 
-
 public static void demo() {
     new Thread(LiveLockDemo::task1, "Thread1").start();
     new Thread(LiveLockDemo::task2, "Thread2").start();
@@ -220,11 +214,7 @@ public static void demo() {
 
 ## 饥饿
 
-
-
 死锁: 
-
-
 
 ```mermaid
 sequenceDiagram
@@ -242,8 +232,6 @@ t1 --x  l2 : 尝试获取锁
 t2 --x  l1 : 尝试获取锁
 
 ```
-
-
 
 顺序加锁解决问题
 

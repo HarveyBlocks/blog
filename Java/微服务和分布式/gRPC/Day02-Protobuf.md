@@ -2,8 +2,6 @@
 
 >   Protocol Buffers
 
-
-
 -   与编程语言[IDL]无关
 
 -   与平台(操作系统)无关
@@ -38,8 +36,6 @@ syntax = "proto3";
 
 -   第一行一定是版本设定, 分号结尾
 
-
-
 ### 注释
 
 ```protobuf
@@ -48,10 +44,6 @@ syntax = "proto3";
 多行注释
 */
 ```
-
-
-
-
 
 ### Java特定辅助设置
 
@@ -79,21 +71,11 @@ import "UserService.proto";
 package com.harvey.protobuf;
 ```
 
-
-
 ## 数据结构
 
 ### 基本数据结构
 
 [proto3/dev](https://protobuf.dev/programming-guides/proto3/)
-
-
-
-
-
-
-
-
 
 ### message
 
@@ -113,10 +95,6 @@ message LoginRequest{
 
 ```
 
-
-
-
-
 #### 字段修饰关键字:
 
 -   `singular`(缺省) 该字段只能是0个(null)或1个
@@ -127,10 +105,6 @@ message SearchResponse {
   repeated int64 nums = 1;
 }
 ```
-
-
-
-
 
 #### 消息嵌套
 
@@ -144,8 +118,6 @@ message LoginRequest{
   SearchResponse a = 4; // 使用
 }
 ```
-
-
 
 ```protobuf
 message LoginRequest{
@@ -170,8 +142,6 @@ message LoginRequest{
 
 ### enum
 
-
-
 ```protobuf
 // 枚举
 enum Season{
@@ -181,8 +151,6 @@ enum Season{
   WINTER=5;
 }
 ```
-
-
 
 ### oneof
 
@@ -198,11 +166,7 @@ message Student{
 }
 ```
 
-
-
 ## 服务
-
-
 
 ### 定义
 
@@ -233,23 +197,11 @@ service UserService{
 // 不能传多个参数, 方法不能重写, 不能使用基本数据类型作为参数
 ```
 
-
-
-
-
-
-
-
-
-
-
 ## 编译
 
 ```shell
 protoc --java_out=生成目标目录 proto文件
 ```
-
-
 
 ```shell
 27970@Harvey-PC MINGW64 /d/IT_study/source/JDK/chat/protobuf/src (master)
@@ -265,8 +217,6 @@ $ protoc --java_out=./main/java ./proto/User.proto
 ```
 
 qwq生成出来的代码长达2046行
-
-
 
 maven的插件, 也可以对protobuf文件进行编译
 
@@ -295,10 +245,6 @@ maven的插件, 也可以对protobuf文件进行编译
   <scope>provided</scope>
 </dependency>
 ```
-
-
-
-
 
 插件
 
@@ -381,8 +327,6 @@ mvn protobuf:compile protobuf:compile-custom
 </configuration>
 ```
 
-
-
 ### 最终方案
 
 ```xml
@@ -457,8 +401,6 @@ mvn protobuf:compile protobuf:compile-custom
 ### [ServiceName]ImplBase
 
 继承这个类, 实现里边的方法, 就可以让别人来调用的时候执行正确的逻辑
-
-
 
 ### [ServiceName]\[xxxx]Stub
 

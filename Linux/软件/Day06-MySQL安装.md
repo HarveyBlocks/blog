@@ -64,7 +64,7 @@
         -- 密码安全级别降低
         set global validate_password_length=4;
         -- 降低密码要求的最低位
-        
+
         alter user 'root'@'localhost' identified by '12356';
         ```
 
@@ -81,8 +81,6 @@
     ```bash
     netstat -anp | grep 3306
     ```
-
-    
 
 ## 8.0版本安装
 
@@ -150,7 +148,7 @@
         -- 密码安全级别降低
         set global validate_password.length=4;
         -- 降低密码要求的最低位
-        
+
         alter user 'root'@'localhost' identified by '123456';
         ```
 

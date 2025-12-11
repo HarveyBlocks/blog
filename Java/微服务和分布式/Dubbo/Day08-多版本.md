@@ -8,13 +8,9 @@
 
 确认无误后然后再把其他消费者去使用这个新版本的服务提供者
 
-
-
 ## version属性
 
 dubbo使用version属性来设置和调用同一个接口的不同版本
-
-
 
 ### 生产者
 
@@ -37,8 +33,6 @@ public class HelloServiceImpl2 implements HelloService {
     }
 }
 ```
-
-
 
 ### 消费者
 

@@ -32,8 +32,6 @@
 
 - 否则, 相关Activity不对Fragment进行关联, 同时BackStack也没有记录这个Fragmentd, 则该Fragment进入销毁状态
 
-
-
 ## 回调方法
 
 - onAttach() 当Fragment和Activity建立关联
@@ -72,7 +70,6 @@ class RightFragment : BaseFragment<FragmentRightBinding>(FragmentRightBinding::i
         super.onViewCreated(view, savedInstanceState)
         Log.d(logTag, "onViewCreated")
     }
-
 
     override fun onStart() {
         super.onStart()

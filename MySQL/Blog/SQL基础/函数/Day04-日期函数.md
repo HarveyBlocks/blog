@@ -1,7 +1,5 @@
 # 日期函数
 
-
-
 ![image-20231007162807543](../../../../../JDK/JavaDailyBlog/blog/java基础/image-20231007162807543.png)
 
 ```mysql
@@ -12,7 +10,7 @@ select hour(now()),minute(now()),second(now());
 select date_add(curtime(),interval 1 Day) ; -- 2023-10-08 16:35:43
 select date_add(curtime(),interval -1 hour ) ; -- 15:36:28
 -- interval 间隔,往后记一
-                                               
+
 select datediff(now(),date_add(now() ,interval -1 hour)); -- 0
 select datediff(now(),date_add(now() ,interval 1 Day)); -- -1
 
@@ -34,14 +32,13 @@ select TIMESTAMPDIFF(
                '2021-02-01 14:10:57'
        ) as td;
        -- >>>366
-       
+
 select TIMESTAMPDIFF(
                DAY,
                '2020-02-01 12:20:12',
                '2021-02-01 10:59:59'
        ) as td;
        -- >>>366
-       
 
 select TIMESTAMPDIFF(
                DAY,
@@ -62,10 +59,6 @@ select
     	)
 	); -- -00:00:01
 ```
-
-
-
-
 
 ```mysql
 select datediff(); -- 前减去后

@@ -22,8 +22,6 @@
         new ServerBootstrap().option(ChannelOption.SO_TIMEOUT,300);
         ```
 
-        
-
 ## 超时
 
 >   CONNECT_TINEOUT_MILLIS
@@ -68,8 +66,6 @@ io.netty.channel.ConnectTimeoutException: connection timed out: centos/192.168.8
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
-
-
 
 -   如果超时时间超过两秒, 讲超出Java内定的超时时长, 就会报Java的错
 
@@ -123,8 +119,6 @@ Caused by: java.net.ConnectException: Connection refused: no further information
         19:10:13 [DEBUG] [nioEventLoopGroup-2-1] i.n.h.l.LoggingHandler - [id: 0x638983e4] UNREGISTERED
         ```
 
-        
-
     -   如果`accept queue`队列满了, server将发送一个拒绝连接的错误信息到client
 
 -   一次请求-响应对应一次TCP连接, 也就是说, 只有在好几个请求处理不过来的时候才会有队列堆积
@@ -148,8 +142,6 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 ```powershell
 ulimit -n 上限
 ```
-
-
 
 ## [建议]TCP_NODELAY
 

@@ -4,8 +4,6 @@ String[] list=str.split("分隔符")
 
 String str1=str.replace("不对的","换上去的")
 
-
-
 str转int
 
 int i = Integer.parseInt([String]); 

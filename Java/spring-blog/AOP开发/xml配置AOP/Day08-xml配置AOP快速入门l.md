@@ -8,11 +8,7 @@
     -   切点表达式的配置
 -   配置目标方法要被哪些通知方法所增强,在目标方法之前还是之后执行
 
-
-
 >   配置方式的设计,配置文件(注解)的解析工作,Spring已经帮我们封装好了
-
-
 
 ## 步骤
 
@@ -21,8 +17,6 @@
     ```xml
     <!--    <bean id="mock" class="com.harvey.processor.MockAopBeanPostProfessor"/>-->
     ```
-
-    
 
 1.  导入包的相关坐标
 
@@ -83,8 +77,6 @@ http://www.springframework.org/schema/aop
 http://www.springframework.org/schema/aop/spring-aop.xsd"
 ```
 
-
-
 #### 配置AOP:config
 
 ```xml
@@ -109,7 +101,7 @@ http://www.springframework.org/schema/aop/spring-aop.xsd"
             "execution(void com.harvey.service.impl.UserServiceImpl.toString())"/>
     		<!--发现没有,void是错的,但它不会检查,不会编译错误,不会运行时异常(*Φ皿Φ*)-->
 	<!--可以配置多个切点-->
-	
+
 </aop:config>
 ```
 
@@ -122,8 +114,6 @@ http://www.springframework.org/schema/aop/spring-aop.xsd"
     <aop:pointcut id="myPrintCutToString" expression=
             "execution(void com.harvey.service.impl.UserServiceImpl.toString())"/>
 
-    
-    
     <!--配置织入,哪些切点和哪些通知结合-->
     <!--            指定通知类-->
     <aop:aspect ref="myAdvice">

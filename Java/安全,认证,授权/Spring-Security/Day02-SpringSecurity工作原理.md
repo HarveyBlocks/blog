@@ -19,10 +19,6 @@ Filter
 -   会委托AuthenticationManager去校验用户的身份
 -   会委托AccessDecisionManager去校验用户的权限
 
-
-
-
-
 <img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132420639.png" alt="image-20231219132420639" style="zoom:200%;" />
 
 ## 几个重要的Filter
@@ -32,8 +28,6 @@ Filter
 ### SecurityContextPersistenceFilter
 
 整个拦截过程的入口和出口(第一个和最后一个拦截器)
-
-
 
 ### UsernamePasswirdAuthenticationFilter
 
@@ -92,10 +86,6 @@ FilterChain的所有Filter的异常, 并进行处理
 5.  认证成功之后, 将Authentication保存至**安全上下文(SecurityContextHolder)**
 
     -   通过**SecurityContextHolder.getContext().setAuthentication()**
-
-
-
-
 
 -   两个重点: 
     -   **UsernamePasswirdAuthenticationFilter**
@@ -157,10 +147,6 @@ public UserDetailsService userDetailsService(){
     return userManager;
 }
 ```
-
-
-
-
 
 ### PasswordEnconder
 
@@ -292,8 +278,6 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 ![image-20231218184035761](../../assets/Day02-SpringSecurity工作原理/image-20231218184035761.png)
 
-
-
 **FilterSecurityInterceptor**
 
 -   拿到资源当前所需要的权限,
@@ -359,10 +343,6 @@ public interface AccessDecisionVoter<S> {
 -   用户权限和资源权限**一致**, 投**赞成票ACCESS_GRANTED**
 -   用户权限和资源权限**不一致**, 投**反对票ACCESS_DENIED**
 -   若用户具有部分角色，但不足以满足访问要求，则弃权，让下一个权限决策器继续判断(GPT说的, 不知真假)
-
-
-
-
 
 -   **AffirmativeBased(SpringSecurity的默认)**实现类的逻辑:
 

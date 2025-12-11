@@ -75,8 +75,6 @@ class Album {
 })(Album || (Album = {})); // 此时已经有Album构造器, Album不再是undefined
 ```
 
-
-
 ### 命名空间和函数
 
 用于扩展函数内容, 与类同理

@@ -4,8 +4,6 @@
 
 支持多种不同的数据类型存储(int存入, 可以用int读出, string存入, 可以用string读出)
 
-
-
 SharedPreferences文件都是存放在`/data/data/<package name>/shared_prefs/`目录下
 
 ## 创建SharedPreferences对象
@@ -17,8 +15,6 @@ SharedPreferences文件都是存放在`/data/data/<package name>/shared_prefs/`�
 - 参数 指定操作模式
   - 目前只有默认的  **`MODE_PRIVATE`** 这一种模式可选
   - 只有当前的应用程序才可以对这个SharedPreferences进行读写
-
-
 
 `Activity.getPreferences`
 
@@ -70,8 +66,6 @@ fun save() {
 ```
 
 使用`edit.clear()`清空所有数据
-
-
 
 ## 读取
 

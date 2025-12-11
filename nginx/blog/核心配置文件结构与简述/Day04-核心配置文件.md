@@ -22,7 +22,6 @@ events {
     worker_connections  1024;
 }
 
-
 # http块
 http {
     include       /etc/nginx/mime.types;

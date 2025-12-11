@@ -20,8 +20,6 @@ public class Demo01 {
 }
 ```
 
-
-
 ## 方法
 
 | 返回值类型    | 方法名及参数         | 描述                                          |
@@ -31,14 +29,9 @@ public class Demo01 {
 
 ### 添加键值对与替换值
 
-
-
-
 | 返回值类型    | 方法名及参数         | 描述                                          |
 | ------------- | -------------------- | --------------------------------------------- |
 | V             | put(K key ,V value)  | 将对象存入到集合中,关联键值.key重复则覆盖原值(替代了replase的作用) |
-
-
 
 ```java
 //添加元素
@@ -80,11 +73,7 @@ System.out.println(map);
 
 加入新元素时判断key是否重复依据时**key 的类的equals()和hushCode()**
 
-
-
 ### 遍历与获取
-
-
 
 | 返回值类型    | 方法名及参数         | 描述                                          |
 | ------------- | -------------------- | --------------------------------------------- |
@@ -152,11 +141,7 @@ for (Object value: values) {//这里返回的值是Object
 }
 ```
 
-
-
 ### 判断
-
-
 
 | 返回值类型    | 方法名及参数         | 描述                                          |
 | ------------- | -------------------- | --------------------------------------------- |
@@ -165,7 +150,6 @@ for (Object value: values) {//这里返回的值是Object
 |boolean |containsValue(Object value)| 判断 是否包含value|
 |boolean |isEmpty()| 判断是否为空 |
 
-
 ```java
 Map<Student, String> map = new HashMap<>();
 
@@ -173,16 +157,11 @@ Map<Student, String> map2 = new HashMap<>();
 System.out.println(map.equals(map2));//true,看来是被重写过了
 ```
 
-
-
 ```java
 System.out.println(map.containsKey(new Student("Z",12,91)));//false
 System.out.println(map.containsValue("USA"));//true
 System.out.println(map.isEmpty());//false
 ```
-
-
-
 
 ### 删除
 

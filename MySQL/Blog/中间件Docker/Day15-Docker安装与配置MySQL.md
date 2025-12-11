@@ -77,8 +77,6 @@
     docker ps
     ```
 
-    
-
 如果启动失败了
 
 ![image-20231212212521247](../../../Java/spring-data/assets/Day15-Docker安装与配置MySQL/image-20231212212521247.png)
@@ -100,8 +98,6 @@ yum install docker-ce docker-ce-cli containerd.io
     ```bash
     docker images
     ```
-
-
 
 ## 配置镜像加速
 
@@ -144,8 +140,6 @@ nameserver 114.114.114.114
 nameserver 210.34.48.34
 ```
 
-
-
 ## Docker配置MySQl
 
 ```bash
@@ -161,8 +155,6 @@ docker run -d \
  mysql
 ```
 
-
-
 ```
 docker run -d \
  --name mysql \
@@ -175,8 +167,6 @@ docker run -d \
  -e MYSQL_ROOT_PASSWORD=EmiyaShirou3.14159265358979 \
  mysql
 ```
-
-
 
 -   run:
 
@@ -235,9 +225,9 @@ docker run -d \
 -   当我们利用Docker安装应用时, Docker会自动搜索并下载应用**镜像( image )**.
 
 -   镜像不仅包含应用本身, 还包含应用运行所需的**环境**,**配置**, **系统函数库**.
-  
+
 -   因为打包了环境, 所以应用的使用**无关操作系统**, 全部都可以运行*!*
-  
+
 -   Docker会再运行镜像时创建一个**隔离环境**, 称为**容器( container )**
 
     -   Docker部署的应用和其他进程分开, 互不干扰

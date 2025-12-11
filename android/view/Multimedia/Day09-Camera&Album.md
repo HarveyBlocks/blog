@@ -2,8 +2,6 @@
 
 > 相机和相册
 
-
-
 ## Camera
 
 ### 布局
@@ -50,8 +48,6 @@ external-path就是用来指定Uri共享路径的
 path属性的值表 示共享的具体路径
 
 name是本路径的标识
-
-
 
 在manifest注册FileProvider, 其中`authorities`自定义
 
@@ -114,7 +110,6 @@ imageUri = if (support(Build.VERSION_CODES.N)) {
 }
 ```
 
-
 #### Intent 的 Action
 
 Intent到相机程序的Action
@@ -126,8 +121,6 @@ enum class SystemReceiverAction(override val action: String) : ReceiverAction {
 }
 ```
 
-
-
 #### 打开相机
 
 在Extra中设置`MediaStore.EXTRA_OUTPUT`, 就能指定要把目标图片存到哪里
@@ -138,7 +131,6 @@ val intent = Intent(SystemReceiverAction.IMAGE_CAPTURE.action)
 intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri)
 launcher.launch(intent) // 已经注册了intent的回调的launcher
 ```
-
 
 #### 获取图片并展示
 
@@ -156,13 +148,10 @@ val launcher =
     }
 ```
 
-
-
 #### 代码清单
 
 ```kotlin
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
-
 
     lateinit var imageUri: Uri
 
@@ -208,10 +197,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 }
 ```
 
-
-
-
-
 ## Album
 
 ### 布局
@@ -254,8 +239,6 @@ intent.type = "image/*"
 searchAlbumLauncher.launch(intent)
 ```
 
-
-
 ## 作用域存储与MediaStore
 
 从Android 10开始，每个应用程序只能有权在自己的外置存储空间关联目录下读取和创建文件
@@ -271,8 +254,6 @@ searchAlbumLauncher.launch(intent)
 ### 获取相册中的图片
 
 permissions
-
-
 
 ```kotlin
 @SuppressLint("InlinedApi")
@@ -291,12 +272,6 @@ enum class Permission(val permission: String, val versionRange: IntRange) {
     )
 }
 ```
-
-
-
-
-
-
 
 在manifest注册permission
 
@@ -334,10 +309,6 @@ safeWrapper(
     }
 }.invoke()
 ```
-
-
-
-
 
 ## [问题](TODO)
 

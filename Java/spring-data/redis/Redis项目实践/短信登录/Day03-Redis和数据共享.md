@@ -38,8 +38,6 @@ public String getCookie(@CookieValue("JSESSIONID") String jSessionId){
 }
 ```
 
-
-
 但是, 如果**用手机号用key, code作为value**
 
 如果用手机号获取验证码, 换了一台设备(更换了SessionID),这个手机号能否依据这个验证码登录?
@@ -53,10 +51,6 @@ public String getCookie(@CookieValue("JSESSIONID") String jSessionId){
 而且, SessionID会变成新的, 会创建一个新的Session,且原来的Session不会消失, 会造成冗余, 消耗更多的内存
 
 这么说来, 用Session来存数据的问题由多了几个
-
-
-
-
 
 所以这里选择用手机号作为key, code作为value
 
@@ -93,8 +87,6 @@ SessionID还是可以在服务器之间通用的吧
 
 SessionID完全没问题啊
 
-
-
 但奈何本能项目的前端准备了名为`"authorization"`的token
 
 ```
@@ -128,8 +120,6 @@ valueOperations.set(
 ```java
 String codeCache = valueOperations.get(LOGIN_CODE_KEY + phone);
 ```
-
-
 
 存入user
 
@@ -174,7 +164,7 @@ public boolean preHandle(HttpServletRequest request,
                          Object handler)
         throws Exception {
     // 进入controller之前进行登录校验
-    
+
     // 获取请求头中的token
     String token = request.getHeader("authorization");//依据前端的信息
     if (token==null||token.isEmpty() ){
@@ -228,7 +218,7 @@ public class ExpireInterceptor implements HandlerInterceptor {
                              Object handler)
             throws Exception {
         // 进入controller之前进行登录校验
-        
+
         // 获取请求头中的token
         String token = request.getHeader("authorization");//依据前端的信息
         if (token==null||token.isEmpty() ){
@@ -278,8 +268,6 @@ public class LoginInterceptor implements HandlerInterceptor {
     }
 }
 ```
-
-
 
 配置
 

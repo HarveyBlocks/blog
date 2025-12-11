@@ -19,8 +19,7 @@ Material库中提供的一个控件, 方便实现悬浮按钮的效果, 默认�
         <!--Toolbar...-->
 
         <!--主界面内容-->
-        
-        
+
         <!--设置在右下角-->
         <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab"
@@ -32,7 +31,7 @@ Material库中提供的一个控件, 方便实现悬浮按钮的效果, 默认�
                 android:src="@drawable/ic_done" />
     </FrameLayout>
     <!--Navigation, 用户滑动菜单...-->
-    
+
 </androidx.drawerlayout.widget.DrawerLayout>
 ```
 
@@ -54,13 +53,9 @@ Material库中提供的一个控件, 方便实现悬浮按钮的效果, 默认�
         app:elevation="8dp"/>
 ```
 
-
-
 ### 如何处理点击事件
 
 调用`setOnClickListener`方法
-
-
 
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {

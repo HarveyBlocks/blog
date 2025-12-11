@@ -10,8 +10,6 @@
 6.  下一次用户就可以带着这个Session ID的值来访问我们的Web服务器
 7.  此时我们的Web服务端就校验, 用户已经存在这个Session了,就不再使用认证了
 
-
-
 -   Session规范是由Servlet规范定制的, Servlet容器已经实现
 
 # SpringSecurity实现
@@ -107,7 +105,7 @@ Spring Security会提供拦截器, 所以可以把自定义的拦截器去掉
             //viewResolver.setSuffix(".jsp");// 以.jsp结尾
             return viewResolver;
         }
-    
+
         @Override
         public void addViewControllers(ViewControllerRegistry registry) {
             registry.addViewController("/login").setViewName("login.jsp");
@@ -122,7 +120,7 @@ Spring Security会提供拦截器, 所以可以把自定义的拦截器去掉
 
     ```java
     public class SpringApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-    
+
         /**
          * Spring容器
          * 加载Spring的Configuration
@@ -132,7 +130,7 @@ Spring Security会提供拦截器, 所以可以把自定义的拦截器去掉
         protected Class<?>[] getRootConfigClasses() {
             return new Class[]{ApplicationConfig.class};
         }
-    
+
         /**
          * servletContext
          * 加载SpringMVC的Configuration
@@ -142,7 +140,7 @@ Spring Security会提供拦截器, 所以可以把自定义的拦截器去掉
         protected Class<?>[] getServletConfigClasses() {
             return new Class[]{WebConfig.class};
         }
-    
+
         /**
          * 映射器路径,ContextPath
          *
@@ -196,14 +194,13 @@ public void addViewControllers(ViewControllerRegistry registry) {
 ```java
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-    
+
     /**
      * 定义用户信息服务(查询用户信息)<br>
      * @return 用户信息服务的Bean对象
      */
     @Bean
     public UserDetailsService userDetailsService(){...}
-
 
     /**
      * 密码编码器, 比对密码的方法<br>
@@ -212,8 +209,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Bean
     public PasswordEncoder passwordEncoder(){...}
-
-
 
     /**
      * 安全拦截机制(怎么拦截, 怎么授权)
@@ -269,13 +264,7 @@ public PasswordEncoder passwordEncoder(){
 }
 ```
 
-
-
-
-
 #### 安全拦截机制
-
-
 
 ```java
 /**
@@ -307,8 +296,6 @@ public String logout(HttpSession session) {
     return "已登出<br>" + "<a href=\"index\">返回主页面</a><br>";
 }
 ```
-
-
 
 #### 初始化/注册认证配置类
 
@@ -377,8 +364,6 @@ http.authorizeRequests()
         .successForwardUrl("/login-success");// 自定义登录成功的页面地址
 ```
 
-
-
 \整理以下问题:
 
 资源:
@@ -401,12 +386,6 @@ c2 只有B
 
 b1 ABC都能访问
 
-
-
-
-
-
-
 ### 授予权限
 
 ```java
@@ -421,8 +400,6 @@ public UserDetailsService userDetailsService(){
     return userManager;
 }
 ```
-
-
 
 ```java
 @Bean

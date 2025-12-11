@@ -38,15 +38,9 @@ KDoc 注释以 `/**` 开头、以 `*/` 结尾
 -   类中具有指定名称的属性
 -   在主构造函数中声明的属性
 
-
-
 ### @throw  *class*/@exception *class*
 
 -   方法可能抛出的异常
-
-
-
-
 
 ### @sample *identifier*
 
@@ -75,8 +69,6 @@ KDoc 注释以 `/**` 开头、以 `*/` 结尾
  */
 ```
 
-
-
 ## Dokka
 
 使用Dokka生成Kotlin文档
@@ -91,8 +83,6 @@ KDoc 注释以 `/**` 开头、以 `*/` 结尾
 
 -   对于两个字母的缩写，两字母都大写。例如，`IOStream`。
 -   对于超过两个字母的缩写，只大写第一个字母。例如，`XmlFormatter` 或 `HttpInputStream`。
-
-
 
 ### 省略
 

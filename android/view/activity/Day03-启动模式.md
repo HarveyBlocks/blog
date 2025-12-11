@@ -49,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
 不过如果不是栈顶, 则依旧创建新的实例
 
-
-
 ## singleTask
 
 让某个Activity在整个应用程序的上下文中只存在一个实例
@@ -58,10 +56,6 @@ class MainActivity : AppCompatActivity() {
 -   系统首先会在返回栈中检查是否存在该Activity的实例
     -   如果发现已经存在则直接使用该实例， 并把在这个Activity之上的所有其他Activity统统**出栈**
     -   如果没有发现就会创建一个新的 Activity实例
-
-
-
-
 
 ## singleInstance
 

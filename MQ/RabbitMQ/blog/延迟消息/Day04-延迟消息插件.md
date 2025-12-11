@@ -9,8 +9,6 @@
 docker inspect mq
 ```
 
-
-
 ![image-20240114120911576](../../assets/Day04-延迟消息插件/image-20240114120911576.png)
 
 执行命令,启动插件
@@ -20,8 +18,6 @@ docker exec -it mq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 
 ![image-20240114121318904](../../assets/Day04-延迟消息插件/image-20240114121318904.png)
-
-
 
 ## 使用延迟消息插件
 
@@ -88,8 +84,6 @@ Spring和Rabbit这种需要维护一个时钟, 每一个定时都要维护一个
 
 所以MQ的延时只适合延迟时间短的
 
-
-
 -   关于Redis的定时功能的损耗为何小的思考
 
     -   Redis的TTL损耗小, 是由其业务功能决定的
@@ -112,9 +106,9 @@ Spring和Rabbit这种需要维护一个时钟, 每一个定时都要维护一个
 
     ```
     Of course this is not enough as there are expired keys that will never be accessed again. These keys should be expired anyway, so periodically Redis tests a few keys at random among keys with an expire set. All the keys that are already expired are deleted from the keyspace.
-    
+
     Specifically this is what Redis does 10 times per second:
-    
+
     Test 20 random keys from the set of keys with an associated expire.
     Delete all the keys found expired.
     If more than 25% of keys were expired, start again from step 1.

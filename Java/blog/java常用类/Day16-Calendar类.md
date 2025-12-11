@@ -23,7 +23,7 @@ public class Main {
         //创建calendar对象
         Calendar calendar = Calendar.getInstance();
         System.out.println(calendar.toString());
-        
+
         /*        			java.util.GregorianCalendar[time=1692436578872,areFieldsSet=true,areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Asia/Shanghai",offset=28800000,dstSavings=0,useDaylight=false,transitions=31,lastRule=null],firstDayOfWeek=1,minimalDaysInFirstWeek=1,ERA=1,YEAR=2023,MONTH=7,WEEK_OF_YEAR=33,WEEK_OF_MONTH=3,DAY_OF_MONTH=19,DAY_OF_YEAR=231,DAY_OF_WEEK=7,DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=5,HOUR_OF_DAY=17,MINUTE=16,SECOND=18,MILLISECOND=872,ZONE_OFFSET=28800000,DST_OFFSET=0]
         */
         //肥肠的阴间

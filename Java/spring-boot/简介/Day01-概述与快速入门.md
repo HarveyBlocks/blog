@@ -27,12 +27,6 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
 
 ***Spring Boot 并不是对Spring的增强 , 而是提供了一种快速使用的Spring的方式***
 
-  
-
-
-
-
-
 ## 快速入门
 
 1.  创建Maven项目
@@ -40,8 +34,6 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
 3.  定义Controller
 4.  编写引导类
 5.  启动测试
-
-
 
 ### 创建Maven项目
 
@@ -76,7 +68,6 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
     <version>2.7.14</version>
 </parent>
 
-
 <dependencies>
     <!--spring boot的web开发的起步依赖-->
     <dependency>
@@ -86,11 +77,7 @@ SpringBoot-Spring Cloud-Spring Cloud Data Flow
 </dependencies>
 ```
 
-
-
 ### 定义Controller
-
-
 
 ```java
 @RestController
@@ -119,15 +106,11 @@ public class StartApplication {
 }
 ```
 
-
-
 ### 测试运行
 
 ![image-20231204143804650](../../assets/Day11-快速入门/image-20231204143804650.png)
 
 内置了Tomcat
-
-
 
 `http://localhost:8080/index`
 

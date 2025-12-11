@@ -6,15 +6,11 @@
     -   默认标签
     -   自定义标签
 
-
-
 ### 默认标签
 
 >   不用导入其他命名约束的标签 ,如\<bean\>标签
 
 ![image-20231031202624445](../../../assets/Day03-配置标签/image-20231031202624445.png)
-
-
 
 #### \<beans\>创造环境
 
@@ -31,12 +27,6 @@ System.setProperty("spring.profiles.active","testContest");
 
 ####
 
-
-
-
-
-
-
 ```java
 //指定环境
 System.setProperty("spring.profiles.active","testContest");
@@ -51,10 +41,6 @@ TestLogger.LOGGER.info("userService2成功创建"+userService2);
 
 -   公共的部分和指定的环境都生效
 
-
-
-
-
 #### \<import\>导入其它配置文件
 
 -   到时候配置文件有很多,读取配置文件的时候,读每一个就很离谱
@@ -65,25 +51,17 @@ reader.loadBeanDefinitions("beans.xml");
 
 -   可以把配置文件放到一个主配置文件里面,只要加载主配置文件就可以了
 
-
-
 -   这么写就可以啦,当然要排在\<beans\>之前了啦
 
 ```xml
 <import resource="smallBeans.xml"/>
 ```
 
-
-
 #### \<alias\>取别名
 
 ```xml
 <alias name="userDao" alias="UserDao"/>
 ```
-
-
-
-
 
 ### 自定义标签
 
@@ -100,7 +78,7 @@ reader.loadBeanDefinitions("beans.xml");
         abc也没事
 
         但是,约定俗成是context
-    
+
 -   "http://www.springframework.org/schema/beans"←这是虚拟网址,指向的是jar包
 
 ```xml
@@ -122,8 +100,6 @@ reader.loadBeanDefinitions("beans.xml");
 ## 引入第三方命名空间
 
 看看自定义标签
-
-
 
 1.  配置maven依赖
 

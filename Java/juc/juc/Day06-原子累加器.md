@@ -46,7 +46,7 @@ System.out.println(adder.longValue());
 
 ```java
 abstract class Striped64 extends Number {
-    
+
     static final int NCPU = Runtime.getRuntime().availableProcessors();
 
     transient volatile Cell[] cells;
@@ -92,19 +92,13 @@ unlock方法
 1.  没有被阻塞的线程, 在调用unlock方法之后, state设置为UNLOCKED_STATE
 2.  此时不断循环的线程终于成功`compareAndSet`, 得以正确执行
 
-
-
 #### 缺点
 
 对CPU的消耗非常大
 
-
-
 #### 在Striped64的使用
 
 在cells创建或扩容时执行加锁操作
-
-
 
 ### Cell和CPU缓存行
 
@@ -114,7 +108,7 @@ Cell是Striped64中用于存储计数的单元
 @jdk.internal.vm.annotation.Contended
 static final class Cell {
     volatile long value;
-    
+
     // VarHandle mechanics
     private static final VarHandle VALUE;
     static {
@@ -166,8 +160,6 @@ LongAdder源码
 
 ## Accumulator
 
-
-
 ## 效率对比
 
 >   40线程, 每个线程累加一百万次, 任务循环1000次(JIT优化)
@@ -179,8 +171,6 @@ LongAdder源码
 | ----------- | ------ | ------ | ---------------- |
 | ActomicLong | 1035   | 930↑↓  | TIMEOUT          |
 | LongAdder   | 244    | 31     | 35534            |
-
-
 
 ###
 

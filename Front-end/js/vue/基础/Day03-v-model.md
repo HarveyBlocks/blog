@@ -98,8 +98,6 @@ function deleteItem(targetId) {
 
 ![image-20250816003114114](../../../assets/Day03-v-model/image-20250816003114114.png)
 
-
-
 ### 标记找到
 
 一条记录被点击后, 进入另一个列表, 表示购物清单的item被找到和未被找到
@@ -127,8 +125,6 @@ function deleteItem(targetId) {
 </ul>
 ```
 
-
-
 ## 购物清单, 但是双击更新
 
 ```vue
@@ -140,7 +136,6 @@ const newItemName = ref('');
 const newItemCount = ref(0);
 const items = ref(new Map());
 let id = 0;
-
 
 function addItem() {
   let newItem = {

@@ -26,11 +26,7 @@ $4
 Jack
 ```
 
-
-
 Netty提供了HTTP, Redis, Https协议, Web操作协议.....
-
-
 
 ## HTTP协议
 
@@ -42,11 +38,7 @@ pipeline.addLast(new HttpServerCodec()); // Codec 一般是组合式的编解码
 
 ![image-20240229153827182](../../assets/Day08-协议的解析和设计/image-20240229153827182.png)
 
-
-
 客户端发送
-
-
 
 ![image-20240229154638331](../../assets/Day08-协议的解析和设计/image-20240229154638331.png)
 
@@ -108,10 +100,6 @@ pipeline.addLast(new HttpServerCodec()); // Codec 一般是组合式的编解码
 +--------+-------------------------------------------------+----------------+
 ```
 
-
-
-
-
 `class io.netty.handler.codec.http.DefaultHttpRequest` 请求头
 
 ```http
@@ -141,8 +129,6 @@ Cookie: Idea-c922b1f3=85ae6278-a2b4-4bca-b47f-c85e9176d4a2
 EmptyLastHttpContent
 ```
 
-
-
 对某类型的msg加以区分, 选择处理
 
 ```java
@@ -150,10 +136,6 @@ EmptyLastHttpContent
 pipeline.addLast(new SimpleChannelInboundHandler<HttpRequest>() {...});
 pipeline.addLast(new SimpleChannelInboundHandler<HttpContent>() {...});
 ```
-
-
-
-
 
 一次请求响应
 
@@ -227,8 +209,6 @@ response.headers().setInt(
 -   正文长度
 -   消息正文
 
-
-
 ### 设计
 
 #### 编码与解码
@@ -250,8 +230,6 @@ public class MessageCodec extends ByteToMessageCodec<Message> {
                           List<Object> out) throws Exception {...}
 }
 ```
-
-
 
 -   编码
 
@@ -285,9 +263,7 @@ private static byte[] serialize(Message msg) throws IOException {
     return bos.toByteArray();
 }
 
-
 ```
-
 
 -   解码
 
@@ -315,8 +291,6 @@ protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) t
     out.add(message);
 }
 ```
-
-
 
 为了应对粘包, 半包,配置帧解码器
 
@@ -357,15 +331,11 @@ serverBootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
 
 此时, 另一条Channel进入(**客户端不同**),传来了一条数据, 那这条数据就会再Handler里**与上一条数据拼接**, 形成错误的数据
 
-
-
 那么, 什么时候可以用这种把Handler交给多条Channel, 什么时候不能呢?
 
 Netty提供**`@Sharable`注解**, 指示是否可以交给多条Channel
 
 ![image-20240229205112468](../../assets/Day08-协议的解析和设计/image-20240229205112468.png)
-
-
 
 **我们自定义的编解码器能否被提出呢?**
 
@@ -405,8 +375,6 @@ public class MessageCodecSharable extends MessageToMessageCodec<ByteBuf, Message
     }
 }
 ```
-
-
 
 当然在使用这个解码器之前一定要将`LengthFieldBasedFrameDecoder`加入pipline
 

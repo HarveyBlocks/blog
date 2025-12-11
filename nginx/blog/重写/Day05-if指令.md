@@ -12,8 +12,6 @@ if (condition_expression) {
 
 `location`
 
-
-
 ## Condition
 
 ### 精准匹配

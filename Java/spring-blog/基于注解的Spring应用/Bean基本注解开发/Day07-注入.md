@@ -89,8 +89,6 @@ public void xxx(UserDao userDao3){
 
 -   说起来,不用调用原来也可以输出啊
 
-
-
 ```java
 /*
 *  要求容器找UserDao的Bean,有几个找几个

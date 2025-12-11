@@ -27,8 +27,6 @@ find [起始路径] -name "fileName"
 
 ### 通过内存大小查找
 
-
-
 ```Linux
 find 起始路径 -size [+,-]n[k,M,G]
 ```

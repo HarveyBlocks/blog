@@ -22,10 +22,6 @@
 
 ![image-20231129141317235](../../assets/Untitled/image-20231129141317235.png)
 
-
-
-
-
 ### 接口规范
 
 -   接口
@@ -52,15 +48,11 @@ public interface HandlerInterceptor {
 }
 ```
 
-
-
 ​										/→ 执行处理器方法-^方法执行^-→ postHandle() -^视图渲染^-\
 preHandle() ---^放行^---→|																						↓				      
 ​										\\-----------------------------------------------------------------------+------→ afterCompletion()
 
 ## 快速入门
-
-
 
 ### 接口规范
 
@@ -101,8 +93,6 @@ public class MyInterceptor implements HandlerInterceptor {//不是Intercptor接�
 }
 ```
 
-
-
 ### spring-mvc.xml配置
 
 ```xml
@@ -118,10 +108,6 @@ public class MyInterceptor implements HandlerInterceptor {//不是Intercptor接�
     </mvc:interceptor>
 </mvc:interceptors>
 ```
-
-
-
-
 
 ### 测试与结果
 

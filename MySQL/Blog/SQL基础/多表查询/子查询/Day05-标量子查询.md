@@ -1,22 +1,12 @@
 # 标量子查询
 
-
-
 ![image-20231008164546829](../../../../assets/Day05/image-20231008164546829.png)
-
-
 
 ```mysql
 SELECT * FROM 表1 WHERE 某字段=(SELECT 字段2 FROM 表2) 
 ```
 
-
-
-
-
 ## 实践
-
-
 
 -   查询**开发部**的所有员工信息
     1.  查询"开发部"ID
@@ -42,15 +32,11 @@ where section_ID = (select id
                     where name = '开发部');
 ```
 
-
-
 -   查询和Mike同一个部门的人
 
     -   错解:
 
         ![image-20231008170854608](../../../../assets/Day05/image-20231008170854608.png)
-
-        
 
 ```mysql
 select name
@@ -59,10 +45,6 @@ where section_ID = (select section_ID
                     from employee
                     where name = 'Mike');
 ```
-
-
-
-
 
 -   查询**开发部** **组长**的**入职日期**之前的**开发部成员**的信息
 
@@ -109,7 +91,6 @@ where NOT EXISTS(select c.id -- 那些没有被这个人选的课程
                              where `cs`.`student_id` = `s`.`id`
                                AND `cs`.`course_id` = `c`.`id`
                              ));
-
 
 ```
 

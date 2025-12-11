@@ -6,8 +6,6 @@
 >
 >   是接口规范
 
-
-
 有些网站对没注册的用户爱答不理,对注册了的顾客百般纠缠就(动态),就是它来实现的
 
 ## 导入配置
@@ -61,9 +59,6 @@ public class App implements Servlet {
 -   网页一片空白,怎么了?
 -   service()方法还没有指定这个网页要干嘛呢,连Html的加载也没说,Tomcat就好心地没有为我们多此一举啦
 
-
-
-
 ## 执行流程
 
 先看了Spring之后真是一点压力都没有
@@ -86,14 +81,10 @@ public class App implements Servlet {
 -   加载配置文件,创建连接等**初始化工作**
 -   **该方法只执行一次**
 
-
-
 ### 请求处理service()
 
 -   **每次**请求Servlet
 -   容器调用**service()**方法对请求进行处理
-
-
 
 ### 服务终止
 
@@ -130,7 +121,6 @@ public class App implements Servlet {
         System.out.println("init...");
     }
 
-
     /**
      * @description web项目被执行后自动被执行
      *
@@ -163,19 +153,13 @@ public class App implements Servlet {
 
 >   初始化方法
 
-
-
 ### service()
 
 >   服务提供方法
 
-
-
 ### destroy()
 
 >   销毁方法
-
-
 
 ### getServletConfig()
 
@@ -242,14 +226,6 @@ public class Application extends HttpServlet {
 ![image-20231116221129299](../../../assets/Day38-Servlet/image-20231116221129299.png)
 
 ![image-20231116221140810](../../../assets/Day38-Servlet/image-20231116221140810.png)
-
-
-
-
-
-
-
-
 
 # urlPattern
 

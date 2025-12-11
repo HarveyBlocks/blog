@@ -33,8 +33,6 @@ public class MyBenchmark {
 }
 ```
 
-
-
 #### 初始化
 
 ```shelll
@@ -43,8 +41,6 @@ public void init(){
 	System.out.println("init")
 }
 ```
-
-
 
 #### 测试方法
 
@@ -69,8 +65,6 @@ java -jar .\target\benchmarks.jar
 ```
 
 ![image-20240528213725695](../assets/Day13-性能调优/image-20240528213725695.png)
-
-
 
 ### main启动
 
@@ -114,8 +108,6 @@ public void testMethod(Blackhole blackhole) {
     blackhole.consume(j);
 }
 ```
-
-
 
 ### SpringBoot下的JMH
 

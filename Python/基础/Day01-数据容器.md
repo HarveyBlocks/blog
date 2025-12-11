@@ -1,9 +1,5 @@
 # 数据容器
 
-
-
-
-
 ## 概述
 
 列表, 集合, 字典, 元组, 字符串
@@ -39,7 +35,7 @@
     ```python
     not supported between instances of 'tuple' and 'str'
     ```
-    
+
 -   排序
 
     所以有的容器都可以用`sort(容器名[,reverse = True缺省False])`排序
@@ -92,8 +88,6 @@
     ['a', '2', '1']
     """
     ```
-
-
 
 ## 切片
 
@@ -149,8 +143,6 @@ print(ls[0:2:1])  # [0->起始索引,2->结尾索引), 1->步长(可负,不可0)
         print(ls.index(1)) # 0
         print(ls.index(4)) # 3
     ```
-
-    
 
 -   增加元素
 
@@ -294,7 +286,7 @@ print(ls[0:2:1])  # [0->起始索引,2->结尾索引), 1->步长(可负,不可0)
         ls2 = ls.copy()
         print(ls)
         print(ls2)
-    
+
         """深拷贝"""
         ls2[0] = 10
         print(ls)
@@ -352,12 +344,6 @@ if __name__ == '__main__':
     print(a.index(value)) # 4
 ```
 
-
-
-
-
-
-
 ==元组里的list的元素可以修改==
 
 ```python
@@ -367,10 +353,6 @@ if __name__ == '__main__':
     print(a) # (1, [2])
 ```
 
-
-
-
-
 ```python
 def print_list(ls):
     try:
@@ -379,7 +361,6 @@ def print_list(ls):
     except TypeError:
         print(ls)
 
-
 def print_list_dep(ls, dep):
     try:
         for i in ls:
@@ -387,13 +368,10 @@ def print_list_dep(ls, dep):
     except TypeError:
         print(dep * "\t" + f"{ls}")
 
-
 if __name__ == '__main__':
     a = (1, 2, (3, 4), (4, (5, 6), 7, 8), 9, (0))
     print_list(a)
 ```
-
-
 
 ### 字符串
 
@@ -413,14 +391,11 @@ if __name__ == '__main__':
 def insert_str(string, index, new_value):
     return string[0:index] + new_value + string[index:]
 
-
 def update_str(string, index, new_value):
     return string[0:index] + new_value + string[index + 1:]
 
-
 def pop_str(string, index):
     return string[0:index] + string[index + 1:]
-
 
 if __name__ == '__main__':
     msg = "01234567890"
@@ -441,7 +416,7 @@ if __name__ == '__main__':
         # msg.replace(__old,__new,__count)
         print(msg.replace("2", "xx", 2))
         # 0xx0xx002002200020
-    
+
         print(msg)
         # 0202002002200020
     ```
@@ -482,22 +457,22 @@ if __name__ == '__main__':
     def str_strip(string, strip_by=" "):
         i = 0
         result = string
-    
+
         # 消除头
         for i in range(len(result)):
             if not (result[i] in strip_by):
                 break
         result = result[-1:-len(result) + i - 1:-1]
-    
+
         # 消除尾
         for i in range(len(result)):
             if not (result[i] in strip_by):
                 break
         result = result[-1:-len(result) + i - 1:-1]
-    
+
         # 返回结果
         return result
-    
+
     ```
 
 -   统计小字符串出现次数
@@ -585,8 +560,6 @@ if __name__ == '__main__':
 
 -   统计集合元素
 
-    
-
 -   是否是成员
 
     ```python
@@ -622,24 +595,22 @@ if __name__ == '__main__':
 
     ```python
     your_set = set(range(4, 19))
-    
+
     # 并集式更新
     my_set = set(range(10))
     print(my_set.update(your_set))  # None
     print(my_set)  # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}
-    
+
     # 交集式更新
     my_set = set(range(10))
     print(my_set.intersection_update(your_set))  # None
     print(my_set)  # {4, 5, 6, 7, 8, 9}
-    
+
     # 差集式更新
     my_set = set(range(10))
     print(my_set.difference_update(your_set))  # None
     print(my_set)  # {0, 1, 2, 3}
     ```
-
-
 
 #### 迭代器
 
@@ -683,10 +654,6 @@ print(my_dir) # {'a': 97, 'c': '99', 'd': '100'}
 ```
 
 似乎是后来居上的
-
-
-
-
 
 ##### 键的类型
 
@@ -735,8 +702,6 @@ print(my_dir)
 # {'a': [97, 98, 99], 'b': [97, 98, 99], 'c': [97, 98, 99]}
 ```
 
-
-
 #### 方法
 
 -   常见的
@@ -752,17 +717,17 @@ print(my_dir)
     my_dir = {'a': 97, 'b': 98, 'c': "99", 'd': "100"}
     print(my_dir)
     # {'a': 97, 'b': 98, 'c': 'as', 'd': 'as'}
-    
+
     print(my_dir.keys())
     # dict_keys(['a', 'b', 'c', 'd'])
     print(type(my_dir.keys()))
     # <class 'dict_keys'>
-    
+
     print(my_dir.values())
     # dict_values([97, 98, '99', '100'])
     print(type(my_dir.values()))
     # <class 'dict_values'>
-    
+
     print(my_dir.items())
     # dict_items([('a', 97), ('b', 98), ('c', '99'), ('d', '100')])
     print(type(my_dir.items()))
@@ -792,7 +757,7 @@ print(my_dir)
     # 组合字典
     my_dir = {'a': 97, 'b': 98, 'c': "99", 'd': "100"}
     your_dir = {'a': '101', 'b': '102', 'g': 103, 'h': 104}
-    
+
     print(my_dir.update(your_dir))  # None
     print(my_dir)
     # {'a': '101', 'b': '102', 'c': '99', 'd': '100', 'g': 103, 'h': 104}
@@ -811,7 +776,7 @@ print(my_dir)
 
     ```python
     my_dir = {'a': 97, 'b': 98, 'c': "99", 'd': "100"}
-    
+
     """
     如果键不存在，
     则插入指定的键值对并返回设置的默认值。
@@ -832,12 +797,6 @@ print(my_dir)
     my_dir['a'] = -97
     print(my_dir)
     ```
-
-    
-
-
-
-
 
 #### 遍历
 
@@ -873,8 +832,6 @@ print(my_dict)
 {1: 100, '2': 99, 'a': 98}
 """
 ```
-
-
 
 ```python
 print("=============string=============")
@@ -939,12 +896,6 @@ print(set(my_dict))
 {'2', 1, 'a'}
 """
 ```
-
-
-
-
-
-
 
 ```python
 print("=============容器不能转成dict=============")

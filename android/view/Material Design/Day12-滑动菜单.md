@@ -146,8 +146,6 @@ dependencies {
 </RelativeLayout>
 ```
 
-
-
 ### navigation Menu布局
 
 构建用户信息下面的菜单布局
@@ -184,8 +182,6 @@ menu是用来在NavigationView中显示具体的菜单项的，headerLayout则�
     </group>
 </menu>
 ```
-
-
 
 `group`的属性`checkableBehavior`指定为`single`表示组中的**所有菜单项只能单选**
 
@@ -241,8 +237,6 @@ override fun onCreate(savedInstanceState: Bundle?) {
     }
 }
 ```
-
-
 
 ### 效果
 

@@ -7,15 +7,9 @@
 -   二级路由
 -   footer
 
-
-
 ## navigation
 
-
-
 <img src="../../../assets/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
-
-
 
 1.   nav内部使用`<div class="container">`, container样式在common.scss
 
@@ -24,7 +18,7 @@
      ```html
      <nav class="app-top-nav">
        <div class="container"><!--container的样式见common.scss-->
-         
+
        </div>
      </nav>
      ```
@@ -70,7 +64,7 @@
      ```scss
      .app-top-nav {
        background: #333333FF;
-     
+
        ul {
          display: flex; // 横着排
          height: 53px;
@@ -85,22 +79,22 @@
      ```scss
      .app-top-nav {
          /*...*/
-     
+
        ul {
          /*...*/
-     
+
          li {
            a {
              padding: 0 15px;
              color: #cdcdcd;
              line-height: 1;
              display: inline-block;
-     
+
              i {
                font-size: 14px;
                margin-right: 2px;
              }
-     
+
              &:hover { 
                color: var.$color-primary;
              }
@@ -147,7 +141,7 @@
      ```scss
      .app-header{
        background: #fff;
-     
+
        .container {
          display: flex;
          align-items: center;
@@ -168,10 +162,10 @@
      ```scss
      .app-header {
        // 容器
-     
+
        .logo {
          width: 200px;
-     
+
          .logo-link {
            display: block;
            height: 132px;
@@ -204,30 +198,30 @@
      ```
 
      ```scss
-     
+
      .app-header {
        // 容器
-     
+
        // logo
-     
+
        .app-header-nav {
          width: 820px;
          display: flex;
          padding-left: 40px;
          position: relative;
          z-index: layer.$app-header-nav;
-     
+
          li {
            margin-right: 40px;
            width: 38px;
            text-align: center;
-     
+
            a {
              font-size: 16px;
              line-height: 32px;
              height: 32px;
              display: inline-block;
-     
+
              &:hover {
                color: var.$color-primary;
                border-bottom: 1px solid var.$color-primary;
@@ -249,10 +243,6 @@
          :prefix-icon="Search"
      />
      ```
-
-
-
-
 
 ## footer
 
@@ -289,7 +279,7 @@
      ```scss
      .contact {
        background: #fff;
-     
+
        .container {
          padding: 60px 0 40px 25px;
          display: flex;
@@ -321,22 +311,22 @@
        padding: 0 72px;
        border-right: 1px solid #f2f2f2; // 制作分割线
        color: var.$color-info;
-     
+
        &:first-child {
          padding-left: 0;
        }
-     
+
        &:last-child {
          border-right: none;
          padding-right: 0;
        }
      }
-     
+
      .message-title {
        line-height: 1; // 文本行间距, 单倍行距
        font-size: 18px;
      }
-     
+
      .message-description {
        margin: 36px 12px 0 0;
        float: left;
@@ -344,14 +334,12 @@
        height: 92px;
        padding-top: 10px;
        border: 1px solid #ededed;
-     
+
        &:last-child {
          margin-right: 0; // 如果是横着排列的话, 就不在右边留空间
        }
      }
      ```
-
-     
 
 3.   下载
 
@@ -374,13 +362,13 @@
        padding: 2px;
        border: 1px solid #ededed;
      }
-     
+
      .download {
        padding-top: 5px;
        font-size: 14px;
        width: auto;
        height: auto;
-     
+
        a {
          display: block;
          line-height: 1;
@@ -393,8 +381,6 @@
      }
      ```
 
-     
-
 4.   服务热线
 
      ```vue
@@ -405,7 +391,7 @@
      ```
 
      ```scss
-     
+
      .hotline {
        $font-size: 22px;
        padding-top: 20px;
@@ -414,7 +400,7 @@
        width: auto;
        height: auto;
        border: none; // 覆盖父级边界样式
-     
+
        small {
          display: block;
          font-size: $font-size*0.7;
@@ -422,10 +408,6 @@
        }
      }
      ```
-
-     
-
-
 
 ### 其他
 
@@ -453,8 +435,6 @@
      }
      ```
 
-     
-
 2.   口号
 
      ```html
@@ -480,13 +460,13 @@
        border-bottom: 1px solid #434343;
        display: flex; // 平铺, 均匀三个分
        justify-content: space-between;
-     
+
        a {
          height: 58px;
          line-height: 58px;
          color: #fff;
          font-size: 28px;
-     
+
          span {
            vertical-align: middle;
          }
@@ -518,26 +498,24 @@
        text-align: center;
        color: #999;
        font-size: 15px;
-     
+
        p {
          line-height: 1;
          margin-bottom: 20px;
        }
-     
+
        a {
          color: #999;
          line-height: 1;
          padding: 0 10px;
          border-right: 1px solid #999;
-     
+
          &:last-child {
            border-right: none;
          }
        }
      }
      ```
-
-
 
 ## index
 

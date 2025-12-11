@@ -11,8 +11,6 @@ import com.harvey.grpc.proto.UserProto.*;
 
 这样就不用一直`UserProto.Id`之类地去调用了
 
-
-
 ## 生成Channel
 
 ```java
@@ -30,10 +28,6 @@ try {
 }
 ```
 
-
-
-
-
 ## 调用代理
 
 ### 阻塞调用
@@ -41,10 +35,6 @@ try {
 ```java
 UserServiceBlockingStub userService = UserServiceGrpc.newBlockingStub(clientChannel);
 ```
-
-
-
-
 
 ```java
 // 准备参数
@@ -54,10 +44,6 @@ UserDto login = userService.queryById(id);
 System.out.println(login);
 System.out.println(login.getNickName());
 ```
-
-
-
-
 
 ### 异步调用, 监听+回调
 
@@ -83,8 +69,6 @@ userFutureService.login(loginDto, new StreamObserver<>() {
 });
 clientChannel.awaitTermination(20,TimeUnit.SECONDS);
 ```
-
-
 
 ### Future异步获取结果
 

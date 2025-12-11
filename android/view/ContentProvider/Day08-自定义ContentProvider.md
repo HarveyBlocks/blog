@@ -2,7 +2,6 @@
 
 保证数据的安全，使得隐私数据不会泄漏出去
 
-
 ## 步骤
 
 ### 继承ContentProvider
@@ -10,15 +9,13 @@
 ```kotlin
 class MyContentProvider : ContentProvider() {
 
-
     override fun getType(uri: Uri): String? {
         TODO("Not yet implemented")
     }
-    
+
     override fun onCreate(): Boolean {
         TODO("Not yet implemented")
     }
-
 
     override fun query(
         uri: Uri,
@@ -119,8 +116,6 @@ override fun query(
 - getType
 
   根据传入内容URI返回相应的MIME类型, 
-
-
 
 ### MIME
 
@@ -239,8 +234,6 @@ Android 11 后的要求
 </manifest>
 ```
 
-
-
 如果requester不申请权限, 则直接报错
 
 ![image-20250918210123908](../../assets/Day08-自定义ContentProvider/image-20250918210123908.png)
@@ -250,10 +243,6 @@ Android 11 后的要求
 ```kotlin
 <uses-permission android:name="org.harvey.android.permission.MyPermission" />
 ```
-
-
-
-
 
 自定义权限的属性`protectionLevel`可以设置成dangerous, 理论上是希望requester动态申请应用, 但实际不可用.
 

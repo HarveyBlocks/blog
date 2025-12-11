@@ -1,10 +1,8 @@
 
-
 # 正向代理
 
 ```mermaid
 graph LR
-
 
 Client --> Proxy
 Proxy --> Server
@@ -12,8 +10,6 @@ Proxy --> Client
 Server --> Proxy
 
 ```
-
-
 
 服务端不会直接和客户端连接(VPN)
 
@@ -23,10 +19,6 @@ Server --> Proxy
 
 ```
 
-
-
-
-
 ## Proxy
 
 ```Nginx
@@ -35,8 +27,6 @@ location / {
     proxy http://$host$request_uri;
 }
 ```
-
-
 
 ## Client
 

@@ -4,8 +4,6 @@
 
 ![image-20240617183323122](../../assets/Day01-插入排序/image-20240617183323122.png)
 
-
-
 ## 思想
 
 想要升序, 遍历到当前元素, 检查这个元素前面的元素, 如果比当前元素大, 就将当前元素和前面的元素互换
@@ -52,8 +50,6 @@ int cmp(unsigned int a, unsigned int b) {
 }
 ```
 
-
-
 ## 复杂度
 
 时间复杂度O(n^2^)
@@ -93,8 +89,6 @@ int BinarySearchInsertionSort<T>::findInsertIndex(int index, T key) const {
 }
 ```
 
-
-
 ## 希尔排序
 
 插入排序的特点: 
@@ -131,7 +125,6 @@ int ShellSort<T>::findInsertIndex(int start, int end, T key, int step) const {
     }
     return insertIndex;
 }
-
 
 template<class T>
 void ShellSort<T>::sort() {

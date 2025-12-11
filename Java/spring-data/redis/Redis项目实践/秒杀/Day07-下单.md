@@ -5,8 +5,6 @@
 -   库存限制
 -   高并发
 
-
-
 ## 数据库结构
 
 -   `tb_voucher`
@@ -81,9 +79,7 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId) {
     if (voucher.getStock()<=0){
         return Result.fail("已经没有库存啦");
     }
-    
-    
-    
+
     long orderId = voucherOrderService.seckillVoucher(voucher);
     if (orderId==IVoucherOrderService.STOCK_SHORTAGE_ID){
         return Result.fail("已经没有库存啦");
@@ -96,8 +92,6 @@ public Result seckillVoucher(@PathVariable("id") Long voucherId) {
 ```
 
 #### 扣减库存
-
-
 
 ```java
 public class SeckillVoucherServiceImpl 

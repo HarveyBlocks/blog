@@ -26,8 +26,6 @@ Edge:
 
 ## 数据库?文件
 
-
-
 ```nginx
 auth_basic_user_file file;
 ```

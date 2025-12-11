@@ -71,8 +71,6 @@ Spring  Expression Language
 
 >   Bean Oriented Programming BOP
 
-
-
 Spring 通过配置文件或注解管理Bean对象之间的依赖关系
 
 Bean用于对一个类进行封装
@@ -126,9 +124,9 @@ public interface BeanDefinitionReader {
     ClassLoader getClassLoader();
     ResourceLoader getResourceLoader();
     BeanNameGenerator getBeanNameGenerator();
-    
+
     // ...
-    
+
     int loadBeanDefinitions(String/Resource) throws ...;
 }
 ```

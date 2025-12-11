@@ -1,7 +1,5 @@
 # 抽象工厂
 
-
-
 ## 产品族
 
 工厂方法只考虑生产一类产品的生产, 例如畜牧场只生产动物, 电视机产只生产电视机
@@ -151,11 +149,11 @@ public interface RestaurantFactory {
 
 ```java
 public class SnackBarFactoryFactory implements RestaurantFactory {
-    
+
     public SnackBarFactoryFactory() {
         System.out.println("Here is Snack Bar");
     }
-    
+
     @Override
     public DrinkableProduct createDrink(){
         return new CokeProduct();
@@ -184,11 +182,11 @@ class CokeProduct extends DrinkableProduct{
 
 ```java
 public class PremiumRestaurantFactory implements RestaurantFactory {
-    
+
     public PremiumRestaurantFactory() {
         System.out.println("Here is Premium Restaurant");
     }
-    
+
     @Override
     public DrinkableProduct createDrink(){
         return new WineProduct();

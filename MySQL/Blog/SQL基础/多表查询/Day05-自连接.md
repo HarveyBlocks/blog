@@ -20,7 +20,7 @@ select 字段列表 from 表 别名1 JOIN 表 别名2 ON条件
     select a.name ,b.name as manager_name
     	from employee a, employee b 
     		where a.manager_ID=b.employee_id;
-    	
+
     select a.name ,b.name as manager_name
     	from employee a 
     		join employee b  on a.manager_ID=b.employee_id;

@@ -37,8 +37,6 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 基于这种思想衍生出了一致性协议
 
-
-
 ### 2PC二阶段提交
 
 #### 流程
@@ -114,12 +112,6 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 ####
 
-
-
-
-
-
-
 ## 分布式事务框架
 
 ### Seata
@@ -130,13 +122,7 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
 
 #### 原理
 
-
-
-
-
 ![img](../../assets/Day07-分布式事务/solution-1bdadb80e54074aa3088372c17f0244b.png)
-
-
 
 ##### 思想
 
@@ -260,8 +246,6 @@ INSERT INTO `distributed_lock` (lock_key, lock_value, expire) VALUES ('RetryComm
 INSERT INTO `distributed_lock` (lock_key, lock_value, expire) VALUES ('RetryRollbacking', ' ', 0);
 INSERT INTO `distributed_lock` (lock_key, lock_value, expire) VALUES ('TxTimeoutCheck', ' ', 0);
 ```
-
-
 
 #### 准备配置文件
 
@@ -393,8 +377,6 @@ seata:
 -   拷贝seata目录到虚拟机的/root目录
 -   拷贝seata.tar文件于**统一目录**
 
-
-
 -   启动镜像
 
     ```bash
@@ -443,7 +425,7 @@ seata:
     2.2.2版本没有登录模仿(听不清)
 
     ![image-20240116172633874](../../assets/Day07-分布式事务/image-20240116172633874.png)
-    
+
     用户名`admin`密码`admin`登录网页控制台
 
 ### 微服务集成Seata
@@ -478,8 +460,6 @@ seata:
     vgroup-mapping: # 事务组与tc集群的映射关系
       hmall: default # 这里的hmall取决与上面的配置,default是集群名称
 ```
-
-
 
 ## 事务模式
 
@@ -536,9 +516,9 @@ seata:
     @GlobalTransactional
     public Long createOrder(OrderFormDTO orderFormDTO) {
         // 1.订单数据
-    
+
         // 1.1.查询商品
-    
+
         // 2.保存订单详情
     		// 事务
         // 3.清理购物车商品
@@ -562,8 +542,6 @@ seata:
 -   针对XA模式下**"效率低, 业务由于是串行, 前一个干不完, 后一个别想干"**的缺点而出现的模式
 -   是Seata主推的模式
 
-
-
 #### 流程
 
 1.  TM向TC声明开启全局事务
@@ -582,7 +560,7 @@ seata:
 #### 优缺点
 
 -   优点
-  
+
     -   效率高, 事务资源不会被锁定
 -   缺点
     -   **可能出现中间不一致的状态**
@@ -644,27 +622,17 @@ seata:
 
 ---
 
-
 ![image-20240116231509942](../../assets/Day07-分布式事务/image-20240116231509942.png)
 
 ---
 
-
 ![image-20240116231907335](../../assets/Day07-分布式事务/image-20240116231907335.png)
 
-
-
 ---
-
-
 
 ![image-20240116231355051](../../assets/Day07-分布式事务/image-20240116231355051.png)
 
-
-
 ---
-
-
 
 ![image-20240116231345817](../../assets/Day07-分布式事务/image-20240116231345817.png)
 
@@ -677,8 +645,6 @@ seata:
 分布式事务总是要造成性能损耗的,即使是AT模式, 在生成快照的时候也是会损耗性能的
 
 不要用分布式框架,用消息队列,发送消息尝试重试
-
-
 
 ## 如何避免大事务
 

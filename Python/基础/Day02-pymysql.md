@@ -4,8 +4,6 @@
 
 pymysql
 
-
-
 ## 使用
 
 ```python
@@ -35,17 +33,14 @@ if __name__ == '__main__':
 
     # 关闭游标
     cursor.close()
-    
+
     # 关闭连接
     conn.close()
 ```
 
-
-
 ```python
 from pymysql import Connection
 from pymysql.cursors import Cursor
-
 
 def exec_print(cursor:Cursor):
     # 执行语句
@@ -54,7 +49,6 @@ def exec_print(cursor:Cursor):
     tb_user = cursor.fetchall()
     for user in tb_user:
         print(user)
-
 
 def connect_exec():
     coon: Connection
@@ -73,7 +67,6 @@ def connect_exec():
         with conn.cursor() as cursor:
             exec_print(cursor)
 
-
 if __name__ == '__main__':
     connect_exec()
 ```
@@ -83,8 +76,6 @@ if __name__ == '__main__':
 游标就是一个事物
 
 **pymysql对事物默认不会自动提交**
-
-
 
 ```python
 Connection(
@@ -96,8 +87,6 @@ Connection(
 )
 ```
 
-
-
 ```python
 with conn.cursor() as cursor:
     try:
@@ -107,7 +96,6 @@ with conn.cursor() as cursor:
         conn.rollback() # 用conn关闭事务
         print(e)
 ```
-
 
 事务的提交就是事务的结束也是游标的关闭
 

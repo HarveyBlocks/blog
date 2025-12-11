@@ -12,8 +12,6 @@ Hash映射, 构建一个HashMap,key-value=value-count
 
 ## 实现
 
-
-
 ```cpp
 // 适合整形排序, 小数量的(256不能再多了), 范围限定的, 范围不大的
 int maxInArr = INT_MIN;

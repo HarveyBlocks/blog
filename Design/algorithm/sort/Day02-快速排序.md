@@ -34,8 +34,6 @@ void quickSort(int start, int end) {
 }
 ```
 
-
-
 分解
 
 ```cpp
@@ -62,8 +60,6 @@ struct IndexBound {
     IndexBound(int start, int end) : start(start), end(end) {}
 };
 ```
-
-
 
 ```cpp
 void quickSort() {

@@ -26,8 +26,6 @@ Go语言运行时会参与调 度goroutine，并将goroutine**合理地分配到
 
 通道的另外一端的代码将这些数据进行并发计算并返回结果
 
-
-
 ## Hello World
 
 ```go
@@ -82,8 +80,6 @@ func main()
     fmt.Println("Hello, World!")
 }
 ```
-
-
 
 ### 注释
 

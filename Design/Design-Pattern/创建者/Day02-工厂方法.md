@@ -6,8 +6,6 @@
 
 代码的使用者只需要知道具体工厂的名称, 就可以得到所要的产品, 无需知道产品的创建过程
 
-
-
 ## 虚假的工厂
 
 简单工厂/静态工厂
@@ -36,14 +34,11 @@ class YellowProduct{
 Product <|-- RedProduct
 Product <|-- YellowProduct
 
-
 class SimpleProductFactory{
 	+ static Product getProduct()
 }
 SimpleProductFactory --> Product
 ```
-
-
 
 ### 缺陷
 
@@ -108,10 +103,6 @@ public static String simple(Class<? extends Product> type) {
 }
 ```
 
-
-
-
-
 ### 简单工厂+配置文件
 
 解除耦合
@@ -156,10 +147,6 @@ public class PropertyFactory {
 }
 ```
 
-
-
-
-
 ## 工厂方法的概念
 
 定义一个用于创建对象的接口, **让子对象决定实例化哪个产品类对象**
@@ -199,7 +186,6 @@ class YellowProduct{
 Product <|-- RedProduct
 Product <|-- YellowProduct
 
-
 class ProductFactory{
 	<<interface>>
 	+ Product create()
@@ -213,7 +199,6 @@ class YellowProductFactory{
 
 ProductFactory <|-- RedProductFactory
 ProductFactory <|-- YellowProductFactory
-
 
 RedProductFactory --> RedProduct
 YellowProductFactory --> YellowProduct
@@ -291,8 +276,6 @@ public static boolean factoryMethod() {
 >   DateFormat 的 getInstance
 >
 >   Calendar 的 getInstance
-
-
 
 ```java
 public class ArrayList<E> extends AbstractList<E>

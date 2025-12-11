@@ -2,8 +2,6 @@
 
 在进行资源之间转发是,有时需要将一些参数存储到request域中携带给下一个资源
 
-
-
 >   Q: 请求转发是不是就是对request域中的数据进行资源间的传递
 
 >   A: 是的，请求转发是指在服务器内部将请求从一个Servlet资源传递到另一个Servlet资源。在这个过程中，可以将请求域中的数据传递给下一个资源，实现资源间的数据传递
@@ -25,8 +23,6 @@
 -   HttpServletRequest
 
 ### 获取Request
-
-
 
 ```java
 @GetMapping("/request")

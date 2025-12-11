@@ -2,13 +2,9 @@
 
 <img src="../../assets/Day02-%E5%8A%9F%E8%83%BD%E7%89%B9%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/image-20240415130550387.png" alt="image-20240415130550387" style="zoom:50%;" />
 
-
-
 -   pgp
     -   判断从其他途径获取的Nginx是否被别人进行过更改
     -   使用相同的加密算法pgp和那个Nigix的对比, 一样表示是未被更改的
-
-
 
 ## Selinux
 
@@ -84,8 +80,6 @@ enabled=0
 gpgkey=https://nginx.org/keys/nginx_signing.key
 module_hotfixes=true
 ```
-
-
 
 ```shell
 sudo yum install -y yum-utils

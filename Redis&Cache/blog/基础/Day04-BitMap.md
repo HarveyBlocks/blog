@@ -6,15 +6,9 @@
 -   方便, 简单, 节省空间
 -   Redis底层使用string实现BitMap,最大上限是512M, 即2^32给bit位
 
-
-
 查看一个数转二进制后有几个1
 
-
-
 ## 写
-
-
 
 ### SetBit
 
@@ -35,15 +29,11 @@ redis(pc2):1>setBit bitMapKey 7 1
 
 -   经测试, 这个返回值是0还是1, 和添加是否成功无关, 和添加的是0还是1无关
 
-
-
 ## 读
 
 ### GetBit
 
 >   获取指定位置(offset)的bit
-
-
 
 ### BitField
 
@@ -67,10 +57,6 @@ redis(pc2):1>bitField bitMapKey Get i1 0
 
 >`ReadOnly`, 获取BitMap中的bit数组, 并以十进制形式返回
 
-
-
-
-
 ### BitPos
 
 >   查找bit数组中指定范围内第一个0/1出现的位置
@@ -81,8 +67,6 @@ redis(pc2):1>bitPos bitMapKey 0
 redis(pc2):1>bitPos bitMapKey 1
 "0"
 ```
-
-
 
 ## 运算
 
@@ -98,8 +82,6 @@ redis(pc2):1>bitPos bitMapKey 1
 redis(pc2):1>bitCount bitMapKey
 "5"
 ```
-
-
 
 ```C
 unsigned int countSetBits(unsigned int num) {

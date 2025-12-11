@@ -78,7 +78,6 @@ public class TestGeneric {
 }
 ```
 
-
 ## 实现泛型接口之法二
 
 对于以上:

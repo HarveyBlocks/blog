@@ -2,16 +2,10 @@
 
 - 内部类就是在一个类的内部再定义了一个类。比如，A类中定义了一个B类，那么B类相对于A类来说就称为内部类，而A类相对于B类来说就是外部类了。
 
-
-
 - 成员内部类
 - 静态内部类
 - 局部内部类
 - 匿名内部类
-
-
-
-
 
 ## 成员内部类
 
@@ -39,8 +33,6 @@ class Outer {
 }
 ```
 
-
-
 ### 实例化内部类
 
 ```java
@@ -52,7 +44,7 @@ class Outer {
             Outer.Inner inner=outer.new Inner();//注意大小写
             inner.in();
             Inner instanceof Outer报错
-    
+
         }
         public class Inner{
             public void in() {
@@ -61,10 +53,6 @@ class Outer {
         }
 }
 ```
-
-
-
-
 
 当然继承也没什么问题
 
@@ -75,14 +63,12 @@ public class Outer {
     public static void main(String[] args) {
         Outer outer = new Outer();
         Outer.Inner inner = outer.new Inner();
-        
+
         System.out.println(inner instanceof Outer);//true
     }
     public class Inner extends Outer{}
 }
 ```
-
-
 
 ### 内部类方法对外部属性的引用以及外部类方法对内部属性的引用
 
@@ -97,7 +83,7 @@ public class Outer {
     public static void main(String[] args) {
         String str = "OuterMain";
         System.out.println(str);//OuterMain
-        
+
         Outer outer = new Outer();
         System.out.println(outer.str);//Outer
 
@@ -113,10 +99,10 @@ public class Outer {
             System.out.println(str);//InnerMain
 
             System.out.println(this.str);//Inner
-			
+
             //外部类.this
             System.out.println(Outer.this.str);//Outer
-            
+
             Outer outer = new Outer();
             System.out.println(outer.str);//Outer
 
@@ -137,8 +123,6 @@ publi class MAin{
 }
 ```
 
-
-
 ```java
 public class Outer {
     private int id;
@@ -155,11 +139,7 @@ public class Outer {
 
 ```
 
-
-
 ## 一个java文件下可以有多个class，但只能有一个public class
-
-
 
 ## 局部内部类
 
@@ -169,13 +149,11 @@ public class Outer {
 public class Outer {
     public void main() {
         class Inner{
-            
+
         }
     }
 }
 ```
-
-
 
 ## 匿名内部类[重点]
 
@@ -191,14 +169,12 @@ public class Outer {
 new 类(接口)名().方法(<参数>)
 
 //或   
-    
+
 new 类(接口)名(){
     @Override
     重写方法
 };
 ```
-
-
 
 ``` java
 public class Outer {
@@ -214,8 +190,6 @@ class A{
     }
 }
 ```
-
-
 
 - 运行原理:
 

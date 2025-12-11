@@ -20,13 +20,8 @@ x.requires_grad = True
 # 通过传递参数的方式开启自动求导机制
 y = torch.rand((5,3),requires_grad = True)
 
-
 print(x.requires_grad,y.requires_grad) # True True
 ```
-
-
-
-
 
 #### 自动求导启动的传播
 
@@ -35,9 +30,6 @@ print(x.requires_grad,y.requires_grad) # True True
 z = x + y
 print(z.requires_grad) # True
 ```
-
-
-
 
 ```python
 x = torch.rand((5,3),requires_grad = True)
@@ -50,11 +42,7 @@ print(x.requires_grad,y.requires_grad,z.requires_grad)
 ```
 -   y没有被开启自动求导
 
-
-
 ## 反向传播
-
-
 
 ### 开启反向传播
 
@@ -71,7 +59,6 @@ z.backward()
 print(x.grad) # 一推114
 print(y.grad) # 一推514
 ```
-
 
 不开启自动求导但是执意要反向传播:
 
@@ -119,19 +106,18 @@ print(x.grad) # 5
 ```python
 from torch import nn
 class MyModule(nn.Module):
-    
+
     def __init__(self,input_dim,output_dim):
         super(MyModule,self).__init__()
         self.linear = nn.Linear(
             input_dim, # 输入数据维度
             output_dim # 输出数据维度
         ) # 全连接层
-    
+
     def forward(self,x):
         out = self.linear(x)
         return out
-    
-    
+
     def iterate(self,inputs,labels,optimizer,criterion)->float:
         """
         forward和__init__()按照上面这么写在类里
@@ -153,26 +139,24 @@ class MyModule(nn.Module):
             损失.
 
         """
-        
 
         # 清空上一次的迭代
         optimizer.zero_grad() 
-        
+
         # 前向传播
         outputs = self.forward(inputs)
-        
+
         # 计算损失
         loss = criterion(outputs,labels)
-        
+
         # 反向传播
         loss.backward()
-        
+
         # 更新权重函数
         optimizer.step()
-        
+
         # 返回损失
         return loss.item()
-
 
 def create_data():
     import torch
@@ -185,31 +169,27 @@ def create_data():
     labels = labels.float()
     return inputs,labels
 
-
-
-
 def tensor_test():
     import torch
     inputs,labels = create_data()
-    
+
     module = MyModule(1,1)
     print(module) # 输出模型情况
-    
+
     # 指定优化器参数, 优化器: 优化参数/权重值做线性回归
     optimizer = torch.optim.SGD(
         module.parameters(),
         lr = 0.01 # learning rate
     ) # SGD 优化器 , 随机梯度下降
-    
+
     # 损失函数
     criterion = nn.MSELoss()
-    
+
     # 遍历迭代
     for i in range(5000):
         loss = module.iterate(inputs,labels,optimizer,criterion)
         if(i%100==0):
             print(loss)
-
 
 if __name__ == "__main__":
     tensor_test()
@@ -248,15 +228,10 @@ inputs = torch.rand((100,1)).to(device)
 
 -   此时由于张量太小，难以并行化计算，测试起来会比CPU慢
 
-
-
-
-
 ## 程序清单
 
 ```python
 from torch import nn
-
 
 class MyModule(nn.Module):
 
@@ -322,7 +297,6 @@ class MyModule(nn.Module):
         # 返回损失
         return loss.item()
 
-
 def create_data():
     import torch
     import numpy as np
@@ -333,7 +307,6 @@ def create_data():
     )
     labels = labels.float()
     return inputs, labels
-
 
 def tensor_test():
     import torch
@@ -359,7 +332,6 @@ def tensor_test():
             print(loss)
     module_file = "module.pkl"
     torch.save(module.state_dict(), module_file)
-
 
 if __name__ == "__main__":
     tensor_test()

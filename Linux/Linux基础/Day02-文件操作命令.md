@@ -1,7 +1,5 @@
 # 文件操作命令
 
-
-
 ## touch创建文件
 
 ```Linux
@@ -19,10 +17,7 @@ touch ~/happy/hrllo.txt
 
 **使用ls -l得到的列表的第一列,就会反映文件的属性(d啥的是文件夹,-啥的就是文件)**
 
-
-
 ##  cat查看文件内容
-
 
 ```Linux
 cat 文件路径
@@ -37,11 +32,9 @@ cat ~/happy/hrllo.txt
 
 直接把所有内容显示
 
-
 ## more查看文件
 
 **支持翻页,适合文件内容比较多**
-
 
 ```Linux
 more 文件路径
@@ -85,19 +78,13 @@ cp text.txt test.txt
 cp -r ../../games Desktop/MyGame
 ```
 
-
-
-
-
 ## mv移动文件(夹)
 
 move
 
-
 ```Linux
 mv 被移动文件(夹)路径 目标文件路径(还要给他重命名下)
 ```
-
 
 ```Linux
 mv ../../games Desktop
@@ -108,8 +95,6 @@ mv ../../games Desktop
 ```Linux
 mv text.txt test.txt
 ```
-
-
 
 ## rm删除文件(夹)
 
@@ -138,9 +123,9 @@ mv [-r][-f] 指定删除文件(夹)1路径 指定删除文件(夹)2路径....指
 ### 注意
 
   rm很危险,特别是处于root用户的时候,要谨慎使用
-  
+
   如下命令,千万不要在root管理员下使用:
-  
+
   ```Linux
   re -rf /
   re -rf /*

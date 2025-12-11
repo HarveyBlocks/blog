@@ -50,8 +50,6 @@ return region.split("\\|");
 
 ### 缓存查过的地址
 
-
-
 ```java
 @Slf4j
 public class IpTool {
@@ -109,8 +107,6 @@ public class IpTool {
 }
 ```
 
-
-
 ### 缓存整个文件
 
 ```java
@@ -150,7 +146,7 @@ public class SearcherTest {
         } catch (Exception e) {
             System.out.printf("failed to search(%s): %s\n", ip, e);
         }
-        
+
         // 4、关闭资源 - 该 searcher 对象可以安全用于并发，等整个服务关闭的时候再关闭 searcher
         // searcher.close();
 

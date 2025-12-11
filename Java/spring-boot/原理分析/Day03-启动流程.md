@@ -17,24 +17,17 @@ public SpringApplication(ResourceLoader resourceLoader, Class<?>... primarySourc
     this.resourceLoader = resourceLoader;
     Assert.notNull(primarySources, "PrimarySources must not be null");
     this.primarySources = new LinkedHashSet(Arrays.asList(primarySources));
-    
-    
-    
+
     this.webApplicationType = WebApplicationType.deduceFromClasspath();
-    
-    
+
     this.bootstrapRegistryInitializers = new ArrayList(this.getSpringFactoriesInstances(BootstrapRegistryInitializer.class));
-    
+
     this.setInitializers(this.getSpringFactoriesInstances(ApplicationContextInitializer.class));
     this.setListeners(this.getSpringFactoriesInstances(ApplicationListener.class));
-    
+
     this.mainApplicationClass = this.deduceMainApplicationClass();
 }
 ```
-
-
-
-
 
 ```java
 public ConfigurableApplicationContext run(String... args) {

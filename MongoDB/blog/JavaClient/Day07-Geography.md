@@ -25,8 +25,6 @@ Indexes.geo2dsphere("geo_field1","geo_field2");
 
 支持单字段索引和复合索引
 
-
-
 ## 旧坐标对
 
 ```json
@@ -95,15 +93,7 @@ GeoJson对象必须包含两个字段
 }
 ```
 
-
-
 ![Diagram of a Polygon with internal ring.](../../assets/Day07-Geography/index-2dsphere-polygon-with-ring.bakedsvg.svg)
-
-
-
-
-
-
 
 ### `MultiPoint`
 
@@ -121,8 +111,6 @@ GeoJson对象必须包含两个字段
 }
 ```
 
-
-
 ### `MultiLineString`
 
 需要`2dsphere`索引
@@ -139,8 +127,6 @@ GeoJson对象必须包含两个字段
 }
 ```
 
-
-
 ### `MultiPolygon`
 
 需要`2dsphere`索引
@@ -154,8 +140,6 @@ GeoJson对象必须包含两个字段
   ]
 }
 ```
-
-
 
 ### `GeometryCollection`
 
@@ -189,8 +173,6 @@ GeoJson对象必须包含两个字段
 }
 ```
 
-
-
 ## 查询操作
 
 | 名称             | 说明                                                         |
@@ -199,8 +181,6 @@ GeoJson对象必须包含两个字段
 | `$geoWithin`     | `2dsphere` 和 `2d` 索引支持, 在一个有边界 GeoJSON 内选择几何图形。 |
 | `$near`          | `2dsphere` 和 `2d` 索引支持, 靠近给定点的文档                |
 | `$nearSphere`    | `2dsphere` 和 `2d` 索引支持, 返回与球面上的某个点相邻的地理空间对象。 |
-
-
 
 ## 聚合操作
 

@@ -13,8 +13,6 @@
 3.   动画
      用时间轴精确控制多个**变换**和**过渡**
 
-
-
 括旋转、倾斜、缩放以及位移
 
 变换同时适用于平面与三维空间
@@ -34,8 +32,6 @@
 
 原型
 
-
-
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
@@ -49,13 +45,7 @@
 </style>
 ```
 
-
-
 ![image-20250819213902643](../assets/Day05-变换/image-20250819213902643.png)
-
-
-
-
 
 ### 旋转
 
@@ -66,8 +56,6 @@
 -   number deg 角度
 -   number rad 弧度
 -   ...
-
-
 
 ```vue
 <template>
@@ -91,8 +79,6 @@
 
 -   number deg 角度
 -   number rand 弧度
-
-
 
 ```vue
 <template>
@@ -148,10 +134,6 @@
 </style>
 ```
 
-
-
-
-
 ### 联合使用
 
 ```vue
@@ -180,8 +162,6 @@
 }
 ```
 
-
-
 ### 透视深度
 
 >   perspective
@@ -199,8 +179,6 @@
 >   perspective-origin
 
 焦点所在的位置
-
-
 
 ### 示例容器
 
@@ -222,7 +200,6 @@
   aspect-ratio: 1;
 }
 
-    
 .cube {
   width: 100%;
   height: 100%;
@@ -231,8 +208,6 @@
 
 </style>
 ```
-
-
 
 ### 定义每面样式
 
@@ -262,7 +237,6 @@
   aspect-ratio: 1;
 }
 
-    
 .cube {
   width: 100%;
   height: 100%;
@@ -312,7 +286,6 @@
   background: rgba(196, 0, 196, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
-
 
 </style>
 

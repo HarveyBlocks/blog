@@ -19,8 +19,6 @@
 -   docker-compose.yml文件中的一个**服务(service)**代表了一个容器
 -   service中描述的信息应该于`docker run`大差不差
 
-
-
 ```yml
 version: 3.8
 
@@ -53,7 +51,7 @@ service:
     nginx:
       image: nginx
       ...
-      
+
 net-work: #定义网络
   my-net: #上文网络的标识
     name: my-network #再次定义一个网络名

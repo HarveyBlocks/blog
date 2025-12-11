@@ -1,7 +1,5 @@
 # 粘包和半包
 
-
-
 ## 问题的产生
 
 -   `channelActive()`, 在Channel创建之后调用执行
@@ -67,8 +65,6 @@ server.option(ChannelOption.SO_RCVBUF/*SO_RCVBUF: 作为接受方的BUf大小; S
 
 #### 串行机制
 
-
-
 TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户端将尝试再次发送消息
 
 保证消息一定被收到
@@ -76,8 +72,6 @@ TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户�
 消息发送是串行的, 这种应答的机制影响了吞吐量
 
 ![](../../assets/Day07-粘包和半包/0049.png)
-
-
 
 #### 滑动窗口原理
 
@@ -94,8 +88,6 @@ TCP中, 如果客户端发送消息后很长时间没有服务端应答, 客户�
 ![](../../assets/Day07-粘包和半包/0051.png)
 
 **接收方也会维护一个窗口**,  窗口里数据才会被允许接收
-
-
 
 #### 作用
 
@@ -126,10 +118,6 @@ Netty会对ByteBuf默认设置成1024
 ### MMS限制
 
 网卡(链路层)对数据包的大小有限制(几千个字节), localhost的大小限制是(65536)
-
-
-
-
 
 ## 关键
 
@@ -203,8 +191,6 @@ server.childOption(
 
 每次都要关闭重启连接, 浪费了双方的资源
 
-
-
 ### 定长解码器
 
 >   FixedLengthFrameDecoder
@@ -213,8 +199,6 @@ server.childOption(
 
 -   服务端和客户端指定每个消息长度
 -   前面的消息分到后来不够一个长度(一个帧), 就将其分到下一次的消息前面
-
-
 
 #### 使用
 
@@ -241,8 +225,6 @@ pipeline.addLast(new ChannelInboundHandlerAdapter() {
 pipeline.addLast(new FixedLengthFrameDecoder(10/*应不小于所有消息的最大值*/));
 ```
 
-
-
 #### 测试
 
 客户端
@@ -262,10 +244,6 @@ pipeline.addLast(new FixedLengthFrameDecoder(10/*应不小于所有消息的最�
 |00000060| 5f 5f 5f 5f                                     |____            |
 +--------+-------------------------------------------------+----------------+
 ```
-
-
-
-
 
 服务端
 
@@ -333,15 +311,11 @@ ngHandler - [id: 0x062bf8c0, L:/127.0.0.1:8080 - R:/127.0.0.1:60707] READ COMPLE
 +--------+-------------------------------------------------+----------------+
 ```
 
-
-
 #### 缺点
 
 要补足数据, 造成了资源利用不充分
 
 ### 分隔符
-
-
 
 #### 使用
 
@@ -366,13 +340,9 @@ pipeline.addLast(
 );
 ```
 
-
-
 #### 缺点
 
 需要遍历, 效率低下
-
-
 
 ### 长度字段
 
@@ -412,7 +382,6 @@ BEFORE DECODE (16 bytes)                       AFTER DECODE (13 bytes)
 public static final byte[] PRE_HEADER = "HEADER-0".getBytes();
 
 public static final byte[] POST_HEADER = "HD1".getBytes();
-
 
 public static void main(String[] args) {
     EmbeddedChannel channel = new EmbeddedChannel(handlers());
@@ -455,8 +424,6 @@ private static ChannelHandler[] handlers() {
             ), new LoggingHandler()};
 }
 ```
-
-
 
 ```log
 15:12:01.932 [main] DEBUG io.netty.handler.logging.LoggingHandler - [id: 0xembedded, L:embedded - R:embedded] READ: 18B

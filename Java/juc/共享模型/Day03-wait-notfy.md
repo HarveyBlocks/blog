@@ -111,7 +111,7 @@ private static void notifyMethod() {
             LockSupport.unpark(thread);
         }
     }
-    
+
     private static void waitMethod() {
         synchronized (LOCK) {
             try {
@@ -129,8 +129,6 @@ private static void notifyMethod() {
         }
     }
     ```
-
-
 
 ## sleep(long)和wait(long)
 
@@ -301,7 +299,7 @@ public abstract class AbstractWaitStandardPattern implements WaitNotifyPattern {
     public final Object getLock() {
         return lock;
     }
-    
+
     protected abstract boolean isPrepared();
 
     protected abstract void executeIfPrepared();

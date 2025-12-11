@@ -28,15 +28,11 @@
 
 ![img](../../assets/Day04-BinaryTree/20200806190511967.png)
 
-
-
 ## 存储
 
 ### 数组
 
 父节点的数组下标是 i，那么它的左孩子就是 i \* 2 + 1，右孩子就是 i \* 2 + 2。
-
-
 
 ### 链式
 
@@ -74,8 +70,6 @@ public:
     bool empty() { return queue.empty(); }
 };
 ```
-
-
 
 用null标记表示前面这个节点元素不需要再向深度遍历了, 直接来吧
 
@@ -143,10 +137,6 @@ subgraph LIST
 end
 ```
 
-
-
-
-
 用数组存储树, 天然适合层次遍历
 
 自己封装一个队列, 使用熟悉的API
@@ -200,11 +190,7 @@ void levelOrder(Node *root, list<list<int>> *result) {
 
 ### 翻转二叉树
 
-
-
 <img src="../../assets/Day04-BinaryTree/20210203192644329.png" alt="226.翻转二叉树" style="zoom:67%;" />
-
-
 
 如果使用递归+中序遍历, 就会存在一个问题, 🤔
 
@@ -215,8 +201,6 @@ void levelOrder(Node *root, list<list<int>> *result) {
 所以前序或者后序遍历会比较好
 
 栈+中序会不会存在这个问题呢, 🤔
-
-
 
 层序遍历实现
 
@@ -250,8 +234,6 @@ void (Node *root) {
 ```
 
 ### 对称二叉树
-
-
 
 <img src="../../assets/Day04-BinaryTree/20210203144624414.png" alt="101. 对称二叉树1" style="zoom: 50%;" />
 
@@ -359,8 +341,6 @@ int countNodes(Node *root) {
 ```
 
 这种方法, 循环的次数总是比实际节点个数要多, 最后一层节点越少, 多余的动作就越多, 而且使用递归
-
-
 
 1.  往最左边遍历, 获取最大深度
 2.  非最后一层都是满的, 毫无悬念, 只需要求最后一层有几个元素

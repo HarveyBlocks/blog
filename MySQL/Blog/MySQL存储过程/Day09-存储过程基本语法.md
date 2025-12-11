@@ -3,7 +3,7 @@
 ```mysql
 create procedure 存储过程名([参数列表]) begain
 	-- SQL语句
-	
+
 End;
 ```
 
@@ -22,8 +22,6 @@ select *
 	-- 查询指定数据库的存储过程及状态信息
 show create procedure 存储过程名; -- 查询存储过程的创建定义
 ```
-
-
 
 ## 在命令行里使用存储过程
 

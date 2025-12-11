@@ -10,7 +10,7 @@
 class MyApplication : Application() {
     companion object {
         lateinit var app: MyApplication
-        
+
         val applicationContext: Context
             get() = app.applicationContext
     }

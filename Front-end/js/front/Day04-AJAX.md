@@ -20,8 +20,6 @@ variable = new XMLHttpRequest();
 | getAllResponseHeaders()                   | 返回头部信息                                                 |
 | getResponseHeader(*'key'*)                | 返回特定的头部信息                                           |
 
-
-
 ### 属性
 
 | 属性               | 描述                                                         |
@@ -64,8 +62,6 @@ variable = new XMLHttpRequest();
 -   可以处理跨域请求，通过 `CORS` 机制配置。
 
 ### 语法
-
-
 
 ```js
 fetch('https://api.example.com/data', {

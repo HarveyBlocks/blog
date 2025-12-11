@@ -1,7 +1,5 @@
 # 生命周期
 
-
-
 -   Create
     -   设置组件的数据、计算属性、方法和事件侦听器
 -   Mount 挂载
@@ -15,8 +13,6 @@
 -   RenderTracked
     -   
 -   Re
-
-
 
 -   BeforeCreate
     -   可用于设置全局事件监听器

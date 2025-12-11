@@ -1,6 +1,5 @@
 # 控制结构
 
-
 ## 顺序
 
 ## 分支
@@ -73,8 +72,6 @@ switch (a, b) {
         break;
 }
 ```
-
-
 
 ```csharp
 private static bool WhenFunc(int a, int b) {

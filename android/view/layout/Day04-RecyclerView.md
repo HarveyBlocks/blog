@@ -10,8 +10,6 @@ RecyclerView将其排布方式交给了LayoutManager, 将排布这一工作从�
 
 将RecyclerView控件定义在了AndroidX 当中
 
-
-
 ## 基本使用
 
 ### 布局
@@ -25,10 +23,6 @@ RecyclerView将其排布方式交给了LayoutManager, 将排布这一工作从�
         android:layout_height="match_parent" />
 ```
 
-
-
-
-
 ### 重构Adapter
 
 继承抽象类`RecyclerView.Adapter`并完成对三个方法的实现
@@ -38,7 +32,6 @@ RecyclerView将其排布方式交给了LayoutManager, 将排布这一工作从�
 class FruitViewHolder(val binding: FruitItemLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
 class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitViewHolder>() {
-
 
     /**
      * 创建ItemView的ViewHolder的方法
@@ -116,7 +109,7 @@ class FruitRecyclerAdapter(data: List<Fruit>) :
         holder.itemBinding.fruitImage.setImageResource(item.image)
         holder.itemBinding.fruitName.text = item.name
     }
-        
+
     override fun onItemClicked(
         view: View, position: Int, item: Fruit, holder: ViewHolder<FruitItemLayoutBinding>
     ) {
@@ -126,8 +119,6 @@ class FruitRecyclerAdapter(data: List<Fruit>) :
 }
 
 ```
-
-
 
 ### 在Activity设置RecyclerView
 
@@ -212,8 +203,6 @@ binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 
 <img src="../../assets/Day04-RecyclerView/image-20250914202348222.png" alt="image-20250914202348222" style="zoom:50%;" />
 
-
-
 ```xml
 <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -222,8 +211,6 @@ binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 ```
 
 微调item布局margin, 此处略
-
-
 
 ### 瀑布流布局
 
@@ -297,7 +284,6 @@ RecyclerView直接摒弃了子项点击事件的监听器，让所有的点击�
 ```kotlin
 class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitViewHolder>() {
 
-
     /**
      * 创建ItemView的ViewHolder的方法
      * 同时注册事件
@@ -327,10 +313,6 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 }
 ```
 
-
-
-
-
 ## 实践
 
 ### 9-Patch 图片
@@ -355,8 +337,6 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 <img src="../../assets/Day04-最佳实践/image-20250914211701400.png" alt="image-20250914211701400" style="zoom:50%;" />
 
-
-
 长按鼠标在图片的边缘拖动进行绘制
 
 绘制的部分表示内容允许被扩展的区域
@@ -372,10 +352,6 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 <img src="../../assets/Day04-最佳实践/image-20250914212040896.png" alt="image-20250914212040896" style="zoom:50%;" />
 
 最终可以延长的部分是指所有黑线重叠的部分(交集)
-
-
-
-
 
 #### 使用
 
@@ -422,8 +398,6 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 8. 方法`getItemCount`的实现不变
 
-
-
 ### 通知RecyclerView刷新
 
 在MainActivity的布局中, 有button:  `send`, 有inputText
@@ -438,7 +412,7 @@ binding.send.setOnClickListener{
     msgList.add(msg)
     // adapter 是给 RecyclerView 的 adapter
     adapter.notifyItemInserted(msgList.size - 1) // 当用户发送了新消息时
-    
+
     刷新RecyclerView中的显示 
     binding.recyclerView.scrollToPosition(msgList.size - 1)  // 将RecyclerView滚动到最后一行 
     binding.inputText.setText("") // 清空输入框中的内容 

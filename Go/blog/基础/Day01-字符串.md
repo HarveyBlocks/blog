@@ -13,8 +13,6 @@ fmt.Println("aaa" + "bbbb")
 
 使用`fmt.Sprint()`对字符串进行格式化
 
-
-
 | 格式 | 说明                                     |
 | :--- | :--------------------------------------- |
 | %v   | 按值的本来值输出                         |
@@ -102,8 +100,6 @@ str := "\n\t\r1,2,3,4,5,6          \n\n"
 fmt.Println(strings.TrimSpace(str))       // 1,2,3,4,5,6
 fmt.Println(strings.Trim(str, " \n\t\r")) // 1,2,3,4,5,6
 ```
-
-
 
 ## bytes.Buffer
 

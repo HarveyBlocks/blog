@@ -17,17 +17,11 @@ include mime.type
 default_type application/octet-stream
 ```
 
-
-
 ### `include mime.type`
 
 引入该文件, 之后就可以直接使用mime.type中的所有类型了
 
 <img src="../../assets/Day04-http%E5%9D%97/image-20240420134254738.png" alt="image-20240420134254738" style="zoom:50%;" />
-
-
-
-
 
 ### `default_type`
 
@@ -65,12 +59,6 @@ access_log logs/acess.log combined;
 ```
 
 可于`server`, `http` , `location`
-
-
-
-
-
-
 
 ### `log_format`
 
@@ -124,19 +112,9 @@ http是一种无状态协议, 客户端可以向服务端发送一个TCP请求, 
 
 但是这个连接也不能一直保持, 连接过多, 服务端资源下降, 这个时候就需要我们进行设置的其他超时时间
 
-
-
-
-
 默认值是`75s`
 
-
-
-
-
 ## Server块
-
-
 
 ```nginx
 server {
@@ -183,7 +161,6 @@ server {
     #}
 }
 
-
 ```
 
 ### `listen`与`server_name`
@@ -200,11 +177,7 @@ listen 80;
 server_name  localhost;
 ```
 
-
-
 ### location块
-
-
 
 ```nginx
 location content_path {
@@ -213,8 +186,6 @@ location content_path {
     index  index.html index.htm; 
 }
 ```
-
-
 
 ## 作用域
 

@@ -27,8 +27,6 @@
 -   递增(有利于创建索引)
 -   安全性(不简单,规律不能太明显)
 
-
-
 ## 用Redis做全局ID生成器
 
 1.  独立于数据库, 不存在分表时ID重复的情况
@@ -62,7 +60,6 @@ public class RedisIdWorker {
 
     public static final long BEGIN_TIMESTAMP = 1705742462L;
 
-
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
@@ -80,7 +77,6 @@ public class RedisIdWorker {
         long nowTimestamp = now.toEpochSecond(ZoneOffset.UTC);
         // 时间差
         long timestamp =  nowTimestamp - BEGIN_TIMESTAMP;
-
 
         // 生成序列号,利用Redis的自增长,由于序列号定义了下2^32,一月一key,还有统计效果
         String icrKey = String.format("icr:%s:%d:%02d",

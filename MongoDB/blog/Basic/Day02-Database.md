@@ -13,13 +13,13 @@
   ```bash
   show databases
   ```
-  
+
   简写
-  
+
   ```bash
   show dbs
   ```
-  
+
 - 切换数据库
 
   ```bash
@@ -32,13 +32,9 @@
   db
   ```
 
-  
-
 <img src="../../assets/Day02-Database/image-20251105170512419.png" alt="image-20251105170512419" style="zoom:50%;" />
 
 test数据库不在show中显示, 但是能够作为切换的目标
-
-
 
 ### 数据库标识
 
@@ -59,8 +55,6 @@ test数据库不在show中显示, 但是能够作为切换的目标
 ```bash
 use db_mine
 ```
-
-
 
 ## 元数据
 

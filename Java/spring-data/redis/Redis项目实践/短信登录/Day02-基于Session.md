@@ -46,7 +46,7 @@ public class Result {
     private String errorMsg;
     private Object data;
     private Long total;
-    
+
     public static Result fail(String errorMsg){
         return new Result(false, errorMsg, null, null);
     }
@@ -112,8 +112,6 @@ public class Result {
     }
     ```
 
-
-
 #### controller
 
 ```java
@@ -130,8 +128,6 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 #### ~~牢骚~~
 
 >   我认为, **将验证码存入session**,**决定返回什么Result**, 不是service层该做的事情, 应该在controller来完成
-
-
 
 我就改了一下
 
@@ -167,13 +163,9 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
     }
     ```
 
-    
-
 但无奈, 很多情况下, controller需要返回的Result信息, 不能单单依靠service方法的返回值来判断
 
 但我觉得这样更合理,尽量分层解耦吧?
-
-
 
 ### 测试
 
@@ -181,11 +173,7 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 小问题: 输入了不合法的电话之后,还是要等待60秒,不过这是前端的事情: 只有在手机号合法之后才等待60s
 
-
-
 ## 验证码登录注册
-
-
 
 ### 流程分析
 
@@ -225,13 +213,9 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 5.  登陆
 
-
-
 ### 查看前端请求
 
 ![image-20240102223035605](../../../../assets/Day02-基于Session/image-20240102223035605.png)
-
-
 
 ![image-20240102223154355](../../../../assets/Day02-基于Session/image-20240102223154355.png)
 
@@ -280,7 +264,7 @@ public User loginByCode(Object phoneCache, Object codeCache, String phone, Strin
         // 不存在就创建新用户并保存
         user = new User();
         user.setPhone(phone);
-        
+
         // 这些默认的设置中, 我仍未还是在无参构造中作为初始化的好
         // newUser.setId()主键会自增, 不必管他
         // user.setIcon(User.DEFAULT_ICON);//头像使用默认的, 本项目中null的话前端会选择默认头像
@@ -300,16 +284,12 @@ public User loginByCode(Object phoneCache, Object codeCache, String phone, Strin
     return user;
 }
 
-
-
 private User selectByPhone(String phone) {
     LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
     lambdaQueryWrapper.select().eq(User::getPhone, phone);
     return baseMapper.selectOne(lambdaQueryWrapper);
 }
 ```
-
-
 
 顺便写了依据密码登录
 
@@ -333,8 +313,6 @@ public User loginByPassword(String phone, String password) {
     return user;
 }
 ```
-
-
 
 没见过的警告
 
@@ -450,8 +428,6 @@ public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
 
 ### 查看请求
 
-
-
 ![image-20240103132430782](../../../../assets/Day02-基于Session/image-20240103132430782.png)
 
 依据Cookie取得Session, 依据Session取得用户信息
@@ -541,8 +517,6 @@ public class MvcConfig implements WebMvcConfigurer {
     }
 }
 ```
-
-
 
 #### 完成将当前用户信息返回前端的Controller
 

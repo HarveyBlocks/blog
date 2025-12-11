@@ -40,10 +40,6 @@ var 变量名={
     }
     ```
 
-    
-
-
-
 ### value的数据类型
 
 -   数字(整数或浮点数)
@@ -52,10 +48,6 @@ var 变量名={
 -   数组(方括号中)
 -   对象(花括号中)
 -   null
-
-
-
-
 
 ### 获取数据:
 
@@ -67,19 +59,9 @@ var 变量名={
 user.name
 ```
 
-
-
-
-
-
-
-
-
 ## JSON对象和Java对象的相互转换
 
 -   很适合使用递归啊
-
-
 
 ### Fastjson
 
@@ -94,8 +76,6 @@ user.name
     <version>1.2.62</version>
 </dependency>
 ```
-
-
 
 #### Java对象转JSON字符串
 
@@ -119,21 +99,15 @@ String com.alibaba.Json.toJSONString(Object object){...};
 }
 ```
 
-
-
 #### JSON字符串转Java对象
 
 ```java
 T com.alibaba.Json.parseObject(String text, Class<T> clazz){...}
 ```
 
-
-
 ### Jackson
 
 SpringBoot默认自带的Json工具
-
-
 
 #### 导入坐标
 
@@ -161,12 +135,6 @@ SpringBoot默认自带的Json工具
 
 springboot有集成的Jackson, 其依赖简单, 故此处略
 
-
-
-
-
-
-
 #### Java对象转JSON字符串
 
 ```java
@@ -185,10 +153,6 @@ String mjson = objectMapper.writeValueAsString(map);
 System.out.println(mjson);
 
 ```
-
-
-
-
 
 #### JSON字符串转Java对象
 
@@ -216,8 +180,6 @@ ObjectMapper objectMapper = new ObjectMapper();
 List<Bean> beans = objectMapper.readValue(jsonArrayStr, new TypeReference<List<Bean>>(){});
 ```
 
-
-
 转Map
 
 ```java
@@ -227,11 +189,7 @@ Map<String, Object> jsonMap = objectMapper.readValue(jsonStr,
 
 ```
 
-
-
 如果JSON字符串中有值为null的字段, Java中为 **int, long, float, double**等的，Jackson 会报错
-
-
 
 #### 对象和Map的转换
 
@@ -244,10 +202,6 @@ Map<String, Object> beanMap = objectMapper.convertValue(bean, Map.class);
 // Map转对象
 Bean newBean = objectMapper.convertValue(beanMap, Bean.class);
 ```
-
-
-
-
 
 ### Jackson和Fastjson的区别
 
@@ -262,8 +216,6 @@ objectMapper.configure(
     DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); // 对于Json中的未知字段选择忽略
 ```
 
-
-
 但配置了不报错, 就会有无法检查出隐藏错误的危险, 所以: 
 
 ![image-20240426151237738](../../../微服务和分布式/assets/Day42-JSON/image-20240426151237738.png)
@@ -276,19 +228,9 @@ objectMapper.configure(
 
 配置在实体类的字段上, 使其不会被序列化
 
-
-
-
-
 ## JSON与枚举
 
 FastJson认为,枚举的值就是**标识符的名字**
-
-
-
-
-
-
 
 ## 基于Jackson的json工具类
 
@@ -352,7 +294,6 @@ public class JsonUtils {
         }
     }
 
-
     public static <T> T[] toBeanArray(String arrayJson, Class<T[]> type) {
         try {
             return MAPPER.readValue(arrayJson, type);
@@ -396,7 +337,6 @@ public class JsonUtils {
 private static final String SETTER_PREFIX = "set";
 private static final String NORMAL_GETTER_PREFIX = "get";
 private static final String BOOLEAN_GETTER_PREFIX = "is";
-
 
 @Deprecated
 public static Map<String, Object> toMap(Object bean) {

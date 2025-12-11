@@ -18,13 +18,11 @@ final double PI=3.14159265358979323;
 
 ``` java
 public final class Person{
-    
+
 }
 ```
 
 一个类被final之后就不能被继承
-
-
 
 ## 注意
 
