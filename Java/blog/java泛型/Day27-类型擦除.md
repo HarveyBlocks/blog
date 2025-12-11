@@ -92,7 +92,7 @@ public class Student<T extends  Number> {}
 
 结果:
 
-<img src="../../typora-user-images/Day27/image-20230909143543600.png" alt="image-20230909143543600" style="zoom:100%;" />
+<img src="../../assets/Day27/image-20230909143543600.png" alt="image-20230909143543600" style="zoom:100%;" />
 
 ## 对方法(接口)的有限制,无限制擦除同理
 
@@ -114,7 +114,7 @@ public class Student<T extends  Number> {}
 
 
 
-<img src="../../typora-user-images/Day27/image-20230910231155591.png" alt="image-20230910231155591" style="zoom:80%;" />
+<img src="../../assets/Day27/image-20230910231155591.png" alt="image-20230910231155591" style="zoom:80%;" />
 
 桥接方法是为了程序的规范和约束
 

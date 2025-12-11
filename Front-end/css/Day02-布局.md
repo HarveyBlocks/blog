@@ -203,7 +203,7 @@ div.sticky {
 ```html
 <div><!--用于重叠的空间-->
     <div style="position: absolute;z-index: 2">元素一</div>
-    <div style="position: absolute;z-index: 1"><img src="../assets/Day02-布局/image-20250805230948617.png" alt="js"></div>
+    <div style="position: absolute;z-index: 1"><img src="../assetss/Day02-布局/image-20250805230948617.png" alt="js"></div>
 </div>
 ```
 
@@ -211,7 +211,7 @@ div.sticky {
 
 <div style="height: 500px;"><!--用于重叠的空间-->
     <div style="position: absolute;z-index: 2;font-size: 80px">元素一</div>
-    <div style="border: solid 3px; width: 800px;height: 500px;position: absolute;z-index: 1"><img src="../assets/Day02-布局/image-20250805230948617.png" alt="js"></div>
+    <div style="border: solid 3px; width: 800px;height: 500px;position: absolute;z-index: 1"><img src="../assetss/Day02-布局/image-20250805230948617.png" alt="js"></div>
 </div>
 
 

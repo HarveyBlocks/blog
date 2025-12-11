@@ -10,7 +10,7 @@ Treap（树堆）是一种 **弱平衡** 的 **二叉搜索树**
 
 其中 *priority* 随机给出,用于维护堆的性质结构, 而节点值用于维护树的性质结构, 防止出现数据值有序增长的情况
 
-<img src="../../assets/Day07-Treap/1920px-Treap.svg.png" alt="img" style="zoom:30%;" />
+<img src="../../assetss/Day07-Treap/1920px-Treap.svg.png" alt="img" style="zoom:30%;" />
 
 -   纵轴是 *priority* 
 -   横轴是 *value*

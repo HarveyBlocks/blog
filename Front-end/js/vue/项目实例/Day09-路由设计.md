@@ -138,7 +138,7 @@ export default router;
 </template>
 ```
 
-<img src="../../../assets/Day09-路由设计/image-20250826165549828.png" alt="image-20250826165549828" style="zoom:50%;" />
+<img src="../../../assetss/Day09-路由设计/image-20250826165549828.png" alt="image-20250826165549828" style="zoom:50%;" />
 
 制作二级路由目录
 

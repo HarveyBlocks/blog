@@ -44,13 +44,13 @@
 </LinearLayout>
 ```
 
-<img src="../../assets/Day04-布局/image-20250909173751059.png" alt="image-20250909173751059" style="zoom:70%;" />
+<img src="../../assetss/Day04-布局/image-20250909173751059.png" alt="image-20250909173751059" style="zoom:70%;" />
 
 
 
 设置成`horizontal`水平
 
-<img src="../../assets/Day04-布局/image-20250909173809497.png" alt="image-20250909173809497" style="zoom:70%;" />
+<img src="../../assetss/Day04-布局/image-20250909173809497.png" alt="image-20250909173809497" style="zoom:70%;" />
 
 如果LinearLayout的排列方向是horizontal，内部的控件就绝对不能将宽度指定为match_parent
 
@@ -99,7 +99,7 @@
 </LinearLayout>
 ```
 
-<img src="../../assets/Day04-布局/image-20250909181319810.png" alt="image-20250909181319810" style="zoom:50%;" />
+<img src="../../assetss/Day04-布局/image-20250909181319810.png" alt="image-20250909181319810" style="zoom:50%;" />
 
 
 
@@ -265,7 +265,7 @@
 -   ` android:layout_alignParentTop`
 -   `android:layout_alignParentBottom`
 
-<img src="../../assets/Day04-布局/image-20250910103008328.png" alt="image-20250910103008328" style="zoom:67%;" />
+<img src="../../assetss/Day04-布局/image-20250910103008328.png" alt="image-20250910103008328" style="zoom:67%;" />
 
 
 

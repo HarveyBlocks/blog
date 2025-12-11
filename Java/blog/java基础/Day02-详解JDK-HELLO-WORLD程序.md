@@ -24,7 +24,7 @@ java 文件名        #运行文件，不要输.class
 
 
 
-<img src="../../typora-user-images/image-20230801135535684.png" alt="image-20230801135535684" style="zoom:50%;" />
+<img src="../../assets/image-20230801135535684.png" alt="image-20230801135535684" style="zoom:50%;" />
 
 ## 可能会出现的问题
 
@@ -40,5 +40,5 @@ java 文件名        #运行文件，不要输.class
    }
    ```
 
-<img src="../../typora-user-images/image-20230801140511235.png" alt="image-20230801140511235" style="zoom:50%;" />
+<img src="../../assets/image-20230801140511235.png" alt="image-20230801140511235" style="zoom:50%;" />
 

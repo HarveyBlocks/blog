@@ -44,7 +44,7 @@ CREATE TABLE `tb_hotel` (
 
 #### 字段分析
 
--   `id`, 依据**es的`id`是字符串**<img src="../typora-user-images/Day02-Java%E6%93%8D%E4%BD%9Ces/image-20231225165355121.png" alt="image-20231225165355121" style="zoom:33%;" />
+-   `id`, 依据**es的`id`是字符串**<img src="../assets/Day02-Java%E6%93%8D%E4%BD%9Ces/image-20231225165355121.png" alt="image-20231225165355121" style="zoom:33%;" />
 
     我们的`id`也作为字符串, 且为`keyword`
 

@@ -26,7 +26,7 @@
 
     -   是接口
 
-        <img src="../../assert/Day02-%E5%A3%B0%E6%98%8E%E5%BC%8F%E9%98%9F%E5%88%97%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112210804877.png" alt="image-20240112210804877" style="zoom:50%;" />
+        <img src="../../assets/Day02-%E5%A3%B0%E6%98%8E%E5%BC%8F%E9%98%9F%E5%88%97%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112210804877.png" alt="image-20240112210804877" style="zoom:50%;" />
 
     -   可以用`ExchangeBuilder`
 

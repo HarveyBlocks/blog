@@ -21,7 +21,7 @@
 
 -   每一个**Queue**都要Exchange设置一个**Bindingkey**
 
-    <img src="../../assert/Day02-Topic%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112203757111.png" alt="image-20240112203757111" style="zoom:50%;" />
+    <img src="../../assets/Day02-Topic%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112203757111.png" alt="image-20240112203757111" style="zoom:50%;" />
 
     
 

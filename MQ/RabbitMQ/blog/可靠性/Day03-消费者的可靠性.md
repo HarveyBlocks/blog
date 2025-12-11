@@ -123,7 +123,7 @@
 
 >   再本地重试之后, 次数如果耗尽, 如果消息依然失败, 就有**MessageRecoverer**来进行处理
 
-<img src="../../assert/Day03-%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113192154207.png" alt="image-20240113192154207" style="zoom:67%;" />
+<img src="../../assets/Day03-%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113192154207.png" alt="image-20240113192154207" style="zoom:67%;" />
 
 ##### 三种Recover
 

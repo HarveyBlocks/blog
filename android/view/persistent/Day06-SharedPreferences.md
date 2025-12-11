@@ -56,7 +56,7 @@ fun save() {
 }
 ```
 
-<img src="../../assets/Day06-SharedPreferences/image-20250916203246324.png" alt="image-20250916203246324" style="zoom:50%;" />
+<img src="../../assetss/Day06-SharedPreferences/image-20250916203246324.png" alt="image-20250916203246324" style="zoom:50%;" />
 
 其实就是xml文件
 

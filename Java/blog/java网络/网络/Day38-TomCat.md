@@ -22,7 +22,7 @@ Idea集成Tomcat
 
 
 
-<img src="../../../typora-user-images/Day38-TomCat/image-20231116202056294.png" alt="image-20231116202056294" style="zoom:50%;" />
+<img src="../../../assets/Day38-TomCat/image-20231116202056294.png" alt="image-20231116202056294" style="zoom:50%;" />
 
 -   这么配,就可以直接打开index.html了
 

@@ -102,13 +102,13 @@ console.log("写入浏览器控制台(F12)")
 
 -   **报错信息这里看的干活**
 
-<img src="../Java/typora-user-images/JavaScrip/image-20231113191341817.png" alt="image-20231113191341817" style="zoom:50%;" />
+<img src="../Java/assets/JavaScrip/image-20231113191341817.png" alt="image-20231113191341817" style="zoom:50%;" />
 
 
 
 -   真是屌炸了
 
-<img src="../Java/typora-user-images/JavaScrip/image-20231113191719108.png" alt="image-20231113191719108" style="zoom:50%;" />
+<img src="../Java/assets/JavaScrip/image-20231113191719108.png" alt="image-20231113191719108" style="zoom:50%;" />
 
 -   这也是不行的
 

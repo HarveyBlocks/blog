@@ -81,7 +81,7 @@ public void doClient() throws IOException, InterruptedException {
 
 3.  再次使用客户端发送内容
 
-    <img src="../../assets/Day03-%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%BC%96%E7%A8%8B/image-20240223200935792.png" alt="image-20240223200935792" style="zoom:67%;" />
+    <img src="../../assetss/Day03-%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%BC%96%E7%A8%8B/image-20240223200935792.png" alt="image-20240223200935792" style="zoom:67%;" />
 
     表达式: 
 

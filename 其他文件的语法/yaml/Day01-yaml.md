@@ -34,11 +34,11 @@
 
 
 
-<img src="../assets/Day01-yaml/image-20231204180559797.png" alt="image-20231204180559797" style="zoom:67%;" />
+<img src="../assetss/Day01-yaml/image-20231204180559797.png" alt="image-20231204180559797" style="zoom:67%;" />
 
-<img src="../assets/Day01-yaml/image-20231204180625733.png" alt="image-20231204180625733" style="zoom:67%;" />
+<img src="../assetss/Day01-yaml/image-20231204180625733.png" alt="image-20231204180625733" style="zoom:67%;" />
 
-<img src="../assets/Day01-yaml/image-20231204180650748.png" alt="image-20231204180650748" style="zoom:67%;" />
+<img src="../assetss/Day01-yaml/image-20231204180650748.png" alt="image-20231204180650748" style="zoom:67%;" />
 
 ## 数据格式
 

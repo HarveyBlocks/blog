@@ -26,9 +26,9 @@
 
 1.  直接插入到try-catch代码块之后
 
-    <img src="../asset/Untitled/image-20240602212504613.png" alt="image-20240602212504613" style="zoom:50%;" />
+    <img src="../assets/Untitled/image-20240602212504613.png" alt="image-20240602212504613" style="zoom:50%;" />
 
 2.  没有catch住的异常, 让所有的异常都走一段finally
 
-    <img src="../asset/Untitled/image-20240602212727273.png" alt="image-20240602212727273" style="zoom:50%;" />
+    <img src="../assets/Untitled/image-20240602212727273.png" alt="image-20240602212727273" style="zoom:50%;" />
 

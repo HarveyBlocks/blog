@@ -141,7 +141,7 @@ static Array<T> &sort(Array<T> &array) {
 
 ## 括号匹配
 
-<img src="..\..\assets\Day05-Stack&Queue\20.有效括号.gif" alt="20.有效括号" style="zoom:67%;" />
+<img src="..\..\assetss\Day05-Stack&Queue\20.有效括号.gif" alt="20.有效括号" style="zoom:67%;" />
 
 ## 删除重复项
 

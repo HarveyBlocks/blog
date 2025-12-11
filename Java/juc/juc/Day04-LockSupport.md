@@ -54,7 +54,7 @@ log.info("<====================================>");
 2.  线程进入`_cond`, Condition阻塞
 3.  设置`_counter`为0
 
-<img src="../assets/Day04-LockSupport/image-20240908202816280.png" alt="image-20240908202816280" style="zoom:57%;" />
+<img src="../assetss/Day04-LockSupport/image-20240908202816280.png" alt="image-20240908202816280" style="zoom:57%;" />
 
 调用unpark
 

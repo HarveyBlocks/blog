@@ -23,7 +23,7 @@ default_type application/octet-stream
 
 引入该文件, 之后就可以直接使用mime.type中的所有类型了
 
-<img src="../../asset/Day04-http%E5%9D%97/image-20240420134254738.png" alt="image-20240420134254738" style="zoom:50%;" />
+<img src="../../assets/Day04-http%E5%9D%97/image-20240420134254738.png" alt="image-20240420134254738" style="zoom:50%;" />
 
 
 

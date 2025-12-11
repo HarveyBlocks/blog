@@ -43,11 +43,11 @@
 - onDestroyView() 当与Fragment关联的视图被移除时调用
 - onDetach() 当Fragment和Activity解除关联
 
-<img src="../../assets/Day05-生命周期/fragment-view-lifecycle.png" alt="Fragment 生命周期状态，以及它们与 Fragment 的生命周期回调和 Fragment 的视图生命周期之间的关系" style="zoom:50%;" />
+<img src="../../assetss/Day05-生命周期/fragment-view-lifecycle.png" alt="Fragment 生命周期状态，以及它们与 Fragment 的生命周期回调和 Fragment 的视图生命周期之间的关系" style="zoom:50%;" />
 
 另一个图
 
-<img src="../../assets/Day05-生命周期/image-20250915143627269.png" alt="image-20250915143627269" style="zoom: 67%;" />
+<img src="../../assetss/Day05-生命周期/image-20250915143627269.png" alt="image-20250915143627269" style="zoom: 67%;" />
 
 代码
 

@@ -118,11 +118,11 @@ SpringCloud+Skywalking默认不支持网关
 
 移动插件
 
-<img src="../assert/Day10-Skywalking/image-20240426150520472.png" alt="image-20240426150520472" style="zoom:60%;" />
+<img src="../assets/Day10-Skywalking/image-20240426150520472.png" alt="image-20240426150520472" style="zoom:60%;" />
 
 
 
-<img src="../assert/Day10-Skywalking/image-20240426151004303.png" alt="image-20240426151004303" style="zoom:50%;" />
+<img src="../assets/Day10-Skywalking/image-20240426151004303.png" alt="image-20240426151004303" style="zoom:50%;" />
 
 
 

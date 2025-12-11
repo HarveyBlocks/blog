@@ -8,7 +8,7 @@
 
 初始化SpringSecurity时创建FilterChain 的Servlet过滤器
 
-<img src="../../typora-user-images/Day02-SpringSecurity工作原理/image-20231219132401100.png" alt="image-20231219132401100" style="zoom:150%;" />
+<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132401100.png" alt="image-20231219132401100" style="zoom:150%;" />
 
 SpringSecurity有FilterChainProxy的代理类,产生很多Filter
 
@@ -23,11 +23,11 @@ Filter
 
 
 
-<img src="../../typora-user-images/Day02-SpringSecurity工作原理/image-20231219132420639.png" alt="image-20231219132420639" style="zoom:200%;" />
+<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132420639.png" alt="image-20231219132420639" style="zoom:200%;" />
 
 ## 几个重要的Filter
 
-<img src="../../typora-user-images/Day02-SpringSecurity工作原理/image-20231219132438050.png" alt="image-20231219132438050" style="zoom:200%;" />
+<img src="../../assets/Day02-SpringSecurity工作原理/image-20231219132438050.png" alt="image-20231219132438050" style="zoom:200%;" />
 
 ### SecurityContextPersistenceFilter
 
@@ -55,7 +55,7 @@ FilterChain的所有Filter的异常, 并进行处理
 
 ## 认证流程
 
-<img src="../../typora-user-images/Day02-SpringSecurity工作原理/图片1.jpg" alt="图片1" style="zoom:150%;" />
+<img src="../../assets/Day02-SpringSecurity工作原理/图片1.jpg" alt="图片1" style="zoom:150%;" />
 
 1.  用户提交用户名密码
 

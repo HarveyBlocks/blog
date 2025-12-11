@@ -13,7 +13,7 @@
 
 
 
-<img src="../../../assets/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
+<img src="../../../assetss/Day09-Layout/image-20250827005314341.png" alt="image-20250827005314341" style="border: 2px solid" />
 
 
 
@@ -359,7 +359,7 @@
      <div class="message-block">
        <div class="message-title">下载APP</div>
        <div class="message-description qrcode">
-           <img src="@/assets/images/qrcode.svg" alt="下载二维码"/>
+           <img src="@/assetss/images/qrcode.svg" alt="下载二维码"/>
        </div>
        <div class="message-description download">
          <p>扫描二维码(Fake)</p>

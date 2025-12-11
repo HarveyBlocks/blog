@@ -115,9 +115,9 @@ AVL树对平衡的限制更加严格, 因此, 红黑树的查询略逊于AVL树,
 
             LR,LL,RL,RR...
 
-            <img src="../../assets/Day06-Red-BlackTree/image-20240628125057656.png" alt="image-20240628125057656" style="zoom:50%;" />
+            <img src="../../assetss/Day06-Red-BlackTree/image-20240628125057656.png" alt="image-20240628125057656" style="zoom:50%;" />
 
-            <img src="../../assets/Day06-Red-BlackTree/image-20240628125116045.png" alt="image-20240628125116045" style="zoom:50%;" />
+            <img src="../../assetss/Day06-Red-BlackTree/image-20240628125116045.png" alt="image-20240628125116045" style="zoom:50%;" />
 
         2.  变色
 

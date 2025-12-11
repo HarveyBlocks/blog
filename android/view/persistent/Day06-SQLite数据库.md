@@ -65,7 +65,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 数据库文件会存放在`/data/data/<package name>/databases/`目录下
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916222441574.png" alt="image-20250916222441574" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916222441574.png" alt="image-20250916222441574" style="zoom:50%;" />
 
 BookStore.db 就是数据库文件
 
@@ -81,7 +81,7 @@ BookStore.db-journal文件，是一个为了让数据库能够支持事务而产
 
 将Virtual Device 上的db文件到出到物理机上
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223832883.png" alt="image-20250916223832883" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916223832883.png" alt="image-20250916223832883" style="zoom:50%;" />
 
 
 
@@ -91,13 +91,13 @@ BookStore.db-journal文件，是一个为了让数据库能够支持事务而产
 
 使用DB Browser
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223405296.png" alt="image-20250916223405296" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916223405296.png" alt="image-20250916223405296" style="zoom:50%;" />
 
 
 
 选择SQL方言
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916223451348.png" alt="image-20250916223451348" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916223451348.png" alt="image-20250916223451348" style="zoom:50%;" />
 
 选择导出的文件
 
@@ -105,7 +105,7 @@ BookStore.db-journal文件，是一个为了让数据库能够支持事务而产
 
 查看数据库信息, or使用Consoles(但是Consoles没有实质作用, 因为实际上是对生产环境上数据库的修改, 并不是对Android应用的数据库的修改)
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916224257375.png" alt="image-20250916224257375" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916224257375.png" alt="image-20250916224257375" style="zoom:50%;" />
 
 ## version 与 升级
 
@@ -165,15 +165,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 将Virtual Device导出, 覆盖原来的数据库文件, 用以查看
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230227841.png" alt="image-20250916230227841" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916230227841.png" alt="image-20250916230227841" style="zoom:50%;" />
 
 刷新一下
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230319706.png" alt="image-20250916230319706" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916230319706.png" alt="image-20250916230319706" style="zoom:50%;" />
 
 成功创建
 
-<img src="../../assets/Day06-SQLite数据库/image-20250916230349155.png" alt="image-20250916230349155" style="zoom:50%;" />
+<img src="../../assetss/Day06-SQLite数据库/image-20250916230349155.png" alt="image-20250916230349155" style="zoom:50%;" />
 
 
 

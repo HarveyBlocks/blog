@@ -37,7 +37,7 @@ Android 10.0 引入系统
 
 
 
-<img src="../../assets/Day14-深色主题/image-20250926225206452.png" alt="image-20250926225206452" style="zoom:50%;" />
+<img src="../../assetss/Day14-深色主题/image-20250926225206452.png" alt="image-20250926225206452" style="zoom:50%;" />
 
 不尽人意, 因此应该自己详细设计颜色
 

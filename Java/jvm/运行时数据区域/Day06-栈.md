@@ -25,13 +25,13 @@ Hotspot中的并没有对两种栈做区分
 
 ↓此乃栈帧
 
-<img src="../asset/Day06-%E6%A0%88/image-20240518134635609.png" alt="image-20240518134635609" style="zoom:50%;" />
+<img src="../assets/Day06-%E6%A0%88/image-20240518134635609.png" alt="image-20240518134635609" style="zoom:50%;" />
 
 
 
 
 
-<img src="../asset/Day06-%E6%A0%88/image-20240518134924041.png" alt="image-20240518134924041" style="zoom:50%;" />
+<img src="../assets/Day06-%E6%A0%88/image-20240518134924041.png" alt="image-20240518134924041" style="zoom:50%;" />
 
 
 

@@ -18,7 +18,7 @@ Region的大小通过对空间的大小/2048获得
 -XX:G1HeapRegionSize=32M
 ```
 
-<img src="../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520204607319.png" alt="image-20240520204607319" style="zoom:67%;" />
+<img src="../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520204607319.png" alt="image-20240520204607319" style="zoom:67%;" />
 
 ## 年轻代垃圾回收
 
@@ -38,9 +38,9 @@ Region的大小通过对空间的大小/2048获得
 
 3.  G1根据最大暂停时间选择某些区域将存活对象复制到一个**新的Survivor区**中(年龄+1), 清空未存活对象
 
-    <img src="../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520205542577.png" alt="image-20240520205542577" style="zoom:67%;" />
+    <img src="../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520205542577.png" alt="image-20240520205542577" style="zoom:67%;" />
 
-    <img src="../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520205638070.png" alt="image-20240520205638070" style="zoom:67%;" />
+    <img src="../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240520205638070.png" alt="image-20240520205638070" style="zoom:67%;" />
 
 4.  根据每一个Region的耗时计算平均值, 这个平均值和配置做比较, 对每次回收几个区域做调整
 
@@ -296,7 +296,7 @@ G1对老年代的清理会原则存货度最低(存活的最少)的区域来进�
 
 如果出现内存内没有Region可以用来拷贝
 
-<img src="../asset/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240521003847341.png" alt="image-20240521003847341" style="zoom:67%;" />
+<img src="../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240521003847341.png" alt="image-20240521003847341" style="zoom:67%;" />
 
 就会触发**Full GC**对整个区域做一个回收, 导致**用户线程的暂停**
 

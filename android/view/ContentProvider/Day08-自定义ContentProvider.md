@@ -152,9 +152,9 @@ vnd.android.cursor.item/vnd.org.harvey.android.teacher_table
 
 使用Android Studio的创建工具, 可以自动注册
 
-<img src="../../assets/Day08-自定义ContentProvider/image-20250918191500156.png" alt="image-20250918191500156" style="zoom:50%;" />
+<img src="../../assetss/Day08-自定义ContentProvider/image-20250918191500156.png" alt="image-20250918191500156" style="zoom:50%;" />
 
-<img src="../../assets/Day08-自定义ContentProvider/image-20250918191651686.png" alt="image-20250918191651686" style="zoom: 33%;" />
+<img src="../../assetss/Day08-自定义ContentProvider/image-20250918191651686.png" alt="image-20250918191651686" style="zoom: 33%;" />
 
 - Exported 表示是否开放给外界程序
 - Enable表示是否启用

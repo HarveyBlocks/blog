@@ -12,7 +12,7 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 
 ## IO
 
-<img src="../../assets/Day08-动画/image-20250929151510253.png" alt="image-20250929151510253" style="zoom:50%;" />
+<img src="../../assetss/Day08-动画/image-20250929151510253.png" alt="image-20250929151510253" style="zoom:50%;" />
 
 ### 输入
 
@@ -31,7 +31,7 @@ Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为�
 
 平铺和偏移节点通过调整UV映射, 间接影响纹理的外观
 
-<img src="../../assets/Day08-动画/image-20250929152150534.png" alt="image-20250929152150534" style="zoom: 33%;" />
+<img src="../../assetss/Day08-动画/image-20250929152150534.png" alt="image-20250929152150534" style="zoom: 33%;" />
 
 - `Tiling` 平铺值
 - `Offset` 偏移值

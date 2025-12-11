@@ -62,7 +62,7 @@ public class Servlet1 extends HttpServlet {
 
 ### 在浏览器查看Cookie
 
-<img src="../../../typora-user-images/Day41-Cookie/image-20231119131528346.png" alt="image-20231119131528346" style="zoom:50%;" />
+<img src="../../../assets/Day41-Cookie/image-20231119131528346.png" alt="image-20231119131528346" style="zoom:50%;" />
 
 
 

@@ -26,7 +26,7 @@ Spring提供,可以方便地发送http请求
 
 2.  拷贝实体类
 
-    <img src="../../assert/Day02-%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8/image-20240107120415053.png" alt="image-20240107120415053" style="zoom:77%;" />
+    <img src="../../assets/Day02-%E8%BF%9C%E7%A8%8B%E8%B0%83%E7%94%A8/image-20240107120415053.png" alt="image-20240107120415053" style="zoom:77%;" />
 
 3.  注入
 

@@ -104,7 +104,7 @@ docker run \
 
 
 
-<img src="../../assert/Day02-RabbitMQ%E7%AE%80%E4%BB%8B/image-20240112221158607.png" alt="image-20240112221158607" style="zoom:50%;" />
+<img src="../../assets/Day02-RabbitMQ%E7%AE%80%E4%BB%8B/image-20240112221158607.png" alt="image-20240112221158607" style="zoom:50%;" />
 
 我有一个大胆的想法,binding设置**或的关系** ,这是不是能设置**且的关系**
 

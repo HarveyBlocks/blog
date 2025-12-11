@@ -18,7 +18,7 @@
 
 中介公司即是代理,**做一些准备工作**
 
-<img src="../../typora-user-images/Day28/image-20230908132217794.png" alt="image-20230908132217794" style="zoom:67%;" />
+<img src="../../assets/Day28/image-20230908132217794.png" alt="image-20230908132217794" style="zoom:67%;" />
 
 中介如何知道要有唱歌跳舞的方法的呢?万一还有打篮球呢?
 

@@ -10,11 +10,11 @@ Fragment是一种可以嵌入在Activity当中的UI片段，它能让程序更�
 
 例如, 在新闻软件的设计中, 如果在手机上，可以将新闻标题列表放在一个Activity中，将新闻的详细内容放在另一个Activity中
 
-<img src="../../assets/Day04-简介/image-20250914224141582.png" alt="image-20250914224141582" style="zoom:67%;" />
+<img src="../../assetss/Day04-简介/image-20250914224141582.png" alt="image-20250914224141582" style="zoom:67%;" />
 
 在平板上, 不应该简单地拉长, 而是将新闻和详情放在一个界面
 
-<img src="../../assets/Day04-简介/image-20250914224248535.png" alt="image-20250914224248535" style="zoom:67%;" />
+<img src="../../assetss/Day04-简介/image-20250914224248535.png" alt="image-20250914224248535" style="zoom:67%;" />
 
 当前版本似乎没有平板的模拟器, 那么久用桌面举例子吧...
 

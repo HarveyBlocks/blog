@@ -210,7 +210,7 @@ binding.recyclerView.layoutManager = layoutManager
 binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 ```
 
-<img src="../../assets/Day04-RecyclerView/image-20250914202348222.png" alt="image-20250914202348222" style="zoom:50%;" />
+<img src="../../assetss/Day04-RecyclerView/image-20250914202348222.png" alt="image-20250914202348222" style="zoom:50%;" />
 
 
 
@@ -229,7 +229,7 @@ binding.recyclerView.adapter = FruitRecyclerAdapter(fruitList)
 
 > StaggeredGridLayoutManager
 
-<img src="../../assets/Day04-RecyclerView/Screenshot_20250914_203212.jpg" alt="Screenshot_20250914_203212" style="zoom: 25%;" />
+<img src="../../assetss/Day04-RecyclerView/Screenshot_20250914_203212.jpg" alt="Screenshot_20250914_203212" style="zoom: 25%;" />
 
 一个个元素之间高度不对齐, 依据内容分别排列, 这就是瀑布布局
 
@@ -284,7 +284,7 @@ item的layout, height要是warp_content, 才符合瀑布的样子, width是match
 
 测试运行
 
-<img src="../../assets/Day04-RecyclerView/image-20250914204218867.png" alt="image-20250914204218867" style="zoom:50%;" />
+<img src="../../assetss/Day04-RecyclerView/image-20250914204218867.png" alt="image-20250914204218867" style="zoom:50%;" />
 
 ## 点击事件
 
@@ -345,15 +345,15 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 选中原图片后右击
 
-<img src="../../assets/Day04-最佳实践/image-20250914211501914.png" alt="image-20250914211501914" style="zoom:30%;" />
+<img src="../../assetss/Day04-最佳实践/image-20250914211501914.png" alt="image-20250914211501914" style="zoom:30%;" />
 
 设置文件名后保存(原图在创建9-Patch之后可以删除)
 
-<img src="../../assets/Day04-最佳实践/image-20250914211602427.png" alt="image-20250914211602427" style="zoom:50%;" />
+<img src="../../assetss/Day04-最佳实践/image-20250914211602427.png" alt="image-20250914211602427" style="zoom:50%;" />
 
 其操作界面如下
 
-<img src="../../assets/Day04-最佳实践/image-20250914211701400.png" alt="image-20250914211701400" style="zoom:50%;" />
+<img src="../../assetss/Day04-最佳实践/image-20250914211701400.png" alt="image-20250914211701400" style="zoom:50%;" />
 
 
 
@@ -363,13 +363,13 @@ class FruitRecyclerAdapter(val data: List<Fruit>) : RecyclerView.Adapter<FruitVi
 
 右边是假设进行了一些扩展后的预览
 
-<img src="../../assets/Day04-最佳实践/image-20250914211829297.png" alt="image-20250914211829297" style="zoom:50%;" />
+<img src="../../assetss/Day04-最佳实践/image-20250914211829297.png" alt="image-20250914211829297" style="zoom:50%;" />
 
 长按Shift键拖动可以进行擦除
 
 最终的结果
 
-<img src="../../assets/Day04-最佳实践/image-20250914212040896.png" alt="image-20250914212040896" style="zoom:50%;" />
+<img src="../../assetss/Day04-最佳实践/image-20250914212040896.png" alt="image-20250914212040896" style="zoom:50%;" />
 
 最终可以延长的部分是指所有黑线重叠的部分(交集)
 

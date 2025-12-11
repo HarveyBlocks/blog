@@ -39,7 +39,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo" />
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo" />
   </div>
 </template>
 <style scoped>
@@ -72,7 +72,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -97,7 +97,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -117,7 +117,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -137,7 +137,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>
@@ -157,7 +157,7 @@
 ```vue
 <template>
   <div style="width: 10%;border: 2px solid black">
-    <img id="logo" src="@/assets/logo.svg" alt="vue Logo"/>
+    <img id="logo" src="@/assetss/logo.svg" alt="vue Logo"/>
   </div>
 </template>
 <style scoped>

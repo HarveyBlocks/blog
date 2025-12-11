@@ -75,7 +75,7 @@ public class App implements Servlet {
 -   当Servlet第一次被访问时**(默认)**
 -   由容器**创建Servlet对象**
 
-<img src="../../../typora-user-images/Day38-Servlet/image-20231116213559762.png" alt="image-20231116213559762" style="zoom:50%;" />
+<img src="../../../assets/Day38-Servlet/image-20231116213559762.png" alt="image-20231116213559762" style="zoom:50%;" />
 
 -   通过配置可以改变创建对象的时机
 

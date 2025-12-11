@@ -22,7 +22,7 @@ Ctrl + P  		 				提示方法参数:
 
 Ctrl+F							文件内查找
 
-<img src="../../typora-user-images/image-20230908224727772.png" alt="image-20230908224727772" style="zoom:50%;" />
+<img src="../../assets/image-20230908224727772.png" alt="image-20230908224727772" style="zoom:50%;" />
 
 Shift + F6						批量修改变量名，没法用，原因不明，只能用右键+R+R凑合一下
 

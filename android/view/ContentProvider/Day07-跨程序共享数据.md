@@ -24,7 +24,7 @@ ContentProvider 可以选择只对哪一部分数据进行共享，从而保证�
 
 
 
-<img src="../../assets/Day07-跨程序共享数据/image-20250917104128131.png" alt="image-20250917104128131" style="zoom:50%;" />
+<img src="../../assetss/Day07-跨程序共享数据/image-20250917104128131.png" alt="image-20250917104128131" style="zoom:50%;" />
 
 
 
@@ -144,7 +144,7 @@ private fun call() {
 
 
 
-<img src="../../assets/Day01-跨程序共享数据/image-20250917113224629.png" alt="image-20250917113224629" style="zoom:50%;" />
+<img src="../../assetss/Day01-跨程序共享数据/image-20250917113224629.png" alt="image-20250917113224629" style="zoom:50%;" />
 
 
 

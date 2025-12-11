@@ -30,7 +30,7 @@
 
     ![image-20240112195056322](../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112195056322.png)
 
-    <img src="../../assert/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112195146958.png" alt="image-20240112195146958" style="zoom:50%;" />
+    <img src="../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112195146958.png" alt="image-20240112195146958" style="zoom:50%;" />
 
 -   **发布者**发送消息时, **指定消息的RoutingKey**
 

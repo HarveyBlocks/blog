@@ -4,13 +4,13 @@
 
 旋转输入UV值
 
-<img src="../../assets/Day08-Rotate/image-20250929161016216.png" alt="image-20250929161016216" style="zoom:50%;" />
+<img src="../../assetss/Day08-Rotate/image-20250929161016216.png" alt="image-20250929161016216" style="zoom:50%;" />
 
 - `Center` 旋转的中心
 - `Rotation` 旋转角度
 - `Unit` `Radians`/`Degree`
 
-<img src="../../assets/Day08-Rotate/image-20250929161246821.png" alt="image-20250929161246821" style="zoom: 67%;" />
+<img src="../../assetss/Day08-Rotate/image-20250929161246821.png" alt="image-20250929161246821" style="zoom: 67%;" />
 
 旋转90度
 

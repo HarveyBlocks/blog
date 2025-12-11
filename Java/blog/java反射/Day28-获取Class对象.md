@@ -38,7 +38,7 @@ Class.forName("全.包.名.类名")
 
 全类名的复制:
 
-<img src="../../typora-user-images/Day28/image-20230908234010367.png" alt="image-20230908234010367" style="zoom:50%;" />
+<img src="../../assets/Day28/image-20230908234010367.png" alt="image-20230908234010367" style="zoom:50%;" />
 
 
 

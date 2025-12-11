@@ -4,7 +4,7 @@
 
 用Box做敌人的碰撞体, 将敌人的碰撞体保留在脚部, 只要能让他站在地面就好了
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019220425263.png" alt="image-20241019220425263" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019220425263.png" alt="image-20241019220425263" style="zoom:50%;" />
 
 
 
@@ -14,7 +14,7 @@
 
 敌人->Inspector->Box Collider 2D-> Layer Overrides 图层重载
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019221203978.png" alt="image-20241019221203978" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019221203978.png" alt="image-20241019221203978" style="zoom:50%;" />
 
 把Player和敌人本身排除出去
 
@@ -45,7 +45,7 @@ Inspector->右上角Layer->创建Layer
 
 Capsule Collider 2D->Direction 调整成水平胶囊
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019222135671.png" alt="image-20241019222135671" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019222135671.png" alt="image-20241019222135671" style="zoom:50%;" />
 
 敌人和敌人互相触碰时不会触发触发器造成伤害, 故碰撞体排除敌人
 
@@ -77,13 +77,13 @@ private void OnTriggerStay2D(Collider2D other) {
 
 注意, 适用`EnviromentPhysicsCheck`来判定时, 应该将检测范围放在**碰撞体**(不是触发器)附近而不是角色图像最前端
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA/image-20241024172955288.png" alt="image-20241024172955288" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA/image-20241024172955288.png" alt="image-20241024172955288" style="zoom:50%;" />
 
 这是为例解决检测范围撞进地里, 导致无法被检测到(检测依据是地的边缘是否和圆面有交集)
 
 也可以通过设置Land->Inspector->CompositeCollider->Geometry Type->Polygons
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA/image-20241024173733459.png" alt="image-20241024173733459" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA/image-20241024173733459.png" alt="image-20241024173733459" style="zoom:50%;" />
 
 ### 撞墙等待
 
@@ -128,7 +128,7 @@ public class Timer {
 
 动画连接
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA/image-20241024183622595.png" alt="image-20241024183622595" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA/image-20241024183622595.png" alt="image-20241024183622595" style="zoom:50%;" />
 
 添加DieBehaviour
 
@@ -283,7 +283,7 @@ protected bool FaceToPlayer() {
 
 将敌人的GameObject拖入projects窗口, 即可创建预制体
 
-<img src="../../assets/Day03-%E6%95%8C%E4%BA%BA/image-20241102221900253.png" alt="image-20241102221900253" style="zoom:50%;" />
+<img src="../../assetss/Day03-%E6%95%8C%E4%BA%BA/image-20241102221900253.png" alt="image-20241102221900253" style="zoom:50%;" />
 
 然后再Hierarchy窗口拷贝该对象, 那么, 修改一个参数, 其他所有参数都会改变
 

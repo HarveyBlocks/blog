@@ -44,11 +44,11 @@ Arrays.stream(studentClass.getDeclaredConstructors()).forEach(System.out::printl
 
 输出结果:
 
-<img src="../../typora-user-images/Day29/image-20230909090226902.png" alt="image-20230909090226902" style="zoom:67%;" />
+<img src="../../assets/Day29/image-20230909090226902.png" alt="image-20230909090226902" style="zoom:67%;" />
 
 ### 返回指定构造方法
 
-<img src="../../typora-user-images/Day29/image-20230909091832816.png" alt="image-20230909091832816" style="zoom:35%;" />
+<img src="../../assets/Day29/image-20230909091832816.png" alt="image-20230909091832816" style="zoom:35%;" />
 
 ```java
 studentClass.getConstructor()
@@ -65,7 +65,7 @@ studentClass.getDeclaredConstructor(String.class,int.class)
 
 
 
-<img src="../../typora-user-images/Day29/image-20230909092055965.png" alt="image-20230909092055965" style="zoom:50%;" />
+<img src="../../assets/Day29/image-20230909092055965.png" alt="image-20230909092055965" style="zoom:50%;" />
 
 
 

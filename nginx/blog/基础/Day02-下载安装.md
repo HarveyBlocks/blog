@@ -1,6 +1,6 @@
 # 下载
 
-<img src="../../asset/Day02-%E5%8A%9F%E8%83%BD%E7%89%B9%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/image-20240415130550387.png" alt="image-20240415130550387" style="zoom:50%;" />
+<img src="../../assets/Day02-%E5%8A%9F%E8%83%BD%E7%89%B9%E6%80%A7%E5%92%8C%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/image-20240415130550387.png" alt="image-20240415130550387" style="zoom:50%;" />
 
 
 
@@ -111,7 +111,7 @@ whereis nginx
 
 启动
 
-<img src="../../asset/Day02-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/image-20240416125402251.png" alt="image-20240416125402251" style="zoom:50%;" />
+<img src="../../assets/Day02-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85/image-20240416125402251.png" alt="image-20240416125402251" style="zoom:50%;" />
 
 启动成功
 

@@ -231,5 +231,5 @@ Connection.enqueue(request, callback)
 
 获取有`JSONArray.get(Int)`, `JSONObject.get(String)`, `JSONObject.getString(String)` 等
 
-<img src="../../assets/Day11-HTTP/image-20250921200150579.png" alt="image-20250921200150579" style="zoom:50%;" />
+<img src="../../assetss/Day11-HTTP/image-20250921200150579.png" alt="image-20250921200150579" style="zoom:50%;" />
 

@@ -114,11 +114,11 @@ cubic-bezier(x1,y1,x2,y2)
     -   不能在规定开始时间之前开始(必须大于0)
     -   不能在规定结束时间之后结束(必须小于1)
 
-<img src="../assets/Day05-动画/image-20250821033238816.png" alt="image-20250821033238816" style="zoom:33%;" />
+<img src="../assetss/Day05-动画/image-20250821033238816.png" alt="image-20250821033238816" style="zoom:33%;" />
 
 -   y1和y2可以取任意值, 但可能取一些值导致动画往复(一个进度对应多个时间点, 也就是一个y对应多个x的情况)
 
-    <img src="../assets/Day05-动画/image-20250821034200260.png" alt="image-20250821034200260" style="zoom: 33%;" />
+    <img src="../assetss/Day05-动画/image-20250821034200260.png" alt="image-20250821034200260" style="zoom: 33%;" />
 
 ### 可选值
 

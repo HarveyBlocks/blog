@@ -8,7 +8,7 @@
 
 ## 创建详情页
 
-<img src="../../assets/Day13-可折叠式标题栏/image-20250923203353995.png" alt="image-20250923203353995" style="zoom: 33%;" />
+<img src="../../assetss/Day13-可折叠式标题栏/image-20250923203353995.png" alt="image-20250923203353995" style="zoom: 33%;" />
 
 
 

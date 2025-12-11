@@ -20,7 +20,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 }
 ```
 
-<img src="../../assets/Day04-ListView/image-20250914142015873.png" alt="image-20250914142015873" style="zoom:50%;" />
+<img src="../../assetss/Day04-ListView/image-20250914142015873.png" alt="image-20250914142015873" style="zoom:50%;" />
 
 
 

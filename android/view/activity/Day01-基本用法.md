@@ -50,11 +50,11 @@ manifest自动添加
 
 设置文件名和根元素
 
-<img src="../../assets/Day01-基本用法/image-20250907155519895.png" alt="image-20250907155519895" style="zoom:50%;" />
+<img src="../../assetss/Day01-基本用法/image-20250907155519895.png" alt="image-20250907155519895" style="zoom:50%;" />
 
 创建完成
 
-<img src="../../assets/Day01-基本用法/image-20250907155251682.png" alt="image-20250907155251682" style="zoom:50%;" />
+<img src="../../assetss/Day01-基本用法/image-20250907155251682.png" alt="image-20250907155251682" style="zoom:50%;" />
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -185,7 +185,7 @@ class FirstActivity : AppCompatActivity() {
 
 给**主Activity**指定的label不仅会成为标题栏中的内容，还会成为启动器（Launcher）中应用程序显示的名称
 
-<img src="../../assets/Day01-基本用法/image-20250907191259972.png" alt="image-20250907191259972" style="zoom:50%;" />
+<img src="../../assetss/Day01-基本用法/image-20250907191259972.png" alt="image-20250907191259972" style="zoom:50%;" />
 
 
 
@@ -226,7 +226,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
-<img src="../../assets/Day01-基本用法/image-20250907205525044.png" alt="image-20250907205525044" style="zoom:33%;" />
+<img src="../../assetss/Day01-基本用法/image-20250907205525044.png" alt="image-20250907205525044" style="zoom:33%;" />
 
 ## menu
 
@@ -238,7 +238,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 menu文件夹下新建一个名叫“main”的菜单文件(右键->NEW->Menu Resource File)
 
-<img src="../../assets/Day01-基本用法/image-20250907224017008.png" alt="image-20250907224017008" style="zoom:50%;" />
+<img src="../../assetss/Day01-基本用法/image-20250907224017008.png" alt="image-20250907224017008" style="zoom:50%;" />
 
 添加代码
 

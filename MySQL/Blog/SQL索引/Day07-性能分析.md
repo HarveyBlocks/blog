@@ -123,7 +123,7 @@ set profiling = 1;
 	show profile [cpu] for query Query的ID;
 	```
 	
-	<img src="../../shoot/Day07-SQL性能优化/image-20231022095639488.png" alt="image-20231022095639488" style="zoom:50%;" />
+	<img src="../../assets/Day07-SQL性能优化/image-20231022095639488.png" alt="image-20231022095639488" style="zoom:50%;" />
 	
 	
 	

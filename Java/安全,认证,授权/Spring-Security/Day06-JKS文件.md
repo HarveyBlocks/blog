@@ -18,7 +18,7 @@ keytool -genkey -alias mydomain -keyalg RSA -keystore mydomain.jks -
 
         也可以使用`DSA`
 
-    <img src="..\..\typora-user-images\Day06-JKS文件\image-20240423170006269.png" alt="image-20240423170006269" style="zoom:33%;" />
+    <img src="..\..\assets\Day06-JKS文件\image-20240423170006269.png" alt="image-20240423170006269" style="zoom:33%;" />
 
 -   -keysize 密钥大小
 

@@ -145,11 +145,11 @@ fun NotificationManagerCompat.unsafeNotify(id:Int, notification: Notification) {
 
 需要用户确认
 
-<img src="../../assets/Day08-Notification/image-20250918232300832.png" alt="image-20250918232300832" style="zoom:50%;" />
+<img src="../../assetss/Day08-Notification/image-20250918232300832.png" alt="image-20250918232300832" style="zoom:50%;" />
 
 发送成功
 
-<img src="../../assets/Day08-Notification/image-20250918233407084.png" alt="image-20250918233407084" style="zoom:67%;" />
+<img src="../../assetss/Day08-Notification/image-20250918233407084.png" alt="image-20250918233407084" style="zoom:67%;" />
 
 ## PendingIntent
 
@@ -296,7 +296,7 @@ val notification = NotificationCompat.Builder(this, NotificationChannelId.PUSH_F
 
 多次setStyle,多个Style, 不可共存, 后设置的生效
 
-<img src="../../assets/Day08-Notification/image-20250919093648863.png" alt="image-20250919093648863" style="zoom:50%;" />
+<img src="../../assetss/Day08-Notification/image-20250919093648863.png" alt="image-20250919093648863" style="zoom:50%;" />
 
 
 

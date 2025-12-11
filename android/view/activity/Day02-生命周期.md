@@ -10,7 +10,7 @@ Android 使用任务（task）来管理Activity
 
 一个任务就是一组存放在栈里的 Activity 的集合，这个栈也被称作返回栈（back stack）
 
-<img src="../../assets/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
+<img src="../../assetss/Day02-生命周期/image-20250908203407819.png" alt="image-20250908203407819" style="zoom:50%;" />
 
 ## 状态
 
@@ -90,7 +90,7 @@ Android 使用任务（task）来管理Activity
 
 
 
-<img src="../../assets/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
+<img src="../../assetss/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
 
 ### 完整生存期
 

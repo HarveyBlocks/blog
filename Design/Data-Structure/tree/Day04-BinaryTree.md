@@ -4,7 +4,7 @@
 
 ### 满二叉树
 
-<img src="../../assets/Day04-BinaryTree/20200806185805576.png" alt="img" style="zoom:50%;" />
+<img src="../../assetss/Day04-BinaryTree/20200806185805576.png" alt="img" style="zoom:50%;" />
 
 ### 完全二叉树
 
@@ -40,7 +40,7 @@
 
 ### 链式
 
-<img src="../../assets/Day04-BinaryTree/2020092019554618.png" alt="img" style="zoom:50%;" />
+<img src="../../assetss/Day04-BinaryTree/2020092019554618.png" alt="img" style="zoom:50%;" />
 
 ## 遍历
 
@@ -202,7 +202,7 @@ void levelOrder(Node *root, list<list<int>> *result) {
 
 
 
-<img src="../../assets/Day04-BinaryTree/20210203192644329.png" alt="226.翻转二叉树" style="zoom:67%;" />
+<img src="../../assetss/Day04-BinaryTree/20210203192644329.png" alt="226.翻转二叉树" style="zoom:67%;" />
 
 
 
@@ -253,14 +253,14 @@ void (Node *root) {
 
 
 
-<img src="../../assets/Day04-BinaryTree/20210203144624414.png" alt="101. 对称二叉树1" style="zoom: 50%;" />
+<img src="../../assetss/Day04-BinaryTree/20210203144624414.png" alt="101. 对称二叉树1" style="zoom: 50%;" />
 
 1.  左子树的值和右子树相等
 2.  左子树的左子树和右子树的右子树完全相等
 3.  左子树的右子树和右子树的左子树完全相等
 4.  符合以上三条的是为对称
 
-<img src="../../assets/Day04-BinaryTree/101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.gif" alt="101.对称二叉树" style="zoom: 80%;" />
+<img src="../../assetss/Day04-BinaryTree/101.%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91.gif" alt="101.对称二叉树" style="zoom: 80%;" />
 
 ```cpp
 if (root == NULL) return true;
@@ -335,7 +335,7 @@ return true;
 
 一棵子树, 其向左遍历到左端最深处的深度, 和向右端最深处的深度, 一定相等或多一
 
-<img src="../../assets/Day04-BinaryTree/20220829163709.png" alt="img" style="zoom:67%;" />
+<img src="../../assetss/Day04-BinaryTree/20220829163709.png" alt="img" style="zoom:67%;" />
 
 ```cpp
 int countNodes(Node *root) {

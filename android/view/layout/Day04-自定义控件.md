@@ -4,7 +4,7 @@
 
 ## 组件继承结构
 
-<img src="../../assets/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
+<img src="../../assetss/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
 
 
 
@@ -12,7 +12,7 @@
 
 
 
-<img src="../../assets/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
+<img src="../../assetss/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
 
 
 

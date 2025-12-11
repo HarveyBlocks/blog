@@ -354,13 +354,13 @@ Ctrl+Alt+R=>Maven插件
 
 >   其实直接按compile就可以直接生成了
 
-<img src="../assets/Day02-Protobuf/image-20240413152837277.png" alt="image-20240413152837277" style="zoom: 50%;" />
+<img src="../assetss/Day02-Protobuf/image-20240413152837277.png" alt="image-20240413152837277" style="zoom: 50%;" />
 
 New Goal
 
-<img src="../assetss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetss/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assetsss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetsss/Day02-Protobuf/image-20240413153017562.png)
 
-<img src="../assetss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetss/Day02-Protobuf/image-20240413153017562.png)
+<img src="../assetsss/Day02-Protobuf/image-20240413152932000.png" alt="image-20240413152932000" style="zoom:50%;" />![image-20240413153017562](../assetsss/Day02-Protobuf/image-20240413153017562.png)
 
 ```shell
 mvn protobuf:compile protobuf:compile-custom

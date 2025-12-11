@@ -215,10 +215,10 @@ alt提示图片失效时的文本
 实现方法: `<a>`标签内嵌套`<img>`标签
 
 ```html
-<a href="https://www.w3schools.com/js/"><img src="..\assets\Day01-基础\javascript.svg" alt="图片失效"></a>
+<a href="https://www.w3schools.com/js/"><img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效"></a>
 ```
 
-<a href="https://www.w3schools.com/js/"><img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" ></a>
+<a href="https://www.w3schools.com/js/"><img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效" ></a>
 
 ### 图像对齐文本
 

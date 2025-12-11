@@ -3,7 +3,7 @@
 ### 查看设备文件
 
 使用Studio的DeviceExplorer
-<img src="../../assets/Day06-文件存储/image-20250916171348933.png" alt="image-20250916171348933" style="zoom:50%;" /> 
+<img src="../../assetss/Day06-文件存储/image-20250916171348933.png" alt="image-20250916171348933" style="zoom:50%;" /> 
 
 ## 写入数据
 
@@ -37,7 +37,7 @@ fun save(inputText: String) {
 
 
 
-<img src="../../assets/Day06-文件存储/image-20250916171811934.png" alt="image-20250916171811934" style="zoom:50%;" />
+<img src="../../assetss/Day06-文件存储/image-20250916171811934.png" alt="image-20250916171811934" style="zoom:50%;" />
 
 
 

@@ -97,7 +97,7 @@ JDK中默认提供了多种处理不同渠道的类加载器
 
 默认加载Java安装目录`JDK8/jre/lib`下的类文件,JDK11,JDK17等都没有这个包
 
-<img src="../asset/Day04-Bootstrap/image-20240514183056770.png" alt="image-20240514183056770" style="zoom:50%;" />
+<img src="../assets/Day04-Bootstrap/image-20240514183056770.png" alt="image-20240514183056770" style="zoom:50%;" />
 
 其中`rt.jar`中包含由`java.lang.String`, `Integer`, `Long`, `Date`
 

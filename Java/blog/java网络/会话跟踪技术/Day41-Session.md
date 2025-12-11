@@ -144,7 +144,7 @@ JSESSIONID:0307FFFAC7CF4BD8BEA1A66B321E122A
 
     `${tomcat}/conf/web.xml"`
 
-<img src="../../../typora-user-images/Day38-Servlet/image-20231119160254375.png" alt="image-20231119160254375" style="zoom:50%;" />
+<img src="../../../assets/Day38-Servlet/image-20231119160254375.png" alt="image-20231119160254375" style="zoom:50%;" />
 
 ##### 用方法invalidate()
 

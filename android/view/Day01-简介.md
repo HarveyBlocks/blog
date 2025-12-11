@@ -168,11 +168,11 @@ class MainActivity : AppCompatActivity() {
 
 Android Studio依照一般的项目结构整理后的展示样式
 
-<img src="../assets/Day01-简介/image-20250915215829559.png" alt="image-20250915215829559" style="zoom:50%;" />
+<img src="../assetss/Day01-简介/image-20250915215829559.png" alt="image-20250915215829559" style="zoom:50%;" />
 
 下面的展示的是物理结构
 
-<img src="../assets/Day01-简介/image-20250915215849250.png" alt="image-20250915215849250" style="zoom:50%;" />
+<img src="../assetss/Day01-简介/image-20250915215849250.png" alt="image-20250915215849250" style="zoom:50%;" />
 
 ### 有关配置文件
 
@@ -302,7 +302,7 @@ gradle构建脚本
 
 有两个build.gradle, 一个是project目录下的, 一个是app目录下的
 
-<img src="../assets/Day01-简介/image-20250915220014594.png" alt="image-20250915220014594" style="zoom:50%;" />
+<img src="../assetss/Day01-简介/image-20250915220014594.png" alt="image-20250915220014594" style="zoom:50%;" />
 
 其实gradle的语法都是Kotlin的构建器语法模式
 
@@ -320,13 +320,13 @@ gradle构建脚本
 
 ### res
 
-<img src="../assets/Day01-简介/image-20250915220027468.png" alt="image-20250915220027468" style="zoom:50%;" />
+<img src="../assetss/Day01-简介/image-20250915220027468.png" alt="image-20250915220027468" style="zoom:50%;" />
 
 
 
 下面是物理的项目结构
 
-<img src="../assets/Day01-简介/image-20250915220057378.png" alt="image-20250915220057378" style="zoom:50%;" />
+<img src="../assetss/Day01-简介/image-20250915220057378.png" alt="image-20250915220057378" style="zoom:50%;" />
 
 
 

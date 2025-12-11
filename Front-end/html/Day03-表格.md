@@ -349,7 +349,7 @@
             行1，列1<br>
             你可以嵌套任意文本<br>
             甚至一张图片:<br>
-            <img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" >
+            <img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效" >
         </td>
         <td>行1，列2的表格
             <table border="2">
@@ -431,7 +431,7 @@
             行1，列1<br>
             你可以嵌套任意文本<br>
             甚至一张图片:<br>
-            <img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" >
+            <img src="..\assetss\Day01-基础\javascript.svg" alt="图片失效" >
         </td>
         <td>行1，列2的表格
             <table border="2">

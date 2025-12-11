@@ -34,7 +34,7 @@
 
   
 
-<img src="../../assets/Day02-Database/image-20251105170512419.png" alt="image-20251105170512419" style="zoom:50%;" />
+<img src="../../assetss/Day02-Database/image-20251105170512419.png" alt="image-20251105170512419" style="zoom:50%;" />
 
 test数据库不在show中显示, 但是能够作为切换的目标
 

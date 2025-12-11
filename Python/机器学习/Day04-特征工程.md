@@ -68,7 +68,7 @@ def test_dict_vectorizer():
 
     -   猫、狗、人三分类问题，我们可以很简单的将其进行如下的编码。
 
-        <img src="../assets/Day04-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/v2-19752f969172da3d75e0ae9e484c4309_1440w.webp" alt="img" style="zoom:50%;" />
+        <img src="../assetss/Day04-%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/v2-19752f969172da3d75e0ae9e484c4309_1440w.webp" alt="img" style="zoom:50%;" />
 
     -   猫狗人三个类没有实质性的大小区别, 只有"是这个类"和"不是这个类"的差别
 

@@ -56,19 +56,19 @@ body {background-image:url('bgdesert.jpg');}
 
 -   对image进行平铺(默认会进行平铺)
 
-    <img src="../assets/Day01-属性/image-20250803165751457.png" alt="image-20250803165751457" style="zoom:33%;" />
+    <img src="../assetss/Day01-属性/image-20250803165751457.png" alt="image-20250803165751457" style="zoom:33%;" />
 
 -   repeat-x 值, 在x轴(水平)方向上平铺
 
-    <img src="../assets/Day01-属性/image-20250803165813325.png" alt="image-20250803165813325" style="zoom:33%;" />
+    <img src="../assetss/Day01-属性/image-20250803165813325.png" alt="image-20250803165813325" style="zoom:33%;" />
 
 -   repeat-y 值, 在y轴(垂直)方向上平铺
 
-    <img src="../assets/Day01-属性/image-20250803165829885.png" alt="image-20250803165829885" style="zoom:33%;" />
+    <img src="../assetss/Day01-属性/image-20250803165829885.png" alt="image-20250803165829885" style="zoom:33%;" />
 
 -   no-repeat 值, 不进行平铺
 
-    <img src="../assets/Day01-属性/image-20250803165848279.png" alt="image-20250803165848279" style="zoom:33%;" />
+    <img src="../assetss/Day01-属性/image-20250803165848279.png" alt="image-20250803165848279" style="zoom:33%;" />
 
 ### 位置
 
@@ -82,7 +82,7 @@ body {
 }
 ```
 
-<img src="../assets/Day01-属性/image-20250803165952866.png" alt="image-20250803165952866" style="zoom:33%;" />
+<img src="../assetss/Day01-属性/image-20250803165952866.png" alt="image-20250803165952866" style="zoom:33%;" />
 
 ### 背景附着
 

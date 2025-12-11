@@ -37,7 +37,7 @@
 </androidx.drawerlayout.widget.DrawerLayout>
 ```
 
-<img src="../../assets/Day12-滑动菜单/image-20250922172122017.png" alt="image-20250922172122017" style="zoom:50%;" />
+<img src="../../assetss/Day12-滑动菜单/image-20250922172122017.png" alt="image-20250922172122017" style="zoom:50%;" />
 
 ## Home
 
@@ -246,5 +246,5 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ### 效果
 
-<img src="../../assets/Day12-滑动菜单/image-20250922204002233.png" alt="image-20250922204002233" style="zoom:67%;" />
+<img src="../../assetss/Day12-滑动菜单/image-20250922204002233.png" alt="image-20250922204002233" style="zoom:67%;" />
 

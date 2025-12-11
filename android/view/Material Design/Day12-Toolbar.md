@@ -42,7 +42,7 @@ theme中的主题颜色属性
 
 其中, 不同标签表示的部分是
 
-<img src="../../assets/Day12-Material Design/image-20250922114958312.png" alt="image-20250922114958312" style="zoom:50%;" />
+<img src="../../assetss/Day12-Material Design/image-20250922114958312.png" alt="image-20250922114958312" style="zoom:50%;" />
 
 - 此处的colorAccent修改为colorSecondary
 
@@ -193,7 +193,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-<img src="../../assets/Day12-Toolbar/image-20250922165045594.png" alt="image-20250922165045594" style="zoom:50%;" />
+<img src="../../assetss/Day12-Toolbar/image-20250922165045594.png" alt="image-20250922165045594" style="zoom:50%;" />
 
 显示效果
 
