@@ -52,5 +52,5 @@
 -   pattern
 -   whiteSpace
 
-**\***约束指 constraint。(不明, 待考)
+==约束指 constraint。(不明, 待考)==
 
