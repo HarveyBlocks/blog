@@ -134,7 +134,7 @@ public Shop queryById(Long id) throws JsonProcessingException {
 }
 ```
 
-![image-20240104135629680](../../../../assets/Day04-%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F/image-20240104135629680.png)
+![image-20240104135629680](../../../../assets/Day04-缓存穿透/image-20240104135629680.png)
 
 ## 其他防止缓存穿透的方案
 

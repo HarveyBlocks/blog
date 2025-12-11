@@ -290,7 +290,7 @@ users.add(User.withUsername("wangwu").password("wangwu").authorities("r1").build
 
 ## 授权流程
 
-![image-20231218184035761](../../assets/Day02-SpringSecurity工作原理 (2)/image-20231218184035761.png)
+![image-20231218184035761](../../assets/Day02-SpringSecurity工作原理/image-20231218184035761.png)
 
 
 
@@ -334,7 +334,7 @@ public interface AccessDecisionManager {
 
 #### 投票决策
 
-![image-20231218190027223](../../assets/Day02-SpringSecurity工作原理 (2)/image-20231218190027223.png)
+![image-20231218190027223](../../assets/Day02-SpringSecurity工作原理/image-20231218190027223.png)
 
 随便一个实现类都可以看看
 

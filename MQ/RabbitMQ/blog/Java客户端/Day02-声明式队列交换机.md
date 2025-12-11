@@ -83,7 +83,7 @@ public class RabbitConfig {
 
 翻了源码, 确实代理了, 也会去判断, 但是没有被认定是存在aaa的confusing
 
-![image-20240112214832017](../../assets/Day02-%E5%A3%B0%E6%98%8E%E5%BC%8F%E9%98%9F%E5%88%97%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112214832017.png)
+![image-20240112214832017](../../assets/Day02-声明式队列交换机/image-20240112214832017.png)
 
 往深里翻了翻源码, 虽然在beanDefinitionMap和singletonObjects里有aaa, 但实际上Spring是依据`ref`里存在的Bean来判断是否存在bean的, 而`ref=null`(啊??????????)
 

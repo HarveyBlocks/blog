@@ -201,7 +201,7 @@ void reverse(LinkList *list) {
 
 ### 判断链表有环
 
-![141.环形链表](../../assets/Day03-LinkList/141.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8.gif)
+![141.环形链表](../../assets/Day03-LinkList/141.环形链表.gif)
 
 快慢俩指针, 一个一轮走俩, 一个一轮走一, 终会在环内相遇, 如果快的那个都NULL了, 还没相遇, 就是无环了
 

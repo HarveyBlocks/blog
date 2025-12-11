@@ -2,7 +2,7 @@
 
 >   Topic 话题
 
-![Topic Exchange illustration, which is all explained in the following text.](../../assets/Day02-Topic%E4%BA%A4%E6%8D%A2%E6%9C%BA/python-five.png)
+![Topic Exchange illustration, which is all explained in the following text.](../../assets/Day02-Topic交换机/python-five.png)
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-![image-20240112203043906](../../assets/Day02-Topic%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112203043906.png)
+![image-20240112203043906](../../assets/Day02-Topic交换机/image-20240112203043906.png)
 
 ## 通配符
 

@@ -2,7 +2,7 @@
 
 ## Stream继承关系
 
-![image-20240515140343205](../assets/Class09-stream%E6%B5%81/image-20240515140343205.png)##
+![image-20240515140343205](../assets/Class09-stream流/image-20240515140343205.png)##
 
 
 

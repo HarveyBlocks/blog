@@ -41,7 +41,7 @@ Edit->ProjectSettings->Physics2D->GeneralSettings
 
 >Capsule Collider 2D 
 
-![image-20241018135358975](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018135358975.png)
+![image-20241018135358975](../../assets/Day02-角色/image-20241018135358975.png)
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018135501669.png" alt="image-20241018135501669" style="zoom:50%;" />
 
@@ -129,7 +129,7 @@ Transform ->Rotation 设置人物旋转角度
 
 人物有倾斜, 运行测试
 
-![image-20241018141059506](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141059506.png)
+![image-20241018141059506](../../assets/Day02-角色/image-20241018141059506.png)
 
 人物躺板板了
 
@@ -139,7 +139,7 @@ Transform ->Rotation 设置人物旋转角度
 
 也会躺板板
 
-![image-20241018141430177](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141430177.png)
+![image-20241018141430177](../../assets/Day02-角色/image-20241018141430177.png)
 
 但是2D游戏不希望人物动不动就躺板板
 
@@ -149,7 +149,7 @@ Transform ->Rotation 设置人物旋转角度
 
 效果: 小伙立正了
 
-![image-20241018141733583](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018141733583.png)
+![image-20241018141733583](../../assets/Day02-角色/image-20241018141733583.png)
 
 
 
@@ -219,21 +219,21 @@ Rider: Setting->Language&Frameworks->Unity Engine -> Automatically refresh 取�
 
 2.   OtherSettings->Configuration->Api CompatibilityLevel*
 
-     ![image-20241018143718769](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018143718769.png)
+     ![image-20241018143718769](../../assets/Day02-角色/image-20241018143718769.png)
 
      改为.Net Framework, 使用更多C#特性
 
 3.   右下角Compiling等待编译
 
-     ![image-20241018154129450](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018154129450.png)
+     ![image-20241018154129450](../../assets/Day02-角色/image-20241018154129450.png)
 
 4.   Configuration->Active Input Handling
 
-     ![image-20241018143853825](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018143853825.png)
+     ![image-20241018143853825](../../assets/Day02-角色/image-20241018143853825.png)
 
      Input System Package(New)
 
-     ![image-20241018144008868](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018144008868.png)
+     ![image-20241018144008868](../../assets/Day02-角色/image-20241018144008868.png)
 
 5.   点击Apply自动重启Unity
 
@@ -241,17 +241,17 @@ Rider: Setting->Language&Frameworks->Unity Engine -> Automatically refresh 取�
 
 7.   Package Manager->Packages: In Project -> Unity Registry
 
-     ![image-20241018144253772](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018144253772.png)
+     ![image-20241018144253772](../../assets/Day02-角色/image-20241018144253772.png)
 
 8.   查找Input
 
-     ![image-20241018144407375](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018144407375.png)
+     ![image-20241018144407375](../../assets/Day02-角色/image-20241018144407375.png)
 
 9.   Install Input System
 
 10.   安装完成
 
-      ![image-20241018144626350](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018144626350.png)
+      ![image-20241018144626350](../../assets/Day02-角色/image-20241018144626350.png)
 
 ### 创建输入系统
 
@@ -261,7 +261,7 @@ Project->Create->反复点击`↓`箭头->Input Actions
 
 添加或点击EditAsset打开
 
-![image-20241018145032253](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018145032253.png)
+![image-20241018145032253](../../assets/Day02-角色/image-20241018145032253.png)
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018145051887.png" alt="image-20241018145051887" style="zoom:50%;" />
 
@@ -293,7 +293,7 @@ Actions->+->Add Up\Down\Left\Right Composite
 
 
 
-![image-20241018150701668](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018150701668.png)
+![image-20241018150701668](../../assets/Day02-角色/image-20241018150701668.png)
 
 
 
@@ -307,7 +307,7 @@ Composite->Mode->DigitalNormalized , 对于键盘, 以值+1/-1表示按键被按
 
 绑定: 输入`W[Keyboard]`, 指定监听键盘W, 或点击`Listen`按钮, 然后按下按键`W`完成按键指定
 
-![image-20241018150933875](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018150933875.png)
+![image-20241018150933875](../../assets/Day02-角色/image-20241018150933875.png)
 
 ### 增加控制约束
 
@@ -325,7 +325,7 @@ Composite->Mode->DigitalNormalized , 对于键盘, 以值+1/-1表示按键被按
 
 点击保存
 
-![image-20241018152156044](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018152156044.png)
+![image-20241018152156044](../../assets/Day02-角色/image-20241018152156044.png)
 
 ### Player Input自动生成
 
@@ -335,7 +335,7 @@ Untiy自动生成默认的InputAction配置表
 
 选择文件夹保存Action配置表
 
-![image-20241018152540056](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018152540056.png)
+![image-20241018152540056](../../assets/Day02-角色/image-20241018152540056.png)
 
 有了默认的设置
 
@@ -411,17 +411,17 @@ Awake->OnEnable->Start->Update(循环)
 
 ### 读取移动数值
 
-![image-20241018155349032](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018155349032.png)
+![image-20241018155349032](../../assets/Day02-角色/image-20241018155349032.png)
 
 读取一个名为Move的, 类型是Vector2的值
 
 创建一个Vector2类型的**全局**成员变量, 以小驼峰命名
 
-![image-20241018155730500](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018155730500.png)
+![image-20241018155730500](../../assets/Day02-角色/image-20241018155730500.png)
 
 Unity会在图形化窗口显示该成员
 
-![image-20241018155759560](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018155759560.png)
+![image-20241018155759560](../../assets/Day02-角色/image-20241018155759560.png)
 
 在C#读取该成员
 
@@ -436,7 +436,7 @@ private void Update() {
 
 运行模式下观察到数值的变化
 
-![image-20241018160105682](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018160105682.png)
+![image-20241018160105682](../../assets/Day02-角色/image-20241018160105682.png)
 
 对于键盘, 有
 
@@ -570,7 +570,7 @@ public Vector2 inputDirection;
 
 按键设置成Buttom
 
-![image-20241018175250648](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018175250648.png)
+![image-20241018175250648](../../assets/Day02-角色/image-20241018175250648.png)
 
 监听按钮, 事件注册
 
@@ -601,7 +601,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 参考[Rigidbody2D脚本API](https://docs.unity.cn/cn/current/ScriptReference/Rigidbody2D.AddForce.html)
 
-![image-20241018182501120](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018182501120.png)
+![image-20241018182501120](../../assets/Day02-角色/image-20241018182501120.png)
 
 于是
 
@@ -652,7 +652,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 2.   给land设置Layer
 
-     ![image-20241019140322081](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019140322081.png)
+     ![image-20241019140322081](../../assets/Day02-角色/image-20241019140322081.png)
 
 3.   给检查设置Layer
 
@@ -666,7 +666,7 @@ private void Jump(InputAction.CallbackContext obj) {
 
 Gizmos
 
-![image-20241019143608766](../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019143608766.png)
+![image-20241019143608766](../../assets/Day02-角色/image-20241019143608766.png)
 
 ```csharp
 public float checkRadius = 0.2f;

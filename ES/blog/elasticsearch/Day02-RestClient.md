@@ -177,7 +177,7 @@ PUT /hotel
 
 -   Spring boot自带的ES版本是7.6.2
 
-    ![image-20231225184045258](../assets/Day02-Java%E6%93%8D%E4%BD%9Ces/image-20231225184045258.png)
+    ![image-20231225184045258](../assets/Day02-Java操作es/image-20231225184045258.png)
 
     诈骗啊! 妥妥的诈骗啊!
 
@@ -190,7 +190,7 @@ PUT /hotel
 </properties>
 ```
 
-![image-20231225184512865](../assets/Day02-Java%E6%93%8D%E4%BD%9Ces/image-20231225184512865.png)
+![image-20231225184512865](../assets/Day02-Java操作es/image-20231225184512865.png)
 
 ### 分词的方法
 

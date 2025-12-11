@@ -200,7 +200,7 @@ public static boolean demo() {
 }
 ```
 
-![image-20240605005402515](../../assets/Day02-%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/image-20240605005402515.png)
+![image-20240605005402515](../../assets/Day02-建造者模式/image-20240605005402515.png)
 
 ## 缺点
 

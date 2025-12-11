@@ -11,7 +11,7 @@ docker inspect mq
 
 
 
-![image-20240114120911576](../../assets/Day04-%E5%BB%B6%E8%BF%9F%E6%B6%88%E6%81%AF%E6%8F%92%E4%BB%B6/image-20240114120911576.png)
+![image-20240114120911576](../../assets/Day04-延迟消息插件/image-20240114120911576.png)
 
 执行命令,启动插件
 
@@ -19,7 +19,7 @@ docker inspect mq
 docker exec -it mq rabbitmq-plugins enable rabbitmq_delayed_message_exchange
 ```
 
-![image-20240114121318904](../../assets/Day04-%E5%BB%B6%E8%BF%9F%E6%B6%88%E6%81%AF%E6%8F%92%E4%BB%B6/image-20240114121318904.png)
+![image-20240114121318904](../../assets/Day04-延迟消息插件/image-20240114121318904.png)
 
 
 
@@ -74,9 +74,9 @@ rabbitTemplate.convertAndSend(delayExchange,routingKey,message,(msg)->{
 
 ## 测试运行
 
-![image-20240114125856807](../../assets/Day04-%E5%BB%B6%E8%BF%9F%E6%B6%88%E6%81%AF%E6%8F%92%E4%BB%B6/image-20240114125856807.png)
+![image-20240114125856807](../../assets/Day04-延迟消息插件/image-20240114125856807.png)
 
-![image-20240114125925064](../../assets/Day04-%E5%BB%B6%E8%BF%9F%E6%B6%88%E6%81%AF%E6%8F%92%E4%BB%B6/image-20240114125925064.png)
+![image-20240114125925064](../../assets/Day04-延迟消息插件/image-20240114125925064.png)
 
 ## 缺陷
 

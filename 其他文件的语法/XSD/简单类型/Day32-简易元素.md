@@ -19,7 +19,7 @@
 
 ### 常用文件类型
 
-![img](../../assets/Day32-%E7%AE%80%E6%98%93%E5%85%83%E7%B4%A0/05104256-eb9c5f9945f34d92af0c1e31added34d.jpg)
+![img](../../assets/Day32-简易元素/05104256-eb9c5f9945f34d92af0c1e31added34d.jpg)
 
 -   缺省->空
 -   xs:string

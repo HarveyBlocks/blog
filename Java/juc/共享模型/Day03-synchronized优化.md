@@ -1,6 +1,6 @@
 # synchronized优化
 
-![image-20240601211952277](../assets/Day03-synchronized%E4%BC%98%E5%8C%96/image-20240601211952277-1725637387119.png)
+![image-20240601211952277](../assets/Day03-synchronized优化/image-20240601211952277-1725637387119.png)
 
 ## 轻量级锁
 
@@ -186,7 +186,7 @@ m3调用synchronized--检查ThreadId是否是当前线程--> 锁对象
 
 ### 状态
 
-![image-20240601211952277](../assets/Day03-synchronized%E4%BC%98%E5%8C%96/image-20240601211952277-1725637387119.png)
+![image-20240601211952277](../assets/Day03-synchronized优化/image-20240601211952277-1725637387119.png)
 
 -   **锁状态** *2 bit*, 01, 同正常状态
 

@@ -26,7 +26,7 @@ jstack <PID> > thread_dump.tdump
 
 ### Visual VM
 
-![image-20240527221844400](../assets/Day11-%E6%80%A7%E8%83%BD%E9%97%AE%E9%A2%98/image-20240527221844400.png)
+![image-20240527221844400](../assets/Day11-性能问题/image-20240527221844400.png)
 
 ## 分析线程转储文件
 
@@ -114,7 +114,7 @@ watch 类名 方法名 '{params}'
 
 Arthus生成性能火焰图, 显示所有方法执行时间的长短
 
-![image-20240528194405081](../assets/Day11-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/image-20240528194405081.png)
+![image-20240528194405081](../assets/Day11-性能调优/image-20240528194405081.png)
 
 每个方块(本质是栈的一个帧)是一个方法
 
@@ -186,7 +186,7 @@ jstack -l <PID> > FILEPATH
 
 `visual vm `-> `thread` ->`DeadLock deteted`
 
-![image-20240528201502016](../assets/Day11-%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/image-20240528201502016.png)
+![image-20240528201502016](../assets/Day11-性能调优/image-20240528201502016.png)
 
 #### ThreadDump+FastThread
 

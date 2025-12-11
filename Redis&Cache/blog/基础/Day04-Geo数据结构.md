@@ -7,7 +7,7 @@
 
 底层是SortedKey, latitude 纬度和longitude 经度经过运算转化为score
 
-![image-20240131110937834](../../../Java/spring-data/assets/Day4-Geo%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/image-20240131110937834.png)
+![image-20240131110937834](../../../Java/spring-data/assets/Day4-Geo数据结构/image-20240131110937834.png)
 
 ## 单位
 
@@ -81,7 +81,7 @@ redis(pc2):1>geoPos geoKey (0,0)号点
 -   指定圆心半径, 返回其内的所有member
 -   6.2之后废弃
 
-![image-20240131112225581](../../../Java/spring-data/assets/Day4-Geo%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/image-20240131112225581.png)
+![image-20240131112225581](../../../Java/spring-data/assets/Day4-Geo数据结构/image-20240131112225581.png)
 
 ```bash
 redis(pc2):1>geoRadius geoKey 0.5 0.5 100 km WithCoord WithDist ASC 
@@ -124,7 +124,7 @@ redis(pc2):1>geoRadius geoKey 0.5 0.5 100 km WithCoord WithDist ASC
 -   范围可以是圆或矩形
 -   6.2新功能
 
-![image-20240131112455136](../../../Java/spring-data/assets/Day4-Geo%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/image-20240131112455136.png)
+![image-20240131112455136](../../../Java/spring-data/assets/Day4-Geo数据结构/image-20240131112455136.png)
 
 
 

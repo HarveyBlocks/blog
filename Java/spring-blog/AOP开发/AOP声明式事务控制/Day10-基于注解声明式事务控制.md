@@ -226,7 +226,7 @@ public class SpringConfig {
 
 
 
-![img](../../../spring-data/assets/Day10-%E5%9F%BA%E4%BA%8E%E6%B3%A8%E8%A7%A3%E5%A3%B0%E6%98%8E%E5%BC%8F%E4%BA%8B%E5%8A%A1%E6%8E%A7%E5%88%B6/072ab6acff291410a5979f9276cde5fb.png)
+![img](../../../spring-data/assets/Day10-基于注解声明式事务控制/072ab6acff291410a5979f9276cde5fb.png)
 
 事务不生效
 

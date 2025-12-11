@@ -45,5 +45,5 @@ find 起始路径 -size [+,-]n[k,M,G]
 查找大于1GB文件:find / -size +10G
 ```
 
-![image-20230929100854792](assets/Day03/image-20230929100854792.png)
+![image-20230929100854792](../assets/Day03/image-20230929100854792.png)
 

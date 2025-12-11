@@ -75,17 +75,17 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-
 
 -   生产者
 
-    ![image-20240408135745449](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135745449.png)
+    ![image-20240408135745449](../assets/Day05-topic与消息/image-20240408135745449.png)
 
 -   消费者
 
     缺省`--from-beginning`
 
-    ![image-20240408135836011](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408135836011.png)
+    ![image-20240408135836011](../assets/Day05-topic与消息/image-20240408135836011.png)
 
     `--from-beginning`
 
-    ![image-20240408140112296](../assets/Day05-topic%E4%B8%8E%E6%B6%88%E6%81%AF/image-20240408140112296.png)
+    ![image-20240408140112296](../assets/Day05-topic与消息/image-20240408140112296.png)
 
 ## Kafka tools
 

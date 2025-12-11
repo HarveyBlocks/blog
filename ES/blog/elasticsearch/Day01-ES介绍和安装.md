@@ -216,7 +216,7 @@ docker network create es-net
 
 - 访问kibana
 
-    ![image-20231223223909221](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223223909221.png)
+    ![image-20231223223909221](../assets/Day01-ES介绍和安装/image-20231223223909221.png)
 
     访问kibana
 
@@ -226,7 +226,7 @@ docker network create es-net
 
     或用浏览器
 
-    ![image-20231223232256251](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232256251.png)
+    ![image-20231223232256251](../assets/Day01-ES介绍和安装/image-20231223232256251.png)
 
 
 
@@ -286,19 +286,19 @@ elasticsearch:
 
 ### 简单使用
 
-![image-20231223232746611](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232746611.png)
+![image-20231223232746611](../assets/Day01-ES介绍和安装/image-20231223232746611.png)
 
 
 
 -   选择自己玩儿
 
-![image-20231223233031103](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233031103.png)
+![image-20231223233031103](../assets/Day01-ES介绍和安装/image-20231223233031103.png)
 
 -   方便的DSL控制台
 
 
 
-![image-20231223232956422](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223232956422.png)
+![image-20231223232956422](../assets/Day01-ES介绍和安装/image-20231223232956422.png)
 
 想想, 我们说到, kibana之本质是向`es:9200`发送请求
 
@@ -310,7 +310,7 @@ Get /
 
 不就是发送请求:访问`es:9200`吗? 可以得到和访问`http://10.192.128.23:9200/`一样的效果
 
-![image-20231223233550917](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231223233550917.png)
+![image-20231223233550917](../assets/Day01-ES介绍和安装/image-20231223233550917.png)
 
 ## 安装ik分词器
 
@@ -322,11 +322,11 @@ Get /
 docker volume inspect es-plugins
 ```
 
-![image-20231224195020438](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195020438.png)
+![image-20231224195020438](../assets/Day01-ES介绍和安装/image-20231224195020438.png)
 
 [ik分词器, 注意版本对应](https://github.com/medcl/elasticsearch-analysis-ik/tags)
 
-![image-20231224195124805](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231224195124805.png)
+![image-20231224195124805](../assets/Day01-ES介绍和安装/image-20231224195124805.png)
 
 -   重启es容器
 
@@ -738,7 +738,7 @@ POST /_analyze
 
 要修改词典, 需要配置ik分词器目录中的config目录下的`IKAnalyzer.cfg.xml`文件指定`拓展字典`和`停止词字典`
 
-![image-20231225134005482](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134005482.png)
+![image-20231225134005482](../assets/Day01-ES介绍和安装/image-20231225134005482.png)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -783,7 +783,7 @@ POST /_analyze
 
     -   stopword.dic已存在(同级目录下)
 
-        ![image-20231225134428721](../assets/Day01-ES%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/image-20231225134428721.png)
+        ![image-20231225134428721](../assets/Day01-ES介绍和安装/image-20231225134428721.png)
 
         ```txt
         

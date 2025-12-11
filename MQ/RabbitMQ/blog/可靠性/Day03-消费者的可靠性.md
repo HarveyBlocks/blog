@@ -35,7 +35,7 @@
 
 -   当方法抛出(如`org.springframework.amqp.rabbit.support.ListenerExecutionFailedException`)的消息异常, 发送reject
 
-    ![image-20240113183731065](../../assets/Day03-%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113183731065.png)
+    ![image-20240113183731065](../../assets/Day03-消费者的可靠性/image-20240113183731065.png)
 
 -   当方法返回其他异常(业务异常), 发送nack
 
@@ -115,7 +115,7 @@
     01-13 18:48:41:866  Error 18340 --- [ntContainer#4-1] o.s.a.r.r.RejectAndDontRequeueRecoverer  : Retries exhausted for message (Body:'{"age":20,"name":"Harvey"}' Mess
     ```
 
-    ![image-20240113184927583](../../assets/Day03-%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113184927583.png)
+    ![image-20240113184927583](../../assets/Day03-消费者的可靠性/image-20240113184927583.png)
 
     三次失败后消息删除
 
@@ -182,7 +182,7 @@
         }
         ```
 
-        ![image-20240113194653054](../../assets/Day03-%E6%B6%88%E8%B4%B9%E8%80%85%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7/image-20240113194653054.png)
+        ![image-20240113194653054](../../assets/Day03-消费者的可靠性/image-20240113194653054.png)
 
         为啥异常栈的信息时用Object来存的啊
 

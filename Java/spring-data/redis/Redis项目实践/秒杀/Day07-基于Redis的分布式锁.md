@@ -188,7 +188,7 @@ String identification = UUID.randomUUID().toString(true)+"-"+Thread.currentThrea
 
 那么, 此时后来的线程的锁又在其不之情的情况下被删除了
 
-![image-20240121164103073](../../../assets/Day07-%E5%9F%BA%E4%BA%8ERedis%E7%9A%84%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/image-20240121164103073.png)
+![image-20240121164103073](../../../assets/Day07-基于Redis的分布式锁/image-20240121164103073.png)
 
 #### 解决方案
 

@@ -73,7 +73,7 @@ maven的拆分是适合纵向的, 把Controller,Service,Dao才开
 
 [Spring Cloud](https://spring.io/projects/spring-cloud/)
 
-![image-20240106141953185](../../assets/Day01-%E6%A6%82%E5%BF%B5/image-20240106141953185.png)
+![image-20240106141953185](../../assets/Day01-概念/image-20240106141953185.png)
 
 咋回事捏? 
 
@@ -82,13 +82,13 @@ maven的拆分是适合纵向的, 把Controller,Service,Dao才开
 
 #### 依赖版本
 
-![image-20240106142652413](../../assets/Day01-%E6%A6%82%E5%BF%B5/image-20240106142652413.png)
+![image-20240106142652413](../../assets/Day01-概念/image-20240106142652413.png)
 
 springboot3基于spring5, jdk必须17及以上(啊?)
 
 所以选择
 
-![image-20240106142803013](../../assets/Day01-%E6%A6%82%E5%BF%B5/image-20240106142803013.png)
+![image-20240106142803013](../../assets/Day01-概念/image-20240106142803013.png)
 
 组件的版本咱办捏? 
 

@@ -27,7 +27,7 @@ g(\theta^T x) = \frac{1}{1+e^{-\theta^T x}}\\
 sigmoid \space function
 $$
 
-![image-20240307224117257](../assets/Day06-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95/image-20240307224117257.png)
+![image-20240307224117257](../assets/Day06-逻辑回归和二分法/image-20240307224117257.png)
 
 
 
@@ -311,7 +311,7 @@ $$
 
 
 
-![image-20240308003856249](../assets/Day06-%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%92%8C%E4%BA%8C%E5%88%86%E6%B3%95/image-20240308003856249.png)
+![image-20240308003856249](../assets/Day06-逻辑回归和二分法/image-20240308003856249.png)
 
 ### AUC
 

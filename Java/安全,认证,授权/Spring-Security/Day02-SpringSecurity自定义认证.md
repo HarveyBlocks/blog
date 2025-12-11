@@ -40,7 +40,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 这里会有问题
 
-![image-20231218194831968](../assets/Day02-SpringSecurity生产/image-20231218194831968.png)
+![image-20231218194831968](../../assets/Day02-SpringSecurity生产/image-20231218194831968.png)
 
 -   原因是SpringSecurity为了防止**CSRF**( Cross-site request forery **跨站请求伪造**), 限制了除了get意外的大多数的方法
 

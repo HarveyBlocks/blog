@@ -20,7 +20,7 @@
 
 ## 请求分析
 
-![image-20240120111459617](../../../assets/Day07-%E4%BC%98%E6%83%A0%E5%88%B8%E7%A7%92%E6%9D%80%E4%B8%8B%E5%8D%95%E5%8A%9F%E8%83%BD/image-20240120111459617.png)
+![image-20240120111459617](../../../assets/Day07-优惠券秒杀下单功能/image-20240120111459617.png)
 
 ```java
 @RestController
@@ -170,7 +170,7 @@ public long seckillVoucher(SeckillVoucher voucher) {
 
 #### 测试
 
-![image-20240120132041697](../../../assets/Day07-%E4%BC%98%E6%83%A0%E5%88%B8%E7%A7%92%E6%9D%80%E4%B8%8B%E5%8D%95%E5%8A%9F%E8%83%BD/image-20240120132041697.png)
+![image-20240120132041697](../../../assets/Day07-优惠券秒杀下单功能/image-20240120132041697.png)
 
-![image-20240120132103012](../../../assets/Day07-%E4%BC%98%E6%83%A0%E5%88%B8%E7%A7%92%E6%9D%80%E4%B8%8B%E5%8D%95%E5%8A%9F%E8%83%BD/image-20240120132103012.png)
+![image-20240120132103012](../../../assets/Day07-优惠券秒杀下单功能/image-20240120132103012.png)
 

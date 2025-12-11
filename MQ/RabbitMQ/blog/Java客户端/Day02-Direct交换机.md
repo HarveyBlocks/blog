@@ -8,7 +8,7 @@
 
 不同的微服务想要收到不同的消息
 
-![Final routing: putting it all together.](../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/python-four.png)
+![Final routing: putting it all together.](../../assets/Day02-Direct交换机/python-four.png)
 
 ## Direct交换机流程示意
 
@@ -18,17 +18,17 @@
 
 
 
-![Multiple Bindings](../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/direct-exchange-multiple.png)
+![Multiple Bindings](../../assets/Day02-Direct交换机/direct-exchange-multiple.png)
 
 
 
-![Direct Exchange routing](../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/direct-exchange.png)
+![Direct Exchange routing](../../assets/Day02-Direct交换机/direct-exchange.png)
 
 ### 规则指定
 
 -   每一个**Queue**都要Exchange设置一个**Bindingkey**
 
-    ![image-20240112195056322](../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112195056322.png)
+    ![image-20240112195056322](../../assets/Day02-Direct交换机/image-20240112195056322.png)
 
     <img src="../../assets/Day02-Direct%E4%BA%A4%E6%8D%A2%E6%9C%BA/image-20240112195146958.png" alt="image-20240112195146958" style="zoom:50%;" />
 

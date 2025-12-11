@@ -62,7 +62,7 @@ JDK11,17还没有!?
 java -cp D:\IT_study\JDK\8\lib\sa-jdi.jar sun.jvm.hotspot.HSDB
 ```
 
-![image-20240512210130442](../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240512210130442.png)
+![image-20240512210130442](../assets/Day03-类加载生命周期/image-20240512210130442.png)
 
 输入PID
 
@@ -72,7 +72,7 @@ JDK8 有, JDK11, 17, 21都没有
 
 然而我使用了JDK17作为环境变量, 还有JDK17编译的项目, 就忍痛割爱了
 
-![image-20240512210056589](../assets/Day03-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-20240512210056589.png)
+![image-20240512210056589](../assets/Day03-类加载生命周期/image-20240512210056589.png)
 
 
 

@@ -302,5 +302,5 @@ export default defineComponent({
 
 ## DevTools
 
-![image-20250826000216460](../../assets/Day01-简介/image-20250826000216460.png)
+![image-20250826000216460](../../../assets/Day01-简介/image-20250826000216460.png)
 

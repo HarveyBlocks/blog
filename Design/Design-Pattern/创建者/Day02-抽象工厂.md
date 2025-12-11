@@ -233,7 +233,7 @@ public static void abstractFactory() {
 }
 ```
 
-![image-20240604205351035](../../assets/Day02-%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82/image-20240604205351035.png)
+![image-20240604205351035](../../assets/Day02-抽象工厂/image-20240604205351035.png)
 
 ## 缺点
 

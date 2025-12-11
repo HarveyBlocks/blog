@@ -180,7 +180,7 @@ Redis会把每一个Master节点映射到[0,16383]共16384( 2^14^ )个插槽(Has
 
 查看集群信息时就能看到:
 
-![image-20240211143518119](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211143518119.png)
+![image-20240211143518119](../../assets/Day07-分片集群/image-20240211143518119.png)
 
 
 
@@ -192,7 +192,7 @@ Redis会把每一个Master节点映射到[0,16383]共16384( 2^14^ )个插槽(Has
 redis-cli -p 集群中已存在的节点端口 cluster nodes
 ```
 
-![image-20240211150901885](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211150901885.png)
+![image-20240211150901885](../../assets/Day07-分片集群/image-20240211150901885.png)
 
 也可以从上图看出集群中的主从关系:
 
@@ -220,7 +220,7 @@ Redis会根据key的**有效部分**计算插槽值
 
 ### 插槽的使用
 
-![image-20240211145012550](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211145012550.png)
+![image-20240211145012550](../../assets/Day07-分片集群/image-20240211145012550.png)
 
 -   `Set `  `a`时,计算出`a`应该落在插槽`15495`, 对应端口7003
 
@@ -277,7 +277,7 @@ redis-cli --cluster add-node new_host:new_port existing_host:existing_port
 
     -   `master-id`, 集群在创建的时候就会给你MasterID
 
-        ![image-20240211143518119](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211143518119.png)
+        ![image-20240211143518119](../../assets/Day07-分片集群/image-20240211143518119.png)
 
 
 
@@ -293,7 +293,7 @@ redis-cli -p 集群中已存在的节点端口 cluster nodes
 
 发现新增加的节点没有被分配插槽
 
-![image-20240211150959804](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211150959804.png)
+![image-20240211150959804](../../assets/Day07-分片集群/image-20240211150959804.png)
 
 再分配插槽
 
@@ -318,7 +318,7 @@ reshard        host:port
 redis-cli --cluseter reshard 集群中已存在的节点HOST:其PORT 
 ```
 
-![image-20240211151918734](../../assets/Day07-%E5%88%86%E7%89%87%E9%9B%86%E7%BE%A4/image-20240211151918734.png)
+![image-20240211151918734](../../assets/Day07-分片集群/image-20240211151918734.png)
 
 ### 删除节点
 

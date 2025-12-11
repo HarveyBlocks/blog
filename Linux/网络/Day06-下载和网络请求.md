@@ -16,7 +16,7 @@ ping www.baidu.com
 
 看看自己有没有联通
 
-![image-20240101124240790](../assets/%E4%B8%8B%E8%BD%BD%E5%92%8C%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/image-20240101124240790.png)
+![image-20240101124240790](../assets/下载和网络请求/image-20240101124240790.png)
 
 ```bash
 ping IP/域名
@@ -62,7 +62,7 @@ curl [-O] url
 
 -   不加`-o`就会返回相关信息
 
-    ![image-20240101125856350](../assets/Day06-%E4%B8%8B%E8%BD%BD%E5%92%8C%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/image-20240101125856350.png)
+    ![image-20240101125856350](../assets/Day06-下载和网络请求/image-20240101125856350.png)
 
     或返回html的源码
 

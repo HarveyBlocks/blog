@@ -101,17 +101,17 @@ npm run dev
 
 很奇妙的是, 不启动ui, 也有一模一样的ui, 而且8080也能跑
 
-![image-20240406180515088](../assets/Day08-Dubbo%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20240406180515088.png)
+![image-20240406180515088](../assets/Day08-Dubbo高级特性/image-20240406180515088.png)
 
 ## 使用
 
 ### 服务查询
 
-![image-20240406180630628](../assets/Day08-Dubbo%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20240406180630628.png)
+![image-20240406180630628](../assets/Day08-Dubbo高级特性/image-20240406180630628.png)
 
 详情->
 
-![image-20240406180844572](../assets/Day08-Dubbo%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20240406180844572.png)
+![image-20240406180844572](../assets/Day08-Dubbo高级特性/image-20240406180844572.png)
 
 可以看到服务的端口是==20880==
 
@@ -133,7 +133,7 @@ dubbo:
     port: 20881
 ```
 
-![image-20240406181110749](../assets/Day08-Dubbo%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20240406181110749.png)
+![image-20240406181110749](../assets/Day08-Dubbo高级特性/image-20240406181110749.png)
 
 ↑第一次访问后消费者被显示
 
@@ -141,7 +141,7 @@ dubbo:
 
 查看元数据
 
-![image-20240406181249145](../assets/Day08-Dubbo%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/image-20240406181249145.png)
+![image-20240406181249145](../assets/Day08-Dubbo高级特性/image-20240406181249145.png)
 
 需要在生产者的地方配置
 

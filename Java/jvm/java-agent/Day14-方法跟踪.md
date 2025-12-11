@@ -140,7 +140,7 @@ public class AsmHelloAdvice extends MethodVisitor {
 
 字节码指令与ASM的Opcode对应关系, 可以在MethodVisitor里面查看
 
-![image-20240531195303345](../assets/Day14-%E6%96%B9%E6%B3%95%E8%B7%9F%E8%B8%AA/image-20240531195303345.png)
+![image-20240531195303345](../assets/Day14-方法跟踪/image-20240531195303345.png)
 
 ```java
 public TimeMethodAdvice(int api, MethodVisitor methodVisitor) {

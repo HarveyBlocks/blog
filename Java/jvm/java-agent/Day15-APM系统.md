@@ -93,7 +93,7 @@ static void exit(@Advice.Enter long nanoTime,
 }
 ```
 
-![image-20240601163054576](../assets/Day15-APM%E7%B3%BB%E7%BB%9F/image-20240601163054576.png)
+![image-20240601163054576](../assets/Day15-APM系统/image-20240601163054576.png)
 
 ### 启动测试
 
@@ -133,7 +133,7 @@ public static void premain(String agentArgs, Instrumentation inst) throws IOExce
 
 经测试不能传space字符, space字符之前的作为参数
 
-![image-20240601165653741](../assets/Day15-APM%E7%B3%BB%E7%BB%9F/image-20240601165653741.png)
+![image-20240601165653741](../assets/Day15-APM系统/image-20240601165653741.png)
 
 ### ByteBuddy传参进入增强类
 

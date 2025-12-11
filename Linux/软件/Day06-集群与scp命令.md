@@ -16,7 +16,7 @@ init 0
 
 在VM中创建虚拟机集群的文件夹
 
-![image-20240101203126765](../assets/Day06-%E9%9B%86%E7%BE%A4%E4%B8%8Escp%E5%91%BD%E4%BB%A4/image-20240101203126765.png)
+![image-20240101203126765](../assets/Day06-集群与scp命令/image-20240101203126765.png)
 
 
 

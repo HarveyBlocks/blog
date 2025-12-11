@@ -219,7 +219,7 @@ JDBC中使用了**DriverManager**来管理项目中引入的不同数据库驱�
 
 Application加载引入的jar包中的驱动类
 
-![image-20240518091301497](../assets/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518091301497.png)
+![image-20240518091301497](../assets/Day05-类的双亲委派机制/image-20240518091301497.png)
 
 
 
@@ -266,7 +266,7 @@ SPI机制是JDK内置的一种服务提供发现的机制
     ServiceLoader<java.sql.Driver> loadedDrivers = ServiceLoader.load(java.sql.Driver.class);
     ```
 
-    ![image-20240518110900127](../assets/Day05-%E7%B1%BB%E7%9A%84%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%9C%BA%E5%88%B6/image-20240518110900127.png) 
+    ![image-20240518110900127](../assets/Day05-类的双亲委派机制/image-20240518110900127.png) 
 
 4.  SPI中使用线程上下文中保存的类加载器进行加载, 这个类加载器一般是Application
 

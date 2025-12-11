@@ -97,7 +97,7 @@ public void doClient() throws IOException, InterruptedException {
 
 4.  启动一个新的客户端
 
-    ![image-20240223201134379](../../assets/Day03-%E9%98%BB%E5%A1%9E%E5%BC%8F%E7%BC%96%E7%A8%8B/image-20240223201134379.png)
+    ![image-20240223201134379](../../assets/Day03-阻塞式编程/image-20240223201134379.png)
 
     -   \[日志\]服务器连接第二个客户端
     -   \[日志\]服务器输出第一个客户端的表达式

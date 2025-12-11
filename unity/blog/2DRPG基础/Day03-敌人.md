@@ -24,7 +24,7 @@ Inspector->右上角Layer->创建Layer
 
 然后Exclude Layers
 
-![image-20241019221711452](../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019221711452.png)
+![image-20241019221711452](../../assets/Day03-敌人与战斗/image-20241019221711452.png)
 
 -   **Contact Capture Layers** 与当前层接触的层
 -   Include Layer: **Contact Capture Layers** +Include Layer

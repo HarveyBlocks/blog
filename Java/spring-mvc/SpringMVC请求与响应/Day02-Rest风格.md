@@ -26,7 +26,7 @@
     -   PUT - 更新
     -   DELETE - 删除
 
-    ![image-20231125204155130](../../../ES/blog/assets/Day02-Rest%E9%A3%8E%E6%A0%BC/image-20231125204155130.png)
+    ![image-20231125204155130](../../../ES/blog/assets/Day02-Rest风格/image-20231125204155130.png)
 
     -   模块后边没数据?->
         -   不是新增操作

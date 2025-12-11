@@ -212,9 +212,9 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
 
 -   输出结果
 
-    ![image-20231102211816134](../../../assets/Day05😕-Spring后处理器概述与入门/image-20231102211816134.png)
+    ![image-20231102211816134](../../../assets/Day05-Spring后处理器概述与入门/image-20231102211816134.png)
 
-![image-20231102211937555](../../../assets/Day05😕-Spring后处理器概述与入门/image-20231102211937555.png)
+![image-20231102211937555](../../../assets/Day05-Spring后处理器概述与入门/image-20231102211937555.png)
 
 ## 最终实战! 使用后处理器编写@MyComponent注解实现自动注册Bean
 

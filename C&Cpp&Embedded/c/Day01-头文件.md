@@ -67,7 +67,7 @@ void fun2(void) {
 }
 ```
 
-![image-20231108161208362](../../../IT/JDK/JavaDailyBlog/assets/头文件/image-20231108161208362.png)
+![image-20231108161208362](../../java/assets/头文件/image-20231108161208362.png)
 
 
 
@@ -118,7 +118,7 @@ void fun2(void) {
 }
 ```
 
--   输出![image-20231108162207984](../../../IT/JDK/JavaDailyBlog/assets/头文件/image-20231108162207984.png)
+-   输出![image-20231108162207984](../../java/assets/头文件/image-20231108162207984.png)
 
 
 
@@ -251,7 +251,7 @@ int main(){
 
 -   编译之后
 
-    ![image-20231108172328001](IT/JDK/JavaDailyBlog/assets/头文件/image-20231108172328001.png)
+    ![image-20231108172328001](../../java/assets/头文件/image-20231108172328001.png)
 
 **重复啦?没关系!已经准备好啦**
 

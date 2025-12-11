@@ -165,7 +165,7 @@ public Shop queryMutexFixByLock(Long id)  {
 ....几百条缓存存在
 ```
 
-![image-20240104223747612](../../../../assets/Day04-%E8%A7%A3%E5%86%B3%E5%87%BB%E7%A9%BF/image-20240104223747612.png)
+![image-20240104223747612](../../../../assets/Day04-解决击穿/image-20240104223747612.png)
 
 
 

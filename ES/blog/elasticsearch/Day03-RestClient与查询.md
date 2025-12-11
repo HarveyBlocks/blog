@@ -1,6 +1,6 @@
 # RestClient与查询
 
-![image-20231226231949796](../assets/Day03-RestClient%E4%B8%8E%E6%9F%A5%E8%AF%A2/image-20231226231949796.png)
+![image-20231226231949796](../assets/Day03-RestClient与查询/image-20231226231949796.png)
 
 -   从查询到对查询数据的处理, 都有
 
@@ -350,7 +350,7 @@ GET /hotel/_search
 
     -   真相大白
 
-        ![image-20231227155850234](../assets/Day03-RestClient%E4%B8%8E%E6%9F%A5%E8%AF%A2/image-20231227155850234.png)
+        ![image-20231227155850234](../assets/Day03-RestClient与查询/image-20231227155850234.png)
 
 
 

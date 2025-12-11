@@ -1,6 +1,6 @@
 # RedisTemplate
 
-![image-20240102130147837](../../assets/Day02-%E4%BD%BF%E7%94%A8RedisTemplate/image-20240102130147837.png)
+![image-20240102130147837](../../assets/Day02-使用RedisTemplate/image-20240102130147837.png)
 
 ## 快速入门
 

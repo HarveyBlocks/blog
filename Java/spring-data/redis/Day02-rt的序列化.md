@@ -35,7 +35,7 @@ centos-redis:0>get "\xAC\xED\x00\x05t\x00\x03key"
 
 `org.springframework.data.redis.core.RedisTemplate`
 
-![image-20240102135851906](../../assets/Day02-rt%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96/image-20240102135851906.png)
+![image-20240102135851906](../../assets/Day02-rt的序列化/image-20240102135851906.png)
 
 ### 默认序列化器
 
@@ -122,7 +122,7 @@ public void serialize(Object object, OutputStream outputStream) throws IOExcepti
 
 可选择的序列化器
 
-![image-20240102141054093](../../assets/Day02-rt%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96/image-20240102141054093.png)
+![image-20240102141054093](../../assets/Day02-rt的序列化/image-20240102141054093.png)
 
 **key一般是字符串. 用`StringRedisSeralizer`**
 
@@ -239,7 +239,7 @@ centos-redis:0>get user:001
 "{"@class":"com.harvey.spring.data.redis.pojo.entity.User","name":"小明","age":12}"
 ```
 
-![image-20240102150646694](../../assets/Day02-rt%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96/image-20240102150646694.png)
+![image-20240102150646694](../../assets/Day02-rt的序列化/image-20240102150646694.png)
 
 ### Jackson2序列化的缺点
 
@@ -299,7 +299,7 @@ void testStringRedisTemplate() throws JsonProcessingException {
 }
 ```
 
-![image-20240102150613999](../../assets/Day02-rt%E7%9A%84%E5%BA%8F%E5%88%97%E5%8C%96/image-20240102150613999.png)
+![image-20240102150613999](../../assets/Day02-rt的序列化/image-20240102150613999.png)
 
 **关注一下前后的键值大小**
 

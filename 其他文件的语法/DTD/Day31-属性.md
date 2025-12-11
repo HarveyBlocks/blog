@@ -49,7 +49,7 @@
         <!ATTLIST note type (int|float)>
 ```
 
-![image-20240611224806424](../assets/Day31-%E5%B1%9E%E6%80%A7/image-20240611224806424.png)
+![image-20240611224806424](../assets/Day31-属性/image-20240611224806424.png)
 
 检查报错
 
@@ -76,7 +76,7 @@
 </notes>
 ```
 
-![image-20240611225210411](../assets/Day31-%E5%B1%9E%E6%80%A7/image-20240611225210411.png)
+![image-20240611225210411](../assets/Day31-属性/image-20240611225210411.png)
 
 ### XXX的列表
 

@@ -26,15 +26,15 @@
 
 ### 查看前端请求
 
-![image-20240102205326705](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102205326705.png)
+![image-20240102205326705](../../../../assets/Day02-基于Session/image-20240102205326705.png)
 
-![image-20240102205356664](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102205356664.png)
+![image-20240102205356664](../../../../assets/Day02-基于Session/image-20240102205356664.png)
 
 ### 实现功能
 
 `com.harvey.review_system.controller.UserController`
 
-![image-20240102205740415](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102205740415.png)
+![image-20240102205740415](../../../../assets/Day02-基于Session/image-20240102205740415.png)
 
 不加斜杠, 不规范(在SpringBootWeb是没区别的),加上
 
@@ -177,7 +177,7 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 ### 测试
 
-![image-20240102220601048](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102220601048.png)
+![image-20240102220601048](../../../../assets/Day02-基于Session/image-20240102220601048.png)
 
 小问题: 输入了不合法的电话之后,还是要等待60秒,不过这是前端的事情: 只有在手机号合法之后才等待60s
 
@@ -229,17 +229,17 @@ public Result sendCode(@RequestParam("phone") String phone, HttpSession session)
 
 ### 查看前端请求
 
-![image-20240102223035605](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102223035605.png)
+![image-20240102223035605](../../../../assets/Day02-基于Session/image-20240102223035605.png)
 
 
 
-![image-20240102223154355](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102223154355.png)
+![image-20240102223154355](../../../../assets/Day02-基于Session/image-20240102223154355.png)
 
 -   以Json格式请求
 
 ### 实现功能
 
-![image-20240102223315046](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102223315046.png)
+![image-20240102223315046](../../../../assets/Day02-基于Session/image-20240102223315046.png)
 
 ```java
 public class LoginFormDTO {
@@ -252,7 +252,7 @@ public class LoginFormDTO {
 
 `password`的目的:
 
-![image-20240102223606864](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240102223606864.png)
+![image-20240102223606864](../../../../assets/Day02-基于Session/image-20240102223606864.png)
 
 是我的话可能会写俩类, 造成代码的冗余, 归根结底是不够熟练. 反省反省
 
@@ -452,7 +452,7 @@ public Result login(@RequestBody LoginFormDTO loginForm, HttpSession session){
 
 
 
-![image-20240103132430782](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240103132430782.png)
+![image-20240103132430782](../../../../assets/Day02-基于Session/image-20240103132430782.png)
 
 依据Cookie取得Session, 依据Session取得用户信息
 
@@ -546,7 +546,7 @@ public class MvcConfig implements WebMvcConfigurer {
 
 #### 完成将当前用户信息返回前端的Controller
 
-![image-20240103142801319](../../../../assets/Day02-%E5%9F%BA%E4%BA%8ESession/image-20240103142801319.png)
+![image-20240103142801319](../../../../assets/Day02-基于Session/image-20240103142801319.png)
 
 ```java
 @GetMapping("/me")
@@ -562,7 +562,7 @@ public Result me(){
 
 存储再一台Tomcat里的Session数据, 其他Tomcat服务器是看不到的
 
-![image-20240102192238092](../../../../assets/Day01-%E7%82%B9%E8%AF%84/image-20240102192238092.png)
+![image-20240102192238092](../../../../assets/Day01-点评/image-20240102192238092.png)
 
 为了负载均衡, 用户每次分配到的Tomcat是不一样的, Session是不一样的
 

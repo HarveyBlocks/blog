@@ -4,7 +4,7 @@
 
 >   在邮箱会在新邮件过来时提示
 
-![image-20231229220524642](../assets/Day02-websocket%E4%BB%8B%E7%BB%8D/image-20231229220524642.png?lastModify=1703858921)
+![image-20231229220524642](../assets/Day02-websocket介绍/image-20231229220524642.png?lastModify=1703858921)
 
 
 

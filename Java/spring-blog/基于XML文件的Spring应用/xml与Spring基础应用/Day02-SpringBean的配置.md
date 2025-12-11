@@ -50,7 +50,7 @@
         <!--id="userService"-->
 ```
 
-![image-20231030131340505](../../assets/Untitled/image-20231030131340505.png)
+![image-20231030131340505](../../../assets/Untitled/image-20231030131340505.png)
 
 -   它也是有Key的,是**全类名**
 
@@ -219,6 +219,6 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
     ```
 
 ## factory-method和factory-bean
-    
+
      [Spring实例化的方式](Day02😘-Spring实例化的方式.md)
 

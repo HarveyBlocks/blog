@@ -229,9 +229,9 @@ spring:
 
 ### 运行测试
 
-![image-20240503140358369](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503140358369.png)
+![image-20240503140358369](../../assets/Day03-Nacos服务管理/image-20240503140358369.png)
 
-![image-20240503133009584](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503133009584.png)
+![image-20240503133009584](../../assets/Day03-Nacos服务管理/image-20240503133009584.png)
 
 ### 分级下的负载均衡
 
@@ -266,9 +266,9 @@ NacosRule优先本地, 然后随机, 如果本地的宕机了, 使用远程的�
 
 ## 配置负载均衡权重
 
-![image-20240503142459283](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142459283.png)
+![image-20240503142459283](../../assets/Day03-Nacos服务管理/image-20240503142459283.png)
 
-![image-20240503142511861](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503142511861.png)
+![image-20240503142511861](../../assets/Day03-Nacos服务管理/image-20240503142511861.png)
 
 失败
 
@@ -312,9 +312,9 @@ end
 
 ### 新建
 
-![image-20240503143234526](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143234526.png)
+![image-20240503143234526](../../assets/Day03-Nacos服务管理/image-20240503143234526.png)
 
-![image-20240503143651516](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143651516.png)
+![image-20240503143651516](../../assets/Day03-Nacos服务管理/image-20240503143651516.png)
 
 ### 配置与使用
 
@@ -326,21 +326,21 @@ spring:
         namespace: 38fbc4ea-907e-4bce-8abb-f4bcce9fb598 # 配置ID
 ```
 
-![image-20240503143311411](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143311411.png)
+![image-20240503143311411](../../assets/Day03-Nacos服务管理/image-20240503143311411.png)
 
-![image-20240503143900513](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503143900513.png)
+![image-20240503143900513](../../assets/Day03-Nacos服务管理/image-20240503143900513.png)
 
 不在一个命名空间, 就报错, 找不到该服务
 
-![image-20240503144037783](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144037783.png)
+![image-20240503144037783](../../assets/Day03-Nacos服务管理/image-20240503144037783.png)
 
 
 
 在一个命名空间, 不报错
 
-![image-20240503144231845](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144231845.png)
+![image-20240503144231845](../../assets/Day03-Nacos服务管理/image-20240503144231845.png)
 
-![image-20240503144155985](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503144155985.png)
+![image-20240503144155985](../../assets/Day03-Nacos服务管理/image-20240503144155985.png)
 
 
 
@@ -361,11 +361,11 @@ spring:
         ephemeral: false # 非临时实例
 ```
 
-![image-20240503145352208](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145352208.png)
+![image-20240503145352208](../../assets/Day03-Nacos服务管理/image-20240503145352208.png)
 
-![image-20240503145416504](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145416504.png)
+![image-20240503145416504](../../assets/Day03-Nacos服务管理/image-20240503145416504.png)
 
-![image-20240503145433849](../../assets/Day03-Nacos%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86/image-20240503145433849.png)
+![image-20240503145433849](../../assets/Day03-Nacos服务管理/image-20240503145433849.png)
 
 ### 删除
 

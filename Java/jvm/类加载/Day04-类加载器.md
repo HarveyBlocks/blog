@@ -57,7 +57,7 @@ classloader
 
 ## JDK提供或自定义的类加载器
 
-![image-20240513212249611](../assets/Day04-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/image-20240513212249611.png)
+![image-20240513212249611](../assets/Day04-类加载器/image-20240513212249611.png)
 
 上图是JDK17编译的Springboot项目查看到的类加载器
 

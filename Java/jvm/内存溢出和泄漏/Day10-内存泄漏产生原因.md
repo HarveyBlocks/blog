@@ -146,7 +146,7 @@ public static void main(String[] args) throws InterruptedException {
 }
 ```
 
-![image-20240525203208615](../assets/Day10-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0/image-20240525203208615.png)
+![image-20240525203208615](../assets/Day10-内存泄漏产生原因/image-20240525203208615.png)
 
 
 
@@ -177,7 +177,7 @@ public static void main(String[] args) throws InterruptedException {
 
 ` Executors.newSingleThreadExecutor()`
 
-![image-20240525204914637](../assets/Day10-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0/image-20240525204914637.png)
+![image-20240525204914637](../assets/Day10-内存泄漏产生原因/image-20240525204914637.png)
 
 
 
@@ -185,7 +185,7 @@ public static void main(String[] args) throws InterruptedException {
 
 `ThreadPoolExecutor`
 
-![image-20240525205325730](../assets/Day10-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0/image-20240525205325730.png)
+![image-20240525205325730](../assets/Day10-内存泄漏产生原因/image-20240525205325730.png)
 
 
 

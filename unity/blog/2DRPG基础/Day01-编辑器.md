@@ -8,7 +8,7 @@ Editor->Preference->Colors->playmode tint 在运行模式时, 对参数的任何
 
 设置单栏节省空间
 
-![image-20241016132651297](../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241016132651297.png)
+![image-20241016132651297](../../assets/Day01-编辑器/image-20241016132651297.png)
 
 
 
@@ -76,7 +76,7 @@ Hierarchy->
 
 可以使用Ctrl选择多个实体, 统一调整SortingLayer
 
-![image-20241016215228912](../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241016215228912.png)
+![image-20241016215228912](../../assets/Day01-编辑器/image-20241016215228912.png)
 
 -   不同的SortingLayer之间进行排序
 -   统一SortingLayer之间用Order in Layer的值进行排序
@@ -114,7 +114,7 @@ Slice->Type->Grace By Cell Count, 依照没行/列的格子数目进行等量切
 
 Slice->Poivot 锚点, 图片中心轴的位置(图中蓝色小圆圈), 将锚点设置在底部, 方便每次防止人物时进行计算和对齐
 
-![image-20241016131739176](../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241016131739176.png)
+![image-20241016131739176](../../assets/Day01-编辑器/image-20241016131739176.png)
 
 
 
@@ -124,7 +124,7 @@ Slice->Poivot 锚点, 图片中心轴的位置(图中蓝色小圆圈), 将锚点
 
 点击Slice进行切割, 点击Apply完成对图集的操作, 退出后在inspector处确认Apply(Ctrl+S亦可以保存)
 
-![image-20241016132256006](../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241016132256006.png)
+![image-20241016132256006](../../assets/Day01-编辑器/image-20241016132256006.png)
 
 点击查看切割后的元素
 
@@ -252,7 +252,7 @@ Project->Create->2D->Tiles->AnimatedTail
 
 然后复制, 完成左中右三条
 
-![image-20241017175839835](../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241017175839835-1729159126953-1.png)
+![image-20241017175839835](../../assets/Day01-编辑器/image-20241017175839835-1729159126953-1.png)
 
 拖动到TailPalette
 

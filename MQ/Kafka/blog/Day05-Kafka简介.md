@@ -25,7 +25,7 @@
     -   Connectors 连接器可以将数据库中的数据导入到Kafka,也可以将Kafka中的数据导入到数据库
     -   Stream Processors 流处理器, 可以从Kafka拉取数据, 也可以将数据写入Kafka
 
-![image-20240207131536764](../assets/Kafka%E7%AE%80%E4%BB%8B/image-20240207131536764.png)
+![image-20240207131536764](../assets/Kafka简介/image-20240207131536764.png)
 
 ### 安装与解压
 

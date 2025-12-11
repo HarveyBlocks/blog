@@ -344,7 +344,7 @@ public void getData() throws IOException {
 
 >   索引库中存在的文档中, 共涉及了哪些城市 ? 这决定了用户能在前端看见的选项数量
 
-![image-20231228195711226](../assets/Day04-%E6%95%B0%E6%8D%AE%E8%81%9A%E5%90%88/image-20231228195711226.png)
+![image-20231228195711226](../assets/Day04-数据聚合/image-20231228195711226.png)
 
 ```json
 GET /hotel/_search

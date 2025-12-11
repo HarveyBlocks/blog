@@ -122,5 +122,5 @@ PhantomReference
 
 一个对象的finalize方法只会被调用一次
 
-![image-20240519210940014](../assets/Day07-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/image-20240519210940014.png)
+![image-20240519210940014](../assets/Day07-对象引用方式/image-20240519210940014.png)
 

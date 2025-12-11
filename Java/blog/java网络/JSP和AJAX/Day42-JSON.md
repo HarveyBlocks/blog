@@ -266,7 +266,7 @@ objectMapper.configure(
 
 但配置了不报错, 就会有无法检查出隐藏错误的危险, 所以: 
 
-![image-20240426151237738](../../../%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F/assets/Day42-JSON/image-20240426151237738.png)
+![image-20240426151237738](../../../微服务和分布式/assets/Day42-JSON/image-20240426151237738.png)
 
 当然, FastJson也有
 

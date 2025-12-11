@@ -40,7 +40,7 @@ key:value形式的键值对
 
 ### 常见的请求头
 
-![image-20231029203736561](../../assets/Day37-HTTP协议/image-20231029203736561.png)
+![image-20231029203736561](../../../../cg/assets/Day37-HTTP协议/image-20231029203736561.png)
 
 -   HOST指请求服务器的
 
@@ -52,17 +52,17 @@ test/* 表示文本,  \*/*表示所有
 
 
 
-![image-20231029204111728](../../assets/Day37-HTTP协议/image-20231029204111728.png)
+![image-20231029204111728](../../../../cg/assets/Day37-HTTP协议/image-20231029204111728.png)
 
 
 
 
 
-![image-20231029204200916](../../assets/Day37-HTTP协议/image-20231029204200916.png)
+![image-20231029204200916](../../../../cg/assets/Day37-HTTP协议/image-20231029204200916.png)
 
 ## 响应协议
 
-![image-20231029204602797](../../assets/Day37-HTTP协议/image-20231029204602797.png)
+![image-20231029204602797](../../../../cg/assets/Day37-HTTP协议/image-20231029204602797.png)
 
 ### 响应行
 
@@ -74,7 +74,7 @@ HTTP/1.1 200 OK
 
 [响应状态码](https://www.runoob.com/http/http-status-codes.html):
 
-![image-20231029204746688](../../assets/Day37-HTTP协议/image-20231029204746688.png)
+![image-20231029204746688](../../../../cg/assets/Day37-HTTP协议/image-20231029204746688.png)
 
 -   响应头↑
 
