@@ -1,5 +1,7 @@
 # 私信
 
+
+
 ## 服务端处理请求并返回响应并发送消息
 
 ```java
@@ -21,9 +23,12 @@ public class ChatHandler extends SimpleChannelInboundHandler<ChatRequestMessage>
             ctx.writeAndFlush(resp);
         }
 
+
     }
 }
 ```
+
+
 
 ### 客户端接收响应
 

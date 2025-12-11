@@ -6,6 +6,8 @@
 
 ### SQLiteOpenHelper
 
+
+
 SQLiteOpenHelper构造器有四个参数
 
 1. Context
@@ -75,13 +77,23 @@ BookStore.db-journal文件，是一个为了让数据库能够支持事务而产
 
 ![image-20250916222730712](../../assets/Day06-SQLite数据库/image-20250916222730712.png)
 
+
+
 将Virtual Device 上的db文件到出到物理机上
 
 <img src="../../assets/Day06-SQLite数据库/image-20250916223832883.png" alt="image-20250916223832883" style="zoom:50%;" />
 
+
+
+
+
+
+
 使用DB Browser
 
 <img src="../../assets/Day06-SQLite数据库/image-20250916223405296.png" alt="image-20250916223405296" style="zoom:50%;" />
+
+
 
 选择SQL方言
 
@@ -147,6 +159,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
         dbHelper.writableDatabase
     }
 
+
 }
 ```
 
@@ -161,6 +174,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 成功创建
 
 <img src="../../assets/Day06-SQLite数据库/image-20250916230349155.png" alt="image-20250916230349155" style="zoom:50%;" />
+
+
 
 此时版本回退会异常
 
@@ -210,6 +225,10 @@ class MyDatabaseHelper(val context: Context, name: String, version: Int) :
 }
 ```
 
+
+
+
+
 ## CRUD
 
 `SQLiteDatabase `提供了一些不写SQL语句也能执行CRUD的方法
@@ -222,6 +241,10 @@ class MyDatabaseHelper(val context: Context, name: String, version: Int) :
 2. 在未指定添加数据的情况下给某些可为空的列自动赋值NULL
    - 可以直接传入null, 表示不启用这个功能
 3. ContentValues对象, 含有一系列put方法
+
+
+
+
 
 ```kotlin
 fun SQLiteDatabase.addBook() {
@@ -271,6 +294,8 @@ fun ContentValues.putPair(key: String, value: Any?) {
     }
 }
 ```
+
+
 
 ### `update()`
 

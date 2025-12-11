@@ -13,6 +13,8 @@ USE mysql;
 select * from user where user='用户名'&& HOST='主机名';
 ```
 
+
+
 ## 授予权限
 
 -   `TO`

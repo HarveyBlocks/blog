@@ -6,6 +6,8 @@ Kafka的消息都基于topic
 
 ![image-20240408133524862](../assets/Day06-topic/image-20240408133524862.png)
 
+
+
 kafka的消息保存在topic中
 
 ### 创建
@@ -22,6 +24,8 @@ kafka-topics.sh --create --bootstrap-server localhost:9092 --topic test
 Created topic test.
 ```
 
+
+
 ### 查看创建的topic
 
 ```shell
@@ -31,6 +35,10 @@ kafka-topics.sh --list --bootstrap-server localhost:9092
 ```
 test
 ```
+
+
+
+
 
 ## 消息
 
@@ -46,6 +54,8 @@ kafka-console-producer.sh --broker-list localhost:9092 --topic test1
 
 -   `--bootstrap-server HOST:PORT`是一个服务器, 发送消息的目标对象
 -   `--boker-list`可以填多组服务器, 发送消息的目标群体
+
+
 
 ### 创建消费者
 

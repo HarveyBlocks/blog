@@ -4,9 +4,13 @@
 
 十进制数据类型用于规定一个数值。
 
+
+
 ```xml
 <xs:element name="prize" type="xs:decimal"/>
 ```
+
+
 
 ```xml
 <prize>999.50</prize>
@@ -37,6 +41,8 @@
 ```xml
 <xs:element name="prize" type="xs:integer"/>
 ```
+
+
 
 ```xml
 <prize>999</prize>
@@ -76,6 +82,8 @@
 ## 限定
 
 >   Restriction
+
+
 
 -   enumeration
 -   fractionDigits

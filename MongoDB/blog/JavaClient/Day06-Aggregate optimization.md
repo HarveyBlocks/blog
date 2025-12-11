@@ -11,6 +11,8 @@ AggregateIterable<Document> aggregate = collection.aggregate(pipeline);
 Document explain = aggregate.explain(); // 返回一个优化后的聚合操作的文档
 ```
 
+
+
 ## 投影优化
 
 使用 `$project` 时，通常应该是管道的最后一个阶段。
@@ -28,6 +30,8 @@ Document explain = aggregate.explain(); // 返回一个优化后的聚合操作�
 `$project`|`$unset`|`$addFields`|`$set` (称为***`投影阶段`***)之后**紧随**`$match`, MongoDB会将`$match`中
 
 **无需使用**投影阶段**计算**的值的所有Filter移动到投影前的新的 `$match` 阶段。
+
+
 
 优化之前:
 
@@ -104,6 +108,8 @@ List<Bson> pipeline = new AggregatePipelineBuilder().append(Aggregates.addFields
         .build();
 ```
 
+
+
 如果聚合管道包含多个投影或 `$match` 阶段，MongoDB 会对每个 `$match` 阶段执行此优化，将每个 `$match` 移到Filter不依赖的所有投影阶段之前。
 
 ### `$sort`+`$match`
@@ -129,6 +135,10 @@ match会移动到sort之前, 以减少sort需要排序的文档数量
 { $skip: 5 },
 { $project: { status: 1, name: 1 } }
 ```
+
+
+
+
 
 ## 合并优化
 
@@ -201,6 +211,8 @@ sort之后如果没有改变文档数量的操作(例如`$group`和`$unwind`), �
 { $match: { $and: [ { "year" : 2014 }, { "status" : "A" } ] } }
 ```
 
+
+
 ### `$lookup`、`$unwind` 和 `$match` Coalescence
 
 同时满足以下条件
@@ -213,6 +225,8 @@ sort之后如果没有改变文档数量的操作(例如`$group`和`$unwind`), �
 则优化器将 `$unwind` 合并到 `$lookup` 阶段, 同时合并 `$match`
 
 这样可以避免创建大型中间文档
+
+
 
 例如，一个管道包含以下序列：
 

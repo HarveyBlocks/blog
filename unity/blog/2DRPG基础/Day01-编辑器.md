@@ -10,6 +10,8 @@ Editor->Preference->Colors->playmode tint 在运行模式时, 对参数的任何
 
 ![image-20241016132651297](../../assets/Day01-编辑器/image-20241016132651297.png)
 
+
+
 ## 插件
 
 上网查Unity Assets Store
@@ -19,6 +21,8 @@ Window->Package Manager->Package: UnityRegister->MyAssets
 ## Hierarchy
 
 >   层级
+
+
 
 <img src="../../assets/Day01-%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90/image-20241016111022224.png" alt="image-20241016111022224" style="zoom:50%;" />
 
@@ -66,6 +70,8 @@ Hierarchy->
 
 <img src="../../assets/Day01-%E5%AF%BC%E5%85%A5%E8%B5%84%E6%BA%90/image-20241016114419223.png" alt="image-20241016114419223" style="zoom:33%;" />
 
+
+
 ## 叠层
 
 可以使用Ctrl选择多个实体, 统一调整SortingLayer
@@ -109,6 +115,8 @@ Slice->Type->Grace By Cell Count, 依照没行/列的格子数目进行等量切
 Slice->Poivot 锚点, 图片中心轴的位置(图中蓝色小圆圈), 将锚点设置在底部, 方便每次防止人物时进行计算和对齐
 
 ![image-20241016131739176](../../assets/Day01-编辑器/image-20241016131739176.png)
+
+
 
 设置锚点
 
@@ -169,6 +177,8 @@ TilePallette 识别到了实体TileMap
     鼠标的中键对瓦片进行镜像
 
 <img src="../../assets/Day01-%E7%BC%96%E8%BE%91%E5%99%A8/image-20241016215635357.png" alt="image-20241016215635357" style="zoom:50%;" />
+
+
 
 ### Focus
 

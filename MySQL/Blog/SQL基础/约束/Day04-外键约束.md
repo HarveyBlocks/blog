@@ -1,4 +1,5 @@
 
+
 # 外键约束
 
 ![image-20231007233400872](../../../assets/Day04/image-20231007233400872.png)
@@ -8,7 +9,7 @@
 ```mysql
 CREATE TANBLE 表名(
 	字段名 数据类型,
-
+    
     ...
     [CONSTRAINT] [外键名称] FOREIGN KEY(外键字段名) REFERENCES(主列表名) 
 );
@@ -31,11 +32,14 @@ alter table section modify id char(3) primary key / unique ;
 alter table employee
     add constraint fk_employee_section_ID foreign key (section_ID) references section (id);
 
+
 -- 此时删除被指向不可行,因为有外键牵制
 
 alter table employee drop constraint fk_employee_section_ID;
 alter table section drop PRIMARY key ;
 ```
+
+
 
 ## 删除外键
 
@@ -50,6 +54,8 @@ SHOW CREATE TABLE table_name;
 ```
 
 删除外键约束，查找CREATE TABLENAME 找到系统为外键约束添加的名字
+
+
 
 ## 存在外键删除记录
 
@@ -67,17 +73,24 @@ SHOW CREATE TABLE table_name;
 ```mysql
 CREATE TANBLE 表名(
 	字段名 数据类型,
-
+    
     ...
     [CONSTRAINT] [外键名称] FOREIGN KEY(外键字段名) REFERENCES(主列表名) 
     	ON UPDATE 更新行为 ON DELETE 删除行为
 );
+
+
+
 
 ALTER TABLE ADD
 	[CONSTRAINT] 外键名称 FOREIGN KEY(外键字段名) REFERENCES 主表(主表列名) 
 		ON UPDATE 更新行为 ON DELETE 删除行为
 ;
 ```
+
+
+
+
 
 ​     
 

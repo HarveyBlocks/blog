@@ -12,13 +12,15 @@ ${expresion}
 
 -   获取域中存储键为expresion的值
 
+
+
 -   Servlet0.java
 
     ```java
     package com.harvey.response;
-
+    
     import ...
-
+    
     /**
      * ...
      */
@@ -43,6 +45,12 @@ ${expresion}
     }
     ```
 
+    
+
+
+
+
+
 -   hello.jsp
 
 ```jsp
@@ -53,6 +61,8 @@ ${expresion}
 </body>
 </html>
 ```
+
+
 
 ## JavaWeb四大域对象
 
@@ -79,6 +89,10 @@ ${expresion}
 
 [标签](https://www.runoob.com/jsp/jsp-jstl.html)
 
+
+
+
+
 ## 导入坐标
 
 ```xml
@@ -94,12 +108,18 @@ ${expresion}
 </dependency>
 ```
 
+
+
 ## 引入前缀
 
 ```jsp
 <%@ page pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 ```
+
+
+
+
 
 ## if标签
 
@@ -126,6 +146,8 @@ ${expresion}
 </c:if>
 ```
 
+
+
 ## forEach标签
 
 ```jsp
@@ -140,11 +162,15 @@ ${expresion}
     ...
 ```
 
+
+
 ```jsp
 <c:forEach var="i" begin="1" end="5">
    Item <c:out value="${i}"/><p>
 </c:forEach>
 ```
+
+
 
 ```jsp
 <c:forEach items="${brands}" var="brand">

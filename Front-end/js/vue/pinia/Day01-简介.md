@@ -8,6 +8,8 @@ Vue.js 的状态管理库
 
 使用组合式API
 
+
+
 ![image-20250825171352702](../../../assets/Day01-简介/image-20250825171352702.png)
 
 ```shell
@@ -31,6 +33,12 @@ Pinia是一种store
 用于存储整个应用中访问的数据, 例如用户信息
 
 同时应该避免在store中保存本地数据
+
+
+
+
+
+
 
 ## 开始
 
@@ -197,6 +205,8 @@ let count = counter.count; // count 的值永远不会改变, 因为响应式被
 ```js
 const count = storeToRefs(counter).count; // 保留响应式 
 ```
+
+
 
 #### optional api
 

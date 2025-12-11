@@ -55,6 +55,8 @@ bool Treap<T>::treapInsertAdjustByRotation(Stack<BinaryTreeNode<T> *> &trace) {
 
 ### 删除
 
+
+
 删除用二叉搜索树本来的删除没有问题, 两个子树都存在的情况, 用选装将一个子树转上来, 反复直到需要被删除的节点降到了最低
 
 ## 排名-值

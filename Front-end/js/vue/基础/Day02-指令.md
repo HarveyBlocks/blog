@@ -21,6 +21,7 @@ const vueClass = ref("pinkBG")
   <div v-bind:class="vueClass">文本</div>
 </template>
 
+
 <style>
 .pinkBG {
   background-color: lightpink;
@@ -85,6 +86,8 @@ const size = ref(16);
 <div v-bind:style="{ 'font-size': size +'px' }">文本</div>
 ```
 
+
+
 ### 绑定类
 
 #### 绑定变量
@@ -96,6 +99,8 @@ const size = ref(16);
   The class is set with Vue
 </div>
 ```
+
+
 
 className就是一个变量
 
@@ -119,6 +124,10 @@ const className = ref('myClass');
 </style>
 ```
 
+
+
+
+
 #### 绑定对象
 
 ```vue
@@ -129,6 +138,10 @@ const className = ref('myClass');
 
 -   isImportant bool 一个自定义变量, 被vue管理的追踪, 当值为true时, `v-bind:class` 采用值`'importantClass'`
 
+
+
+
+
 #### 绑定数组
 
 ```vue
@@ -137,9 +150,13 @@ const className = ref('myClass');
 
 -   `yelClass`永远被绑定到上面, 相当于永远为true
 
+
+
 ### 简写
 
 `v-bind`指令非常常用, 于是有一个简写形式`:`
+
+
 
 ```vue
 <div :class="className">
@@ -167,6 +184,12 @@ const className = ref('myClass');
 
 因此, 一个标签附带多个类的时候, 样式的属性不要有重复的
 
+
+
+
+
+
+
 ## 条件指令
 
 -   `v-if`
@@ -189,6 +212,8 @@ const className = ref('myClass');
 -   `v-show` 浏览器能更容易做到, 响应更快
 -   **v-if的显示是加载/删除; v-show是修改display样式**
 -   `v-if` 能和`v-else-if` 或者`v-else` 一起使用, 更灵活
+
+
 
 ```vue
 <p v-show="condition">A</p>
@@ -224,7 +249,11 @@ const images = ref([
 
 ![image-20250814210605833](../../../assets/Day02-指令/image-20250814210605833.png)
 
+
+
 ### 遍历对象
+
+
 
 ```vue
 <script setup>
@@ -278,6 +307,8 @@ const image = ref(
 
 ![image-20250814211345220](../../../assets/Day02-指令/image-20250814211345220.png)
 
+
+
 下面是index-element的遍历
 
 ```vue
@@ -329,6 +360,10 @@ function* range(start, end, step) {
 
 ![image-20250814212109448](../../../assets/Day02-指令/image-20250814212109448.png)
 
+
+
+
+
 ### `key` 属性
 
 #### 存在问题
@@ -345,7 +380,11 @@ function* range(start, end, step) {
 
 这样, 被删除元素后面的props都往前填入了一个组件里, 这个组件内的data值是不会被刷新的
 
+
+
 <video src="../../../assets/Day02-指令/v-for存在问题演示.mp4" style="border: 2px solid"></video>
+
+
 
 每次删除第二行的out的内容, 但实际上out删除的却不是第二行, 而是最后一行
 
@@ -355,17 +394,17 @@ function* range(start, end, step) {
 
     ```vue
     <script setup>
-
+    
     import {ref} from "vue";
     import ChildNode from "@/components/ChildNode.vue";
-
+    
     const range = ref(["A", "B", "C", "D", "E", "F"]);
-
+    
     function remove(index) {
       range.value.splice(index,index);
     }
     </script>
-
+    
     <template>
       <button @click="remove(1)">remove 1</button>
       <div >
@@ -379,7 +418,7 @@ function* range(start, end, step) {
     ```vue
     <script setup>
     import {ref} from "vue";
-
+    
     let props = defineProps({
       value: {
         /**
@@ -389,16 +428,18 @@ function* range(start, end, step) {
         required: true,
       }
     });
-
+    
+    
     const data = ref(props.value);
     </script>
-
+    
     <template>
       <div>
         out: {{value}}; in: {{ data }}
       </div>
     </template>
-
+    
+    
     ```
 
 #### 解决
@@ -424,6 +465,8 @@ Root.vue
      ```vue
      <ChildNode v-for="i in range" :value="i.msg" :key="i.id"/>
      ```
+
+
 
 ## v-on
 
@@ -507,6 +550,8 @@ const lightOn = ref(false);
 </style>
 ```
 
+
+
 ![image-20250814223239007](../../../assets/Day04-响应式布局/image-20250814223239007.png)
 
 ### input
@@ -550,6 +595,8 @@ function redInput(e) {
 <div @:mousemove="lightOn = !lightOn">灯的开关</div>
 <div @mousemove="lightOn = !lightOn">灯的开关</div>
 ```
+
+
 
 ## v-on和v-for联合使用
 

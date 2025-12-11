@@ -42,6 +42,8 @@ store.$patch((state) => {
 })
 ```
 
+
+
 ## 监听
 
 比起的 `watch()`，使用 `$subscribe()` 的好处是 *subscriptions* 在 *patch* 后只触发一次

@@ -9,6 +9,8 @@
 
 ![image-20231022161522770](../../assets/Day08-覆盖索引/image-20231022161522770.png)
 
+
+
 ```mysql
 create index user_age_gender on user(age,gender);
 ```

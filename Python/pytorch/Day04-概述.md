@@ -58,6 +58,8 @@ def gradient_descent( X,Y, *, learning_rate,times ):
         b = b - learning_rate * b_gradient
     return w,b
 
+
+
 # 根据数据画出对应的图像
 def plot(X, Y, w, b):
     import matplotlib.pyplot as plt
@@ -69,7 +71,7 @@ def plot(X, Y, w, b):
     y = w * x + b #假设函数
     ax.plot(x, y)
     plt.show()
-
+    
 def test():
     X,Y = create_data()
     # 梯度下降,线性回归

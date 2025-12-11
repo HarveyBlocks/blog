@@ -19,6 +19,7 @@ select @@[session.|global.]变量名;					-- 查看指定变量
 
 -   默认Session
 
+
 ## 设置
 
 ```mysql

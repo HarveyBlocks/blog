@@ -18,6 +18,8 @@ Document first = collection.find(Filters.and(
 )).first();
 ```
 
+
+
 对象之间可以进行比较, 但是**不建议**, 因为要求整个Bson完全匹配, 字段顺序不对也会无法匹配
 
 ```java
@@ -141,7 +143,7 @@ public class MapDocumentBuilder {
 
         Key(String field) {this.field = field;}
     }
-
+    
     public static Bson empty() {
         return new Document();
     }
@@ -255,17 +257,25 @@ FindIterable<Document> iterable = collection.find(Filters.gt(
 }
 ```
 
+
+
+
+
 ```java
 collection.find(Filter.lte("arr.f3", 2));
 ```
 
 表示Document的`arr`数组中, 存在元素满足`f3`成员小于等于2的, 就匹配
 
+
+
 ```java
 collection.find(Filter.lte("arr.0.f3", 2));
 ```
 
 表示Document的`arr`数组中, 索引为0的元素的`f3`成员满足小于等于2的, 就匹配
+
+
 
 亦可使用elemMatch, 表示数组中存在元素, 元素满足各个条件
 
@@ -282,11 +292,15 @@ collection.find(elemMatch("arr", Document.parse("{ f3: { $gt: 1, $lte: 3 } }")))
 
 表示目标文档的"arr"数组存在元素, 其存在`f3`字段, 且`f3`满足`$gt: 1`且` $lte: 3 `的文档, 则该`arr`字段所在文档被匹配
 
+
+
 ```java
 collection.find(elemMatch("arr", new Document().append("f3",1).append("f2","x")));
 ```
 
 表示目标文档的"arr"数组存在元素, 该元素存在字段`f3`等于1且存在字段`f2`等于`"x"`, 可以有其他字段, 则该`arr`字段所在文档被匹配
+
+
 
 ```java
 collection.find(and(eq("arr.f3", 1), eq("arr.f1", "x")));
@@ -294,9 +308,13 @@ collection.find(and(eq("arr.f3", 1), eq("arr.f1", "x")));
 
 表示目标文档的"arr"数组存在元素, 其f3字段值是1, 且目标文档的"arr"数组存在元素, 其f1字段值是"x", 满足条件的两个元素不一定是同一个元素
 
+
+
 ## 子元素的投影
 
 对于数组元素或嵌入式文档的元素, 进行特别的投影
+
+
 
 - 使用Dot来返回某个嵌入式文档的特定子元素
 

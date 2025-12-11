@@ -62,6 +62,8 @@ kube-scheduler-node1            1/1     Running   2 (6h15m ago)   8h
 
 ```
 
+
+
 ## CRUD
 
 ### 查及ns属性
@@ -71,6 +73,8 @@ get/describe
 ```shell
 kubectl describe ns default
 ```
+
+
 
 ```json
 # kubectl get ns default -o json
@@ -102,6 +106,8 @@ kubectl describe ns default
 
 -   `Actice`
 -   `Terming` 正在删除的命名空间, ns在删除的时候会比较慢
+
+
 
 #### 资源限制
 

@@ -24,6 +24,10 @@ MongoDB是一个文档数据库, NoSQL
 | index             | 索引                                       |
 | primary key       | 主键, MongoDB**自动将`_id`字段设置为主键** |
 
+
+
+
+
 ## 特点
 
 - **索引优化查询**：MongoDB 允许用户为文档中的任意属性创建索引

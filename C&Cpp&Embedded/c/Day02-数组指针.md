@@ -2,15 +2,20 @@
 
 数组指针+1是加一个数组的长度
 
+
+
 -   数组指针是指针
     -   是指向数组的指针
 -   指针数组是数组
     -   很多指针的数组
 
+
+
 ```C
 /*数组指针ArrayPoint*/
 //指向数组的指针
 #include<stdio.h>
+
 
 void test1(void){
 	int a[3][5];
@@ -21,7 +26,13 @@ void test1(void){
 }
 ```
 
+
+
+
+
 ## 数组指针的定义+数组指针作为参数实现函数传参
+
+
 
 ```C
 void test(){
@@ -36,6 +47,12 @@ void test(){
 }
 ```
 
+
+
+
+
+
+
 -   嗯?我怎么感觉你是((二维数组的)元素(一维数组的地址))的指针数组)
 
 ```C
@@ -47,7 +64,11 @@ void test(){
 	p = b;
 ```
 
+
+
 ### 一维的数组指针指向二位的数组
+
+
 
 ```C
 void test3(int (*a)[20]);
@@ -69,7 +90,7 @@ void test2() {
 		putchar('\n');
 	}
 	//斯巴拉西!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+		
 	for (int i = 0; i < 10; i++) {
 		printf("a[%d]的地址=%p\n", i, a + i);
 		//a+1比大了(20*4)个字节
@@ -102,6 +123,7 @@ void test3(int (*a)[20]) {
 	}
 }
 
+
 int main() {
 	test2();
 	return 0;
@@ -129,6 +151,10 @@ void test4() {
 }
 ```
 
+
+
+
+
 ## 数组取地址
 
 ```C
@@ -138,14 +164,14 @@ void test5() {
 	printf(" a  =%p\n", a);//P
 	printf(" a+1=%p\n", a + 1);//p+4
 	//a是数组的第一个元素的地址,类型是整形指针(int *)
-
+	
 	//对a的数组名取地址
 	printf("&a  =%p\n", &a);//P
 	printf("&a+1=%p\n", &a + 1);//P+4*a
 	//&a是a数组的首地址,类型是整形数组指针(int (*)[10])
-
+	
 	//	printf("&a  =%p\n",&(a+1));错的
-
+	
 	int (*p)[10] = &a;//必须是10
 	printf(" p  =%d\n", p);//P
 	printf(" p+1=%d\n", p + 1);//P+4*a
@@ -154,7 +180,11 @@ void test5() {
 
 ```
 
+
+
 ### 二维数组取地址
+
+
 
 ```C
 //二维数组&数组名取地址
@@ -163,7 +193,7 @@ void test6(){
 	printf(" a  =%p\n",a);//P
 	printf(" a+1=%p\n",a+1);//P+4*16
 	//a是数组的第一个一维数组的地址,类型是整形数组指针(int (*)[16])
-
+	
 	printf("&a  =%p\n",&a);//P
 	printf("&a+1=%p\n",&a+1);//P+2*4*16
 	//&a是a数组的首地址,类型是二位数组指针(int (*)[2][16])
@@ -180,7 +210,7 @@ void test(){
 	for(int i=0;i<10;i++){
 		printf("a+%d=%p ",i,a+i);
 		printf("p+%d=%p\t",i,p+i);//两个完全等价
-
+        
 		printf("a[%d]=%d ",i,a[i]);
 		printf("*(a+%d)=%d ",i,*(a+i));
 		printf("*(p+%d)=%d ",i,*(p+i));
@@ -189,19 +219,21 @@ void test(){
 }
 ```
 
+
+
 -   二维数组和指针可视化
 
 ```C
 void test7() {
   	int a2[2][5] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
 	int (*p2)[5] = a2;
-
+	
 	printf("a2+i=%%000000ppppppppp ");
 	printf("p2+i=%%000000ppppppppp\t");
-
+			
 	printf("*(a2+i/5)+i%5=%%ppppppppppp ");
 	printf("*(p2+i/5)+i%5=%%ppppppppppp\t");
-
+			
 	printf("a2[i/5][i%5]=%d\t\t");
 	printf("*(*(a2+i/5)+i%5)=%d\t");
 	printf("*(*(p2+i/5)+i%5)=%d\t");
@@ -209,10 +241,10 @@ void test7() {
 	for (int i = 0; i < 10; i++) {
 		printf("a2+%d=%p ", i, a2 + i);
 		printf("p2+%d=%p\t", i, p2 + i); //两个完全等价
-
+		
 		printf("*(a2+%d)+%d=%p ",i/5,i%5,*(a2+i/5)+i%5);
 		printf("*(p2+%d)+%d=%p\t",i/5,i%5,*(p2+i/5)+i%5);
-
+		
 		printf("a2[%d][%d]=%d\t",i/5,i%5,a2[i/5][i%5]);
 		printf("*(*(a2+%d)+%d)=%d\t\t",i/5,i%5,*(*(a2+i/5)+i%5));
 		printf("*(*(p2+%d)+%d)=%d\t\t",i/5,i%5,*(*(p2+i/5)+i%5));

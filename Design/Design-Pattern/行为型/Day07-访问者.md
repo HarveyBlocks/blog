@@ -4,11 +4,15 @@
 
 在不改变数据结构的前提下定义作用于元素的操作
 
+
+
 不改变对象结构的元素的情况下, 可以对对象结构中的元素增加新的功能,扩展性好
 
 复用性好, 访问者作为参数可以被任意选择, 对象结构可以方便地实现对元素行为逻辑的调用
 
 分离无关行为, 把相关的行为封装在一起构成一个访问者, 这样每个访问者的行为都比较单一
+
+
 
 ## 结构
 
@@ -75,6 +79,8 @@ public class ElementImpl1 implements Element {
 }
 ```
 
+
+
 ### Visitor
 
 ```java
@@ -83,6 +89,8 @@ public interface Visitor {
     void visit(ElementImpl2 element);
 }
 ```
+
+
 
 ### ConcreteVisitor
 
@@ -98,6 +106,8 @@ public class VisitorImpl implements Visitor {
     }
 }
 ```
+
+
 
 ### Object Structure
 
@@ -116,6 +126,8 @@ public class ObjectStructure {
     }
 }
 ```
+
+
 
 ### Demo
 
@@ -174,6 +186,8 @@ structure.action(new VisitorImpl());
         show(t); // Person
     }
     ```
+
+
 
 ### 双分派
 

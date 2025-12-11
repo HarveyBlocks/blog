@@ -82,6 +82,9 @@ spring:
 
     -   ![image-20240116132837437](../../../assets/Day07-Sentinel/image-20240116132837437.png)
 
+
+
+
 ## 请求限流
 
 ![image-20240116133407586](../../../assets/Day07-Sentinel/image-20240116133407586.png)
@@ -96,7 +99,11 @@ spring:
 
     ![image-20240116134342639](../../../assets/Day07-Sentinel/image-20240116134342639.png)
 
+
+
 ## 线程隔离
+
+
 
 对业务做线程隔离
 
@@ -109,6 +116,10 @@ feign:
   sentinel:
     enabled: true
 ```
+
+
+
+
 
 ### 线程隔离规则
 
@@ -195,6 +206,8 @@ public class CartServiceApplication {
 
 ![image-20240116145505173](../../../assets/Day07-Sentinel/image-20240116145505173.png)
 
+
+
 ![image-20240116145714108](../../../assets/Day07-Sentinel/image-20240116145714108.png)
 
 ## 服务熔断
@@ -203,6 +216,8 @@ public class CartServiceApplication {
 
 -   在请求超出阈值之后**熔断**, **拦截一切请求**
 -   在服务**恢复**时, **放行**请求
+
+
 
 ### 状态机
 
@@ -224,6 +239,8 @@ public class CartServiceApplication {
 ![image-20240116151217004](../../../assets/Day07-Sentinel/image-20240116151217004.png)
 
 ![image-20240116151241884](../../../assets/Day07-Sentinel/image-20240116151241884.png)
+
+
 
 -   测试![image-20240116151754654](../../../assets/Day07-Sentinel/image-20240116151754654.png)
 
@@ -285,6 +302,8 @@ public class CartServiceApplication {
     ```
 
     `com.alibaba.csp.sentinel.slots.block.degrade.DegradeRule`
+
+    
 
 #### 配置(v.)Sentinel配置所在的(a.)数据源
 

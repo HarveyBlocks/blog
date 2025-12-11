@@ -1,5 +1,7 @@
 # gRpc通信方法
 
+
+
 -   简单RPC/一元RPC
     -   Unary RPC
 -   服务端流式RPC
@@ -17,7 +19,11 @@ Client-Server
 
 点对点
 
+
+
 客户端阻塞等待服务端响应
+
+
 
 ```protobuf
 service UserService{
@@ -26,6 +32,8 @@ service UserService{
 }
 ```
 
+
+
 ## Server Streaming RPC
 
 一个请求对象, 服务端可以回传多个结果对象
@@ -33,6 +41,8 @@ service UserService{
 结果对象是分批分期传输的
 
 两个对象需要长期连接, 知道服务端打上结束的标记
+
+
 
 例如垃圾百度云的下载
 
@@ -76,6 +86,8 @@ while (iterator.hasNext()){
 ```
 
 经测试, 每次传完next之后, 都会使客户端接收到消息, 即hasNext不再阻塞, 返回true
+
+
 
 ## Client Streaming RPC
 
@@ -187,9 +199,13 @@ public static void doClient(ManagedChannel clientChannel) throws InterruptedExce
 }
 ```
 
+
+
 ## Bi-direcional RPC
 
 双方不定时地互相发数据
+
+
 
 ```protobuf
 service UserService{
@@ -197,6 +213,8 @@ service UserService{
   rpc queryById(stream Id) returns(stream UserDto){};
 }
 ```
+
+
 
 与Client Streming RPC 唯一的区别:
 
@@ -239,19 +257,31 @@ try {
 
 客户端和服务端互相不知道那个响应对应的是哪个请求
 
+
+
 ## 拦截器
+
+
 
 ### 一元拦截器
 
 针对于一元RPC的拦截器
 
+
+
+
+
 ### Stream Tracer
 
 监听流, 流拦截器
 
+
+
 ## Retry Policy
 
 客户端重试机制
+
+
 
 ## NameResover
 
@@ -265,6 +295,10 @@ try {
 
 -   consult
 -   etcd
+
+
+
+
 
 ## 负载均衡
 
@@ -283,6 +317,10 @@ grpc:
     GLOBAL:
       default-load-balancing-policy: round_robin
 ```
+
+
+
+
 
 ## 微服务
 

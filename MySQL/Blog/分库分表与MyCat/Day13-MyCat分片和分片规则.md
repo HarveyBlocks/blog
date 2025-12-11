@@ -18,6 +18,8 @@
     -   描述表
     -   品牌表
 
+
+
 ## 创建库和表
 
 每个 节点,每个表都创建shopping库,即每个服务器的shopping库创建各自的表
@@ -34,33 +36,34 @@
         <?xml version="1.0"?>
         <!DOCTYPE mycat:schema SYSTEM "schema.dtd">
         <mycat:schema xmlns:mycat="http://io.mycat/">
-
+        
             <schema name="SHOPING" checkSQLschema="true" sqlMaxLimit="100">
-
+        
                 <!--用户表-->
                 <table name = "tb_user_msg" dataNode="dn1" primaryKey="id"/>
                 <table name = "tb_user_address" dataNode="dn1" primaryKey="id"/>
                 <table name = "tb_user_province" dataNode="dn1" primaryKey="id"/>
                 <table name = "tb_user_city" dataNode="dn1" primaryKey="id"/>
                 <table name = "tb_user_regin" dataNode="dn1" primaryKey="id"/>
-
+                
                 <!--订单表-->
                 <table name = "tb_order_items" dataNode="dn2" primaryKey="id"/>
                 <table name = "tb_order_msg" dataNode="dn2" primaryKey="id"/>
-
+                
+        
                 <!--商品表-->
                 <table name = "tb_goods_desc" dataNode="dn3" primaryKey="id"/>
                 <table name = "tb_goods_brand" dataNode="dn3" primaryKey="id"/>
                 <table name = "tb_goods_items" dataNode="dn3" primaryKey="id"/>        
-
+        
                 <!--垂直分库不用配置分页规则-->
-
+        
             </schema>
-
+        
             <dataNode name="dn1" dataHost="localhost1" database="shoping" />
             <dataNode name="dn2" dataHost="localhost2" database="shoping" />
             <dataNode name="dn3" dataHost="localhost3" database="shoping" />
-
+        
             <dataHost name="localhost1" maxCon="1000" minCon="10" balance="0"
                       writeType="0" dbType="mysql" dbDriver="jdbc" switchType="2"  slaveThreshold="100">
                 <heartbeat>show slave status</heartbeat>
@@ -75,7 +78,7 @@
                            url="jdbc:mysql://192.168.200.213:3306?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8"
                            user="root" password="123456"/>
             </dataHost>
-
+            
             <dataHost name="localhost3" maxCon="1000" minCon="10" balance="0"
                       writeType="0" dbType="mysql" dbDriver="jdbc" switchType="2"  slaveThreshold="100">
                 <heartbeat>show slave status</heartbeat>]
@@ -83,7 +86,7 @@
                            url="jdbc:mysql://192.168.200.214:3306?useSSL=false&amp;serverTimezone=Asia/Shanghai&amp;characterEncoding=utf8"
                            user="root" password="123456"/>
             </dataHost>
-
+        
         </mycat:schema>
         ```
 
@@ -97,6 +100,8 @@
         <!--表级权限设置-->
     </user>
     ```
+
+    
 
 ## 测试与产生的问题
 
@@ -136,6 +141,8 @@
 -   一改全改,一加全加,一删全删
 -   字典表常常作为全局表
 
+
+
 -   配置方法:
 
     1.  **三个分片数据节点都设置为全局表的数据节点**
@@ -149,6 +156,8 @@
     <table name = "tb_user_regin" dataNode="dn1,dn2,dn3" primaryKey="id" type="global"/>
     ```
 
+
+
 # 水平拆分
 
 tb_log
@@ -156,6 +165,8 @@ tb_log
 ## 需求
 
 >   不论表有多大,都要均匀地分散在三个分片中
+
+
 
 ## 配置
 
@@ -174,6 +185,8 @@ tb_log
 <dataNode name="dn6" dataHost="localhost3" database="log" />
 ```
 
+
+
 -   用户配置参考入门,增加一个log库
 
 ```xml
@@ -186,9 +199,13 @@ tb_log
 
 -   分片规则:均匀分布?取模分片!`mod-long`,也就是取余
 
+
+
 # 分片规则
 
 >   常见的九种分片规则
+
+
 
 ## 不同的表要用同一个分片规则
 
@@ -213,11 +230,19 @@ tb_log
 </tableRule>
 ```
 
+
+
+
+
+
+
 ## 范围分片
 
 >auto-sharing-long
 >
 >rang-lang
+
+
 
 上面使用了`rule="auto-sharing-long"`,引用了conf/rule.xml
 
@@ -262,6 +287,8 @@ tb_log
 
     在autopartition-long.txt继续写就可以解决这个问题
 
+
+
 ## 取模分片
 
 >   mod-long
@@ -290,6 +317,8 @@ tb_log
     a%count=1->db2
 
     a%count=2->db3
+
+
 
 ## 一致性Hash
 
@@ -325,6 +354,9 @@ tb_log
     </funcion>
     ```
 
+
+
+
 ## 枚举分片
 
 >   sharding-by-intfile-enumstatus
@@ -356,6 +388,8 @@ tb_log
         <property name="mapFile">partition-hash-int.txt</property>
     </funcion>
     ```
+
+    
 
 -   partition-hash-int.txt
 
@@ -432,11 +466,15 @@ tb_log
 
     ![image-20231211152247072](..\..\assets/Day13-MyCat分片和分片规则/image-20231211152247072.png)
 
+
+
 ### 和取模分片的区别:
 
 | id       | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
 | -------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 分片结果 | 0    | 1    | 2    | 0    | 1    | 2    | 0    | 1    | 2    |
+
+
 
 | id       | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
 | -------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -444,15 +482,23 @@ tb_log
 
 -   当批量插入id**连续的数据**时,固定分片Hash算法**不会**在**每个分片之间不断转变**,而取模每一个id(连续的)会不断转变分片
 
+
+
+
+
 ## 字符串Hash解析算法
 
 -   解决字符串无法进行Hash算法
+
+
 
 原理:
 
 1. 截取子字符串
 2. 算Hash值
 3. &1023
+
+
 
 ```xml
 <tableRule name="sharding-by-stringhash">
@@ -486,6 +532,8 @@ tb_log
 -   配置几天位一组
 -   一组里的天分完了换一个分片
 -   几组都轮完了就从头
+
+ 
 
 ```xml
 <tableRule name="sharding-by-date">

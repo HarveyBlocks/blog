@@ -4,6 +4,8 @@
 
 交流电压220V, 手机充电电压5V, 头子充当了变压器的作用
 
+
+
 适配器模式就是将一个类的接口转换为客户希望的另一个接口, 使原本由于接口不兼容而不能一起工作的类一起工作
 
 适配器分为*类适配器模式* 和 *对象适配器模式*  
@@ -16,6 +18,8 @@
 
 *类适配器* 要求了解现有组件库中相关组件的内部结构
 
+
+
 *接口适配器模式*  当不希望实现目标接口中所有的方法时, 可以创建AbstractAdapter, 实现所有方法但没有实际业务, 通过继承该抽象类实现方法实现部分功能的转换
 
 ## 适用场景
@@ -23,6 +27,8 @@
 老版本系统的类**满足功能**, 但**接口规范**不同
 
 第三方组件接口的定义和自己要求的接口定义不同
+
+
 
 ## 结构
 
@@ -75,6 +81,8 @@ public interface Target {
 
 规范在接口
 
+
+
 ### Client
 
 ```java
@@ -91,6 +99,8 @@ public class AdaptDemoClient {
 ```
 
 需求在Client
+
+
 
 ### Adaptee
 
@@ -164,6 +174,10 @@ Adapter <--Client
 Client --> AbstractTarget
 ```
 
+
+
+
+
 ### Target&Adaptee
 
 同上
@@ -208,6 +222,10 @@ AdaptDemoClient client = new AdaptDemoClient(
 client.runTarget();
 ```
 
+
+
+
+
 ## JDK中的使用
 
 -   Target
@@ -250,7 +268,10 @@ Reader <-- StreamDecoder
 StreamDecoder <-- InputStreamReader
 Reader <|-- InputStreamReader : extend
 
+
 ```
+
+
 
 ```java
 package java.io;
@@ -266,13 +287,13 @@ public class InputStreamReader extends Reader {
         sd = StreamDecoder.forInputStreamReader(in, this,
                 Charset.defaultCharset()); // ## check lock object
     }
-
+	
     // 其他用于高可用的构造器...
-
+    
     public String getEncoding() {
         return sd.getEncoding();
     }
-
+    
 	@Override
     public int read() throws IOException {
         return sd.read();

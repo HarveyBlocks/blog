@@ -25,6 +25,8 @@
 
 ## 相关指令
 
+
+
 ### `expires`
 
 控制响应头中的`Expires`和`Cache-Control`
@@ -50,6 +52,10 @@ expires epoch | max | off;
     -   指定`Expire` 的值为`31 December2037 23:59:59GMT`
     -   `Cache-Contro`l的值为10年
 -   `off`默认不缓存
+
+
+
+
 
 ### `add_header`
 

@@ -13,6 +13,8 @@
 
 Reddison是有Spring-starter的, 但是会覆盖Spring提供的Redis实现, 所以不推荐
 
+
+
 ## 配置客户端
 
 ```java
@@ -35,7 +37,7 @@ public class ApplicationConfig {
         // 也可以使用config.useClusterServers()添加集群地址
         return Redisson.create(config);
     }
-
+    
 }
 ```
 
@@ -84,6 +86,8 @@ public class RedissonLock {
 
 ## Redisson可重入锁原理
 
+ 
+
 ### 可重入锁
 
 ```java
@@ -123,11 +127,15 @@ method释放锁
 释放锁
 ```
 
+
+
 会去判断进入线程的是不是自己的这个线程, 是自己的线程就会允许获取锁
 
 为了实现上述**method里的锁释放时只会释放掉其对应的锁**, 可重入锁会记录一个线程获取了几次锁
 
 -   类似于栈的思想, 但是对于栈来说, 栈里的每一个数据都是不同的, 但是如果时获取可重入锁, 锁都是相同的, 或者说, 可重入锁和其锁中锁都只有两种状态: 没占由(包括没获取和已释放) 和 占用. 因此每一把锁都可以抽象成0 和 1,即用一个数值来代表栈 ,而不需要数据结构
+
+
 
 ### Redis分布式可重入锁的实现原理
 
@@ -227,7 +235,7 @@ method释放锁
     local key = KEYS[1];
     local threadId = ARGV[1];
     local releaseTime = ARGV[1];
-
+    
     -- 判断当前锁是否还被自己持有
     if(redis.call('hExists',key,threadId)) then
         return nil;

@@ -36,7 +36,11 @@
         (integer) 4
         ```
 
+        
+
 -   不包含特殊字符
+
+
 
 ## BigKey
 
@@ -88,31 +92,33 @@
     # Scanning the entire keyspace to find biggest keys as well as
     # average sizes per key type.  You can use -i 0.1 to sleep 0.1 sec
     # per 100 SCAN commands (not usually needed).
-
+    
     [00.00%] Biggest string found so far '"num"' with 5 bytes
     [00.00%] Biggest string found so far '"item:id:50002"' with 161 bytes
     [00.00%] Biggest string found so far '"item:id:10003"' with 459 bytes
     [00.00%] Biggest hash   found so far '"hot:shop:8"' with 2 fields
     [35.71%] Biggest string found so far '"item:id:10004"' with 467 bytes
     [35.71%] Biggest zset   found so far '"shop:geo:1"' with 9 members
-
+    
     -------- summary -------
-
+    
     Sampled 28 keys in the keyspace!
     Total key length in bytes is 343 (avg len 12.25)
-
+    
     Biggest   hash found '"hot:shop:8"' has 2 fields
     Biggest string found '"item:id:10004"' has 467 bytes
     Biggest   zset found '"shop:geo:1"' has 9 members
-
+    
     0 lists with 0 items (00.00% of keys, avg size 0.00)
     9 hashs with 18 fields (32.14% of keys, avg size 2.00)
     17 strings with 3082 bytes (60.71% of keys, avg size 181.29)
     0 streams with 0 entries (00.00% of keys, avg size 0.00)
     0 sets with 0 members (00.00% of keys, avg size 0.00)
     2 zsets with 14 members (07.14% of keys, avg size 7.00)
-
+    
     ```
+
+    
 
 -   scan扫描
 
@@ -148,9 +154,9 @@
     ```java
     public static final int STR_MAX_LEN = 10*1024;
     public static final int HASH_MAX_LEN = 500;
-
+    
     private Jedis jedis;
-
+    
     @BeforeEach
     void setUp() {
         // 1.建立连接
@@ -160,12 +166,12 @@
         // 3.选择库
         jedis.select(0);
     }
-
+    
     @Test
     void testScan() {
         int maxLen = 0;
         long len = 0;
-
+    
         String cursor = "0";
         do {
             // 扫描并获取一部分key
@@ -213,7 +219,7 @@
             }
         } while (!cursor.equals("0"));
     }
-
+    
     @AfterEach
     void tearDown() {
         if (jedis != null) {
@@ -229,6 +235,10 @@
 -   网络监控
 
     自定义工具, 监控进出Redis的网络数据, 超出预警值时主动告警
+
+
+
+
 
 ### 处理BigKey
 
@@ -248,6 +258,8 @@
     127.0.0.1:6379> unlink num name
     (integer) 2
     ```
+
+
 
 #### 拆解Bigkey
 

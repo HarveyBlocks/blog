@@ -5,6 +5,8 @@
 -   **创造了一套规则(接口),用于操作所有不同的关系型数据库**
     -   实现类是关系型接口自己公司自己写的
 
+
+
 -   数据库的实现类也叫做**驱动**的.jar包
 
 ![image-20231009193046103](../../assets/Day32/homeschool-f10a98.png)
@@ -29,7 +31,7 @@ public class JDBCDemo {
         String username = "root";
         String password = "123456";
         //以上这些可以写道属性文件.properties里去
-
+        
         Connection conn = DriverManager.getConnection(url, username, password);
 
         //定义sql指令,结尾分号可写可不写

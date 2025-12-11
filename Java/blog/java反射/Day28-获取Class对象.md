@@ -40,6 +40,8 @@ Class.forName("全.包.名.类名")
 
 <img src="../../assets/Day28/image-20230908234010367.png" alt="image-20230908234010367" style="zoom:50%;" />
 
+
+
 全类名的粘贴:
 
 <video src="../../typora-user-images/Day28/LearnLambda – Demo.java 2023-09-08 23-45-14.mp4"></video>

@@ -61,6 +61,8 @@ graph TD
 
 软件: LVS, Nginx, Hayproxy也能做
 
+
+
 ### 七层负载均衡
 
 基于虚拟URL或主机IP

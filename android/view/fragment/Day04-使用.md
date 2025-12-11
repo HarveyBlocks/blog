@@ -96,6 +96,8 @@ class LeftFragment : BaseFragment<FragmentLeftBinding>(FragmentLeftBinding::infl
 class RightFragment: BaseFragment<FragmentRightBinding>(FragmentRightBinding::inflate)
 ```
 
+
+
 ### 注册到Activity
 
 在Activity布局两个Fragment, 使其左右两边
@@ -197,6 +199,7 @@ class LeftFragment : BaseFragment<FragmentLeftBinding>(FragmentLeftBinding::infl
 ```kotlin
 class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::inflate) {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val leftFragment = supportFragmentManager.findFragmentById(R.id.leftLayout)
@@ -226,6 +229,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 ```
 
 由此, `replaceFragment`其实使用了一个事务, supportFragmentManager是父类的属性
+
+
 
 ## 返回栈
 
@@ -276,6 +281,8 @@ private fun replaceFragment(
 }
 ```
 
+
+
 ## 和Activity的交互
 
 ### 从Activity中获取Fragment
@@ -315,6 +322,8 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     Log.i("FragmentLeft","${mainActivity.binding.root.id}")
 }
 ```
+
+
 
 或者使用Fragment的方法`requireActivity()`
 

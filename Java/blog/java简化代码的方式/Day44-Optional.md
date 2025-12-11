@@ -45,6 +45,8 @@ isocode = isocode.toUpperCase();
     Optional<School> schoolOpt2 = Optional.ofNullable(value);
     ```
 
+
+
 ## 使用
 
 ### 获取对象
@@ -99,6 +101,8 @@ schoolOpt.ifPresentOrElse(consumer,  // 执行
 ```java
 School school = schoolOpt.orElse(other);
 ```
+
+
 
 ```java
 public void test() {

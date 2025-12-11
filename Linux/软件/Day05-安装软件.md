@@ -61,6 +61,8 @@ DNS1=114.114.114.114
 
 ## apt命令为Ubuntu安装软件
 
+
+
 ### 在windows上安装Ubuntu环境
 
 ```bash
@@ -95,9 +97,13 @@ sudo su - root
 
 输入用户密码就行,不需要root密码
 
+
+
 ### 使用apt
 
 Ubuntu的软件安装包时`.deb`的文件, 与centos的不同
+
+
 
 ```bash
 apt [-y] [install/remove/search] 软件名称

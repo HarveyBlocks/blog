@@ -29,6 +29,8 @@
 
 -   提供Restful接口, 可被任何语言调用
 
+
+
 ## Lucene技术
 
 >elasticsearch 的底层技术实现
@@ -102,6 +104,8 @@ MySQL的根据ID形成B+树,然后根据搜索,很快
 
 ![image-20231223131222393](../assets/Untitled/image-20231223131222393.png)
 
+
+
 ![image-20231223131312770](../assets/Untitled/image-20231223131312770.png)
 
 -   Schema叫约束, 外键约束, 主键约束
@@ -157,6 +161,8 @@ docker network create es-net
     docker load -i es.tar
     ```
 
+
+
 ### 运行
 
 -   运行dik,部署单点es
@@ -185,12 +191,14 @@ docker network create es-net
     -p 5601:5601  \
     kibana:7.12.1
     ```
-
+    
     ```bash
     mkdir -p /mydata/elasticsearch/config
     mkdir -p /mydata/elasticsearch/data
     echo "http.host: 0.0.0.0" > /mydata/elasticsearch/config/elasticsearch.yml
     ```
+    
+    
 
 ### 访问
 
@@ -219,6 +227,8 @@ docker network create es-net
     或用浏览器
 
     ![image-20231223232256251](../assets/Day01-ES介绍和安装/image-20231223232256251.png)
+
+
 
 ### 老大的Complie
 
@@ -272,15 +282,21 @@ elasticsearch:
             - fzuhelper
 ```
 
+
+
 ### 简单使用
 
 ![image-20231223232746611](../assets/Day01-ES介绍和安装/image-20231223232746611.png)
+
+
 
 -   选择自己玩儿
 
 ![image-20231223233031103](../assets/Day01-ES介绍和安装/image-20231223233031103.png)
 
 -   方便的DSL控制台
+
+
 
 ![image-20231223232956422](../assets/Day01-ES介绍和安装/image-20231223232956422.png)
 
@@ -317,6 +333,11 @@ docker volume inspect es-plugins
     ```bash
     docker restart es
     ```
+
+
+
+
+
 
 ### 简单使用IK分词器
 
@@ -379,7 +400,7 @@ docker volume inspect es-plugins
         }
       ]
     }
-
+    
     ```
 
 -   标准中文分词
@@ -497,6 +518,8 @@ docker volume inspect es-plugins
     }
     ```
 
+    
+
     结果
 
     ```json
@@ -561,6 +584,8 @@ docker volume inspect es-plugins
 
 -   `ik_smart`:最少切分
 -   `ik_max_word`:最细切分
+
+
 
 例子:
 
@@ -707,6 +732,8 @@ POST /_analyze
     -   占内存多
     -   比较精准的查询
 
+
+
 ### IK分词器词典的拓展和停用
 
 要修改词典, 需要配置ik分词器目录中的config目录下的`IKAnalyzer.cfg.xml`文件指定`拓展字典`和`停止词字典`
@@ -728,6 +755,12 @@ POST /_analyze
 	<!-- <entry key="remote_ext_stopwords">words_location</entry> -->
 </properties>
 ```
+
+
+
+
+
+
 
 -   拓展
 
@@ -753,7 +786,8 @@ POST /_analyze
         ![image-20231225134428721](../assets/Day01-ES介绍和安装/image-20231225134428721.png)
 
         ```txt
-
+        
+        
         ```
 
 -   测试

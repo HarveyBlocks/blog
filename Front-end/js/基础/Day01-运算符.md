@@ -6,11 +6,15 @@
 
 >   Exponentiation ([ES2016](https://www.w3ccoo.com/js/js_es6.html)) 
 
+
+
 ```js
 console.log(3 ** 2);
 ```
 
 ### `+`字符串连接
+
+
 
 ```js
 console.log('A' + 'B');
@@ -32,6 +36,8 @@ console.log('A' + 5);
     let x = 5;
     console.log(x === '5'); // false
     ```
+
+
 
 ### 比较运算
 
@@ -92,6 +98,8 @@ const obj2 = { ...obj1 }; // obj2: { a: 1, b: 2 }
 const obj3 = { b: 3, c: 4 };
 const mergedObj = { ...obj1, ...obj3 }; // mergedObj: { a: 1, b: 3, c: 4 }
 ```
+
+
 
 ## 表
 
@@ -168,8 +176,12 @@ console.log(typeOfType === type); // t
 | >>     | 有符号右位移 |
 | >>>    | 零填充右位移 |
 
+
+
 1.   将数字转换为 **32 位有符号整数**
 2.   结果将转换回 64 位 JavaScript 数。
+
+
 
 ```js
 console.log(~0.7);

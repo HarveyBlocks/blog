@@ -14,7 +14,11 @@ ViewModel的生命周期和Activity不同，它可以保证在手机屏幕发生
 
 **只有当Activity退出的时候ViewModel才会跟着Activity一起销毁**
 
+
+
 ![image-20250924214223206](../../assets/Day14-ViewModel/image-20250924214223206.png)
+
+
 
 ## 基本用法
 
@@ -52,6 +56,8 @@ dependencies {
 </LinearLayout>
 ```
 
+
+
 ### ViewModule声明
 
 ```kotlin
@@ -59,6 +65,8 @@ class MainViewModel : ViewModel() {
     var counter = 0;
 }
 ```
+
+
 
 ### MainActivity使用
 
@@ -104,6 +112,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 就创建一个工厂
 
+
+
 ```kotlin
 open class MainViewModel(start: Int) : ViewModel() {
     var counter = start;
@@ -133,6 +143,10 @@ viewModel =
 Model-View-ViewModel 架构
 
 ![image-20250927001537619](../../assets/Day14-ViewModel/image-20250927001537619.png)
+
+
+
+
 
 ### 实践
 

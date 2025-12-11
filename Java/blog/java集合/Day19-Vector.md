@@ -25,11 +25,15 @@ Vector()
 Vector vector = new Vector();
 ```
 
+
+
 ## 方法
 
 add()
 
 addAll().....常见的
+
+
 
 ```java
 //1.添加元素
@@ -90,7 +94,7 @@ while (en.hasMoreElements()) {
     //04,02,06,
 }
 while(!vector.isEmpty){
-
+    
 }
 ```
 

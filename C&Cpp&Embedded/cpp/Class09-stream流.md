@@ -4,6 +4,10 @@
 
 ![image-20240515140343205](../assets/Class09-stream流/image-20240515140343205.png)##
 
+
+
+
+
 cin、cout和clog是带缓冲区的
 
 缓冲区由streambuf类对象来管理。
@@ -40,6 +44,8 @@ enum{
 }		
 ```
 
+
+
 ### 源码API
 
 ```cpp
@@ -64,6 +70,8 @@ inline long ios::unsetf(long _l){
 }
 ```
 
+
+
 ### 控制宽度
 
 类ios中还设置了三个输入输出流格式控制标志：
@@ -74,6 +82,7 @@ protected:
    int x_width; //输出域宽,缺省域宽为0，
       //重设域宽只对其后第一输出项有效,如域宽不足,则不受限制
    char x_fill; //标志域宽有富余时填入的字符
+
 
 ```
 
@@ -179,6 +188,8 @@ while(cin.fail()){
 }
 ```
 
+
+
 ### 读取API
 
 #### 读取一行
@@ -236,6 +247,12 @@ istream&istream::ignore(int=1,int=EOF);
 ostream&  ostream::put(char); 	//输出参数字符
 ostream&  ostream::flush(); 	//刷新一个输出流,用于cout和clog, 强制将缓冲区的内容输入到文件
 ```
+
+
+
+
+
+
 
 ## <<和>>运算符重载
 
@@ -346,11 +363,11 @@ ios::binary　= 0x80　 // 用于读写二进制格式文件, 以二进制方式
 
 ```cpp
 int main() {
-
+    
     char filename[256], buf[100];
-
+    
     // 文件打开逻辑
-
+    
     fstream fileInputStream, fileOutputStream;
     cout << "输入源文件路径名:" << endl;
     cin >> filename;
@@ -369,12 +386,16 @@ int main() {
     }
 
     // 拷贝逻辑
-
+    
+    
+    
     // 关闭文件逻辑
     fileInputStream.close();
     fileOutputStream.close();
 }
 ```
+
+
 
 ```cpp
 // 拷贝逻辑
@@ -448,6 +469,8 @@ car2.Bdatafromfile(sdatafile); //从文件读取数据拷贝到对象car2
 
 使用二进制文件，可以控制字节长度，读写数据时不会出现二义性，可靠性高。同时不知格式是无法读取的，保密性好。文件结束后，系统不会再读,但程序不会自动停下来，所以要判断文件中是否已没有数据。如写完数据后没有关闭文件，直接开始读，则必须把文件定位指针移到文件头。如关闭文件后重新打开，文件定位指针就在文件头。
 
+
+
 ### 文件随机访问
 
 ```cpp
@@ -493,6 +516,8 @@ ostream&ostream::seekp(streamoff,ios::seek_dir);
 long ostream::tellp();
 ```
 
+
+
 ## 字符串流
 
 内存流
@@ -504,6 +529,8 @@ istringstream :: istringstream (char * str);
 istringstream :: istringstream (char * str,int);
 ostringstream :: ostringstream (char*,int,int=ios::out); 
 ```
+
+
 
 ```cpp
 char str[36]=”This is a book.\n”;

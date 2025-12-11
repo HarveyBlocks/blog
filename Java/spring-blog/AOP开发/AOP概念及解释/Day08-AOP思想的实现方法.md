@@ -1,5 +1,7 @@
 # 实现方法
 
+
+
 ## 方案
 
 动态代理技术
@@ -17,6 +19,7 @@
 -   还记得之前的**日志增强**的Demo吗?
 
 ### 实践:用动态代理对Bean进行时间日志增强
+
 
 ```java
 public class TimeLogBeanProcessor implements BeanPostProcessor {
@@ -48,6 +51,10 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
     }
 }
 ```
+
+
+
+
 
 ![image-20231109152215240](../../../assets/Day08-AOP思想的实现方法/image-20231109152215240.png)
 

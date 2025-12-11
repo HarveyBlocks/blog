@@ -43,6 +43,10 @@ databases 1
 logfile /logs/run.log
 ```
 
+
+
+
+
 ```ini
 # 解除本地限制
 bind 0.0.0.0
@@ -67,6 +71,8 @@ dir /var/lib/redis
 replica-announce-ip redis-6381
 ```
 
+
+
 ```ini
 # 声明永久的主从关系
 slaveOf redis 6379
@@ -74,7 +80,13 @@ slaveOf redis 6379
 masterAuth 123456
 ```
 
+
+
+
+
 ### 创建集群
+
+
 
 ```bash
 redis-cli --cluster help
@@ -170,6 +182,8 @@ Redis会把每一个Master节点映射到[0,16383]共16384( 2^14^ )个插槽(Has
 
 ![image-20240211143518119](../../assets/Day07-分片集群/image-20240211143518119.png)
 
+
+
 在写数据时, 数据落在哪个节点上? 这有插槽决定
 
 查看插槽的分配
@@ -187,6 +201,8 @@ redis-cli -p 集群中已存在的节点端口 cluster nodes
 `8002->7001`
 
 `8001->7003`
+
+
 
 ### 插槽与Key的绑定
 
@@ -214,11 +230,19 @@ Redis会根据key的**有效部分**计算插槽值
 
     然后定向到插槽`2765`, 获取`num`的值
 
+
+
 ## 集群伸缩
+
+
+
+
 
 ```bash
 redis-cli --cluster help
 ```
+
+ 
 
 ```bash
 add-node       new_host:new_port existing_host:existing_port
@@ -255,6 +279,12 @@ redis-cli --cluster add-node new_host:new_port existing_host:existing_port
 
         ![image-20240211143518119](../../assets/Day07-分片集群/image-20240211143518119.png)
 
+
+
+
+
+
+
 ### 插槽的再分配
 
 ```bash
@@ -281,6 +311,8 @@ reshard        host:port
                --cluster-pipeline <arg>
                --cluster-replace
 ```
+
+
 
 ```bash
 redis-cli --cluseter reshard 集群中已存在的节点HOST:其PORT 
@@ -321,6 +353,8 @@ reids-server /etc/redis/redis.config
 
 不需要哨兵, 分片集群自带检测和自动故障转移, 让Master自己的Slave做Master
 
+
+
 ### 数据迁移流程
 
 1.  Slave节点执行failover命令,向其Master发送通知
@@ -335,6 +369,8 @@ reids-server /etc/redis/redis.config
 5.  Slave标记自己为Master, 广播**其他Master**和**即将退休的Master**故障转移的结果
     -   其他Master转变心跳检测的对象
 6.  即将退休的Master开始处理客户端读请求
+
+
 
 ### 数据迁移命令
 
@@ -377,6 +413,8 @@ spring:
         - redis:6380
         - redis:6381
 ```
+
+
 
 ### 配置读写分离
 

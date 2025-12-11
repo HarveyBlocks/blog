@@ -27,6 +27,8 @@
       -e MONGO_INITDB_ROOT_PASSWORD=123456 \
       -d mongodb/mongodb-community-server:latest
   ```
+  
+  
 
 ## MongoDB Shell
 
@@ -47,6 +49,8 @@ mongosh是一个 JavaScript 和 Node.js REPL 的命令行环境，用于与 Mong
 ```bash
 mongosh mongodb://MongoRoot:123456@centos:27017/test?authSource=admin
 ```
+
+
 
 ![image-20251105165919784](../../assets/Day01-Install/image-20251105165919784.png)
 

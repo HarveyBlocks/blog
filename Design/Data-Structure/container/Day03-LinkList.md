@@ -28,6 +28,7 @@ void initNode(Node *node, char value) {
     node->next = NULL;
 }
 
+
 void initLinkList(LinkList *list, Node *sentinel) {
     list->sentinel = sentinel;
 }
@@ -42,6 +43,8 @@ int main() {
     show(&list);
 }
 ```
+
+
 
 ### 删
 
@@ -184,9 +187,15 @@ void reverse(LinkList *list) {
 2.  B比A长N, pB向前走N格
 3.  pB和pA一边比较, 一边同时走
 
+
+
 ## 双向链表
 
 ### 增
+
+
+
+
 
 ## 环形链表
 
@@ -231,6 +240,7 @@ Node *hasCircle(LinkList *list) {
    即 x+y = y+z;\\
    x = z;
    $$
+   
 
    ![img](../../assets/Day03-LinkList/20220925103433.png)
 

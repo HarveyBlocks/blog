@@ -15,13 +15,18 @@ Create [Or Replace] View 要改的视图名[(列名列表)] As Select语句 [wit
 ```mysql
 create or replace view user_1 as  select id,age from user where id>10;
 
+
 insert into user_1 value(30,35);-- 成功添加
 insert into user_1 value(5,35);-- 视图里不存在,为啥?新记录的id=5<10,不会到视图里去
 
 -- 为了避免这种情况 with [] chech option
 ```
 
+
+
 -   cascaded测试完整版
+
+
 
 ```mysql
 create or replace
@@ -29,6 +34,7 @@ create or replace
     select id,name
     from user
     where id>10 ;
+
 
         create or replace
             view uv2_0_0 as select id,name
@@ -46,6 +52,8 @@ create or replace
                                     where id<15
                 with cascaded check option ;
 
+
+
         create or replace
             view uv2_0_1 as select id,name
                           from uv1_0
@@ -62,6 +70,8 @@ create or replace
                                     from uv2_0_1
                                     where id<15
                 with cascaded check option ;
+
+
 
 create or replace
     view uv1_1 as
@@ -86,6 +96,8 @@ create or replace
                                     where id<15
                 with cascaded check option ;
 
+
+
         create or replace
             view uv2_1_1 as select id,name
                           from uv1_1
@@ -102,6 +114,12 @@ create or replace
                                     from uv2_1_0
                                     where id<15
                 with cascaded check option ;
+
+
+
+
+
+
 
 select * from user ;
 
@@ -128,6 +146,7 @@ select * from user ;
 
             select * from uv3_1_1_0 ;
             select * from uv3_1_1_1 ;
+
 
 -- 原表如果不是no , 是一定有的只在第一层是我片面了
 insert into uv1_0(id, name) values (12,'123');-- ok
@@ -173,10 +192,12 @@ insert into uv1_1(id,name) values (3,'123'); -- no 1_1
             insert into uv3_1_0_0(id, name) values (17,'123');-- ok 第一第二
             insert into uv3_1_0_0(id, name) values (25,'123');-- ok 第一
 
+
             insert into uv3_1_0_1(id, name)values ( 5, '123');-- no 1_1
             insert into uv3_1_0_1(id, name) values (12,'123');-- ok 全员
             insert into uv3_1_0_1(id, name) values (17,'123');-- no 3_1_0_1
             insert into uv3_1_0_1(id, name) values (25,'123');-- no 3_1_0_1
+
 
     insert into uv2_1_1(id, name) values ( 5,'123');-- no 1_1
     insert into uv2_1_1(id, name) values (15,'123');-- ok 全员
@@ -187,11 +208,17 @@ insert into uv1_1(id,name) values (3,'123'); -- no 1_1
             insert into uv3_1_1_0(id, name) values (17,'123');--  ok 第一第二层
             insert into uv3_1_1_0(id, name) values (25,'123');--  no 2_1_1
 
+
+
             insert into uv3_1_1_1(id, name) values ( 5,'123');--  no 1_1
             insert into uv3_1_1_1(id, name) values (12,'123');--  ok 全员
             insert into uv3_1_1_1(id, name) values (17,'123');--  no 3_1_1_1
             insert into uv3_1_1_1(id, name) values (25,'123');--  no 3_1_1_1
 ```
+
+
+
+
 
 -   Local
 -   v2视图是基于v1视图的，

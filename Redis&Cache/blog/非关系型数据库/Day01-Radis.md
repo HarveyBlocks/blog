@@ -18,9 +18,13 @@ mount  -t  vboxsf  VBshare  /mnt
 
 -   看不懂上面这句话干嘛用的
 
+
+
 设置下IP 0.0.0.0
 
 设置下密码 protected 123456
+
+
 
 -   不要用中文,会有奇怪的事情发生
 -   命令不区分大小写,键值区分大小写是吧
@@ -40,6 +44,8 @@ docker pull Redis
 ```bash
 docker run --name redis -p 6379:6379 -id redis --requirepass "yourPassword"
 ```
+
+
 
 ```bash
 redis-cli [-h 127.0.0.1 -p 6379] -a 123456
@@ -67,6 +73,8 @@ auth username 123456
 ```bash
 redis-cli  [-h 127.0.0.1 -p 6379] shutdown
 ```
+
+
 
 ## 图形化界面
 

@@ -36,15 +36,18 @@ function extend<T, U>(first: T, second: U): T & U {
     return result;
 }
 
+
 class Student {
     constructor(public name: string, public grade: number) {
     }
 }
 
+
 class Teacher {
     constructor(public name: string, public salary: number) {
     }
 }
+
 
 let person = extend(new Student("A", 99), new Teacher("B", 10000));
 console.log(person.grade) // 99
@@ -184,6 +187,8 @@ function padLeft(value: string, padding: string | number) {
     ```
 
 -   否则, 不会被增强
+
+
 
 ### instanceof
 
@@ -327,11 +332,11 @@ type LinkedList<T> = T & { next: LinkedList<T> };
     interface A {
         value: number;
     }
-
+    
     interface A {
         msg: string;
     }
-
+    
     let a: A = {
         msg: "msg",
         value: 1,
@@ -340,7 +345,7 @@ type LinkedList<T> = T & { next: LinkedList<T> };
     type B = {
         value: number;
     }
-
+    
     type B = {
         msg: string;
     }
@@ -490,6 +495,7 @@ class ScientificCalculator extends BasicCalculator {
     }
 }
 
+
 let value = new ScientificCalculator(2)
     .add(1) // 返回的是子类, 说明在继承的过程中, 声明的返回值this也变成子类的this了
     .multiply(5)
@@ -551,6 +557,12 @@ let keys: keyof StringMap; // string
 let values: StringMap['key...']; // number
 ```
 
+
+
+
+
+
+
 ### 动态获取字段及其值
 
 可以用来动态的, 带检查地, 用字段获取值
@@ -605,6 +617,8 @@ let s: Student = {
 ```
 
 in后面的集合会遍历一次绑定到每个属性
+
+
 
 ### 只读封装和可选封装
 
@@ -714,6 +728,8 @@ console.log(proxiedPerson.name.get()/*get name = B*/); // B
 
 实现vue的ref, 往get和set里面加plugin....
 
+
+
 ### 标准库中的映射
 
 TypeScript的标准库
@@ -732,6 +748,8 @@ type Partial<T> = {
     [P in keyof T]?: T[P];
 }
 ```
+
+
 
 ```ts
 let x: Record<"a" | "b" | "c", number> = {

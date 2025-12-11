@@ -14,6 +14,8 @@
 ls -l /usr/bin
 ```
 
+
+
 ![image-20230929230033365](../assets/Day03/image-20230929230033365.png)
 
 肥肠的不直观
@@ -26,11 +28,15 @@ ls -l /usr/bin | grep "gtf"
 
 ![image-20230929230138654](../assets/Day03/image-20230929230138654.png)
 
+
+
 你甚至可以:
 
 ```Linux
 ls -l /usr/bin | wc -l
 ```
+
+
 
 ![image-20230929230319801](../assets/Day03/image-20230929230319801.png)
 

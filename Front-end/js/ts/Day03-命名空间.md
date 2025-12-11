@@ -14,7 +14,7 @@ Javascript原生的模块可以理解为外部模块, 命名空间就是内部�
 ```ts
 namespace ProxyAdvice {
     type ProxiedProps<T> = { /*...*/ } // 外界不可访问
-
+    
     export type ProxiedObject<T> = { /*...*/ }
 
     export function proxy<T extends object>(o: T): ProxiedObject<T> { /*...*/ }
@@ -29,6 +29,8 @@ namespace ProxyAdvice {
 ```ts
 let proxiedPerson: ProxyAdvice.ProxiedObject<Person> = ProxyAdvice.proxy(person);
 ```
+
+
 
 ## 原理
 

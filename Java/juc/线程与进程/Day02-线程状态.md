@@ -61,6 +61,7 @@ end
         t.start();
         log.info("你好");
         ```
+        
 
         <img src="../assets/Day02-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81/image-20240906002300556.png" alt="image-20240906002300556" style="zoom:50%;" />
 
@@ -111,6 +112,10 @@ end
     -   终止状态
 
 ## 状态转换
+
+
+
+
 
 <img src="../assets/Day02-%E7%BA%BF%E7%A8%8B%E7%8A%B6%E6%80%81/image-20240906001602777.png" alt="image-20240906001602777" style="zoom:67%;" />
 

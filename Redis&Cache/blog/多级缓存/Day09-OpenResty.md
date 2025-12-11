@@ -11,7 +11,13 @@
 
 [帮助文档](安装OpenResty.md)
 
+
+
+
+
 ## 接收请求
+
+
 
 ![image-20240219135505931](../../assets/Day09-OpenResty/image-20240219135505931.png)
 
@@ -41,6 +47,9 @@
 
     3.  写lua文件
 
+        
+
+
 ## Lua完成业务逻辑
 
 ### 创建Lua文件
@@ -49,6 +58,8 @@
 mkdir /usr/local/openresty/nginx/lua
 touch /usr/local/openresty/nginx/lua/item.lua
 ```
+
+
 
 ### 返回假数据测试
 
@@ -59,6 +70,8 @@ ngx.say('{"id":10001,"name":"SALSA AIR"}')
 ```
 
 ![image-20240219142639404](../../assets/Day09-OpenResty/image-20240219142639404.png)
+
+
 
 ## 获取请求参数
 
@@ -158,6 +171,8 @@ local resp = ngx.location.capture(
 
 -   没有一个合适的Lua环境, 根本不能写出大项目来
 
+
+
 ### 从Tomcat获取商品和库存信息
 
 ### 组装数据并响应
@@ -190,7 +205,7 @@ local resp = ngx.location.capture(
     ```lua
     -- 获取请求参数
     local id = ngx.var[1]
-
+    
     local function read_http(path, params)
         -- 没鸟用
         local resp = ngx.location.capture(path,{
@@ -205,10 +220,10 @@ local resp = ngx.location.capture(
         end
         return resp.body
     end
-
+    
     local itemJson = read_http("/item/"..id,nil)
     local itemStockJson = read_http("/item/stock/"..id,nil)
-
+    
     -- 组装数据
     local cjson = require("cjson")
     local item = cjson.decode(itemJson)
@@ -216,10 +231,13 @@ local resp = ngx.location.capture(
     item.stock = itemStock.stock
     item.sold = itemStock.sold
     local respBody = cjson.encode(item)
-
+    
+    
     -- 响应数据
     ngx.say(respBody)
     ```
+
+
 
 ### Tomcat集群负载均衡
 
@@ -241,6 +259,8 @@ OpenResty需要:
     	# server 192.168.1.106:8082;
     }
     ```
+
+    
 
 -   应对Tomcat节点间本地缓存不互通问题
 
@@ -273,7 +293,7 @@ OpenResty需要:
     ```java
     @Resource
     private StringRedisTemplate stringRedisTemplate;
-
+    
     @GetMapping("/2redis")
     public void addRedis(){
         List<Item> items = itemService.query().ne("status", 3).list();
@@ -308,6 +328,10 @@ redis:set_timeout(
     1000  -- 的响应结果的超时时间
 )
 ```
+
+
+
+
 
 ```lua
 local function keep_alive(redis)
@@ -349,10 +373,15 @@ local function read_redis(ip, port, key)
 end
 ```
 
+
+
+
+
 完整逻辑
 
 ```lua
 local id = ngx.var[1]
+
 
 -- 引入redis模块, resty目录下的redis函数库
 local redisLib = require("resty.redis")
@@ -423,6 +452,7 @@ if(not resp) then
 
 	local itemJson = read_http("/item/"..id,nil)
 	local itemStockJson = read_http("/item/stock/"..id,nil)
+	
 
 	-- 组装数据
 	local cjson = require("cjson")

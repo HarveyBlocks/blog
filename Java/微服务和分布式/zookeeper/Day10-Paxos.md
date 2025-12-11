@@ -12,6 +12,8 @@
 -   Multi Paxos
 -   Fast Paxos
 
+
+
 ## 角 色
 
 -   Client
@@ -39,7 +41,7 @@
     1.  Proposer 提出提案, 编号N, 发送给所有Acceptor
     2.  Acceptor收到prepare请求时, 比较N和自己的最大提案编号(MAXN)比较
     3.  N大于MAXN, 接收提案, 并将**曾经Accept过的, 编号N最大的提案**返回给Proposer
-
+    
 2.  accept阶段
     1.  Proposer收到超过半数Accpetor反馈(不会继续向下面的没发到的Accptor发送提案, 没接收提案的Accptor不会有编号N的记录), Proposer将真正的提案内容发送给所有Acceptor
 
@@ -62,6 +64,8 @@
 多个相互协助的线程, 对彼此响应, 并更改自己的状态
 
 当对任何一个线程都无法继续执行, 就发生活锁问题
+
+
 
 1.  Proposer(P1)以访问权限1向Accept发起第一阶段, Accept访问权限升级到1
 

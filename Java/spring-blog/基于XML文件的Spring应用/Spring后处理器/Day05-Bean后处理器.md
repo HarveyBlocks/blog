@@ -10,6 +10,8 @@
 
 >   实现这个接口,就会被识别
 
+
+
 ## 看看BeanPostProcessor源码
 
 ```java
@@ -30,7 +32,15 @@ public interface BeanPostProcessor {
 
 -   @Nullable--可以不被实现
 
+
+
+
+
 ### 试验
+
+
+
+
 
 -   ```java
     public class FixMyBean implements BeanPostProcessor {
@@ -43,7 +53,7 @@ public interface BeanPostProcessor {
             }
             return bean;
         }
-
+    
         @Override
         public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
             System.out.println("After-> "+beanName);
@@ -103,6 +113,7 @@ public class UserDaoImpl implements UserDao, InitializingBean {
 
 ## 实践:用动态代理对Bean进行时间日志增强
 
+
 ```java
 public class TimeLogBeanProcessor implements BeanPostProcessor {
     //使用动态代理对Bean进行增强
@@ -128,6 +139,7 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
 
     }
 
+
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         return bean;
@@ -135,9 +147,19 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
 }
 ```
 
+
+
+
+
+
+
+
+
 ## 注意!
 
 -   Beans.xml里配置了init()的,找不到init()了
+
+
 
 ## 生命周期
 

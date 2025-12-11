@@ -28,6 +28,8 @@
 
 3.  利用脚本定期在Slave节点做RDB实现数据备份
 
+
+
 ## 部署
 
 1.  Redis实例的物理机要预留足够的内存, 应对fork和rewrite
@@ -35,6 +37,8 @@
 3.  可以在一台物理机上部署多台Redis(单机多实例)
 4.  不要与CPU密集型应用部署在一起, 例如Elastic Search(搜索, 运算, 数据聚合)
 5.  不要与高硬盘负载应用一起部署, 例如数据库, 消息队列
+
+
 
 ## 慢查询
 
@@ -87,6 +91,8 @@
 RESP-GUI也好用,多探索探索
 
 ![image-20240220203154154](../../assets/Day11-服务端/image-20240220203154154.png)
+
+
 
 ## 敏感的命令及安全配置
 
@@ -141,30 +147,37 @@ RESP-GUI也好用,多探索探索
     #
     # Please note that changing the name of commands that are logged into the
     # AOF file or transmitted to replicas may cause problems.
-
+    
+    
     # 运维人员才知道的命令,运维人员可以用用
     rename-command CONFIG b840fc02d524045429941cc15f59e41cb7be6c52
-
+    
     # 无效这条命令
     rename-command CONFIG "" 
-
+    
     ```
+
+    
 
 -   bind: 限制网卡, 禁止外网网卡访问
 
     ```properties
     bind 127.0.0.1
-
+    
     # 127.0.0.1 默认,只有本机可以访问
     # 0.0.0.0   所有机器都可以访问
     # 局域网的网卡,内网可以互相访问, 外网就无法访问
     ```
+
+    
 
 -   开启防火墙
 
 -   不要使用Root账户启用Redis
 
 -   尽量不要用默认的端口
+
+
 
 ## 内存配置
 
@@ -173,6 +186,8 @@ RESP-GUI也好用,多探索探索
 当Redis内存不足时, 可能导致(不常访问的)key频繁被删除, 响应时间变长, QPS不稳定等问题. 
 
 当内存使用列表达到阈值的时候, 就需要我们警惕, 并快速定位问题所在
+
+
 
 ### Redis的内存划分
 
@@ -192,11 +207,15 @@ RESP-GUI也好用,多探索探索
 
         可以利用主从集群有序地重启Redis
 
+
+
 #### 进程内存
 
 -   Redis主进程运行(代码, 常量池)需要占用内存
 -   大约几兆
 -   与Redis数据占用的内存相比可忽略
+
+
 
 #### 缓冲区内存
 
@@ -248,6 +267,8 @@ RESP-GUI也好用,多探索探索
             ```shell
             client list [TYPE normal|master|replica|pubsub] [ID client-id [client-id ...]]
             ```
+
+            
 
     -   AOF缓冲区
 
@@ -311,6 +332,8 @@ active_defrag_running:0
 lazyfree_pending_objects:0
 lazyfreed_objects:0
 ```
+
+
 
 ```shell
 127.0.0.1:6379> memory help

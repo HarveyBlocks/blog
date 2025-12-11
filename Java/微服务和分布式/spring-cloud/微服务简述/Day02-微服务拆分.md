@@ -4,6 +4,8 @@
 
 ![image-20240106143654296](../../assets/Day02-微服务拆分/image-20240106143654296.png)
 
+
+
 ## 服务拆分原则
 
 ### 什么时候拆分
@@ -245,6 +247,8 @@ public class ItemServiceApplication {
         username: root
         password: ${hm.item.db.pw}
     ```
+
+    
 
 ### 5.代码
 

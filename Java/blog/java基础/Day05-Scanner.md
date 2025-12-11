@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
@@ -26,20 +27,26 @@ public class Main {
 
 ---
 
+
+
 ![屏幕截图 2023-08-03 125850](../../assets/屏幕截图 2023-08-03 125850.png)
 
 ***
+
+
 
 ``` java
 import java.util.Scanner;
 
 public class Main {
 
+
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
 
         System.out.println("使用nextLine方法接收：");
 
+        
          if (scanner.hasNextLine()){//x.hasNextLine
              String str=scanner.nextLine();//x.nextLine()
              System.out.println("输入的内容为"+str);
@@ -58,12 +65,20 @@ public class Main {
 3. 只有输入有效字符后才将其后面输入的空白作为结束符
 4. **next()不能得到带空格的字符串**
 
+
+
+
+
 ## nextLine()
 
 1. 以Enter为结束符
 2. 可以获得空白
 
 ![屏幕截图 2023-08-03 130735](../../assets/屏幕截图 2023-08-03 130735.png)
+
+
+
+
 
 ## 用法
 
@@ -76,7 +91,7 @@ public class Main {
 		System.out.println("请输入");
         String str=scanner.nextLine();
         System.out.println("输入的内容为"+str);
-
+       
         scanner.close();
     }
 }
@@ -86,6 +101,7 @@ public class Main {
 import java.util.Scanner;
 
 public class Main {
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

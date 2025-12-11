@@ -26,7 +26,11 @@
 -   VLC 多媒体播放器
 -   VirtualBox
 
+
+
 ## 组件
+
+
 
 -   按钮控件
 -   对象树
@@ -46,9 +50,13 @@
 -   绘图设备
 -   Qfile文件读写
 
+
+
 ## 下载安装
 
 清华Qt源下载安装包
+
+
 
 ```shell
 installer.exe --mirror https://mirrors.tuna.tsinghua.edu.cn/qt
@@ -59,6 +67,8 @@ installer.exe --mirror https://mirrors.tuna.tsinghua.edu.cn/qt
 ### 使用Clion创建Qt项目
 
 <img src="../assets/Day01-Qt/image-20240505211011513.png" alt="image-20240505211011513" style="zoom:40%;" />
+
+
 
 ## 文档
 
@@ -113,6 +123,8 @@ QLabel::tr("Hello Qt!")
  * 因为 tr 函数在所有 Qt 类的顶级基类 QObject 里定义了, 但它不是全局定义的
  * 所以上面使用了 QLabel 类的 tr 函数
 
+
+
  * tr 函数是代表**可翻译字符串**的意思
  * 因为 Qt 不仅跨平台的, 也是跨国跨语种的
  * 所以很注重多国语言的支持
@@ -121,11 +133,15 @@ QLabel::tr("Hello Qt!")
 
 Widget就是一个页面
 
+
+
 -   **QWidget 是 Qt 各种窗口和控件的基类**
 -   是一个功能丰富的**窗口类**
 -   继承它来构造自定义的主界面。
 -   QtWidgets 是 Qt 的一个大模块
 -   有很多窗口和控件类继承QWidget
+
+
 
 在编写Qt程序时, 不采用**h文件继承Qt类, cpp文件实现Qt方法, 主函数调用自定义Qt实现类的规范**, 而在Main函数所在文件里一通实现的话, 就要在主函数文件的末尾加上`#include "主函数所在文件名.moc"`
 
@@ -156,13 +172,19 @@ public:
 
 这个宏声明了 Qt 元对象系统必需的函数和成员变量
 
+
+
 之后我们会用 moc 工具生成元对象系统的实体函数代码
+
+
 
 ### HelloWidget.cpp
 
 ```cpp
 #include "HelloWidget.h"
 ```
+
+
 
 ```cpp
 HelloWidget::HelloWidget(QWidget *parent) : QWidget(parent) {
@@ -186,13 +208,13 @@ QLabel 会自动解析 HTML 标记, 有多强大? 未知, 至少不能解析按�
 -   显示的矩形区域左上角坐标是:
     -   距离左边框 10 像素，
     -   距离上边缘 10 像素（不计窗口标题栏）
-
+    
 -   标签控件大小
     -   宽度 200 像素
     -   高度 40 像素
-
+    
     <img src="../assets/Day01-Qt/image-20240506144212792.png" alt="image-20240506144212792" style="zoom:63%;" />
-
+    
 -   居中
 
     ```cpp
@@ -202,12 +224,18 @@ QLabel 会自动解析 HTML 标记, 有多强大? 未知, 至少不能解析按�
 
     <img src="../../assets/Day01-Qt/image-20240506144608864.png" alt="image-20240506144608864" style="zoom:33%;" />
 
+
+
+
+
 ```cpp
 HelloWidget::~HelloWidget() {
     delete m_labelInfo;
     m_labelInfo = nullptr;
 }
 ```
+
+
 
 这里看不到 Qt 元对象系统的实际函数代码，因为还没有生成
 
@@ -338,6 +366,8 @@ innclude "main.moc"
 
 设置窗口标题
 
+
+
 ```cpp
 widget->setWindowTitle(QApplication::translate(
         "Form", 
@@ -345,6 +375,8 @@ widget->setWindowTitle(QApplication::translate(
     	nullptr
 ));
 ```
+
+
 
 ![image-20240506124245894](../assets/Day01-Qt/image-20240506124245894.png)
 

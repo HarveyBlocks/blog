@@ -8,6 +8,8 @@
 
 ![image-20231016154752652](../assets/Day34-Mapper代理/image-20231016154752652.png)
 
+
+
 -   注意是斜杠
 
 2.  编译
@@ -20,7 +22,11 @@
 
 ![image-20231016155604856](../assets/Day34-Mapper代理/image-20231016155604856.png)
 
+
+
 ## 写UerMapper代理接口
+
+
 
 ```java
 package com.harvey.mapper;
@@ -42,6 +48,8 @@ public interface UserMapper {
 }
 ```
 
+
+
 ## 改核心配置文件里对Mapper文件的路径
 
 ```xml
@@ -61,23 +69,25 @@ public interface UserMapper {
     </mappers>
     ```
 
+    
+
 -   完整文件如下:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8" ?>
-
+    
     <!DOCTYPE configuration
             PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
             "https://mybatis.org/dtd/mybatis-3-config.dtd">
-
+    
     <configuration>
-
+    
         <environments default="development">
-
+    
             <environment id="development">
-
+    
                 <transactionManager type="JDBC"/>
-
+    
                 <dataSource type="POOLED">
                     <!-- JDBC文件连接 -->
                     <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
@@ -88,16 +98,16 @@ public interface UserMapper {
                     <!--密码-->
                     <property name="password" value="123456"/>
                 </dataSource>
-
+    
             </environment>
-
+    
         </environments>
-
+    
         <!--对应映射文件-->
         <mappers>
             <mapper resource="com/harvey/mapper/UserMapper.xml"/>
         </mappers>
-
+    
     </configuration>
     ```
 
@@ -122,9 +132,9 @@ public interface UserMapper {
     <!DOCTYPE mapper
             PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
+    
     <mapper namespace="com.harvey.mapper.UserMapper">
-
+       
         <!--id是这一句命令的唯一标识,不能重复-->
         <select id="selectUser" resultType="com.harvey.pojo.User">
             select * from user ;

@@ -50,6 +50,7 @@ private fun readContact() {
     }
 }
 
+
 /**
  * @return @IntRange(from = 0)
  */
@@ -66,6 +67,10 @@ private fun Cursor.requireColumnIndex(columnName: String): Int {
  <uses-permission android:name="android.permission.READ_CONTACTS" /> 
 ```
 
+
+
+
+
 在Activity中动态获取权限`Manifest.permission.READ_CONTACTS`
 
 ```kotlin
@@ -76,6 +81,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
     safelyReadContacts()
 }
 ```
+
+
 
 ![image-20250918172004473](../../assets/Day07-ContentResolver/image-20250918172004473-1758191266943.png)
 

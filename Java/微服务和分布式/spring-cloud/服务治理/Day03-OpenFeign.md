@@ -76,9 +76,15 @@ private List<ItemDTO> requestItemByIds(Set<Long> itemIds) {
 
 >   声明式Http客户端, 是SpringCloud在Eureka公司开源的Feign基础上改造而来
 
+
+
 [github仓库](https://github.com/OpenFeign/feign)
 
+
+
 ## 使用OpenFeign
+
+
 
 ### 引入依赖
 
@@ -121,6 +127,8 @@ public interface ItemClient {
     // 方法的返回值能通过反射获取
 }
 ```
+
+
 
 ### 使用FeignClient
 
@@ -297,6 +305,8 @@ public class ClientConfig {
 }
 ```
 
+
+
 ### 声明级别生效
 
 -   对特定客户端声明有效
@@ -311,6 +321,10 @@ public class ClientConfig {
     @EnableFeignClients(clients = {ItemClient.class},
                         defaultConfiguration = ClientConfig.class)
     ```
+
+
+
+
 
 ### 测试
 

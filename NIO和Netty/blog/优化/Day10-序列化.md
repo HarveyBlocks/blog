@@ -1,9 +1,12 @@
 # 序列化
 
+
+
 ## 序列化接口
 
 ```java
 package com.harvey.netty.protocol;
+
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,6 +41,7 @@ public interface Serializer {
             public <T> T deserialize(Class<T> type, byte[] bytes) {
 				return null;
             }
+
 
         }, JSON(JSON_SERIALIZE) {
             @Override
@@ -74,6 +78,8 @@ public interface Serializer {
 }
 ```
 
+
+
 ### 编解码器
 
 ```java
@@ -107,6 +113,8 @@ public class MessageCodec extends ByteToMessageCodec<Message> {
 }
 ```
 
+
+
 ## JDK序列化
 
 太长太冗余, 效率不咋地
@@ -131,7 +139,14 @@ JDK((byte) 0) {
 }
 ```
 
+
+
+
+
+
 ## Json
+
+
 
 用Google的序列化工具
 

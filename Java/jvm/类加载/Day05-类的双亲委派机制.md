@@ -33,6 +33,8 @@ Applicaion
 -   向上委派查找确保了加载的唯一性
 -   向下委派确定了加载的优先级
 
+
+
 Q: 如果三个类加载器的加载目录都有A类, 谁去加载
 
 A: Bootstrap
@@ -59,6 +61,8 @@ arthus
 classloader -t
 ```
 
+
+
 ## 指定类加载器加载类
 
 1.  `Class.forname()` 使用当前类的类加载器去加载指定的类
@@ -76,6 +80,10 @@ classloader -t
     Class<?> stringClass = classLoader.loadClass("java.lang.String");
     System.out.println(stringClass.getClassLoader()); // null
     ```
+
+    
+
+
 
 ## ClassNotFoundException
 
@@ -95,9 +103,13 @@ classloader -t
 
 例如Tomcat支持一台Tomcat服务器上运行多台应用, 如果遇到两个应用有一个类的全类名完全相同, 就会出现加载不出后面的类的情况
 
+
+
 ### 自定义类加载器
 
 自定义的类加载器可以不用再向上委派类的加载任务, 打破双亲委派机制
+
+
 
 ```java
 /**
@@ -122,6 +134,8 @@ try {
 }
 ```
 
+
+
 ```java
 /**
  * 由类加载器子类实现, 获取二进制数据调用defineClass
@@ -129,6 +143,8 @@ try {
  */
 protected Class<?> findClass(String name);
 ```
+
+
 
 ```cpp
 /**
@@ -138,6 +154,8 @@ protected Class<?> findClass(String name);
 protected final Class<?> defineClass(String name, byte[] b, int off, int len);
 ```
 
+
+
 ```java
 /**
  * 类生命周期中的连接
@@ -145,7 +163,11 @@ protected final Class<?> defineClass(String name, byte[] b, int off, int len);
 protected final void  resolveClass(Class<?> c);
 ```
 
+
+
 #### 实现
+
+
 
 ```java
 public class MyClassLoader extends ClassLoader {
@@ -175,6 +197,8 @@ public class MyClassLoader extends ClassLoader {
 
 自定义的ClassLoader的双亲默认是Appliction, 可通过`getParent()`查看
 
+
+
 若要增加新功能, 不应该破坏双亲委派机制, 而双亲委派机制再loadClass中实现, 就不要重写loadClass方法
 
 重写findClass方法, 校验这个类在不在负责的加载路径上, 然后调用defineClass();
@@ -182,6 +206,8 @@ public class MyClassLoader extends ClassLoader {
 ### 线程上下文的类加载器
 
 不要困惑, JDBC没有打破双亲委派机制, 只是一本有历史遗留问题的书认为打破了
+
+
 
 例如JDBC, JNDI
 
@@ -194,6 +220,8 @@ JDBC中使用了**DriverManager**来管理项目中引入的不同数据库驱�
 Application加载引入的jar包中的驱动类
 
 ![image-20240518091301497](../assets/Day05-类的双亲委派机制/image-20240518091301497.png)
+
+
 
 #### SPI机制
 
@@ -215,12 +243,12 @@ SPI机制是JDK内置的一种服务提供发现的机制
 
     ```java
     package com.mysql.cj.jdbc;
-
+    
     import ...
-
+    
     public class Driver extends NonRegisteringDriver implements java.sql.Driver{
         pulic Driver() throws SQLException{
-
+            
         }
         static {
             try{
@@ -250,6 +278,8 @@ SPI机制是JDK内置的一种服务提供发现的机制
         return Serviceloader.load(service, cl);
     }
     ```
+
+    
 
 ### Osgi模块化框架
 
@@ -286,6 +316,10 @@ Osgi还实现了热部署的功能, 服务不停止的情况下, 动态更新字
     ```shell
     retransform class文件目录/文件名.class
     ```
+
+    
+
+
 
 注意, 重启之后, 原本的字节码文件就会恢复(更改了内存, 没更改磁盘)
 

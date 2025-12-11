@@ -95,6 +95,8 @@ for (boolean haveNext = false;;) {
 -   AtomicMarkableReference
 -   AtomicStampedReference
 
+
+
 ### compareAndSet
 
 此compare基于引用的地址, 故使用如下代码
@@ -243,10 +245,14 @@ System.out.println(array);
 
 ### 创建更新器
 
+
+
 ```java
 AtomicReferenceFieldUpdater<Student, MyNumber> studentScoreUpdater = AtomicReferenceFieldUpdater
         .newUpdater(Student.class, MyNumber.class, "score");
 ```
+
+
 
 ![image-20240911150554078](../assets/Day06-Atomic/image-20240911150554078.png)
 

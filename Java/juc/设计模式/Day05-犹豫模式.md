@@ -43,6 +43,8 @@ public class Balking implements Runnable {
 }
 ```
 
+
+
 ### 错误
 
 ```java
@@ -150,7 +152,7 @@ public final class BalkingSingleton implements Serializable{
         BALKING.run();
         return singleton;
     }
-
+    
     public void print(){
         System.out.println("这是一个单例类:"+this.hashCode());
     }
@@ -171,6 +173,8 @@ public final class InnterClassSingleton{
     }
 }
 ```
+
+
 
 ### 测试
 

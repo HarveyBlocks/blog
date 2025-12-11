@@ -1,5 +1,7 @@
 # 逻辑存储结构
 
+
+
 ![image-20231026165529839](../../assets/Day11-InnoDB引擎逻辑存储结构/image-20231026165529839.png)
 
 ## 表空间(TableSpace)
@@ -24,6 +26,8 @@ InnoDB是索引组织表
 索引段就是B+Tree的非叶子节点
 
 #### 回滚段**(Rollback Segment)**
+
+
 
 ## 区(Extent)
 

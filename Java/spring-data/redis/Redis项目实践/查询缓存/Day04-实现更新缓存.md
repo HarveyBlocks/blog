@@ -16,6 +16,8 @@
 stringRedisTemplate.expire(shopKey, RedisConstants.CACHE_SHOP_TTL, TimeUnit.MINUTES);
 ```
 
+
+
 ## 实现更新逻辑
 
 ```java
@@ -49,6 +51,10 @@ public boolean updateCache(Shop shop) {
 记得关闭用户登录权限啥都
 
 ![image-20240104130207986](../../../../assets/Day04-实现更新缓存逻辑/image-20240104130207986.png)
+
+
+
+
 
 ![image-20240104130343610](../../../../assets/Day04-实现更新缓存逻辑/image-20240104130343610.png)
 

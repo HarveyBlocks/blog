@@ -15,6 +15,10 @@
 -   流量劫持
     -   坏人中途把请求截下来, 发送到坏人的Web服务器, 响应坏人的信息
 
+
+
+
+
 ## Nginx添加SSL的支持
 
 `http_ssl_module`
@@ -25,6 +29,8 @@
 
 ### 开启SSL
 
+
+
 ```nginx
 ssl on | off ;
 ```
@@ -32,6 +38,8 @@ ssl on | off ;
 默认`off`
 
 或者
+
+
 
 ```nginx
 server {
@@ -94,6 +102,8 @@ ssl_ciphers ciphers ;
 
 默认: `HIGH:!aNULL:@MD5`
 
+
+
 通过shell`openssl ciphers`查看支持的ssl格式
 
 ```shell
@@ -108,6 +118,8 @@ ssl_prefer_server_ciphers on|off
 ```
 
 **默认关闭, 建议打开**
+
+
 
 ### 概览
 
@@ -137,6 +149,8 @@ ssl_prefer_server_ciphers  on;
 openssl version
 ```
 
+
+
 ```shell
 mkdir 目标目录
 cd 目标目录
@@ -148,6 +162,7 @@ cd 目标目录
 openssl genrsa -des3 -out server.key 1024
 # 输入文件密码
 # 确认密码
+
 
 # 根据.key文件获取.csr文件
 openssl req -new -key server.key -out server.csr

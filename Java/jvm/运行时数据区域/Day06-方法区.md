@@ -2,6 +2,8 @@
 
 线程共享
 
+
+
 -   元信息
     -   类的基本信息
 -   运行时常量池
@@ -73,6 +75,8 @@ myClassLoader.defineClass(name, bytes, 0, bytes-.length);
 -   1.7之前`OutOfMemory: PerGen space`
 -   1.8及之后, 打开任务管理器, 逐渐炸裂qwq
 
+
+
 ## 字符串常量池
 
 >   String Table
@@ -83,6 +87,8 @@ myClassLoader.defineClass(name, bytes, 0, bytes-.length);
 String s1 = new String("abc");// heap
 String s2 = "abc";  // string table
 ```
+
+
 
 -   JDK7之前
     -   字符串常量池属于运行时常量池的一部分, 存储的位置一致, 可以存储类名常量或整数常量

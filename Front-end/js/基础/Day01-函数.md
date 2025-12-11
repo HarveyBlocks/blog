@@ -50,6 +50,8 @@ const simpleTest = function () {
 f(); // 未解析的函数或方法 f() 
 ```
 
+
+
 ### 箭头函数
 
 ES6 中引入
@@ -76,6 +78,10 @@ ES6 中引入
      var simpleTest1 = (msg) => console.log(msg); // void
      var simpleTest2 = () => 'Hello world' + msg; // string
      ```
+
+
+
+
 
 ## 调用
 
@@ -192,6 +198,7 @@ function f2() {
   console.log(increment()); // 2
   console.log(increment()); // 3
 }
+
 
 ```
 

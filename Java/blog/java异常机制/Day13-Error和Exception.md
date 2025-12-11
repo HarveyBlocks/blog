@@ -49,12 +49,14 @@ public class Main {
 }
 ```
 
+
+
 ```java
 public class Main {
     public static void main(String[] args) {
         System.out.println(1/0);
     }
-
+    
     //除零,但不会报错
 }
 ```
@@ -85,11 +87,19 @@ public class Main {
    }
    ```
 
+   
+
 4. 在 A() 处捕获到异常之后,可以记录异常并响应合适的信息给用户
+
+
 
 这就很友好:
 
 ![image-20230903112250255](../../assets/Day14/image-20230903112250255.png)
+
+
+
+
 
 ### 抛出异常有关关键字
 
@@ -181,6 +191,8 @@ finally{//最后处理善后
         }
 ```
 
+
+
 ### 主动抛出异常，throw
 
 此法常用于方法
@@ -238,9 +250,15 @@ public class Main {
 }
 ```
 
+
+
+
+
 ### 主动抛出的好处
 
 被动地，系统自动停止；主动的，系统继续执行
+
+
 
 ### 抛出异常,不断循环直至解决
 
@@ -301,12 +319,17 @@ public class Test {
 
 ## 自定义异常
 
+
 ### 自定义运行时异常
 
 1. 定义一个异常类继承RuntimeException
 2. 重写构造器
 3. 用一个异常对象分装这个问题
 4. throw抛给main()里的judgeAge()
+
+
+
+
 
 ```java
 package LearnException;
@@ -320,6 +343,8 @@ public class AgeIllegalException extends RuntimeException{
 
 }
 ```
+
+
 
 ``` java
 package LearnException;
@@ -349,12 +374,25 @@ public class Test {
 
 ```
 
+
+
+
+
+
+
+
+
+
+
+
 ### 用户自定义编译时异常
 
 1. 定义一个异常类继承Exception
 2. 重写构造器
 3. 用一个异常对象分装这个问题
 4. throw抛给main()里的judgeAge()
+
+
 
 ```java
 public static void judgeAge(int age) throws Exception{//throw抛给main()里的judgeAge()
@@ -367,6 +405,10 @@ public class AgeIllegalException extends Exception{//继承Exception
 	...
 }
 ```
+
+
+
+
 
 ## 实际应用中的经验
 

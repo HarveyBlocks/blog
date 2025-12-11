@@ -27,6 +27,8 @@
 
 `type="application/javascript"`可省去, 默认就是`javascript`
 
+
+
 ### 外部文件
 
 引入, 可以引入本地文件, 也可以引用网络上的 js 文件, 有关路径由HTML文件路径来决定
@@ -85,7 +87,11 @@ const changeButtonValue = function (buttonElement) {
 <div>post</div>
 ```
 
+
+
 ![image-20250807162110117](../../assets/Day01-基础/image-20250807162110117.png)
+
+
 
 在 HTML 文档完全加载后使用 document.write() 将**删除所有已有的 HTML** :
 

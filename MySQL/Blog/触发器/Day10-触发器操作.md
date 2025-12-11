@@ -1,5 +1,7 @@
 # 触发器(trigger)
 
+
+
 ## 创建
 
 ```mysql
@@ -10,15 +12,19 @@ Create trigger 触发器名
 begin
 
 	SQL语句
-
+	
 end;
 ```
+
+
 
 ## 查看
 
 ```mysql
 show triggers;
 ```
+
+
 
 ## 删除
 
@@ -47,6 +53,8 @@ create table user_logs(
     primary key (id) -- 还有这么操作的?
 )engine = innodb default charset =utf8;
 ```
+
+
 
 ### insert
 
@@ -95,6 +103,8 @@ select * from user_logs;
 
 -   爽~
 
+
+
 ```mysql
 insert into user(id)
 value (43927);
@@ -110,6 +120,8 @@ insert into user(name) value ('dhgervc');
 
 -   这个也是null也太过分了!不对null值做检查真是太痛苦啦
 
+
+
 -   针对输入null值做了改进
 
     ```mysql
@@ -122,7 +134,7 @@ insert into user(name) value ('dhgervc');
         declare age varchar(3) default  IFNULL(new.age,'\'\'');
         declare no varchar(10) default  IFNULL(new.no,'\'\'');
         declare gender varchar(1) default  IFNULL(new.gender,'\'\'');
-
+    
         -- id              自增的,insert就行
          -- operation       不言自明
          -- time            时分秒 now()
@@ -143,16 +155,16 @@ insert into user(name) value ('dhgervc');
         ;
     end;
     ```
-
+    
 -   测试
 
     ```mysql
     delete from user;
     delete from user_logs;
-
+    
     show triggers;
     drop trigger user_log_in_trigger;
-
+    
     start transaction ;
     insert into user( name, age, no, gender)
     value ('asdfa',12,23,'男'),
@@ -160,10 +172,10 @@ insert into user(name) value ('dhgervc');
         ('sfqfg',12,25,'女');
     commit;
     rollback;
-
+    
     insert into user(id)
         value (43923);
-
+    
     select * from user;
     select * from user_logs;
     ```
@@ -182,7 +194,7 @@ insert into user(name) value ('dhgervc');
         declare age varchar(3) default  IFNULL(new.age,'\'\'');
         declare no varchar(10) default  IFNULL(new.no,'\'\'');
         declare gender varchar(1) default  IFNULL(new.gender,'\'\'');
-
+    
         -- id              自增的,insert就行
          -- operation       不言自明
          -- time            时分秒 now()
@@ -209,16 +221,17 @@ insert into user(name) value ('dhgervc');
     ```mysql
     show triggers;
     drop trigger if exists user_log_up_trigger;
-
+    
     start transaction ;
-
+    
     update user set age = 32 where id = 43923;
     commit;
     rollback;
-
+    
     select * from user;
     select * from user_logs;
     ```
+
 
 ### delete
 

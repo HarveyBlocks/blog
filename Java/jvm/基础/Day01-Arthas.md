@@ -16,6 +16,8 @@ java写的
 java -jar 
 ```
 
+
+
 ```shell
 java -jar D:\IT_study\tools\arthas\arthas-boot.jar
 ```
@@ -135,6 +137,8 @@ dashboard -i 500 -n 3
  HASHCODE  CLASSLOADER  LOCATION                                                                   null                   C:\Users\27970\Desktop\java\lang\String.class                               Affect(row-cnt:1) cost in 48 ms.
 ```
 
+
+
 ![image-20240512200358919](../assets/Day01-Arthas/image-20240512200358919.png)
 
 类的字节码文件和类加载器的字节码文件
@@ -145,10 +149,14 @@ dashboard -i 500 -n 3
 
 [jad](https://arthas.aliyun.com/doc/jad.html)
 
+
+
 `jad` 命令将 JVM 中实际运行的 class 的 byte code 反编译成 java 代码，便于你理解业务逻辑
 
 -   在 Arthas Console 上，反编译出来的源码是带语法高亮的，阅读更方便
 -   当然(?)，反编译出来的 java 代码可能会存在语法错误，但不影响你进行阅读理解
+
+
 
 |         参数名称 | 参数说明                                        |
 | ---------------: | :---------------------------------------------- |

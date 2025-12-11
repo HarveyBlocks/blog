@@ -20,6 +20,8 @@ var 指针名 *指向类型 =  &指向变量
 *指针名
 ```
 
+
+
 ```go
 var num int16 = 0x7f77
 var pNum *int16 = &num // 取地址

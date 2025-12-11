@@ -54,13 +54,15 @@ import "module-name";
     export default function (msg) {
       console.log("Hi " + msg);
     }
-
+    
     export function foo(msg) {
       console.log("Hello " + msg);
     }
     ```
 
     `import foo from './value_from.js';`无论如何都走的是`Hi`的逻辑
+
+
 
 ### 提升
 
@@ -144,9 +146,15 @@ export * from "module-name";
 
     用这种方式导出的, 本模块并**不能**直接使用中继出去的声明, 必须在import一次
 
+
+
+
+
 ## CommonJS 模块
 
 CommonJS是Node.js中常用的模块系统，通过 `require` 和 `module.exports` 语法来管理模块
+
+
 
 暴露
 
@@ -188,6 +196,8 @@ export = MyModuleObject;
 import obj = require("./MyModuleObject");
 ```
 
+
+
 ## CMD
 
 >   Common Module Definition
@@ -203,6 +213,12 @@ var module2 = require('module2');
 // 模块代码
 });
 ```
+
+
+
+
+
+
 
 ## **import()**
 

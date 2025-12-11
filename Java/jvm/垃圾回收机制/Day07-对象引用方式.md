@@ -41,6 +41,10 @@ for (int i = 0; i < 10; i++) {
 
 很没用的积累功能
 
+
+
+
+
 ### Caffine中的软引用
 
 Caffine有使用`SoftReference`的软引用的API
@@ -52,6 +56,8 @@ Cache<String, Object> cache = Caffeine.newBuilder().softValues().build();
 cache.put("key","value");
 ```
 
+
+
 ## 弱引用
 
 弱引用包含的对象在垃圾回收时, 不管内存够不够, 都会直接被回收
@@ -60,11 +66,15 @@ cache.put("key","value");
 
 ThreadLocal
 
+
+
 ### 使用
 
 JDK1.2之后提供WeakReference类来实现弱引用
 
 弱引用对象也能使用队列来进行回收
+
+
 
 ```java
 public static void main(String[] args) throws IOException {
@@ -99,6 +109,8 @@ PhantomReference
 <img src="../assets/Day07-%E5%AF%B9%E8%B1%A1%E5%BC%95%E7%94%A8%E6%96%B9%E5%BC%8F/image-20240519204535900.png" alt="image-20240519204535900" style="zoom:50%;" />
 
 写死了
+
+
 
 ## 终结器引用
 

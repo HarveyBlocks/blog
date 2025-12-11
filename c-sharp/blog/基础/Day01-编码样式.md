@@ -46,15 +46,17 @@
     	// NG    
     }
     ```
-
+    
     因为bbb是在aaa的命名空间里using, 可能定位到的是`bbb`, 也可能是`aaa.bbb`
-
+    
     于是异常, 找不到`bbb`的成员`XXX`
-
+    
     ```
     - error CS0246: The type or namespace name 'XXX' could not be found (are you missing a using directive or an assembly reference?)
     - error CS0103: The name 'XXX' does not exist in the current context
     ```
+    
+    
 
 ## 注释
 

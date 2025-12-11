@@ -1,5 +1,7 @@
 # Spring后处理器
 
+
+
 ## 概述
 
 >   需求: 对外拓展点
@@ -23,6 +25,8 @@
     -   Bean后处理器
     -   在**Bean实例化之后,填充到单例池singletonObjects之前执行**
     -   每个Bean实例化之后都会执行一次
+
+
 
 ## 入门使用
 
@@ -51,9 +55,9 @@
 
     ```java
     package com.harvey.processor;
-
+    
     import ...
-
+    
     /**
      * ...
      **/
@@ -89,9 +93,9 @@
 
     ```java
     package com.harvey.processor;
-
+    
     import ...
-
+    
     /**
      * ...
      **/
@@ -103,12 +107,12 @@
             System.out.println("postProcessBeanFactory,启动!");
             BeanDefinition myBeanFactory = factory.getBeanDefinition("myBeanFactory");
             //不管xml里是id还是name!getBean("用到是什么名字"),这里就填什么名字
-
+    
             System.out.println("获取myBeanFactory");
-
+    
             myBeanFactory.setBeanClassName("com.harvey.Impl.UserDaoImpl");
             //看看我这一手优秀的操作
-
+    
             System.out.println("把myBeanFactory硬生生改成了UserDaoImpl!");
         }
     }
@@ -137,6 +141,8 @@
 -   输出结果
 
     ![image-20231102171532946](../../../assets/Day05-Spring后处理器概述与入门/image-20231102171532946.png)
+
+ 
 
 ### 注册
 
@@ -177,6 +183,8 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
 }
 ```
 
+
+
 -   RegisterMyBean接口
 
     ```java
@@ -188,7 +196,7 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
         public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
             System.out.println("RegisterMyBean:Registry,启动!");
         }
-
+    
         @Override
         public void postProcessBeanFactory(ConfigurableListableBeanFactory factory) throws BeansException {
             System.out.println("RegisterMyBean:Factory,启动!");
@@ -212,10 +220,13 @@ public interface BeanDefinitionRegistryPostProcessor extends BeanFactoryPostProc
 
 -   为啥你这标题取得这么中二?
 
+
+
 ```java
 package com.harvey.annotation;
 
 import ...
+
 
 /**
  * 需求:
@@ -272,7 +283,12 @@ public class MyComponentUtil implements BeanDefinitionRegistryPostProcessor {
 }
 ```
 
+
+
+
+
 -   这是辅助工具类,只需了解用法,具体原理再说
+
 
 ```java
 package com.harvey.utils;
@@ -342,6 +358,8 @@ public class BaseClassScanUtils {
 ### 注意
 
 -   我被你害惨啦
+
+
 
 -   这里的pattern是相对路径,如果在test目录里调用了写了这段代码的方法(尽管这个方法是在下main目录下的),也会变成当前以test为根目录(也很好理解)
 

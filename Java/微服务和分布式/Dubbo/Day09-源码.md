@@ -1,5 +1,7 @@
 # 源码
 
+
+
 ## SPI
 
 >   Service Provider Interface
@@ -35,6 +37,8 @@ Dubbo对Java原生的SPI机制进行了增强
     }
     ```
 
+
+
 缺点
 
 -   所有配置了的实现类全部都会加载并实例化
@@ -59,7 +63,7 @@ Dubbo对Java原生的SPI机制进行了增强
 
     ```java
     import com.alibaba.dubbo.common.extension.SPI;
-
+    
     @SPI
     public interface UserService {
         User sayHello(String name);
@@ -74,6 +78,8 @@ Dubbo对Java原生的SPI机制进行了增强
     UserService impl0 = extensionLoader.getExtension("impl0");
     impl0.sayHello("王五");
     ```
+
+
 
 #### 源码
 
@@ -118,6 +124,8 @@ if (instance == null) {
 return (T) instance;
 ```
 
+
+
 `com.alibaba.dubbo.common.extension.ExtensionLoader#createExtension`
 
 ```java
@@ -143,9 +151,13 @@ if (wrapperClasses != null && !wrapperClasses.isEmpty()) {
 return instance;
 ```
 
+
+
 ## 服务暴露
 
 就是放到注册中心(远程服务)或本地服务(可配置)的过程
+
+
 
 ## 服务注入
 

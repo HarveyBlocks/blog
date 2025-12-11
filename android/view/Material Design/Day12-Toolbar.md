@@ -4,6 +4,8 @@
 - 灵活性高
 - 可以配合其他控件完成一些Material Design的效果
 
+
+
 ## 覆盖ActionBar
 
 使用Toolbar之前像取消ActionBar
@@ -138,6 +140,8 @@ manifest.xml
 
 ### menu布局
 
+
+
 ```xml
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -167,6 +171,8 @@ manifest.xml
 
 `android:icon`设置图标
 
+
+
 ### 注册
 
 ```kotlin
@@ -179,7 +185,13 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
+
+
+
+
 ### 效果
+
+
 
 <img src="../../assets/Day12-Toolbar/image-20250922165045594.png" alt="image-20250922165045594" style="zoom:50%;" />
 

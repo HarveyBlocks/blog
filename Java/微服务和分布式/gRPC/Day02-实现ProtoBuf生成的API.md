@@ -12,7 +12,11 @@
 
 gRPC使用Netty来创建服务端
 
+
+
 ### 继承
+
+
 
 ```java
 package com.harvey.grpc.server.service;
@@ -68,6 +72,8 @@ public class UserService extends UserServiceImplBase {
 }
 ```
 
+
+
 客户端监听服务端发送的完成消息
 
 服务端的完成消息由
@@ -79,6 +85,8 @@ response.onCompleted();
 调用完成
 
 如果客户端监听不到这个消息, 或者说, 如果服务端不执行`onComplete()`方法, 客户端就会一直监听
+
+
 
 ### 实现业务逻辑
 
@@ -123,15 +131,15 @@ class UserIService{
 
     public UserDto queryById(long id) {
         String username = userMap.get(id);
-
+        
         // 创建响应对象的构建者
         UserDto.Builder builder = UserDto.newBuilder();
-
+        
         // 填充数据
         builder.setIcon(username);
         builder.setId(id);
         builder.setNickName(username);
-
+        
         // 封装对应的响应
         return builder.build();
     }

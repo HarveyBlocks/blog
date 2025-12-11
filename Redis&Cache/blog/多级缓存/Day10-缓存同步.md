@@ -51,15 +51,20 @@
 
 ![image-20240219203231747](../../assets/Day10-缓存同步/image-20240219203231747.png)
 
+
+
 Canel是阿里巴巴基于Java开发, 基于数据库**增量日志**解析, 提供增量数据订阅和消费
 
 Canel会伪装成Mysql数据库的Slave节点, 从而监听master的binary log的变化, 再把消息通知给Canel客户端,进而完成对其他数据库的同步
 
 ![image-20240219203706946](../../assets/Day10-缓存同步/image-20240219203706946.png)
 
+
+
 ## 安装Canel
 
 [安装Canel](安装Canal.md)
+
 
 ## 使用Canel
 
@@ -107,11 +112,11 @@ public class Item {
     @TableId(type = IdType.AUTO)
     @Id // 区分主键
     private Long id;
-
+    
     // 若驼峰不能识别, 就用@Column注解
     @Column(name = "name")
     private String name;
-
+    
     // 驼峰可以识别
     private Date createTime;
 
@@ -120,6 +125,8 @@ public class Item {
     private Integer sold;
 }
 ```
+
+
 
 ### 监听Canal
 
@@ -154,6 +161,10 @@ public class ItemHandler implements EntryHandler<Item> {
     }
 }
 ```
+
+
+
+
 
 ```java
 @CanalTable("tb_item")

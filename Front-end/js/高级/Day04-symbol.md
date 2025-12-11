@@ -43,6 +43,8 @@ console.log(Symbol.keyFor(symbol3)); // undefined
 
 一个对象实现了Symbol.iterator属性, 则认为是可迭代的, 可以使用for-of和for-in
 
+
+
 ## Symbols 与 JSON.stringify()
 
 当使用 JSON.stringify() 时，以 symbol 值作为键的属性会被完全忽略：

@@ -70,6 +70,8 @@ memory
 
 -   CMS 在JDK14废弃
 
+
+
 -   Serial + Serial Old
 
     ```shell
@@ -89,7 +91,7 @@ memory
     ```
 
     两个参数任选一
-
+    
 -   高版本用G1(默认)
 
     ```shell
@@ -121,6 +123,12 @@ Java客户端
 
 硬件有限
 
+
+
+
+
+
+
 ## ParNew + CMS
 
 ParNew 本质上是堆Serial在多CPU下的优化, 使用多线程进行垃圾回收器
@@ -144,6 +152,8 @@ CMS Concurrent Mark Sweep 并行标记-清理, CMS关注STW, 允许用户线程�
     -   不停止用户线程
     -   清理死亡的对象
 
+
+
 -   处理内存碎片
 
     -   会导致用户线程的暂停
@@ -155,6 +165,8 @@ CMS Concurrent Mark Sweep 并行标记-清理, CMS关注STW, 允许用户线程�
         ```
 
         默认0
+
+
 
 ### 优缺点
 
@@ -175,6 +187,8 @@ CMS Concurrent Mark Sweep 并行标记-清理, CMS关注STW, 允许用户线程�
 ### 适用场景
 
 请求数据量大, 频率高
+
+
 
 ## Parallel Savenge/Old
 
@@ -216,15 +230,25 @@ $$
 用户线程执行时间=\frac{GCTimeRatio}{GCTimeRatio+1}
 $$
 
+
+
 最大暂停时间和吞吐量矛盾, PS会同时满足两个值(==如果一个配置得不恰当, 就会拖后腿==)
 
 故要不断测试, 保证每个配置之间达到平衡
+
+
 
 自动调整内存大小, 默认开启
 
 ```shell
 -XX:+UseAdapticeSizePolicy
 ```
+
+
+
+
+
+
 
 ### 适用场景
 
@@ -301,6 +325,8 @@ Region的大小通过对空间的大小/2048获得
     -   若对象的大小超过Regin的一半,直接放入老年代, 这类老年代称为Humongous(巨大的)区
     -   如果对象过大会跨越多个Region
 
+
+
 ### 混合垃圾回收
 
 多次回收后, 会出现很多老年代, 此时总堆栈率占有率达到阈值(默认45%)
@@ -312,6 +338,8 @@ Region的大小通过对空间的大小/2048获得
 会触发混合回收MixedGC, 回收所有年轻代, 部分老年代和大对象区, 采用复制算法完成
 
 G1对老年代的清理会原则存货度最低(存活的最少)的区域来进行回收, 这样可以保证回收效率最高, 即Garbage First
+
+
 
 1.  初始标记 Initial mark
 
@@ -345,6 +373,8 @@ G1对老年代的清理会原则存货度最低(存活的最少)的区域来进�
 
 ### Full GC
 
+
+
 如果出现内存内没有Region可以用来拷贝
 
 <img src="../assets/Day08-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/image-20240521003847341.png" alt="image-20240521003847341" style="zoom:67%;" />
@@ -374,11 +404,15 @@ G1对老年代的清理会原则存货度最低(存活的最少)的区域来进�
     -   `zero` 关闭所有的垃圾回收器
 -   `release` 发布版
 
+
+
 ### 开启
 
 ```shell
 -XX:+UseShenandoahGC
 ```
+
+
 
 ## ZGC
 
@@ -418,6 +452,10 @@ G1对老年代的清理会原则存货度最低(存活的最少)的区域来进�
 
 JDK17之后自动决定并行线程数`-XX:ConcGCThreads`
 
+
+
+
+
 需要设置最大堆内存大小, ZGC需要更多的内存用于垃圾回收`-Xmx`
 
 建议堆内存控制再`-XX:SoftMaxHeapSize=value`以下
@@ -446,6 +484,8 @@ JDK17之后自动决定并行线程数`-XX:ConcGCThreads`
     ```shell
     -XX:+UseLargePages
     ```
+
+    
 
 ## 性能测试
 
@@ -538,6 +578,7 @@ public class MyBenchmark {
     public void zGCGenerational(Blackhole blackhole){
         test(blackhole);
     }
+
 
     public static void main(String[] args) throws RunnerException {
 

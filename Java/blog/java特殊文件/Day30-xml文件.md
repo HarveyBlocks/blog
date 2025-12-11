@@ -61,6 +61,10 @@
 
 ### 注意
 
+
+
+
+
 - 不要乱在xml文件里写>,<,&啥的(><会被认定是标签)
   - 平替:![image-20231004004846059](../../assets/Day30/image-20231004004846059.png)
   - 可以用浏览器查看是否替换成功:
@@ -113,6 +117,8 @@
 
 ![image-20231004144127769](../../assets/Day31/image-20231004144127769.png)
 
+
+
 ##### 使用Dom4j框架
 
 ##### 解析XML文档,获取Document对象
@@ -158,6 +164,10 @@ public class ParseXml {
 | ----------------------------------- | ------------------------------------------------- |
 | List<Attribute> attributes()        | 得到当前元素所有属性(属性名+属性值)               |
 | String elementTextTrim(String name) | 得到指定名称的子元素的文本,并为文本去除当前后空格 |
+
+
+
+
 
 ```java
 package learnSpecialDoc;
@@ -245,6 +255,8 @@ public class ParseXml {
 - 越自由,越是要约束
 - 限制XML文件只能按照某种格式书写
 
+
+
 ### 约束文档
 
 - DTD文档**不能约束数据类型**
@@ -267,7 +279,7 @@ public class ParseXml {
   约束后的正确格式:
 
   ![image-20231004162355349](../../assets/Day31/image-20231004162355349.png)
-
+  
 ### Schema约束文档
 
 - 后缀必须是.xsd
@@ -275,6 +287,8 @@ public class ParseXml {
   ![image-20231004163619730](../../assets/Day31/image-20231004163619730.png)
 
   ![image-20231004163530192](../../assets/Day31/image-20231004163530192.png)
+
+  
 
   约束后的正确格式:
 

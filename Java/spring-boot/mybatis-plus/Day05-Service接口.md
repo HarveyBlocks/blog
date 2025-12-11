@@ -16,6 +16,8 @@
 
         性能好一点,因为**in没法用索引**
 
+
+
 ## 继承IService
 
 ![image-20231208195349766](../../assets/Day05-Service接口/image-20231208195349766.png)
@@ -25,6 +27,10 @@ public interface UserService extends IService<User> {
     void showMapper();
 }
 ```
+
+
+
+
 
 ```java
 @Service
@@ -39,6 +45,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User>
     }
 }
 ```
+
+
 
 -   lambdaQuery()
 
@@ -89,9 +97,13 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User>
                 .eq(User::getName,user.getName())
                 //刚才获取的user的name依旧还是name没有被改,可以执行update,否则不更新
                 .update();
-
+    
     }
     ```
+
+    
+
+
 
 ## 批量插入
 

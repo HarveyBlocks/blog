@@ -1,5 +1,9 @@
 # 安装和配置Canal
 
+
+
+
+
 下面我们就开启mysql的主从同步机制，让Canal来模拟salve
 
 # 1.开启MySQL主从
@@ -42,6 +46,8 @@ log-bin=/var/lib/mysql/mysql-bin
 binlog-do-db=heima
 ```
 
+
+
 ## 1.2.设置用户权限
 
 接下来添加一个仅用于数据同步的账户，出于安全考虑，这里仅提供对heima这个库的操作权限。
@@ -56,11 +62,15 @@ select host,user,plugin from mysql.user ;
 ALTER USER 'canal'@'%' IDENTIFIED WITH mysql_native_password BY 'canal';
 ```
 
+
+
 重启mysql容器即可
 
 ```
 docker restart mysql
 ```
+
+
 
 测试设置是否成功：在mysql控制台，或者Navicat中，输入命令：
 
@@ -68,7 +78,11 @@ docker restart mysql
 show master status;
 ```
 
+
+
 # 2.安装Canal
+
+
 
 ## 2.1.创建网络
 
@@ -84,6 +98,10 @@ docker network create heima
 docker network connect heima mysql
 ```
 
+
+
+
+
 ## 2.3.安装Canal
 
 课前资料中提供了canal的镜像压缩包:
@@ -95,6 +113,8 @@ docker.tar
 ```
 docker load -i canal.tar
 ```
+
+
 
 然后运行命令创建Canal容器：
 
@@ -111,6 +131,8 @@ docker run -p 11111:11111 --name canal \
 --network cache \
 -d canal/canal-server:v1.1.5
 ```
+
+
 
 说明:
 

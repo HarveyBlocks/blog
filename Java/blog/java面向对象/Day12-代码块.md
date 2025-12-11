@@ -19,6 +19,9 @@ public class Main {
         System.out.println("静态代码块最早");
     }
 
+
+
+
     public static void main(String[] args) {
         Main main1=new Main();//看谁先加载
         System.out.println("======================");
@@ -28,11 +31,29 @@ public class Main {
 
 ```
 
+
+
+
+
 输出结果：
 
 ![image-20230813192525169](../../assets/Day12/image-20230813192525169.png)
 
+
+
+
+
+
+
+
+
 ![image-20230901164123132](../../assets/Day12/image-20230901164123132.png)
+
+
+
+
+
+
 
 方法里也能写代码块
 

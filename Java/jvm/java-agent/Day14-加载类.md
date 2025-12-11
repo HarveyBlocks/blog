@@ -248,6 +248,9 @@ public static final Printer PRINTER = new Printer() {
 };
 ```
 
+
+
+
 #### 本处实现
 
 加载(直接就有inst的字节码)
@@ -278,7 +281,7 @@ public class JdCoreDecompileLoader implements Loader {
 ```java
 public class JdCoreDecompilePrinter implements Printer {
     // ...
-
+    
     private final StringBuilder stringBuilder = new StringBuilder();
 
     @Override

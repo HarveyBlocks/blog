@@ -21,6 +21,8 @@ public class Main {
 }
 ```
 
+
+
 ``` java
 package com.pac;
 
@@ -31,10 +33,12 @@ public class Student {//会进行默认的初始化
 
     char grade;     //''
 
+
     // 方法
     public void study(){
         System.out.println(this.name +" are studying");
     }
+
 
 }
 
@@ -59,7 +63,13 @@ class Test {
 }
 ```
 
+
+
+
+
 ## this关键字
+
+
 
 this关键字是指向当前**对象**的
 
@@ -71,11 +81,17 @@ this关键字是指向当前**对象**的
 
 ![image-20230901142342338](../../assets/Day09/image-20230901142342338.png)
 
+
+
+
+
 ### 对象之间的属性一般不会相互影响除非:
 
 ![image-20230901143406259](../../assets/Day09/image-20230901143406259.png)
 
 内存分析一下就理解了
+
+
 
 这个好没用啊
 

@@ -45,6 +45,8 @@
 
 -   但是我使用了SpringBoot
 
+
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -62,17 +64,17 @@
 
     ```xml
     <?xml version="1.0" encoding="UTF-8" ?>
-
+    
     <!DOCTYPE web-app PUBLIC
             "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
             "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+    
     <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
              http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
              version="4.0">
-
+    
         <session-config>
             <session-timeout>30</session-timeout>
         </session-config>
@@ -93,9 +95,11 @@
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
+    
     </beans>
     ```
+
+    
 
 ## XML方式使用Spring Task
 
@@ -109,9 +113,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/task ">
-
+    
 </beans>
 ```
+
+
+
 
 ### 业务
 
@@ -130,7 +137,13 @@ public class TaskServiceImpl implements TaskService {
 }
 ```
 
+
+
+
+
 ### 配置定时任务
+
+
 
 ```xml
 <bean id="taskService" class="com.harvey.spring.task.service.impl.TaskServiceImpl"/>
@@ -141,6 +154,8 @@ public class TaskServiceImpl implements TaskService {
     <task:scheduled ref="taskService" method="secondTask"/>
 </task:scheduled-tasks>
 ```
+
+
 
 ### 配置定时规则
 
@@ -200,6 +215,8 @@ public class TaskServiceImpl implements TaskService {
 @Scheduled(initialDelay = 500,fixedDelay = 3000)
 ```
 
+
+
 ```java
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -250,6 +267,7 @@ public class TaskServiceImpl implements TaskService {
         THREAD_POOL_TASK_SCHEDULER.initialize();
         logger.info("初始化线程池...");
     }
+
 
     public void start() {
         java.util.Date startTime = new java.util.Date();

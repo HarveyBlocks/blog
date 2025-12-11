@@ -26,6 +26,8 @@ autoindex_exact_size on|off;
 
 `http`, `server`, `location`
 
+
+
 ### 显示格式
 
 设置目录列表(显示给用户的)的格式(1.7.9之后出现)
@@ -38,6 +40,8 @@ autoindex_format html|xml|json|jsonp;
 
 `http`, `server`, `location`
 
+
+
 ### 显示时间
 
 在目录列表上显示的时间
@@ -49,6 +53,10 @@ autoindex_localtime on | off
 默认关闭, 显示JMT时间, on , 显示服务器上的时间
 
 `http`, `server`, `location`
+
+
+
+
 
 ## 使用
 

@@ -1,4 +1,5 @@
 
+
 # 增删改查
 
 -   插件MyBatisX
@@ -13,6 +14,8 @@
 
 ## 参数获取
 
+
+
 ```xml
 <!--parameterType=int,integer都没有问题,大小写也没有问题-->
 <!--parameterType一般不写,太麻烦了-->
@@ -20,6 +23,8 @@
     select * from user where id = #{id};
 </select>
 ```
+
+
 
 ### 参数占位符
 
@@ -36,6 +41,8 @@
     ```
 
     表名或者列名不确定的时候,就用`${id}`
+
+
 
 ### <>特殊符号->转义字符
 
@@ -71,6 +78,7 @@
     user_name as name, user_age age, status, gender
 </sql>
 <!-- 下面是大量的sql语句-->
+
 
 <select id ="selectById" resultType="User">
     <!--查询结果应该不包含ID-->
@@ -112,6 +120,7 @@
     <result column="user_name" property="userName"/>
     <result column="user_age" property="userAge"/>
 </resultMap>
+
 
 			<!--用resultMap属性去替代resultType的属性去完成属性和列名的的映射-->
 <select id ="selectById" resultMAp="userResultMap">
@@ -161,6 +170,8 @@
     );
     ```
 
+    
+
 -   测试类
 
 ```java
@@ -170,6 +181,10 @@ UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 List<User> users = userMapper
         .selectByCondition("%"+"A"+"%",20,"2");
 ```
+
+
+
+
 
 #### 法二:
 
@@ -190,15 +205,21 @@ List<User> users1 = userMapper
         ));
 ```
 
+
+
 #### 法三:
 
 -   传入Map集合
+
+
 
 -   接口:
 
 ```java
 List<User> selectByCondition(Map map);
 ```
+
+
 
 -   测试类:
 
@@ -214,6 +235,8 @@ for (User user :users1) System.out.println(user);
 for (User user :users2) System.out.println(user);
 ```
 
+
+
 ### 动态条件查询-动态SQL
 
 -   那么我只要差name相关,或者只查status相关,阁下又该如何应对?
@@ -221,6 +244,8 @@ for (User user :users2) System.out.println(user);
 [动态SQL](https://mybatis.org/mybatis-3/zh/dynamic-sql.html)
 
 ![image-20231016200657399](../assets/Day34-MyBatis案例/image-20231016200657399.png)
+
+
 
 -   先来一个有问题的
 
@@ -257,7 +282,7 @@ for (User user :users2) System.out.println(user);
 
     ```xml
     <select id="selectByCondition" resultMap="UserMap">
-
+    
             select * from user where 1=1
     								<!--这里加上1=1-->
                 <if test="status!=null">
@@ -271,7 +296,7 @@ for (User user :users2) System.out.println(user);
                 <if test="age!=0">
                     and age &gt; #{age};
                 </if>
-
+    
     </select>
     ```
 
@@ -282,7 +307,7 @@ for (User user :users2) System.out.println(user);
     ```xml
     <select id="selectByCondition" resultMap="UserMap">
         select * from user <where>
-
+    
         <!--
         -这里test里的status等
         -应该都是userName
@@ -392,6 +417,8 @@ for (User user :users2) System.out.println(user);
 
 ## 增加记录
 
+
+
 ```java
 User user = new User("X",41,"1","女");
 userMapper.addUser(user);
@@ -407,6 +434,8 @@ userMapper.addUser(user);
 
 -   **你这么加是加不上去的!**
 
+
+
 ***WHY?***
 
 -   `autocommit=false`
@@ -418,9 +447,9 @@ userMapper.addUser(user);
 	```java
     User user = new User("X",41,"1","女");
     userMapper.addUser(user);
-
+    
     sqlSession.commit();
-
+    
     //释放资源
     sqlSession.close();
   ```
@@ -434,7 +463,7 @@ userMapper.addUser(user);
   SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
   // 获取SQLfSession对象
   SqlSession sqlSession = sqlSessionFactory.openSession(true);
-
+    
   // 获取UserMapper接口的代理对象
   UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
   ```
@@ -455,7 +484,7 @@ userMapper.addUser(user);
     -   keyProperty="id"
 
         如果传入参数是Java类Entity, 那么这个值应该是Entity里面的ID字段名
-
+        
         要获取ID, 应该是通过参数entity.getId()的方式获取(MyBatis通过反射注入ID值)
 
 ```xml
@@ -497,6 +526,8 @@ User user = new User("AD",24,"1","女");
 user.setId(132);
 System.out.println(userMapper.update(user));
 ```
+
+
 
 ### 修改动态字段
 
@@ -556,6 +587,10 @@ System.out.println(userMapper.update(user));
 ```
 
 -   震惊!居然可以不用写分号
+
+
+
+
 
 ### 批量删除
 

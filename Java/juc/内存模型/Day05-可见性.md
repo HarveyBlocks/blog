@@ -83,6 +83,8 @@ public static void demo() {
 }
 ```
 
+
+
 依旧无法被停止
 
 ## 解决不可变
@@ -95,9 +97,13 @@ public static void demo() {
 -   降低部分性能, 保证资源的可见性
 -    *volatile* 只能用来修饰字段(静态字段和成员变量), 而不能修饰方法的局部变量, 因为方法的局部变量是线程独一份的,  *volatile* 修饰无意义
 
+
+
 ```java
 private volatile static boolean run = 1;
 ```
+
+
 
 ### synchronized
 
@@ -154,6 +160,8 @@ synchronized(lock){
     }
 }
 ```
+
+
 
 其中的规律, 不好说, 测试不严谨, 故如果只是为了可见性, 用 *volatile*, 而不是 *synchronized*
 

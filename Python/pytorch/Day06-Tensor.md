@@ -43,6 +43,10 @@
     x = torch.tensor(np.random.rand(2,4))
     ```
 
+    
+
+
+
 ### 填充
 
 -   填充1
@@ -52,6 +56,8 @@
     x = x.new_ones(5,3)
     ```
 
+
+
 ### 返回大小
 
 ```python
@@ -59,6 +65,7 @@ x = torch.rand((5,3))
 print(x.size())
 # torch.Size([5, 3])
 ```
+
 
 ### 计算
 
@@ -81,6 +88,8 @@ print(result)
 print(result.size()) # [5, 6]
 ```
 
+
+
 ### 索引
 
 ```python
@@ -90,6 +99,9 @@ print(x[:3])
 print(x[:,:2])
 ```
 
+
+
+
 ### 改变矩阵维度
 
 ```python
@@ -98,6 +110,7 @@ y = x.view(-1,5)
 print(x.size(),y.size()) 
 # torch.Size([5, 3]) torch.Size([3, 5])
 ```
+
 
 ```python
 x = torch.rand((5,3))

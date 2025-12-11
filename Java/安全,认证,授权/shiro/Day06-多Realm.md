@@ -35,6 +35,8 @@
     -   FirstSecessfulStratege  的应用场景是什么,如果第一个不成功,就不成功了吗? 
         -   A:  如果第一个不成功，后面的==不会被忽略==
 
+
+
 ### 代码
 
 ```java
@@ -61,6 +63,7 @@ public DefaultWebSecurityManager defaultWebSecurityManager(){
     matcher.setHashAlgorithmName("MD5");//md5Matcher=org.apache.shiro.authc.credential.Md5CredentialsMatcher
     matcher.setHashIterations(1);//md5Matcher.hashIterations=1
 
+
     // 创建认证对象
     ModularRealmAuthenticator authenticator = new ModularRealmAuthenticator();
     // 设置认证策略
@@ -70,6 +73,8 @@ public DefaultWebSecurityManager defaultWebSecurityManager(){
 
     // 3. 将加密对象存储到myRealm
     myRealm.setCredentialsMatcher(matcher);//myRealm.credentialsMatcher=$md5Matcher
+
+
 
     myRealm0.setCredentialsMatcher(matcher);
     myRealm1.setCredentialsMatcher(matcher);

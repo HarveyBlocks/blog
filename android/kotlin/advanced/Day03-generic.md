@@ -79,6 +79,8 @@ y.compareTo(1.2)
 
 泛型的属性变成只可写了
 
+
+
 ## 使用处`*`投影
 
 `Function <in T, out U>`
@@ -127,6 +129,8 @@ class Box1<T : Any>(val value: T) // not null
 class Box2<T : Any?>(val value: T) // nullable
 ```
 
+
+
 ## 类型擦除
 
 所有实例类型都会擦除为`ParameterizedClass<*>`
@@ -170,6 +174,7 @@ inline fun <reified A, reified B> Pair<*, *>.asPairOf(): Pair<A, B>? {
 
 ```kotlin
 val somePair: Pair<Any, Any> = "items" to listOf(1, 2, 3)
+
 
 val stringToSomething = somePair.asPairOf<String, Any>()
 val stringToInt = somePair.asPairOf<String, Int>()

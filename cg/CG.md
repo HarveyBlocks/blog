@@ -4,6 +4,7 @@
 
 向量乘积的笛卡尔坐标系求法, 使用Determinant定义
 
+
 $$
 \vec{u} \times \vec{v} := det\left(\begin{array}{ll}
 \vec{e_1} & \vec{e_2} & \vec{e_3}\\
@@ -16,9 +17,16 @@ u_1 v_2 - u_2 v_1
 \end{array} \right)
 $$
 
+
+
+
+
+
 设置一个单位向量 $\vec{n}$,  现将其作为一个平面 $\alpha$ 的法向量, $\vec{u}$ 是平面 $\alpha$ 上的一个向量
 
 ![image-20251208220509763](assets/CG/image-20251208220509763.png)
+
+
 
 求 $\vec{n} \times \vec{u}$ 相当于将 $\vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $90^{\circ}$
 
@@ -35,11 +43,14 @@ $$
 
 <img src="assets/CG/image-20251208223852460.png" alt="image-20251208223852460" style="zoom:50%;" />
 
+
+
 ## Jacobi identity
 
 雅可比式在三角形的法向量运算中的使用
 
 ![image-20251208222609328](assets/CG/image-20251208222609328.png)
+
 
 $$
 \vec{u}\times(\vec{v}\times\vec{w}) +
@@ -47,7 +58,9 @@ $$
 \vec{w}\times(\vec{u}\times\vec{v}) = 0
 $$
 
+
 ## Lagrange's identity
+
 
 $$
 \vec{u}\times(\vec{v}\times\vec{w}) = \vec{v} (\vec{u}\cdot\vec{w})-\vec{w} (\vec{u} \cdot \vec{v})
@@ -74,6 +87,8 @@ $$
 D_uF := \lim_{\epsilon \to 0} \frac{F(f+\epsilon u)-F(f)}{\epsilon}
 $$
 
+
+
 对于 $F(f) = <<f,g>>$ 函数内积作为 $F$ 的定义, 其梯度类比可得 $\nabla F = g$
 
 对于$F(f) = ||f||^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
@@ -91,6 +106,7 @@ $$
 $$
 <<\nabla F(f_0), u>> = 2<<f_0,u>>
 $$
+
 
 # Sampling
 
@@ -137,6 +153,8 @@ $$
 
 采样低频率数据+采样较低频率数据+采样较高频率数据+采样超高频率数据
 
+
+
 ### 高频信号失真
 
 Origin频率高于采样频率太多, 将导致采样结果反而接近低频下的Origin
@@ -153,6 +171,8 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 依据**香农定理**, 需要源数据的最高频率的两倍来采样, 可以完全还原源数据
 
+
+
 ## Cover
 
 判断一个像素是否被三角形Cover, 看这个Pixel的中心点
@@ -164,17 +184,23 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 - 3 Covered Pixel
 - 4 Covered Pixel
 
+
+
 ## Point In Triangle Test
 
 看一个是否在一个三角形中
 
 [TODO](向量内积法判断)
 
+
+
 ## Aliasing
 
 混叠
 
 [TODO](混叠的方法)
+
+
 
 ### early out
 
@@ -184,7 +210,17 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 同理, 也可以依据$P_0 ,P_1, P_2$ 三个点的横坐标, 找到最左边的一个点, 来减少行的开始时对Point的无用检查
 
+
+
 <img src="assets/CG/image-20251208184025324.png" alt="image-20251208184025324" style="zoom:33%;" />
+
+
+
+
+
+
+
+
 
 ## Depth-buffer/z-buffer
 
@@ -222,6 +258,10 @@ z-buffer能解决画家算法无法解决的循环遮挡的问题
 3. 对于$W\cdot H\cdot S \cdot S$ 的数组进行采样
 4. $W\cdot H\cdot S \cdot S$ 的数组取平均映射到$W\cdot H$ 的结果数组上
 
+
+
+
+
 # Spatial Transformations
 
 为什么是线性变换
@@ -229,6 +269,10 @@ z-buffer能解决画家算法无法解决的循环遮挡的问题
 - 容易实现
 - 容易求解,也容易进行反向操作
 - 线性变换的组合依旧是线性的
+
+
+
+
 
 ## 基础变换
 
@@ -245,6 +289,9 @@ m_x/m_z \\
 m_y/m_z
 \end{array} \right) 
 $$
+
+
+
 
 ### 旋转
 
@@ -271,6 +318,8 @@ a & 0 & 0\\
 0 & 0 & 1
 \end{array} \right)
 $$
+
+
 
 当a, b异号, 则发生reflect对称
 
@@ -301,11 +350,13 @@ u_2 e_1 	& u_2 e_2 + 1   & 0 \\
 \end{array} \right)
 $$
 
+
 ### 平移
 
 原理是三维的剪切操作, 投影到二维上
 
 向 $\vec{u} = (u_1,u_2)$ 方向平移(三维空间在 $x-y$ 平行的平面上的投影)
+
 
 $$
 \left(\begin{array}{ll}
@@ -320,6 +371,8 @@ $$
 $$
 T \times R_0\times S \times R_1 \times \vec{v}
 $$
+
+
 
 -  几何上 $R_1$ 的变换先起作用, 因为左边的矩阵作用在右边的矩阵上
 - 运算上从左往右运算
@@ -394,6 +447,7 @@ $$
    -w_x & -w_y & -w_z
    \end{array} \right)
    $$
+   
 
 ### 视锥体
 
@@ -413,6 +467,10 @@ $$
 
 ![image-20251209200137545](assets/CG/image-20251209200137545.png)
 
+
+
+
+
 我们定义, 剔除比 `z-near` 近, 比 `z-far` 远的物体
 
 这么做是为了 `z-buffer`, z 缓冲这一技术, 由于在计算机上使用浮点数存储三角形信息
@@ -421,9 +479,15 @@ $$
 
 ![image-20251209200640031](assets/CG/image-20251209200640031.png)
 
+
+
+
+
 ## 视锥体到单位正方体的映射
 
 ![image-20251209200825480](assets/CG/image-20251209200825480.png)
+
+
 
 为什么要这么做?
 
@@ -432,6 +496,8 @@ $$
 - 以x轴为例, 本来是运算一个三角形是否在一个斜面之外, 现在只需要查看一个三角形的x轴坐标是否在`(-1,1) `之外
 
 - 只有一部分在视锥体的三角形, 这种特殊情况, 划分为子三角形这一步骤也将简单一些
+
+
 
 1. 将视锥体的灰色部分, 一个锥台, 变成一个长方体, 转 **透视投影** 为 **正交投影**
 
@@ -468,6 +534,7 @@ $$
    x\cdot \frac{n}z\\y\cdot\frac{n}z\\?\\1
    \end{array} \right)
    $$
+   
 
    变换矩阵如下
    $$
@@ -501,7 +568,7 @@ $$
     &   & 1 & 0 
    \end{array} \right)
    $$
-
+   
 2. 由于Z指向负轴, 因此需要进行一个$z \to -z $ 的映射
    $$
    R_x \times M \times  \left(\begin{array}{ll}
@@ -517,7 +584,7 @@ $$
    &&&-1
    \end{array} \right)
    $$
-
+   
 3. 定义正交容器上八个点有关的参数 
 
    - **l** : left
@@ -536,7 +603,7 @@ $$
     &   &   & 1 
    \end{array} \right)
    $$
-
+   
 5. 使用scale进行归一( 其实是(-1,1), 长度2 )化, 由于是 -z 轴, 所以 n 比 f 大
    $$
    S = \left(\begin{array}{ll}
@@ -566,11 +633,11 @@ $$
    \end{array} \right)
    $$
    定义$M_{ortho}=S \times T$ , $M_{persp\to ortho} = M$, $M_{persp}=M_{ortho}\times M_{persp\to ortho} $
-
+   
    ==TODO 这里有一个很困惑的点, 各种教材里都没有讲最后一行变化时为什么莫名其妙变成-1了==
-
+   
    ==我的理解是 $R$ 对称变化, 就是由于Camera面向$-z$的缘故, 但是不确定==
-
+   
    对于 $M_{persp}$, 复合矩阵即
    $$
    M_{persp}=M_{ortho}\times M_{persp\to ortho} = \left(\begin{array}{ll}
@@ -580,7 +647,8 @@ $$
    0 & 0 & -1 & 0 
    \end{array} \right)
    $$
-
+   
+   
 7. 对于现代计算机的图形渲染, 因此从空间到数组的索引, 也存在一个映射
 
    <img src="assets/CG/image-20251209223532674.png" alt="image-20251209223532674" style="zoom:50%;" />
@@ -632,9 +700,15 @@ $$
 $$
 ![image-20251209235132800](assets/CG/image-20251209235132800.png)
 
+
+
+
+
 如果转化思路, 变为比例的概念, 重心<->面积比例<->高
 
 <img src="assets/CG/image-20251210013254123.png" alt="image-20251210013254123" style="zoom:33%;" />
+
+
 
 ### 投影问题
 
@@ -647,6 +721,8 @@ $$
 解决方法:
 
 ![image-20251210012836310](assets/CG/image-20251210012836310.png)
+
+
 
 ## Texture
 
@@ -694,6 +770,8 @@ MipMap思路大概如此, 在每个可能的尺度上存储一个预过滤的图
 
 <img src="assets/CG/image-20251210020221613.png" alt="image-20251210020221613" style="zoom:50%;" />
 
+
+
 ### 选择等级
 
 <img src="assets/CG/image-20251210021047580.png" alt="image-20251210021047580" style="zoom:50%;" />
@@ -715,6 +793,8 @@ $$
 L_x^2 = (\frac{du}{dx})^2+(\frac{dv}{dx})^2, L_y^2=(\frac{du}{dy})^2+(\frac{dv}{dy})^2
 $$
 
+
+
 屏幕空间的 $(u,v)_{0,0}$ 和相邻区域在坐标系 $x-y$ 下的差就是  $dx=1, dy=1$
 $$
 \frac{du}{dx} = u_{10}-u_{00} ,
@@ -722,16 +802,22 @@ $$
 $$
 
 $$
-
+  
 \frac{du}{dy} = u_{01}-u_{00} , 
 \frac{dv}{dy} = v_{01}-v_{00} 
 $$
+
+
 
 ### 存储方法
 
 原本一个RGB位图, 存储是$W\cdot H\cdot 3$, 现在, 将RGB摊开了存储, 存储成本并不会增加多少
 
 <img src="assets/CG/image-20251210020746549.png" alt="image-20251210020746549" style="zoom:50%;" />
+
+
+
+
 
 ### 三次线性插值
 
@@ -756,6 +842,8 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 3. 在同级mipmap中, 使用双线性插值
 
 4. 在两个mipmap的插值结果之间再次进行插值
+
+   
 
 ### 掠射角-各向异性过滤
 
@@ -813,6 +901,8 @@ $$
 
 <img src="assets/CG/image-20251210154811807.png" alt="image-20251210154811807" style="zoom:50%;" />
 
+
+
 如果想融合两个非圆形的实体, 可以使用距离公式
 
 <img src="assets/CG/image-20251210160041252.png" alt="image-20251210160041252" style="zoom:50%;" />
@@ -845,6 +935,8 @@ $$
 - 缺点
   - 难以绘制形状中的所有点
   - 复杂图形的建模困难
+
+
 
 ## 显式
 
@@ -890,6 +982,8 @@ $$
 
 [TODO](贝塞尔曲线的构造)
 
+
+
 ### 伯恩斯坦基底
 
 一个选取概率的操作
@@ -906,6 +1000,7 @@ $$
 $$
 \gamma(s) := \sum_{k=0}^{n} B^n_k(s)p_k
 $$
+ 
 
 - $n=1$: 一条线段
 
@@ -934,6 +1029,8 @@ $$
 
 <img src="assets/CG/image-20251210170314783.png" alt="image-20251210170314783" style="zoom:50%;" />
 
+
+
 对于曲面构建, 伯恩斯坦基底
 $$
 B_{i,j}^3 := B_{i}^3 B_{j}^3 
@@ -944,6 +1041,7 @@ $$
 $$
 S(u,v) := \sum_{i=0}^3\sum_{j=0}^3B^3_{i,j}(u,v)p_{i,j}
 $$
+ 
 
 ### 细分
 
@@ -959,6 +1057,10 @@ $$
 
 <img src="assets/CG/image-20251210172034587.png" alt="image-20251210172034587" style="zoom: 50%;" />
 
+
+
+
+
 # 网格表示
 
 正方形网格
@@ -971,6 +1073,8 @@ $$
 - 容易使用索引来对应
 - 容易进行平均这种附加操作
 - 易于存储
+
+
 
 ## 表面Surface
 
@@ -994,6 +1098,8 @@ $$
   <img src="assets/CG/image-20251210195335057.png" alt="image-20251210195335057" style="zoom:50%;" />
 
 流形保证目标几何体是简单的, 不需要考虑太多的特殊情况
+
+
 
 边界Boundary
 
@@ -1104,6 +1210,8 @@ do{
   - 对于四边形网格,  Catmull Cark
   - 对于三角形网格, Loop, Buterrfly, Sqrt
 
+
+
 ### Loop
 
 极限细分后的曲面曲率在不规则顶点之外将是连续的 $C^2$
@@ -1119,6 +1227,8 @@ do{
    此时, 每一个原三角形分成四个新三角形
 
    <img src="assets/CG/image-20251211024534013.png" alt="image-20251211024534013" style="zoom: 50%;" />
+
+   
 
 3. 新点的坐标是周围老坐标的加权平均
 
@@ -1142,6 +1252,11 @@ do{
    $$
    p'_0 = \sum_{i=1}^n{u \cdot p_i} + (1-n\cdot u) \cdot p_0
    $$
+   
+
+   
+
+
 
 ### Catmull Cark
 
@@ -1153,6 +1268,7 @@ do{
    $$
    p_m = \frac{1}{n} \sum_ip_i
    $$
+   
 
 2. 每个边取中点, 分割
 
@@ -1173,7 +1289,13 @@ do{
    Coords  := \frac{Q+2R+(n-3)S}{n}
    $$
 
+
+
+
+
 <img src="assets/CG/image-20251211023808342.png" alt="image-20251211023808342" style="zoom:67%;" />
+
+ 
 
 Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
@@ -1192,6 +1314,8 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 给每个边赋予一个 $cost$ 值, 表示这条边对表面的改变量
 
 计算出哪个边的 $cost$ 最小, 则删除这条边
+
+
 
 使用合并来对网格进行坍缩
 
@@ -1244,6 +1368,8 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 
 <img src="assets/CG/image-20251211032509066.png" alt="image-20251211032509066" style="zoom:50%;" />
 
+
+
 从 $e_{ij}$ 坍缩到 $m$ 时存在问题
 
 如果 $m$ 的位置不够好, 将会导致坍缩之后的三角形不规则
@@ -1251,6 +1377,8 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 <img src="assets/CG/image-20251211035245985.png" alt="image-20251211035245985" style="zoom:50%;" />
 
 解决方法是如果坍缩之后的 $i$ 导致 $<\vec{N_{ijk}}, \vec{N_{kjl}}>$ 小于0, 则不进行坍缩
+
+ 
 
 ## Mesh Regularization
 
@@ -1261,6 +1389,8 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 下面是一个构建网格时表面存在大量锯齿的例子, 这将导致网格估算出来的表面积和实际目标的表面积相差甚远
 
 <img src="assets/CG/image-20251210221628708.png" alt="image-20251210221628708" style="zoom: 67%;" />
+
+
 
 表面的形状接近正边形的(例如等边三角形), 是比较好的单元形状
 
@@ -1289,6 +1419,8 @@ subdivision 时, 过高的degree会导致瑕疵
 合适的degree可以避免这一点
 
 <img src="assets/CG/image-20251210222741976.png" alt="image-20251210222741976" style="zoom:50%;" />
+
+
 
 ### 翻转优化
 
@@ -1325,6 +1457,8 @@ $$
 - Flip 边以接近最佳度数
 - 沿切线方向将点进行居中优化
 
+
+
 ## 信息丢失
 
 如果反复使用upsampling和downsampling, 会导致信号丢失
@@ -1360,9 +1494,12 @@ $$
 Q = \int_{t_0}^{t_1}{\Phi(t)}dt
 $$
 
+
 ## 辐射能量密度
 
 $Radiant$ $Density$ 每单位面积, 光子击中表面的次数
+
+
 
 ## 辐照度
 
@@ -1435,6 +1572,8 @@ $$
 
 <img src="assets/CG/image-20251211160726609.png" alt="image-20251211160726609" style="zoom:50%;" />
 
+
+
 "太阳和月亮在地球上看起来差不多大", 这句话转换成"太阳和月亮的光在地球表面上的人的眼睛上的投影差不多大", 即"两者对于地球的立体弧度差不多大"
 
 ### 和平面角的关系
@@ -1461,6 +1600,8 @@ $$
 $$
 ==有时, $\omega$ 也会被用作方向向量, 存在符号滥用的现象== 
 
+
+
 ## 光强和距离的关系
 
 到点光源的距离和**辐照度**之间的关系
@@ -1474,6 +1615,9 @@ $$
 \frac{E_1}{E_2} = (\frac{r_2}{r_1})^2
 $$
 
+
+
+
 ## 辐射率
 
 $Radiance$
@@ -1483,6 +1627,8 @@ $$
 L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
 $$
 <img src="assets/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
+
+
 
 # TODO
 
@@ -1498,6 +1644,8 @@ $$
 - CMU
 - 校对
 - 去图片, 简化
+
+
 
 文档处理
 

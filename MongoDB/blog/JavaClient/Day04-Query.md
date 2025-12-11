@@ -74,12 +74,12 @@ collection.find(filter).forEach(doc -> System.out.println(doc.toJson()));// 执�
   - lt
   - lte
   - gte
-
+  
 - 逻辑
   - and
   - or
   - 
-
+  
 - 数组
 
   `size`, 某个字段是数组, 且数组的长度应该等于给定值
@@ -105,6 +105,8 @@ collection.find(filter).forEach(doc -> System.out.println(doc.toJson()));// 执�
   Bson filter = Filters.regex("color", "k$"); // color 字段, 应当符合正则表达式`k$`
   ```
 
+
+
 ## sort和limit
 
 ```java
@@ -129,16 +131,22 @@ FindIterable<Document> docs = collection.find(Filters.lt("runtime", 15))
 
 ### Null 相等判断
 
+ 
+
 ```java
 collection.find(Filter.eq("item", null)); // 是 null
 collection.find(Filter.ne("item", null)); // 非 null
 ```
+
+
 
 ### 类型检查
 
 ```java
 collection.find(Filters.type("item", BsonType.NULL));
 ```
+
+
 
 ### 存在性检查
 

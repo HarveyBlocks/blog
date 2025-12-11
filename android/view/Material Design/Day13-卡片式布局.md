@@ -22,6 +22,8 @@
 - `app:elevation="5dp"` 高度, 影响阴影的效果
 - `app:cardCornerRadius="4dp" ` 圆角半径
 
+
+
 ## 引入有关依赖
 
 ```kotlin
@@ -139,6 +141,8 @@ override fun onBindViewHolder(holder: FruitViewHolder, position: Int) {
 
 Glide在内部做了许多非常复杂的逻辑操作，包括图片压缩
 
+
+
 ## MainActivity
 
 ```kotlin
@@ -160,6 +164,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
     val fruitList = ArrayList<Fruit>()
 
+
     private fun refreshFruitList() {
         fruitList.clear()
         val indexSet = 0 until fruits.size
@@ -172,7 +177,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // .. 其他
-
+        
         // 配置Fruit到RecycleView
         refreshFruitList()
         binding.fruitRecyclerView.run {

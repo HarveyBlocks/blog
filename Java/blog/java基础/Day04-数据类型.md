@@ -8,6 +8,7 @@
 ## 数据类型的分类
 ![数据类型](../../assets/数据类型.png)
 
+
 ## 整形相关
 
 ``` java
@@ -17,13 +18,15 @@ long num3=100L  ;      	//用L标注表示long型（l太像1了）
 
 float numf=1.2F；		//理由同上
 double numd=3.141592653589793238462643;
-
+    
 boolean falg=true;
 
 char characer="中"；		//字符类型，注意区分字符串
-
+    
 String name="中国"		//String不是数据类型，而是一个**类**!!!!!!!!!!!!!!!!
 ```
+
+
 
 - 进制转化
 
@@ -33,7 +36,12 @@ int b=010      ;   				//八进制
 int c=0b1011_1010_0011_1001;	//二进制
 ```
 
+
 - 转义字符            \n,\0,\r之类，都通用的
+
+
+
+
 
 ### Unsigned
 
@@ -46,6 +54,8 @@ int unsignedByte = Byte.toUnsignedInt((byte) 255);//把(byte)255转为int
 {...}//作为int处理这个数,适合除法和取余 
 ```
 
+
+
 ## Double的出错情况
 
 常量
@@ -53,7 +63,7 @@ int unsignedByte = Byte.toUnsignedInt((byte) 255);//把(byte)255转为int
 ```java
 System.out.println(Double.POSITIVE_INFINITY);
 //正无穷大,POSITIVE_INFINITY = 1.0 / 0.0
-
+        
 System.out.println(Double.NEGATIVE_INFINITY);
 //负无穷大,NEGATIVE_INFINITY = -1.0 / 0.0
 
@@ -67,6 +77,8 @@ System.out.println(0.0/0.0 == Double.NaN);//always false
 System.out.println(Double.isNaN(0.0/0.0));//true
 //这才对嘛
 ```
+
+
 
 ## float的舍入误差
 
@@ -85,6 +97,8 @@ System.out.println(f1 == f2);//true
 输出结果如下：
 
 ![screemshot 2023-08-02 221411](../../assets/screemshot 2023-08-02 221411.png)
+
+
 
 ***结论：最好完全避免使用浮点数进行比较***
 
@@ -113,6 +127,8 @@ System.out.println("\u0022+\u0022"+".");//,
 
 ![数值类型之间的合法转换](../../assets/数值类型之间的合法转换.png)
 
+
+
 ``` java
 int n = 123456789;
 float f = n ;//f = 1.23456792E8
@@ -138,6 +154,8 @@ System.out.println(d);
 
 ![y'h](../../assets/image-20230802222956611.png)
 
+
+
 ``` java
 public class Demon01 {
     public static void main(String[] args) {
@@ -145,7 +163,7 @@ public class Demon01 {
         System.out.println(""+10+20);
 
         System.out.println(10+20+"");
-
+        
     }
 }
 ```

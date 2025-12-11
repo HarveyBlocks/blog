@@ -54,7 +54,7 @@ public class ExceptionController{
         ```java
         @Bean
         public SimpleMappingExceptionResolver simpleMappingExceptionResolver() {
-
+        
             SimpleMappingExceptionResolver resolver = new SimpleMappingExceptionResolver();
             Properties properties = new Properties();//键值对 key-异常全限定名 value-跳转视图名
             properties.setProperty("java.lang.RuntimeException","exp0.jsp");
@@ -64,12 +64,14 @@ public class ExceptionController{
             resolver.setExceptionMappings(properties);
             //DefaultErrorView可以用来兜底
             resolver.setDefaultErrorView("/exp0.jsp");
-
+        
             return resolver;
         }
         ```
 
 目前还无法让前端显示错误的具体信息
+
+
 
 ### 自定义异常处理器
 
@@ -83,9 +85,9 @@ public class ExceptionController{
 
     ```java
     package com.harvey.exp;
-
+    
     import ...
-
+    
     /*description*/
     @Component //不属于Service,不属于Dao ,不属于web层
     public class MyHandlerExceptionResolver implements HandlerExceptionResolver {
@@ -124,6 +126,10 @@ public class ExceptionController{
 
     这不比if instandof 好用多了(doge)
 
+
+
+
+
 #### 前后端分离,响应Json格式的字符串
 
 -   想要输出的Json
@@ -145,9 +151,9 @@ public class ExceptionController{
         private Integer code;
         private String message;
         private Object data;
-
+    
         ....
-
+            
     }
     ```
 
@@ -193,14 +199,14 @@ public class ExceptionController{
     ```java
     @ControllerAdvice //AOP增强的Controller
     public class GlobalExceptionHandler {
-
+    
         @ExceptionHandler(RuntimeException.class)
         public ModelAndView runtimeExceptionResolve(RuntimeException re) {
             Log.err(re.getMessage());
             //简单的响应一个友好提示页面
             return new ModelAndView("/exp0.jsp");
         }
-
+    
         @ExceptionHandler(Exception.class)
         @ResponseBody
         public Result ExceptionResolve(Exception e) throws JsonProcessingException {

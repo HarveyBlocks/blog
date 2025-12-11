@@ -6,6 +6,8 @@
 
 BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/music/free-casual-music-pack-242591)
 
+
+
 ## 使用音效
 
 1.   创建空对象`Audio Manager`
@@ -52,19 +54,19 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
           ```csharp
           public class AudioManager : MonoBehaviour {
               #region 参数
-
+          
               /// Special effects, 音效
               /// 会发生循环的音效, 例如喘气
               [CanBeNull]
               public AudioSource loopableFxAudio;
-
+          
               /// 不会发生循环的音效, 例如跳跃
               [CanBeNull]
               public AudioSource unLoopableFxAudio;
-
+          
               [CanBeNull]
               public AudioSource bgmAudio;
-
+          
               #endregion
           }
           ```
@@ -77,7 +79,7 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
           [CreateAssetMenu(fileName = "Event/PlayAudioEvent")]
           public class PlayAudioEvent : ScriptableObject {
               public UnityAction<AudioClip> PlayAudio;
-
+          
               public void Execute(AudioClip clip) {
                   PlayAudio?.Invoke(clip);
               }
@@ -96,14 +98,14 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
               public AudioClip audioClip;
               /// 对象启动时播放
               public bool playOnEnable = true;
-
+          
               private void OnEnable() {
                   // 每次对象生效时播放音乐
                   if (playOnEnable) {
                       PlayAudioClip();
                   }
               }
-
+          
               private void PlayAudioClip() {
                   audioEvent.Execute(audioClip);
               }
@@ -123,74 +125,74 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
           ```csharp
           public class AudioManager : MonoBehaviour {
               #region 参数
-
+          
               /// Special effects, 音效
               /// 会发生循环的音效, 例如喘气
               [CanBeNull]
               public AudioSource loopableFxAudio;
-
+          
               /// 不会发生循环的音效, 例如跳跃
               [CanBeNull]
               public AudioSource unLoopableFxAudio;
-
+          
               [CanBeNull]
               public AudioSource bgmAudio;
-
+          
               [CanBeNull]
               public PlayAudioEvent loopableFxPlayEvent;
-
+          
               [CanBeNull]
               public PlayAudioEvent unLoopableFxPlayEvent;
-
+          
               [CanBeNull]
               public PlayAudioEvent bgmPlayEvent;
-
+          
               #endregion
-
+          
               #region 事件函数
-
+          
               private void OnEnable() {
                   RegisterEvent(loopableFxPlayEvent, PlayLoopableFxAudio);
                   RegisterEvent(unLoopableFxPlayEvent, PlayUnLoopableFxAudio);
                   RegisterEvent(bgmPlayEvent, PlayBgmAudio);
               }
-
+          
               private void OnDisable() {
                   UnregisterEvent(loopableFxPlayEvent, PlayLoopableFxAudio);
                   UnregisterEvent(unLoopableFxPlayEvent, PlayUnLoopableFxAudio);
                   UnregisterEvent(bgmPlayEvent, PlayBgmAudio);
               }
-
+          
               private static void RegisterEvent(PlayAudioEvent playAudioEvent, UnityAction<AudioClip> action) {
                   if (playAudioEvent != null) {
                       playAudioEvent.PlayAudio += action;
                   }
               }
-
+          
               private static void UnregisterEvent(PlayAudioEvent playAudioEvent, UnityAction<AudioClip> action) {
                   if (playAudioEvent != null) {
                       playAudioEvent.PlayAudio -= action;
                   }
               }
-
+          
               #endregion
-
+          
               #region 播放事件执行
-
+          
               private void PlayLoopableFxAudio(AudioClip clip) => PlayAudio(loopableFxAudio, clip);
-
+          
               private void PlayUnLoopableFxAudio(AudioClip clip) => PlayAudio(unLoopableFxAudio, clip);
               private void PlayBgmAudio(AudioClip clip) => PlayAudio(bgmAudio, clip);
-
+          
               private static void PlayAudio(AudioSource audio, AudioClip clip) {
                   if (audio == null) {
                       return;
                   }
-
+          
                   audio.clip = clip;
                   audio.Play();
               }
-
+          
               #endregion
           }
           ```
@@ -208,9 +210,13 @@ BGM素材: [Free Casual Music Pack](https://assetstore.unity.com/packages/audio/
       3.   创建BGM播放事件, 由于场景切换所有Active的对象都会进入Enable状态, BGM播放事件也会进行一次广播
       4.   AudioManager中添加BGM事件
 
+
+
 ## 混音
 
 将不同的音效输入到不同的轨道进行混音的输出
+
+
 
 1.   Window->Audio->AudioMixer 混音台窗口
 

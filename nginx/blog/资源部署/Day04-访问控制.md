@@ -14,6 +14,8 @@
 
 如果服务器A, B不满足同源策略, 就会出现跨域问题
 
+
+
 客户端访问一台端口在80的Nginx-Server,获取到静态资源, (不懂)
 
 ```html
@@ -39,6 +41,8 @@
 
 ```
 
+
+
 静态资源到此Nginx访问端口在8080的Server发起请求, 出现跨域问题
 
 ```nginx
@@ -60,9 +64,13 @@ server{
 }
 ```
 
+
+
 ![1588004913681](..\..\assets\Day04-访问控制\1588004913681.png)
 
 没有一个`Control-Allow_Origin`的头信息在你的请求资源里
+
+
 
 ### 解决方案
 
@@ -81,6 +89,8 @@ server{
 add_header Acess-Control-Allow-Origin http://192.168.0.88:80 ;
 add_header Acess-Control-Allow-Method GET,POST,PUT,DELETE ;
 ```
+
+
 
 ## 防盗链
 

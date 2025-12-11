@@ -22,15 +22,15 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) throws ParseException{//当然，也可以Throwable等
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd-HH:mm:ss.SSS");
-
+        
         //格式化date
         Date date = new Date();
         String dateStr = sdf.format(date);
-
+        
         //解析String
         Date date1=sdf.parse("1977/03/20-15:24:25.141");//报错ParseException
         //原因就是parse是一个带throws 异常的函数，所以如果不在上一级函数也指明抛出异常，或者对parse函数的操作不放在try catch快中，编译就会出错
-
+        
         System.out.println(date1.toLocaleString());
     }
 }

@@ -19,6 +19,8 @@ console.log(1e30===(1e30+1e-30));
 
 ![image-20250807172318439](../../assets/Day01-过程控制/image-20250807172318439.png)
 
+
+
 所有数字（Number 类型）都是以 64 位（8 字节）双精度浮点数格式存储
 
 测试数字上限与溢出可能的情况
@@ -31,6 +33,8 @@ for (let i = 0; i < 32; i++) {
 ```
 
 ![image-20250807172726598](../../assets/Day01-过程控制/image-20250807172726598.png)
+
+
 
 ### 标识符
 
@@ -48,6 +52,10 @@ for (let i = 0; i < 32; i++) {
 -   var 函数作用域
 -   let 块作用域 
 -   const 块作用域
+
+
+
+
 
 -   let 作用域变量
 
@@ -89,6 +97,8 @@ for (let i = 0; i < 32; i++) {
     ```
 
     const是指 "指针值是常量" 而不是 "指向常量的指针" 
+
+
 
 #### 声明
 
@@ -149,6 +159,8 @@ else
     expression;
 ```
 
+
+
 ### switch-case-default
 
 ```js
@@ -170,6 +182,8 @@ switch(expression) {
 -    case 使用严格比较（===）
 -   
 
+
+
 ```js
 switch (value) {
   default:
@@ -185,6 +199,10 @@ switch (value) {
 ```
 
 总是匹配default
+
+
+
+
 
 ```js
 let value = '';
@@ -274,6 +292,8 @@ console.log(x); // C
 // 但这样不对吧?
 // 如果有获得最后的x的需求, 这种写法的可读性根本没有啊
 ```
+
+
 
 ## 作用域
 

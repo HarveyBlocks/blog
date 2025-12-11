@@ -10,9 +10,15 @@
     -   全局函数是 window 对象的方法
     -   document 对象也是 window 对象属性
 
+
+
+
+
 ## 浏览器窗口尺寸
 
 不包括工具栏和滚动条
+
+
 
 -   `window.innerHeight` - 浏览器窗口的内高度（以像素计）
 -   `window.innerWidth` - 浏览器窗口的内宽度（以像素计）
@@ -23,6 +29,8 @@
     -   或
     -   `document.body.clientHeight`
     -   `document.body.clientWidth`
+
+
 
 ```js
 var w = window.innerWidth
@@ -91,6 +99,8 @@ var h = window.innerHeight
 
     -   像素深度
 
+
+
 ## location
 
 可不带 window 前缀书写
@@ -113,6 +123,8 @@ var h = window.innerHeight
     window.location.assign("https://www.baidu.com")
     ```
 
+
+
 ## History
 
 可不带 window 前缀书写
@@ -121,6 +133,8 @@ var h = window.innerHeight
 
 -   `history.back()` - 等同于在浏览器点击后退按钮
 -   `history.forward()` - 等同于在浏览器中点击前进按钮
+
+
 
 ## Navigator
 
@@ -154,6 +168,8 @@ var h = window.innerHeight
     -   bool
     -   未弃用
 
+
+
 ### Java 是否启用
 
 `navigator.javaEnabled()`
@@ -166,6 +182,8 @@ var h = window.innerHeight
 alert("I am an alert box!");
 ```
 
+
+
 确认窗
 
 ```js
@@ -175,6 +193,8 @@ if (confirm("Press a button!")) {
   txt = "You pressed Cancel!";
 }
 ```
+
+
 
 提示窗
 
@@ -195,6 +215,8 @@ console.log(s);
 -   `setInterval(*function, milliseconds*`)
 
 见[异步](../高级/Day03-异步.md)
+
+
 
 ## Cookies
 

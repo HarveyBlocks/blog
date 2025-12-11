@@ -9,6 +9,10 @@
 | color            |                      | 元素颜色     |
 | font-size        | 20px                 | 字体大小     |
 
+
+
+
+
 | KEY        | VALUE     | DESCRIPTION |
 | ---------- | --------- | ----------- |
 | text-align | center... | 居中对齐    |

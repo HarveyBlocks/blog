@@ -17,6 +17,8 @@ Intent用于Android程序中各组件之间的交互
 
 创建一个新的Activity
 
+
+
 <img src="../../assets/Day03-Intent/image-20250908094943709.png" alt="image-20250908094943709" style="zoom: 33%;" />
 
 注册Manifest
@@ -27,6 +29,8 @@ Intent用于Android程序中各组件之间的交互
         android:label="Second Activity"
         android:exported="false" />
 ```
+
+
 
 ## 显式Intent
 
@@ -55,6 +59,8 @@ inline fun <reified T:Any> Context.newIntent(): Intent {
     return Intent(this, T::class.java)
 }
 ```
+
+
 
 ## 隐式Intent
 
@@ -100,6 +106,8 @@ binding.button1.setOnClickListener {
 }
 ```
 
+
+
 Intent只允许拥有一个Action, 但是允许拥有多个Category
 
 允许使用`Intent#addCategory()`方法在Intent中指定多个category
@@ -129,7 +137,11 @@ binding.button1.setOnClickListener {
 }
 ```
 
+
+
 如果能用[配置解耦CATEGORY和ACTION这两常量, 同时能在xml和kotlin中获取就好了](TODO)
+
+
 
 ## 依据隐式Intent跳转其他应用
 
@@ -152,6 +164,8 @@ binding.button1.setOnClickListener {
     startActivity(intent)
 }
 ```
+
+
 
 ## 传递数据
 
@@ -216,6 +230,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 }
 ```
 
+
+
 在下游发送数据
 
 使用成员`onBackPressedDispatcher`, 用`addCallback`增加回调函数
@@ -268,6 +284,8 @@ class SecondActivity : AppCompatActivity() {
 ```kotlin
 class Person(val name: String = "", val age: Int = 0) : Serializable
 ```
+
+
 
 发送
 

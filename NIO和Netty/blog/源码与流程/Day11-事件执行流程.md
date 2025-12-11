@@ -11,6 +11,8 @@ private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {
 }
 ```
 
+
+
 ```java
 @Override
     public void read() {
@@ -76,7 +78,11 @@ private void processSelectedKey(SelectionKey k, AbstractNioChannel ch) {
 }
 ```
 
+
+
 ## Accept流程
+
+
 
 1.  selector.select()阻塞直到事件发生
 2.  遍历处理selectKeys
@@ -187,6 +193,8 @@ public void channelRead(ChannelHandlerContext ctx, Object msg) {
     }
 }
 ```
+
+
 
 #### 注册流程
 

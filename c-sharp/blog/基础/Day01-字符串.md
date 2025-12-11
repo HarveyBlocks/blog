@@ -12,6 +12,10 @@ string s2 = new(new[]{ '1', '2' });
 Console.WriteLine(s1 == s2); // True
 ```
 
+
+
+
+
 ## 字符串连接
 
 ```C#
@@ -66,6 +70,8 @@ Console.WriteLine(string.Format("Name = {0,-12};", "Mike"));
 Name =         Mike;
 Name = Mike        ;
 ```
+
+
 
 ### 字符串格式
 

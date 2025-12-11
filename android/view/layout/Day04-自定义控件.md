@@ -6,7 +6,15 @@
 
 <img src="../../assets/Day04-自定义控件/image-20250910110036425.png" alt="image-20250910110036425" style="zoom:50%;" />
 
+
+
+
+
+
+
 <img src="../../assets/Day04-自定义控件/image-20250910110052975.png" alt="image-20250910110052975" style="zoom:70%;" />
+
+
 
 所用的所有布局都是直接或间接继承自ViewGroup
 
@@ -15,6 +23,8 @@ View是Android中最基本的一种UI组件
 其在屏幕上绘制一块矩形区域，并能响应这块区域的各种事件
 
 各种控件实际上在View的基础上又添加了各自特有的功能
+
+
 
 ## 创建自定义控件布局
 
@@ -66,6 +76,8 @@ View是Android中最基本的一种UI组件
 -   `android:layout_margin` ，可以指定控件在上下左右方向上的间距
     -   `layout_marginStart`
     -   `layout_marginTop`
+
+
 
 ## 引入控件
 
@@ -159,6 +171,7 @@ class TitleBarLayout(context: Context, attrs: AttributeSet) : LinearLayout(conte
         }
     }
 
+
     /**
      * 缺点在于, 依旧要显式地 R.layout.title_bar
      *
@@ -218,6 +231,8 @@ public static TitleBarBinding inflate(@NonNull LayoutInflater inflater,
 ```
 
 包名在这里是不可以省略的
+
+
 
 对Layout进行简单抽象
 

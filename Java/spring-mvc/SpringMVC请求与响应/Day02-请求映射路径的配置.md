@@ -23,7 +23,7 @@ public String show() {
     -   ```java
         @AliasFor("path")
         String[] value() default {};
-
+        
         @AliasFor("value")
         String[] path() default {};
         ```
@@ -48,6 +48,8 @@ public String show() {
 
         ![image-20231124214029344](../../assets/Day02-请求/image-20231124214029344.png)
 
+        
+
 ## GetMapping和PostMappering
 
 ```java
@@ -65,6 +67,8 @@ public String show() {
 ```
 
 -   简单,直观,优雅,高效
+
+
 
 ## 类上匹配请求注解
 

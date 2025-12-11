@@ -45,6 +45,8 @@
 
 ![image-20250806004016066](../assets/Day02-布局/image-20250806004016066.png)
 
+
+
 ## 定位
 
 >   position
@@ -70,6 +72,8 @@
 相对定位的元素的 top、right、bottom 和 left 属性将导致其偏离其正常位置进行调整
 
 不会对其余内容进行调整来适应元素留下的任何空间
+
+
 
 ```html
 <div class="static">static</div>
@@ -104,6 +108,8 @@
 
 <video src="../assets/Day02-布局/演示position-fix.mp4" style="border: 2px solid">演示</video>
 
+
+
 ### absolute
 
 对于外层的**祖先元素**为基准进行定位
@@ -132,6 +138,10 @@ div.in{
     height: 100px;
 }
 ```
+
+
+
+
 
 ```html
 <div class="relative">这是一个div的内部content文本
@@ -178,9 +188,15 @@ div.sticky {
     -   如果这个元素, 在当前界面的下面, 那么就会`fixed`在`bottom: 20px;`的位置
     -   如果这个元素, 在当前界面的上面, 那么就会`fixed`在`top: 50px;`的位置
 
+
+
+
+
 ### 重叠元素
 
 >   z-index
+
+
 
 `z-index`属性指定元素的堆栈顺序, 越大越靠前
 
@@ -191,10 +207,18 @@ div.sticky {
 </div>
 ```
 
+
+
 <div style="height: 500px;"><!--用于重叠的空间-->
     <div style="position: absolute;z-index: 2;font-size: 80px">元素一</div>
     <div style="border: solid 3px; width: 800px;height: 500px;position: absolute;z-index: 1"><img src="../assets/Day02-布局/image-20250805230948617.png" alt="js"></div>
 </div>
+
+
+
+
+
+
 
 ## overflow属性
 
@@ -211,20 +235,28 @@ div.sticky {
 | scroll  | 溢出被剪裁，同时添加水平＋竖直滚动条(总是添加)以查看其余内容 |
 | auto    | 仅在必要时添加滚动条, 有时候也会不加滚动条而增加高度或宽度, 奇妙 |
 
+
+
 ### overflow-x 和 overflow-y
 
 可以分别设置横向和纵向元素溢出后的样式
+
+
 
 ## 浮动
 
 -   float 属性规定元素如何浮动
 -   clear 属性规定哪些元素可以在清除的元素旁边以及在哪一侧浮动
 
+
+
 ### float 属性
 
 -   left - 浮动到其容器的左侧
 -   right - 元素浮动在其容器的右侧
 -   none - 默认, 不会浮动（将显示在文本中刚出现的位置）
+
+
 
 无浮动:
 
@@ -245,7 +277,13 @@ div.sticky {
 
 将元素浮动(right)
 
+
+
 ![image-20250806000613541](../assets/Day02-布局/image-20250806000613541.png)
+
+
+
+
 
 ### clear 属性
 
@@ -280,6 +318,10 @@ div.sticky {
 于是对文本增加`clear:left`
 
 ![image-20250806010409269](../assets/Day02-布局/image-20250806010409269.png)
+
+
+
+
 
 ## 对齐
 
@@ -478,9 +520,15 @@ div.sticky {
 
 设置所有的框都采用这台规则
 
+
+
+
+
 ## Flexbox
 
 > display: flex;
+
+
 
 ```html
 <!DOCTYPE html>
@@ -540,6 +588,8 @@ div.sticky {
   flex-direction: row-reverse;
 }
 ```
+
+
 
 ![image-20251031104830760](../assets/Day02-布局/image-20251031104830760.png)
 

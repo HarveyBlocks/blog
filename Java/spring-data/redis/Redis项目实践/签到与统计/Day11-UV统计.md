@@ -46,6 +46,8 @@ public void logLog(){
 }
 ```
 
+
+
 测试10次
 
 ```java
@@ -54,6 +56,10 @@ for (int i = 0; i < 10; i++) {
     bean.logLog();
 }
 ```
+
+
+
+
 
 测试解雇哦
 

@@ -51,6 +51,8 @@ type Student struct {
 对象指针 := 对象类型{字段名一: 字段值一, 字段名二: 字段值二,...}
 ```
 
+
+
 ```go
 var student Student = Student{name: "Mike", age: 12}
 var pStudent *Student = &Student{name: "Tom"} // // 使用age的int默认值0
@@ -63,9 +65,13 @@ var pStudent *Student = &Student{name: "Tom"} // // 使用age的int默认值0
 对象指针 := new(对象类型)
 ```
 
+
+
 ```go
 var newStudent *Student = new(Student)
 ```
+
+
 
 ## 方法
 
@@ -87,6 +93,8 @@ func (对象名 对象类型) 方法名(参数 参数类型, ...)(返回值 返�
 }
 ```
 
+
+
 ```go
 func (stu *Student) study(course string) string {
     return fmt.Sprintf("%s, who is %d years old, is studing %s.", stu.name, stu.age, course)
@@ -102,6 +110,10 @@ func (stu *Student) study(course string) string {
 ```go
 fmt.Println(student.study("math"))
 ```
+
+
+
+
 
 ```go
 func (stu *Student) study(course string) string {
@@ -147,6 +159,8 @@ type Person interface {
 }
 ```
 
+
+
 ### 实现
 
 ```go
@@ -167,6 +181,8 @@ func (stu *Student) getAge() int {
     return stu.age
 }
 ```
+
+
 
 ### 使用
 

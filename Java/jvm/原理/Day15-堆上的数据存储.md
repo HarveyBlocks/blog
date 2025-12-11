@@ -44,6 +44,12 @@ Q: 指针压缩之前, 8个字节做指针, 可以指向2^64^=16EB, 4个字节�
 
 A: 指针压缩技术会关闭, 好消极, 悲
 
+
+
+
+
+
+
 ## JOL
 
 使用Unsafe, JVMTI, Serviceability Agent(SA)等虚拟机技术来打印实际的对象内存布局
@@ -65,6 +71,8 @@ ClassLayout.parseInstance(obj).toPintable();
 64为不开指针压缩
 
 ![image-20240601210854225](../assets/Day15-堆上的数据存储/image-20240601210854225.png)
+
+
 
 ## 内存对齐
 
@@ -91,6 +99,8 @@ CPU中的缓存数据, 就是一个缓存行一个缓存行删除的, 全然不�
 -   每个属性偏移量Offset(字段地址-起始地址)必须是字段长度的N倍?????????
 
     ![image-20240601230625233](../assets/Day15-堆上的数据存储/image-20240601230625233.png)
+
+    
 
     目的是在对象内部的数据之间不会出现同一个数据**跨CPU缓存行**存储的问题出现
 
@@ -143,6 +153,8 @@ class C{
     -   对于数组对象存在的字段, 普通对象没有
     -   按照int存储
 
+
+
 ### 标记字段
 
 在32位和64位布局不同, 其中64位又分有是否指针压缩
@@ -159,6 +171,8 @@ class C{
 
 ![image-20240601211952277](../assets/Day15-堆上的数据存储/image-20240601211952277.png)
 
+
+
 #### HashCode
 
 ```java
@@ -174,6 +188,14 @@ System.out.println(Integer.toBinaryString(student.hashCode()));
 利用JOL打印对象的Klass Pointer
 
 使用Klass Pointer的地址, 在hsdb(JDK11不可以使用)中使用Inspector找到InstanceKlass对象
+
+
+
+
+
+
+
+
 
 ## 对象数据
 

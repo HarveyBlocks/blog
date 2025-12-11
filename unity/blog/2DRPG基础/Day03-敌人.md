@@ -6,6 +6,8 @@
 
 <img src="../../assets/Day03-%E6%95%8C%E4%BA%BA%E4%B8%8E%E6%88%98%E6%96%97/image-20241019220425263.png" alt="image-20241019220425263" style="zoom:50%;" />
 
+
+
 ## 改变碰撞图层
 
 不希望角色会撞到敌人, 也不希望两个敌人之间会相撞
@@ -69,6 +71,8 @@ private void OnTriggerStay2D(Collider2D other) {
 
 用枚举指定IDLE-WALK-RUNNING的状态
 
+
+
 ## 撞墙判定
 
 注意, 适用`EnviromentPhysicsCheck`来判定时, 应该将检测范围放在**碰撞体**(不是触发器)附近而不是角色图像最前端
@@ -87,6 +91,8 @@ private void OnTriggerStay2D(Collider2D other) {
 
 逻辑参考Player无敌时间
 
+
+
 计时器
 
 ```csharp
@@ -96,6 +102,7 @@ private void OnTriggerStay2D(Collider2D other) {
 public class Timer {
     private float _c;
     public float Interval { get; set; }
+
 
     public Timer(float interval = 0) {
         Interval = interval;
@@ -112,6 +119,8 @@ public class Timer {
     }
 }
 ```
+
+
 
 ## 受伤和死亡
 
@@ -145,6 +154,10 @@ public class EnemyDieAnimation : StateMachineBehaviour {
 }
 ```
 
+
+
+
+
 受伤后敌人转向玩家
 
 ## 有限状态机
@@ -162,6 +175,8 @@ public class PlayerAttackAnimation : StateMachineBehaviour {
     }
 }
 ```
+
+
 
 `StateMachineBehaviour` StateMachine 状态机
 

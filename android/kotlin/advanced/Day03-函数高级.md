@@ -61,6 +61,8 @@ private fun findFixPoint(): Double {
 
 Q: 如果是嵌套了一个过渡函数, 造成了实质上的递归, 会有优化吗?
 
+
+
 ## 重载运算符
 
 操作符具有预定义的符号表示与优先级
@@ -122,6 +124,8 @@ operator fun Point.unaryMinus() = Point(-x, -y)
 | `a[i, j] = b`          | `a.set(i, j, b)`          |
 | `a[i_1, ..., i_n] = b` | `a.set(i_1, ..., i_n, b)` |
 
+
+
 ### invoke 操作符
 
 | 表达式             | 翻译为                   |
@@ -170,7 +174,7 @@ operator fun Point.unaryMinus() = Point(-x, -y)
             operator fun plus(other: A): A = A()  // returns assignable 
             operator fun plusAssign(other: A) { /* 对象内部改变 */ }
         }
-
+        
         fun main() {
             val a: A = A()
             a += A()  // ERROR: 两个运算符之间存在冲突
@@ -185,7 +189,8 @@ operator fun Point.unaryMinus() = Point(-x, -y)
             operator fun plusAssign(other: A<T>) { /* mutate */
             }
         }
-
+        
+        
         fun main() {
             var a: A<String> = A() 
             a += A()  // OK A<Int> not assignable to A<String>
@@ -284,6 +289,7 @@ fun main() {
 ```kotlin
 fun function(s: String, i: Int): String = ""
 
+
 val f1: (String, Int) -> String = ::function
 val f2: String.(Int) -> String = ::function
 val f3: String.(Int) -> String = f1 // arg1->Receiver
@@ -314,13 +320,14 @@ val f4: (String, Int) -> String = f2 // Receiver->arg1
     // function
     fun getLastChar(s: String, i: Int): Char = s[s.length - 1 - i]
     val function: (String, Int) -> Char = ::getLastChar // 顶层函数的引用
-
+    
     // method
     class MyClass(val msg: String = "") {
         fun method(i: Int): Char = this.msg[this.msg.length - 1 - i]
     }
     val method: (MyClass, Int) -> Char = MyClass::method  // 类成员函数的引用
-
+    
+    
     // extention
     fun String.last(i: Int): Char = this[length - 1 - i]
     val extension1: (String, Int) -> Char = String::last // 扩展函数的引用
@@ -344,12 +351,12 @@ val f4: (String, Int) -> String = f2 // Receiver->arg1
     ```kotlin
     val lastChar: Char = '0'
     // val value: () -> Char = ::lastChar // 顶层属性的引用
-
+    
     class MyClass(val msg: String = "")
-
+    
     val props1: MyClass.() -> String = MyClass::msg // 类的成员引用
     val props2: (MyClass) -> String = MyClass::msg // 类的成员引用
-
+    
     val String.lastChar
         get() = this[this.length - 1]
     val extensionVal: String.() -> Char = String::lastChar // 扩展属性的引用
@@ -373,7 +380,7 @@ val f4: (String, Int) -> String = f2 // Receiver->arg1
         inner class DynamicInner
         class StaticInner
     }
-
+    
     val outerConstructor: () -> Outer = ::Outer // 一般的类型
     val outer: Outer = Outer()
     val outerDynamicInnerConstructor1: (Outer) -> Outer.DynamicInner = Outer::DynamicInner // 内部类
@@ -385,11 +392,13 @@ val f4: (String, Int) -> String = f2 // Receiver->arg1
 
     ==没错, 在kotlin中允许实现函数类型==
 
+    
+
     ```kotlin
     class IntTransformer: (Int) -> Int {
         override operator fun invoke(x: Int): Int = -x
     }
-
+    
     val intFunction: (Int) -> Int = IntTransformer()
     ```
 
@@ -505,6 +514,8 @@ fun shuffle(
 shuffle(1, 1, 2, 3, 4) { print("") }
 ```
 
+
+
 ### it 标识符
 
 当Lambda表达式只有一个参数的时候, 则可以省略参数列表和`->`的部分,只保留函数体, 而 it 标识符将指代这个参数
@@ -514,6 +525,8 @@ val positivePredict: (Int) -> Boolean = { it > 0 }
 val negativePredict: (Int) -> Boolean = { it < 0 }
 val zeroPredict: (Int) -> Boolean = { it == 0 }
 ```
+
+
 
 ### `_` ignore parameters
 
@@ -531,6 +544,8 @@ val lambda2: (Int, Int) -> Int = { _, y -> 0 }
 val lambda3: (Int, Int) -> Int = { x, _ -> 0 }
 val lambda4: (Int, Int) -> Int = { _, _ -> 0 }
 ```
+
+
 
 ### lambda参数的解构
 
@@ -613,6 +628,8 @@ fun main() {
 itemList.filter { it.score > 5 }.sortedBy { it.id }.map { it.name.uppercase() }
 ```
 
+
+
 ## 匿名函数与lambda表达式的区别
 
 -   返回值类型
@@ -677,6 +694,8 @@ fun main() {
     println(count) // 6 产生了影响
 }
 ```
+
+
 
 ## 标准函数
 

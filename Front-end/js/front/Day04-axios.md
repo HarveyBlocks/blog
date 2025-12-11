@@ -8,6 +8,8 @@ axios直接将对象转换为json
 import axios from 'axios'
 ```
 
+
+
 ```javascript
 axios.get('/api/data')
   .then(response => console.log(response))
@@ -17,6 +19,8 @@ axios.get('/api/data')
     console.log('状态码：', error.response.status);
   });
 ```
+
+
 
 ```js
 // 定义请求体数据（普适性的用户注册信息示例）
@@ -86,6 +90,7 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(config => config, e => Promise.reject(e));
 // 相应拦截器
 axiosInstance.interceptors.response.use(res => res.data, e => Promise.reject(e), e => Promise.reject(e));
+
 
 export default axiosInstance;
 ```

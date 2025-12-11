@@ -55,12 +55,16 @@
         .lambdaQuery(Address.class).in(Address::getUserId,userIds).list();
     ```
 
+    
+
 3.  依据用户映射地址
 
     ```java
     Map<User, List<Address>> collect = users.stream().collect(Collectors.groupingBy(Address::getUserId));
     //依据用户的性别分组
     ```
+
+
 
 -   由于法一有遍历这一步,导致向数据库请求次数过多,所以**法二优于法一**
 

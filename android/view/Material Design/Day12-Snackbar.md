@@ -57,6 +57,7 @@ binding.floatingActionButton.setOnClickListener { vo ->
             android:layout_height="match_parent">
         <!--...-->
 
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout >
     <!--...-->
 </androidx.drawerlayout.widget.DrawerLayout>

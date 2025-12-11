@@ -5,6 +5,8 @@
 
 ## 准备Cookie
 
+
+
 ```java
 /**
  *  Remember me
@@ -20,6 +22,7 @@ public static SimpleCookie getCookie(){
     cookie.setMaxAge(30*24*60*60);// 一个月
     return cookie;
 }
+
 
 ```
 
@@ -42,6 +45,10 @@ public static CookieRememberMeManager getManager(){
 }
 ```
 
+
+
+
+
 ## 配置
 
 ```java
@@ -60,11 +67,15 @@ public DefaultWebSecurityManager defaultWebSecurityManager(){
 }
 ```
 
+
+
 ## 修改View
 
 ```java
 <input type="checkbox" name="rememberMe">记住我<br>
 ```
+
+
 
 ## 修改Controller
 

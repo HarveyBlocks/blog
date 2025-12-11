@@ -14,6 +14,8 @@
 
 - 会话管理
 
+
+
 - 与Web集成
 
 - 缓存
@@ -27,6 +29,8 @@
     一个用户以另一个用户的身份登录
 
 - Remenber Me
+
+
 
 ## 架构原理
 
@@ -42,6 +46,8 @@ Shiro Security Manager对Subject对象进行安全校验
 
 ![Shiro Architecture Diagram](https://shiro.apache.org/images/ShiroArchitecture.png)
 
+
+
 ## 依赖
 
 ```xml
@@ -53,6 +59,8 @@ Shiro Security Manager对Subject对象进行安全校验
 ```
 
 ###
+
+
 
 ## 搭建简单的Shiro的登录认证
 
@@ -66,6 +74,8 @@ Shiro中用户需要提供
     -   一个主体可以有多个principal, 但全域的principal只能由一个
 -   credentials(证明)
     -   只有主体知道的安全值(口令, 密码,数字证书,生物信息?)
+
+
 
 -   Shiro的认证流程
 
@@ -181,11 +191,14 @@ public class ShiroRun {
     </shiro:hasRole>
     ```
 
+
 ### Shiro授权流程
 
 ![Shiro authorization sequence graphic](https://shiro.apache.org/images/ShiroAuthorizationSequence.png)
 
 ### 数据准备
+
+
 
 ```ini
 [users]
@@ -198,6 +211,8 @@ role2=user:query
 ```
 
 ### 实现
+
+
 
 #### if-else授权
 
@@ -234,7 +249,7 @@ role2=user:query
         System.out.println(subject.getPrincipal() + "没有insert权限");
     }
     ```
-
+    
 -   方法上注解判断权限
 
     `@RequestAuthentication`用户是否登录
@@ -246,6 +261,8 @@ role2=user:query
     `@RequestRoles("role")`
 
     `@RequestPermissions("AA")`
+
+
 
 ## 加密
 

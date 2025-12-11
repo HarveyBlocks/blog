@@ -31,6 +31,7 @@ public class Demo {
         students[3] = new Student("D",14,92);
         students[4] = new Student("C",17,96);
 
+
         /*
         Arrays.sort(students,new Comparator<Student>() {
             @Override
@@ -50,6 +51,7 @@ public class Demo {
 
         Arrays.sort(students,CompareByData :: compareByScore);
 
+
     }
 }
 
@@ -61,6 +63,12 @@ class CompareByData {
     }
 }
 ```
+
+
+
+
+
+
 
 ## 实例方法引用
 
@@ -95,7 +103,10 @@ class CompareByData {
 }
 ```
 
+
+
 ## 特定类型方法引用
+
 
 ### 语法
 
@@ -106,6 +117,8 @@ class CompareByData {
 - 某个Lamda表达式里只是调用了一个实例方法
 - 被重写方法的第一个形参数作为方法的主调
 - 后面的参数(可不存在)都是作为实例方法入参
+
+
 
 ```java
 String[] strings = {"Ada","ads","dSa","asd","daA"};
@@ -124,6 +137,8 @@ Arrays.sort(strings,(string1, string2) -> string1.compareToIgnoreCase(string2));
 Arrays.sort(strings,String :: compareToIgnoreCase);
 ```
 
+
+
 #### 后面的参数不存在的情况
 
 ```java
@@ -131,12 +146,19 @@ list.stream()
         .map(student -> student.getName())
         .forEach(element -> System.out.println(element));
 
+
+
 list.stream()
         .map(Student::getName)//??????
         .forEach(System.out::println);
 ```
 
+
+
 ## 构造器方法引用
+
+
+
 
 ### 语法
 

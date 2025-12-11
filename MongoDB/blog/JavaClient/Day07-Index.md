@@ -12,6 +12,8 @@ MongoDB 在创建集合时会在 `_id`字段上创建一个唯一索引。
 db.collection.getIndexes()
 ```
 
+
+
 ## 创建
 
 MongoDB 仅在没有相同规格索引存在时才创建索引。
@@ -53,7 +55,13 @@ db.<collection>.createIndex( { <field>: <sort-order> } )
 String indexName = collection.createIndex(Indexes.ascending("title"));
 ```
 
+
+
 ![Diagram of an index on the ``score`` field (ascending).](../../assets/Day07-Index/index-ascending.bakedsvg.svg)
+
+
+
+
 
 ## 复合索引
 
@@ -93,6 +101,8 @@ collection.createIndex(indexBson);
 索引也支持以相反的顺序优化该查询。
 
 例如索引` { score: -1, username: 1 }`创建, 则排序`{ score: 1, username: -1 }`也会被索引优化
+
+
 
 ## Multikey
 
@@ -186,6 +196,10 @@ db.collection.find( { 'ratings.scores': { $elemMatch: { 'q1': 2, 'q2': 8 } } } )
 把`q1`拍平, `q1`相等的`q2`拍到`q1`上
 
 对于第一个条件的`q1`和`q2`, 不一定是同一个元素上的, 例如`_id: 1`这个文档上, 依照索引的建立去查询, 不是依照这个需求做的
+
+
+
+
 
 ## 隐藏
 

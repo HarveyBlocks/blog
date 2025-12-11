@@ -30,6 +30,8 @@ public class AjaxServlet extends HttpServlet {
 
 ![image-20231119224436304](../../../assets/Day41-AJAX使用/image-20231119224436304.png)
 
+
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +40,7 @@ public class AjaxServlet extends HttpServlet {
     <title>Title</title>
 </head>
 <body>
+
 
 </body>
 <script>
@@ -60,9 +63,21 @@ public class AjaxServlet extends HttpServlet {
 </html>
 ```
 
+
+
+
+
 ![image-20231119225422322](../../../assets/Day41-AJAX使用/image-20231119225422322.png)
 
 ![image-20231119225507593](../../../assets/Day41-AJAX使用/image-20231119225507593.png)
+
+
+
+
+
+
+
+
 
 ## 结果
 

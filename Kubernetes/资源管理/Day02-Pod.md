@@ -26,6 +26,10 @@ end
 kubectl get pod -n kube-system
 ```
 
+
+
+
+
 |NAME                            |IP               |NODE   |用途   |
 | ---- | ---- | ---- | ---- |
 |coredns-66f779496c-kvpnd        |10.244.2.6       |node3  |DNS  |
@@ -39,6 +43,8 @@ kubectl get pod -n kube-system
 |kube-scheduler-node1            |192.168.88.141   |node1  |Scheduler, 请求调度  |
 
 没有网络? 也能运行也是逆天
+
+
 
 ## CRUD
 

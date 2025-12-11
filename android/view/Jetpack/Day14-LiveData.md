@@ -4,6 +4,8 @@
 
 LiveData 一般与 ViewModel 结合在一起使用
 
+
+
 在ViewModule中的相关数据发生变化, 这种变化或许是异步的, 或许是被封装的, 如何通知外界?
 
 如果ViewModel的内部开启了线程去执行一些耗时逻辑，那么立即去获取最新的数据，得到的可能还是之前的数据
@@ -11,6 +13,10 @@ LiveData 一般与 ViewModel 结合在一起使用
 如果把Activity的实例传给ViewModel，让ViewModel主动对Activity进行通知?
 
 ==不可以==! ViewModel的生命周期是长于Activity的，如果把Activity的实例传给ViewModel，就很有可能会因为Activity无法释放而造成内存泄漏。
+
+
+
+
 
 ## 基本用法
 
@@ -22,7 +28,7 @@ LiveData 一般与 ViewModel 结合在一起使用
 ```kotlin
 class MainViewModel(start: Int) : ViewModel() {
     private val _counter = MutableLiveData(start);
-
+    
     // 这种写法是不好的, 没用啊, 强转一下不就好了
     val counter: LiveData<Int>
         get() = _counter

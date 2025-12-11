@@ -149,6 +149,8 @@ private static Originator init() {
 }
 ```
 
+
+
 ## 白箱备忘录
 
 不实现两个窄接口和宽接口
@@ -162,6 +164,7 @@ public class WhiteMemento {
     public WhiteMemento(Originator originator) {
         copy = originator.clone();
     }
+
 
     public Originator get() {
         return copy;
@@ -188,6 +191,8 @@ public class WhiteCareTaker {
 ###
 
 ### Demo
+
+
 
 ```java
 public static void whiteDemo() {

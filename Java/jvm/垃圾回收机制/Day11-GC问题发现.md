@@ -18,11 +18,13 @@
         $$
         垃圾回收吞吐量=\frac{CPU用于用户代码时间}{CPU执行总时间}
         $$
+        
 
     -   CPU总执行时间即执行用户代码时间, 和GC时间之和
         $$
         CPU执行总时间 = CPU用于用户代码时间+CPU用于GC时间
         $$
+        
 
 ### 延迟
 
@@ -38,9 +40,15 @@ Java应用占系统内存的最大值
 
 在满足业务的延迟和吞吐量的要求的情况下, 内存的使用俩越小越好
 
+
+
 ### 展示指标
 
 >   GC Easy
+
+
+
+
 
 ## 方法
 
@@ -69,6 +77,8 @@ jstat -gc PID MILLION_TIME COUNT
 -   `FGCT` Full GC耗时
 -    `GCT` GC总耗时
 
+
+
 比较粗糙, 不能直到哪个时间点执行了FullGC
 
 ### Visual GC插件
@@ -81,6 +91,10 @@ VisualVM中的插件, 下载地址在国外
 -   堆内存变化趋势
 -   垃圾回收时间变化趋势
 -   监控对象的晋升直方图
+
+
+
+
 
 适合开发时使用, 生产时VisualVM为了获取数据还是比较消耗性能的
 
@@ -112,6 +126,8 @@ GC日志的打印配置
     -Xlog:gc*:file=文件名
     ```
 
+
+
 ### GCViewer
 
 [下载](https://github.com/chewiebug/GCViewer)
@@ -121,6 +137,8 @@ GC日志的打印配置
 ```shell
 java -jar gcviewer_1.3.4.jar gc_log.log
 ```
+
+
 
 ### GCeasy
 
@@ -132,6 +150,8 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 
 上传GC日志到网站, 让网站更新, 免费每月五次,付费
 
+
+
 ## GC模式及分析
 
 ### 锯齿状
@@ -139,6 +159,8 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 ![image-20240527174539591](../assets/Day11-GC调优/image-20240527174539591.png)
 
 下降的最终内存占用差不多, 没有内存泄漏
+
+
 
 ### 缓存对象过多
 
@@ -165,6 +187,8 @@ java -jar gcviewer_1.3.4.jar gc_log.log
 ### 元空间不足
 
 在堆区极低的的部分反复FullGC
+
+
 
 ![image-20240527175153041](../assets/Day11-GC调优/image-20240527175153041.png)
 

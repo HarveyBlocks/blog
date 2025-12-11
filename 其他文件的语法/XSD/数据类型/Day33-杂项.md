@@ -10,11 +10,15 @@
 -   boolean
 -   QName
 
+
+
 ## Boolean
 
 ```xml
 <xs:attribute name="disabled" type="xs:boolean"/>
 ```
+
+
 
 ```xml
 <prize disabled="true">999</prize>
@@ -27,15 +31,21 @@
 -   base64Binary (Base64 编码的二进制数据)
 -   hexBinary (十六进制编码的二进制数据)
 
+
+
 ```xml
 <xs:element name="blobsrc" type="xs:hexBinary"/>
 ```
 
 ## AnyURI
 
+
+
 ```xml
 <xs:attribute name="src" type="xs:anyURI"/>
 ```
+
+
 
 ```xml
 <pic src="http://www.w3school.com.cn/images/smiley.gif" />
@@ -44,6 +54,8 @@
 若 URI 含有空格，用 %20 替换它们。
 
 ## Restriction
+
+
 
 -   enumeration (布尔数据类型无法使用此约束*)
 -   length (布尔数据类型无法使用此约束)

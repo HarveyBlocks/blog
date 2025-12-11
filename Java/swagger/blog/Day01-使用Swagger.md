@@ -20,6 +20,8 @@
 
     没有被boot管理
 
+
+
 ## 启动注解
 
 ```java
@@ -32,6 +34,8 @@ public class ReviewSystemApplication {
     }
 }
 ```
+
+
 
 ## 启动UI
 
@@ -47,11 +51,17 @@ public class ReviewSystemApplication {
 
 Swagger扫描的是@Controller, 以及其@XxxMapping的方法. 然后解析注解的映射地址, 请求方式, 返回值, 参数等
 
+
+
 ## 基础配置
 
 ### 定制标题等
 
 ![image-20240117155718480](../assets/Day01-使用Swagger/image-20240117155718480.png)
+
+
+
+
 
 ```java
 @Configuration
@@ -127,9 +137,13 @@ docket = docket.select()
         ).build();
 ```
 
+
+
 ![image-20240117170303923](../assets/Day01-使用Swagger/image-20240117170303923.png)
 
 only two
+
+
 
 -   使用and逻辑
 
@@ -142,6 +156,8 @@ only two
             .build(); // 重新构建对象
     ```
 
+
+
 ### 路径指定文档生成
 
 ```java
@@ -151,7 +167,10 @@ docket = docket.select()
         .build(); // 重新构建对象
 ```
 
+
 ![image-20240117171420106](../assets/Day01-使用Swagger/image-20240117171420106.png)
+
+
 
 ## 注解
 
@@ -165,6 +184,8 @@ docket = docket.select()
 @Api(tags = {"测试Controller","测试Swagger"},description = "描述API")
 public class HelloController {...}
 ```
+
+
 
 ![image-20240117190209102](../assets/Day01-使用Swagger/image-20240117190209102.png)
 
@@ -199,6 +220,8 @@ public String get(
 
 ![image-20240117191124313](../assets/Day01-使用Swagger/image-20240117191124313.png)
 
+
+
 ### @ApiImplicitParam(s)
 
 ```java
@@ -229,7 +252,7 @@ public class Result {
             required = true, notes = "这是标注",
             hidden = false, example = "发生了一个异常!")
     private String errorMsg;
-
+    
     private Boolean success;
     private Object data;
     private Long total;

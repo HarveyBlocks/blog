@@ -42,9 +42,15 @@ java -jar .\spring-boot-0.0.1-SNAPSHOT.jar --server.port=8083
 java -jar .\spring-boot-0.0.1-SNAPSHOT.jar --server.port=8083 --server.servlet.context-path=/hi
 ```
 
+
+
+
+
 ```bash
 java -jar .\spring-boot-0.0.1-SNAPSHOT.jar --spring.config.location=d://application.properties
 ```
+
+
 
 使用和jar包同级目录下的文件
 

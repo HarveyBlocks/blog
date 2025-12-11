@@ -27,6 +27,7 @@ public enum Gender {
     private final String value;// 这里由于之前创建表的时候的限制, 以后还是用int
     private final String desc;// description
 
+
     Gender(String value, String desc) {
         this.value = value;
         this.desc = desc;

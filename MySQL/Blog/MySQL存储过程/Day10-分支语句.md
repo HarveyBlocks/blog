@@ -86,6 +86,10 @@ case 值
 end case;
 ```
 
+
+
+
+
 -   大case之语法二
 
 ```mysql
@@ -102,6 +106,8 @@ end case;
 ```
 
 ### 示例
+
+
 
 ```mysql
 create procedure day(month int,out day int)begin

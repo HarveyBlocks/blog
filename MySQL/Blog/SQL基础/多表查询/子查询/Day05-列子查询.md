@@ -24,6 +24,12 @@ where section_ID in (select id
                      where section.name = '开发部' or section.name = '销售部') ;
 ```
 
+
+
+
+
+
+
 -   查询比**董事会**年龄所有的人都大的人的信息
 
     1.  查询**董事会**所有人的年龄

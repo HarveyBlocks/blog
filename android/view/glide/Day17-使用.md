@@ -22,6 +22,8 @@ Uri imageUri = getImageUri();
 Glide.with(this).load(imageUri).into(imageView);
 ```
 
+
+
 ## placeholder
 
 图片被加载之间显示的图片
@@ -63,6 +65,10 @@ Glide.with(this)
      .asGif()
      .into(imageView);
 ```
+
+
+
+
 
 ## 缓存功能
 

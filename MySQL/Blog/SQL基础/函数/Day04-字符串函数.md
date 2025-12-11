@@ -15,6 +15,8 @@ select 'hello world';
 CONCAT(s1,s2,...sn);
 ```
 
+
+
 ## 大小写转化(lower,upper)
 
 ```mysql 
@@ -24,6 +26,8 @@ LOWER(str);
 ```mysql
 UPPER(str);
 ```
+
+
 
 ## 填充(pad)
 
@@ -44,6 +48,8 @@ RPAD(str,len,pad);
 ```mysql 
 TTRIM(str);
 ```
+
+
 
 ## 切片(substring)
 

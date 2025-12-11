@@ -32,6 +32,8 @@ cluster-require-full-coverage no
 
 可以使用熔断或降级人工介入等保证数据完整性
 
+
+
 ## 集群带宽问题
 
 >   节点之间会不断的互相ping来确定其他节点的状态
@@ -71,6 +73,10 @@ cluster-require-full-coverage no
 ## lua和事务问题
 
 集群模式下, 不再同一个节点, 就无法保证事务的原子性
+
+
+
+
 
 ## 集群?
 

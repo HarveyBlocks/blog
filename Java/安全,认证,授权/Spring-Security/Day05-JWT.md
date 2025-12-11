@@ -123,6 +123,7 @@ public class JwtTokens {
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
+
     /**
      * 根据用户信息生成token
      * @param user 用户信息
@@ -157,6 +158,7 @@ public class JwtTokens {
     private Date generateExpirationDate() {
         return new Date(System.currentTimeMillis()+expiration*1000);
     }
+
 
     public String getUserNameFromToken(String token){
         String username;
@@ -360,6 +362,10 @@ secure:
       - /security/login-success
 ```
 
+
+
+
+
 ```java
 @ConfigurationProperties(prefix = "secure.ignored")
 public class IgnoreUrlsConfig {
@@ -459,6 +465,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ### 登录获取token
+
+
 
 ####
 

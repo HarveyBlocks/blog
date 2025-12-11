@@ -4,9 +4,13 @@
 >
 >   Post请求数据-Json,文件等
 
+
+
 ## Get请求数据-键值对
 
 ### 键值对接收
+
+
 
 ```java
 //http://localhost:8080/Spring_mvc_quickstart/register?username=张三&age=18
@@ -17,10 +21,14 @@ public String getParam(String username,Integer age){//但又一个要求:参数�
 }
 ```
 
+
+
+
+
 -   正常匹配键值对
     -   `http://localhost:8080/Spring_mvc_quickstart/register?age=18&username=张三`
     -   `张三->18`
-
+    
 -   参数数量和键的数量不一致
     -   `http://localhost:8080/Spring_mvc_quickstart/register?age=18`
 
@@ -33,7 +41,7 @@ public String getParam(String username,Integer age){//但又一个要求:参数�
 -   参数名和键不一致
     -   ``http://localhost:8080/Spring_mvc_quickstart/register?age=18&name=张三``
     -   `null->18`
-
+    
 -   **不会直接报错,只是会给你一个null**
 
 -   值不符合规则
@@ -65,6 +73,8 @@ public String getParam(@RequestParam("name") String username, int age){...}
 -   `register?name=张三`
 
     ![image-20231125133501490](../../assets/Day2-请求数据的接收/image-20231125133501490.png)
+
+    
 
 ### Get请求一键对多值
 
@@ -124,6 +134,8 @@ public String getParam( List<String> hobby){
 
         他说:不能把填入的数据:String转成ArrayList
 
+
+
 -   使用不含参数的注解@RequestParam
 
     ```java
@@ -145,6 +157,8 @@ public String getParam( List<String> hobby){
 
 -   成功
 
+
+
 -   但是List成功了ArrayList能成功吗?
 
     ![image-20231125142354594](../../assets/Day2-请求数据的接收/image-20231125142354594.png)
@@ -158,6 +172,8 @@ public String getParam( List<String> hobby){
     ![image-20231125143217725](../../assets/Day2-请求数据的接收/image-20231125143217725.png)
 
 ### 用Map接收Get的各色键值对请求
+
+
 
 `/register4?hobbies=张三&hobbies=李四`
 
@@ -174,7 +190,7 @@ public String getParam( List<String> hobby){
         map.forEach((k,v)->{
             System.out.println(k+"->"+v);
         });
-
+    
         return "/index.jsp";
     }
     ```
@@ -186,6 +202,8 @@ public String getParam( List<String> hobby){
     `?hobbies=李四&hobbies=张三`
 
     ![image-20231125143747028](../../assets/Day2-请求数据的接收/image-20231125143747028.png)
+
+
 
 -   `register4?hobbies=李四&hobbies=张三&username=王五&age=18`当集合和普通的参数共存呢?
 
@@ -226,6 +244,8 @@ public String getParam(@RequestParam("name") String username, int age) {
 }
 ```
 
+
+
 ### @requesrParam
 
 #### 属性
@@ -262,6 +282,8 @@ public String getParam(@RequestParam("name") String username, int age) {
     UnnamedUser->18
     ```
 
+    
+
 ## 把请求的数据封装的实体
 
 法一 : 手动Getter-Setter(忽略)
@@ -273,6 +295,8 @@ public String getParam(@RequestParam("name") String username, int age) {
 2.  然后new一个实体类的对象
 
 3.  BeanUtils.populate(Object bean, Map properties)进行自动填充,映射填充
+
+
 
 -   法二已经被SpringMVC封装到底层啦
 
@@ -302,22 +326,22 @@ public String getParam(@RequestParam("name") String username, int age) {
         5.  要以**奇奇怪怪**方式set至今我也没弄懂为啥简简单单的字符串能给它正确set的**Date**
 
             既然说了奇奇怪怪,我就来还愿你对Data()的好奇吧!
-
+        
             ```java
     Date date = new Date("");
             ```
-
+        
             嗯
-
+        
             ```java
             @Deprecated
     public Date(String s) {
                 this(parse(s));
     }
             ```
-
+        
             嗯,还很正常
-
+        
             ```java
             @Deprecated
             public static long parse(String s) {
@@ -486,11 +510,11 @@ public String getParam(@RequestParam("name") String username, int age) {
                 throw new IllegalArgumentException();
     }
             ```
-
+    
             啊?
 
     输出结果[HTTP状态 400 - 错误的请求](http://localhost:8080/Spring_mvc_quickstart/register5?username=张三&age=18&hobby=足球&hobby=篮球&hobby=java&birthday=2018/11/11)
-
+    
     ```
     -------------/register5-----------
     User{username='张三', age=0, hobby=null, birthday=null, address=null}

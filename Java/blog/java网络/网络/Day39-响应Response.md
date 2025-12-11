@@ -53,6 +53,8 @@ void setStatus(int sc);
 
 -   设置响应状态码
 
+
+
 ### 响应头
 
 ```http
@@ -67,16 +69,24 @@ void setHeader(String name,String value);
 
 -   设置响应头键值对
 
+
+
 ### 响应体
 
 ```html
 <html><head><body></body></head></html>
 ```
 
+
+
 ```java
 PrintWriter getWriter();//获取字符输出流
 ServletOutputStream getOutputStream();//获取字符输出流
 ```
+
+
+
+
 
 ## 重定向
 
@@ -87,13 +97,23 @@ ServletOutputStream getOutputStream();//获取字符输出流
 3.  资源A告诉了**资源B的位置**
 4.  **浏览器**自动地去**请求资源B**
 
+
+
 -   **请求转发的区别**:请求转发会对数据进行一部分更改,重定向是一点事情都不去做的
 
 -   响应状态码:**302**表示要进行重定向
 
 ![image-20231118131445233](../../../assets/Day39-响应Response/image-20231118131445233.png)
 
+
+
+
+
 ![image-20231118133343176](../../../assets/Day39-响应Response/image-20231118133343176.png)
+
+
+
+
 
 ```java
 //设置响应状态码302
@@ -108,6 +128,8 @@ response.sendRedirect("/MyServlet");
 
 ![image-20231118133534292](../../../assets/Day39-响应Response/image-20231118133534292.png)
 
+
+
 #### 再试试
 
 ```java
@@ -119,6 +141,8 @@ this.parseWebString(request, response);//这一步居然会会执行!
 //response.sendRedirect("/application");不能写两个重定向对象呢
 ```
 
+
+
 ![image-20231118141307558](../../../assets/Day39-响应Response/image-20231118141307558.png)
 
 ### 特点
@@ -126,6 +150,8 @@ this.parseWebString(request, response);//这一步居然会会执行!
 -   浏览器地址栏路径发生变化
 -   可以重定向到任意位置的资源(**服务器内部外部均可**)
 -   两次请求,不能在多个资源使用request共享数据
+
+
 
 ## 资源路径问题
 
@@ -173,6 +199,8 @@ PrintWriter getWriter();
 
 -   获取字符输出流
 
+
+
 -   doGet()
 
     ```java
@@ -188,6 +216,8 @@ PrintWriter getWriter();
 
 -   不支持中文
 -   **不需要对流关闭**,response销毁的时候**会自动对流关闭**,提早关闭了反而之后的工作不好做了
+
+
 
 ### 解决中文问题
 
@@ -207,6 +237,8 @@ ServletOutputStream getOutputStream();
 ```
 
 -   获取字符输出流
+
+
 
 -   这里用了放在项目目录里的图片作为例子,其实Tomcat已经为这种静态文件创建了网址,只需在这里进行跳转网址的操作就能达到一样的效果.但是,这里还是用字节数据的输入输出流,用以作为示范
 
@@ -252,9 +284,11 @@ System.out.println("传输完成");
         ```java
         FileInputStream fileIn = new FileInputStream( "C:/Users/27970/Desktop/IT/JDK/javaweb/webapp/src/main/webapp/image/warma.jpg");
         ServletOutputStream output = response.getOutputStream();
-
+        
         org.apache.commons.io.IOUtils.copy(fileIn, output);
         ```
+
+
 
 ### 解决相对路径问题
 

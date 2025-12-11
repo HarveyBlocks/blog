@@ -41,6 +41,8 @@ if (selector.select(10)==0){
 
 `selector.nowSelect();`明显不合适嘛
 
+
+
 或
 
 -   Boss线程

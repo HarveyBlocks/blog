@@ -2,7 +2,11 @@
 
 生成数据, 每次生成的数据都使用同一块内存, 就不会占用太多资源
 
+
+
 ## 创建生成器
+
+
 
 ### 生成器推导式
 
@@ -12,6 +16,8 @@
 data = (i for i in range(1000))
 ```
 
+
+
 -   节省空间
 
     ```python
@@ -20,7 +26,7 @@ data = (i for i in range(1000))
         print(data)  # <generator object <genexpr> at 0x00000195FF303510>
         print(type(data))  # <class 'generator'>
         print(data.__sizeof__())  # 96
-
+    
         ls = [i for i in range(1000)]
         print(ls)  
         print(type(ls))  #<class 'list'>
@@ -45,6 +51,12 @@ data = (i for i in range(1000))
         print(next(data))  # 报错: StopIteration
     ```
 
+
+
+
+
+
+
 ### yield关键字
 
 在函数中出现`yield`
@@ -61,6 +73,7 @@ def generator(limit: int):
         print("开始生成")
         yield i
         print("生成完成")
+
 
 if __name__ == '__main__':
     g = generator(3)

@@ -12,9 +12,12 @@ begin
     return total;
 end;
 
+
 ```
 
 -   存储函数的特性?
+
+
 
 -   然后就可以调用了
 
@@ -22,11 +25,17 @@ end;
 select A(120);
 ```
 
+
+
+
+
 ## 存储函数的特性
 
 -   **Deterministic**  相同的参数总是产生相同的结果
 -   **No SQL** 不包含SQL语句
 -   **Reads SQL Data** 包含读取数据的语句,但不包含写入数据的语句
+
+
 
 ## 注意
 

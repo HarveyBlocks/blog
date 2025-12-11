@@ -8,6 +8,8 @@
 ssc.configureBlocking(false); // 默认true, 阻塞
 ```
 
+
+
 ```java
 SocketChannel sc = ssc.accept(); // 非阻塞方法, 连接不到sc为null
 if(sc!=null){
@@ -16,11 +18,15 @@ if(sc!=null){
 }
 ```
 
+
+
 ### 将`SocketChannel#read`切换为非阻塞模式
 
 ```java
 sc.configureBlocking(false);
 ```
+
+
 
 ```java
 int read = channel.read(buffer);// 非阻塞方法, 未读到数据, read返回0

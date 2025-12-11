@@ -22,6 +22,8 @@
 
      <img src="../../assets/Day05-UGUI/image-20241026140115216.png" alt="image-20241026140115216" style="zoom: 33%;" />
 
+     
+
 3.   EventSystem->Inspector->InputSystem UI Input Modul->Action Asset 默认的Actions修改成自己创建的PlayerInputController
 
 4.   打开PlayerInputController, 转换至UI, 即可设置按键
@@ -53,6 +55,8 @@
      <img src="../../assets/Day05-UGUI/image-20241026144335541.png" alt="image-20241026144335541" style="zoom:50%;" />
 
      <img src="../../assets/Day05-UGUI/image-20241026144408635.png" alt="image-20241026144408635" style="zoom:50%;" />
+
+     
 
 5.   Screen Math Mode按比例优先排列模式, 同时符合高度或宽度/完全拉伸/缩小, 选择Match Width Or Height 不变
 
@@ -95,6 +99,8 @@
 3.   点击预制锚点Anchor Presets, 长按Alt键, 拉拽对象到特定位置, 再长按Shift键, 将对象定位到目标位置
 
 4.   Image->Inspector->Image->RayCast Target 设置成false, 防止被射线检测
+
+
 
 ## 人物状态制作
 
@@ -154,6 +160,8 @@
 
 9.   将几个血条移到一个父类下, 方便一起移动
 
+
+
 ### 人物头像
 
 1.   同血条, 创建FaceFrame
@@ -186,6 +194,10 @@
 
           <img src="../../assets/Day05-UGUI/image-20241026160724447.png" alt="image-20241026160724447" style="zoom:50%;" />
 
+
+
+
+
 ### 减血逻辑
 
 血量控制组件
@@ -199,12 +211,16 @@ public class PlayerStatusBar : MonoBehaviour {
     private void Update() {
         HealthChange();
     }
-
+    
     private void HealthChange(){}
 }
 ```
 
+
+
 <img src="../../assets/Day05-UGUI/image-20241027202914028.png" alt="image-20241027202914028" style="zoom:50%;" />
+
+
 
 ```csharp
 private void HealthChange() {
@@ -227,6 +243,8 @@ private void HealthChange() {
 
 利用持久化存储的文件(ScriptableObject)来管理CharacterFeature
 
+
+
 1.   修改原有代码
 
      ```csharp
@@ -234,12 +252,12 @@ private void HealthChange() {
          public Image healthBar;
          public Image healthDelayBar;
          public float delaySpeed = 1;
-
+     
          private void Update() {
              if (NeedDelayHealth()) {
                  healthDelayBar.fillAmount -= Time.deltaTime * delaySpeed;
              }
-
+     
              if (!NeedDelayHealth()) {
                  // 减过头了
                  healthDelayBar.fillAmount = healthBar.fillAmount;
@@ -249,7 +267,7 @@ private void HealthChange() {
          public void HealthChange(float healthRatio) {
              healthBar.fillAmount = healthRatio;
          }
-
+     
          private bool NeedDelayHealth() {
              return healthDelayBar.fillAmount > healthBar.fillAmount;
          }
@@ -280,7 +298,7 @@ private void HealthChange() {
      [CreateAssetMenu(fileName = "Event/CharacterFeatureEvent")]
      public class CharacterFeatureEvent : ScriptableObject {
          private UnityAction<CharacterFeature> _action;
-
+     
          public void Execute(CharacterFeature characterFeature) {
              _action?.Invoke(characterFeature);
          }
@@ -306,12 +324,12 @@ private void HealthChange() {
                  } else {
                      _health = value;
                  }
-
+     
                  onHealthChanged.Invoke(this);
              }
          }
          #endregion
-
+     
          #region 事件
          public UnityEvent<CharacterFeature> onHealthChanged;
          #endregion
@@ -345,15 +363,15 @@ private void HealthChange() {
       ```csharp
       public class CharacterFeatureManager : MonoBehaviour {
           public CharacterFeatureEvent characterFeatureEvent;
-
+      
           public void OnEnable() {
               characterFeatureEvent.HealthChange += OnHealthChange;
           }
-
+      
           public void OnDisable() {
               characterFeatureEvent.HealthChange -= OnHealthChange;
           }
-
+      
           private void OnHealthChange(CharacterFeature characterFeature) { }
       }
       ```
@@ -364,11 +382,11 @@ private void HealthChange() {
       public class CharacterFeatureManager : MonoBehaviour {
           public CharacterFeatureEvent characterFeatureEvent;
           public PlayerStatusBar playerStatusBar;
-
+      
           public void OnEnable(){/*....*/}
-
+      
           public void OnDisable() {/*....*/}
-
+      
           private void OnHealthChange(CharacterFeature characterFeature) {
               playerStatusBar.HealthChange(characterFeature.HealthRatio);
           }

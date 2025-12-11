@@ -1,14 +1,17 @@
 
+
 ## 循环依赖
 
 ```cpp
 class B; // 1. 提前声明
+
 
 class A {
 		B *b; // 不存储实例, 存储地址, 因为不能实例化
 	public:
 		A(B *b) :b(b){}
 };
+
 
 class B{
 	A *a;
@@ -17,7 +20,11 @@ class B{
 };
 ```
 
+
+
 const 修饰类成员字段
+
+
 
 const 修饰类成员方法
 
@@ -40,7 +47,7 @@ int get() const{
     ```cpp
     #include<iostream>
     using namespace std;
-
+    
     class Student {
     	private:
     		int age;
@@ -48,23 +55,24 @@ int get() const{
     	public:
     		Student(int age = 12, string name = "UnKnow"): age(age), name(name)
     		{} 
-
+    
     		void setAge(int age = 7) { // 关键字传参
     			this->age = age;
     		}
     		int getAge() const {
     			return this->age;
     		}
-
+    
     		int getAge(int offset) const {
     			return this->age + offset;
     		}
     		int getAge()  {// 被调用的那个
     			return this->age-1;
     		}
-
+    
     };
-
+    
+    
     int main() {
     	Student s1(12, "nihao");
     	cout << s1.getAge() << " , " << s1.getAge(12) << endl;
@@ -72,7 +80,11 @@ int get() const{
     }
     ```
 
+    
+
 -   **常对象只能调用它的常成员函数**
+
+
 
 ## 重载
 
@@ -81,6 +93,8 @@ int get() const{
 类型+顺序+个数
 
 关键词传参会和函数重载产生冲突
+
+
 
 ## static
 
@@ -99,7 +113,7 @@ class Student {
 			cout<< grade<<Student::grade<<endl;
 			return grade;
 		}
-
+		
 };
 int  Student::grade = 12; // 类外初始化, 别写static!
 
@@ -124,6 +138,8 @@ int main() {
 
 友元是**单向的**
 
+
+
 ### 友元函数
 
 -   在类声明中由关键字`friend`修饰的说明的**非成员函数**, 在它的函数体中能够通过对象名访问`private`和`protected`成员
@@ -133,6 +149,7 @@ int main() {
 ```Cpp
 #include<iostream>
 using namespace std;
+
 
 class Student {
 	private:
@@ -150,6 +167,8 @@ int main() {
 	return 0;
 }
 ```
+
+
 
 ```Cpp
 class B; // 声明类B，用于让类A使用友元函数
@@ -217,6 +236,8 @@ int main() {
 }
 ```
 
+
+
 ### 友元类
 
 -   一个类为另一个类的友元, 则类内的所有成员都能访问对方类的私有成员
@@ -230,7 +251,7 @@ class B {
 		int data;
 	public:
 		B(int data): data(data) {}
-
+		
 };
 
 class A {
@@ -244,6 +265,8 @@ int main() {
 	return 0;
 }
 ```
+
+
 
 ## 对象数组
 
@@ -269,11 +292,15 @@ int main() {
     返回值类型 (类名::*指针名)(参数列表);
     ```
 
+    
+
 -   初始化
 
     ```cpp
     指针名=类名::函数成员名；
     ```
+
+    
 
 -   通过对象名（或对象指针）与成员指针结合来访问函数成员
 
@@ -288,6 +315,8 @@ int main() {
     ```
 
 指向类成员的指针
+
+
 
 ```c++
 
@@ -312,10 +341,10 @@ int main() {	//主函数
 	Point a(4, 5);	//声明对象A
 	double Point::*pPi ; // 指向Point的对象的double类型的成员
 	pPi = &Point::pi; // pi必须是共有的
-
+    
 	Point *p1 = &a;	//声明对象指针并初始化
 	//声明成员函数指针并初始化
-
+	
     int (Point::*pGet)() = Point::getX; // 也可以Point::getX
 	//（1）使用成员函数指针访问成员函数
 	cout << (a.*pGet)() << endl;
@@ -326,6 +355,10 @@ int main() {	//主函数
 }
 
 ```
+
+
+
+
 
 ## 动态创建对象
 
@@ -365,6 +398,8 @@ std::cout<<*p<<std::endl; // 乱
 
 `malloc()`不会调用构造函数和析构函数
 
+
+
 ### 创建数组
 
 ```Cpp
@@ -376,6 +411,10 @@ delete[] points;  //删除整个对象数组
 delete points[1];  //不行
 delete[1] points;  //不行
 ```
+
+
+
+
 
 ### 创建数组类
 

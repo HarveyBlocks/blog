@@ -13,14 +13,14 @@
      ```csharp
      public class MediumTrap : MonoBehaviour {
          public int damage;
-
+     
          public enum HurtType {
              Die,
              Hurt
          }
-
+     
          public HurtType hurtType;
-
+     
          /// 中陷阱=进入陷阱的碰撞体触发器
          /// <param name="other">中陷阱的对象</param>
          private void OnTriggerStay2D(Collider2D other) {
@@ -44,19 +44,21 @@
      ```csharp
      public class CharacterFeature : MonoBehaviour {
      	#region 中陷阱
-
+     
          // 立刻死亡
          public void DieImmediately(MediumTrap mediumTrap) {
              Health = 0;
              onDead?.Invoke();
          }
-
+     
          /// 收到陷阱伤害
          public int TakeTrapDamage(MediumTrap mediumTrap) => TakeDamage(mediumTrap.damage, mediumTrap.transform);
-
+     
          #endregion
      }
      ```
+
+
 
 ## 荆棘
 

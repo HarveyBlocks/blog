@@ -17,6 +17,8 @@
 -XX:+TraceClassLoading -XX:+TraceClassUnloading
 ```
 
+
+
 ## 加载
 
 1.  **类加载器**根据类的全限定名通过不同的渠道以二进制流的方式获取字节码信息
@@ -72,6 +74,8 @@ JDK8 有, JDK11, 17, 21都没有
 
 ![image-20240512210056589](../assets/Day03-类加载生命周期/image-20240512210056589.png)
 
+
+
 ## 连接
 
 ### 验证
@@ -100,6 +104,8 @@ return (major >= JAVA_MIN_SPORTED_VERSION) &&
 	// max_version, JDK8中是52, 52-44=8
 ```
 
+
+
 ### 准备
 
 给静态变量赋初值
@@ -123,6 +129,10 @@ public class Sudent{
 
 3.  若**静态常量**没有指定初始值, 则必须在初始化阶段的静态代码块中赋初值
 
+
+
+
+
 ### 解析
 
 将常量池中的**符号引用**替换成指向内存的**直接引用**
@@ -140,6 +150,12 @@ public class Sudent{
 
 ## 初始化
 
+
+
+
+
+
+
 1.  执行**静态代码块**中的代码和静态字段处的代码
 
     -   静态字段在静态代码块前的情况
@@ -147,7 +163,7 @@ public class Sudent{
         ```java
         public static int value = 1;
         public static final int CONST_VALUE;
-
+        
         static {
             System.out.println("value = " + value); // 1
             // System.out.println("CONST_VALUE = " + CONST_VALUE); 编译报错
@@ -169,7 +185,7 @@ public class Sudent{
             // System.out.println("value = " + value); 编译报错
             // System.out.println("value = " + CONST_VALUE); 编译报错
         }
-
+        
         public static final int CONST_VALUE;
         public static int value = 1;
         ```
@@ -228,6 +244,8 @@ JDK17依旧没有这个功能???
     ```java
      ClassInitTest[] array = new ClassInitTest[20];
     ```
+
+    
 
 4.  执行Main方法的当前类(在Main方法的执行之前)
 
@@ -293,6 +311,8 @@ num = 2
     -   **静态变量**只声明不赋值
 
     -   有**静态常量**在声明阶段就赋常量值
+
+        
 
 ### 继承与初始化阶段
 

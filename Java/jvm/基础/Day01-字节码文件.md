@@ -4,15 +4,21 @@
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512135833880.png" alt="image-20240512135833880" style="zoom:30%;" />
 
+
+
 Notepad++的十六进制插件对文件进行简单查看
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140144414.png" alt="image-20240512140144414" style="zoom:50%;" />
+
+
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140219779.png" alt="image-20240512140219779" style="zoom:50%;" />
 
 Idea依靠插件之类的, 还是能反编译一下
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512140002081.png" alt="image-20240512140002081" style="zoom:40%;" />
+
+
 
 ## 字节码文件查看器
 
@@ -23,6 +29,8 @@ Idea依靠插件之类的, 还是能反编译一下
 ```powershell
 javap -v filepath
 ```
+
+
 
 ```java
 Classfile /C:/Users/27970/Desktop/jvm/1、基础篇代码/day01_/jvm/target/classes/method/Demo1.class
@@ -113,6 +121,8 @@ SourceFile: "Demo1.java"
 
 ```
 
+
+
 ### jclasslib
 
 #### 下载安装
@@ -142,6 +152,8 @@ SourceFile: "Demo1.java"
 -   **计数**
 -   **访问标识**
 
+
+
 ### 魔数
 
 >   Magic
@@ -157,6 +169,8 @@ SourceFile: "Demo1.java"
 cafe? 咖啡馆! 就是那群人故意的
 
 Babe? 啊?
+
+
 
 一个文件的拓展名并不决定文件的时机编码格式
 
@@ -193,6 +207,8 @@ Babe? 啊?
     -   容易引发其他兼容性版本, 需要大量测试
 2.  降低第三方依赖的版本/更换依赖
     -   妈的资源难找啊,SpringBoot只支持17以上版本你怎么说?
+
+
 
 ## 常量池
 
@@ -237,6 +253,8 @@ public static void main(String[] args) {
 
     ​	如果让标识符也指向`info#27`再通过`info#8`, 那就不合适了, 因为字段名, 方法名, 类名等, 不能直接指定就是字符串
 
+
+
 ## 字段
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512141632194.png" alt="image-20240512141632194" style="zoom:50%;" />
@@ -244,6 +262,8 @@ public static void main(String[] args) {
 ## 方法
 
 <img src="../assets/Day01-%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6/image-20240512141600802.png" alt="image-20240512141600802" style="zoom:50%;" />
+
+
 
 ### 操作数栈
 
@@ -268,6 +288,8 @@ int a = 1 + 2
 
 ![image-20240512155122555](../assets/Day01-字节码文件/image-20240512155122555.png)
 
+
+
 ### 查看方法执行过程
 
 对源码编译成自变量指令, 解释器解释执行
@@ -278,6 +300,8 @@ i = i++;
 
 System.out.println(i);
 ```
+
+
 
 以查看`i++`的执行过程为例
 
@@ -298,12 +322,15 @@ iinc 1 by 1	# 后一个const <1>首先被符号扩展为 int，然后对前一�
 # stack->i
 istore_1	# 从操作数栈中弹出value(int), 局部变量(int) <1> 的值设置为value。
 
+
 # sout, 略
 getstatic #2 <java/lang/System.out : Ljava/io/PrintStream;>
 iload_1 
 invokevirtual #3 <java/io/PrintStream.println : (I)V>
 return
 ```
+
+
 
 ## 属性
 

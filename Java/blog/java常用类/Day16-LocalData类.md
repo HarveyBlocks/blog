@@ -25,6 +25,8 @@ LocalDate newLocalDate = LocalDate.of(1979, 12, 8);
 | LocalDate     | minusDays((long daysToSubtract) | 返回之前(或之后,靠参数的正负决定)某天的日期 |
 |               |                                 |                                             |
 
+
+
 ```java
 int year = newLocalDate.getYear();
 jint month = newLocalDate.getMonthValue();
@@ -44,6 +46,7 @@ System.out.println("dayOfWeek = "+day3);
 int dayOfWeekValue = day3.getValue();
 System.out.println(dayOfWeekValue);//6
 //Mon(1)->Sun(7)
+
 
 LocalDate minusDay = newLocalDate.minusDays(-1);
 System.out.println(minusDay);

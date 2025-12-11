@@ -50,7 +50,17 @@
     "
     ```
 
+    
+
+
+
 ## 创建Redis(6.2.6)集群
+
+
+
+
+
+
 
 ```shell
 mkdir /etc/docker/redis-6381
@@ -58,6 +68,8 @@ mkdir /etc/docker/redis-6381/conf
 touch /etc/docker/redis-6381/conf/redis.config
 vim /etc/docker/redis-6381/conf/redis.config
 ```
+
+
 
 ```ini
 # 解除本地限制
@@ -84,6 +96,14 @@ slaveOf redis 6379
 # 主机密码
 masterAuth 123456
 ```
+
+
+
+
+
+
+
+
 
 ```shell
 docker run \
@@ -119,13 +139,19 @@ docker run \
     redis-server /etc/redis/redis.config
 ```
 
+
+
 | HOST  | PORT | ROLE   |
 | ----- | ---- | ------ |
 | redis | 6379 | Master |
 | redis | 6380 | Slave  |
 | redis | 6381 | Slave  |
 
+
+
 ## 测试读写
+
+
 
 ```bash
 redis-6380:0>get key
@@ -137,6 +163,8 @@ redis-6380:0>del key
 -   从机就失去了写的权力
 
 ## 数据同步原理
+
+
 
 ### 全量同步
 
@@ -150,6 +178,10 @@ redis-6380:0>del key
 6.  然后主节点将`repl_baklog`的**命令**发送给从节点, 从节点执行发送过来的`repl_baklog`命令, 完成数据同步
 
 -   `bgsave`动作慢, 效率低, 只适合在第一次同步的时候使用
+
+
+
+
 
 ### Redis判断是否是第一次同步数据的方法
 
@@ -166,6 +198,10 @@ redis-6380:0>del key
     -   主节点会**尝试**用从节点发来的`replid`做*增量同步*
     -   不是主节点的reolid, 则认为是第一次同步, 增量同步失败, 选择使用全量同步
     -   否则依据Offset做增量同步
+
+
+
+
 
 #### Offset
 
@@ -189,6 +225,8 @@ redis-6380:0>del key
 4.  `repl_baklog`的存储方式是**环形的**, 是有上限的, 当未同步的数据超出上限(**超过上一次从节点记录的Offset**), **增量同步将会失败**, 将**转为全量同步**
 
     ![image-20240210185241834](../../assets/Day05-主从集群/image-20240210185241834.png)
+
+
 
 ## 主从同步优化
 
@@ -226,6 +264,8 @@ maxmemory 1gb
 ```ini
 repl-backlog-size 10mb
 ```
+
+
 
 ### 其他
 

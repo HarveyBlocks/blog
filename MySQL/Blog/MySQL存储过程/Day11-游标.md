@@ -41,6 +41,7 @@
 -- 查询用户表employee中在low-high之间(闭区间)的员工名和性别
 -- 并将employee 的姓名和性别插入到一张新创建的表(id,name,gender)
 
+
 create procedure p4(in age_low int,in age_high int)begin
 
     declare e_name varchar(5);

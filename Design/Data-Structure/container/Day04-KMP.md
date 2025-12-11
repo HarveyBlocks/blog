@@ -36,6 +36,8 @@
 
 ![KMP](../../assets/Day04-KMP/KMP精讲8.png)
 
+
+
 ## 前缀表的使用
 
 ![KMP](../../assets/Day04-KMP/KMP精讲2.gif)
@@ -103,6 +105,9 @@ while (j > 0 && pattern[i] != pattern[j]) {
 }
 ```
 
+
+
+
 ## Next数组
 
 网传的next版本, 是更改 j 和next[j] 的定义, 来达到next[j]是回退位置的目的
@@ -131,11 +136,17 @@ for (int i = 1, j = 0; i < pattern.length(); i++) { // 注意i从1开始
 }
 ```
 
+
+
+
+
 ## 时间复杂度
 
 src只遍历一遍O(len(src))
 
 构建Next数组O(len(pattern))
+
+
 
 ## 局限
 
@@ -144,6 +155,10 @@ src只遍历一遍O(len(src))
 如果数据是随机的, parttern越长, 前缀表出现有价值的较大值的可能性就月底
 
 如果pattern越短, 少犯心思从头开始遍历, 效率说不定更高
+
+
+
+
 
 ## 整体实现
 

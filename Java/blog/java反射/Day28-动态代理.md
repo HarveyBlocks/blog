@@ -38,6 +38,8 @@ public static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,I
 - 参数interface:这些接口用于指定生成的代理有那些方法
 - 参数h:用来指定生成的代理对象要干什么事情
 
+
+
 ### 实操
 
 ```java

@@ -2,6 +2,10 @@
 
 虚拟内存-操作系统做映射->物理内存
 
+
+
+
+
 ## 虚拟内存(4G)
 
 32位平台下0x0000_0000~0xffff_ffff
@@ -119,11 +123,15 @@ int * p;
 
 -   \*是修饰变量的,说明变量p是一个指针变量,变量名是p
 
+
+
 ### 野指针
 
 指向的对象不确定的指针,如上面的p
 
 这种需要马上给他一个确切的地址;
+
+
 
 ## 指针运算符
 
@@ -135,12 +143,16 @@ int *p;//定义执政变量的时候*代表修饰,修饰p是个指针变量
 p=&a;//a的地址赋值给了p,p指向了a
 ```
 
+
+
 ### * 取指针指向的值
 
 ```C
 int num;
 num = *p;//等价于num=a;
 ```
+
+
 
 ### 拓展
 
@@ -168,6 +180,8 @@ int main(){
 }
 ```
 
+
+
 #### 实验
 
 -   猜测:在小熊猫的编译器(GCC10.3.0-64bit),野指针默认是结束符
@@ -183,7 +197,7 @@ int main(){
 		return 0;
 	}
 	```
-
+	
 -   猜测:可以用十六进制直接显式地给指针赋值
 
     ```C
@@ -191,12 +205,12 @@ int main(){
     int main() {
     	int a = 100, b = 200;
     	int *ap, *bp = &b;
-
+    
     	int *p = (int*)1;
     	printf("Hello\n");//止步于此
     	b = *p;
     	printf("World\n");
-
+    
     	b = *ap;
     	printf("Hello World\n");
     	printf("ap=%p,bp=%p,*ap=%d,*bp=%d\n", ap, bp, *ap, *bp);
@@ -245,17 +259,21 @@ int main() {
 	char ch = 'A';char *p = &ch;
 	*p = 'B';
 	printf("ch=%c\n",ch);//B
-
+	
 	char ch2='C';
 	*p=ch2;
 	printf("ch=%c\n",ch);//C
-
+	
 	p=&ch2;
 	*p='B';
 	printf("ch=%c,ch2=%c\n",ch,ch2);//C
 	return 0;
 }
 ```
+
+
+
+
 
 ## 类型转化
 
@@ -264,23 +282,25 @@ int main() {
 -   例如char->int,一个字节转四个字节,**char的地址作为低地址,再往上加三个高地址**
 -   例如int->char,四个字节转一个字节,**int低地址作为char的地址**
 
+
+
 ```C
 #include<stdio.h>
 //指针的类型转换
 int main() {
 	int a=0xffffff62;
 	char c = 'A';
-
+	
 	int *p1 =(int*) &c;
 	printf("%c,%p,%d\n",c,p1,*p1);
 	//A,00000017047ff833,25665
 	// ,				,应该是前面的三个字节不干净
-
+	
 	char *p2 =(char*) &a;
 	printf("%d,%p,%c\n",a,p2,*p2);
 	//-158,0000007a8e5ffc9c,b
 	//	,				,很合理
-
+	
 	return 0;
 }
 ```
@@ -377,6 +397,7 @@ void test2(void) {
 
 }
 
+
 void test3(void) {
 
 	int b = 12;
@@ -404,6 +425,7 @@ void test3(void) {
 	//p++能改,随便改
 	//p[1]会卡住
 	//p[0]和p完全等价
+
 
 	for (int i = 0; i < 50; i++)putchar('=');
 	putchar('\n');
@@ -470,7 +492,7 @@ void test5() {
 	bp[1]=-10;
 	printf("a = %d,b = %d\n", a, b);
 	printf("ap = %p,bp = %p\n", ap, bp);
-
+	
 	//先创建的变量可以用--改变后创建的变量的值
 	//后创建的变量可以用++改变先创建的变量的值
 	//后创建的变量可以用p[n]改变先创建的变量的值
@@ -515,11 +537,17 @@ printf("%p\n",p2);
 
 \*(p++)->p++,\*P
 
+
+
 ## 比较运算
 
 1.  两个相同类型的指针
 2.  指向同一个数组元素
 3.  指向前面元素的指针小于指向后面元素的指针
+
+
+
+
 
 ## 指针相减
 
@@ -561,15 +589,19 @@ void test1() {
 void test2(){
 	int a;
 	int *p[10]={&a};
-
+	
     int *p2[10];
 	p2[0] = &a;
 	//等价
-
+    
     printf("%p,%p\n",&a,p[0]);
-
+	
 }
 ```
+
+
+
+
 
 ## 字符串指针
 
@@ -583,7 +615,7 @@ void test2() {
 		//printf打印字符串的时候只要给到字符串的首地址就可以了
 		printf("%s\n", names[i]);
 	}
-
+	
 	char i = 'C';
 	names[0] = &i;
 	for (int i = 0; i < 5; i++) {
@@ -606,7 +638,7 @@ void test1() {
 	int a = 10;
 	int *p = &a;
 	int * *pP = &p;
-
+	
 	printf("a=%d,&a=%p\n",a,&a);
 	printf("p=%p,&p=%p,*p=%d\n",p,&p,*p);
 	printf("pP=%p,*pP=%p,**pP=%d\n",pP,*pP,**pP);
@@ -631,17 +663,21 @@ void test1() {
 	printf("%s\n", name);
 	printf("%s\n", pName);
 
+
+
+
 	int i;
 	for (i = 0; i < strlen(name); i++) {
 		putchar(name[i]);
 	}
 	printf("\n%d\n", i); //4
-
+	
+	
 	for (i = 0; i < strlen(name); i++) {
 		putchar(pName[i]);
 	}
 	printf("\n%d\n", i); //4
-
+	
 	while (*pName != '\0') {
 		putchar(*pName++);
 		//putchar(*(pName++));等价
@@ -662,22 +698,25 @@ void test2() {
 	*str = 'X';
 	str[1] = '!';
 	printf("str=%s\n",str);
-
+	
+	
 	// 1.存放在文字常量区的字符串不能被修改
 	char *pStr = "I love C~";//[Warning] ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
 	// pStr指向文字常量区的"I love C~"的首字母I的地址 
 	printf("*pStr=%s\n",*pStr);
 	pStr[0] = 'X';//不成
 	printf("pStr=%p\n",pStr);	
-
+	
 	//改成这样为佳:
 	const char *pStr1 = "I love C~";//就可以显式地提示不能做修改了
-
+	
 	//但是
 	const char *pStr2 = "I love C~";
 	pStr2 = "你好啊";
 	//这是可以的,没有改变字符串常量,而是让pSter2指向了另一个字符串常量
-
+	
+	
+	
 	// 3.堆区的值是可以修改的
 	test3();
 }
@@ -746,6 +785,8 @@ void test3() {
         printf("str = %s\n",str);
     }
     ```
+
+    
 
 # 数组指针
 

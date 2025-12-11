@@ -66,6 +66,10 @@ gzip_types * ;
 
 <img src="..\..\assets\Day04-压缩指令\image-20240420215312717.png" alt="image-20240420215312717" style="zoom: 50%;" />
 
+
+
+
+
 ### `gzip_com_level`
 
 压缩级别, 在`http`, `server`, `location`
@@ -81,6 +85,8 @@ gzip_comp_level level ;
     -   烧CPU
 -   677kb的文件(从[百度](www.baidu,com)上扣下来的文件), 传输76ms , level为1, 压缩到244, 6压缩到208, 传输236ms,  百度压缩到208
 
+
+
 ### `gzip_vary`
 
 在Gzip压缩之后, 携带`Vary:Accept-Encoding`响应头信息, 主要告诉对方, 发送的数据经过了Gzip处理
@@ -93,7 +99,15 @@ gzip_vary on | off ;
 
 <img src="..\..\assets\Day04-压缩指令\image-20240420221716843.png" alt="image-20240420221716843" style="zoom:50%;" />
 
+
+
+
+
 打开之前↑
+
+
+
+
 
 <img src="..\..\assets\Day04-压缩指令\image-20240420220807169.png" alt="image-20240420220807169" style="zoom:50%;" />
 
@@ -141,9 +155,13 @@ gzip_disable regex ...;
 
 依旧可以配置在`http`, `server`, `location`
 
+
+
 ```nginx
 gzip_http_version 1.0 | 1.1 ;
 ```
+
+
 
 默认
 
@@ -152,6 +170,8 @@ gzip_http_version 1.1 ;
 ```
 
 建议使用默认
+
+
 
 ### `gzip_min_length`
 
@@ -173,6 +193,10 @@ gzip_min_length 20 ;
     -   bytes(缺省)
     -   k|K
     -   m|M
+
+
+
+
 
 ### `gzip_proxied`
 
@@ -234,11 +258,15 @@ http {
 }
 ```
 
+
+
 ## 和sendfile的冲突及解决
 
 gzip需要放到nginx上, 做了处理, 再还给操作系统
 
 与sendfile天生的冲突
+
+
 
 ### 解决方法
 
@@ -247,6 +275,8 @@ gzip需要放到nginx上, 做了处理, 再还给操作系统
 压缩成诸如`baidu.js.gz`的文件
 
 使用`gzip_static`
+
+
 
 如果要我设计: 
 
@@ -310,6 +340,8 @@ gzip需要放到nginx上, 做了处理, 再还给操作系统
     make upgrade
     ```
 
+
+
 #### yum安装
 
 yum默认安装了`gzip_static_module`
@@ -323,6 +355,12 @@ wget http://nginx.org/download/nginx-1.20.1.tar.gz
 tar xf nginx-1.20.1.tar.gz && cd nginx-1.20.1
 ```
 
+
+
+
+
+
+
 ### 压缩静态资源
 
 咦? 那level怎么配置? 
@@ -331,6 +369,8 @@ tar xf nginx-1.20.1.tar.gz && cd nginx-1.20.1
 gzip /usr/share/nginx/html/baidu.js
 gzip /usr/share/nginx/html/*.html
 ```
+
+
 
 ```shell
 [root@harvey-centos ~]# ls /usr/share/nginx/html/
@@ -350,6 +390,8 @@ gzip /usr/share/nginx/html/*.html
 ```nginx
 gzip off ;
 ```
+
+
 
 ```nginx
 gzip_static on|off|always ;

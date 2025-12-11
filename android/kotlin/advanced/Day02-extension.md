@@ -9,6 +9,8 @@ val String.lastChar: Char
     get() = this[this.length - 1]
 ```
 
+
+
 ## 扩展函数
 
 为一个不能修改的、来自第三方库中的类或接口编写一个新的函数
@@ -39,6 +41,8 @@ fun main() {
 }
 ```
 
+
+
 ## 伴生对象的扩展
 
 ```kotlin
@@ -67,6 +71,8 @@ class MyClass {
         }
     }
 }
+
+
 
 fun main() {
     1.extension();

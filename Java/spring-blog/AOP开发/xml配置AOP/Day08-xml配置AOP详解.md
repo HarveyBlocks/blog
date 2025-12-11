@@ -53,6 +53,8 @@ pointcut="execution(public * com.harvey.service..UserServiceImpl.*(..))"
 
 # 通知的类型(五种)
 
+
+
 ![image-20231110110900189](../../../assets/Day08-xml配置AOP详解/image-20231110110900189.png)
 
 ## 测试
@@ -122,6 +124,8 @@ public class MyAdvice {
 
 ### 修改xml配置文件
 
+
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -129,6 +133,7 @@ public class MyAdvice {
        xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
+
 
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
@@ -141,7 +146,8 @@ public class MyAdvice {
         <aop:pointcut id="myPrintCutShow1" expression=
                 "execution(void com.harvey.service.impl.UserServiceImpl.show1(Object))"/>
         <!--参数改变啦!!!!!!!!!!!!!!!!!!!!!要写个参数!否则你Ctrl+左键进得去,却对应不上方法的,也不会报错-->
-
+        
+        
         <aop:aspect ref="myAdvice">
             <aop:before method="before" pointcut-ref="myPrintCutShow1"/>
             <aop:after-returning method="afterReturning" pointcut-ref="myPrintCutShow1"/>
@@ -149,12 +155,16 @@ public class MyAdvice {
             <aop:after-throwing method="afterThrowing" pointcut-ref="myPrintCutShow1"/>
             <aop:after method="after" pointcut-ref="myPrintCutShow1"/>
         </aop:aspect>
-
+    
+        
+        
     </aop:config>
 </beans>
 ```
 
 ### 测试结果(节选)
+
+
 
 ```Text
 -------------show1()--------------
@@ -282,7 +292,7 @@ public Object around(ProceedingJoinPoint point,JoinPoint joinPoint)  {return nul
       System.out.println("环绕后的通知");
       return result;
   }
-
+  
   public void around(){
       System.out.println("yes");
   }
@@ -296,6 +306,10 @@ public Object around(ProceedingJoinPoint point,JoinPoint joinPoint)  {return nul
       System.out.println("before "+joinPoint.getTarget()+" before");
   }
   ```
+
+
+
+
 
 ### JoinPoint
 
@@ -365,7 +379,11 @@ public void afterThrowing(Throwable throwable){
 }
 ```
 
+
+
 ![image-20231110134558895](../../../assets/Day08-xml配置AOP详解/image-20231110134558895.png)
+
+
 
 -   报错地心满意足
 -   它的生命周期很怪
@@ -387,6 +405,8 @@ afterThrowingjava.lang.NullPointerException
 around:java.lang.NullPointerException
 ```
 
+
+
 ## \<advisor\>配置切面
 
 ### AOP的xml配置的两种方式
@@ -405,6 +425,8 @@ around:java.lang.NullPointerException
 >   啥都没有的接口------标示(Serializable)接口
 
 实现它靠其子接口
+
+
 
 ### 实现Advice的子接口
 
@@ -433,18 +455,20 @@ public class MyAdvice2 implements MethodBeforeAdvice, AfterReturningAdvice {
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
 
+
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <bean id="userService" class="com.harvey.service.impl.UserServiceImpl"/>
 
     <bean id="myAdvice2" class="com.harvey.advice.MyAdvice2"/>
-
+        
+        
     <aop:config>
         <aop:pointcut id="myPrintCutShow1" expression=
                 "execution(void com.harvey.service.impl.UserServiceImpl.show1(Object))"/>
         <aop:advisor advice-ref="myAdvice2" pointcut-ref="myPrintCutShow1"/>
-
+        
     </aop:config>
 </beans>
 ```

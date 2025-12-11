@@ -32,6 +32,8 @@ jstack <PID> > thread_dump.tdump
 
 ### 构成
 
+
+
 -   线程名
 -    `prio` 优先级 线程优先级
 -    `tid` Java ID JVM中线程的唯一ID
@@ -75,6 +77,8 @@ jstack <PID> > thread_dump.tdump
     jstack PID2 > service.tdump
     ```
 
+    
+
 ## 在调用链上定位性能问题出现的方法
 
 使用Arthus命令
@@ -91,6 +95,8 @@ trace 类名 方法名
 -    `#cost > 毫秒数`  只会显示消耗时间超过的调用
 -   `-n 数值` 最多显示多少条数据
 -   所有监控结束后, 输入`stop`结束监控, 重置arthas增强的对象, 对性能产生影响
+
+
 
 ### watch
 
@@ -119,6 +125,8 @@ Arthus生成性能火焰图, 显示所有方法执行时间的长短
 黄色的是给JVM使用的C++实现的栈区
 
 绿色的是给Java代码使用的栈区
+
+
 
 生成火焰图
 

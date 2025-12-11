@@ -41,6 +41,8 @@ response.getWriter().write("OK");
 -   Web应用启动时就加载以上两项
 -   需要在Web应用的任何位置都能获取
 
+
+
 ### 域
 
 -   page
@@ -53,6 +55,8 @@ response.getWriter().write("OK");
     -   一个用户一个域
 -   ServletContest/Application
     -   一个服务器一个域
+
+
 
 ### 解决:
 

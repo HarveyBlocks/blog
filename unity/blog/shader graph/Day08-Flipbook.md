@@ -2,6 +2,8 @@
 
 > 翻页书节点
 
+
+
 ## 动画
 
 Sprite Editor切割序列帧, Animation和Animator控制动画播放, 此行为占用CPU

@@ -15,6 +15,7 @@ hashFunction(obj)->hashCode\\
 index = hashCode \% tableLen
 $$
 
+
 ```C
 typedef unsigned long long t_HashCode;
 template<typename T>
@@ -71,6 +72,8 @@ t_HashCode Hash::doXor(const t_HashCode *p, int len) {
 3.  遍历字符串B, 数组[字符]--, 出现数组[字符]<0, 就是直接返回不符合了
 4.  遍历数组, 出现非0就是不符合了
 
+
+
 ### 求交集
 
 同理, 两个数组(一个数组里也含重复元素), 求交集
@@ -122,6 +125,8 @@ if(!字节数组[X%125]&(1<<(X/125))){ // 第(X/125)位是0的情况
 因为 nums[0] + nums[1] = 2 + 7 = 9
 
 所以返回 [0, 1]
+
+
 
 思路:
 
@@ -192,6 +197,8 @@ canConstruct("aa", "aab") -> true
 给定数组 nums = [-1, 0, 1, 2, -1, -4]，
 
 满足要求的三元组集合为： [ [-1, 0, 1], [-1, -1, 2] ]
+
+
 
 -   同一个数组里要求不能有重复的三元组, 用双指针(多指针)
 -   不同数组里要求不能有重复的元素, 用Hash表

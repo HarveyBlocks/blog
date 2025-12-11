@@ -6,6 +6,8 @@ events {
 }
 ```
 
+
+
 ## `accept_mutex`
 
 设置Nginx网络连接的序列化
@@ -48,6 +50,10 @@ multi_accept on|off;
 
 否则, 一个工作进程可以同时接收多个连接
 
+
+
+
+
 ## `worker_connect`
 
 用来配置单个worker进程的最大连接数
@@ -61,6 +67,8 @@ worker_connections number;
 这里的连接数不仅仅包括和简短用户建立的连接数, 而是包括所有可能的连接数
 
 number值不能大于操作系统支持打开的最大文件句柄数量
+
+
 
 ## `user`
 

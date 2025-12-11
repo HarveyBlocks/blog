@@ -1,5 +1,7 @@
 # 流程控制
 
+
+
 ## 分支结构
 
 ### 断言?
@@ -62,6 +64,8 @@ word="hello"
 [ 2 -eq 1 ]
 ```
 
+
+
 #### 文件权限
 
 `-r` 可读 read
@@ -74,6 +78,8 @@ word="hello"
 [ -r hello.sh ]
 ```
 
+
+
 #### 文件性质
 
 `-e` 文件存在 exist
@@ -81,6 +87,8 @@ word="hello"
 `-f` 是文件 file
 
 `-d` 是文件夹 directory
+
+
 
 #### 三元运算符?
 
@@ -91,6 +99,8 @@ word="hello"
 ```shell
 [ 1 -eq 2 ] && echo '对' || echo '否'
 ```
+
+
 
 ### if-elif-else
 

@@ -130,6 +130,8 @@ feign:
 -   解析application ,yml之前需要初始化CloudAppicationContext
 -   完美闭环
 
+
+
 >   解决方案: 使用在初始化CloudApplicationContext之前的配置文件引导配置文件 **`bootstrap.yml`** 
 
 ##### 拉取=引入依赖
@@ -150,6 +152,10 @@ feign:
 </dependency>
 ```
 
+
+
+
+
 #### 配置bootstrap.yaml文件
 
 ```yaml
@@ -169,6 +175,8 @@ spring:
           - data-id: swagger.yml
           - data-id: feign.yml
 ```
+
+
 
 #### 运行测试
 
@@ -241,6 +249,8 @@ private void checkCartsFull(Long userId) {
 }
 ```
 
+
+
 nacos
 
 ![image-20240111160727083](../../assets/Day05-Nacos配置管理/image-20240111160727083.png)
@@ -276,6 +286,8 @@ spring:
             - Path=/pay-orders/**
 ```
 
+
+
 #### 引入依赖
 
 ```XML
@@ -291,13 +303,21 @@ spring:
 </dependency>
 ```
 
+
+
 #### 创建ConfigService
 
 >   为的是连接到Nacos
 
+
+
 由于我们采用了`spring-cloud-starter-alibaba-nacos-config`自动装配, 所以`ConfigService`已经在`com.alibaba.cloud.nacos.NacosConfigAutoConfiguration`中自动创建好了
 
+
+
 ![image-20240116120559235](../../assets/Day05-Nacos配置管理/image-20240116120559235.png)
+
+
 
 -   因此，只要我们拿到`NacosConfigManager`就等于拿到了`ConfigService`，就算是创建ConfigService
 
@@ -400,6 +420,8 @@ public class DybanucRouteLoaderListener {
 
 `org.springframework.cloud.gateway.route.RouteDefinitionWriter`
 
+
+
 配置
 
 ```yml
@@ -430,6 +452,8 @@ public class DybanucRouteLoaderListener {
 -   predicates：路由匹配规则
 -   filters：路由过滤器
 -   uri：路由目的地
+
+
 
 需要有一个路由的配置类和一个路由的监听类
 
@@ -496,7 +520,11 @@ public class DybanucRouteLoaderListener {
 
 #### 测试
 
+
+
 ![image-20240116123628643](../../assets/Day05-Nacos配置管理/image-20240116123628643.png)
+
+
 
 访问[localhost:8080/search/list](http://localhost:8080/search/list?pageNo=1&pageSize=1)
 

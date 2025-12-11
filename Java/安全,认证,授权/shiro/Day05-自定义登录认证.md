@@ -41,6 +41,8 @@ public class MyRealm extends AuthenticatingRealm {
         //原因看源码, getCredentials在UserPasswordToken中是以password的形式封装的,password类型是char[]
     */
 
+
+
         // 伪造数据库
         Map<String, String> users = new HashMap<>();
         users.put("zhangsan", cryptography("zhangsan", salt));
@@ -51,8 +53,10 @@ public class MyRealm extends AuthenticatingRealm {
         String salt = "salt";
         String pwd;
 
+        
         AuthenticationInfo info = null;
-
+        
+        
         if ((pwd = users.get(principal.toString())/*从数据库中取信息*/) != null) {//如果用户存在
 
             // 3. 创建封装校验逻辑的对象,封装数据返回
@@ -65,6 +69,7 @@ public class MyRealm extends AuthenticatingRealm {
             );
 
         }
+
 
         return info;//如返回null则表示用户不存在(shiro也会这么认为)
     }
@@ -83,6 +88,8 @@ public class MyRealm extends AuthenticatingRealm {
 
 }
 ```
+
+
 
 ```ini
 [main]

@@ -12,6 +12,8 @@ JVM将信息保存在各种**`MBean`**对象中
 MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
 ```
 
+
+
 通过对Mbean对象的写入和获取,实现
 
 -   运行时配置的获取和更改
@@ -52,6 +54,8 @@ private static String getMemoryInfo(MemoryPoolMXBean bean) {
 
 -   0M是因为使用了默认配置`-1`.
 
+
+
 ## 直接内存信息
 
 特指NIO里面提供的直接内存, 而不是元空间, 元空间在JVM内存获取中已经被显示了
@@ -73,6 +77,8 @@ private static String getMemoryInfo(BufferPoolMXBean bean) {
             "total capacity = " + bean.getTotalCapacity() / 1024 / 1024 + "M";
 }
 ```
+
+
 
 在被监控程序处使用直接内存
 

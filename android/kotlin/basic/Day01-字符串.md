@@ -6,6 +6,8 @@
 
 可以使用`s[i]`获取字符, 也可以使用`for` 遍历
 
+
+
 ```kotlin
 for (i in 0 until str.length) {
     // until()=>this .. (to - 1)
@@ -17,6 +19,8 @@ for (s in str) {
 }
 println()
 ```
+
+
 
 ## 多行字符串
 

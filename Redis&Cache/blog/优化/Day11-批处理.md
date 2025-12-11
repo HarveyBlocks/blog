@@ -41,6 +41,8 @@ Pipeline pieline = jedis.pipelined();
 pipline.sync();// 发送请求执行命令,将管道中的数据清空
 ```
 
+
+
 #### RedisTemplate
 
 ```java
@@ -60,6 +62,8 @@ Redis的原生命令具有**原子性**
 如果在执行Pipeline时被插队, Pipeline的所有命令执行完毕的耗时就会长一些了
 
 所以PineLine的执行时一般比原生命令要长一些
+
+
 
 ## 集群模式下的批处理
 

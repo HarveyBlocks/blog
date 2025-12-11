@@ -36,6 +36,8 @@ protected void configure(HttpSecurity http) throws Exception {
 }
 ```
 
+
+
 这里会有问题
 
 ![image-20231218194831968](../../assets/Day02-SpringSecurity生产/image-20231218194831968.png)
@@ -70,6 +72,10 @@ http.csrf().disable()...
 </dependency>
 ```
 
+
+
+
+
 ## 连接数据库
 
 -   建个库
@@ -99,10 +105,10 @@ http.csrf().disable()...
     ```mysql
     INSERT INTO security.t_user (id, username, password, full_name, mobile)
     VALUES (1, 'zhangsan', 'zhangsan', '张三', '17382938473');
-
+    
     INSERT INTO security.t_user (id, username, password, full_name, mobile)
     VALUES (2, 'lisi', 'lisi', '李四', '13758304885');
-
+    
     INSERT INTO security.t_user (id, username, password, full_name, mobile)
     VALUES (0, 'root', 'root', '新世界的神', '17592840293');
     ```
@@ -114,12 +120,15 @@ http.csrf().disable()...
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-jdbc</artifactId>
     </dependency>
-
+    
+    
     <dependency>
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
     </dependency>
     ```
+
+    
 
 -   配置数据源application.yml
 
@@ -141,7 +150,7 @@ http.csrf().disable()...
     public class UserDao {
         @Autowired
         private JdbcTemplate jdbcTemplate;// 好用的模板工具类
-
+    
         public UserDTO getUserByUsername(String username){
             String sql = "select id," +
                     "       username," +
@@ -166,13 +175,13 @@ http.csrf().disable()...
     ```java
     @Service
     public class MyUserDetailsService implements UserDetailsService {
-
+    
         @Autowired
         private UserDao userDao;
         ...
     }
     ```
-
+    
 -   完成getUserByUsername()逻辑(先忽略授权)
 
     ```java

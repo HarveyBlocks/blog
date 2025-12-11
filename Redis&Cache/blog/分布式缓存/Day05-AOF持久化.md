@@ -15,6 +15,8 @@ appendfilename "appendonly.aof"
 
 ## AOF配置
 
+
+
 ### 配置记录频次
 
 ```ini

@@ -28,6 +28,8 @@ keytool -genkey -alias mydomain -keyalg RSA -keystore mydomain.jks -
 
 -   -storepass 指定访问密钥库的密码。
 
+    
+
 然后根据提示走, 不确定的就直接回车也没关系
 
 最终确认后按`Y`键并回车

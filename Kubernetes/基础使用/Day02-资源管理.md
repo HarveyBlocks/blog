@@ -1,4 +1,5 @@
 
+
 # 资源管理
 
 ## 概念
@@ -83,9 +84,15 @@ kubernetes集群管理工具
 scp -r $HOME/.kube node1: $HOME/
 ```
 
+
+
 ### Command
 
+
+
 #### get命令使用
+
+
 
 ```shell
 [root@node1 ~]# kubectl get pods
@@ -104,6 +111,8 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
     -   打印格式: json, yaml, name, wide(详细信息)
 -   `-n`: 查看指定namespace下的pod, 缺省, 则查看`default`namespace下的pod
 
+
+
 #### 基本命令
 
 | 命令         | 命令作用     |
@@ -111,6 +120,8 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 | cluster-info | 显示集群信息 |
 | help         | 查看命令帮助 |
 | version      | 显示版本信息 |
+
+
 
 #### CRUD命令
 
@@ -123,7 +134,13 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 | delete  | 删除一个资源 |
 | explain | 展示资源文档 |
 
+
+
+
+
 #### 运行和调试
+
+
 
 | 命令      | 命令作用                   |
 | --------- | -------------------------- |
@@ -138,6 +155,10 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 | scale     | 规模, 扩(缩)容Pod的数量    |
 | autoscale | 自动调整Pod的数量          |
 
+
+
+
+
 #### 其他命令
 
 | 命令  | 命令作用               |
@@ -148,6 +169,8 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 ### Type
 
 ### 资源分类
+
+
 
 | 资源分类      | 资源名称                 | 缩写    | 资源作用        |
 | :------------ | :----------------------- | :------ | :-------------- |
@@ -178,7 +201,19 @@ Error from server (NotFound): pods "nginx-56fcf95486-qpgl" not found
 [a-z0-9]([-a-z0-9]*[a-z0-9])?
 ```
 
+
+
+
+
+
+
+
+
+
+
 ## 命令式对象配置
+
+
 
 ### 配置文件
 
@@ -205,12 +240,20 @@ spec:
 
 ```
 
+
+
+
+
 ```shell
 kubectl create -f nginx.yaml 
 # >> namespace/dev created
 # >> pod/nginx-pod created
 
 ```
+
+
+
+
 
 ```shell
 kubectl delete -f nginx.yaml 

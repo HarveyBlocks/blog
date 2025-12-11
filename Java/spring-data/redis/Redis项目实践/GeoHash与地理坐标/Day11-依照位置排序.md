@@ -4,6 +4,8 @@
 
 ![image-20240131121346926](../../../assets/Day11-依照位置排序/image-20240131121346926.png)
 
+
+
 ## 修改Redis依赖版本
 
 -   原来的Redis依赖是不支持GeoSearch的
@@ -38,6 +40,8 @@
 
 ## 代码逻辑
 
+
+
 ### 分页数据
 
 ```java
@@ -46,7 +50,11 @@ int end = current * DEFAULT_PAGE_SIZE;
 int size = DEFAULT_PAGE_SIZE;
 ```
 
+
+
 ### 从Redis查询ShopId和Distance
+
+
 
 ```java
 /**
@@ -88,6 +96,8 @@ results.getContent()
         });
 ```
 
+
+
 ### 从数据库中依据ShopID查询Shop完整信息
 
 ```java
@@ -101,6 +111,8 @@ private List<Shop> queryShopsFromDbOrdered(List<String> shopIds) {
             .last("order by field(id," + shopIdsStr + ")").list();
 }
 ```
+
+
 
 ### 将Redis的距离存入Shop的Distance字段
 
@@ -119,6 +131,8 @@ private List<Shop> queryShopsFromDbOrdered(List<String> shopIds) {
             (shop) -> shop.setDistance(shopDistance.get(shop.getId().toString()))
     );
     ```
+
+    
 
 ### 完整逻辑
 

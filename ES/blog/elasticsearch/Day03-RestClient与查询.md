@@ -10,6 +10,8 @@
 GET /索引库/_search
 ```
 
+
+
 ```java
 public HotelDoc[] getAll() throws IOException {
     // 1. 创建SearchRequest请求,GET /索引库/_search
@@ -41,6 +43,10 @@ public HotelDoc[] getAll() throws IOException {
 ```
 
 -   他还是这么爱流
+
+
+
+
 
 接下来的查询, 只要套个大纲,然后写组织DSL就好啦,解析JSON和准备请求都是一样一样的
 
@@ -92,22 +98,22 @@ return Arrays.stream(hits).map(
      */
     public HotelDoc[] get(SearchSourceFunction getter) throws IOException {
         // Function<? super T, ? extends R> mapper
-
+    
         // 1. 创建SearchRequest请求,GET /索引库/_search
         SearchRequest request = new SearchRequest(INDEX);
-
+    
         // 2. 组织DSL语句
         getter.function(request.source());
-
+    
         // 3. 发送请求
         SearchResponse response = restClient.search(request, RequestOptions.DEFAULT);
-
+    
         // 4、解析响应
         SearchHits searchHits = response.getHits();
-
+    
         // 5. 查询总条数
         System.out.println("总共" + searchHits.getTotalHits().value + "条记录");//201
-
+    
         // 6, 获取结果数组
         SearchHit[] hits = searchHits.getHits();
         // 7. 遍历,转化
@@ -161,6 +167,8 @@ return Arrays.stream(hits).map(
     }
     ```
 
+
+
 -   简单的附录: 有关Java引用类型传参时可能出现的疑惑
 
     ```java
@@ -173,7 +181,7 @@ return Arrays.stream(hits).map(
         exchange(a,b);
         System.out.println("a = " + a);//1
         System.out.println("b = " + b);//2
-
+    
         System.out.println("--------------------c--------------------");
         Value c = b;
         c.setValue(3);
@@ -181,7 +189,7 @@ return Arrays.stream(hits).map(
         System.out.println("b = " + b);//3
         System.out.println("c = " + c);//3
     }
-
+    
     private void exchange(Value a, Value b) {
         System.out.println("--------------------exchange--------------------");
         Value temp = a;
@@ -190,9 +198,13 @@ return Arrays.stream(hits).map(
     }
     ```
 
+
+
 ## 全文检索查询
 
 >   常用于在搜索框的搜索
+
+
 
 ### `match`查询
 
@@ -206,6 +218,8 @@ GET /索引库名/_search
   }
 }
 ```
+
+
 
 ```java
 // match查询 , 需要字段名和内容
@@ -231,6 +245,10 @@ GET /索引库名/_search
 s.query(QueryBuilders.multiMatchQuery("如家","name","business"));
 ```
 
+
+
+
+
 ## 精准查询
 
 ### `ids`根据id查询
@@ -246,9 +264,17 @@ GET /索引库名/_search
 }
 ```
 
+
+
 ```java
 // ids没有?算了反正没啥用
 ```
+
+
+
+
+
+
 
 ### `range`范围查询
 
@@ -293,13 +319,19 @@ GET /索引库名/_search
 }
 ```
 
+
+
 ```java
 s.query(QueryBuilders.termQuery("city","上海"));
 ```
 
 ## 地理坐标查询
 
+
+
 ### `geo_distance`
+
+
 
 ```json
 GET /hotel/_search
@@ -320,11 +352,15 @@ GET /hotel/_search
 
         ![image-20231227155850234](../assets/Day03-RestClient与查询/image-20231227155850234.png)
 
+
+
 ```java
 s.query(QueryBuilders.geoDistanceQuery("location")
         .point(31.251433, 121.47522)
         .distance("10", DistanceUnit.KILOMETERS));// 直接一个参数: "15km" 也行
 ```
+
+
 
 ### `geo_bounding_box`
 
@@ -355,6 +391,8 @@ s.query(QueryBuilders.geoBoundingBoxQuery("location")
 ```
 
 ## 复合查询
+
+
 
 ### `function_score` 依据相关度算分
 
@@ -424,15 +462,15 @@ MatchQueryBuilder matchQuery = new MatchQueryBuilder("all","上海北京如家")
                     QueryBuilders.termQuery("business", "虹桥地区"), //过滤
                     ScoreFunctionBuilders.weightFactorFunction(100) // 权重
             );
-
+    
     FunctionScoreQueryBuilder functionQuery = new FunctionScoreQueryBuilder(matchQuery,
             new FunctionScoreQueryBuilder.FilterFunctionBuilder[]{filterFunctionBuilder});
-
+    
     functionQuery.boostMode(CombineFunction.MULTIPLY);
     // function
     s.query(functionQuery);
   ```
-
+  
 -   对照json
 
     ```json
@@ -508,6 +546,8 @@ GET /索引库名/_search
 }
 ```
 
+
+
 ```java
 // bool
 BoolQueryBuilder boolQuery = QueryBuilders.boolQuery();
@@ -519,6 +559,10 @@ boolQuery.filter(QueryBuilders.rangeQuery("price").lte(500));
 // 
 s.query(boolQuery);
 ```
+
+
+
+
 
 # 搜索结果处理
 
@@ -544,9 +588,13 @@ GET /索引库名/_search
 }
 ```
 
+
+
 ```java
 s.sort("price", SortOrder.ASC);
 ```
+
+
 
 -   还有相差距离的提示
 
@@ -573,6 +621,8 @@ s.query(QueryBuilders.matchAllQuery());
 s.size(20);
 s.from(10);
 ```
+
+
 
 ### `search after`解决分页的限制
 
@@ -606,6 +656,8 @@ s.size(15);
 
 ## 高亮
 
+
+
 -   `字段`: 告诉ES在哪些地方加标签
 -   `pre_targs`, `post_targs`: 告诉es加什么标签,默认\<em\>\</em\>
 -   默认情况下, es的搜索字段必须和高亮字段一致, 否则不会高亮, 通过`"require_field_match": "false"`更改
@@ -630,6 +682,8 @@ GET /hotel/_search
 }
 ```
 
+
+
 ```java
 s.query(QueryBuilders.matchQuery("all","北京酒店"));
 
@@ -641,6 +695,10 @@ s.highlighter(name);
 
 s.size(20);
 ```
+
+  
+
+
 
 高亮后的结果需要另外解析:
 
@@ -664,6 +722,8 @@ Arrays.stream(hits).map(
 ```
 name->[name], fragments[[速8<strong>酒店</strong>（<strong>北京</strong>平谷兴谷环岛店）]]
 ```
+
+
 
 取出fragments的代码是这样的
 

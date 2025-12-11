@@ -2,6 +2,8 @@
 - RuntimeExcption
 - 非法参数异常
 
+
+
 ## NumberFormatException
 
 - RuntimeExcption
@@ -12,10 +14,16 @@
 Integer.valueOf("abc");
 ```
 
+
+
+
+
 # IndexOutOfBoundsException
 
 - RuntimeException
 - 下标越界异常
+
+
 
 ## ArrayIndexOutOfBoundsException
 

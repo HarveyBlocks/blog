@@ -59,11 +59,17 @@ console.log(A); // [class A]
 console.log(typeof A); // function
 ```
 
+
+
 ## 访问控制
 
 -   private
 -   public
 -   protected
+
+
+
+
 
 ## 继承
 
@@ -77,7 +83,7 @@ class Sun extends Obj {
   get sum() {
     return super.sum + this.c;
   }
-
+  
 }
 ```
 
@@ -85,7 +91,11 @@ class Sun extends Obj {
 
 有抽象类和抽象方法
 
+
+
 ## Object 类方法
+
+
 
 |函数签名|描述|
 |:---------|:---------|

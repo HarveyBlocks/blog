@@ -11,6 +11,8 @@
 
 >   Durable持久化. Transient 暂时
 
+
+
 ### 交换机持久化
 
 >   Spring默认
@@ -37,6 +39,10 @@
 
         ![image-20240113152141125](../../assets/Day03-消息代理的可靠性/image-20240113152141125.png)
 
+    
+
+
+
 ### 测试PageOut的场景
 
 >   PageOut, 内存溢出
@@ -57,6 +63,8 @@
     	rabbitTemplate.convertAndSend(queueName, msg);
     }
     ```
+
+    
 
 -   测试统计
 
@@ -97,9 +105,13 @@ void testPageOut() throws InterruptedException {
 
 ![image-20240113175551169](../../assets/Day03-消息代理的可靠性/image-20240113175551169.png)
 
+
+
 ## 改变队列模式
 
 >   Lazy Queue 惰性队列
+
+
 
 ### 惰性队列
 
@@ -111,6 +123,8 @@ void testPageOut() throws InterruptedException {
 -   支持百万级消息存储
 
 3.12版本后所有队列都是LazyQueue,无法更改(没有纯内存模式了qwq)
+
+
 
 #### 指定
 

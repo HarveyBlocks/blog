@@ -1,5 +1,7 @@
 # RPC
 
+
+
 ## 请求消息
 
 ```java
@@ -149,7 +151,9 @@ public class RpcResponceMessage extends Message{
 ```java
 package com.harvey.netty.server;
 
+
 import ...
+
 
 /**
  * 服务器启动类
@@ -196,6 +200,10 @@ public class RpcServer {
 }
 
 ```
+
+
+
+
 
 ### 服务端处理请求
 
@@ -423,10 +431,10 @@ public class RpcResponseMessageHandler extends SimpleChannelInboundHandler<RpcRe
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RpcResponseMessage message) {
         long sequenceId = message.getSequenceId();
-
+        
         // 即时删除Map中无用的promise, Remove还会返回删除的值
         Promise<Object> promise = SEQUENCE_ID_PROMISE_MAP.remove(sequenceId);
-
+        
         if (promise == null) {
             return;
         }

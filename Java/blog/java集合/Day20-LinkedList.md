@@ -12,6 +12,8 @@
 LinkedList ll = new LinkedList();
 ```
 
+
+
 ### 添加
 
 ```java
@@ -31,7 +33,14 @@ ll.add(s5);
 System.out.println(ll.size());//6
 ```
 
+
+
+
+
+
 ### 删除
+
+
 
 ```java
 //删除
@@ -42,7 +51,12 @@ ll.remove(s1);
 */
 ```
 
+
+
+
+
 ### 查找
+
 
 ```java
 
@@ -54,6 +68,8 @@ System.out.println(
 System.out.print(ll.indexOf(s2)+":");
 System.out.println(s2);
 ```
+
+
 
 ### 切片
 
@@ -91,7 +107,10 @@ for (Object object:
     System.out.println(student);
 }
 
+
 ```
+
+
 
 #### 迭代器遍历
 
@@ -119,6 +138,12 @@ while (lit.hasPrevious()) {//逆序
     System.out.println(lit.previous());
 }
 ```
+
+
+
+
+
+
 
 ### 判断
 

@@ -1,12 +1,22 @@
 # Frame
 
+
+
 在一个框架中显示页面
+
+
 
 ```html
 <iframe height="200" src="Day02-head.md" width="200"></iframe>
 ```
 
 <iframe height="200" src="Day02-head.md " width="200"></iframe>
+
+
+
+
+
+
 
 超链接里的链接在目标frame中显示
 

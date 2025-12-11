@@ -27,6 +27,8 @@ docker run \
 
 兔兔可爱捏
 
+
+
 ## 基本模型
 
 -   交换机
@@ -37,6 +39,10 @@ docker run \
     -   使得使用同一套RabbitMQ的不同项目的消息**隔离**
 
 ![image-20240112160605867](../../assets/Day02-RabbitMQ简介/image-20240112160605867.png)
+
+
+
+
 
 ## 基本使用
 
@@ -82,11 +88,21 @@ docker run \
 
 ![image-20240112161753793](../../assets/Day02-RabbitMQ简介/image-20240112161753793.png)
 
+
+
+
+
 ![image-20240112161823581](../../assets/Day02-RabbitMQ简介/image-20240112161823581.png)
 
 ![image-20240112162019148](../../assets/Day02-RabbitMQ简介/image-20240112162019148.png)
 
 ![image-20240112161845823](../../assets/Day02-RabbitMQ简介/image-20240112161845823.png)
+
+
+
+
+
+
 
 <img src="../../assets/Day02-RabbitMQ%E7%AE%80%E4%BB%8B/image-20240112221158607.png" alt="image-20240112221158607" style="zoom:50%;" />
 

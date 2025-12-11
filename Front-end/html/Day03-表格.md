@@ -29,6 +29,10 @@
 </table>
 ```
 
+
+
+
+
 <table>
   <thead>
     <tr>
@@ -47,6 +51,8 @@
     </tr>
   </tbody>
 </table>
+
+
 
 ## 边框
 
@@ -71,6 +77,8 @@
   </tbody>
 </table>
 ```
+
+
 
 <table border="2">
     <!--border 表格边框粗2像素, 非必须属性-->
@@ -116,6 +124,8 @@
   </tbody>
 </table>
 ```
+
+
 
 <table>
   <caption>表格标题</caption> <!--可选-->
@@ -178,6 +188,8 @@
     </tr>
 </table>
 
+
+
 ## 跨单元格
 
 ### 跨列
@@ -208,6 +220,8 @@
 </table>
 ```
 
+
+
 <table>
   <thead>
     <tr>
@@ -233,6 +247,8 @@
 </table>
 
 ### 跨行
+
+
 
 ```html
 <table>
@@ -483,6 +499,8 @@
     </tbody>
 </table>
 
+
+
 ## 单元格的边距和间距
 
 -   cellpadding
@@ -493,6 +511,8 @@
     -   Cell Spacing
     -   间距
     -   单元格之间的距离
+
+
 
 ```html
 <table border="2" cellpadding="32" cellspacing="8">

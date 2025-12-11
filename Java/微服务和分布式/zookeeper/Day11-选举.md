@@ -24,6 +24,8 @@
 
 -   如果选举出Leader之后, 有集群里新成员启动, 则不再选举
 
+
+
 ## 选举
 
 Leader-Follower
@@ -44,6 +46,8 @@ Leader-Follower
 14.  服务器(N+3)/2启动, 发现集群中有leader: (N+1)/2, 将自己转变为Follower
 15.  .....
 16.  服务器N 启动,  发现集群中有leader: (N+1)/2, 将自己转变为Follower12-
+
+
 
 ## 重新选举
 

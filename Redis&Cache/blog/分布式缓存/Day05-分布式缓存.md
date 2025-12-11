@@ -14,6 +14,8 @@
 
 ## 创建Redis(6.2.6)集群
 
+
+
 ```shell
 docker run \
 	-p 6380:6379\
@@ -32,12 +34,14 @@ docker run \
 ```ini
 # 解除本地限制
 bind 0.0.0.0
-
+ 
 # 配置密码
 requirepass 123456
 ```
 
 下面是一些docker部署普通redis
+
+
 
 ```bash
 docker run \
@@ -64,6 +68,10 @@ docker run
     -d redis:latest
     redis-server /etc/redis/redis.conf
 ```
+
+
+
+
 
 ## 分布式Redis
 

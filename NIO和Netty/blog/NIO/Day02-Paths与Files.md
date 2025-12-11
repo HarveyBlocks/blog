@@ -14,13 +14,16 @@
     // C:\Users\27970\Desktop\IT\JDK\nio\src\main\resources\data.txt
     System.out.println(dataPath.normalize());
     // C:\Users\27970\Desktop\IT\JDK\nio\src\main\resources\data.txt
-
+    
     Path targetPath = Paths.get(RESOURCE_PATH_PREFIX, "..\\target.txt");
     System.out.println(targetPath);
     // C:\Users\27970\Desktop\IT\JDK\nio\src\main\resources\..\target.txt
     System.out.println(targetPath.normalize());// 常规化路径
     // C:\Users\27970\Desktop\IT\JDK\nio\src\main\target.txt
     ```
+
+
+
 
 ## File与Files
 

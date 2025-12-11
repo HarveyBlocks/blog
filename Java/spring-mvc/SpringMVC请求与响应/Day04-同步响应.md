@@ -7,6 +7,12 @@
     -   前端Ajax技术+Restful风格技术
     -   服务端进行Json格式为主的数据交互
 
+
+
+
+
+
+
 ## 传统的同步响应
 
 ![image-20231128205640812](../../assets/Untitled/image-20231128205640812.png)
@@ -34,6 +40,10 @@
     地址变了
 
     ![image-20231128205746031](../../assets/Untitled/image-20231128205746031.png)
+
+
+
+
 
 -   响应模型数据request.setAttribute
 
@@ -103,6 +113,10 @@ public ModelAndView res3() {
 
     -   这样就不用给每个jsp文件前写一句话了
 
+
+
+
+
 顺带着的,把utf-8的问题解决下
 
 -   在web.xml文件里配置
@@ -116,6 +130,10 @@ public ModelAndView res3() {
         </jsp-property-group>
     </jsp-config>
     ```
+
+
+
+
 
 ## @ResponseBody
 
@@ -143,7 +161,7 @@ public String res4() {
 @Controller
 @ResponseBody
 public class MyResponse{
-
+    
 }
 ```
 
@@ -159,6 +177,8 @@ public class MyResponse{
         ...
     }
     ```
+
+
 
 ### 康康源码
 

@@ -6,6 +6,8 @@
   - 返回一个包含 `_id` 字段的对象
 - `db.<collection>.insertMany()`
 
+
+
 ```js
 use sample_mflix
 
@@ -37,6 +39,7 @@ let insertMany = db.movies2.insertMany([
     }
 ]);
 console.log(insertMany.insertedIds); // empty, why?
+
 
 ```
 
@@ -155,11 +158,17 @@ db.<collection>.find({
 });
 ```
 
+
+
+
+
 ```js
 db.movies.find( {
     $or: [ { countries: "USA"  }, {genres: "Drama" } ]
 } )
 ```
+
+
 
 ## 更新
 
@@ -256,6 +265,7 @@ db.<collection>.replaceOne(
 ```js
 use sample_mflix
 
+
 let replaceOne = db.movies.replaceOne({
     title: "The Great Train Robbery"
 }, {
@@ -287,6 +297,8 @@ let replaceOne = {
 ```
 https://www.mongodb.com/zh-cn/docs/manual/reference/operator/aggregation-pipeline/
 ```
+
+
 
 删除一条文档
 

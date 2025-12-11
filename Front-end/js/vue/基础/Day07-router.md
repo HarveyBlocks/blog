@@ -65,7 +65,7 @@ app.mount('#root');
     -   `createWebHistory()`
     -   `createWebHashHistory()`
     -   `createMemoryHistory()`会完全忽略浏览器的 URL 而使用其自己内部的 URL
-
+    
 -   `app#use` 注册为插件
 
 -   path中的路径值, 使用`:`表示接下来是占位符, 例如
@@ -89,10 +89,14 @@ app.mount('#root');
 
     此时在`<router-link>`中配置`<router-link :to="'/'+id" >`即可
 
+
+
 1.  全局注册 `RouterView` 和 `RouterLink` 组件。
 2.  添加全局 `$router` 和 `$route` 属性。
 3.  启用 `useRouter()` 和 `useRoute()` 组合式函数。
 4.  触发路由器解析初始路由
+
+
 
 绘制导航页, Root.vue, 样式略 
 
@@ -134,6 +138,10 @@ app.mount('#root');
 ```js
 import { RouterLink } from 'vue-router'
 ```
+
+
+
+
 
 ## 访问路由器
 

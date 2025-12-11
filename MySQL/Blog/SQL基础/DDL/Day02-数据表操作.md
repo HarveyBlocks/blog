@@ -26,6 +26,8 @@ DESC 表名;
 SHOW CREATE TABLE 表名;
 ```
 
+
+
 ## 创建
 
 ```mysql
@@ -37,7 +39,10 @@ CREATE TABLE 表名(
 )[COMMENT '表注释'];
 ```
 
+
+
 ## 示例
+
 
 ```mysql
 create table tb_user(
@@ -95,9 +100,9 @@ create table employee(
     +------------+------------------+------+-----+---------+-------+
     7 rows in set (0.01 sec)
     ```
-
+  
   - tb_user
-
+  
     ```mysql
     +--------+-------------+------+-----+---------+-------+
     | Field  | Type        | Null | Key | Default | Extra |
@@ -109,6 +114,7 @@ create table employee(
     +--------+-------------+------+-----+---------+-------+
     4 rows in set (0.01 sec)
     ```
+
 
 ### 修改表名
 

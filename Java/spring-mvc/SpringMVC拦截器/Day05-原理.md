@@ -12,6 +12,8 @@
 
     -   使用处理器映射器HandlerMapping
 
+        
+
     1.  经过Interceptor
 
     2.  经过拦截器层层阻围,得到Controller
@@ -30,17 +32,33 @@
 
 4.  ...
 
+
+
 ## 拦截器
 
 ### 前端控制器
 
 ![image-20231129202230927](../../assets/Day05-原理/image-20231129202230927.png)
 
+
+
+
+
+
+
 ![image-20231129202354427](../../assets/Day05-原理/image-20231129202354427.png)
+
+
+
+
 
 #### doDispatch();
 
+
+
 ![image-20231129202517417](../../assets/Day05-原理/image-20231129202517417.png)
+
+
 
 ####
 
@@ -51,15 +69,27 @@ mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 -    Actually invoke the handler.
 -   执行资源(这里不赘述)
 
+
+
 ![image-20231129203101822](../../assets/Day05-原理/image-20231129203101822.png)
 
+
+
 ![image-20231129203424990](../../assets/Day05-原理/image-20231129203424990.png)
+
+
+
+
 
 #### applyPreHandle()
 
 ![image-20231129202646794](../../assets/Day05-原理/image-20231129202646794.png)
 
 **你看这循环,从前到后**
+
+
+
+
 
 #### applyPreHandle()
 

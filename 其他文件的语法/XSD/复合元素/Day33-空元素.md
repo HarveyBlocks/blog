@@ -2,6 +2,8 @@
 
 不能包含内容，只能含有属性
 
+
+
 ## 复合空元素
 
 ```xml
@@ -21,6 +23,8 @@
 -   `complexContent`限定或者拓展某个复合类型的内容模型
 -   `integer` 声明一个属性但不会引入任何的元素内容
 
+
+
 也可以更加紧凑地声明此 "product" 元素：
 
 ```xml
@@ -30,6 +34,8 @@
   </xs:complexType>
 </xs:element>
 ```
+
+
 
 可以为 "product" 元素设置一个属性并引用这个 complexType 名称
 

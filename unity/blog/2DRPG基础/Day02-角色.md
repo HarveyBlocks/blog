@@ -27,6 +27,8 @@ Edit->ProjectSettings->Physics2D->GeneralSettings
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018134903269.png" alt="image-20241018134903269" style="zoom:50%;" />
 
+
+
 -   Gravity 重力
 -   Simulation Mode 模拟模式
     -   Fixed Update(默认) 使用0.02秒检测一次
@@ -87,6 +89,8 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241024190703102.png" alt="image-20241024190703102" style="zoom:50%;" />
 
+
+
 在Edit->project settings Physics 2D-> Layer Collision Matrix 勾选表示层与层之间会产生碰撞, 不勾选表示不会碰撞
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241024190627121.png" alt="image-20241024190627121" style="zoom:50%;" />
@@ -103,11 +107,15 @@ Edit Collider 编辑碰撞体, 长按Alt键, 依照中心轴堆成调整
 
 -   Gravity Scale 收重力比例
 
+
+
 #### 质量
 
 >   Mass
 
 重的物体撞开轻的物体
+
+
 
 #### 锁定参数
 
@@ -142,6 +150,8 @@ Transform ->Rotation 设置人物旋转角度
 效果: 小伙立正了
 
 ![image-20241018141733583](../../assets/Day02-角色/image-20241018141733583.png)
+
+
 
 #### 检测关系
 
@@ -281,7 +291,11 @@ Actions->+->Add Binding, 一个Binding, 就是同一个操作的不同按键映�
 
 Actions->+->Add Up\Down\Left\Right Composite
 
+
+
 ![image-20241018150701668](../../assets/Day02-角色/image-20241018150701668.png)
+
+
 
 快速创建按键映射
 
@@ -350,6 +364,8 @@ C#的Console类打印不生效, 使用`Debug.Log("")`在(window->General->Consol
 显示
 
 ### 使用设备判定
+
+
 
 ## C#控制角色移动
 
@@ -448,7 +464,7 @@ Inspector->Rigidbody->info
 
     ```csharp
     private Rigidbody2D _rigidbody2D;
-
+    
     private void Awake() {
         // null判断, 是null则赋值
         _inputControl ??= new PlayerInputControl();
@@ -548,6 +564,8 @@ public Vector2 inputDirection;
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241018174912465.png" alt="image-20241018174912465" style="zoom:70%;" />
 
+
+
 ### 跳跃
 
 按键设置成Buttom
@@ -604,6 +622,8 @@ private void Jump(InputAction.CallbackContext obj) {
 
 人物不限次数连跳
 
+
+
 新创建一个类, 之后的其他角色(怪)也可以复用这套逻辑
 
 ### 检测逻辑
@@ -620,6 +640,8 @@ private void Jump(InputAction.CallbackContext obj) {
 -   OverlapCapsule 检测碰撞体是否位于一个胶囊的检测范围内
 -   OverlapBox 检测碰撞体是否位于一个方形的检测范围内
 
+
+
 ### 检测图层
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019135501162.png" alt="image-20241019135501162" style="zoom:50%;" />
@@ -635,6 +657,10 @@ private void Jump(InputAction.CallbackContext obj) {
 3.   给检查设置Layer
 
      <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019140400310.png" alt="image-20241019140400310" style="zoom:50%;" />
+
+     
+
+
 
 ### 绘制检测范围
 
@@ -699,6 +725,8 @@ public class EnvironmentPhysicsCheck : MonoBehaviour {
 }
 ```
 
+
+
 ### 跳跃/二段跳限制代码
 
 ```csharp
@@ -756,6 +784,8 @@ Project->Create->2D->Physics Material 2D
 Friction 摩擦系数
 
 ### 设置物理材质
+
+
 
 <img src="../../assets/Day02-%E8%A7%92%E8%89%B2/image-20241019145241508.png" alt="image-20241019145241508" style="zoom:50%;" />
 

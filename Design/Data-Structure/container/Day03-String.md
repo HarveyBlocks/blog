@@ -11,7 +11,7 @@ numberLen: int = len("number")
 for i in range(len(string)):
     if i is number:
         for j in range(i, i+6):
-
+            
 ```
 
 ## 右旋字符串
@@ -31,6 +31,8 @@ fgabcde
 
 1.  不申请新内存
 2.  减少移动次数(`第一轮g移到最前, 第二轮f移到最前`这种策略不能采用)
+
+
 
 <img src="../../assets/Day03-String/image-20240615203841717.png" alt="image-20240615203841717" style="zoom:50%;" />
 

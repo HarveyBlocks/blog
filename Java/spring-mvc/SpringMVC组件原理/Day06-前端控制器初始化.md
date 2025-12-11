@@ -12,6 +12,8 @@
 
 ![image-20231201190619330](../../assets/Day06-前端控制器/image-20231201190619330.png)
 
+
+
 # 初始化
 
 1.  获得Spring-MVC的ApplicationContaxt容器

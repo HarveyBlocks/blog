@@ -1,10 +1,14 @@
 # 组件
 
+
+
 ## 根组件
 
 每个应用都需要一个“根组件”
 
 其他组件将作为其子组件
+
+
 
 ```js
 import { createApp } from 'vue'
@@ -24,6 +28,10 @@ const app = createApp(App)
 
 组件里封装CSS样式, JS脚本逻辑, Html 内部的元素, 以及嵌套的组件
 
+
+
+
+
 用`mount`方法对App进行挂载
 
 该方法接收一个 '容器' 参数, 可以是实际的DOM-Element 或者是一个CSS 选择器字符串
@@ -33,6 +41,8 @@ const app = createApp(App)
 ```
 
 在html准备容器
+
+
 
 ```js
 createApp(App).mount(document.getElementById('app'));
@@ -70,6 +80,8 @@ export default {
 </template>
 ```
 
+
+
 #### 组合式
 
 ```vue
@@ -83,6 +95,8 @@ import ItemEntry from "@/components/ItemEntry.vue";
    <ItemEntry />
 </template>
 ```
+
+
 
 ### 多组件示例
 
@@ -180,6 +194,8 @@ function addItem() {
 </template>
 ```
 
+
+
 #### ItemEntry.vue
 
 子组件
@@ -188,6 +204,7 @@ defineProps 解释见其他文档
 
 ```vue
 <script setup>
+
 
 function changeToUpdate(updatable) {
   updatable.updating = true;
@@ -233,6 +250,8 @@ const props = defineProps({
 </template>
 ```
 
+
+
 ## Fallthrough 属性
 
 >   ckass 和 stlye 的合并
@@ -246,6 +265,8 @@ Root.vue
   <ChildNode style="padding: 2px;"/>
 </template>
 ```
+
+
 
 ChildNode.vue
 

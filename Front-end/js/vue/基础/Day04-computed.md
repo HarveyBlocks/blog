@@ -8,6 +8,8 @@
 
 vue会检测到 getter 依赖于 某一属性，当 被依赖是属性 改变时，任何依赖于 getter 的绑定都会同时更新
 
+
+
 对于文本插值进步的点在于, 可以在函数里进行复杂的运算
 
 ## 语法
@@ -55,6 +57,10 @@ const onStr = computed(() => {
   <button @click="on=!on">{{ onStr }}</button>
 </template>
 ```
+
+
+
+
 
 ## 序列显示
 

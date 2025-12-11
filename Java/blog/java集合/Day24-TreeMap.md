@@ -4,6 +4,10 @@
 - 可以对key自动排序
 - 存储结构是红黑树(特殊的二分查找树)
 
+
+
+
+
 ```java
 //创建Map集合
 TreeMap<Student, String> treeMap = new TreeMap<>();//注意<>里的,
@@ -38,6 +42,8 @@ System.out.println(treeMap.size());//7
 *NullPointerException – if the specified key is null and this map uses natural ordering, or its comparator does not permit null keys
 */
 ```
+
+
 
 Tree!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 

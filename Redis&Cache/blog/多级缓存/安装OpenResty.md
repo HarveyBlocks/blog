@@ -1,5 +1,7 @@
 # 安装OpenResty
 
+
+
 # 1.安装
 
 首先你的Linux虚拟机必须联网
@@ -12,6 +14,8 @@
 yum install -y pcre-devel openssl-devel gcc --skip-broken
 ```
 
+
+
 ## **2）安装OpenResty仓库**
 
 你可以在你的 CentOS 系统中添加 `openresty` 仓库，这样就可以便于未来安装或更新我们的软件包（通过 `yum check-update` 命令）。运行下面的命令就可以添加我们的仓库：
@@ -19,6 +23,8 @@ yum install -y pcre-devel openssl-devel gcc --skip-broken
 ```
 yum-config-manager --add-repo https://openresty.org/package/centos/openresty.repo
 ```
+
+
 
 如果提示说命令不存在，则运行：
 
@@ -28,6 +34,8 @@ yum install -y yum-utils
 
 然后再重复上面的命令
 
+
+
 ## **3）安装OpenResty**
 
 然后就可以像下面这样安装软件包，比如 `openresty`：
@@ -35,6 +43,8 @@ yum install -y yum-utils
 ```bash
 yum install -y openresty
 ```
+
+
 
 ## **4）安装opm工具**
 
@@ -46,6 +56,8 @@ opm是OpenResty的一个管理工具，可以帮助我们安装一个第三方�
 yum install -y openresty-opm
 ```
 
+
+
 ## **5）目录结构**
 
 默认情况下，OpenResty安装的目录是：/usr/local/openresty
@@ -53,6 +65,8 @@ yum install -y openresty-opm
 ![image-20240217233521477](../../assets/安装OpenResty/image-20240217233521477.png)
 
 看到里面的`nginx`目录了吗，OpenResty就是在Nginx基础上集成了一些Lua模块。
+
+
 
 ## **6）配置nginx的环境变量**
 
@@ -77,6 +91,8 @@ NGINX_HOME：后面是OpenResty安装目录下的nginx的目录
 source /etc/profile
 ```
 
+
+
 # 2.启动和运行
 
 OpenResty底层是基于Nginx的，查看OpenResty目录的nginx目录，结构与windows中安装的nginx基本一致：
@@ -93,6 +109,10 @@ nginx -s reload
 # 停止
 nginx -s stop
 ```
+
+
+
+
 
 nginx的默认配置文件注释太多，影响后续我们的编辑，这里将nginx.conf中的注释部分删除，保留有效部分。
 
@@ -129,11 +149,15 @@ http {
 }
 ```
 
+
+
 在Linux的控制台输入命令以启动nginx：
 
 ```sh
 nginx
 ```
+
+
 
 ![image-20240217234610567](../../assets/安装OpenResty/image-20240217234610567.png)
 

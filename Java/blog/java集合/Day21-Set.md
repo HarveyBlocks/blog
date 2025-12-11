@@ -37,6 +37,8 @@ public class Demo04 {
 }
 ```
 
+
+
 ### 添加元素
 
 ```java
@@ -56,6 +58,7 @@ System.out.println(set.add(str));//false
 System.out.println(set.size());//4
 System.out.println(set.toString());//[040, 030, 020, 010]
 
+
 /*
 HushSet实现的add()源代码
 public boolean add(E e) {
@@ -64,7 +67,11 @@ public boolean add(E e) {
 */
 ```
 
+
+
 ### 删除元素
+
+
 
 ```java
 //删除
@@ -72,6 +79,8 @@ public boolean add(E e) {
 set.remove("010");
 System.out.println(set.toString());//[040, 030, 020]
 ```
+
+
 
 ### 遍历
 
@@ -88,6 +97,8 @@ System.out.println();
 
 //当然,没有下标,就和Collection一样能foreach不能fori
 ```
+
+
 
 ### 判断
 

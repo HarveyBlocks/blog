@@ -12,6 +12,8 @@ T 方法名<T>(参数类型<T> 形式参数) {
 }
 ```
 
+
+
 ```csharp
 public T GetFirst<T>(List<T> ls) {
     return ls[0];

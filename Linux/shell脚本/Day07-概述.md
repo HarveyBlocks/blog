@@ -21,6 +21,8 @@ cat /etc/shells
 /bin/csh
 ```
 
+
+
 centos默认bash
 
 ubantu使用dash
@@ -29,6 +31,8 @@ ubantu使用dash
 
 `.sh`
 
+
+
 ## Hello World
 
 ```shell
@@ -36,6 +40,10 @@ ubantu使用dash
 # 第一行一般写执行脚本文件的解析器
 echo 'Hello World' # 这是注释
 ```
+
+
+
+
 
 ## 执行
 
@@ -46,6 +54,10 @@ echo 'Hello World' # 这是注释
 ```shell
 chmod 751 test.txt
 ```
+
+
+
+
 
 ### 启动解析器
 
@@ -59,11 +71,13 @@ source hello.sh
 
 -   `bash`是在操作系统正在使用的`bash`解析器启动`bash`
     -   子bash无法影响父环境
-
+    
     ![image-20240409134806860](../assets/Day07-概述/image-20240409134806860.png)
 -   `source`是启动新的`bash`解析器进行解析
-
+    
     -   和操作系统的bash一个等级, 能获取环境变量
+
+
 
 以下都能执行
 

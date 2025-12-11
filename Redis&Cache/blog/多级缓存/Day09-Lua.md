@@ -24,6 +24,7 @@ Centos内自带了Lua的运行缓解
     lua hello.lua
     ```
 
+
 ### 打开Lua控制台
 
 >   类似于Python的控制台
@@ -31,6 +32,8 @@ Centos内自带了Lua的运行缓解
 ```bash
 lua
 ```
+
+
 
 ```bash
 [root@harvey-centos lua]# lua
@@ -50,6 +53,8 @@ Hello
  --]]
 ```
 
+
+
 ### 标识符
 
 **Lua 是一个区分大小写的语言**
@@ -68,6 +73,8 @@ Hello
 | return   | then  | true  | until  |
 | while    |       |       |        |
 
+
+
 ## 变量与类型
 
 ### 数据类型
@@ -83,6 +90,8 @@ Hello
 
 ### type函数
 
+
+
 ```lua
 print("Hello World")
 print("12 is "..type(12))
@@ -95,6 +104,8 @@ print("type() is ".. type(type))
 print("{} is ".. type({}))
 ```
 
+
+
 ```text
 Hello World
 12 is number
@@ -106,6 +117,10 @@ print() is function
 type() is function
 {} is table
 ```
+
+
+
+
 
 ### 变量声明
 
@@ -123,7 +138,11 @@ local str = "Hello"
 PI = 3.1415926
 ```
 
+
+
 #### 表的声明
+
+
 
 ```lua
 -- 索引为数字,从1开始
@@ -131,6 +150,8 @@ local arr = {1,2,5,1,5}
 -- 索引为字符串, 字符串不用加引号
 local map = {name = 'Jack',age = 21}
 ```
+
+
 
 #### 表的访问
 
@@ -144,6 +165,8 @@ print(map['name'])
 print(map.name)
 ```
 
+
+
 ```text
 1
 5
@@ -151,6 +174,8 @@ print(map.name)
 Jack
 Jack
 ```
+
+
 
 ## 流程控制
 
@@ -181,6 +206,8 @@ Jack
 | #      | 一元运算符，返回字符串或表的长度。 | #"Hello" 返回 5                                              |
 
 ### 条件
+
+
 
 #### 关系运算符
 
@@ -222,9 +249,17 @@ else
 end
 ```
 
+
+
+
+
+
+
 ### 循环
 
 #### 条件循环
+
+
 
 ```lua
 local i = 5;
@@ -233,6 +268,8 @@ while i>0 do
 	i=i-1
 end
 ```
+
+
 
 ```lua
 5
@@ -267,6 +304,8 @@ for key,value in pairs(map) do
 end
 ```
 
+
+
 ```text
 -------arr-------
 number  1       number  1
@@ -288,6 +327,8 @@ string  monster string  810
 string  go      string  1919
 string  come    string  514
 ```
+
+
 
 ## 函数
 

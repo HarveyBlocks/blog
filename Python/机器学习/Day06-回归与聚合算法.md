@@ -1,9 +1,13 @@
 # 回归和聚类
 
+
+
 ## 线性回归
 
 -   欠拟合
 -   过拟合
+
+
 
 改进=>岭回归
 
@@ -83,18 +87,20 @@ $$
 
     -   试错
 -   改进
-
+  
     -   几何意义是沿着切线的方向向下降
         -   当然有可能陷入局部最小点, 而不是全局最小点
     -   数据量很大的话有优势
-
+    
 -   模型评估: 均方误差
 
     $$
     MSE = \frac{1}{m}\sum_{i=1}^m(y_i-\overline{y})2
     $$
-
+    
     -	预测值 - 真实值	 
+
+
 
 ### API
 
@@ -124,14 +130,14 @@ from sklearn.linear_model import LinearRegression,SGDRegressor
         -   `'optimal': eta = 1.0 / (alpha * (t + t0))`
         -   `'invscaling': eta = eta0 / pow(t, power_t) power_t = 0.25`越接近, 步长越小
         -   对于一个常数值的学习率来说, 可以使用**`'constant'`**
-
+        
         `penalty{'l2', 'l1', 'elasticnet'}, default='l2'` 'l2'是一种应对过拟合的方式, 相当于岭回归
 
 -   通用属性
 
     -   `coef_` 回归系数
     -   `intercept_`偏置
-
+    
 -   模型评估
 
     均方误差`from sklearn.metrics import mean_squared_error`
@@ -144,6 +150,8 @@ from sklearn.linear_model import LinearRegression,SGDRegressor
 
         返回浮点数结果, 越小越好
 
+
+
 #### 使用
 
 数据导入, 划分 越标准化
@@ -153,7 +161,7 @@ def pre():
     # 导入
     from sklearn.datasets import load_boston
     boston = load_boston()
-
+    
     # 划分
     from sklearn.model_selection import train_test_split
     data_train,data_test,target_train, target_test = \
@@ -161,18 +169,20 @@ def pre():
             boston.data,boston.target,
             test_size = 0.2 # 可选, 默认0.25
         )
-
+    
     # 标准化
     from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
     scaler.fit(data_train)
     data_train = scaler.transform(data_train)
     data_test = scaler.transform(data_test)
-
+    
     # 预估器
     return data_train,data_test,target_train, target_test
 
 ```
+
+
 
 预估器的使用
 
@@ -200,6 +210,8 @@ print(regresssor.intercept_)
 post(regresssor,data_test,target_test)
 ```
 
+
+
 模型评估
 
 ```python
@@ -209,6 +221,10 @@ def post(regresssor,data_test,target_test):
     mse = mean_squared_error(target_test,y_pred)
     print(mse)
 ```
+
+
+
+
 
 测试结果
 

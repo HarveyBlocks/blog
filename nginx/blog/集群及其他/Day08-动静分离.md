@@ -4,6 +4,8 @@
 
 Nginx特别擅长静态资源的部署发布, Tomcat擅长动态资源的发布
 
+
+
 ## 流程
 
 1.  获取index
@@ -39,6 +41,8 @@ Nginx特别擅长静态资源的部署发布, Tomcat擅长动态资源的发布
 </html>
 
 ```
+
+
 
 ```nginx
 upstream webservice{

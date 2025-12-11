@@ -56,6 +56,8 @@
 </mycat:schema>
 ```
 
+
+
 ### 逻辑库属性
 
 ```xml
@@ -141,6 +143,10 @@
 -   database
     -   当前这个数据节点,关联的是这个**节点主机的**哪个**数据库**
 
+
+
+
+
 ```xml
 <!--节点主机名与上方dataHost联系--><!--最大连接数,最小连接数,连接的负载均衡策略-->
 <dataHost name="localhost1" maxCon="1000" minCon="10" balance="0"
@@ -175,6 +181,7 @@
                user="root" password="123456"/><!--&amp;即转意&-->
     <!--host的值涉及主从复制-->
 
+
 ## 分页规则配置
 
 >   rule.xml
@@ -199,7 +206,7 @@
         <property name="mapFile">autopartition-long.txt</property>
     </funcion>
     ```
-
+    
 -   conf/autopartition-long.txt
 
     ```txt
@@ -224,6 +231,8 @@
 
     在autopartition-long.txt继续写就可以解决这个问题
 
+
+
 ## 用户权限配置
 
 >   server.xml
@@ -246,6 +255,10 @@
     <property name="managerPort">9066</property>
 </system>
 ```
+
+
+
+
 
 ### 配置用户的用户权限
 

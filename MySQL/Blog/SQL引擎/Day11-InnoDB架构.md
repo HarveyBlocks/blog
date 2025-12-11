@@ -2,6 +2,8 @@
 
 ![image-20231026212230651](../../assets/Day11-InnoDB引擎架构/image-20231026212230651.png)
 
+
+
 ## Buffer Pool 缓冲池
 
 -   最先操作
@@ -33,7 +35,11 @@
 
 -   **针对非唯一二级索引页**
 
+
+
 -   执行**DML**语句时,如果数据Page**没有在Buffer Pool中,不会直接操作磁盘**,而会将数据变更**存在更改缓存区Change BUffer中**,在未来数据被读取时,再将数据合并恢复到 Buffer Pool 中,再将合并后的数据刷新到磁盘中
+
+
 
 ### Change Buffer的用处
 
@@ -48,11 +54,15 @@
 -   用于优化对Buffer Pool的查询
 -   **系统根据情况创建Hash索引,提高效率**~离谱啊离谱~
 
+
+
 -   查看是否开启**Adaptive Hash Index**
 
     ```mysql
     show variables like '%innodb_adaptive_hash_index%'
     ```
+
+    
 
 ## Log Buffer 日志缓冲区
 
@@ -61,6 +71,8 @@
 -   定期刷新到磁盘中
 
 -   如果要更新插入删除,可以手动增加日志缓冲区的大小,节省磁盘IO
+
+
 
 ```mysql
 show variables like '%log_buffer_size%';
@@ -74,13 +86,23 @@ show variables like '%flush_log%';
 -- 2 ?: 日志再每次事务提交后写入,并每秒刷新到磁盘一次?????????????
 ```
 
+
+
 ### Redo log
 
 [事务原理](./Day11-InnoDB引擎事务原理)
 
+
+
+
+
 ### Undo log
 
 [事务原理](./Day11-InnoDB引擎事务原理)
+
+
+
+
 
 # 磁盘架构
 
@@ -101,11 +123,17 @@ show variables like '%Innodb_Data_file_path%';
 
 ![image-20231027142116847](../../assets/Day11-InnoDB架构/image-20231027142116847.png)
 
+
+
+
+
 ## File Per Table TableSpace
 
 -   每一个表都会有一个表空间文件(如果打开)
 -   每一个文件包含每一张表的数据和索引
 -   表存储的文件系统的单格数据文件
+
+
 
 ```mysql
 show variables like '%innodb_file_per_table%';
@@ -118,10 +146,13 @@ show variables like '%innodb_file_per_table%';
 
     ```mysql
     Create Tablespace 表空间名 Add datafile '通用表空间文件名.ibd' Engine=引擎名;
-
+    
+    
     Create Tablespace user Add datafile 'my_user.ibd' Engine=innodb;
     cerate table 表名(...) Engine = innodb tablespace=表空间名;
     ```
+
+
 
 ## Undo Tablespace撤销表空间
 
@@ -142,6 +173,8 @@ show variables like '%innodb_file_per_table%';
 ## Temporary Tablespace临时表空间
 
 -   存储临时表
+
+
 
 ## Doubleweite Buffer File 双写缓冲区
 
@@ -168,6 +201,8 @@ show variables like '%innodb_file_per_table%';
 
 ![image-20231027145338971](../../assets/Day11-InnoDB架构/image-20231027145338971.png)
 
+
+
 ## 作用
 
 将InnoDB引擎的缓冲池里的数据**在合适的时机**刷新到硬盘
@@ -185,6 +220,8 @@ show variables like '%innodb_file_per_table%';
     -   合并插入缓存
     -   Undo页的回收
 
+
+
 ### IO Thread
 
 >   InnoDB大量使用AIO来处理IO请求,极大提高了数据库的性能
@@ -198,6 +235,8 @@ show variables like '%innodb_file_per_table%';
     ```mysql
     show engine innodb status ;
     ```
+
+    
 
     ```Json
     =====================================
@@ -228,10 +267,16 @@ show variables like '%innodb_file_per_table%';
     0.00 reads/s, 0 avg bytes/read, 0.00 writes/s, 0.00 fsyncs/s
     ```
 
+    
+
+
+
 ### Purge Thread
 
 -   回收事务已经提交的Undo log
 -   在事务提交之后,undo log 可能不用了.就用它来回收
+
+
 
 ### Page Cleaner Thread
 

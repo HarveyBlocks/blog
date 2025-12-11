@@ -10,6 +10,8 @@ MongoDB 视图是一个只读可查询对象
 
   按需物化视图通常是 `$merge` 或 `$out` 阶段的结果
 
+
+
 ## 索引
 
 标准视图使用根本的集合的索引, 无法直接在标准试图上创建, 删除, 或重新构建一般的索引
@@ -148,6 +150,8 @@ private static void defineMonthlyBackSalesUpdate(Date startDate, MongoCollection
 {"_id": "2018-12", "sales_quantity": 41, "sales_amount": 506}
 {"_id": "2019-01", "sales_quantity": 86, "sales_amount": 896}
 ```
+
+
 
 `$merge`阶段会将输出写入 `monthly_bake_sales` 集合。基于ID对文档使用Upsert的逻辑
 

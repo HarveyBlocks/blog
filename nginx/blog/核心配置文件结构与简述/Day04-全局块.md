@@ -11,6 +11,8 @@ pid        /var/run/nginx.pid;
 
 ```
 
+
+
 ## `User`
 
 用于配置运行Nnginx服务器的 **Worker** 进程的用户和用户组, 用于限制对资源的访问
@@ -37,6 +39,10 @@ user nobody;
 2.  Worker接收用户的请求
 3.  问:  Master一定要创建Worker进程吗, 能创建多少个进程
 
+
+
+
+
 ### `master_process`
 
 用来指定是否开启工作进程
@@ -47,6 +53,8 @@ master_process on|off;
 
 -   默认`on`
 -   在测试的时候只留一个主进程
+
+
 
 ### `worker_processes`
 
@@ -68,6 +76,8 @@ worker_processes auto|具体数值;
 
 >   设定Nginx是否以守护进程的方式启动
 
+
+
 守护式进程式Linux后台执行的一种服务进程, 特点是独立与控制终端, 不会随着终端关闭的停止
 
 ```nginx
@@ -81,6 +91,8 @@ daemon on ;
 ```nginx
 pid filepath ;
 ```
+
+
 
 ## `error_log`
 
@@ -101,6 +113,10 @@ error_log filepath [日志级别] ;
     -   crit 临界
     -   alert 警报
     -   emerg 紧急
+
+
+
+
 
 ## include
 

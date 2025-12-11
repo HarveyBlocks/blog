@@ -10,6 +10,8 @@ pipeline构造的是双向链表
 
 两个类提供的方法不同, Inbound没有写, OutBound没有读
 
+
+
 ```java
 private void addHandlers(ChannelPipeline pipeline) {
     pipeline.addLast("handler-1",new ChannelInboundHandlerAdapter(){
@@ -52,12 +54,16 @@ private void addHandlers(ChannelPipeline pipeline) {
 }
 ```
 
+
+
 ```text
 handler-1 (入)
 handler-2 (入)
 handler-4 (出)
 handler-3 (出)
 ```
+
+
 
 诸如
 

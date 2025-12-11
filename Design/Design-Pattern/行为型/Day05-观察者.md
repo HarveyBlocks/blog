@@ -8,6 +8,8 @@ Publish-Subscribe
 
 主题对象发生状态改变, 会通知所有观察者, 使观察者更新自己
 
+
+
 降低主题与观察度之间的耦合
 
 ## 缺点
@@ -21,6 +23,8 @@ Publish-Subscribe
 一对多
 
 一个对象导致多个对象改变
+
+
 
 ## 结构
 
@@ -38,6 +42,8 @@ Publish-Subscribe
 -   具体观察者
     -   Concrete Observer
     -   在主题更新时更新自身状态
+
+
 
 如果主题作为字段存储, 而观察者是局部变量且只在该方法内部生效, 那么JVM无法从主题的集合中回收该观察者最终有内存溢出的危险
 
@@ -136,6 +142,8 @@ public class ConcreteObserver extends Observer {
     }
 }
 ```
+
+
 
 ### Demo
 

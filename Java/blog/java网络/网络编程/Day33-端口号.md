@@ -6,7 +6,13 @@
 
 ![image-20231011191254136](../../../assets/Day33/image-20231011191254136.png)
 
+
+
+
+
 在防火墙上开放端口号
+
+
 
 ```Dos
 netsh advfirewall firewall add rule name="Open Port 1883" dir=in action=allow protocol=TCP localport=1883

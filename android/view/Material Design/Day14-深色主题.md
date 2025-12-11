@@ -28,12 +28,14 @@ Android 10.0 引入系统
            <item name="android:forceDarkAllowed">true</item>
        </style>
        <style name="Theme.FirstAndroid" parent="Base.Theme.FirstAndroid" />
-
+   
        <style name="Theme.FruitDetail" parent="Base.Theme.FirstAndroid">
            <item name="android:statusBarColor">@android:color/transparent</item>
        </style>
    </resources>
    ```
+
+
 
 <img src="../../assets/Day14-深色主题/image-20250926225206452.png" alt="image-20250926225206452" style="zoom:50%;" />
 

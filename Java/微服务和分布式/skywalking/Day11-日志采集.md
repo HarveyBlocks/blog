@@ -2,6 +2,8 @@
 
 服务的日志写给oap, 也能包含该服务的信息
 
+
+
 ## 引入依赖
 
 ```xml
@@ -12,6 +14,10 @@
     <version>8.14.0</version>
 </dependency>
 ```
+
+
+
+
 
 ## 配置`logback-spring.xml`
 
@@ -50,6 +56,10 @@
 
 </configuration>
 ```
+
+
+
+
 
 来了
 

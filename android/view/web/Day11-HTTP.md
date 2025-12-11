@@ -125,12 +125,12 @@ dependencies {
 ```kotlin
 object Connection {
     val client = OkHttpClient()
-
+    
     class HookCallback : Callback { // 使用钩子, 而不是一定要执行
         // 默认给出空方法
         var responseListener: HookCallback.(Call, Response) -> Unit = { _, _ -> }
         var failureListener: HookCallback.(Call, IOException) -> Unit = { _, e -> throw e}
-
+        
         // 调用
         override fun onResponse(call: Call, response: Response) {
             this.responseListener.invoke(this, call, response)
@@ -144,7 +144,8 @@ object Connection {
     fun execute(request: Request): Response = client.newCall(request).execute()
     fun enqueue(request: Request, callback: HookCallback): Unit =
         client.newCall(request).enqueue(callback)
-
+    
+    
     fun putRequest(url: String, bodyMap: Map<String, String>): Request =
         request(url, "PUT", requestBody(bodyMap))
 
@@ -156,6 +157,7 @@ object Connection {
 
     fun postRequest(url: String, bodyMap: Map<String, String>): Request =
         request(url, "POST", requestBody(bodyMap))
+
 
     fun request(url: String, method: String, body: FormBody?): Request =
         Request.Builder().url(url).method(

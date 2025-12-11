@@ -6,6 +6,8 @@
 const 常量名 [类型] = 常量值
 ```
 
+
+
 ```go
 const PI float32 = 3.1415926
 ```
@@ -18,6 +20,8 @@ const PI float32 = 3.1415926
     ```go
     const intSize = unsafe.Sizeof(12)
     ```
+
+    
 
 -   常量中的数据类型只可以是布尔型、数字型（整数型、浮点型和复数）和字符串型
 
@@ -47,7 +51,7 @@ const PI float32 = 3.1415926
         c
         d
     )
-
+    
     func main() {
         fmt.Println(a)	 // 1
         fmt.Println(b)  // 1

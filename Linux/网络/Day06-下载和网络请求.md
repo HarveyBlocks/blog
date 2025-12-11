@@ -24,6 +24,8 @@ ping IP/域名
 
 看看这个IP/域名能被自己联通
 
+
+
 ## wget命令
 
 >   下载文件
@@ -45,6 +47,8 @@ tail wget-log
 ```bash
 tail -f wget-log
 ```
+
+
 
 ## curl命令
 

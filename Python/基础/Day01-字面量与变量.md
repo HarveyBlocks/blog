@@ -4,11 +4,19 @@
 
 ## 类型
 
+
+
 ![image-20240302012543128](../assets/字面量/image-20240302012543128.png)
 
 ```python
 type() # 查看数据类型 
 ```
+
+
+
+
+
+
 
 ## 变量
 
@@ -25,6 +33,8 @@ print(type(12))     # <class 'int'>
 print(type(print))  # <class 'builtin_function_or_method'>
 print(type(type))   # <class 'type'>
 ```
+
+
 
 ## 数据类型转换
 
@@ -46,6 +56,8 @@ print(int(num))  # 直接去除小数点后面的数
 print(str(num))  # 任何类型都能转化为字符串
 print(int(str(num)))  # 浮点数的字符串不能直接转化成整数
 
+
+
 ```
 
 ASCII码和字符串的互相转化
@@ -60,6 +72,8 @@ ascii_value = ord(char)
 print(ascii_value)  # 97
 ```
 
+
+
 ## 声明变量类型
 
 不声明变量类型也可以, Python会帮你做好
@@ -71,6 +85,7 @@ print(ascii_value)  # 97
 ```python
 def str_method(string: str):
     print(string)
+
 
 if __name__ == '__main__':
     a: int = 12

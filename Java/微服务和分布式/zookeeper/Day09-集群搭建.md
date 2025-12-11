@@ -25,6 +25,8 @@
     chmod -R 777 /root/docker-data/zookeeper1
     ```
 
+    
+
 4.  挂载配置文件目录(/mydata/zookeeper/conf)下
 
     zoo.conf
@@ -42,7 +44,7 @@
     standaloneEnabled=true
     admin.enableServer=true
     server.1=localhost:2888:3888
-
+    
     ```
 
 5.  访问端口
@@ -68,7 +70,7 @@
     Using config: /conf/zoo.cfg
     Client port found: 2181. Client address: localhost. Client SSL: false.
     Mode: standalone # 没有使用集群
-
+    
     ```
 
 7.  配置日志
@@ -80,7 +82,7 @@
     ```properties
     log4j.rootLogger=INFO,console,dailyFile,im
     log4j.additivity.org.apache=true
-
+    
     # 控制台(console)
     log4j.appender.console=org.apache.log4j.ConsoleAppender
     log4j.appender.console.Threshold=INFO
@@ -110,6 +112,8 @@
     cp -r /rook/docker-data/zookeeper/conf /rook/docker-data/zookeeper0/conf
     cp -r /rook/docker-data/zookeeper/conf /rook/docker-data/zookeeper1/conf
     ```
+
+    
 
 ## 选举
 
@@ -142,6 +146,8 @@ docker network connect zoo zookeeper0
 docker network connect zoo zookeeper1
 ```
 
+
+
 创建`myid`文件
 
 ```bash
@@ -150,6 +156,10 @@ echo 1 >zookeeper/data/myid
 echo 2 >zookeeper0/data/myid
 echo 3 >zookeeper1/data/myid
 ```
+
+
+
+
 
 更改配置文件
 
@@ -171,6 +181,7 @@ server.3=zookeeper1:2881:3881
 
 -   服务器IP: 服务器之间通信端口: 服务器之间投票选举端口
 
+
 ### 启动
 
 ```bash
@@ -189,6 +200,8 @@ Mode: leader
 当集群中正常启动的节点数量小于集群半数, 即投票方不到半数, 当前的Leader也会不会运行(当前的集群处于休眠状态)
 
 当主节点宕机, 而又有大于半数的节点存活, 即集群存在选举能力, 则会选举新的Leader
+
+
 
 ## 角色
 

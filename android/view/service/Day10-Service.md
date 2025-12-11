@@ -8,6 +8,10 @@ Service依赖于创建Service所在的应用程序进程。当应用程序进程
 
 Service默认运行在主线程, 必须手动开启线程才能实现"在后台运行"这一点. 否则, Service依旧可能阻塞主线程
 
+
+
+
+
 ## 创建
 
 ![image-20250920185312744](../../assets/Day10-Service/image-20250920185312744.png)
@@ -121,6 +125,8 @@ class FirstService : Service() {
 </LinearLayout>
 ```
 
+
+
 ### MainActivity
 
 ```kotlin
@@ -165,6 +171,8 @@ binding.start.setOnClickListener {
 ![image-20250920192724658](../../assets/Day10-Service/image-20250920192724658.png)
 
 看来是将Service的执行任务放入Queue, 然后本回调函数执行完毕后才会执行Service
+
+
 
 ## Activity 和Service的通信
 
@@ -225,6 +233,8 @@ class FirstBinder : Binder() {
 }
 ```
 
+
+
 ### Service onBind
 
 ```kotlin
@@ -237,6 +247,8 @@ class FirstService : Service() {
 	// ...
 }
 ```
+
+
 
 ### ServiceConnection
 
@@ -263,11 +275,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 }
 ```
 
+
+
 `onServiceConnected()`    在Activity与Service成功绑定的时候调用
 
 `onServiceDisconnected()`  **在Service的创建进程崩溃或者被杀掉的时候调用**
 
 有了字段firstBinder, 在Activity就可以随意调用Binder的方法了
+
+
 
 ### Button Click Listener
 
@@ -308,6 +324,8 @@ override fun onCreate(savedInstanceState: Bundle?) {
 
 ![image-20250920201334037](../../assets/Day10-Service/image-20250920201334037.png)
 
+
+
 点击一次unbind, 正常unbind了, 调用了Service的destory方法(但没有disconnect)
 
 ![image-20250920200348495](../../assets/Day10-Service/image-20250920200348495.png)
@@ -319,6 +337,8 @@ unbind之后再次bind, service重新创建, onBind方法重新调用, connectio
 unbind之后再次点击unbind, **程序崩溃**
 
 **bind之后的Service**即使stop也不会有实质性的作用, **必须unbind才会出发destroy**
+
+
 
 在不同Connection去链接同一个Service, 不同的Connection各connect一次, 但是Service的onBind方法只会调用一次(onCreate方法也发生一次), 也就是说, **不同Connection获取到的Binder和Service都是同一份**(演示略)
 
@@ -353,11 +373,11 @@ startForeground(/* id = */1, notification, foregroundServiceType)
 - id 唯一标识, 是和notification的requestCode使用同一套
   - 但和Notification的reqeustCode不同的是, 不允许是0(notification 允许0)
   - 如果和一般Notification重复or和其他Service的Notification重复, 则后面一条覆盖前面一条
-
+  
 - notification 可以和Notification一样创建
-
+  
   - 如果是Android 8.0 之后的版本, Notificaiton Channel 就也是必要的
-
+  
 - foregroundServiceType
 
   - 在Android 14 版本之后必须填写这个参数
@@ -386,6 +406,10 @@ startForeground(/* id = */1, notification, foregroundServiceType)
             android:exported="true"/>
     ```
 
+
+
+
+
 ```kotlin
 class FirstService : Service() {
     companion object ForegroundChannel{
@@ -407,7 +431,7 @@ class FirstService : Service() {
             )
         }
     }
-
+    
     private fun buildNotification(intent: Intent): Notification =
         NotificationCompat.Builder(this, TEST).setContentTitle("foreground service")
             .setContentText("This is content text").setSmallIcon(R.drawable.small_icon)
@@ -422,6 +446,8 @@ class FirstService : Service() {
 用NotificationManager的cancel不会把状态栏中的通知去掉
 
 在服务中调用`stopService()`或者`stopSelf()`来停止服务, 如果在前台运行时停止服务, **服务通知也会被移除**
+
+
 
 手动移除状态通知, 参数用于指示是否也移除状态栏通知。该**服务会继续运行，但不再是前台服务**。
 

@@ -32,6 +32,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
     <bean id="userMapper" class="com.harvey.dp.spring.demo.UserMapper"/>
     <bean id="userService" class="com.harvey.dp.spring.demo.UserServiceImpl">
         <property name="userMapper" ref="userMapper"/>

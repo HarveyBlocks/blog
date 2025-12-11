@@ -42,37 +42,37 @@ Java中的事件监听机制定义了以下几个类:
     @Component
     public class MyRunListener implements SpringApplicationRunListener {
         // 生命周期
-
+    
         @Override
         public void starting(ConfigurableBootstrapContext bootstrapContext) {
             System.out.println("starting");
         }
-
+    
         @Override
         public void environmentPrepared(ConfigurableBootstrapContext bootstrapContext, ConfigurableEnvironment environment) {
             System.out.println("environmentPrepared");
         }
-
+    
         @Override
         public void contextPrepared(ConfigurableApplicationContext context) {
             System.out.println("contextPrepared");
         }
-
+    
         @Override
         public void contextLoaded(ConfigurableApplicationContext context) {
             System.out.println("contextLoaded");
         }
-
+    
         @Override
         public void started(ConfigurableApplicationContext context, Duration timeTaken) {
             System.out.println("started加载完成");
         }
-
+    
         @Override
         public void ready(ConfigurableApplicationContext context, Duration timeTaken) {
             System.out.println("ready,正常启动运行");
         }
-
+    
         @Override
         public void failed(ConfigurableApplicationContext context, Throwable exception) {
             System.out.println("failed,启动失败");
@@ -136,6 +136,8 @@ public class MyInitializer implements ApplicationContextInitializer {
 }
 ```
 
+
+
 ### SpringApplicationRunListener
 
 -   需要在spirng.factories配置
@@ -168,6 +170,10 @@ public class MyInitializer implements ApplicationContextInitializer {
 ![image-20231207100203330](../../assets/Day03-监听机制/image-20231207100203330.png)
 
 成功
+
+
+
+
 
 ## Spring的事件
 

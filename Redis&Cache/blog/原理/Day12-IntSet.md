@@ -10,6 +10,8 @@ typedef struct intset {
 } intset;
 ```
 
+
+
 默认按照升序放在`constents`数组中
 
 ## IntSet升级

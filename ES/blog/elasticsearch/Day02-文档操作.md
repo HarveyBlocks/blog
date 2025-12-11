@@ -59,6 +59,8 @@ POST /employee/_doc/0
 GET /索引库名/_search
 ```
 
+
+
 ```json
 # 获取文档信息,根据id查
 GET /employee/_search
@@ -83,6 +85,8 @@ GET /employee/_search
 ```json
 GET /索引库名/_doc/文档id
 ```
+
+
 
 ```json
 # 获取文档信息,根据id查
@@ -113,9 +117,13 @@ GET /employee/_doc/0
 
 ## 删除文档
 
+
+
 ```json
 DELETE /索引库名/_doc/文档id
 ```
+
+
 
 ```json
 # 删除文档
@@ -291,6 +299,10 @@ POST /employee/_update/1
 -   `"total" : 2,`
 
     `"successful" : 1,`
+
+
+
+
 
 查不存在的, 报错, 404
 

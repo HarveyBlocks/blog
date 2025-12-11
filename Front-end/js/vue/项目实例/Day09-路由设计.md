@@ -20,6 +20,8 @@
 
         `#/`=>`#category`
 
+
+
 ## 创建路由
 
 创建`/router/index.js`创建路由器
@@ -35,6 +37,8 @@ const router = createRouter({
 export default router;
 ```
 
+
+
 在main.js上注册router
 
 ```js
@@ -46,6 +50,8 @@ let app = createApp(App);
 app.use(router);
 app.mount('#app');
 ```
+
+
 
 ### 注册一级路由
 

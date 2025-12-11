@@ -64,6 +64,7 @@ public interface ProducerConsumerRegistry<P> {
      */
     void register(MyConsumer<P> consumer);
 
+
     /**
      * 生产者各自创建消息
      */
@@ -130,6 +131,7 @@ public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry
             this.consumers = consumers;
         }
 
+
         @Override
         protected boolean isPrepared() {
             return !messageQueue.isEmpty();
@@ -148,6 +150,7 @@ public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry
         protected void executeIfUnprepared() {
         }
     }
+
 
 }
 ```

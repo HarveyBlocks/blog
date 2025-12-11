@@ -38,6 +38,8 @@ Android 使用任务（task）来管理Activity
 
 当**其他地方需要内存**时，处于停止状态的Activity有**可能会被系统回收**
 
+
+
 ### 销毁状态
 
 一个Activity**从返回栈中移除**后就变成了销毁状态
@@ -84,6 +86,10 @@ Android 使用任务（task）来管理Activity
 
     -   Activity由**停止状态**变为**运行状态**之前调用，也就是Activity被重新启动了
 
+
+
+
+
 <img src="../../assets/Day02-生命周期/image-20250908210225385.png" alt="image-20250908210225385" style="zoom: 67%;" />
 
 ### 完整生存期
@@ -93,6 +99,8 @@ Activity在onCreate()方法和onDestroy()方法之间所经历的就是**完整�
 在`onCreate()`方法中**完成各种初始化**操作
 
 在`onDestroy()`方法中**完成释放内存**的操作
+
+
 
 ### 可见生存期
 
@@ -106,6 +114,10 @@ Activity在onStart()方法和onStop()方法之间所经历的就是**可见生�
 
 而在`onStop()`方法中**释放资源**
 
+
+
+
+
 ### 前期生存期
 
 Activity在onResume()方法和onPause()方法之间所经历的就是**前台生存期**
@@ -113,6 +125,8 @@ Activity在onResume()方法和onPause()方法之间所经历的就是**前台生
 Activity总是处于运行状态，此时的Activity是可以和用户进行交互的
 
 平时看到和接触最多的就是这个状态下的Activity
+
+
 
 ## 被回收
 
@@ -308,6 +322,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         // ...
     }
+
 
     override fun onStart() {
         Log.d(TAG, "onStart")

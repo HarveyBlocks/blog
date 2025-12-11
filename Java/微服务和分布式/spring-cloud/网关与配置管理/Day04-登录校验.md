@@ -85,7 +85,7 @@
         public interface GatewayFilter extends ShortcutConfigurable {
             String NAME_KEY = "name";
             String VALUE_KEY = "value";
-
+        
             Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain);
         }
         ```
@@ -140,6 +140,10 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
 
     ![image-20240110161728900](../../assets/Day04-登录校验/image-20240110161728900.png)
 
+
+
+
+
 #### 自定义`GlobalFilter`
 
 -   实现两个接口
@@ -179,7 +183,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         }
         // 对于已登录的请求,将用户上下文放入请求头
         // headers.put("userContext", List.of("用户上下文"));
-
+    
         // 放行
         return chain.filter(exchange);
     }
@@ -194,6 +198,8 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         return 0;
     }
     ```
+
+    
 
 #### 自定义`GatewayFilter`
 
@@ -230,7 +236,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
             @Override
             public GatewayFilter apply(Object config) {
                 System.out.println("MyTestGatewayFilterFactory#apply");
-
+        
                 // OrderedGatewayFilter使用了装饰模式. 将GatewayFilter作为delegate(委托)
                 return new OrderedGatewayFilter(
                         new GatewayFilter() {
@@ -244,7 +250,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
                         },// 匿名内部类, 小子
                         -1);
             }
-
+        
         }
         ```
 
@@ -305,7 +311,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
                 public GatewayFilter apply(Config config) {
                     ... 见上
                 }
-
+            
                 /**
                  * 专门的属性类与参数进行匹配
                  * 内部类,小子
@@ -316,7 +322,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
                     private String arg1;
                     private String arg2;
                     private String arg3;
-
+            
                     @Override
                     public String toString() {
                         return "Config{" +
@@ -326,7 +332,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
                                 '}';
                     }
                 }
-
+            
                 /**
                  * 参数和内部类属性的映射关系
                  * @return 有序集合list,实现一一对应
@@ -335,7 +341,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
                 public List<String> shortcutFieldOrder() {
                     return List.of("arg1","arg2","arg3");
                 }
-
+            
                 /**
                  * 父类将依据Config类解析yaml文件
                  */
@@ -361,6 +367,8 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
             Config{arg1='001', arg2='002', arg3='003'}
             MyTestGatewayFilterFactory#apply
             ```
+
+
 
 ### 登录校验逻辑
 
@@ -425,15 +433,19 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
     }
 
     // TODO 对于已登录的请求,将用户上下文放入请求头
-
+    
     // 放行
     return chain.filter(exchange);
 }
 ```
 
+
+
 #### 测试
 
 ![image-20240110200814038](../../assets/Day04-登录校验/image-20240110200814038.png)
+
+
 
 401~(当然自动转到登录页面就是前端的事情啦)
 
@@ -442,6 +454,8 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 -   登录之后变成404了
 
     ![image-20240110201012176](../../assets/Day04-登录校验/image-20240110201012176.png)
+
+
 
 ### 网关传递用户信息
 
@@ -464,13 +478,13 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
     ```java
     @Component
     public class LoginInterceptor implements HandlerInterceptor {
-
+    
         @Override
         public boolean preHandle(
             HttpServletRequest request, 
             HttpServletResponse response, 
             Object handler) throws Exception {...}
-
+    
         @Override
         public void afterCompletion(
             HttpServletRequest request, 
@@ -497,7 +511,7 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ```
 
     2.  在返回Interceptor时把用户信息消除
-
+    
         ```java
         @Override
         public void afterCompletion(
@@ -510,7 +524,7 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ```
 
     3.  注册Interceptor
-
+    
         ```java
         @Configuration
         @RequiredArgsConstructor
@@ -523,7 +537,7 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
             }
         }
         ```
-
+    
     4.  不在同一个目录下, 如何让Spring自动加载Interceptor?
 
         ![image-20240111124045242](../../assets/Day04-登录校验/image-20240111124045242.png)
@@ -537,7 +551,7 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         原因是Gateway和WebMVC的依赖冲突, 但是Gateway又不需要Interceptor, 所以不需要WebMVC的依赖, Gateway只是需要工具模块下的几个方法罢了
 
         解决方法:**`@ConditionalOnClass(DispatcherServlet.class)`**注解MvcConfig
-
+    
         ```Java
         @Configuration
         @RequiredArgsConstructor
@@ -551,8 +565,10 @@ public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
             }
         }
         ```
-
+    
         为了识别Gateway和其他需要Interceptor的微服务的区别, 就在于其他微服务需要**DispatcherServlet**而Gateway不需要
+
+
 
 ### 微服务之间传递用户信息
 
@@ -605,6 +621,8 @@ public class ClientConfig {
 ```java
 @EnableFeignClients(clients = {ItemClient.class},defaultConfiguration = ClientConfig.class)
 ```
+
+
 
 ```java
 @EnableFeignClients(clients = {ItemClient.class},defaultConfiguration = ClientConfig.class)

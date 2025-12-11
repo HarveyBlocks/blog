@@ -12,11 +12,15 @@ POJO = plain ordinary Java object = 普通Java对象
 
 **下面要讲的这几个包，本质上都是POJO类**
 
+
+
 ### domain
 
 domain = 域
 
 域是一个大范围，如**简历域包括工作经验表、项目经验表、简历基本信息表**。 在domain包中，就可以定义一个大的简历对象，将三个表的内容整合在一个对象中，作为整体操作。
+
+
 
 ### entity
 
@@ -28,6 +32,8 @@ entity = 实体
 
 比如user表中有name、id、age，则entity包中对应的同名类也只有这三个同名属性。
 
+
+
 ### model
 
 Model = 模型
@@ -38,11 +44,15 @@ Model = 模型
 
 因此可以在model层中定义user_model类，**将user表中的信息与user_passwd表中的信息整合成一张综合表**，这样在进行操作时只需调用综合表，就可以完成对两个表的关联操作
 
+
+
 ### view和DTO
 
 view = 视图
 
 DTO = Data Transfer Object = 数据传输对象，与view的用法相同，不过是叫法不同
+
+
 
 当用view当包名时，一般里面存放的是对实体表的映射类(视图类)，是用来**给前端用的**。
 
@@ -51,6 +61,8 @@ DTO = Data Transfer Object = 数据传输对象，与view的用法相同，不�
 比如user表中有name、id、age，出于某些原因，我们**只需要向用户展示name和age值**，但进行相关操作时，我们往往需要对user表进行很复杂读处理，每次定义都很麻烦。
 
 因此可以在view层中定义user_view类，将user表中的name、age存入user_view视图，这样在进行操作时只需调用视图表，就可以完成相对应的操作
+
+
 
 -   如果想对**几个表综合操作**，就用**domain**
 -   如果是**严格对数据库表**操作，就用**entity**
@@ -81,6 +93,8 @@ mvc
     |
     \---model
 ```
+
+
 
 # java 实体类命名
 
@@ -170,6 +184,8 @@ Controller
 
 所以实际项目中，一般都是这样应用的：
 控制层(controller-action)，业务层/服务层( bo-manager-service)，实体层(po-entity)，dao(dao)，视图对象(Vo-)，视图层(view-jsp/html)
+
+
 
 **个人解读**
 

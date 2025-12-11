@@ -15,7 +15,7 @@
      * {
        box-sizing: border-box;
      }
-
+     
      html {
        height: 100%;
        font-size: 14px;
@@ -69,12 +69,12 @@
      ul {
        list-style: none;
      }
-
+     
      #app {
        background: #f5f5f5;
        user-select: none;
      }
-
+     
      .container {
        width: 1240px;
        margin: 0 auto;
@@ -85,7 +85,7 @@
        text-overflow: ellipsis;
        overflow: hidden;
      }
-
+     
      .ellipsis-2 {
        word-break: break-all;
        text-overflow: ellipsis;
@@ -94,15 +94,15 @@
        -webkit-line-clamp: 2;
        overflow: hidden;
      }
-
+     
      .fl {
        float: left;
      }
-
+     
      .fr {
        float: right;
      }
-
+     
      .clearfix:after {
        content: '.';
        display: block;
@@ -111,7 +111,7 @@
        line-height: 0;
        clear: both;
      }
-
+     
      // reset element
      .el-breadcrumb__inner.is-link {
        font-weight: 400 !important;

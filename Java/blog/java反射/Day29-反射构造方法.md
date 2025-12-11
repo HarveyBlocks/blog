@@ -15,9 +15,12 @@ public class Student {
     }
 ```
 
+
 ## 获取构造方法
 
 Class类里的方法:
+
+
 
 | 方法返回值类型 | 方法名及形参 | 描述 |
 | -------------- | ------------ | ---- |
@@ -25,6 +28,7 @@ Class类里的方法:
 | Constructor<?>[] |  getConstructor**s**()| 返回所有public构造方法对象的数组 |
 |Constructor<T>  |getDeclaredConstructor(Class<?>... parameterTypes)| 依据给定的形参数据类型,返回单个构造方法对象 |
 |Constructor<?>[]|getDeclaredConstructor**s**()| 返回所有构造方法对象的数组 |
+
 
 ### 返回构造方法的数组
 
@@ -57,7 +61,15 @@ studentClass.getDeclaredConstructor(String.class,int.class)
     								//顺序调转,编译时不报错,运行时报错
 ```
 
+
+
+
+
 <img src="../../assets/Day29/image-20230909092055965.png" alt="image-20230909092055965" style="zoom:50%;" />
+
+
+
+
 
 ### 获取构造方法的信息
 
@@ -80,6 +92,8 @@ System.out.println(
 );
 ```
 
+
+
 | Modifier and Type         | Constant Field | Value  |
 | ------------------------- | -------------- | ------ |
 |public static final int | PUBLIC       | 1    |
@@ -95,7 +109,15 @@ System.out.println(
 | public static final int | ABSTRACT   | 1024 |
 | public static final int| STRICT      | 2048|
 
+
+
+
+
 IDEA底层用到了反射,就不会提醒你去调用peivate的构造方法
+
+
+
+
 
 #### 获取形参的类型
 
@@ -117,12 +139,15 @@ int arg1
 
 ### 利用反射创建对象
 
+
+
 Constructor类里的方法:
 
 | Modifier and Type | Method                      | Description                 |
 | ----------------- | --------------------------- | --------------------------- |
 | T                 | newInstance()               | 创建对象                    |
 | void              | setAccessible(boolean flag) | 设置为true,表示取消访问检查 |
+
 
 ```java
 public static void main(String[] args)
@@ -142,15 +167,17 @@ public static void main(String[] args)
 
 可是我就是要用私有构造方法去创建!!!!!!!!!
 
+
+
 ```java
 public static void main(String[] args)
         throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-
+    
     Class studentClass = Class.forName("LearnReflection.Student");
     Constructor studentConstructor = studentClass.getDeclaredConstructor(String.class, int.class);
-
+    
     studentConstructor.setAccessible(true);//临时取消权限的校验
-
+    
     Student student = (Student) studentConstructor.newInstance("Mike", 12);
 }
 ```

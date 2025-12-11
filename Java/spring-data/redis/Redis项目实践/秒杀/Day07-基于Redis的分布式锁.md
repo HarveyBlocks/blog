@@ -33,6 +33,8 @@
     }
     ```
 
+
+
 ## 实现机制
 
 发现资源被占用
@@ -76,6 +78,8 @@ public Long asynchronousLock(String lockKey, Supplier<Long> supply) {
 }
 ```
 
+
+
 #### 全局锁改造
 
 ```java
@@ -117,6 +121,10 @@ public VoucherOrderController(StringRedisTemplate stringRedisTemplate) {
 并且, 被阻塞的业务完成之后, 会主动释放锁, 这个锁是线程B的锁, 线程B在不值情的情况下锁被释放, 
 
 由此, 第三条线程C就有机会乘虚而入
+
+
+
+
 
 原因: 该线程的锁在该线程不知道的情况下被释放, 可能是业务阻塞造成的TTL超时, 也有可能是被其他线程释放.
 
@@ -258,10 +266,18 @@ String identification = UUID.randomUUID().toString(true)+"-"+Thread.currentThrea
     EVAL "redis.call('set',KEYS[1],ARGV[1])" 1 name Rose
     ```
 
+    
+
     ```java
     redis(pc2):0>EVAL "local a = redis.call('get',KEYS[1]);return a;" 1 icr:order:24:01
     "62556"
     ```
+
+
+
+
+
+
 
 脚本
 
@@ -293,6 +309,8 @@ end
 return 0
 ```
 
+
+
 Java调用Lua代码
 
 ```java
@@ -312,17 +330,25 @@ private void unlock(@NonNull String lockKey, @NonNull String uniqueIdentificatio
 }
 ```
 
+
+
 ### 不可重入
 
 >   同一个线程无法多次获取同一把锁
+
+
 
 ### 不可重试
 
 >   获取锁只尝试一次就返回false, 没有重试机制
 
+
+
 ### 超时释放
 
 >   锁超时释放是虽然可以避免死锁, 但如果是业务执行耗时较长, 也会导致锁释放, 存在安全隐患
+
+
 
 ### 主从一致性
 

@@ -1,5 +1,7 @@
 # 线程创建
 
+
+
 ## 通过继承Thread类创建
 
 1. 自定义线程类继承**Thread**类
@@ -46,6 +48,8 @@ public class TestThread extends Thread{
 }
 ```
 
+
+
 ### 网图下载
 
 1. 下载Commons IO包
@@ -73,7 +77,7 @@ public class TestThread extends Thread{
         webDownloader.downloader(URL,name);
         System.out.println("下载了"+name);
     }
-
+    
     public static void main(String[] args) {
         //创建线程对象
         TestThread tT1 = new TestThread("https://","1,jpg");
@@ -128,6 +132,7 @@ public class TestThread implements Runnable{//实现Runnable接口
 		//用自定义线程类作为参数,调用**start()**方法启动线程
         new Thread(testThread).start();
 
+
         for (int i = 0; i < 200; i++) {
             try {
                 Thread.sleep(50);
@@ -141,6 +146,8 @@ public class TestThread implements Runnable{//实现Runnable接口
 }
 ```
 
+
+
 ## Thread与Runnable对比
 
 因为java是单继承,所以推荐使用Runnable接口,**方便同一个对象被多个线程使用**
@@ -152,6 +159,8 @@ new Thread(testThread,"线程名1").start();
 new Thread(testThread,"线程名2").start();
 new Thread(testThread,"线程名3").start();
 ```
+
+
 
 ## 实现Callable接口创建
 
@@ -204,6 +213,8 @@ public class TestCallable implements Callable{
 
 }
 ```
+
+
 
 保留问题Future<Boolean>
 

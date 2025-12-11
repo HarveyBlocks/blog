@@ -85,9 +85,13 @@ private ChannelFuture doBind(final SocketAddress localAddress) {
 }
 ```
 
+
+
 ### initAndRegister()
 
 创建ServerSocketChannel, 并注册到ServerSocketChannel上
+
+
 
 ```java
 ServerSocketChannel serverSocketChannel = ServerSocketChannel.open(); // ssc
@@ -99,7 +103,11 @@ SelectionKey selectsionKey = serverSocketChannel.regiter(selector, 0, attachment
 
 ```
 
+
+
 ### init
+
+
 
 ```Java
 Channel channel = null;
@@ -118,13 +126,16 @@ try {
 }
 ```
 
+
+
 -   int(channel):
 
     ```java
     ChannelPipeline p = channel.pipeline();
-
+    
     // ...
-
+    
+    
     p.addLast(new ChannelInitializer<Channel>() {
         // 该Handler被注入, 但还未被调用, 在完成Register之后被调用
         @Override
@@ -133,6 +144,9 @@ try {
         }
     });
     ```
+    
+
+
 
 ### register
 
@@ -158,6 +172,10 @@ if (regFuture.cause() != null) {
 return regFuture;
 ```
 
+
+
+
+
 -   regiter(channel)
 
     ```java
@@ -166,9 +184,9 @@ return regFuture;
         ObjectUtil.checkNotNull(eventLoop, "eventLoop");
         if (isRegistered()) {...}
         if (!isCompatible(eventLoop)) {...}
-
+    
         AbstractChannel.this.eventLoop = eventLoop;
-
+    
         if (eventLoop.inEventLoop()) {
             // 当前线程是NIO线程
             register0(promise);
@@ -223,7 +241,7 @@ return regFuture;
     final ChannelPipeline pipeline = ch.pipeline();
     ChannelHandler handler = config.handler();
     if (handler != null) {...}
-
+    
     ch.eventLoop().execute(new Runnable() {
         @Override
         public void run() {
@@ -236,10 +254,15 @@ return regFuture;
         }
     });
     ```
+    
+
+
 
 ### doBind0(regFuture, channel, localAddress, promise);
 
 绑定端口
+
+
 
 ```java
 boolean wasActive = isActive();

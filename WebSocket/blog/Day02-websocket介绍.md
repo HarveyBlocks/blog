@@ -42,23 +42,27 @@
 
     通过websocket对象调用该方法发送数据给服务端 
 
+
+
+
+
 -   前端
 
     ```html
     <html lang="en-US">
-
+    
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>My test page</title>
     </head>
-
+    
     <body>
         Hello world<br>
         <script>
             let ws = new WebSocket("ws://localhost/chat");
             ws.onopen = function () {
-
+                
             };
             ws.onmessage = function (event) { 
                 // 传入参数事件对象,事件对象带有服务器发送的数据
@@ -69,9 +73,10 @@
             };
         </script>
     </body>
-
+    
     </html>
     ```
+
 
 ## 服务端API
 

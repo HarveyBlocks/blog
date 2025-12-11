@@ -21,6 +21,8 @@ dependencies {
 }
 ```
 
+
+
 ## 用法
 
 1. 定义一个后台任务，并实现具体的任务逻辑
@@ -45,6 +47,8 @@ class SimpleWorker(context: Context, params: WorkerParameters) : Worker(context,
 ```
 
 还有Result.retry()方法，可以结合WorkRequest.Builder的setBackoffCriteria()方法来重新执行任务
+
+
 
 ### 请求
 

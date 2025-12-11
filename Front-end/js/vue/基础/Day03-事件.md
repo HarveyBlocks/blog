@@ -88,6 +88,8 @@ function inputText(event) {
 v-on:[event-type].[event-修饰符]="function|object|line script"
 ```
 
+
+
 ### prevent阻止默认事件
 
 使用prevent阻止右键出现菜单
@@ -125,11 +127,15 @@ getKey(event) {
 </script>
 ```
 
+
+
 | 按键修饰符               | 详细信息                                                     |
 | :----------------------- | :----------------------------------------------------------- |
 | 常见的键都有自己的别名   | `.enter` `.tab` `.delete` `.esc` `.space` `.up` `.down` `.left` `.right` |
 | `.[letter]`例如 `.s`     | 指定按下该键时出现的字母                                     |
 | `.[system modifier key]` | `.alt`、`.ctrl`、`.shift` 或 `.meta`。 这些键可以与其他键**结合使用**，或者与鼠标单击结合使用。 |
+
+
 
 ### 鼠标触发
 

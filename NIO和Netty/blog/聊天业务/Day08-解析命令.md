@@ -15,9 +15,12 @@ private static String[] splitString(String input) {
 }
 ```
 
+
+
 ```java
 public class ParseCommand {
     public static int doParse(String[] split, ChannelHandlerContext ctx) {
+
 
         try {
             if (split.length<2){

@@ -16,6 +16,8 @@ Java对象头(*Object Header*), 以32位虚拟机为例
     -   Klass Word *32 bit*
     -   array length *32 bit*
 
+
+
 -   Mark Word (32位虚拟机)
 
     ![image-20240601211952277](../assets/Day02-管程/image-20240601211952277-1725637387119.png)

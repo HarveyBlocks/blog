@@ -20,6 +20,8 @@ Idea集成Tomcat
 
 ![image-20231116202021810](../../../assets/Day38-TomCat/image-20231116202021810.png)
 
+
+
 <img src="../../../assets/Day38-TomCat/image-20231116202056294.png" alt="image-20231116202056294" style="zoom:50%;" />
 
 -   这么配,就可以直接打开index.html了
@@ -39,7 +41,7 @@ Idea集成Tomcat
             <version>2.2</version>
         </plugin>
     </plugins>
-
+    
     ...
 </build>
 ```

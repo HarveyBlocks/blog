@@ -4,6 +4,14 @@
     -   填写不正确,失败信息
     -   填写正确,跳转
 
+
+
+
+
+
+
+
+
 一存一取一比对
 
 ```java
@@ -34,6 +42,18 @@ if (!checkCodeService.equalsIgnoreCase(checkCodeUser)) {
 }
 //允许注册,下面是注册的逻辑
 ```
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## 工具类
 
@@ -66,10 +86,12 @@ if (!checkCodeService.equalsIgnoreCase(checkCodeUser)) {
     </script>
     ```
 
+    
+
 ```java
 
 package com.util;
-
+ 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
@@ -77,27 +99,28 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.Arrays;
 import java.util.Random;
-
+ 
 /**
  * 生成验证码工具类
  */
 public class CheckCodeUtil {
-
+ 
     public static final String VERIFY_CODES = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static Random random = new Random();
-
+ 
     public static void main(String[] args) throws Exception {
         //调用主方法，在D盘产生名为a的验证码图片，并在服务端打印验证码内容
         OutputStream fos=new FileOutputStream("d://a.jpg");
         String s = CheckCodeUtil.outputVerifyImage(100, 50, fos, 4);
         System.out.println(s);
-
+ 
         //此为CheckCodeServlet写入，在jsp中可直接调用
         // 如：“<img id="checkCodeImg" src="/brand-demo/CheckCodeServlet">”
         //ServletOutputStream os = response.getOutputStream();
         //String s = CheckCodeUtil.outputVerifyImage(100, 50, os, 4);
     }
-
+ 
+ 
     /**
      * 输出随机验证码图片流,并返回验证码值（一般传入输出流，响应response页面端，Web项目用的较多）
      *
@@ -113,7 +136,7 @@ public class CheckCodeUtil {
         outputImage(width, height, os, verifyCode);
         return verifyCode;
     }
-
+ 
     /**
      * 使用系统默认字符源生成验证码
      *
@@ -123,7 +146,7 @@ public class CheckCodeUtil {
     public static String generateVerifyCode(int verifySize) {
         return generateVerifyCode(verifySize, VERIFY_CODES);
     }
-
+ 
     /**
      * 使用指定源生成验证码
      *
@@ -144,7 +167,7 @@ public class CheckCodeUtil {
         }
         return verifyCode.toString();
     }
-
+ 
     /**
      * 生成随机验证码文件,并返回验证码值 (生成图片形式，用的较少)
      *
@@ -160,7 +183,9 @@ public class CheckCodeUtil {
         outputImage(w, h, outputFile, verifyCode);
         return verifyCode;
     }
-
+ 
+ 
+ 
     /**
      * 生成指定验证码图像文件
      *
@@ -189,7 +214,7 @@ public class CheckCodeUtil {
             throw e;
         }
     }
-
+ 
     /**
      * 输出指定验证码图片流
      *
@@ -205,7 +230,7 @@ public class CheckCodeUtil {
         Random rand = new Random();
         Graphics2D g2 = image.createGraphics();
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+ 
         // 创建颜色集合，使用java.awt包下的类
         Color[] colors = new Color[5];
         Color[] colorSpaces = new Color[]{Color.WHITE, Color.CYAN,
@@ -220,12 +245,12 @@ public class CheckCodeUtil {
         // 设置边框色
         g2.setColor(Color.GRAY);
         g2.fillRect(0, 0, w, h);
-
+ 
         Color c = getRandColor(200, 250);
         // 设置背景色
         g2.setColor(c);
         g2.fillRect(0, 2, w, h - 4);
-
+ 
         // 绘制干扰线
         Random random = new Random();
         // 设置线条的颜色
@@ -237,7 +262,7 @@ public class CheckCodeUtil {
             int yl = random.nextInt(12) + 1;
             g2.drawLine(x, y, x + xl + 40, y + yl + 20);
         }
-
+ 
         // 添加噪点
         // 噪声率
         float yawpRate = 0.05f;
@@ -251,7 +276,7 @@ public class CheckCodeUtil {
         }
         // 添加图片扭曲
         shear(g2, w, h, c);
-
+ 
         g2.setColor(getRandColor(100, 160));
         int fontSize = h - 4;
         Font font = new Font("Algerian", Font.ITALIC, fontSize);
@@ -263,11 +288,11 @@ public class CheckCodeUtil {
             g2.setTransform(affine);
             g2.drawChars(chars, i, 1, ((w - 10) / verifySize) * i + 5, h / 2 + fontSize / 2 - 10);
         }
-
+ 
         g2.dispose();
         ImageIO.write(image, "jpg", os);
     }
-
+ 
     /**
      * 随机颜色
      *
@@ -287,7 +312,7 @@ public class CheckCodeUtil {
         int b = fc + random.nextInt(bc - fc);
         return new Color(r, g, b);
     }
-
+ 
     private static int getRandomIntColor() {
         int[] rgb = getRandomRgb();
         int color = 0;
@@ -297,7 +322,7 @@ public class CheckCodeUtil {
         }
         return color;
     }
-
+ 
     private static int[] getRandomRgb() {
         int[] rgb = new int[3];
         for (int i = 0; i < 3; i++) {
@@ -305,20 +330,20 @@ public class CheckCodeUtil {
         }
         return rgb;
     }
-
+ 
     private static void shear(Graphics g, int w1, int h1, Color color) {
         shearX(g, w1, h1, color);
         shearY(g, w1, h1, color);
     }
-
+ 
     private static void shearX(Graphics g, int w1, int h1, Color color) {
-
+ 
         int period = random.nextInt(2);
-
+ 
         boolean borderGap = true;
         int frames = 1;
         int phase = random.nextInt(2);
-
+ 
         for (int i = 0; i < h1; i++) {
             double d = (double) (period >> 1)
                     * Math.sin((double) i / (double) period
@@ -331,13 +356,13 @@ public class CheckCodeUtil {
                 g.drawLine((int) d + w1, i, w1, i);
             }
         }
-
+ 
     }
-
+ 
     private static void shearY(Graphics g, int w1, int h1, Color color) {
-
+ 
         int period = random.nextInt(40) + 10; // 50;
-
+ 
         boolean borderGap = true;
         int frames = 20;
         int phase = 7;
@@ -352,9 +377,9 @@ public class CheckCodeUtil {
                 g.drawLine(i, (int) d, i, 0);
                 g.drawLine(i, (int) d + h1, i, h1);
             }
-
+ 
         }
-
+ 
     }
 }
 ```

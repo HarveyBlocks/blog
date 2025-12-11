@@ -14,6 +14,8 @@ ExampleClass instance2 = new();
 var instance2 = new ExampleClass();
 ```
 
+
+
 ## 结构实例
 
 使用new运算符在堆上分配, 最终交由垃圾回收器回收

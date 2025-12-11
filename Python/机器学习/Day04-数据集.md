@@ -8,6 +8,8 @@
 -   kaggle
 -   UCI
 
+
+
 ### scikit-learn
 
 实现大多数机器学习算法, 需要前置的`Numpy`和`Scipy`.....`threadpoolctl, numpy, joblib, scipy, scikit-learn`
@@ -19,6 +21,8 @@ pip3 install Scikit-learn==0.19.1
 ```shell
 pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple  --target=\ProgramData\Anaconda3\Lib Scikit-learn==0.19.1
 ```
+
+
 
 ```shell
 C:\Users\27970\AppData\Local\Programs\Python\Python311\python.exe -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple  --target=\ProgramData\Anaconda3\Lib  --upgrade numpy
@@ -55,19 +59,22 @@ import torch
 import numpy as np
 from sklearn.datasets import load_iris
 
+
 def datasets_demo():
     iris = load_iris()
-
+    
     for string in str(iris.get("DESCR")).split("\n"):
         # print(string) # 数据输出有点问题
         pass
-
+    
     data = iris.get("data")
     print(data.shape) # (150, 4)
     target_name = iris.get("target_names")
     print(target_name)  
     target = iris.get("target")
     print(target.shape) # (150,)
+    
+    
 
 if __name__=="__main__":
     datasets_demo()

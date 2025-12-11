@@ -27,6 +27,10 @@ public class HelloServiceImpl implements HelloService {
 
 连不上, 消费方就报错
 
+
+
+
+
 消费方也可以配置
 
 可以单独配置, 都可以生效
@@ -48,6 +52,8 @@ public class HelloController {
     }
 }
 ```
+
+
 
 那么配置到哪一方呢? 两边可能是不同的人写的, 当然是两边都写咯
 

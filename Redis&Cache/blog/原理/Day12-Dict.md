@@ -6,6 +6,8 @@
 -   哈希节点(DictEntry)
 -   字典(Dict)
 
+
+
 ```c
 typedef struct dictEntry {
     void *key; // 键
@@ -40,7 +42,11 @@ typedef struct dict {
 } dict;
 ```
 
+
+
 ![image-20240404205504169](../../assets/Day12-Dict/image-20240404205504169.png)
+
+
 
 ## 添加
 
@@ -61,6 +67,8 @@ typedef struct dict {
 
     Hash表+单项链表
 
+
+
 ## 渐进性rehash
 
 当集合中的元素越来越多, Hash冲突也就越多, 为了防止积累下来的Hash冲突,  时不时的重置一下Hash表
@@ -78,6 +86,8 @@ typedef struct dict {
 -   收缩
     -   在每次删除键值时对负载因子进行检查
     -   LoadFactor< 0.1 且 size >4 时进行收缩
+
+
 
 ### dictExpand
 

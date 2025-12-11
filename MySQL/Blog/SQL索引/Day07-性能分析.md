@@ -18,7 +18,7 @@ show global status like 'Com_____';
 	```mysql
 	show global status like 'Com%';
 	```
-
+	
 -   也是没问题的
 
     ![image-20231021213930746](../../assets/Day07-SQL性能优化/image-20231021213930746.png)
@@ -36,6 +36,8 @@ show global status like 'Com_____';
 ```mysql
 show variables like 'slow_query_log';
 ```
+
+
 
 ### 设置慢日志配置
 
@@ -114,15 +116,17 @@ set profiling = 1;
 	............
 	show profiles ;
 	```
-
+	
 -   依据这条ID查询这条Select语句在各方面的耗时
 
 	```mysql
 	show profile [cpu] for query Query的ID;
 	```
-
+	
 	<img src="../../assets/Day07-SQL性能优化/image-20231022095639488.png" alt="image-20231022095639488" style="zoom:50%;" />
-
+	
+	
+	
 -   ​												↑它
 
 -   cpu 多俩列字段显示CPU占用
@@ -136,6 +140,10 @@ set profiling = 1;
     ```mysql
     explain|desc select语句;
     ```
+
+    
+
+
 
 ```mysql
 explain
@@ -156,6 +164,8 @@ desc
 -   一样的
 
 ![image-20231022112156938](../../assets/Day07-SQL性能优化/image-20231022112156938.png)
+
+
 
 ### explain各字段解释
 

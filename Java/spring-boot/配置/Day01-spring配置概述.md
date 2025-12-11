@@ -5,6 +5,8 @@
 -   properties
 -   yaml(重点)
 
+
+
 ### 更改默认配置
 
 可以使用`application.properties`或`application.yml`(`application.yaml`)
@@ -27,6 +29,8 @@
     类嵌套,属性
 
     **冒号和值之间应该有空格**
+
+
 
 #### 配置文件的加载顺序
 

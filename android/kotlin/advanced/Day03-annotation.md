@@ -73,6 +73,7 @@ class MyClass
 
 package org.harvey.kotlin.learn
 
+
 @Target(AnnotationTarget.CLASS)
 annotation class OnClass
 
@@ -129,6 +130,7 @@ class MyClass<@OnTypeParameter T> @OnConstructor constructor(
     @OnProperty
     val lengthInit = msg.length
 
+
     @OnFiled
     @OnProperty
     var countPlus1 = count + 1
@@ -171,6 +173,7 @@ annotation class NewAnnotation
 
 package org.harvey.kotlin.learn
 
+
 @Retention(AnnotationRetention.SOURCE)
 @Target(
     AnnotationTarget.CLASS,
@@ -199,6 +202,7 @@ class MyClass<@OnAny T> @OnAny constructor(
 ) {
     @OnAny
     val lengthInit = msg.length
+
 
     @OnAny
     var countPlus1 = count + 1
@@ -248,6 +252,8 @@ annotation class OnNothing
 -   `AnnotationRetention.BINARY` 注解保留在二进制文件, 但是在反射中不可见
 -   `AnnotationRetention.RUNTIME` 注解保留在二进制文件, 且对于反射可见
 
+
+
 ### @Repeatable
 
 允许在单个元素上多次使用相同的该注解
@@ -268,15 +274,21 @@ annotation class NormalAnno
 var num = 12;
 ```
 
+
+
 ### @MustBeDocumented
 
 指明该注解是公有 API 的一部分，并且应该包含在生成的 API 文档中显示的类或方法的签名中
+
+
 
 ### @Inherited
 
 父类/接口的注解将通过`extends`/`implements`的行为遗传给子类/实现类
 
 但是==override==这一行为并不能继承注解
+
+
 
 ## 实例化
 
@@ -312,6 +324,8 @@ val info: String = anno.info
 ```kotlin
 val f: (Int) -> Int = @OnExpression("message") { x -> x + 1 }
 ```
+
+
 
 ## 使用处目标
 
@@ -350,14 +364,14 @@ class Example(@field:Ann val foo,    // 标注 Java 字段
     ```kotlin
     @Target(AnnotationTarget.VALUE_PARAMETER)
     annotation class OnValueParameter
-
+    
     fun @receiver:OnValueParameter String.myExtension() {
-
+        
     }
-
+    
     // ERROR
     fun @OnValueParameter String.myExtension() {
-
+        
     }
     ```
 

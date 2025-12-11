@@ -8,6 +8,7 @@
 int[] numbers={1,2,3,4,5,6,7};   //数据类型(数组类型)和变量名很好地分开来了
 int numbers[]={1,2,3,4,5}    ;       //不推荐
 
+
 int[] numbers = {1,2,3,4,5,};//末尾添逗号也是可以的
 ```
 
@@ -26,6 +27,8 @@ int[] numbers=new int[10]; //声明并指定数组的大小
 //---------------------↓匿名内部类
 int[] numbers = {new int[]{1,12}};
 ```
+
+
 
 ### 数组初始值
 
@@ -46,6 +49,8 @@ System.out.println(Arrays.toString(strings));//[null, null]
 double[] numbers=new double[]{1,2,3};
 ```
 
+
+
 ## 数组的操作
 
 ``` java
@@ -55,6 +60,8 @@ int len=numbers.length;//数组长度
 
 numbers[1]=1;//赋值，若不赋值，默认值参考Day04-数据类型
 ```
+
+
 
 ## 数组的遍历
 
@@ -76,6 +83,8 @@ int[][] bumberss = new int[10][6];
 ```
 
 ### 不规则数组
+
+
 
 ```java
 Integer[][] nums = {
@@ -137,6 +146,8 @@ public static int[] bubble(int[] array){
 }
 ```
 
+
+
 ## Arrays类
 
 **java.util.Arrays**是一个与数组相关的工具类，里面提供了大量静态方法，用来实现数组常见的操作。
@@ -155,6 +166,12 @@ char[] chars = str.toCharArray();
 Arrays.toString(chars);
 System.out.println(chars);//sfehacdkj4312
 ```
+
+
+
+
+
+
 
 ### **Arrays.sort(); //数组排序**
 
@@ -292,6 +309,10 @@ int[] num1 = {1,2,3};
 int[] num2 = Arrays.copyOf(num1,5);//扩容
 System.out.println(Arrays.toString(num2));//[1, 2, 3, 0, 0]
 ```
+
+
+
+
 
 ### **Arrays.copeOf() 和Arrays.copeOfRange(); //切片数组**
 

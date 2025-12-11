@@ -48,10 +48,13 @@ public class MyFilter implements Filter {
         Log.info("放行后!"+((HttpServletRequest) request).getRequestURI()+" Yes~~~");
     }
 
+
     @Override
     public void destroy() {}
 }
 ```
+
+
 
 ```verilog
 23-11-19 19:53 [http-nio-8080-exec-5] INFO  main - 放行前!/Servlet1 Yes~~~
@@ -63,9 +66,19 @@ public class MyFilter implements Filter {
 23-11-19 19:53 [http-nio-8080-exec-6] INFO  main - 放行后!/Servlet2 Yes~~~
 ```
 
+
+
+
+
 ## 执行流程
 
 放行前逻辑->访问放行的资源->放行后逻辑
+
+
+
+
+
+
 
 ## 使用细节
 
@@ -103,9 +116,15 @@ public class MyFilter implements Filter {
         @WebFilter(urlPattern={"/*"})
         ```
 
+        
+
+
+
 ### 过滤器链
 
 -   一个Web应用,可以配置多个过滤器,这多个过滤器被称为过滤器链
+
+
 
 ![image-20231119200211275](../../../assets/Day41-Filter/image-20231119200211275.png)
 
@@ -148,6 +167,10 @@ xmlCopy code<filter>
 ```
 
 -   按照**`<filter-mapping>`**的配置顺序
+
+
+
+
 
 ```java
 package com.harvey.filters;
@@ -218,6 +241,7 @@ public class MyFilter2 implements Filter {
             request.getRequestDispatcher("/login").forward(request,response);
         }
     }
+
 
 }
 ```

@@ -29,32 +29,36 @@
     <?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="..."
            xsi:schemaLocation="...">
-
+    
         <!--这节课用注解,以前的部分就导入好了-->
         <context:component-scan base-package="com.harvey"/>
-
+    
         <!--事务管理器,不同的平台,事务方式不一样,就需要不同的事务管理器-->
         <!--事务管理器是实现了PlatformTransactionManager接口的类-->
         <bean id="transactionManager"
               class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
             <!--我们用的是JDBC,就用DataSourceTransactionManager-->
-
+            
+            
             <!--DataSourceTransactionManager是需要注入DataSource的(看源码)-->
             <property name="dataSource" ref="dataSource"/>
         </bean>
-
+    
+    
         <!--配置Spring提供好的Advice-->
         <tx:advice id="txAdvice" transaction-manager="transactionManager">
             <tx:attributes>
                 <tx:method name="*"/>
             </tx:attributes>
         </tx:advice>
-
+    
+    
+    
         <aop:config>
             <!--配切点表达式-->
             <aop:pointcut id="txPrintCut"
                           expression="execution(* com.harvey.service.impl.*.*(..))"/>
-
+    
             <!--配置织入关系 通知advice-ref引用Spring提供好的advice-->
             <aop:advisor advice-ref="txAdvice" pointcut-ref="txPrintCut"/>
         </aop:config>
@@ -103,6 +107,10 @@ name="add*"表示以add开头的方法
 
 name="*"表示所有方法
 
+
+
+
+
 遇到一个方法会进行怠惰匹配(懒汉匹配)
 
 例如:
@@ -121,6 +129,8 @@ name="*"表示所有方法
     </tx:attributes>
 </tx:advice>
 ```
+
+
 
 -   那么问题来了,你看这name是对方法的筛选,这
 
@@ -147,6 +157,8 @@ name="*"表示所有方法
         -   是**哪些方法需要被增强(事务管理)**
     -   name筛选的是啥?
         -   是**哪些方法应该被怎样的事务管理(不同的参数配置)**
+
+
 
 ### isolation
 

@@ -13,6 +13,8 @@ Android 库中的一组 Kotlin 扩展程序
 - 参数默认值
 - 协程
 
+
+
 ## Fragment
 
 从view获取Fragment
@@ -24,6 +26,8 @@ val leftFragment = binding.leftLayout.getFragment<LeftFragment>()
 - 保证了类型安全
 - 避免使用id
 - 避免一定要使用FragmentManager
+
+
 
 事务
 

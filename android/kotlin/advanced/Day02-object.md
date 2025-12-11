@@ -36,6 +36,7 @@ object DefaultInterface : Interface {
     }
 }
 
+
 fun main() {
     DefaultInterface.method()
 }
@@ -68,10 +69,13 @@ class MyClass private constructor() {
     }
 }
 
+
 fun main() {
     MyClass.Factory.create()
 }
 ```
+
+
 
 ## 伴生对象
 
@@ -82,6 +86,8 @@ kotlin删除了静态成员, 因为静态成员不属于对象, 而是属于类,
 -   单例
 -   工厂方法
 -   类型安全设计
+
+
 
 一个了可以有多个对象声明作为成员
 
@@ -95,6 +101,7 @@ class MyClass private constructor() {
         fun build(): MyClass = MyClass()
     }
 }
+
 
 fun main() {
     MyClass.Factory.create()
@@ -110,6 +117,7 @@ class MyClass {
         fun xorHash(a: MyClass, b: MyClass) = a.hashCode() xor b.hashCode()
     }
 }
+
 
 fun main() {
     val xorHash1 = MyClass.Static.xorHash(MyClass(), MyClass())
@@ -178,6 +186,7 @@ println(helloWorld.world)
 abstract class HelloWorld {
     abstract fun hello(): String
 }
+
 
 fun main() {
     val helloWorld: HelloWorld = object : HelloWorld() {

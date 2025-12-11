@@ -31,7 +31,7 @@
         </environment>
 
     </environments>
-
+    
     <!--对应映射文件-->
     <mappers>
         <mapper resource="UserMapper.xml"/>
@@ -39,6 +39,8 @@
 
 </configuration>
 ```
+
+
 
 ## UserMapper.xml
 
@@ -48,6 +50,7 @@
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
+
 
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
@@ -59,6 +62,7 @@
     <select id="selectAll" resultType="com.harvey.pojo.User">
         select * from user ;
     </select>
+
 
 </mapper>
 ```
@@ -122,6 +126,7 @@ public class App
                                                 //这个,还是硬编码,悲
         //UserMapper文件中的namespace+id
 
+
         for (User user :users) {
             System.out.println(user);
         }
@@ -129,6 +134,7 @@ public class App
         //释放资源
         sqlSession.close();
     }
+
 
 }
 ```
@@ -149,6 +155,8 @@ SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(input
 ### 解决方法:工具类抽取
 
 -   静态代码块就是只执行一次的嘛
+
+
 
 ```java
 public class SqlSessionFactoryUtils {

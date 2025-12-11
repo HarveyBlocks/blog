@@ -28,11 +28,13 @@ Shift + F6						批量修改变量名，没法用，原因不明，只能用右�
 
 Ctrl +Shift+ -				全部收起
 
+
+
 psvm
 
 ```
 public static void main(String[] args) {
-
+        
     }
 ```
 
@@ -51,6 +53,8 @@ Alt+Insert
 4. ··········
 
 Ctrl +Alt+T 包围代码块
+
+
 
 Alt+鼠标拖动  多行同时操作
 

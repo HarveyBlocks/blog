@@ -1,5 +1,7 @@
 # Python概述
 
+
+
 www.python.org
 
 官网好像是荷兰语还是法语啥的
@@ -12,6 +14,8 @@ www.python.org
 yum install wget zlib-devel bzip2-devel openssl-devel ncurses-devel readline-devel tk-devel gcc make zlib zlib-devel libffi-devel -y
 ```
 
+
+
 在官网上获取Python的源码(source)
 
 [Python Source Releases | Python.org](https://www.python.org/downloads/source/)
@@ -20,6 +24,8 @@ yum install wget zlib-devel bzip2-devel openssl-devel ncurses-devel readline-dev
 
 右键, 复制链接地址
 
+
+
 ```shell
 wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
 ```
@@ -27,6 +33,8 @@ wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
 ```shell
 tar -xvf Python-....tgz
 ```
+
+
 
 ```shell
 cd Python...
@@ -51,11 +59,15 @@ vi /usr/libexec/urlgrabber-ext-down
 
 把`/usr/bin/python`改为`/usr/bin/python2`
 
+
+
 ```shell
 vi /usr/bin/yum
 ```
 
 把`/usr/bin/python`改为`/usr/bin/python2`
+
+
 
 ## Python解释器
 
@@ -63,11 +75,19 @@ vi /usr/bin/yum
 "C:\Users\27970\AppData\Local"
 ```
 
+
+
 ## PyCharm
+
+
+
+
 
 ## 关键字
 
 ![image-20240302095611412](../assets/Day01-概述/image-20240302095611412.png)
+
+
 
 pass : 方法/ 类/ 循环/ 分支没有实质的代码, 就可以使用pass而不会报错, 到时候就是调用而不会有别的效果
 

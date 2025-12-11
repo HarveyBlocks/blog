@@ -2,6 +2,8 @@
 
 ## 播放音频
 
+
+
 | Method            | description                                                  |      |
 | ----------------- | ------------------------------------------------------------ | ---- |
 | `setDataSource()` | 设置播放音频文件的位置                                       |      |
@@ -18,6 +20,8 @@
 创建目录`src\main\assets`, 音频文件放入其目录下
 
 ![image-20250920152028202](../../assets/Day10-MediaPlayer/image-20250920152028202.png)
+
+
 
 ### 布局
 
@@ -47,6 +51,7 @@
             android:text="Reset" />
 </LinearLayout>
 ```
+
 
 ### 代码逻辑
 
@@ -117,6 +122,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
 
 <img src="../../assets/Day10-MediaPlayer/image-20250920161556537-1758356886299.png" alt="image-20250920161556537" style="zoom:50%;" />
 
+
+
 ### 布局
 
 ```xml
@@ -158,6 +165,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
             android:layout_height="wrap_content" />
 </LinearLayout>
 ```
+
+
 
 ### 代码逻辑
 

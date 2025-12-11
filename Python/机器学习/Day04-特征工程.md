@@ -6,6 +6,8 @@
 
 处理特征数据, 使特征能在机器学习算法上发挥更好的作用的过程
 
+
+
 ## 特征工程的工具
 
 >sklearn
@@ -32,6 +34,8 @@ pandas做数据清洗和数据处理
 
 **特征值化**让机器学习算法更好地去理解数据
 
+
+
 -   字典特征提取(特征离散化)
 -   文本特征提取
 -   图像特征提取(深度学习)
@@ -46,6 +50,7 @@ pandas做数据清洗和数据处理
 
 ```python
 from sklearn import feature_extraction
+
 
 def test_dict_vectorizer():
     feature_extraction.DictVectorizer(sparse=True....) 
@@ -67,6 +72,8 @@ def test_dict_vectorizer():
 
     -   猫狗人三个类没有实质性的大小区别, 只有"是这个类"和"不是这个类"的差别
 
+
+
 ```python
 def test_dict_vectorizer():
     """
@@ -77,12 +84,16 @@ def test_dict_vectorizer():
             {'city':'深圳','temperature' : 30}]
     # 1. 实例化一个转化器类, 默认sparse=True
     transfer = DictVectorizer(sparse=True)
-
+    
     # 2. 调用fit_transform()转换, 返回sparse(稀疏)矩阵
     new_data = transfer.fit_transform(data)
-
+    
     print(f"new_data:\n{new_data}")
 ```
+
+
+
+
 
 `sparse=True`时输出结果
 
@@ -105,10 +116,15 @@ new_data=
  [  0.   0.   1.  30.]]
 ```
 
+
+
 -   稀疏矩阵: 将原矩阵(`sparse=False`时的原数据)的有数据的(非零的)位置+值表示出来
 -   如果类别很多, 以此为例, 如果有1000个city, 就会有一个矩阵的大小就会有1000*1001
 -   但是尽管数据再多, 大量都是无用的, 用来占位的零, 而我们只关注有意义的**1**
 -   有了稀疏矩阵, 就能节省内存了
+
+
+
 
 ```python
 feature_names = transfer.get_feature_names()
@@ -116,10 +132,13 @@ feature_names = transfer.get_feature_names()
 print(f"feature names=\n{feature_names}")
 ```
 
+
 ```text
 feature names=
 ['city=上海', 'city=北京', 'city=深圳', 'temperature']
 ```
+
+
 
 #### 对文本的特征提取
 
@@ -136,7 +155,7 @@ feature names=
         ```python
         from sklearn.feature_extraction.text import CountVectorizer
         from sklearn.feature_extraction.text import TfidfVectorizer
-
+        
         def test_text_vectorizer():
             """
             文本特征抽取
@@ -148,22 +167,26 @@ feature names=
             transfer = CountVectorizer(
             	stop_words=("your","me","my") # 停用词表
             )
-
+            
             # 2. 调用fit_transform()转换, 参数: 文本或文本的可迭代对象, 返回sparse矩阵
             fit_data = transfer.fit_transform((data))
             print(f"fit data=\n{fit_data}")
             # 转换为原举证(不能再构造器里传参设置parse=False了)
             print(f"fit data=\n{fit_data.toarray()}")
-
+            
+        
+            
             # 参数时array数组或sparse矩阵, 返回转换之前的数格
             inverse_data = transfer.inverse_transform(fit_data)
             print(f"inverse_data=\n{inverse_data}")
-
+            
             # 3. 获取特征名称
             feature_names = transfer.get_feature_names()
             print(f"feature names=\n{feature_names}")
-
+        
         ```
+
+        
 
     -   测试结果
 
@@ -186,16 +209,16 @@ feature names=
           (2, 7)	1
           (2, 2)	1
           (2, 5)	1
-
+        
         fit data=
         	[[1 0 0 0 1 0 1 0 0 1 0 1]
          	[1 1 0 1 0 0 1 0 0 0 1 0]
          	[1 0 1 0 0 1 2 1 1 0 1 0]]
-
+        
         inverse_data=
         	[array(['when', 'it', 'is', 'nine', 'clock'], dtype='<U9'), array(['it', 'clock', 'earlier', 'than', 'eleven'], dtype='<U9'), array(['it', 'clock', 'than', 'meanwhile', 'latter', 'eight', 'isn'],
               dtype='<U9')]
-
+        
         feature names=
         	['clock', 'earlier', 'eight', 'eleven', 'is', 'isn', 'it', 'latter', 'meanwhile', 'nine', 'than', 'when']
         ```
@@ -206,13 +229,13 @@ feature names=
         fit data=
           (0, 1)	1
           (0, 0)	1
-
+        
         fit data=
         	[[1 1]]
-
+        
         inverse_data=
         	[array(['这是一段中文', '我想尝试一下能否被特征提取'], dtype='<U13')]
-
+        
         feature names=
         	['我想尝试以下能否被特征提取', '这是一段中文']
         ```
@@ -221,22 +244,22 @@ feature names=
 
         ```python
         import jieba
-
+        
         def devid_chinese_word(text:str):
             """
-
+            
             自动中文分词
-
+            
             Returns
             -------
             list.
-
+        
             """
             tokenizer = jieba.cut(text) # 返回词语生成器
             words_list:list = list(tokenizer)
         return " ".join(words_list) # 以空格分割, 将列表转为字符串
         ```
-
+        
         ```python
         # 中文分词
         print("=================Chinese=================")
@@ -269,7 +292,7 @@ feature names=
             "懂的人已经基本都获利上岸什么的了，不懂的人永远不懂",
             "关键懂的人都是自己悟的，你也不知道谁是懂的人也没法请教"]
     print("=================TFIDF=================")
-
+    
     transfer = TfidfVectorizer()
     fit_data = transfer.fit_transform(data)
     print(f"fit data=\n{fit_data.toarray()}")
@@ -279,13 +302,23 @@ feature names=
     print(f"feature names=\n{feature_names}")
     ```
 
+
+
 ### 特征预处理
+
+
 
 #### API
 
 >   sklearn.preprocessing
 
+
+
+
+
 #### 方法
+
+
 
 通过一些转换函数, 将特征函数转化为**更加适合算法模型**的数据过程
 
@@ -314,13 +347,13 @@ feature names=
         """
         放缩器
         根据最大最小值进行放缩
-
+    
         Returns
         -------
         None.
-
+    
         """
-
+        
         data = np.empty(shape = (100,3),dtype = np.int32)
         for i in range(3):
             data[:,i] = np.random.randint(10**i,10**(i+1),size =(100,),dtype=np.int32)
@@ -359,11 +392,23 @@ feature names=
             print()
     ```
 
+    
+
+
+
+
+
+
+
+
+
 ### 特征降维
 
 #### 概念
 
 减少**二维数组**中随机变量(**特征**)的个数, 得到**主变量**的过程
+
+
 
 主变量之间要求**特征与特征不相关**
 
@@ -372,6 +417,10 @@ feature names=
 如果得到了这种推导方式, 那么只需要其中一种变量, 另外一种(或几种)变量便可呼之欲出, 便不再需要另一变量, 
 
 就可以去掉这一可得到的变量, 减少数据冗余
+
+
+
+
 
 #### 方式
 
@@ -397,7 +446,7 @@ feature names=
 
         ```python
         from sklearn.feature_selection import VarianceThreshold
-
+        
         def test_variance_threshold():
             data = np.empty(shape = (100,5),dtype = np.float32)
             for i in range(3):
@@ -409,6 +458,8 @@ feature names=
             print(result.shape) # (100, 3)
         ```
 
+        
+
     -   相关系数法
 
         特征与特征之间的相关性
@@ -416,12 +467,12 @@ feature names=
         相关系数(有各种各样的)
 
         计算皮尔森相关系数
-
+        
         $$
         r = \frac{\sum (x - m_x) (y - m_y)}
                  {\sqrt{\sum (x - m_x)^2 \sum (y - m_y)^2}}
         $$
-
+        
         ```python
         def test_pearsonr():
             # 计算某两个变量之间的相关系数
@@ -430,19 +481,19 @@ feature names=
                     np.random.randint(10,100,size =(100,),dtype=np.int32) 
             ])
             print(data)
-
+            
             # 画散点图
             plt.figure(figsize=(20,8),dpi=100)
             plt.scatter(data[:,0], data[:,1])
             plt.show()
-
+            
             # 相关系数
             r = pearsonr(x = data[0],y = data[1])
             print("相关系数:",r[0])
         ```
-
+        
         对于相关性强的特征, 可以
-
+        
         1.  选取其中之一
         2.  加权求和
         3.  主成分分析, 自动将相关性强的处理掉
@@ -462,6 +513,8 @@ feature names=
 数据维数的压缩, 尽可能地降低原数据的维数(复杂度), 损失少量信息
 
 例如: 三视图要三张图, 每张图独立都不能描述事物; 平面直方图只有一张图就能很好地描绘事物
+
+
 
 怎么降维呢?
 
@@ -485,6 +538,8 @@ def test_pca(data):
         result = analysiser.fit_transform(data)
         print(i,":",result.size)
 ```
+
+
 
 结果
 

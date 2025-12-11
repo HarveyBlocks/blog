@@ -100,6 +100,8 @@ function simpleTest() {
 | "fulfilled"     | a result value   |
 | "rejected"      | an error oject   |
 
+
+
 ```js
 function executor(onSuccessful, onError) {
   sleep(1000 * 3);
@@ -185,6 +187,8 @@ simpleTest();
 
 但这样是不好的, 不太符合JavaScript的设计初衷
 
+
+
 ## Async
 
 关键字await使函数阻塞等待promise的executor中的resolve被调用(或者rejected被调用, 总之就是出了某个结果之后就停止阻塞)
@@ -206,6 +210,7 @@ simpleTest();
 ```js
 const sleep = (million) =>
   new Promise((resolve) => setTimeout(() => resolve(), million));
+
 
 async function simpleTest() {
   log('start');

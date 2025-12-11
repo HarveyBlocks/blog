@@ -44,6 +44,8 @@ public class HelloController {
 }
 ```
 
+
+
 ```java
 21:55:52:261  INFO 11612 --- [nio-8082-exec-3] com.harvey.dubbo.web.HelloController     : [0, 1, 20]
 21:55:52:559  INFO 11612 --- [nio-8082-exec-2] com.harvey.dubbo.web.HelloController     : [0, 1, 21]
@@ -56,6 +58,7 @@ public class HelloController {
 21:56:07:798  INFO 11612 --- [nio-8082-exec-1] com.harvey.dubbo.web.HelloController     : [0, 1, 28]
 21:56:08:188  INFO 11612 --- [nio-8082-exec-3] com.harvey.dubbo.web.HelloController     : [0, 1, 29]
 
+
 21:56:28:832  INFO 11612 --- [nio-8082-exec-6] com.harvey.dubbo.web.HelloController     : [0, 4, 65]
 21:56:29:140  INFO 11612 --- [nio-8082-exec-7] com.harvey.dubbo.web.HelloController     : [0, 4, 66]
 21:56:29:457  INFO 11612 --- [nio-8082-exec-9] com.harvey.dubbo.web.HelloController     : [0, 5, 66]
@@ -65,12 +68,14 @@ public class HelloController {
 21:56:30:764  INFO 11612 --- [nio-8082-exec-3] com.harvey.dubbo.web.HelloController     : [1, 5, 69]
 21:56:31:086  INFO 11612 --- [nio-8082-exec-2] com.harvey.dubbo.web.HelloController     : [1, 5, 70]
 
+
 21:56:40:556  INFO 11612 --- [nio-8082-exec-4] com.harvey.dubbo.web.HelloController     : [2, 9, 93]
 21:56:40:946  INFO 11612 --- [nio-8082-exec-2] com.harvey.dubbo.web.HelloController     : [2, 10, 93]
 21:56:41:244  INFO 11612 --- [nio-8082-exec-5] com.harvey.dubbo.web.HelloController     : [2, 10, 94]
 21:56:41:608  INFO 11612 --- [nio-8082-exec-6] com.harvey.dubbo.web.HelloController     : [2, 11, 94]
 21:56:41:954  INFO 11612 --- [nio-8082-exec-7] com.harvey.dubbo.web.HelloController     : [2, 11, 95]
 21:56:42:301  INFO 11612 --- [nio-8082-exec-9] com.harvey.dubbo.web.HelloController     : [2, 11, 96]
+
 
 21:56:45:864  INFO 11612 --- [nio-8082-exec-1] com.harvey.dubbo.web.HelloController     : [2, 12, 105]
 21:56:46:214  INFO 11612 --- [io-8082-exec-10] com.harvey.dubbo.web.HelloController     : [2, 12, 106]
@@ -101,6 +106,8 @@ public class HelloController {
 ### ConsistentHash(一致性Hash)
 
 对于相同参数的请求, 总是发给同一个请求者(好!)
+
+
 
 ### 选择策略
 

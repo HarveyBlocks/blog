@@ -42,7 +42,7 @@ public class Client {
         //开始写数据除去给服务端
         dos.writeUTF("Hello");
         dos.flush();//立刻发出去,防止占内存
-
+        
         dos.close();
         socket.close();
     }
@@ -96,6 +96,7 @@ public class Server {
         //释放资源
         dis.close();
         socket.close();
+
 
     }
 }
@@ -197,6 +198,7 @@ public class Server {
             //使用数据输入流读取客户端发来的信息
             String message = dis.readUTF();
 
+
             System.out.print("Server received message from:");
             //获取客户端IP地址和端口号
             System.out.println(socket.getRemoteSocketAddress());
@@ -207,6 +209,7 @@ public class Server {
         //释放资源
 //        dis.close();
 //        socket.close();
+
 
     }
 }
@@ -225,13 +228,14 @@ public class Server {
 
     ```java
     package TCP_NET;
-
+    
     import java.io.*;
     import java.net.ServerSocket;
     import java.net.Socket;
     import java.io.IOException;
     import java.io.InputStream;
-
+    
+    
     /**
      * 服务端收消息
      * @author HarveyBlocks
@@ -242,7 +246,9 @@ public class Server {
             new ServerMethod();
         }
     }
-
+    
+    
+    
     class ServerMethod{
         public ServerMethod() throws IOException {
             this.creatAndReceive();
@@ -251,13 +257,13 @@ public class Server {
             //创建ServerSocket对象, 同时为服务段注册端口
             ServerSocket serverSocket = new ServerSocket(8888);
             System.out.println("Service has been initiated");
-
+    
             //使用serverSocket对象,调用一个accept方法,等待客户端的连接请求
             Socket socket = serverSocket.accept();
-
+    
             //从socket通信管道中得到一个字节输入流
             InputStream is = socket.getInputStream();
-
+    
             //把原始字节输入流包装成数据输入流
             DataInputStream dis = new DataInputStream(is);
             String message;
@@ -269,37 +275,37 @@ public class Server {
                     System.out.println(socket.getRemoteSocketAddress()+" offline");
                     break;
                 }
-
+    
                 System.out.print("Server received message from:");
                 //获取客户端IP地址和端口号
                 System.out.println(socket.getRemoteSocketAddress());
                 System.out.println(message +"\n");
             }
-
+    
             //释放资源
             dis.close();
             socket.close();
         }
     }
     ```
-
+    
 -   Client
 
     ```java
     package TCP_NET;
-
+    
     import java.io.DataOutputStream;
     import java.io.IOException;
     import java.io.OutputStream;
     import java.net.*;
     import java.util.Scanner;
-
+    
     /**
      * 客户端发消息
      * @author HarveyBlocks
      * @date 2023/10/12 00:33
      **/
-
+    
     public class Client {
         public static void main(String[] args) throws IOException {
             new ClientMethod();
@@ -315,7 +321,7 @@ public class Server {
             this.send();
         }
         private static final int PORT = 8888;
-
+    
         private void initiate(){
             boolean isConnect = false;
             while (!isConnect) {
@@ -327,7 +333,7 @@ public class Server {
                     try {
                         Thread.sleep(3000);
                     } catch (InterruptedException ex) {
-
+    
                     }
                     System.out.println("再次尝试重新连接");
                 } catch (UnknownHostException e) {
@@ -342,23 +348,23 @@ public class Server {
             Scanner scanner = new Scanner(System.in);
             while(true){
                 OutputStream os = this.socket.getOutputStream();//socket的os
-
+                
                 //把低级的字节输出流包装成数据输出流
                 DataOutputStream dos = new DataOutputStream(os);
                 System.out.print("Please type what you want say:");
                 String string = scanner.nextLine();
-
+    
                 //出口
                 if(exit(string,scanner)){
                     dos.close();
                     this.socket.close();
                     break;
                 }
-
+                
                 //开始写数据除去给服务端
                 dos.writeUTF(string);
                 dos.flush();//立刻发出去,防止占内存
-
+    
                 System.out.println("Message: \""+ string +"\" send successfully\n");
             }
             System.out.println("You have exist this service...");

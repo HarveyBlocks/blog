@@ -19,6 +19,8 @@ void testRabbitTemplate() {
 
 ![image-20240112225409617](../../assets/Day02-消息转换器/image-20240112225409617.png)
 
+
+
 ```java
 protected Message convertMessageIfNecessary(final Object object) {
     if (object instanceof Message) {
@@ -78,6 +80,8 @@ protected Message createMessage(Object object, MessageProperties messageProperti
 所以seialize(Object)使用了ObjectOutputStream(见Redis)
 
 **序列化还存在安全问题**:*因为序列化之后的是字节,  可以往里面填非法的代码, 反序列化之后,然后就会运行起来*
+
+
 
 所以.....StringRedisTemplete-StringRabbitTemplete?
 

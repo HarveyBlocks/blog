@@ -6,6 +6,10 @@
 npm install -g typescript
 ```
 
+
+
+
+
 ## Hello World
 
 ```ts
@@ -22,6 +26,10 @@ tsc greeter.ts
 
 编译结果是一个js文件
 
+
+
+
+
 ## 类型注解
 
 一下是有类型错误的Typescript代码, 会报错
@@ -37,6 +45,8 @@ console.log(greeter(user));
 ```
 
 ![image-20250827092321011](../../assets/Untitled/image-20250827092321011.png)
+
+
 
 空参也会错误
 

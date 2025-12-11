@@ -1,5 +1,7 @@
 # Array与LIst的转换
 
+
+
 先创建集合并添加元素
 
 ```java
@@ -24,6 +26,10 @@ public class Demo01 {
         list.add(32);
         list.add(13);
         System.out.println(list);
+
+
+
+
 
     }
 }

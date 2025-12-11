@@ -62,6 +62,8 @@ select count(distinct substr(name,1,1))/count(*) from user;
 -   当然,n小到一定程度之后,选择性就会很差
 -   当然,实际业务中字符串的长度可能有所不同,n最开始的选值偏大没事
 
+
+
 ## 创建前缀索引
 
 ```mysql
@@ -73,10 +75,15 @@ create index 索引名 on 表名(字段名(合适的前缀长度));
 ```mysql
 create index user_name_5 on user(name(5));
 
+
 create index user_age_name_gender on user(age,name(5),gender);
 # 这么写也当然没啥问题
 
 ```
+
+
+
+
 
 建好了前缀索引之后:
 
@@ -85,6 +92,8 @@ show index from user;
 ```
 
 返回的sub_part是5,而其他的是null
+
+
 
 -   前缀索引在返回数据前,会把截取到的数据和条件进行完整的比较
 -   这一点上,它和普通索引的区别在于完整比较的次数少了

@@ -14,6 +14,10 @@ xGroup Create stream.orders g1 0 MkStream
 
 完成创建队列和消费者组
 
+
+
+
+
 ## 添加消息
 
 ### 修改Lua脚本
@@ -42,10 +46,10 @@ xGroup Create stream.orders g1 0 MkStream
     ```java
     @Resource
     private RedisIdWorker redisIdWorker;
-
+    
     @PostMapping("seckill/{id}")
     public Result seckillVoucher(@PathVariable("id") Long voucherId) {
-
+    
         // 1. 执行Lua脚本
         Long orderId = redisIdWorker.nextId("order");// 将生成OrderId的逻辑提前
         // 传入第二个参数
@@ -59,7 +63,7 @@ xGroup Create stream.orders g1 0 MkStream
             case -5: errMsg = "该优惠券不存在";break;
             default: errMsg = null;
         }
-
+        
         /* 2. 判断
         if (errMsg != null) {
             return Result.fail(errMsg);
@@ -68,7 +72,7 @@ xGroup Create stream.orders g1 0 MkStream
         Long orderId = voucherOrderService.saveOrder(voucherId);
         以下判断不会发送, Lua脚本已解决一切
         ...*/
-
+        
         // 判断并返回订单ID或错误信息
         return errMsg == null?Result.ok(orderId):Result.fail(errMsg);
     }
@@ -86,6 +90,12 @@ xGroup Create stream.orders g1 0 MkStream
                 voucherId.toString(), userId.toString(),orderId/*传入Lua参数*/,currentTime);
     }
     ```
+
+    
+
+
+
+
 
 ## 获取消息
 
@@ -149,6 +159,8 @@ private static final String CONSUMER_NAME = "c1";
 ```
 
 ###
+
+
 
 #### 从Stream获取
 
@@ -218,6 +230,8 @@ private void handleVoucherOrder(VoucherOrder order) throws InterruptedException 
 ```
 
 #### 整体逻辑
+
+
 
 ```java
 /**

@@ -2,6 +2,8 @@
 
 严格的栈和队列都不能遍历, 不能随机访问, 所以底层用链表实现比较合适, 避免申请大片连续的内存
 
+
+
 ## 栈实现队列
 
 ```cpp
@@ -37,6 +39,8 @@ public:
     }
 };
 ```
+
+
 
 ## 队列实现栈
 
@@ -93,12 +97,15 @@ static Array<T> &sort(Array<T> &array) {
     Stack<T> resultSt;
     int pre = array[0];
     originSt.push(pre);
-
+    
+    
     for (int i = 1; i < array.length(); ++i) {
         T &element = array[i];
         originSt.push(element);
     }
-
+    
+    
+    
     resultSt.push(originSt.pop());
     while (!originSt.empty()) {
         T top = resultSt.top();
@@ -121,11 +128,13 @@ static Array<T> &sort(Array<T> &array) {
             resultSt.push(element);
         }
     }
-
+    
+    
     for (int i = 0; i < array.length(); ++i) {
         array[i] = resultSt.pop();
     }
-
+    
+    
     return array;
 }
 ```
@@ -180,6 +189,8 @@ while (!output.empty()) {
     cout << output.pop() << flush;
 }
 ```
+
+
 
 但是奇数个元素重复, 则为止奈何?
 
@@ -249,6 +260,8 @@ while (!output.empty()) {
 4.  当前字符是运算符且优先级小于等于栈顶  运算符, 弹出栈顶运算符输出到后缀式
 5.  括号出栈不出现在后缀表达式
 
+
+
 ```cpp
 a+b*5+2*(c+d)
 ```
@@ -256,6 +269,8 @@ a+b*5+2*(c+d)
 ```cpp
 ab5*+2cd +*+
 ```
+
+
 
 ## 滑动窗口
 
@@ -353,6 +368,8 @@ for (int i = windowLen; i < data.size(); ++i) {
     }
 }
 ```
+
+ 
 
 ## 四色问题
 

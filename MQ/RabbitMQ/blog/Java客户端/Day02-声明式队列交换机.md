@@ -7,6 +7,8 @@
 1.  容易敲错
 2.  来回看又累又慢
 
+
+
 ## 声明
 
 重复创建好像也没什么问题
@@ -85,7 +87,11 @@ public class RabbitConfig {
 
 往深里翻了翻源码, 虽然在beanDefinitionMap和singletonObjects里有aaa, 但实际上Spring是依据`ref`里存在的Bean来判断是否存在bean的, 而`ref=null`(啊??????????)
 
+
+
 为false了????在使用测试类做单元测试的时候, 返回的是true
+
+
 
 ### 基于注解
 

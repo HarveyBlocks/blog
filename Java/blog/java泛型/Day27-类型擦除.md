@@ -12,6 +12,8 @@
 
 - 我们将之称为**类型擦除**
 
+
+
 ```java
 public class Demo {
     public static void main(String[] args) {
@@ -30,11 +32,17 @@ public class Demo {
 }
 ```
 
+
+
+
+
 ## 无限制类型的擦除
 
 在生成字节码文件的过程中,T都用Object来代替的
 
 - 利用反射,获取了Erasure类字节码文件的Class类对象看看是不是Object
+
+
 
 ```java
 public class Student<T> {
@@ -50,6 +58,10 @@ public class Student<T> {
 }
 ```
 
+
+
+
+
 ```java
 public static void main(String[] args) {
     Field[] fields = new Student<Integer>().getClass().getDeclaredFields();
@@ -60,7 +72,15 @@ public static void main(String[] args) {
 }
 ```
 
+
+
+
+
+
+
 ## 有限制的类型擦除
+
+
 
 现在酱紫改下:
 
@@ -78,11 +98,21 @@ public class Student<T extends  Number> {}
 
 你依旧可以用反射去验证
 
+
+
+
+
+
+
 ## 桥接方法
+
+
 
 ![Screenshot_20230910_222830](../../assets/Day27/Screenshot_20230910_222830.jpg)
 
 **注意**,有两个info()方法,类型还不一样
+
+
 
 <img src="../../assets/Day27/image-20230910231155591.png" alt="image-20230910231155591" style="zoom:80%;" />
 
@@ -95,7 +125,7 @@ public static void main(String[] args) {
     arrayList1.add(12);
     listArrayList.add(arrayList1);
     listArrayList.forEach(a->a.forEach(System.out::println));
-
+    
     //.ClassCastException呦,你还挺谨慎
 }
 ```

@@ -4,11 +4,17 @@
 
 组件为了提高复用性, 应当能从外界接收一些"参数", 这些"参数"被称为选线/props
 
+
+
 ## 语法
+
+
 
 Props 属性用破折号 `-` 编写（kebab-case）
 
 需要在 JavaScript 中将属性名称编写为驼峰命名法，Vue 会**自动解析**
+
+
 
 ```vue
 <ItemEntry attribute = "value" />
@@ -120,6 +126,8 @@ onMounted(()=>{
 -   验证器函数必须返回 true 或 false, false for 无效
 -   无效的props会在控制台中生成警告
 
+
+
 ```vue
 <script setup>
 
@@ -174,7 +182,10 @@ defineProps({
   <button @click="obj.value++">+1</button>
 </template>
 
+
 ```
+
+
 
 #### Root.vue
 

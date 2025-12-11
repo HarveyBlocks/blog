@@ -43,6 +43,10 @@
 </dependencies>
 ```
 
+
+
+
+
 ## 配置
 
 ```yml
@@ -71,6 +75,8 @@ server:
       charset: utf-8 #没用 
 ```
 
+
+
 ## 数据库
 
 ```java
@@ -86,9 +92,21 @@ create table user
     comment 'Shiro的用户表';
 ```
 
+
+
 ## pojo
 
+
+
+
+
 ## Dao
+
+
+
+
+
+
 
 ## Service
 
@@ -174,6 +192,8 @@ public class MyRealm extends AuthorizingRealm {
 }
 ```
 
+
+
 ## Configuration
 
 ```java
@@ -234,6 +254,8 @@ public class ShiroConfig {
 }
 ```
 
+
+
 ## Controller
 
 ```java
@@ -245,6 +267,7 @@ public String login1(String name ,String pwd){
         return "请先输入用户名密码登录";
     }
     StringBuilder result= new StringBuilder();
+
 
     // 1. 获取Subject对象
     //      依据工具获取Subject对象, 就先要把securityManager放入工具中

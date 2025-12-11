@@ -100,6 +100,8 @@ public class UserDaoImpl implements UserDao {
 }
 ```
 
+
+
 ## @Bean配置一个非自定义Bean
 
 -   第三方Jar包里的类怎么把他给Bean了呢?
@@ -126,6 +128,8 @@ public DataSource dataSource(){
 ```
 
 ### 设置参数
+
+
 
 ```java
 @Bean("dataSource")

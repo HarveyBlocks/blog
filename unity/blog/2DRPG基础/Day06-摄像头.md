@@ -16,6 +16,8 @@ Hierarchy->Create->Cinimachine->
 
 -   2DCamera
 
+    
+
 ## 跟随
 
 指定跟随和正在观看
@@ -26,6 +28,8 @@ Virtual Camera->Inspector->ChinemachineVirtualCamera
 
 -   Follow 设置成玩家对象
 -   Look At 设置成玩家对象
+
+
 
 ### 参数设置
 
@@ -65,6 +69,8 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
     2.   将碰撞体设置为Trigger
     3.   划定边界范围, 即作为摄像头边界
 
+
+
 不同的场景之间, 摄像机的边框不同, 如何获取到不同场景的不同边框
 
 1.   为边框设置Tag
@@ -84,29 +90,35 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
      ```csharp
      public class CameraController : MonoBehaviour {
          private Cinemachine.CinemachineConfiner2D _cc2d;
-
+     
          private void Awake() {
              _cc2d = GetComponent<Cinemachine.CinemachineConfiner2D>();
          }
-
+     
          public void ChangeBounds() {
              var obj = GameObject.FindWithTag("Bound");
              if (obj == null) {
                  return;
              }
-
+     
              _cc2d.m_BoundingShape2D = obj.GetComponent<Collider2D>(); // 获取碰撞体
              // 用碰撞体的父类作为查找对象, 能找到所有符合条件的子类
-
+     
              _cc2d.InvalidateCache();
          }
-
+     
          /// TODO 暂时在游戏开始时执行, 待做成场景切换时执行
          public void Start() {
              ChangeBounds();
          }
      }
      ```
+
+     
+
+
+
+
 
 ## 振动
 
@@ -151,12 +163,12 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
           ```csharp
           using UnityEngine;
           using UnityEngine.Events;
-
+          
           namespace SO {
               [CreateAssetMenu(fileName = "Event/VoidEvent")]
               public class VoidEvent : ScriptableObject {
                   public UnityAction Action;
-
+          
                   public void Execute() {
                       Action?.Invoke();
                   }
@@ -176,7 +188,7 @@ VirtualCamera->Inspector->CinemachineVirtualCamera->Extention->AddExtention
 
           ```csharp
           public VoidEvent cameraShakeEvent;
-
+          
           private void OnEnable() {
               // 注册
               cameraShakeEvent.Action += Shake;

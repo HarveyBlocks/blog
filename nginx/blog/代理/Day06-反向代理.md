@@ -5,6 +5,7 @@ graph LR
 Client --> Proxy
 Proxy --> Client
 
+
 Proxy --> Server1
 Server1 --> Proxy
 Proxy --> Server2
@@ -15,9 +16,13 @@ Proxy --> Server4
 Server4 --> Proxy
 ```
 
+
+
 将服务端隐藏, 使服务端更加安全
 
 将请求分发给服务器, 将低服务端的压力
+
+
 
 ## `proxy_pass`
 
@@ -35,6 +40,8 @@ server {
 } 
 ```
 
+
+
 ## `proxy_set_header`
 
 在代理更改请求头信息, 新的请求头信息发送到服务器
@@ -51,6 +58,8 @@ server {
     }
 } 
 ```
+
+
 
 ## `proxy_redirect`
 

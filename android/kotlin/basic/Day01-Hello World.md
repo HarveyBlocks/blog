@@ -2,7 +2,11 @@
 
 >   简单介绍一些语法和语法糖
 
+
+
 -   有无分号无所谓, 如果一定要把多个语句写一行, 就会加上分号
+
+
 
 ## 注释
 
@@ -26,6 +30,8 @@ fun main() {
     println("Hello World");
 }
 ```
+
+
 
 ## 有参
 
@@ -54,6 +60,8 @@ print("World");
 println("Hello World");
 ```
 
+
+
 ### 输入
 
 API:
@@ -62,6 +70,7 @@ API:
 val word = readln()
 println(word);
 ```
+
 
 ## 函数
 
@@ -126,6 +135,8 @@ var|val identifier[: type] = initialization;
 
 Kotlin居然不支持声明和初始化分开, 还必须在声明的时候初始化
 
+
+
 可以在文件层声明变量
 
 ```ts
@@ -140,6 +151,8 @@ fun main() {
     println("main"); // 后
 }
 ```
+
+
 
 文件级的变量是在什么时机被加载的呢? 文件加载的时候
 
@@ -166,6 +179,8 @@ import文件级变量的时候, 会在import 的时候加载吗? 不, 是在第�
 ```kotlin
 if (condition) result1 else result2;
 ```
+
+
 
 ## range
 
@@ -252,6 +267,8 @@ for (x in 9 downTo 0 step 3) {
 }
 ```
 
+
+
 ## 自定义运算符
 
 >   infix
@@ -321,6 +338,8 @@ fun function(str: String?): Int? {
 }
 ```
 
+
+
 ## is 类型检查
 
 在使用is检查的分支内自动类型转换
@@ -362,7 +381,7 @@ return obj.length;
     val wrongInt = readln().toIntOrNull()
     println(wrongInt)
     // null
-
+    
     val correctInt = readln().toIntOrNull()
     println(correctInt)
     // 13
@@ -412,7 +431,7 @@ return obj.length;
 
     ```kotlin
     fun String.spaceToCamelCase() { …… }
-
+    
     "Convert this to camelcase".spaceToCamelCase()
     ```
 

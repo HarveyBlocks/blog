@@ -24,7 +24,7 @@
     <!--一定要放在最外层-->
     <xs:element name="NAME" type="xs:string"/>
     <xs:element name="name" substitutionGroup="NAME"/>
-
+    
     <!--...-->
 </xs:schema>
 ```
@@ -49,6 +49,7 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
         </xs:sequence>
     </xs:complexType>
 
+
     <xs:complexType name="customerInfo">
         <xs:sequence>
             <xs:element ref="name"/>
@@ -59,6 +60,7 @@ substitutionGroup 中的所有元素（主元素和可替换元素）必须被�
 
     <xs:element name="名字" substitutionGroup="name"/>
     <xs:element name="顾客" substitutionGroup="customer"/>
+
 
 </xs:schema>
 ```

@@ -65,6 +65,8 @@ select
 from Performance_Schema.Data_Locks;
 ```
 
+
+
 ### 间隙锁
 
 -   间隙?两条记录之间
@@ -73,6 +75,10 @@ from Performance_Schema.Data_Locks;
 -   在RR(**Repeatable Read**)事务隔离级别下支持
 
 ![image-20231026145846358](../../assets/Day10-行级锁/image-20231026145846358.png)
+
+
+
+
 
 ![image-20231026145008063](../../assets/Day10-行级锁/image-20231026145008063.png)
 
@@ -114,13 +120,15 @@ from Performance_Schema.Data_Locks;
             -   为了防止其他事务插入造成幻读
 
 -   索引上的**范围查询**(**唯一索引**)
-
+  
     -   会访问到不满足条件的第一个值为止
     -   `select * from user where id>=19`
     -   对19加一个行锁
     -   对25加了一个临键锁,锁住了25和19之间的间隙
     -   对(25,无穷大[**supermum pesu**])加了一个间隙锁
     -   当然,对其他例子,只是多几个临键锁了罢 
+
+
 
 #### 注意
 

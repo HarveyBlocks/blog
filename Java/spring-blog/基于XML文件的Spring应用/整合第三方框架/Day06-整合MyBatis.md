@@ -11,10 +11,10 @@
         public void testMybatis() throws IOException {
             //静态工厂方式
             InputStream resource = Resources.getResourceAsStream("mybatis-config.xml");
-
+        
             //无参构造实例化
             SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
-
+        
             //实例工厂方法
             SqlSessionFactory factory = builder.build(resource);
             //实例工厂方法
@@ -23,7 +23,7 @@
             UserMapper userMapper = session.getMapper(
                     //resource
                     UserMapper.class);
-
+        
             TestLogger.info(userMapper.selectAll());
         }
         ```
@@ -32,11 +32,11 @@
 
         ```xml
         <?xml version="1.0" encoding="UTF-8" ?>
-
+        
         <!DOCTYPE configuration
                 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
                 "https://mybatis.org/dtd/mybatis-3-config.dtd">
-
+        
         <configuration>
             <typeAliases>
                 <package name="com.harvey.pojo"/
@@ -62,9 +62,11 @@
             <mappers>
                 <package name= "com/harvey/mapper"/>
             </mappers>
-
+        
         </configuration>
         ```
+
+        
 
 ## 操作
 
@@ -147,6 +149,7 @@ mybatis-spring.jar
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
     </bean>
+
 
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>

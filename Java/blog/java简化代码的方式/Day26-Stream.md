@@ -33,6 +33,8 @@ Collections.addAll(list, "afs", "fsg", "faf", "adf", "ad", "afq");
 //要求:char 'a' 开头 , 且3个字符的,存入到一个集合中去
 ```
 
+
+
 ### 经典做法:
 
 ```java
@@ -45,6 +47,10 @@ for (String elements:list) {
     }
 }
 ```
+
+
+
+
 
 ### 用Stream流
 

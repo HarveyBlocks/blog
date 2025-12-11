@@ -17,6 +17,8 @@
 declare 变量名 变量类型 [default...];
 ```
 
+
+
 ## 赋值
 
 ```mysql

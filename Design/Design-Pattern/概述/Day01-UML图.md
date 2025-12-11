@@ -26,9 +26,13 @@ UML从目标系统出发, 定义了例图, 类图, 对象图, 状态图, 活动�
 
 类图是系统分析和设计阶段的重要产物, 是系统编码和测试的重要模型
 
+
+
 ## 类图表示方式
 
 >   Mermaid 辅助
+
+
 
 ```mermaid
 classDiagram
@@ -52,13 +56,13 @@ classDiagram
         List<int> position
         -canEat()
     }
-
+    
         class Zebra{
         	<<enumeration>>
             +bool is_wild
             +run()
         }
-
+   
 ```
 
 ### 类的表示方式
@@ -71,6 +75,10 @@ class Zebra{
 }  
 ```
 
+
+
+
+
 #### 访问权限
 
 -   `+`  public
@@ -78,7 +86,11 @@ class Zebra{
 -   `#` protected
 -   `~`缺省或default
 
+
+
 #### 字段和方法的表示
+
+
 
 ```mermaid
 classDiagram
@@ -91,6 +103,8 @@ class Zebra{
 	%% 方法() [返回类型] 会被认定为字段
 }
 ```
+
+
 
 ### 关联关系
 
@@ -128,6 +142,8 @@ class Zebra{
 
 #### 单项关联
 
+
+
 ```mermaid
 classDiagram
 class User{
@@ -139,6 +155,8 @@ class Address{
 }
 
 ```
+
+
 
 #### 双向关联
 
@@ -262,7 +280,11 @@ Runnable <|.. Thread : public
 
 ```
 
+
+
 虚线空心小箭头表示, mermaid没有
+
+
 
 ### 类注释
 
@@ -279,7 +301,7 @@ classDiagram
     Animal: +String gender
     Animal: +isMammal()
     Animal: +mate()
-
+	
     class Fish{
     	<<interface>>
         -int sizeInFeet
@@ -287,6 +309,12 @@ classDiagram
         -canEat()
     }
 ```
+
+
+
+
+
+
 
 ```mermaid
 classDiagram

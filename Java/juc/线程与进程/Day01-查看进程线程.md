@@ -46,6 +46,12 @@ taskkill # 杀死进程
     top -H -p <PID>
     ```
 
+    
+
+
+
+
+
 ### Java
 
 -   查看Java进程

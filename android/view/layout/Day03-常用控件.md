@@ -70,13 +70,13 @@ API1
 
 ```kotlin
 class MainActivity : AppCompatActivity(), View.OnClickListener { 
-
+ 
     override fun onCreate(savedInstanceState: Bundle?) { 
         super.onCreate(savedInstanceState) 
         setContentView(R.layout.activity_main) 
         button.setOnClickListener(this) 
     } 
-
+ 
     override fun onClick(v: View?) { 
         when (v?.id) { 
             R.id.button -> { 
@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             } 
         } 
     } 
-
+ 
 }
 ```
 
@@ -92,7 +92,7 @@ API2
 
 ```kotlin
 class MainActivity : AppCompatActivity(), View.OnClickListener { 
-
+ 
     override fun onCreate(savedInstanceState: Bundle?) { 
         super.onCreate(savedInstanceState) 
         setContentView(R.layout.activity_main) 
@@ -103,6 +103,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 }
 ```
+
+
 
 ## EditText 文本输入
 
@@ -122,6 +124,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 ```kotlin
 val inputText = editText.text.toString()
 ```
+
+
 
 ## ImageView
 
@@ -194,6 +198,10 @@ binding.button.setOnClickListener {
 在当前界面弹出一个对话框，这个对话框是置顶于所有界面元素之上的，能够 屏蔽其他控件的交互能力
 
 <img src="../../assets/Day03-常用控件/image-20250909165521698.png" alt="image-20250909165521698" style="zoom:50%;" />
+
+
+
+
 
 创建Alert
 

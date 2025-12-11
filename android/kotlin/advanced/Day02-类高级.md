@@ -50,7 +50,7 @@ val inner = Outer().Inner()
         fun eat()
         fun alive(): Boolean;
     }
-
+    
     fun life(animal: Animal) {
         while (animal.alive()) {
             animal.eat()
@@ -65,7 +65,7 @@ val inner = Outer().Inner()
         override fun eat() {
             print("eating")
         }
-
+    
         override fun alive(): Boolean {
             return true;
         }
@@ -80,7 +80,7 @@ val inner = Outer().Inner()
     abstract class Animal(val alive: Boolean) {
         abstract fun eat()
     }
-
+    
     fun life(animal: Animal) {
         while (animal.alive) {
             animal.eat()
@@ -97,6 +97,12 @@ val inner = Outer().Inner()
         }
     });
     ```
+
+
+
+
+
+
 
 ## 枚举
 
@@ -179,6 +185,8 @@ val name: String = Color.RED.name;
 val ordinal: Int = Color.RED.ordinal;
 ```
 
+
+
 ## 解构
 
 ### 解构声明
@@ -214,6 +222,8 @@ class Student(val name: String, val age: Int) {
 for ((name, age) in studentList) {  }
 ```
 
+
+
 ### 多返回值
 
 ```kotlin
@@ -242,6 +252,8 @@ val (_,age) = person // 前面的字段不想要可以用_i
 val (name) = person // 后面的字段不想要可以直接不写
 ```
 
+
+
 ### lambda
 
 ```kotlin
@@ -261,6 +273,8 @@ map.mapValues { (key, value): Map.Entry<Int, String> -> "$value!" }
 map.mapValues { (key, value: String) -> "$value!" }
 ```
 
+
+
 ## 数据类
 
 数据类的有关实现, 依靠且仅依靠**主构造函数的参数**来进行
@@ -276,10 +290,14 @@ map.mapValues { (key, value: String) -> "$value!" }
 -   copy() 实现
 -   componentN() 函数 按照属性声明顺序实现, 用于对象[解构](Day02-解构)
 
+
+
 ```kotlin
 data class Student(val name: String, val age: Int) {
 }
 ```
+
+
 
 ### 要求
 
@@ -320,6 +338,8 @@ student.copy(age = 13)
 
 标准库提供了 `Pair` 与 `Triple` 类, 都是数据类
 
+
+
 ## sealed密封
 
 对继承进行限制, 只有在同包同模块下(子包也不行)的文件才能进行继承
@@ -337,6 +357,8 @@ sealed限制**不适用于间接子类**
 -   需要一个有限的子类集合
 -   需要类型安全的架构设计
 -   为库提供健壮且可维护的公共 API
+
+
 
 ## 类型别名
 

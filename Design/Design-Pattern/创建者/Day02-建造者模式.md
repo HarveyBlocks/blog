@@ -29,6 +29,8 @@
 
 将创建步骤分解在不同方法里, **使创建过程更加清晰**
 
+
+
 ## 结构
 
 -   抽象建造者
@@ -148,10 +150,13 @@ public class ConcreteComputerBuilder implements ComputerBuilder {
         return computer;
     }
 
+
 }
 ```
 
 ### 产品
+
+
 
 ```java
 public class Computer {
@@ -182,6 +187,8 @@ public class ComputerDirector {
     }
 }
 ```
+
+
 
 ### 使用
 

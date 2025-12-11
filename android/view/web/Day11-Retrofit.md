@@ -6,6 +6,10 @@
 - 服务器提供的接口可以根据功能来归类
 - 以调用接口的形式对外暴露
 
+
+
+
+
 ## 导入依赖
 
 无需另外的`okHttp`依赖
@@ -42,6 +46,8 @@ class HookCallback<T : Any> : retrofit2.Callback<T> { // 使用钩子, 而不是
 }
 ```
 
+
+
 ### 代理工厂
 
 ```kotlin
@@ -50,6 +56,10 @@ val retrofit: Retrofit = Retrofit.Builder().baseUrl("https://echo.free.beeceptor
     .addConverterFactory(GsonConverterFactory.create()/*json 序列化/反序列化 工厂*/)
     .build()
 ```
+
+
+
+
 
 ### 代理服务
 
@@ -81,6 +91,10 @@ interface EchoService {
 val echoService: EchoService = retrofit.create(EchoService::class.java)
 ```
 
+
+
+
+
 ### 使用
 
 ```kotlin
@@ -107,6 +121,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(ActivityMainBinding::infl
     }
 }
 ```
+
+
 
 Logcat似乎会对一些隐私信息做加密, 例如URL和IP
 
@@ -182,6 +198,7 @@ val authorizeInterceptor: (Interceptor.Chain) -> Response = interceptor@{ chain 
     chain.proceed(requestBuilder.build())
 }
 
+
 val client: OkHttpClient = OkHttpClient.Builder().addInterceptor(authorizeInterceptor).build()
 
 // Retrofit 对API代理工厂类
@@ -236,6 +253,7 @@ class RetrofitProxyManager(config: RetrofitConfig) {
         Retrofit.Builder().baseUrl(config.url).client(config.buildClient())
             .addConverterFactory(GsonConverterFactory.create()).build()
 
+
     private val proxyCache: MutableMap<String, Any?> = mutableMapOf()
 
     /**
@@ -249,6 +267,7 @@ class RetrofitProxyManager(config: RetrofitConfig) {
 
     inline fun <reified T : Any> proxy() = proxy(T::class.java)
 }
+
 
 /**
  * 提供给哪些只需要简单获取一个代理工具的情况

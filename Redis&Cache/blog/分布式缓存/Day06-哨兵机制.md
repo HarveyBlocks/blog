@@ -26,6 +26,8 @@ slave宕机之后, 只要再次连接master, 就能恢复数据
 
     例如通知Java客户端, 不要再向老的Master发送请求了, 要向新的Mater发送请求
 
+
+
 ## 原理
 
 ### 监控
@@ -86,12 +88,14 @@ slave宕机之后, 只要再次连接master, 就能恢复数据
     -   还有一件事......是不是还要告诉Sentinel这个集群里每个节点的密码啊?
 
         不告诉Sentinel, 他不久没办法让其他Slave换主了吗???
-
+        
     -   网上查了说: 一个集群里好像只能用同一个密码qwq,否则会出问题
 
 3.  更改原来Master的配置文件, 让他成为新的Master的Slave
 
     -   经测试, Docker的话会将原来的Master标记为Slave, 自动的, 但不会改配置文件好像
+
+
 
 ## 搭建哨兵集群
 
@@ -111,6 +115,8 @@ docker run \
     -d redis:latest\
     redis-server /etc/redis/redis.config
 ```
+
+
 
 ### Sentinel配置
 
@@ -147,11 +153,15 @@ sentinel failover-timeout redis-6379 60000
 dir "/etc/redis/s1"
 ```
 
+
+
 ### 启动Sentinel
 
 ```bash
 redis-sentinel s1/sentinel.conf
 ```
+
+
 
 日志
 
@@ -181,6 +191,8 @@ redis-sentinel s1/sentinel.conf
 195:X 10 Feb 2024 13:17:12.761 * +sentinel sentinel eddc6d04c20bf1f798f072419fd4b024bf9d7322 172.19.0.4 27003 @ redis-6379 172.19.0.2 6379
 ```
 
+
+
 ## 测试
 
 日志
@@ -205,6 +217,8 @@ redis-sentinel s1/sentinel.conf
 195:X 10 Feb 2024 13:17:30.919 # +vote-for-leader 2484169a9e64362d602b0c118a6c37837103c5b2 1
 ```
 
+
+
 故障转移
 
 ```log
@@ -219,6 +233,8 @@ redis-sentinel s1/sentinel.conf
 ```log
 200:X 10 Feb 2024 13:17:31.382 * +slave-reconf-sent slave 172.19.0.4:6379 172.19.0.4 6379 @ redis-6379 172.19.0.2 6379
 ```
+
+
 
 故障转移, 易主完成了
 
@@ -238,9 +254,13 @@ redis-sentinel s1/sentinel.conf
 205:X 10 Feb 2024 13:42:24.461 * +fix-slave-config slave 172.19.0.5:6379 172.19.0.5 6379 @ redis-6379 172.19.0.2 6379
 ```
 
+
+
 ## RedisTemplate的哨兵模式
 
 >   Redis客户端对哨兵的通知的接收处理
+
+
 
 Spring 的RedisTemplate底层使用的Lettuce实现了节点的感知和自动切换(通过pool)
 
@@ -286,6 +306,8 @@ Spring 的RedisTemplate底层使用的Lettuce实现了节点的感知和自动�
         return configBuilder->configBuilder.readFrom(ReadFrom.REPLICA_PREFERRED);
     }
     ```
+
+    
 
 产生问题: Redis的Sentinel会将Host解析, 如果结合Docker就会产生问题:
 

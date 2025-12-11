@@ -29,7 +29,8 @@ public class UserServiceImpl implements UserService {
     public UserServiceImpl(String message,int number){
         System.out.println("UserService有参构造,message="+message+",number="+number);
     }
-
+    
+    
     private UserDao userDao;
     //Bean工厂去调用 从容器中获取userDao设置到此处
     public void setUserDao(UserDao userDao){
@@ -38,17 +39,19 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
+
+
 #### 解决方法 : constructor-arg
 
 在xml文件:
 
 ```xml
 <bean id="userService" class="com.harvey.Impl.UserServiceImpl">
-
+    
     <!--name是形参名-->
     <constructor-arg name="message" value="你好"/>
 	<constructor-arg name="number" value="2"/>
-
+    
     <property name="userDao" ref="userDao"/>
 </bean>
 ```
@@ -78,6 +81,12 @@ arg->argument:参数
 
 -   其实可以多做几个Bean
 
+
+
+
+
+
+
 ## 工厂方法实例化
 
 -   自定义( 提供 )一个工厂
@@ -97,9 +106,13 @@ public static UserService getUserService(){
 }
 ```
 
+
+
 ### 静态工厂方法实例化
 
 >   静态方法产生一个Bean,交给Spring管理
+
+
 
 -   Java
 
@@ -129,9 +142,13 @@ public static UserService getUserService(){
 4.  然后他就把**getUserService**的返回值**UserService**当作对象
 5.  再以指定的**id作为BeanName**存储到容器中
 
+
+
 ### 非静态工厂方法实例化
 
 >   非静态方法产生一个Bean,交给Spring管理
+
+
 
 -   java
 
@@ -148,7 +165,7 @@ public class MyBeanFactory {
     ```xml
     <bean id="myBeanFactory" 
           class="com.harvey.factory.MyBeanFactory" />
-
+    
     <!--factory-bean,先实例化看myBeanFactory (id) ,然后使用里面的非静态实例化方法-->
     <bean id="getUserService" 
           factory-bean="myBeanFactory" 
@@ -185,6 +202,8 @@ UserService无参构造
 -   自己的Factory类实现FactoryBean接口,实现FactoryBean的规范
 
 额.....我突然发现好像**有FactoryBean,也有BeanFactory**
+
+
 
 #### 问题的产生
 
@@ -234,6 +253,8 @@ public class MyBeanFactory implements FactoryBean<UserService> {
 }
 ```
 
+
+
 -   xml
 
     ```java
@@ -250,6 +271,8 @@ public class MyBeanFactory implements FactoryBean<UserService> {
     UserService无参构造
     23-10-30 16:25 [main] INFO  TestSpring - 成功创建com.harvey.Impl.UserServiceImpl@290dbf45
     ```
+
+    
 
 ![image-20231030163230085](../../../assets/Day02-Spring实例化的方式/image-20231030163230085.png)
 
@@ -273,13 +296,13 @@ UserService无参构造
     ```java
     	@Test
         public void testFactory() {
-
+    
             DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
-
+    
             XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
-
+    
             reader.loadBeanDefinitions("beans.xml");
-
+    		
             //这一步做了所有的事情:
             /*
             工厂类惨遭实例化
@@ -287,9 +310,10 @@ UserService无参构造
     		UserService无参构造
             */
             UserService userService = (UserService) beanFactory.getBean("myBeanFactory");
-
+            
             TestLogger.LOGGER.info("成功创建"+userService);
-
+    
+    
         }
     ```
 

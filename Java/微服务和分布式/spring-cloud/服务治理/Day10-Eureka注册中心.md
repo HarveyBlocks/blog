@@ -8,9 +8,13 @@
 
 ### 引入依赖
 
+
+
 在父工程指定SpringCloud版本
 
 ![image-20240502140346642](../../assets/Day03-Eureka注册中心/image-20240502140346642.png)
+
+
 
 Eureka依赖
 
@@ -110,6 +114,8 @@ public RestTemplate restTemplate(){
     return new RestTemplate();
 }
 ```
+
+
 
 ```java
 UserDto userDto = restTemplate.getForObject("http://user/user/"+userId, UserDto.class);

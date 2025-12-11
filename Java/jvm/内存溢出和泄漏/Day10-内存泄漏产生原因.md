@@ -26,11 +26,15 @@
 
     如果实现不正确, 明明想的是覆盖数据, 结果总是增加数据,导致HashMap膨胀
 
+    
+
 ### 解决方法
 
 1.  新定义实体时, 始终重写`equals`和`hashCode`方法
 2.  重写时确认使用了唯一表识区分不同对象, 比如ID
 3.  HashMap使用应该使用ID作为数据存储的Key, 而不是实体对象做Key
+
+
 
 ## 内部类引用外部类
 
@@ -43,18 +47,18 @@
     ```java
     public class Outer {
         private byte[] outerData = new byte[1024];
-
+    
         class Inner {
             private byte[] innerData = new byte[1024];
-
+    
             public Inner() {
                 byte[] outerData1 = Outer.this.outerData;
             }
         }
-
+    
         public Outer() {v
         }
-
+    
         public static void main(String[] args) throws IOException, InterruptedException {
             ArrayList<Inner> inners = new ArrayList<>();
             int count = 0;
@@ -70,7 +74,7 @@
         }
     }
     ```
-
+    
 -   匿名内部类如果在非静态方法中被创建
 
     -   会持有创建对象, 垃圾回收器无法回收调用者
@@ -78,11 +82,11 @@
     ```java
     public class Outer {
         private byte[] outerData = new byte[1024];
-
+    
         public static Object newObj() {
             return new Object() {
                 private byte[] innerData = new byte[1024];
-
+    
                 @Override
                 public String toString() {
                     byte[] outerData1 = Outer.this.outerData;
@@ -90,7 +94,7 @@
                 }
             };
         }
-
+    
         public static void main(String[] args) throws IOException {
             ArrayList<Object> objects = new ArrayList<>();
             Outer outer = new Outer();
@@ -108,12 +112,18 @@
     }
     ```
 
+    
+
 ### 解决
 
 -   集合+内部类不要使用非静态, 要使用尽量静态内部类
 -   看见循环里面有一个new放进了集合里就应该引起足够的注意了
 
+
+
 ## TreadLoacal
+
+
 
 ### 自建线程一般不会内存溢出
 
@@ -137,6 +147,8 @@ public static void main(String[] args) throws InterruptedException {
 ```
 
 ![image-20240525203208615](../assets/Day10-内存泄漏产生原因/image-20240525203208615.png)
+
+
 
 ### 线程池的线程不回收造成的内存溢出
 
@@ -167,9 +179,15 @@ public static void main(String[] args) throws InterruptedException {
 
 ![image-20240525204914637](../assets/Day10-内存泄漏产生原因/image-20240525204914637.png)
 
+
+
+
+
 `ThreadPoolExecutor`
 
 ![image-20240525205325730](../assets/Day10-内存泄漏产生原因/image-20240525205325730.png)
+
+
 
 ### 解决
 
@@ -195,6 +213,8 @@ JDK8中字符串常量池在堆中, 会被垃圾回收器回收, 但还是要注
 -XX:MaxPermSize=256M
 ```
 
+
+
 ## 静态字段保存对象
 
 大量数据在静态字段中被长期引用, 数据就不会被释放
@@ -218,6 +238,8 @@ JDK8中字符串常量池在堆中, 会被垃圾回收器回收, 但还是要注
 -   Spring的Bean中不要存放长期大对象
 
 -   尽量将缓存的时间定期失效
+
+
 
 ## 资源未关闭
 

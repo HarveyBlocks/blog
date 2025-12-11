@@ -12,9 +12,15 @@ DOM 是 W3C 定义的一套标准
 
 ![DOM HTML tree](../../assets/Day03-DOM/pic_htmltree.gif)
 
+
+
+
+
 ## 方法
 
 ### getElementById 方法
+
+
 
 ### innerHTML 属性
 
@@ -70,6 +76,8 @@ for (let i = 0; i < paragraphElements.length; i++) {
 
 `HTMLElement` 注重文档自身的属性, 内部文本等信息
 
+
+
 ### 改变
 
 | 属性                                       | 描述                   |
@@ -114,11 +122,15 @@ console.log(paragraphElements.length === paragraphElements2.length); // true
 | document.replaceChild(*element*)  | 替换 HTML 元素   |
 | document.write(*text*)            | 写入 HTML 输出流 |
 
+
+
 ### 添加事件处理程序
 
 | 方法                                                     | 描述                            |
 | :------------------------------------------------------- | :------------------------------ |
 | document.getElementById(id).onclick = function(){*code*} | 向 onclick 事件添加事件处理程序 |
+
+
 
 ### DOM 属性
 
@@ -198,6 +210,8 @@ element.addEventListener(event, action, useCapture);
 element.removeEventListener("mousemove", action);
 ```
 
+
+
 ### 事件传播
 
 >   冒泡和捕获
@@ -253,6 +267,8 @@ element.removeEventListener("mousemove", action);
 -   `document.body` - 文档的 body
 -   `document.documentElement` - 完整文档
 
+
+
 ### 属性
 
 #### nodeName
@@ -265,6 +281,8 @@ element.removeEventListener("mousemove", action);
 -   文本节点的 nodeName 总是 #text
 -   文档节点的 nodeName 总是 #document
 
+
+
 #### nodeValue
 
 规定节点的值。
@@ -272,6 +290,8 @@ element.removeEventListener("mousemove", action);
 -   元素节点的 nodeValue 是 undefined
 -   文本节点的 nodeValue 是文本文本
 -   属性节点的 nodeValue 是属性值
+
+
 
 #### nodeType
 

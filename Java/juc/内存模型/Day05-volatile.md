@@ -21,6 +21,8 @@
 -   保证在该屏障之后的变量的读取, **加载**的是**主存**中的最新数据
 -   保证在该屏障之后的代码, 不会在**指令重排序**时, 排到**读屏障**之前
 
+
+
 ## 保证可见性分析
 
 ### 写屏障
@@ -71,13 +73,16 @@ participant ready as volatile ready
 num -->> num : num=0
 ready -->> ready : ready=false
 
+
 t1 ->> num : num:=2
 t1 ->> ready : ready:=true
 Note over t1,ready: 写屏障
 
+
 Note over t2,num: 读屏障
 t2 ->> ready : 读取ready(==true)
 t2 ->> num : 读取num(==2)
+
 
 ```
 
@@ -131,13 +136,16 @@ participant ready as volatile ready
 num -->> num : num=0
 ready -->> ready : ready=false
 
+
 t1 ->> num : num:=2
 t1 ->> ready : ready:=true
 Note over t1,ready: 写屏障
 
+
 Note over t2,num: 读屏障
 t2 ->> ready : 读取ready(==true)
 t2 ->> num : 读取num(==2)
+
 
 ```
 
@@ -166,6 +174,8 @@ t2 ->> num : num:=temp2
 
 t1 -->> t1 : temp1:=num+1
 t1 ->> num : num:=temp1
+
+
 
 ```
 

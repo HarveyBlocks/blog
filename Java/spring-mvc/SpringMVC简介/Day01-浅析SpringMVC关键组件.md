@@ -18,6 +18,8 @@
 
 -   接口规范------------------------------------------------------------------实现
 
+
+
 ## HandlerMappering
 
 >   处理器映射器
@@ -38,11 +40,15 @@
 
         这里分装的Controller叫做Hander
 
+
+
 ## HanderAdapter
 
 >   处理器适配器
 
 -   执行调用的对象
+
+
 
 ## ViewResolver
 
@@ -69,6 +75,8 @@
 -   BeanNameUrlHandlerMapping,原先用,现在不用的
 -   RequestMappingHandlerMapping现在用的
 -   RouterFunctionMapping别管!
+
+
 
 -   前端控制器在初始化的时候就会加载这个Propertis文件
 

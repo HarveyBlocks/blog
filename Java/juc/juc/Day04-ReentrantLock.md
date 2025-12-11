@@ -16,6 +16,8 @@
     -   不同的条件可以在不同的地方等待
     -   notify不会全部唤醒, 只唤醒一部分
 
+
+
 ## 语法
 
 ```java
@@ -68,6 +70,8 @@ public final void acquire(int arg) {
 }
 ```
 
+
+
 ### 成功上锁
 
 调用非公平锁的方法
@@ -109,6 +113,8 @@ AQS方法
 1.  构造Node的WaitStatus状态, 其中0为默认正常的状态
 2.  Node的创建是懒惰的
 3.  第一个Node称为Dummy(哑元)或哨兵, 用来占位, 并不关联线程
+
+
 
 ```java
 private Node addWaiter(Node mode) {
@@ -152,7 +158,7 @@ final boolean acquireQueued(final Node node, int arg) {
             if (p == head && tryAcquire(arg)) {
                 // 属于逻辑上(忽略哨兵)的第一个节点
                 // 也就是说, 是一个第一顺位的候选唤醒线程
-
+                
                 // 用tryAcquire尝试成功了
                 setHead(node);
                 p.next = null; // help GC
@@ -174,6 +180,8 @@ final boolean acquireQueued(final Node node, int arg) {
     }
 }
 ```
+
+
 
 ```java
 private static boolean shouldParkAfterFailedAcquire(Node pred, Node node) {
@@ -337,6 +345,8 @@ final boolean acquireQueued(final Node node, int arg) {
 }
 ```
 
+
+
 ## 可重入性
 
 ### 使用
@@ -408,6 +418,8 @@ protected final boolean tryRelease(int releases) {
     return free;
 }
 ```
+
+
 
 ## 可中断
 
@@ -503,6 +515,8 @@ private final boolean parkAndCheckInterrupt() {
 ```
 
 #### 不可中断锁
+
+
 
 ```java
 final boolean acquireQueued(final Node node, int arg) {
@@ -633,6 +647,8 @@ Thread[Philosopher5,5,]-3
 tryFirstFailCountSum = 0
 trySecondFailCountSum = 114
 ```
+
+
 
 ## 公平锁
 
@@ -863,6 +879,8 @@ final int fullyRelease(Node node) {// AQS的方法, 而不是ConditionObject的�
     }
 }
 ```
+
+
 
 ### ConditionObejct#signalCondition()原理
 

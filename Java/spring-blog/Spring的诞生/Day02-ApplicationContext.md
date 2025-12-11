@@ -4,7 +4,15 @@
 
 Spring的容器,内部封装BeanFactory,比BeanFactory功能丰富强大
 
+
+
 -   xml文件习惯写成applicationContest.xml
+
+
+
+
+
+
 
 -   使用多态
 
@@ -21,6 +29,8 @@ public class ClassPathXmlApplicationContext
 
 这个是可以用的
 
+
+
 ## java的代码实现
 
 ```java
@@ -35,6 +45,10 @@ public void test(){
     TestLogger.LOGGER.info(""+userService);
 }
 ```
+
+
+
+
 
 ```log
 BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDaoImpl@56a6d5a6

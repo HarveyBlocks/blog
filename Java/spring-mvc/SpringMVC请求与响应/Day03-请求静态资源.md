@@ -1,5 +1,7 @@
 # 请求静态资源
 
+
+
 ## 静态资源无法找到的问题
 
 在不用Spring-mvc整合的java-web中,
@@ -40,8 +42,13 @@ url-pattern也为/
 
 	-     对曾经已经加载过的静态资源,记得**清除浏览器缓存**
 -     我使用了从未被使用的aaa.txt
+  
+
+
 
 ![image-20231126204659672](../../assets/Day03-请求静态资源/image-20231126204659672.png)
+
+
 
 ![image-20231126204647193](../../assets/Day03-请求静态资源/image-20231126204647193.png)
 
@@ -78,6 +85,8 @@ url-pattern也为/
 
 ![image-20231127195240423](../../assets/Day03-请求静态资源/image-20231127195240423.png)
 
+
+
 ```xml
 <!--配置静态资源的映射路径-->
 <!--映射,网络URL地址映射到本地文件夹地址查找文件-->
@@ -85,6 +94,8 @@ url-pattern也为/
 <!--http://location:8080/spring-mvc/img/A.jpg 在本地webapp的img文件夹下的A.jpg-->
 <mvc:resources mapping="/txt/*" location="/txt/"/>
 ```
+
+
 
 ### 法三配置default-servlet-handler(优先)
 

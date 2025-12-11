@@ -1,14 +1,18 @@
 # 多线程编程
 
+
+
 ```python
 import threading
 import time
+
 
 def task(msg: str):
     name: str = threading.currentThread().name
     while True:
         print(f"{name} 在执行, 输出消息:{msg}")
         time.sleep(1)
+
 
 if __name__ == '__main__':
     thread1 = threading.Thread(
@@ -24,6 +28,8 @@ if __name__ == '__main__':
     thread1.start()
     thread2.start()
 ```
+
+
 
 输出: 
 

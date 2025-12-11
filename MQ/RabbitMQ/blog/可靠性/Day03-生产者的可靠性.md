@@ -4,12 +4,18 @@
 
 >   **注意: ** *此乃连接失败的重试, 非消息发送失败的重试. 消息发送失败了依旧不会重试*
 
+
+
+
+
 -   当网络不稳定的时候, 利用重试机制可以有效提高消息发送的成功率
 -   不过SpringAMQP提供的重试机制是==**阻塞式**的重连== 
     -   也就是说, 多次重试等待的过程中, **当前线程是被阻塞的, 会影响业务性能**
 -   如果对于业务性能有要求可以**禁用**重试机制
 -   如果一定要使用, 请**合理配置等待时长和重试次数** 
 -   当然也可以考虑使用**异步线程**来执行发送消息的代码
+
+
 
 -   可通过配置开启
 
@@ -27,23 +33,24 @@
             max-attempts: 3 # 最大重试次数
     ```
 ```
-
+    
 -   测试
 
     ```log
     01-13 13:06:10:757  INFO
-
+    
     01-13 13:06:11:081  INFO
     01-13 13:06:11:257  WARN
-
+    
     01-13 13:06:12:269  INFO
     01-13 13:06:12:409  WARN
-
+    
     01-13 13:06:15:413  INFO
     01-13 13:06:15:554  WARN
-
+    
     org.springframework.amqp.AmqpIOException: java.io.IOException
-
+    
+    
 ```
 
 ​    
@@ -52,11 +59,19 @@
 
 >   与生产者确认的区别在于, 更注重的是消息发送失败时的应对策略
 
+
+
+
+
+
+
 生产者确认有两种机制
 
 -   `Publisher Confirm`
 -   `Publisher Return`  **路由失败**时返回(一般情况下不需要开启, 因为是开发者自己作出来的妖)
 -   开启确认机制后, **在MQ成功收到消息后==会返回确认消息==给生产者**
+
+
 
 ### 确认消息的几种情况
 
@@ -118,7 +133,7 @@ spring:
         @Configuration
         public class ReturnCallbackConfig implements ApplicationContextAware {
             private static final Logger LOG = LoggerFactory.getLogger(ReturnCallbackConfig.class);
-
+        
             /**
              * 用于注册Spring的Bean(当然也可以为所欲为)
              *
@@ -137,7 +152,7 @@ spring:
                             }
                         }
                 );
-
+        
             }
         }
         ```
@@ -170,22 +185,25 @@ spring:
         );
         ```
 
+        
+
     -   准备ConfirmCallback
 
         ```java
         public class ConfirmCallback implements 
             ListenableFutureCallback<CorrelationData.Confirm> {
             public final Logger log;
-
+        
             public ConfirmCallback(Logger log){
                 this.log = log;
             }
-
+        
+        
             @Override
             public void onFailure(Throwable ex) {
                 log.error("Future发生异常时的处理逻辑,指Spring内部出现问题,基本不会触发",ex);
             }
-
+        
             @Override
             public void onSuccess(CorrelationData.Confirm result) {
                 if (result==null){
@@ -198,7 +216,7 @@ spring:
                     log.error("发送消息失败:{}",result.getReason());
                     // 这里写重发消息的逻辑(要不要递归呢....)
                 }
-
+        
             }
         }
         ```

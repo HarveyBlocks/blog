@@ -12,6 +12,8 @@
 
 ## 自定义SQL的方式
 
+
+
 1.  基于Wrapper构建where条件
 
     ```java
@@ -19,7 +21,7 @@
     LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
     lambdaQueryWrapper.in(User::getId,ids);
     // 与原来一致
-
+    
     int update = userMapper.updateAgeByDelta(lambdaQueryWrapper, -5);
     ```
 
@@ -46,6 +48,12 @@
         update tb_user set age = age + #{deltaAge} ${ew.customSqlSegment}
     </update>
     ```
+
+    
+
+
+
+
 
 ### 测试结果
 

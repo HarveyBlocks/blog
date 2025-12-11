@@ -2,7 +2,11 @@
 
 >   记录MySQL启动停止时,以及服务器运行过程中发生的任何严重错误的相关信息
 
+
+
 -   有问题先看错误日志
+
+
 
 ## 查看
 
@@ -22,6 +26,8 @@ show variables like '%log_error%';
 
 -   灾难时的数据恢复
 -   MySQL的主从赋值
+
+
 
 ## 查看
 
@@ -55,6 +61,10 @@ show variables like '%binlog_format%';
 binlog_format=STATEMENT
 ```
 
+
+
+
+
 ## 使用
 
 >   二进制日志是二进制存储的,不能直接读
@@ -76,11 +86,15 @@ reset master;
 
 -   删除所有binlog,日之编号从binlog.000001重新开始
 
+
+
 ```mysql
 purge master logs to 'binlog.*******';
 ```
 
 -   删除编号\*\*\*\*\*前**(不包含)**的全部日志
+
+
 
 ```mysql
 purge master logs before 'yyyy-mm-dd hh24:mi:ss'
@@ -100,6 +114,8 @@ purge master logs before 'yyyy-mm-dd hh24:mi:ss'
 ```properties
 binlog_expire_logs_seconds=1145141414810
 ```
+
+
 
 # 查询日志
 

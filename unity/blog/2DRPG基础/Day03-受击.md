@@ -82,7 +82,7 @@ public class Attack : MonoBehaviour {
 ```csharp
 public class CharacterFeature : MonoBehaviour {
 	// ...
-
+    
     /// 无敌时间计时器
     private float _cannotBeHitCounter;
     public float cannotBeHitDuration;
@@ -112,10 +112,11 @@ public class CharacterFeature : MonoBehaviour {
             return Health;
         }
 
+        
         if (attacker.damage <= defense) {
             return Health;
         }
-
+        
         AddHealth(-(attacker.damage - defense));
         TriggerCannotBeHit();
         // 检测死亡
@@ -260,7 +261,7 @@ public class CharacterFeature : MonoBehaviour {
              // 受伤了就失去控制权限
              return;
          }
-
+     
          // 不受伤才能进行控制
          TurnAround(); // 转身
          Move();

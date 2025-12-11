@@ -12,6 +12,8 @@
 -   值列表 例如 1px solid black
 -   映射 `("background": red, "foreground": pink)`
 
+
+
 ## 运算
 
 -   `==`和`!=`
@@ -19,6 +21,8 @@
 -   `<` `<=` `>` `>=`
 -   `and` `or` `not`
 -   `+` `-` `/`用于链接string
+
+
 
 ## 默认值
 
@@ -63,6 +67,8 @@ $global-variable: global;
 }
 ```
 
+
+
 ### !global
 
 不同作用域的变量同名, 则赋值不会对外面作用域的变量发生
@@ -79,6 +85,8 @@ $variable: global;
   border: $variable; // global
 }
 ```
+
+
 
 如果希望能够更改, 那就使用`!global`标记
 

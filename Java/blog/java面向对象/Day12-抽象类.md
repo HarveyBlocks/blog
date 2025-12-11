@@ -9,7 +9,13 @@ public abstract class Student extends Person{
 }
 ```
 
+
+
+
+
 ## 抽象类的性质
+
+
 
 ``` java
 //抽象类的所有方法必须要有子类实现
@@ -23,7 +29,7 @@ public abstract class Student extends Person{
     public static  void sleep(){
         System.out.println("He is falling asleep at class!");
     }
-
+    
 }
 //抽象类不能new，只能由子类去实现它,只能去new它的子类对象
 //抽象类里能够有正常的方法（不能new怎么调用呢？？？？？？？？？）

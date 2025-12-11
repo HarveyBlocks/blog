@@ -2,6 +2,8 @@
 
 - 泛型和数组是矛盾的,泛型会进行类型的擦除,而编译器会一直去持有数组的数据类型
 
+
+
 - 可以声明带泛型的数组引用
 
 ```java
@@ -48,6 +50,7 @@ public class Student<T> {
     public T get(int index) {return arrayT[index];}
 }    
 ```
+
 
 ```java
 public static void main(String[] args) throws UnsupportedEncodingException {

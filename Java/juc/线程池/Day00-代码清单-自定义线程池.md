@@ -135,6 +135,7 @@ public class ActivePool {
         }
     }
 
+
     public void shutdown(boolean clog) throws InterruptedException {
         this.close(false, clog);
     }
@@ -292,6 +293,8 @@ if (taskThread.isAlive()) {
 	taskThread.interrupt(); // 中断任务
 }
 ```
+
+
 
 ## 异步使用Demo
 

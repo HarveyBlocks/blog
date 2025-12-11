@@ -1,5 +1,7 @@
 # 数据类型
 
+
+
 ## 值类型和引用类型
 
 值类型（例如 int 、 short、double 、 char , struct、enum）
@@ -29,6 +31,10 @@
 -   每个整型类型都有 `MinValue` 和 `MaxValue` 属性， 编译时常量
 -   `nint` 和 `nuint`的`MinValue` 和 `MaxValue` 属性是在运行时计算的。 这些类型的大小取决于进程设置
 -   [System.Numerics.BigInteger](https://learn.microsoft.com/zh-cn/dotnet/api/system.numerics.biginteger) 结构用于表示没有上限或下限的带符号整数
+
+
+
+
 
 ### int
 

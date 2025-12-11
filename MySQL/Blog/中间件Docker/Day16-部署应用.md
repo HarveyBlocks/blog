@@ -10,6 +10,10 @@ COPY "项目所在Jar包" "/app.jar"
 ENTRYPOINT ["java","-jar","/app.jar","--spring.profiles.active=dev"]
 ```
 
+
+
+
+
 ```bash
 docker build --help
 ```
@@ -17,6 +21,8 @@ docker build --help
 ```bash
 docker build -t 取一个镜像名 Dockerfile文件路径
 ```
+
+
 
 启动容器
 

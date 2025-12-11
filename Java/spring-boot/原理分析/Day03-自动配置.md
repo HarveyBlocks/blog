@@ -1,8 +1,12 @@
 # 自动配置
 
+
+
 ## Condition
 
 >   实现选择性创建Bean
+
+
 
 -   问:
 
@@ -24,6 +28,8 @@
 
 ~~这算不算耦合?~~
 
+
+
 ```xml
 <dependency>
     <groupId>redis.clients</groupId>
@@ -31,16 +37,18 @@
 </dependency>
 ```
 
+
+
 1.  创建一个配置类, 用于把User放进IOC容器
 
     ```java
     package com.harvey.bootredis.config;
-
+    
     import ...
-
+    
     @Configuration
     public class UserConfig {
-
+    
         @Bean
         public User user() throws ReflectiveOperationException{
             return (User) Class.forName("com.harvey.bootredis.domain.User")
@@ -55,9 +63,9 @@
 
         ```java
         package org.springframework.context.annotation;
-
+        
         import ...
-
+        
         @Target({ElementType.TYPE, ElementType.METHOD})
         @Retention(RetentionPolicy.RUNTIME)
         @Documented
@@ -72,9 +80,9 @@
 
         ```java
         package org.springframework.context.annotation;
-
+        
         import org.springframework.core.type.AnnotatedTypeMetadata;
-
+        
         @FunctionalInterface
         public interface Condition {
             boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata);
@@ -89,12 +97,12 @@
 
         ```java
         package com.harvey.bootredis.condition;
-
+        
         // 有很多Condition, 不要导错啦
         import org.springframework.context.annotation.Condition;
         import org.springframework.context.annotation.ConditionContext;
         import org.springframework.core.type.AnnotatedTypeMetadata;
-
+        
         public class UserCondition implements Condition {
             @Override
             public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
@@ -125,17 +133,17 @@
 
         ```java
         package com.harvey.bootredis.config;
-
+        
         import com.harvey.bootredis.condition.UserCondition;
         import com.harvey.bootredis.domain.User;
         import org.springframework.context.annotation.Bean;
         import org.springframework.context.annotation.Conditional;
         import org.springframework.context.annotation.Configuration;
         import java.lang.reflect.InvocationTargetException;
-
+        
         @Configuration
         public class UserConfig {
-
+        
             @Bean
             @Conditional(UserCondition.class)// 指定COndition
             public User user() throws ReflectiveOperationException{
@@ -163,6 +171,8 @@
     }
     ```
 
+    
+
 ### 动态的Condition
 
 ```java
@@ -188,7 +198,7 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
     ```java
     @Configuration
     public class UserConfig {
-
+    
         @Bean
         @ConditionalOnProperty(name="XXX",havingValue = "xxx")
         // 如果有配置XXX就加载这个Bean. 
@@ -213,6 +223,8 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 ![image-20231206194137192](../../assets/Day03-自动配置/image-20231206194137192.png)
 
+
+
 ![image-20231206195402635](../../assets/Day03-自动配置/image-20231206195402635.png)
 
 可以看出, 它时凭借查看是否存在Tomcat类来判断依赖是否存在, 要启用哪个服务器的
@@ -223,7 +235,7 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
-
+    
     <!--排除-->
     <exclusions>
         <exclusion>
@@ -231,9 +243,12 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </exclusion>
     </exclusions>
-
+    
+    
 </dependency>
 ```
+
+
 
 ### 导入其他服务器的依赖
 
@@ -244,6 +259,8 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
     <version>2.6.13</version>
 </dependency>
 ```
+
+
 
 ## @Enable*
 
@@ -269,6 +286,8 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 -   Import导入的类也会被放入Spring容器中去(无论是不是被@Component注解)
 
+
+
 -   现在介绍一种新方法: 对@Import进行封装-----没错就是使用@Enable*
 
     怎么封装**看别的@Enable的源码**
@@ -281,13 +300,13 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
     @AutoConfigurationPackage
     @Import(AutoConfigurationImportSelector.class)
     public @interface EnableAutoConfiguration {
-
+    
         String ENABLED_OVERRIDE_PROPERTY = "spring.boot.enableautoconfiguration";
-
+    
         Class<?>[] exclude() default {};
-
+    
         String[] excludeName() default {};
-
+    
     }
     ```
 
@@ -312,7 +331,15 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 ![image-20231206215343632](../../assets/Day03-自动配置/image-20231206215343632.png)
 
+
+
 ![image-20231206215406396](../../assets/Day03-自动配置/image-20231206215406396.png)
+
+
+
+
+
+
 
 ![image-20231206215155661](../../assets/Day03-自动配置/image-20231206215155661.png)
 
@@ -330,6 +357,8 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
 ![image-20231206221305450](../../assets/Day03-自动配置/image-20231206221305450.png)
 
+
+
 ![image-20231206221609159](../../assets/Day03-自动配置/image-20231206221609159.png)
 
 ![image-20231206221729543](../../assets/Day03-自动配置/image-20231206221729543.png)
@@ -346,9 +375,9 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
         ```java
         package com.harvey.redis.configure;
-
+        
         import org.springframework.boot.context.properties.ConfigurationProperties;
-
+        
         @ConfigurationProperties(prefix = "redis")
         // 在属性文件(application{-profiles}.properties等)以"redis"开头的属性将封装成这个类
         public class RedisProperties {
@@ -364,23 +393,23 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 
         ```java
         package com.harvey.redis.configure;
-
+        
         import ...
-
+        
         @Configuration
         @EnableConfigurationProperties(RedisProperties.class)//启用这个连接配置文件的类
         @ConditionalOnClass(Jedis.class)
         public class RedisSpringBootAutoconfiguration {
-
+        
             @Bean
             @ConditionalOnMissingBean(name = "jedis")
             public Jedis jedis(RedisProperties redisProperties) throws ReflectiveOperationException {
                 return Jedis.class
                         .getDeclaredConstructor(String.class,int.class)
                         .newInstance(redisProperties.getHost(), redisProperties.getPort());
-
+        
             }
-
+        
         }
         ```
 
@@ -396,6 +425,6 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
     ```
 
     让spring找到你的Autofiguration
-
+    
     好像所有被导入的依赖的包下的factories都会被扫到
 

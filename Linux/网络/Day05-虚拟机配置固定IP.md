@@ -10,6 +10,14 @@
 
 2.  在Linux系统中手动修改文件, 固定IP
 
+
+
+
+
+
+
+
+
 vim编辑配置文件`/etc/sysconfig/network-scripts/ifcfg-ens33`文件
 
 `Esc`+`:`+`set nu`查看行号
@@ -19,6 +27,8 @@ BOOTPROTO改成`static`
 ```properties
 BOOTPROTO="static"
 ```
+
+
 
 IP地址,随意
 
@@ -53,6 +63,8 @@ export https_proxy=http://127.0.0.1:7890
 #保存然后更新配置
 source /etc/profile
 ```
+
+
 
 重启网卡
 

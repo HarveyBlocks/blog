@@ -32,6 +32,8 @@ public static void main(String[] args) {
 }
 ```
 
+
+
 ## synchronized锁方法
 
 加在对象方法上, 锁this对象
@@ -44,7 +46,7 @@ public synchronized void a() {
 }
 
 public synchronized static void b() {
-
+    
 }
 ```
 

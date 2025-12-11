@@ -12,6 +12,8 @@
 
 ## 创建
 
+
+
 ```mysql
 Create [Or Replace] View 取一个视图名[(列名列表)] As Select语句 [with [cascaded|local] check option]
 ```
@@ -26,6 +28,8 @@ Create [Or Replace] View 取一个视图名[(列名列表)] As Select语句 [wit
 Show create view 视图名称;
 ```
 
+
+
 -   查询试图内容
 
     简而言之,当成表查,例如:
@@ -34,6 +38,8 @@ Show create view 视图名称;
 select * from view_1;
 ```
 
+
+
 ## 修改
 
 -   理解为赋值为佳
@@ -41,6 +47,8 @@ select * from view_1;
 ```mysql
 Create [Or Replace] View 要改的视图名[(列名列表)] As Select语句;
 ```
+
+
 
 ```mysql
 alter view 视图名[(列名列表)] as Select语句;

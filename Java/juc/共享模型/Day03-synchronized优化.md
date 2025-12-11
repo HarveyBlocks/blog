@@ -6,6 +6,8 @@
 
 一个对象虽然有多线程访问, 但多线程访问的时间是错开的(也就是没有竞争), 那么可以用轻量级锁来优化
 
+
+
 ### 语法
 
 轻量级锁对使用者是"透明的", 语法依然是`synchronized`
@@ -13,6 +15,8 @@
 JVM优先用轻量级锁加锁, 轻量级锁失败了, 再升级成重量级锁
 
 ### 上锁流程
+
+
 
 ```java
 static final Object LOCK = new Object();
@@ -111,6 +115,10 @@ public static void in(){
 
 自旋只适合在多核的情况下使用, 单核的情况下, 一个线程在自旋, 一个线程在指向代码块的内容, 没有CPU可用, 就没有意义
 
+
+
+
+
 ```mermaid
 sequenceDiagram
 
@@ -118,6 +126,7 @@ participant t1 as 线程1
 participant t2 as 线程2
 participant lock as 锁对象Mark
 participant source as 同步块
+
 
 lock->>source : 重量锁
 t1->>source : 访问同步块
@@ -230,6 +239,8 @@ m3调用synchronized--检查ThreadId是否是当前线程--> 锁对象
 这是, 偏向了线程A的对象仍有机会重新偏向线程T2
 
 重偏向会重置对象的ThreadID
+
+
 
 当撤销偏向锁达到阈值(20次)后, JVM将考虑给这些锁对象枷锁时重新偏向至上锁线程
 

@@ -2,6 +2,8 @@
 
 >   Direct 定向
 
+
+
 ## 需求的产生
 
 不同的微服务想要收到不同的消息
@@ -12,7 +14,13 @@
 
 -   Direct交换机会将接收到的消息**根据规则**路由到指定Queue
 
+
+
+
+
 ![Multiple Bindings](../../assets/Day02-Direct交换机/direct-exchange-multiple.png)
+
+
 
 ![Direct Exchange routing](../../assets/Day02-Direct交换机/direct-exchange.png)
 

@@ -145,6 +145,7 @@ private class SimpleDocumentNodeHandler(private val skipWhitespace: Boolean) {
         stack.addLast(node)
     }
 
+
     fun characters(text: String) { // 文本
         require(stack.isNotEmpty()) { "text should after before tag" }
         val trim = if (skipWhitespace) text.trim() else text
@@ -217,6 +218,8 @@ fun saxParse(inputSource: InputSource, skipWhitespace: Boolean = true): Doc {
     return handler.document
 }
 ```
+
+
 
 ### 使用
 
@@ -319,6 +322,7 @@ object XmlUtils {
             }
             stack.addLast(node)
         }
+
 
         fun characters(text: String) {
             require(stack.isNotEmpty()) { "text should after before tag" }

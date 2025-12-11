@@ -39,6 +39,8 @@ centos-redis:0>hset user:B id 2 name 'Mary' age 15 gender '女'
 
 ![image-20240102002101946](../../assets/Day01-Hash类型/image-20240102002101946.png)
 
+
+
 **若存在这个field, 则不执行**
 
 ```bash
@@ -50,6 +52,8 @@ HSetNx Object field value
 ```bash
 hdel 键 字段
 ```
+
+
 
 ```bash
 centos-redis:0>hdel user:A age
@@ -75,7 +79,11 @@ centos-redis:0>hget user:A age
 "15"
 ```
 
+
+
 ### 批量操作
+
+
 
 #### 多个key
 
@@ -84,6 +92,8 @@ HMSet Object field1 Value1 field2 Value2 ..
  ```
 
 有什么意义?
+
+
 
 ```bash
 HMGet Object field1 field2 ...
@@ -96,6 +106,8 @@ centos-redis:0>hmget user:A id age name gender
 3) "Jack"
 4) "男"
 ```
+
+
 
 #### 查一个key
 
@@ -117,6 +129,8 @@ centos-redis:0>hgetAll user:A
 8) "男"
 ```
 
+
+
 获取一个hash类型的key中的所有filed
 
 ```bash
@@ -131,6 +145,8 @@ centos-redis:0>hKeys user:A
 4) "gender"
 ```
 
+
+
 获取一个hash类型的key中所有的value
 
 ```bash
@@ -144,6 +160,8 @@ centos-redis:0>hVals user:A
 3) "15"
 4) "男"
 ```
+
+
 
 ### 自增自减
 
@@ -160,6 +178,8 @@ centos-redis:0>hVals user:A
 3) "15"
 4) "男"
 ```
+
+
 
 没有`hdecrBy`
 

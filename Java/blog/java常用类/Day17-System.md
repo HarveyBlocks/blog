@@ -15,7 +15,7 @@
 ```java
 public class Main {
     public static void main(String[] args) {
-
+        
         int[] src = {1, 2, 4, 76, 14, 15, 1, 6, 1, 5, 9, 95, 5, 4, 6, 14, 5, 8};
         int[] dest = new int[50];
         int srcPos = 5;

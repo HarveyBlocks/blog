@@ -12,6 +12,8 @@
 
 ![Android 架构](../assets/Day01-简介/android_architecture.jpg)
 
+
+
 -   Linux 内核
 
     -   为Android设备的各种硬件提供了底层的驱动， 如显示驱动、音频驱动、照相机驱动、蓝牙驱动、Wi-Fi驱动、电源管理等
@@ -56,6 +58,8 @@
     -   用于应用程序之间共享数据
     -   例如读取系统通讯录中的联系人
 
+
+
 ## 支持
 
 -   系统空间
@@ -63,9 +67,19 @@
 -   SQLite 数据库
 -   多媒体
 
+
+
+
+
+
+
 ## 应用的界面结构
 
+
+
 ![image-20250915215801511](../assets/Day01-简介/image-20250915215801511.png)
+
+
 
 -   `ViewGroup` 不可见的容器，定义 `View` 和其他 `ViewGroup` 的布局结构 对象
 -   `View`  绘制用户可见的内容, `View` 对象通常称为*微件*，可以是诸多组件, `Button`, `TextView`等
@@ -106,6 +120,8 @@
 系统将XML布局文件编译成View资源
 
 在`Activity.onCreate()`回调实现
+
+
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -274,6 +290,10 @@ Android Studio依照一般的项目结构整理后的展示样式
 </activity>
 ```
 
+
+
+
+
 ### build.gradle
 
 gradle构建脚本
@@ -286,17 +306,29 @@ gradle构建脚本
 
 其实gradle的语法都是Kotlin的构建器语法模式
 
+
+
+
+
+
+
 ### proguard-rules.pro
 
 规定代码混淆规则, 避免被反编译后窃取源码
+
+
 
 ### res
 
 <img src="../assets/Day01-简介/image-20250915220027468.png" alt="image-20250915220027468" style="zoom:50%;" />
 
+
+
 下面是物理的项目结构
 
 <img src="../assets/Day01-简介/image-20250915220057378.png" alt="image-20250915220057378" style="zoom:50%;" />
+
+
 
 -   `drawable` 图像
 

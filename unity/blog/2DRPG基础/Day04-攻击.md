@@ -10,6 +10,8 @@
 
 ![image-20241021102423197](../../assets/Day04-攻击/image-20241021102423197.png)
 
+
+
 ## 攻击动画
 
 1.   制作动画Attack1, Attack2, critcal attack
@@ -43,6 +45,7 @@
          isAttack==true
 
          attack
+
 
      <img src="../../assets/Day04-%E6%94%BB%E5%87%BB/image-20241021105111493.png" alt="image-20241021105111493" style="zoom:50%;" />
 
@@ -79,19 +82,19 @@
          #region 组件
          #region 私有字段
          #region 公有字段
-
+     
          #region 属性
-
+     
          public bool IsAttack { get; private set; } = false;
-
+     
          #endregion
-
+     
          #region 事件
-
+     
          public UnityEvent onAttack;
-
+     
          #endregion
-
+     
          #region 事件函数
          private void Awake() {
              // ...
@@ -100,22 +103,23 @@
          // ...
          #endregion
          #region 移动
-
+     
+     
          #region 跳跃
-
+     
          #region 攻击
-
+     
          private void Attack(InputAction.CallbackContext obj) {
              IsAttack = true;
              onAttack?.Invoke();
          }
-
+     
          public void RecoverFromAttack() {
              IsAttack = false;
          }
-
+     
          #endregion
-
+     
          #region 受击与死亡
      }
      ```
@@ -125,25 +129,25 @@
       ```csharp
       public class PlayerAnimation : MonoBehaviour {
           参数Id 
-
+              
           组件
-
+      
           #region 事件函数
       	// ..
-
+              
           private void Update() {
               Transform();
               Attack();
           }
           #endregion
-
+      
           #region 参数设置
       	// ...
           private void Attack() {
               _animator.SetBool(IsAttack, _pc.IsAttack);
           }
           #endregion
-
+      
           #region 触发器
       	// ...
           public void AttackTrigger() {
@@ -254,7 +258,7 @@
               // 失去移动控制权限
               return;
           }
-
+      
           // 进行移动控制
           TurnAround(); // 转身
           Move();
@@ -272,17 +276,17 @@
               if (pc is null) {
                   return;
               }
-
+      
               pc.IsAttack = true;
           }
-
+      
           public override void OnStateExit(
               Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
               var pc = animator.GetComponent<PlayerController>();
               if (pc is null) {
                   return;
               }
-
+      
               pc.IsAttack = false;
           }
       }
@@ -295,12 +299,12 @@
       ```csharp
       public PhysicsMaterial2D materialOnGround;
       public PhysicsMaterial2D materialInAir;
-
+      
       private void Update() {
           UpdateInputDirection();
           UpdateMaterial();
       }
-
+      
       private void UpdateMaterial() {
           // _cc CapsuleCollider2D
           _cc.sharedMaterial = _epc.onGround? materialOnGround : materialInAir;

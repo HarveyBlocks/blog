@@ -60,6 +60,8 @@
     }
     ```
 
+
+
 ## 对请求的实践
 
 ### 使用@RestController
@@ -67,11 +69,15 @@
 1.  注解在类上
     -   这个类上的所有方法皆被管理
 
+
+
 #### 看源码
 
 ![image-20231203143703908](../../assets/Day02-Rust风格/image-20231203143703908.png)
 
 -   注意,只能响应响应体,不能响应页面了
+
+
 
 ### 实践
 
@@ -112,7 +118,7 @@ public ModelAndView findUserById(
         @PathVariable("username") String username){
     //@PathVariable把路径转成数据
     System.out.println(username+"->"+id);
-
+    
     ModelAndView modelAndView = new ModelAndView();
     modelAndView.setViewName("/index.jsp");
     return  modelAndView;
