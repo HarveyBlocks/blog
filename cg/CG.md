@@ -25,6 +25,7 @@ $$
 求 $\vec{n} \times \vec{u}$ 相当于将 $\vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $90^{\circ}$
 
 同理可得, 求 $\vec{n} \times (\vec{n} \times \vec{u})$ 相当于将 $\vec{n} \times \vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $90^{\circ} $, 即将 $\vec{u}$ 这个向量在平面 $\alpha$ 上旋转了 $180^{\circ}$
+
 $$
 det\left(\begin{array}{ll}
 \vec{u} \\ \vec{v} \\ \vec{w}
@@ -33,6 +34,7 @@ det\left(\begin{array}{ll}
 (\vec{v}\times\vec{w})\cdot\vec{u}=
 (\vec{w}\times\vec{u})\cdot\vec{v}
 $$
+
 例如$\vec{u}\times\vec{v}$就是底面积, 同时也是u-v平面的法向量, $(\vec{u} \times \vec{v}) \cdot \vec{w}$ 就是求这个菱形的体积
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208223852460.png" alt="image-20251208223852460" style="zoom:50%;" />
@@ -68,9 +70,11 @@ $$
 ## Gradients on Function
 
 对于 $F(f)$ 回归定义
+
 $$
 << \nabla F,u >> := D_uF
 $$
+
 $$
 D_uF := \lim_{\epsilon \to 0} \frac{F(f+\epsilon u)-F(f)}{\epsilon}
 $$
@@ -78,20 +82,30 @@ $$
 对于 $F(f) = <<f,g>>$ 函数内积作为 $F$ 的定义, 其梯度类比可得 $\nabla F = g$
 
 对于 $F(f) = ||f||^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
+
 $$
 <<\nabla F(f_0), u>> = \lim_{\epsilon \to 0} \frac {F(f_0+\epsilon u)-F(f_0)} {\epsilon}
 $$
+
 即
+
 $$
+
 F(f_0+\epsilon u)= ||f_0+\epsilon u||^2 
 = ||f_0||^2 + \epsilon^2 ||u||^2 + 2 \epsilon<<f_0,u>>
 = F(f_0)+\epsilon^2F(u)
+
 $$
 
+
 带入得
+
 $$
+
 <<\nabla F(f_0), u>> = 2<<f_0,u>>
+
 $$
+
 
 # Sampling
 
@@ -236,7 +250,9 @@ z-buffer能解决画家算法无法解决的循环遮挡的问题
 ### 投影
 
 将2D空间的向量 经过三维的矩阵变换, 再投影到2维的空间上
+
 $$
+
 A \vec{v} \to \vec{m} := A\left(\begin{array}{ll}
 v_x \\
 v_y \\
@@ -245,18 +261,24 @@ v_y \\
 m_x/m_z \\
 m_y/m_z
 \end{array} \right) 
+
 $$
+
 
 ### 旋转
 
 每个点之间的距离不变 
+
 $$
+
 \left(\begin{array}{ll}
 \cos{\theta} & -\sin{\theta} & 0\\
 \sin{\theta} & \cos{\theta} & 0 \\
 0 & 0 & 1
 \end{array} \right)
+
 $$
+
 旋转$R$的反操作是其转置 $R^T$ , 即 $R^{-1} = R^T$
 
 三维空间下的旋转
@@ -265,13 +287,17 @@ $$
 
 ### 缩放
 
+
 $$
+
 \left(\begin{array}{ll}
 a & 0 & 0\\
 0 & b & 0 \\
 0 & 0 & 1
 \end{array} \right)
+
 $$
+
 
 当a, b异号, 则发生reflect对称
 
@@ -282,9 +308,13 @@ $$
 向 $\vec{e} = (e_1,e_2)$ 方向进行程度为$\vec{u} = (u_1,u_2)$的剪切
 
 其变换矩阵应该为
+
 $$
+
 A_{u,e} = I + \vec{u}\cdot\vec{e}^T
+
 $$
+
 
 $$
 A_{u,e} = \left(\begin{array}{ll}
@@ -360,9 +390,13 @@ $$
 ### 相机变换
 
 相机移动变换矩阵 $A$ 转换成物体进行变换矩阵为 $A^{-1}$ 的移动
+
 $$
+
 Camera(A) \to Object(A^{-1})
+
 $$
+
 相机镜头对准的旋转
 
 已知相机的镜头方向单位向量是$\vec{w}$, 希望最终能指向$-z$轴
@@ -375,6 +409,7 @@ $$
    4. 只要求出$\vec{u}$, 使用叉乘 $\vec{w} \times \vec{u}$, 就可以得到 $\vec{v}$
 
 2. 即可获取摄像机的方向旋转到 $-z$ 轴矩阵 $R$
+   
    $$
    R = \left(\begin{array}{ll}
    u_x & v_x & -w_x\\
@@ -388,6 +423,7 @@ $$
    证明 $R^{-1} = R^T$ 只需要证明  $R^T R = E$ 即可
 
 4. 即获取到坐标轴变换矩阵 $R_A$ 
+   
    $$
    R_A = \left(\begin{array}{ll}
    u_x & u_y & u_z \\
@@ -460,6 +496,7 @@ $$
    由于在结果中x和y的位置出现了z, 而线性运算不会达到这种效果, 因此, 这需要最后一步做特殊处理
 
    最后一步, 向量除以第四维的数值, 表示映射回到三维空间上
+   
    $$
    M\times\left(\begin{array}{ll}
    x\\y\\z\\1
@@ -471,6 +508,7 @@ $$
    $$
 
    变换矩阵如下
+   
    $$
    M = \left(\begin{array}{ll}
    n &  &   &  \\
@@ -479,7 +517,9 @@ $$
     &   & 1 & 0 
    \end{array} \right)
    $$
+   
    代入得
+   
    $$
    M\times\left(\begin{array}{ll}
    x\\y\\z\\1
@@ -489,11 +529,13 @@ $$
    x\cdot \frac{n}z\\y\cdot\frac{n}z\\A+\frac{B}z\\1
    \end{array} \right)
    $$
+   
    依据条件最远景平面距离不变, 即对于 $F(z) = A+\frac{B}z$ , 有 $F(n)=n$ 且 $F(f)=f$
 
    则得出 $A= n+f, B=- n \cdot f$
 
    代入 $M$ 得
+   
    $$
    M = \left(\begin{array}{ll}
    n &  &   &  \\
@@ -504,12 +546,15 @@ $$
    $$
 
 2. 由于Z指向负轴, 因此需要进行一个$z \to -z $ 的映射
+   
    $$
    R_x \times M \times  \left(\begin{array}{ll}
    x \\ y \\ z \\ 1
    \end{array} \right)
    $$
+   
    第三维和第四维都有 $z$
+   
    $$
    R_x = \left(\begin{array}{ll}
    1&&& \\ 
@@ -529,6 +574,7 @@ $$
    - **f** : far
 
 4. 平移到原点
+   
    $$
    T = \left(\begin{array}{ll}
    1 &  &   & -\frac{r+l}{2}  \\
@@ -539,6 +585,7 @@ $$
    $$
 
 5. 使用scale进行归一( 其实是(-1,1), 长度2 )化, 由于是 -z 轴, 所以 n 比 f 大
+   
    $$
    S = \left(\begin{array}{ll}
    \frac2{r-l} &  &   &  \\
@@ -549,6 +596,7 @@ $$
    $$
 
 6. 对空间中的任意向量 $\vec{v}$ 复合两个操作
+   
    $$
    \vec{v'} = S \times T \times M \times \left(\begin{array}{ll}
    v_x \\
@@ -557,7 +605,9 @@ $$
    1
    \end{array} \right)
    $$
+   
    对于 $S \times T$, 复合矩阵即
+   
    $$
    S \times T = \left(\begin{array}{ll}
    
@@ -568,6 +618,7 @@ $$
    
    \end{array} \right)
    $$
+   
    定义$M_{ortho}=S \times T$ , $M_{persp\to ortho} = M$, $M_{persp}=M_{ortho}\times M_{persp\to ortho} $
 
    ==TODO 这里有一个很困惑的点, 各种教材里都没有讲最后一行变化时为什么莫名其妙变成-1了==
@@ -631,9 +682,11 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209234934712.png" alt="image-20251209234934712" style="zoom:50%;" />
 
 使用解析式法, 如下
+
 $$
 \hat{f}(x,y)  = ax+by+c
 $$
+
 ![image-20251209235132800](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209235132800.png)
 
 如果转化思路, 变为比例的概念, 重心<->面积比例<->高
@@ -711,6 +764,7 @@ MipMap思路大概如此, 在每个可能的尺度上存储一个预过滤的图
 ![image-20251210021607292](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210021607292.png)
 
 上图中, 屏幕空间的 $(u,v)_{0,0}$ 这一块空间, 对应了多大的mipmap纹理空间?
+
 $$
 level = Log_2 \sqrt{max(L_x^2,L_y^2)}
 $$
@@ -720,6 +774,7 @@ L_x^2 = (\frac{du}{dx})^2+(\frac{dv}{dx})^2, L_y^2=(\frac{du}{dy})^2+(\frac{dv}{
 $$
 
 屏幕空间的 $(u,v)_{0,0}$ 和相邻区域在坐标系 $x-y$ 下的差就是  $dx=1, dy=1$
+
 $$
 \frac{du}{dx} = u_{10}-u_{00} ,
 \frac{dv}{dx} = v_{10}-v_{00} 
@@ -807,13 +862,17 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210154756152.png" alt="image-20251210154756152" style="zoom:50%;" />
 
 P点的高斯中心
+
 $$
 \phi_p(x) := e^{-(x-p)^2}
 $$
+
 使用高斯中心之和来表示某两个点的融合
+
 $$
 f := \phi_p + \phi_q
 $$
+
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210154230482.png" alt="image-20251210154230482" style="zoom:50%;" />
 
 在 $f$ 上, 取不同的高度, 来投影到二维平面上, 查看不同半径的圆的融合
@@ -825,6 +884,7 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210160041252.png" alt="image-20251210160041252" style="zoom:50%;" />
 
 末尾的 $0.5$ 可选择其他合适的值
+
 $$
 f(x) := e^{d_1(x)^2}+e^{d_2(x)^2}-0.5
 $$
@@ -900,9 +960,11 @@ $$
 ### 伯恩斯坦基底
 
 一个选取概率的操作
+
 $$
 B^n_k(t) := C_n^k t^k(1-t)^{n-k}
 $$
+
 使用伯恩斯坦基底可以构造曲线
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210165144789.png" alt="image-20251210165144789" style="zoom: 50%;" />
@@ -910,6 +972,7 @@ $$
 贝塞尔曲线就是使用伯恩斯坦基底构造的曲线
 
 定义控制点$p_k$
+
 $$
 \gamma(s) := \sum_{k=0}^{n} B^n_k(s)p_k
 $$
@@ -942,12 +1005,15 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210170314783.png" alt="image-20251210170314783" style="zoom:50%;" />
 
 对于曲面构建, 伯恩斯坦基底
+
 $$
 B_{i,j}^3 := B_{i}^3 B_{j}^3 
 $$
+
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210170835510.png" alt="image-20251210170835510" style="zoom:50%;" />
 
 获取贝塞尔曲面片, 定义空间中的控制点 $p_{ij}$
+
 $$
 S(u,v) := \sum_{i=0}^3\sum_{j=0}^3B^3_{i,j}(u,v)p_{i,j}
 $$
@@ -1130,6 +1196,7 @@ do{
 3. 新点的坐标是周围老坐标的加权平均
 
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211024747069.png" alt="image-20251211024747069" style="zoom: 50%;" />
+   
    $$
    p := \sum_i\phi_ip_i
    $$
@@ -1139,13 +1206,16 @@ do{
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211024925893.png" alt="image-20251211024925893" style="zoom:50%;" />
 
    定义中间量 $u$
+   
    $$
    u := \left\{\begin{align}
      \frac{3}{16} & &n = 3\\
      \frac{3}{8n} & &otherwise
    \end{align}\right.
    $$
+   
    最终计算得旧点的新位置坐标为
+   
    $$
    p'_0 = \sum_{i=1}^n{u \cdot p_i} + (1-n\cdot u) \cdot p_0
    $$
@@ -1157,6 +1227,7 @@ do{
 1. 在其中插入一个点 $m$
 
    其坐标是周边各个点的加权平均
+   
    $$
    p_m = \frac{1}{n} \sum_ip_i
    $$
@@ -1205,13 +1276,17 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
 1. 找到新点 $m$
 
    评判影响使用点到平面的距离之和
+   
    $$
    dist_i(x) := < \vec{N} ,  \vec{x}- \vec{p}>
    $$
+   
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211032817419.png" alt="image-20251211032817419" style="zoom:50%;" />
+   
    $$
    dist(x) := \sum_i{< \vec{N_i} ,  \vec{x}- \vec{p}>}
    $$
+   
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211032945329.png" alt="image-20251211032945329" style="zoom:50%;" />
 
    下面给出运算最小值 $\vec{x}$ 的方法, 证明略(大概就是矩阵正定, 开平方这些)
@@ -1223,7 +1298,8 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
    3. 定义矩阵 $K$, $cost = <u,v>^2 = u^T(vv^T)u =: u^TKu$
 
    4. 再分解 $K$, 定义 $B,\vec{w}$
-      $$
+      
+	  $$
       K = \left(\begin{array}{ll}
        a^2&ab&ac&ad\\
        ab&b^2&bc&bd\\
@@ -1236,12 +1312,14 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
       $$
 
    5. 在 $\vec{x}$ 满足下式时, $cost$ 最小
-      $$
+      
+	  $$
       \vec{x} = -B^{-1}\vec{w}
       $$
 
    6. 对于点 $p_i$ 的损失 $K_i$, 边 $e_{ij}$ 的损失 $K_{ij}$
-      $$
+      
+	  $$
       K_{ij} = K_i+K_j
       $$
 
@@ -1306,9 +1384,11 @@ subdivision 时, 过高的degree会导致瑕疵
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211040011918.png" alt="image-20251211040011918" style="zoom:50%;" />
 
 总偏差的计算如下
+
 $$
 |d_i - 6|+|d_j - 6|+|d_k - 6|+|d_l - 6|
 $$
+
 上图中是从5降到了1, 则进行翻转
 
 ### 更接近等边三角形
@@ -1351,18 +1431,23 @@ $$
 $Radiant$ $Energy$ 光子击中物体表面的次数
 
 单个光子的能量 $Q$
+
 $$
 Q = h \frac{c}{\lambda}
 $$
+
 其中, 普朗克常量 $h \approx 6.626 \times 10^{-34} J \cdot s$ , 光速 $c \approx 3.00 \times 10^{8} m/s$ , 波长 $\lambda$ 是可变参数, 关系到颜色
 
 ## 辐射通量
 
 $Radiant$ $Flux$ 每单位时间, 光子击中表面的次数, 单位 瓦特
-$$ { }
+
+$$
 \Phi = \lim_{\Delta \to 0} \frac{\Delta Q}{\Delta t} = \frac{dQ}{dt}
 $$
+
 对于辐射能量 $Q$
+
 $$
 Q = \int_{t_0}^{t_1}{\Phi(t)}dt
 $$
@@ -1374,15 +1459,19 @@ $Radiant$ $Density$ 每单位面积, 光子击中表面的次数
 ## 辐照度
 
 $Radiant$ $Flux$ $Density$ / $Irradiance$ 每单位面积, 单位时间, 光子击中表面的次数
+
 $$
 E(p) = \lim_{\Delta \to 0} \frac{\Delta \Phi(p)}{\Delta A} = \frac{d\Phi(p)}{dA}
 $$
+
 其中所照表面面积为 $A$, 应当是直面光线的面积
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211143406134.png" alt="image-20251211143406134" style="zoom:50%;" />
+
 $$
 cos(\theta) = \vec{n} \cdot \vec{l}
 $$
+
 其中 $\vec{n}$ 是表面的单位法向量, $\vec{l}$ 是法向量起点指向光源的单位方向向量
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211143803069.png" alt="image-20251211143803069" style="zoom:50%;" />
@@ -1406,18 +1495,25 @@ $Intensity$, **光源**发出的光的能量在各方向上的密度(**特定方
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211154549109.png" alt="image-20251211154549109" style="zoom:33%;" />
 
 光强和辐射通量之间的关系
+
 $$
 \Phi = \int_{S^2} I d \omega = 4 \pi I
 $$
+
 得出光强
+
 $$
 I = \frac{\Phi}{4\pi}
 $$
+
 在某一**特定方向**(角度 $\omega$) 的**单位长度**上的光强
+
 $$
 I(\omega) = \frac{d\Phi}{d\omega}
 $$
+
 又有 $E = \frac{d\Phi}{dA}$, 得
+
 $$
 E = \frac{I(\omega)}{r^2}
 $$
@@ -1431,9 +1527,11 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211160427217.png" alt="image-20251211160427217" style="zoom: 33%;" />
 
 在平面上的角(弧度) $\theta := \frac{l}{r}$, 立体角的定义为:
+
 $$
 \Omega := \frac{A}{r^2}
 $$
+
 其中 $A$ 是球的**部分表面积**
 
 由定义, 球的立体弧度为 $4\pi$
@@ -1451,21 +1549,27 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211161830550.png" alt="image-20251211161830550" style="zoom:33%;" />
 
 首先从微风的角度上考虑, $dA = (r\cdot d\theta)(rsin(\theta)\cdot d\phi)$, 与 $\omega$ 的定义联立
+
 $$
 dA  = \left\{\begin{array}{ll}
 r^2 sin(\theta)\cdot d\theta d\phi\\
 r^2d\omega
 \end{array} \right.
 $$
- 可得
+
+可得
+
 $$
 d\omega = sin(\theta) d\theta d\phi
 $$
+
 积分得
+
 $$
 \Omega = \int_{S^2} d\omega = \int_0^{\theta_0}\int_0^{\phi_0} sin(\theta) d\theta d\phi
 = (1-cos(\theta_0))\phi
 $$
+
 ==有时, $\omega$ 也会被用作方向向量, 存在符号滥用的现象== 
 
 ## 光强和距离的关系
@@ -1473,10 +1577,13 @@ $$
 到点光源的距离和**辐照度**之间的关系
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211154958645.png" alt="image-20251211154958645" style="zoom: 33%;" />
+
 $$
 E = \frac{\Phi}{4\pi r^2 } \to \Phi = 4\pi r^2 E
 $$
+
 得出关系是**平方反比**的
+
 $$
 \frac{E_1}{E_2} = (\frac{r_2}{r_1})^2
 $$
@@ -1486,12 +1593,15 @@ $$
 $Radiance$
 
 表示辐射度在立体角上的密度, 单位时间, 单位面积, 单位立体角上的光的能量
+
 $$
 L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
 $$
+
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
 
 但被照射到的平面的法向量和光线的照射存在一定夹角$\theta$时, 要除$cos\theta$ 进行调整
+
 $$
 L(p,w) = \frac{dE(p)}{d\omega \cdot cos\theta} = \frac{d^2\Phi(p)}{dA d\omega \cdot cost\theta}
 $$
@@ -1502,13 +1612,17 @@ $$
 但需要求一个表面 $H$ 上所有的光强时
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085935070.png" alt="image-20251212085935070" style="zoom:50%;" />
+
 $$
 E(p,\omega) = \int_{H^2} L_i(p,\omega)  \cdot cos\theta \cdot d\omega
 $$
+
 对于上图的半球
+
 $$
 E(p) = \int_{H^2} L d\omega = L \int_{H^2}d\omega = L \int_0^{2\pi} \int_0^{\frac{\pi}{2}} cos\theta \cdot sin\theta \cdot d\theta d\phi = L\pi
 $$
+
 对于辐射率的结果, 我们往往将其存储起来作为贴图
 
 ##  入射光线和出射光线
@@ -1519,13 +1633,11 @@ $$
 
 方向不同
 
-
-
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085520326.png" alt="image-20251212085520326" style="zoom:33%;" />
+
 $$
 L_i(p_1,\omega_1) \ne L_o(p_1,\omega_1)
 $$
-
 
 ## 亮度
 
@@ -1549,7 +1661,9 @@ $Rending$ $Equation$
 $$
 L_0 = L_e+L_r
 $$
+
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251214012650996.png" alt="image-20251214012650996" style="zoom:50%;" />
+
 $$
 L_0(\boldsymbol{p},\omega) \space = \space L_e(\boldsymbol{p},\omega_{0}) \space
 + \space \int_{H^2}f_r(\boldsymbol{p},\omega_i \to \omega_0)\space L_i(\boldsymbol{p},\omega_i) 
