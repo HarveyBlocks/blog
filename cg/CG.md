@@ -1,3 +1,5 @@
+# 目录
+
 [TOC]
 
 # Vector Space
@@ -75,7 +77,7 @@ $$
 
 对于 $F(f) = <<f,g>>$ 函数内积作为 $F$ 的定义, 其梯度类比可得 $\nabla F = g$
 
-对于$F(f) = ||f||^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
+对于 $F(f) = ||f||^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
 $$
 <<\nabla F(f_0), u>> = \lim_{\epsilon \to 0} \frac {F(f_0+\epsilon u)-F(f_0)} {\epsilon}
 $$
@@ -558,28 +560,31 @@ $$
    对于 $S \times T$, 复合矩阵即
    $$
    S \times T = \left(\begin{array}{ll}
+   
    \frac2{r-l} & 0 & 0 & -\frac{r+l}{r-l}  \\
    0 & \frac2{t-b} & 0 & -\frac{t+b}{t-b}  \\
    0 & 0 & \frac2{n-f} & -\frac{n+f}{n-f}  \\
    0 & 0 & 0 & 1 
+   
    \end{array} \right)
-   $$
+$$
    定义$M_{ortho}=S \times T$ , $M_{persp\to ortho} = M$, $M_{persp}=M_{ortho}\times M_{persp\to ortho} $
 
    ==TODO 这里有一个很困惑的点, 各种教材里都没有讲最后一行变化时为什么莫名其妙变成-1了==
 
    ==我的理解是 $R$ 对称变化, 就是由于Camera面向$-z$的缘故, 但是不确定==
-
+   
    对于 $M_{persp}$, 复合矩阵即
-   $$
+   
+$$
    M_{persp}=M_{ortho}\times M_{persp\to ortho} = \left(\begin{array}{ll}
-\frac{2n}{r-l} & 0 & \frac{r+l}{r-l} & 0  \\
+   \frac{2n}{r-l} & 0 & \frac{r+l}{r-l} & 0  \\
    0 & \frac{2n}{t-b} & \frac{t+b}{t-b} & 0 \\
    0 & 0 & -\frac{f+n}{f-n} & \frac{-2fn}{f-n}  \\
    0 & 0 & -1 & 0 
-   \end{array} \right)
+\end{array} \right)
    $$
-
+   
 7. 对于现代计算机的图形渲染, 因此从空间到数组的索引, 也存在一个映射
 
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209223532674.png" alt="image-20251209223532674" style="zoom:50%;" />
@@ -737,7 +742,11 @@ $$
 
 三次线性插值
 
-对于空间中的任意点 $(u,v,w)$, 其相邻的八个取值点 $f_{000},f_{001},f_{010},f_{011},f_{100},f_{101},f_{110},f_{111},$
+对于空间中的任意点 $(u,v,w)$, 其相邻的八个取值点 
+
+$f_{000},f_{001},f_{010},f_{011},f_{100},f_{101},f_{110},f_{111}$
+
+
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210022917654.png" alt="image-20251210022917654" style="zoom:50%;" />
 
@@ -1481,6 +1490,82 @@ $$
 L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
 $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
+
+但被照射到的平面的法向量和光线的照射存在一定夹角$\theta$时, 要除$cos\theta$ 进行调整
+$$
+L(p,w) = \frac{dE(p)}{d\omega \cdot cos\theta} = \frac{d^2\Phi(p)}{dA d\omega \cdot cost\theta}
+$$
+
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212084048965.png" alt="image-20251212084048965" style="zoom:50%;" />
+
+但需要求一个表面 $H$ 上所有的光强时
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085935070.png" alt="image-20251212085935070" style="zoom:50%;" />
+$$
+E(p,\omega) = \int_{H^2} L_i(p,\omega)  \cdot cos\theta \cdot d\omega
+$$
+对于上图的半球
+$$
+E(p) = \int_{H^2} L d\omega = L \int_{H^2}d\omega = L \int_0^{2\pi} \int_0^{\frac{\pi}{2}} cos\theta \cdot sin\theta \cdot d\theta d\phi = L\pi
+$$
+对于辐射率的结果, 我们往往将其存储起来作为贴图
+
+##  入射光线和出射光线
+
+入射光线 $L_i$ $\ne$ 出射光线 $L_o$
+
+强度不同, 比如绿色的物体只反射绿光, 吸收其他所有光
+
+方向不同
+
+
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085520326.png" alt="image-20251212085520326" style="zoom:33%;" />
+$$
+L_i(p_1,\omega_1) \ne L_o(p_1,\omega_1)
+$$
+
+
+## 亮度
+
+$Luminance$
+
+这个量忽略颜色, 只表达亮度, 是将波长 $\lambda$ 所被人肉眼接收能力 $V(\lambda)$ 的积分
+
+$$
+Y(p,\omega) = \int_0^{\infin}L(p,\omega,\lambda) V(\lambda) d\lambda
+$$
+
+下图是人肉眼接收能力 $V(\lambda)$ 的图标, 两个不同的曲线是在亮环境和暗环境中, 肉眼接收的亮度有所不同
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212092628653.png" alt="image-20251212092628653" style="zoom:50%;" />
+
+# 渲染方程
+
+$Rending$ $Equation$
+
+物体亮度=作为光源发出的亮度+反射光发出的亮度
+$$
+L_0 = L_e+L_r
+$$
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251214012650996.png" alt="image-20251214012650996" style="zoom:50%;" />
+$$
+L_0(\boldsymbol{p},\omega) \space = \space L_e(\boldsymbol{p},\omega_{0}) \space
++ \space \int_{H^2}f_r(\boldsymbol{p},\omega_i \to \omega_0)\space L_i(\boldsymbol{p},\omega_i) 
+\space \cos(\theta) \space d \omega_i
+$$
+
+- $L_0$ 感知到的物体亮度
+- $L_e$ 物体作为光源发出的亮度
+- $L_i$ 入射光光强
+- $\boldsymbol{p}$ 点的位置
+- $\omega$  眼睛的方向
+- $\omega_i$ 入射角
+- $\omega_0$ 出射角, 也就是眼睛的方向
+- $f_r$ 散射函数, 有多上光从 $\omega_i \to \omega_0$ 反射出去
+- $\theta$ 入射方向和表面法线之间的角度
+- $H$ 能接收到其他物体发来的光的平面
 
 # TODO
 
