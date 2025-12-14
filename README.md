@@ -272,13 +272,13 @@ https://github.com/HarveyBlocks/blog
 +---其他
 |   \---解决MP分页全查
 \---其他文件的语法
-+---DTD
-+---properties
-+---xml
-+---XSD
-|   +---复合元素
-|   +---数据类型
-|   \---简单类型
-\---yaml
+    +---DTD
+    +---properties
+    +---xml
+    +---XSD
+    |   +---复合元素
+    |   +---数据类型
+    |   \---简单类型
+    \---yaml
 ```
 

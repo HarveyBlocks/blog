@@ -25,3 +25,14 @@ git pull [remote name] [branch name]
 
 - fetch之后不影响执行pull
 
+```bash
+# 从上游仓库获取最新更改
+# 合并上游仓库的更改
+git fetch upstream
+git checkout main
+git merge upstream/main
+
+# GitHub fork
+git push origin main
+```
+
