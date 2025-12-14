@@ -582,7 +582,7 @@ $$
    0 & \frac{2n}{t-b} & \frac{t+b}{t-b} & 0 \\
    0 & 0 & -\frac{f+n}{f-n} & \frac{-2fn}{f-n}  \\
    0 & 0 & -1 & 0 
-\end{array} \right)
+   \end{array} \right)
    $$
    
 7. 对于现代计算机的图形渲染, 因此从空间到数组的索引, 也存在一个映射
