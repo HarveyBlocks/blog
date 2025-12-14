@@ -567,7 +567,7 @@ $$
    0 & 0 & 0 & 1 
    
    \end{array} \right)
-$$
+   $$
    定义$M_{ortho}=S \times T$ , $M_{persp\to ortho} = M$, $M_{persp}=M_{ortho}\times M_{persp\to ortho} $
 
    ==TODO 这里有一个很困惑的点, 各种教材里都没有讲最后一行变化时为什么莫名其妙变成-1了==
@@ -576,7 +576,7 @@ $$
    
    对于 $M_{persp}$, 复合矩阵即
    
-$$
+   $$
    M_{persp}=M_{ortho}\times M_{persp\to ortho} = \left(\begin{array}{ll}
    \frac{2n}{r-l} & 0 & \frac{r+l}{r-l} & 0  \\
    0 & \frac{2n}{t-b} & \frac{t+b}{t-b} & 0 \\
