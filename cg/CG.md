@@ -1611,12 +1611,15 @@ $$
 但需要求一个表面 $H$ 上所有的光强时
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085935070.png" alt="image-20251212085935070" style="zoom: 33%;" />
+
+
 $$
 E(p,\omega) = \int_{H^2} L_i(p,\omega)  \cdot cos\theta \cdot d\omega
 $$
 
-对于上图的半球
 
+
+对于上图的半球
 $$
 E(p) = \int_{H^2} L d\omega = L \int_{H^2}d\omega = L \int_0^{2\pi} \int_0^{\frac{\pi}{2}} cos\theta \cdot sin\theta \cdot d\theta d\phi = L\pi
 $$
@@ -2013,11 +2016,16 @@ $$
 使用向量等值线, 换一种对平面的表达
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215040828774.png" alt="image-20251215040828774" style="zoom:50%;" />
+
+
+
+
 $$
 \boldsymbol{p}  = \boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2}
 $$
-再次连理方程组
 
+
+再次连理方程组
 
 $$
 \left\{\begin{align}
