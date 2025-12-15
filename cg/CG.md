@@ -1285,7 +1285,7 @@ Catmull Cark 也可以用于三角形网格, 但是效果不如Loop
    4. 再分解 $K$, 定义 $B,\vec{w}$
       
 	$$
-      K = \left(\begin{array}{ll}
+   K = \left(\begin{array}{ll}
        a^2&ab&ac&ad\\
        ab&b^2&bc&bd\\
        ac&bc&c^2&cd\\
@@ -1404,6 +1404,19 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211041535447.png" alt="image-20251211041535447" style="zoom:50%;" />
 
 因为upsampling和downsampling的操作是凸包的, 总是先一个更圆滑的方向去逼近
+
+## 保留锐利边
+
+旧点A, 调整光滑程度, 依靠给锐利边上的临近点加大比重, 给非锐利边上的临近点减少比重
+
+- 不连接锐利边, 则大幅度光滑
+- 链接一个锐利边, 在锐利边的那个方向小幅度光滑
+- 链接两条及以上锐利边, 更加保持光滑变化减少, 甚至保持原位置不变, A' = A
+
+新点M
+
+- 如果在锐利边上, 则直接是两个旧点的中点
+- 否则依照原有的算法大幅度变光滑
 
 # 辐射度学
 
@@ -1552,7 +1565,7 @@ $$
 
 $$
 \Omega = \int_{S^2} d\omega = \int_0^{\theta_0}\int_0^{\phi_0} sin(\theta) d\theta d\phi
-= (1-cos(\theta_0))\phi
+= (1-cos(\theta))\phi
 $$
 
 ==有时, $\omega$ 也会被用作方向向量, 存在符号滥用的现象== 
@@ -1580,13 +1593,16 @@ $Radiance$
 表示辐射度在立体角上的密度, 单位时间, 单位面积, 单位立体角上的光的能量
 
 $$
-L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta\omega} = \frac{dE_w(p)}{d\omega}
+L(p,\omega) := \lim_{\Delta\to0}\frac{\Delta E_{\omega}(p)}{\Delta_\omega} = \frac{dE_w(p)}{d\omega}
 $$
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251211164054615.png" alt="image-20251211164054615" style="zoom:50%;" />
 
-但被照射到的平面的法向量和光线的照射存在一定夹角$\theta$时, 要除$cos\theta$ 进行调整
+- $\omega$ : 方向向量
+- $\Delta_\omega$ : 在$\omega$ 方向上的变化量
+- $d\omega$ : 在$\omega$ 方向上的立体角的微元
 
+但被照射到的平面的法向量和光线的照射存在一定夹角$\theta$时, 要除$cos\theta$ 进行调整
 $$
 L(p,w) = \frac{dE(p)}{d\omega \cdot cos\theta} = \frac{d^2\Phi(p)}{dA d\omega \cdot cost\theta}
 $$
@@ -1596,8 +1612,7 @@ $$
 
 但需要求一个表面 $H$ 上所有的光强时
 
-<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085935070.png" alt="image-20251212085935070" style="zoom:50%;" />
-
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085935070.png" alt="image-20251212085935070" style="zoom: 33%;" />
 $$
 E(p,\omega) = \int_{H^2} L_i(p,\omega)  \cdot cos\theta \cdot d\omega
 $$
@@ -1619,6 +1634,7 @@ $$
 方向不同
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251212085520326.png" alt="image-20251212085520326" style="zoom:33%;" />
+
 
 $$
 L_i(p_1,\omega_1) \ne L_o(p_1,\omega_1)
@@ -1708,6 +1724,8 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251214223356053.png" alt="image-20251214223356053" style="zoom: 67%;" />
 
 ## 双向反射分布函数 BRDF
+
+> **B**idirectional **R**eflectance **D**istribution **F**unction
 
 反射问题转换成数学语言后, 即一个光粒子从给定方向达到表面后向另一个方向散射的**概率**
 
@@ -1883,16 +1901,563 @@ $$
 
 
 
+## 折射
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215022556369.png" alt="image-20251215022556369" style="zoom:50%;" />
+
+折射率公式
+
+
+$$
+\eta_i \sin\theta_i =  \eta_t sin\theta_t
+$$
+
+
+另一方向 $\phi$ (与上图垂直的轴上)保持不变
+
+
+
+
+
+## 双向折射分布函数 BTDF
+
+> **B**idirectional **T**ransmitted  **D**istribution **F**unction
+
+
+$$
+f_t(\omega_i,\omega_o) = \frac{1-F(\omega_i)}{|\cos\theta_i|} \delta(\omega_o - refract(\omega_i))
+$$
+
+
+对于反射有
+$$
+f_r(\omega_i,\omega_o) = \frac{F(\omega_i))}{|\cos\theta_i|}\delta(\omega_o-reflect(\omega_i))
+$$
+
+
+BSDF = BTDF + BRDF
+$$
+\int_{H^2} (f_t+f_r) \; \cos\theta_o \; d\omega_o \le 1
+$$
+对于 $F(\theta_i)$
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215031407623.png" alt="image-20251215031407623" style="zoom:50%;" />
+
+## 双向次表面反射分布函数 BSSDF
+
+出射点和入射点
+
+拓展BRDF, 不仅考虑入射方向和出射方向, 还考虑入射点和出射点
+
+引入由于另一点的入射微分辐照度而导致的一点意外辐照度  $S(x_i, \omega_i, x_o, \omega_o)$
+
+
+$$
+L(x_o,\omega_o) =  \int_A\int_{H^2} S(x_i, \omega_i, x_o, \omega_o) \; L_i(x_i,\omega_i) \; \cos\theta \; d\omega_i \: dA
+$$
+
+- $A$ : 表示整个表面积
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215032344847.png" alt="image-20251215032344847" style="zoom:50%;" />
+
+# 光线追踪
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215033557501.png" alt="image-20251215033557501" style="zoom:50%;" />
+
+1. 从眼睛发出射线(Primary Rays)
+2. 遇到第一个遮挡物, 则射线终止
+3. 在遮挡物上发生折射和反射(Secondary Rays)
+4. 对于每个碰到的点, 都向光源发送 Shadow Rays 以测试光线可见度
+5. 当遇到非镜面表面（或达到最大期望的递归水平）, 停止递归, 进入5, 否则, 对于每个射线, 返回2
+
+## 检查光线和三角形网格的交集
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215035215159.png" alt="image-20251215035215159" style="zoom:50%;" />
+
+射线 $r$ 方程, 其中出发点 $\boldsymbol{o}$, 时间 $t \in [0,\infty ) $ 和发射的单位方向向量  $\vec{d}$ 
+
+
+$$
+\boldsymbol{r}(t) =  \boldsymbol{o} \; + \; t \cdot \vec{d}
+$$
+
+
+平面 $p$ 方程, 其中 $\boldsymbol{p}$ 表示平面上的任意一点,  $\boldsymbol{p}_i$ 表示确定平面的一点,  $\vec{n}$ 表示平面的法向量, 则平面为
+
+
+$$
+p:\; (\boldsymbol{p}-\boldsymbol{p}_i) \cdot \vec{n}  \;=\; 0
+$$
+
+
+射线 $r$ 和平面 $p$ 相交表示为, 存在一个点 $x$, 同时满足 $p$ 的定义和 $r$ 的定义
+
+
+$$
+\left\{\begin{align}
+  \boldsymbol{o} \; + \; t \cdot \vec{d} &=  \boldsymbol{x} \\
+  (\boldsymbol{x} - \boldsymbol{p}_i) \cdot \vec{n} \;&=\; 0 
+\end{align}\right.
+$$
+运算可得
+$$
+\left\{\begin{align}
+  t \;&=\; \frac{\boldsymbol{o} - \boldsymbol{p}_i }{\vec{d}\cdot\vec{n}} \\
+ \boldsymbol{x} \;&=\; \boldsymbol{o} \; + \; t \cdot \vec{d} 
+\end{align}\right.
+$$
+然后确认交点 $x$ 是否在三角形网格内
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215040122573.png" alt="image-20251215040122573" style="zoom:50%;" />
+
+[查看判断一个点是否在三角形内](#Point In Triangle Test)
+
+使用向量等值线, 换一种对平面的表达
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215040828774.png" alt="image-20251215040828774" style="zoom:50%;" />
+$$
+\boldsymbol{p}  = \boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2}
+$$
+再次连理方程组
+
+
+$$
+\left\{\begin{align}
+ \boldsymbol{x} \;&=\; \boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2} \\
+ \boldsymbol{x} \;&=\; \boldsymbol{o} \; + \; t \cdot \vec{d} 
+\end{align}\right.
+$$
+即
+
+
+$$
+\boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2} \;=\; \boldsymbol{o} \; + \; t \cdot \vec{d}
+$$
+
+
+
+
+转化成矩阵运算
+
+
+$$
+(-\vec{d}, \vec{P_0P_1},\vec{P_0P_2}) \cdot \left(\begin{array}{ll}
+    t\\
+    u\\
+    v
+   \end{array} \right) \;=\; \boldsymbol{o} -\boldsymbol{p_0}
+$$
+
+
+
+
+这一次只要看 $t \in [0, \infty ), u + v \in(0,1)$ 即表示在三角形内了
+
+
+
+## 包围体
+
+要测试光线是否打到一个网格的某个(或某些)三角形上
+
+1. 遍历每个三角形
+2. 计算三角形和光线射线是否相交
+
+时间复杂度 $O(n)$ 
+
+要提高速度, 就用一个包围盒包围目标
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215104103794.png" alt="image-20251215104103794" style="zoom:50%;" />
+
+1. 测试光线是否和包围盒相交, 没有, 就放弃
+2. 确实和包围盒相交, 遍历每个三角形测试
+
+这样就过滤了一些光线
+
+### 射线和包围盒相交
+
+和三角形一样, 使用法向量
+
+
+$$
+\left\{\begin{align}
+  \boldsymbol{o} \; + \; t \cdot \vec{d} &=  \boldsymbol{x} \\
+  (\boldsymbol{x} - \boldsymbol{p}_i) \cdot \vec{n} \;&=\; 0 
+\end{align}\right.
+$$
+然后对六个面进行分别测试
+
+由于包围盒的特殊性, $\vec{n}$ 总是 $(0,0,1)$ , $(0,1,0)$ , $(1,0,0)$ , 比较简单
+$$
+\boldsymbol{x} \;=\; \left\{\begin{align}
+  \boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2} \\
+  \boldsymbol{o} \; + \; t \cdot \vec{d} 
+\end{align}\right.
+$$
+可得
+$$
+(-\vec{d}, \vec{P_0P_1},\vec{P_0P_2}) \cdot \left(\begin{array}{ll}
+    t\\
+    u\\
+    v
+   \end{array} \right) \;=\; \boldsymbol{o} -\boldsymbol{p_0}
+$$
+要判断点是否落在长方形内, 要求 $t \in [0, \infty ), u \in (0,1) , v \in(0,1)$ 
+
+假设 $p: (x,y,z)$ 是包围盒内一点, 且 $x\in (x_{min},x_{max}), y \in (y_{min},y_{max}), z \in (z_{min},z_{max})$
+
+
+
+我们还需要获取到射线与包围盒相交的 $t$ 的取值范围, 用于检查不同的包围盒之间的重叠问题
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215110647801.png" alt="image-20251215110647801" style="zoom:50%;" />
+
+## 均匀空间划分
+
+1. 划分网格
+
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215113300092.png" alt="image-20251215113300092" style="zoom: 33%;" />
+
+2. 存储每个对象的单元
+
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215113523492.png" alt="image-20251215113523492" style="zoom:33%;" />
+
+3. 射线步进遍历
+
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215113611290.png" alt="image-20251215113611290" style="zoom:33%;" />
+
+存在问题
+
+- 效率不够
+
+- 网格太细导致大量的步进是浪费的
+
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215120720487.png" alt="image-20251215120720487" style="zoom:33%;" />
+
+  一般在3D中使用 $27*count$ 个网格
+
+- 网格太粗导致无法辨别交点的对象
+
+  <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215120603088.png" alt="image-20251215120603088" style="zoom:33%;" />
+
+
+
+在均匀图元下效果好
+
+## KD-Tree
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215124753081.png" alt="image-20251215124753081" style="zoom: 33%;" />
+
+- 找到边界
+
+- 递归拆分单元格A->B->C->D
+
+- 当分裂无法降低射线交集的预期成本时停止递归, 具体的**简单**实现方案有
+
+  直到满足条件 (最大拆分次数 or 单元格最小对象数)
+
+  定义最大深度, 经验上采用 $ 8 + 1.3 \; log N,\; N = count(objs)$
+
+- 将对象存储在叶子节点上
+
+递归进行查询
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215125225328.png" alt="image-20251215125225328" style="zoom:50%;" />
+
+## BVH
+
+> Bounding Volume Hierarchy
+
+用于应对非均匀图元的场景
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215120936911.png" alt="image-20251215120936911" style="zoom:33%;" />
+
+ 如何判断一个划分是好的
+
+- 越往树的深处走, 对象的排列就越紧密, 出现射线打空的概率就更小(如果出现打空可以更快地跳出)
+
+划分时, 每个包围盒内的对象不重叠, 但是包围盒可以存在重叠
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215121905750.png" alt="image-20251215121905750" style="zoom:50%;" />
+
+但是, 如果射线射中了重叠部分, 就需要测设两个包围盒; 重叠部分越大, 射中重叠部分概率越大, 效果越差
+
+### 查询
+
+查询击中点算法
+
+```cpp
+struct BVHNode {
+    BBox bbox;
+    BVHNode* child1;
+    BVHNode* child2; // nullable
+    list<Primitive*> primList; // 列表. 对于叶子有效, 存储对象, 比如三角形
+    bool leaf() const { return !child1 && !child2; }
+};
+struct HitInfo {
+    Primitive* prim;
+    float t;
+    static HitInfo NOT_HIT = { nullptr, FLT_INF };
+    bool hit() const { return !prim; }
+    bool closer(const HitInfo& info) const {
+        return !hit() || info.hit() && info.t < this->t;
+    }
+    HitInfo& operator =(const HitInfo& info){
+        if(this != &info){
+            this->prim = info.prim;
+            this->t = info.t;
+        }
+        return this;
+    }
+}
+HitInfo fin_closest_hit(const Ray& ray, BVHNode* node){
+    if (!node->bbox.test(ray)) return HitInfo::NOT_HIT; // 测试无接触, 返回
+    if (!node->leaf()){
+        HitInfo hit1 = fin_closest_hit(ray, node->child1);
+        HitInfo hit2 = fin_closest_hit(ray, node->child2);
+        return hit1.closer(hit2) ? hit1 : hit2;
+    }
+    HitInfo closest = HitInfo::NOT_HIT;
+    for(Primitive* item: primList){
+        HitInfo hitInfo = item->test_hit(ray);
+        if(hitInfo.hit() && hitInfo.closer(closet)){
+            closest = hitInfo;
+        }
+    }
+    return closest;
+}
+```
+
+### 构建
+
+- 选择一个空间维度进行划分（例如 x，y，z）
+  - 围绕空间中点分割物体
+  - 在中间物体位置分割
+- 当节点元素较少（例如 5）时停止
+
+
+
+# 蒙托卡罗渲染
+
+> Monte Carlo Rendering
+
+输出一个图像
+
+## 和光栅化的比较
+
+都是输入几何体, 输出一个图像
+
+对于光栅化
+
+1. 遍历每个几何体
+2. 遍历每个采样点
+3. 采样, 测试是否在几何体内, 依据深度覆盖
+4. 进行颜色渲染
+
+对于光线追踪
+
+1. 遍历每个采样点(一条光线路径)
+2. 遍历每个几何体
+3. 测试是否在光线可达
+4. 进行颜色渲染
+
+光线追踪的效果更好, 因为光栅化难以描述亮度, 除非其材质已经提前考虑到了亮度
+
+但是光线追踪对性能的损耗更大
+
+## 数值积分
+
+$$
+\int_a^b f(x) \;dx  \;\approx\; \sum^N_{i=0} w_i\: f(x_i);
+$$
+
+1. 对多项式进行积分, 积分结果对函数进行估计
+
+2. 评判近似的多项式的标准是
+
+   依次取 $x=x^0,x=x^1,x=x^2,x=x^3,x = x^4$ ... 直到等式两段不相等
+
+   通过测试的幂次数越高, 对函数的积分估计效果越好
+
+3. 对于一般的复杂函数, 一般进行分段的多级样条, 然后分别积分
+
+一般就是有梯形法  $\int_a^b f(x) \;dx  \;\approx\; \frac{b-a}{2}[f(a)+f(b)]$
+
+或者辛普森法则  $\int_a^b f(x) \;dx  \;\approx\; \frac{b-a}{6}[f(a)+4f(\frac{a+b}{2})+f(b)]$
+
+对于 $n\to\infty, h := \frac{1}{n} \to 1 $ 存在误差$O(h^2)$
+
+
+
+$$
+\int_a^b f(x) \;dx  \;=\; \sum^N_{i=0} w_i\: f(x_i) + O(h^2)
+$$
+
+
+对于二重积分
+$$
+\begin{aligned}
+\int_{a_y}^{b^y}\int_{a_x}^{b^x} f(x,y) \;dxdy 
+&=  \int_{a_y}^{b^y} (\sum^N_{i=0} A_i\: f(x_i,y) + O(h^2)) \;dxdy \\
+&=  \sum^N_{i=0} A_i \int_{a_y}^{b^y} f(x_i,y) \;dxdy + O(h^2) \\
+&=  \sum^N_{i=0} A_i (\sum^N_{j=0} A_j\: f(x_i,y_j) + O(h^2))  + O(h^2) \\
+&=  \sum^N_{i=0} \sum^N_{j=0}  A_i A_j\: f(x_i,y_j)  + O(h^2)
+\end{aligned}
+$$
+在光线追踪中, 我们需要递归地计算光线的亮度, 而这个递归的深度, 可能是很高的, 积分的层次也会非常高
+
+导致产生的误差也会随着递归深度的增加而增加
+
+此乃**积分诅咒**, 积分维度越高, 误差越大
+
+## 蒙托卡罗积分
+
+在图中引入随机
+
+已知一次对数值积分的估计存在误差
+
+使用不同的随机值做积分, 都得到的结果不同
+
+这多次结果做平均, 我们希望接近最终的结果, 并减少误差
+
+适合在==足够高维度==的函数积分上使用
+
+
+
+### 已知概率分布函数, 生成随机样本
+
+概率分布函数 PDF Probability Distribution Function
+
+累积概率分布函数, CDF, Cumulative probability Distribution Function. $P_j$ 就是前 $j$ 个小事件的概率总和
+
+我们希望我们生成的样本服从已知的概率分布函数
+
+1. 计算 $CDF$
+
+2. 计算 $CDF$ 的反函数 $CDF^{-1}$
+
+3. 生成一个随机的样本 $\xi$ , 服从取值范围在 $[0,1)$ 的 Uniform均匀分布
+
+4. 看生成的随机样本落在 $CDF$ 的哪个样本上, $x := CDF^{-1}(\xi)$
+
+   <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215182850602.png" alt="image-20251215182850602" style="zoom:33%;" />
+
+   对于离散的概率分布, 不求 $CDF^{-1}$
+
+   只需要比较  $CDF(x_i)$ 找出 $\xi$ 满足 $ CDF(x_{i-1}) \le \xi \le CDF(x_i)$ , 则 $x_i$ 即所求
+
+5. 返回获取到的 $x$ , 保证 $x$ 服从分布 $CDF$
+
+
+
+累积分布函数 $CDF$ 无法计算, 或无法计算出 $CDF^{-1}$, 甚至是一个二维的分布函数, 为之奈何?
+
+如何均匀地采样圆盘
+
+- $\boldsymbol{p} = (r\cos\theta,r\sin\theta)$ , $r$ 均匀分布在 $[0,1)$,  $\theta$ 均匀分布在 $[0,2\pi)$
+
+  并不是均匀分布, $r$ 越接近 1, 应该概率越大
+
+由几何概型, 面积能代表概率的发生, 设全事件 $\Omega$, 即事件全体发生的概率, 即1
+$$
+\Omega \;=\; \int_0^{2\pi}\int_0^{1} p(\theta,r) \;dr\,d\theta \;=\;1
+$$
+$r, \theta$ 独立, 故有 $p(\theta,r) = p(\theta)\cdot p(r) $
+
+在面积上积分, 有
+$$
+A \;=\; \int_0^{2\pi}\int_0^{1} r \;dr\,d\theta \;=\; \pi
+$$
+
+
+
+
+已知, $\theta$ 应当是均匀分布的, $p(\theta)=\frac{1}{2\pi}$, 则 $p(r) = 2r$
+
+则有$CDF$:  $P(\theta)=\frac{\theta}{2\pi}$, 则 $p(r) = r^2$,
+
+求出两者的$CDF^{-1}$: $\theta = 2\pi\xi_1$ 和 $r = \sqrt{\xi_2}$
+
+
+
+## 蒙托卡罗估计
+
+用离散的函数的期望值, 估计函数的积分
+
+$$
+\lim_{N\to\infty}\frac{|\Omega|}{N}\sum^N_{i=1}f(x_i) \;=\; \int_{\Omega}f(x)\; dx
+$$
+
+依据大数定理, N 足够多, 方差 V 就足够小
+
+
+$$
+V[\frac{1}{N}\sum_{i=1}^NY_i] = \frac{1}{N^2} \sum_{i=1}^{N}V[Y_i] = \frac{1}{N^2} NV[Y] = \frac
+{1}{N} V[Y]
+$$
+
+
+则有**蒙托卡罗估计**: 
+$$
+\int_\Omega f(x) \,dx \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(X_i)}{p(X_i)}
+$$
+对于 $p(X_i)$ 表示对 $X_i$ 取值的分布, 假设$X_i$ 是均匀分布的, $\Omega$ 为 $X~U(a,b)$
+
+则 $p(X_i) = \frac{1}{b-a}$, 则蒙托卡罗估计则变为
+$$
+\int_a^b f(x) \,dx \approx \frac{b-a}{N} \sum_{i=1}^{N} f(X_i)
+$$
+就是在二维坐标平面上对积分的估算方法
+
+当然 $\Omega$ 可以表示其他分布, 由于几何概型, 几何之间的关系可以转换成概率关系
+
+例如 $\Omega$ 表示单位圆的时候, 即表示几何概型中点均匀落在单位圆中的概率, 这一问题了
+
+对于均匀关照的半球
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215213504556.png" alt="image-20251215213504556" style="zoom:50%;" />
+
+其辐照度为
+
+
+$$
+E(p) = \int_\Omega L(p,\omega) \cos\theta \, d\omega
+$$
+其中 $\Omega$ 代表的单位半球面面积为 $2\pi$
+
+使用蒙托卡罗估计来计算这个积分
+
+
+$$
+E(p) \approx \frac{2\pi}{N} \sum^N_{i=1}L(p,\omega_i)\cos\theta_i
+$$
+如何在单位半球面上均匀采样? 使用"拒绝采样"
+
+1. 随机在$[-1,1]^3, z \ge 0$ 的空间里采样 $p=(x,y,z)$, $z\ge 0$ 
+2. 如果 $p$ 在球体内, 则接收, 否则拒绝
+3. $p$ 映射到点 $p' = \frac{1}{R}(x,y,z), R = \sqrt{x^2+y^2+z^2}$, 保证 $p'$ 在球面上且均匀分布
+
+或者, 使用如下解析式: 
+
+
+$$
+(\xi_1,\xi_2) = (\sqrt{1-\xi_1^2}\cos(2\pi\xi_2),\;\sqrt{1-\xi_2^2}\cos(2\pi\xi_1),\;\xi_1)
+$$
+采样后, 使用被采样的点作为 **入射方向** , 计算出这个方向上的$L_i = L(p,\omega_i)$, 
+
+而后计算一次 $\frac{2\pi}{N}L_i\cos\theta$ 记作一次递归
+
+由于入射光照估计引入了随机方向, 导致一些在不同方向有不同效果的点变成了噪音
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216011428576.png" alt="image-20251216011409143" style="zoom:33%;" />
+
+部分指向了光源, 部分指向暗处
+
+当累积足够多了, 就会是光源和暗影的平均, 就是一个恰当的灰了
+
+
 
 
 # TODO
-
-| PPT  | Vedio  |
-| ---- | ------ |
-| 10   | 15     |
-| 11   | 16     |
-| 12   | 13(no) |
-| 13   | 18     |
 
 [TODO](变量名和PPT不匹配)
 
