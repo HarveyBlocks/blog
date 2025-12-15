@@ -1937,9 +1937,11 @@ $$
 
 
 BSDF = BTDF + BRDF
+
 $$
 \int_{H^2} (f_t+f_r) \; \cos\theta_o \; d\omega_o \le 1
 $$
+
 对于 $F(\theta_i)$
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215031407623.png" alt="image-20251215031407623" style="zoom:50%;" />
@@ -2018,13 +2020,9 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215040828774.png" alt="image-20251215040828774" style="zoom:50%;" />
 
 
-
-
 $$
-\boldsymbol{p}  = \boldsymbol{p_0} + u\vec{P_0P_1}+v\vec{P_0P_2}
+\boldsymbol{p}  = \boldsymbol{p_0} + u \vec{P_0 P_1} + v \vec{P_0P_2}
 $$
-
-
 再次连理方程组
 
 $$
