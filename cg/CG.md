@@ -161,7 +161,9 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 依据**香农定理**, 需要源数据的最高频率的两倍来采样, 可以完全还原源数据
 
-## Cover
+## 对一个矢量三角形采样
+
+### Cover
 
 判断一个像素是否被三角形Cover, 看这个Pixel的中心点
 
@@ -172,17 +174,75 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 - 3 Covered Pixel
 - 4 Covered Pixel
 
-## Point In Triangle Test
+### Point In Triangle Test
 
 看一个是否在一个三角形中
 
-[TODO](向量内积法判断)
 
-## Aliasing
 
-混叠
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216155516063.png" alt="image-20251216155516063" style="zoom:50%;" />
 
-[TODO](混叠的方法)
+1. 对于三个三角形的三边, 按循环顺序构建三条向量
+
+   - $\vec{p_0},\;\vec{p_1},\;\vec{p_2}$
+   - 对于向量 $\vec{p_i}$ ,  $i$ 表示向量起点的下标
+   - 设 $j$ 为 $\vec{p_i}$ 的终点的下标
+
+   $$
+   \vec{p_i} = (x_j-x_i,\; y_j-y_i)
+   $$
+
+   
+
+2. 计算与 $\vec{p_i}$ 垂直的向量 $\vec{n_i}$, 一般垂直有两个方向, 下面的解析式规定了方向
+   $$
+   \vec{n_i} = (y_j-y_i,\; -x_j+x_i)
+   $$
+   
+
+3. 遍历所有采样点
+
+4. 当前采样点 $P = (x,y)$, 计算 $L_i$
+   $$
+   L_i = \vec{P_iP} \cdot \vec{n_i} = (x,y)\cdot(y_j-y_i,\;-x_j+x_i)=x(y_j-y_i)-y(x_j-x_i)
+   $$
+   
+
+5. 三个 $L$ 的值同号, 则表示在三角形内
+
+
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216155639569.png" alt="image-20251216155639569" style="zoom:50%;" />
+
+### Aliasing
+
+走样
+
+采样会导致走样（伪影），因为采样率低于原始信号频率
+
+可能产生锯齿, 车轮效应
+
+### Anti-Aliasing
+
+反走样
+
+预滤波在采样前去除原始信号中的高频
+
+(如果先采样再过滤高频, 会出现模糊的锯齿, 锯齿依旧存在)
+
+卷积过滤
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216162153067.png" alt="image-20251216162153067" style="zoom:33%;" />
+
+超采样
+
+
+
+### 卷积过滤
+
+![image-20251216162636387](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216162636387.png)
+
+
 
 ### early out
 
@@ -529,23 +589,14 @@ $$
    $$
 
 2. 由于Z指向负轴, 因此需要进行一个$z \to -z $ 的映射
-   
+
    $$
-   R_x \times M \times  \left(\begin{array}{ll}
+   M \times  \left(\begin{array}{ll}
    x \\ y \\ z \\ 1
    \end{array} \right)
    $$
+
    
-   第三维和第四维都有 $z$
-   
-   $$
-   R_x = \left(\begin{array}{ll}
-   1&&& \\ 
-   &1&& \\ 
-   &&-1& \\ 
-   &&&-1
-   \end{array} \right)
-   $$
 
 3. 定义正交容器上八个点有关的参数 
 
@@ -557,7 +608,7 @@ $$
    - **f** : far
 
 4. 平移到原点
-   
+
    $$
    T = \left(\begin{array}{ll}
    1 &  &   & -\frac{r+l}{2}  \\
@@ -568,7 +619,7 @@ $$
    $$
 
 5. 使用scale进行归一( 其实是(-1,1), 长度2 )化, 由于是 -z 轴, 所以 n 比 f 大
-   
+
    $$
    S = \left(\begin{array}{ll}
    \frac2{r-l} &  &   &  \\
@@ -579,7 +630,7 @@ $$
    $$
 
 6. 对空间中的任意向量 $\vec{v}$ 复合两个操作
-   
+
    $$
    \vec{v'} = S \times T \times M \times \left(\begin{array}{ll}
    v_x \\
@@ -588,9 +639,9 @@ $$
    1
    \end{array} \right)
    $$
-   
+
    对于 $S \times T$, 复合矩阵即
-   
+
    $$
    S \times T = \left(\begin{array}{ll}
    
@@ -601,15 +652,23 @@ $$
    
    \end{array} \right)
    $$
-   
-   定义$M_{ortho}=S \times T$ , $M_{persp\to ortho} = M$, $M_{persp}=M_{ortho}\times M_{persp\to ortho} $
 
-   ==TODO 这里有一个很困惑的点, 各种教材里都没有讲最后一行变化时为什么莫名其妙变成-1了==
+   定义$M_{ortho}=S \times T$ , $M_{persp\to -ortho} = M$, $M_{persp}=R_x \times M_{ortho}\times M_{persp\to -ortho} \times R_x$
 
-   ==我的理解是 $R$ 对称变化, 就是由于Camera面向$-z$的缘故, 但是不确定==
+   其中 $R_x$ 表示关于 $z$ 轴对称需要反射
+
+   $$
+   R_x = \left(\begin{array}{ll}
+   1&&& \\ 
+   &1&& \\ 
+   &&-1& \\ 
+   &&&1
+   \end{array} \right)
+   $$
    
+
    对于 $M_{persp}$, 复合矩阵即
-   
+
    $$
    M_{persp}=M_{ortho}\times M_{persp\to ortho} = \left(\begin{array}{ll}
    \frac{2n}{r-l} & 0 & \frac{r+l}{r-l} & 0  \\
@@ -618,7 +677,7 @@ $$
    0 & 0 & -1 & 0 
    \end{array} \right)
    $$
-   
+
 7. 对于现代计算机的图形渲染, 因此从空间到数组的索引, 也存在一个映射
 
    <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251209223532674.png" alt="image-20251209223532674" style="zoom:50%;" />
@@ -1647,8 +1706,9 @@ $Luminance$
 
 这个量忽略颜色, 只表达亮度, 是将波长 $\lambda$ 所被人肉眼接收能力 $V(\lambda)$ 的积分
 
+
 $$
-Y(p,\omega) = \int_0^{\infin}L(p,\omega,\lambda) V(\lambda) d\lambda
+Y(p,\omega) = \int_0^{\infty} L(p,\omega,\lambda) V(\lambda) d\lambda
 $$
 
 
@@ -1676,15 +1736,28 @@ L_0(\boldsymbol{p},\omega) \; = \; L_e(\boldsymbol{p},\omega_{0}) \;
 $$
 
 - $L_0$ 感知到的物体亮度
+
 - $L_e$ 物体作为光源发出的亮度
+
 - $L_i$ 入射光光强, 需要递归地获取
+
 - $\boldsymbol{p}$ 点的位置
+
 - $\omega$  眼睛的方向
+
 - $\omega_i$ 入射角
+
 - $\omega_0$ 出射角, 也就是眼睛的方向
+
 - $f_r$ 散射函数, 有多上光从 $\omega_i \to \omega_0$ 反射出去
+
 - $\theta$ 入射方向和表面法线之间的角度
+
 - $H$ 能接收到其他物体发来的光的平面
+
+- $\cos\theta$ 入射方向 $\omega_i$ 与法线 $\vec{n}$ 的夹角余弦, 
+
+  光以倾角 $\theta$ 打到表面上时, 单位面积上实际接收到的光通量减少为原来的 $\cos\theta$ 倍
 
 对于 $L_i$ , 使用反向光路最终, 从相机出发, 不断反射, 直到达到光源
 
@@ -2353,9 +2426,9 @@ $$
 
 
 
-累积分布函数 $CDF$ 无法计算, 或无法计算出 $CDF^{-1}$, 甚至是一个二维的分布函数, 为之奈何?
+### 如何均匀地采样圆盘
 
-如何均匀地采样圆盘
+累积分布函数 $CDF$ 无法计算, 或无法计算出 $CDF^{-1}$, 甚至是一个二维的分布函数, 为之奈何?
 
 - $\boldsymbol{p} = (r\cos\theta,r\sin\theta)$ , $r$ 均匀分布在 $[0,1)$,  $\theta$ 均匀分布在 $[0,2\pi)$
 
@@ -2404,7 +2477,7 @@ $$
 $$
 \int_\Omega f(x) \,dx \approx \frac{1}{N} \sum_{i=1}^{N} \frac{f(X_i)}{p(X_i)}
 $$
-对于 $p(X_i)$ 表示对 $X_i$ 取值的分布, 假设$X_i$ 是均匀分布的, $\Omega$ 为 $X~U(a,b)$
+对于 $p(X_i)$ 表示对 $X_i$ 取值的分布, 假设$X_i$ 是均匀分布的, $\Omega$ 为 $X \sim U(a,b)$
 
 则 $p(X_i) = \frac{1}{b-a}$, 则蒙托卡罗估计则变为
 $$
@@ -2418,7 +2491,7 @@ $$
 
 对于均匀关照的半球
 
-<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215213504556.png" alt="image-20251215213504556" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215213504556.png" alt="image-20251215213504556" style="zoom: 33%;" />
 
 其辐照度为
 
@@ -2428,11 +2501,12 @@ E(p) = \int_\Omega L(p,\omega) \cos\theta \, d\omega
 $$
 其中 $\Omega$ 代表的单位半球面面积为 $2\pi$
 
-使用蒙托卡罗估计来计算这个积分
+使用蒙托卡罗估计来计算这个积分, 对于半圆面上的任一点, 被取样的概率是 $p(x)=\frac{1}{2\pi}$
 
 
 $$
-E(p) \approx \frac{2\pi}{N} \sum^N_{i=1}L(p,\omega_i)\cos\theta_i
+E(p) \approx \frac{1}{N} \sum^N_{i=1}\frac{L(p,\omega_i)\cos\theta_i}{p(x)}
+\;=\;\frac{2\pi}{N} \sum^N_{i=1}L(p,\omega_i)\cos\theta_i
 $$
 如何在单位半球面上均匀采样? 使用"拒绝采样"
 
@@ -2440,15 +2514,53 @@ $$
 2. 如果 $p$ 在球体内, 则接收, 否则拒绝
 3. $p$ 映射到点 $p' = \frac{1}{R}(x,y,z), R = \sqrt{x^2+y^2+z^2}$, 保证 $p'$ 在球面上且均匀分布
 
-或者, 使用如下解析式: 
 
 
+设最终取点与 $z$ 轴的夹角为 $\theta \in [0,\frac{\pi}{2})$ , 在 $x-y$ 平面上的方向角为 $\phi \in [0,2\pi)$
 $$
-(\xi_1,\xi_2) = (\sqrt{1-\xi_1^2}\cos(2\pi\xi_2),\;\sqrt{1-\xi_2^2}\cos(2\pi\xi_1),\;\xi_1)
+A = \int_0^{2\pi}\int_0^{\frac{\pi}{2}} \sin \theta \; d\theta \, d\phi 
+= \int_0^{2\pi}d\phi\int_0^{\frac{\pi}{2}}\sin\theta\;d\theta 
+= (-\cos\theta)|^{\frac{\pi}{2}}_0\phi|^{2\pi}_0
+$$
+可以得出联合分布
+$$
+p(\theta,\phi) = \frac{\sin\theta}{2\pi},\;\;\;
+\int_0^{2\pi}\int_0^{\frac{\pi}{2}} p(\theta,\phi)\; d\theta\, d\phi = 1
+$$
+由于, $\theta,\; \phi$ 互相独立
+$$
+p(\theta,\phi) = p(\theta)\cdot p(\phi)
+$$
+故有 $z$ 和 $\phi$ 的分布
+$$
+\left\{\begin{align}
+ p(\theta) \;&=\; \sin(\theta), &P(\theta) \;&=\; 1-\cos\theta \\
+ p(\phi) \;&=\; \frac{1}{2\pi}, &P(\phi) \;&=\; \frac{\phi}{2\pi}  \\
+\end{align}\right.
+$$
+令 $(\xi_1,\xi_2)$ 在 $[0,1)^2$ 上均匀取值, 则可取
+$$
+
+\left\{\begin{align}
+\theta\;&=\;\arccos(\xi_1) \\
+\phi \;&=\; 2\pi\xi_2
+\end{align}\right.
+$$
+转换到笛卡尔坐标系
+$$
+\left\{\begin{align}
+ x \;&=\; \cos(\theta)\cos\phi \\
+ y \;&=\; \cos(\theta)\sin\phi \\
+ z \;&=\; \sin(\theta) \\
+\end{align}\right.
 $$
 采样后, 使用被采样的点作为 **入射方向** , 计算出这个方向上的$L_i = L(p,\omega_i)$, 
 
 而后计算一次 $\frac{2\pi}{N}L_i\cos\theta$ 记作一次递归
+
+## 重要性采样
+
+下图是采样了100次光线的结果
 
 由于入射光照估计引入了随机方向, 导致一些在不同方向有不同效果的点变成了噪音
 
@@ -2458,15 +2570,182 @@ $$
 
 当累积足够多了, 就会是光源和暗影的平均, 就是一个恰当的灰了
 
+因此可以通过尽可能多的采样来解决
+
+但是增加采样, 效率太低, 只对对应光源的方向进行积分, 以此来进行优化
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216042141931.png" alt="image-20251216042141931" style="zoom:50%;" />
+
+那么, 需要采样的面就发生了更改, 积分的方式也要更改
+$$
+d\omega = \frac{dA}{|p'-p|^2} = \frac{\cos\theta \, dA'}{|p'-p|^2}
+$$
+代入, 那么就从对半个圆面的积分变成了对光源的面的积分
+$$
+E(p)= \int L(p,\omega)\,\cos\theta \, d\omega= \int_{A'} L_o(p,\omega)\;V(p,p')
+\frac{\cos\theta \; \cos\theta'}{|p-p'|^2} 
+\, dA'
+$$
+对于 $V(p,p')$
+$$
+V(p,p') \;=\; \left\{\begin{align}
+  1 &&  p'\;is\;visible\;form\;p\\
+  0 &&  otherwise
+\end{align}\right.
+$$
+
+
+
+### 对半球的重要性采样
+
+注意到, 由于在计算 $dE$ 的时候需要乘 $\cos\theta$, 因此越接近从平面射入的光线, 对表面亮度的影响越小
+
+因此调整 $p(x)$, 使其不是均匀分布, 而是有意地选择垂直照射的光线, 减少水平射入的光线的权重
+$$
+E(p) \approx \frac{1}{N} \sum^N_{i=1}\frac{L(p,\omega_i)\cos\theta}{\cos\theta / \pi}
+\;=\;\frac{2\pi}{N} \sum^N_{i=1}L(p,\omega_i)
+$$
+这里采用的分布是 $p=\frac{\cos\theta}{\pi}$, 表示光照的**双向反射分布函数(BRDF)**
+
+的在空间的概率分布是一个球, 如下图所示:
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216100104549.png" alt="image-20251216100104549" style="zoom:33%;" />
+
+
+
+## 对渲染方程的Monte Carlo估计
+
+渲染方程如下
+$$
+L_0(\boldsymbol{p},\omega) \; = \; L_e(\boldsymbol{p},\omega_{0}) \;
++ \; \int_{H^2}f_r(\boldsymbol{p},\omega_i \to \omega_0)\; L_i(\boldsymbol{p},\omega_i) 
+\; \cos(\theta) \; d \omega_i
+$$
+对入射方向 $\omega_i$ 进行采样
+$$
+\omega_i \sim p(\omega)
+$$
+概率可能来自
+
+- 采样方式(均匀采样, 余弦采样)
+- 材质的BRDF
+
+递归地
+$$
+\frac{1}{N} \sum_{j=1}^N \frac{f_r(p,\omega_j\to\omega_r)L_i(p,\omega_j)\cos\theta_j}{p(\omega_j)}
+$$
+
+## 俄罗斯轮盘赌
+
+> Russian roulette
+
+在合适停止递归? 如何创造递归条件?
+
+我们注意到, 在一定深度的递归之后, 依旧不断进行递归的话, 收效甚微
+
+于是, 在每次被反弹的时候, **有概率终止这条路径**
+$$
+L = \frac{fr(\omega_i \to \omega_o) L_i(\omega_i) \cos\theta_i}{p(\omega_i)} V(p,p')
+$$
+$V(p,p')$ 是可见性项, 表示该点是否被遮挡
+
+可见性项的消耗较大, 需要**几何查询**, 因此应该避免
+
+直接丢弃影响小的采样点的反射, 将导致**偏差**产生, 无法保证收敛到正确的值
+
+我们希望使用一种使这个估计量**无偏差**的方式随机丢弃样本
+$$
+X' \;=\; \left\{\begin{align}
+  \frac{X}{p_{rr}} &&  with\;probabity\;p_{rr}\\
+  0 &&  with\;probabity\;1-p_{rr}
+\end{align}\right.
+$$
+
+
+下面证明这个分布是无偏的:
+$$
+E[X'] = p_{rr} \cdot \frac{E[X]}{p_{rr}} + (1-p_{rr})\cdot 0 = E[X]
+$$
+
+
+```cpp
+// 计算从位置 position 在方向 omega 传入的辐射
+float ComputeRadianceIn(const Vector3& position, const Vector3& omega) {
+    Intersection intersection = intersectScene(position, omega);  // 计算交点
+    // 返回零次反射辐射与至少一次反射辐射之和
+    return ZeroBounceRadiance(intersection, -omega) + 
+        AtLeastOneBounceRadiance(intersection, -omega);
+}
+
+// 计算零次反射辐射（直接由表面自身发射）
+float ZeroBounceRadiance(const Intersection& intersection, const Vector3& outgoingDirection) {
+    // 返回交点处表面向外发射的光
+    return intersection.emittedLight(outgoingDirection);
+}
+
+// 计算至少一次反射的辐射（包括间接光照）
+float AtLeastOneBounceRadiance(
+    const Intersection& intersection, const Vector3& outgoingDirection, int bounceCount = 0) {
+    if (bounceCount > MAX_BOUNCE_COUNT) return 0.0f;  // 限制最大反射次数，防止无限递归
+    
+    // 计算直接光照（一次反射）
+    float radiance = OneBounceRadiance(intersection, outgoingDirection);
+    
+    // 重要性采样，获取反射方向 omega_i 及其概率密度 pdf
+    Vector3 omega_i;
+    float pdf;
+    std::tie(omega_i, pdf) = intersection.brdf.sampleDirection(outgoingDirection);
+    
+    // 计算沿 omega_i 方向的下一个交点
+    Intersection nextIntersection = intersectScene(intersection, omega_i);
+    
+    // 计算俄罗斯轮盘法的连续概率
+    float continuationPdf = continuationProbability(
+        intersection.brdf, omega_i, outgoingDirection
+    );
+    
+    // 俄罗斯轮盘法递归估计间接光
+    if (random01() < continuationPdf) {
+        radiance += AtLeastOneBounceRadiance(nextIntersection, -omega_i, bounceCount + 1)
+                    * intersection.brdf(omega_i, outgoingDirection)
+                    * cosTheta(omega_i, intersection.normal) / pdf / continuationPdf;
+    }
+    
+    return radiance;
+}
+
+// 计算一次反射辐射（直接光照）
+float OneBounceRadiance(const Intersection& intersection, const Vector3& outgoingDirection) {
+    // 从光源采样直接照明
+    return DirectLightingSampleLights(intersection, outgoingDirection);
+}
+
+// 计算直接光照采样
+float DirectLightingSampleLights(const Intersection& intersection, const Vector3& outgoingDirection) {
+    Vector3 omega_i;
+    float pdf;
+    
+    // 重要性采样，从光源获取入射方向 omega_i 及其概率密度 pdf
+    LightSample lightSample = lights.sampleDirection(intersection);
+    
+    // 判断是否被遮挡（阴影检测）
+    if (scene.shadowIntersection(intersection, omega_i)) {
+        return 0.0f;  // 若被遮挡则无光照贡献
+    }
+    
+    // 若无遮挡，计算光源贡献
+    return lightSample.intensity * intersection.brdf(omega_i, outgoingDirection)
+           * cosTheta(omega_i, intersection.normal) / pdf;
+}
+
+```
 
 
 
 # TODO
 
-[TODO](变量名和PPT不匹配)
-
-- CMU
 - 校对
+- 看作业
 - 去图片, 简化
 
 文档处理
