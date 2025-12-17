@@ -208,7 +208,7 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
    \begin{aligned}
    L_i \;&=\; \vec{P_iP} \cdot \vec{n_i} \\
    \;&=\; (x-x_i,\; y-y_i)\cdot(y_j-y_i,\;-x_j+x_i) \\
-\;&=\; (x-x_i)\cdot(y_j-y_i)-(y-y_i)\cdot(x_j-x_i) 
+   \;&=\; (x-x_i)\cdot(y_j-y_i)-(y-y_i)\cdot(x_j-x_i) 
    \end{aligned}
    $$
    
