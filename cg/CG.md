@@ -69,34 +69,36 @@ $$
 对于 $F(f)$ 回归定义
 
 $$
-<< \nabla F,u >> := D_uF
+\langle\langle \nabla F,u \rangle\rangle := D_uF
 $$
 
 $$
 D_uF := \lim_{\epsilon \to 0} \frac{F(f+\epsilon u)-F(f)}{\epsilon}
 $$
 
-对于 $F(f) = <<f,g>>$ 函数内积作为 $F$ 的定义, 其梯度类比可得 $\nabla F = g$
+对于 $F(f) = \langle\langle f,g \rangle\rangle$ 函数内积作为 $F$ 的定义, 其梯度类比可得 $\nabla F = g$
 
-对于 $F(f) = ||f||^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
+对于 $F(f) = |f|^2$ 函数的范数作为 $F$ 的定义, 其梯度类比可得 $\nabla F = 2f_0$, 证明如下
 
 $$
-<<\nabla F(f_0), u>> = \lim_{\epsilon \to 0} \frac {F(f_0+\epsilon u)-F(f_0)} {\epsilon}
+\langle\langle \nabla F(f_0),u \rangle\rangle= \lim_{\epsilon \to 0} \frac {F(f_0+\epsilon u)-F(f_0)} {\epsilon}
 $$
 
 即
 
 $$
-F(f_0+\epsilon u)= ||f_0+\epsilon u||^2 
-= ||f_0||^2 + \epsilon^2 ||u||^2 + 2 \epsilon<<f_0,u>>
-= F(f_0)+\epsilon^2F(u)
+\begin{aligned}
+F(f_0+\epsilon u) \;&=\; |f_0+\epsilon u|^2 \\
+\;&=\; |f_0|^2 + \epsilon^2 |u|^2 + 2 \epsilon\langle\langle f_0,u\rangle\rangle\\
+\;&=\; F(f_0)+\epsilon^2F(u)
+\end{aligned}
 $$
 
 
 带入得
 
 $$
-<<\nabla F(f_0), u>> = 2<<f_0,u>>
+\langle\langle\nabla F(f_0), u\rangle\rangle = 2\langle\langle f_0,u\rangle\rangle
 $$
 
 
@@ -149,7 +151,7 @@ $$
 
 Origin频率高于采样频率太多, 将导致采样结果反而接近低频下的Origin
 
-![image-20251208183052084](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183052084.png)
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251208183052084.png" alt="image-20251208183052084" style="zoom:50%;" />
 
 在相同频率的采样率下, 频率的信号高到一定程度, 就会高度失真
 
@@ -199,20 +201,25 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
    \vec{n_i} = (y_j-y_i,\; -x_j+x_i)
    $$
    
-
 3. 遍历所有采样点
 
 4. 当前采样点 $P = (x,y)$, 计算 $L_i$
    $$
-   L_i = \vec{P_iP} \cdot \vec{n_i} = (x,y)\cdot(y_j-y_i,\;-x_j+x_i)=x(y_j-y_i)-y(x_j-x_i)
+   \begin{aligned}
+   L_i \;&=\; \vec{P_iP} \cdot \vec{n_i} \\
+   \;&=\; (x-x_i,\; y-y_i)\cdot(y_j-y_i,\;-x_j+x_i) \\
+\;&=\; (x-x_i)\cdot(y_j-y_i)-(y-y_i)\cdot(x_j-x_i) 
+   \end{aligned}
    $$
    
-
 5. 三个 $L$ 的值同号, 则表示在三角形内
 
 
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216155639569.png" alt="image-20251216155639569" style="zoom:50%;" />
+
+
+
 
 ### Aliasing
 
@@ -230,21 +237,117 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
 
 (如果先采样再过滤高频, 会出现模糊的锯齿, 锯齿依旧存在)
 
-卷积过滤
+超采样
+
+## 卷积过滤
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216162153067.png" alt="image-20251216162153067" style="zoom:33%;" />
 
-超采样
+
+
+### 定义 
+
+卷积函数定义 
+$$
+(f * g)(t) = f(t) * g(t) = \int_{-\infty}^{+\infty} f(\tau)g(t - \tau)d\tau
+$$
+
+对两个函数重叠长度的乘积的积分, $g(n)$ 为滤波器(卷积核)
+
+离散形式
+$$
+f(n) * g(n) = \sum_{m=-\infty}^{+\infty} f(n-m) g(m)
+$$
+
+例子： $ g(n) = 1/3, -1 \leq n \leq 1 $ 
+
+卷积后 $f(n)$ 变为 
+$$
+(f * g)(n) = f(n-1)g(-1) + f(n-0)g(0) + f(n+1)g(1)
+$$
+
+如果将参加卷积的一个函数看作区间的指示函数（只在一个区间有定义，其余地方为0），卷积还可以被看作是“滑动平均”（定义域上滑动，重叠区域平均）。
 
 
 
-### 卷积过滤
+### 定理
 
-![image-20251216162636387](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251216162636387.png)
+时域卷积定理： 
+$$
+F[f(t) * g(t)] = F_f(\omega) \cdot F_g(\omega)
+$$
+
+两信号在时域的卷积积分对应于在频域中该两信号的傅立叶变换的乘积。
+
+频域卷积定理： 
+$$
+F[f(t) \cdot g(t)] = \frac{1}{2\pi} F_f(\omega) * F_g(\omega)
+$$
+
+两信号在时域的乘积对应于这两个信号傅立叶变换的卷积除以 $ 2\pi $。
 
 
 
-### early out
+### 时域定理证明
+
+首先，卷积定义为 
+
+$$
+f_1(t) * f_2(t) = \int_{-\infty}^{+\infty} f_1(\tau) f_2(t - \tau) d\tau
+$$
+
+然后，代入傅立叶变换公式 
+
+$$
+F[f(t)] = F(\omega) = \int_{-\infty}^{+\infty} f(t) e^{-j\omega t} dt
+$$
+
+- $j$ 是虚数单位，$j^2 = -1$
+- $\omega$ 是角频率 $rad\cdot s^{-1}$
+- $t$ 是时间
+
+由此可得
+$$
+\begin{align*}
+F[f_1(t) * f_2(t)] &= \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{+\infty} f_1(\tau) f_2(t - \tau) d\tau \right] e^{-j\omega t} dt \\
+&= \int_{-\infty}^{+\infty} f_1(\tau) \left[ \int_{-\infty}^{+\infty} f_2(t - \tau) e^{-j\omega t} dt \right] d\tau \\
+&= \int_{-\infty}^{+\infty} f_1(\tau) \left[ \int_{-\infty}^{+\infty} f_2(t - \tau) e^{-j\omega (t - \tau)} dt \right] e^{-j\omega \tau} d\tau \\
+&= \int_{-\infty}^{+\infty} f_1(\tau) F_2(\omega) e^{-j\omega \tau} d\tau \\
+&= F_2(\omega) \int_{-\infty}^{+\infty} f_1(\tau) e^{-j\omega \tau} d\tau \\
+&= F_1(\omega) \cdot F_2(\omega)
+\end{align*}
+$$
+
+### 频域定理证明
+
+$ \mathcal{F}^{-1} $ 表示傅立叶逆变换
+$$
+\mathcal{F}^{-1}[F(\omega)] = f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{j\omega t} d\omega
+$$
+
+
+设 $ F_1(\omega) = F[f_1(t)] $，$ F_2(\omega) = F[f_2(t)] $，则 
+
+$$
+\begin{align*}
+\mathcal{F}^{-1} [F_1(\omega) * F_2(\omega)] &= \mathcal{F}^{-1} \left[ \int_{-\infty}^{+\infty} F_1(\mu) F_2(\omega - \mu) d\mu \right] \\
+&= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{+\infty} F_1(\mu) F_2(\omega - \mu) d\mu \right] e^{j\omega t} d\omega \\
+&= \frac{1}{2\pi} \int_{-\infty}^{+\infty} F_1(\mu) \left[ \int_{-\infty}^{+\infty}  F_2(\omega - \mu) e^{j(\omega - \mu)t} d(\omega-\mu) \right] e^{j\mu t}  d\mu \\
+&= f_2(t) \int_{-\infty}^{+\infty} F_1(\mu) e^{j\mu t} d\mu \\
+&= 2\pi f_1(t) f_2(t)
+\end{align*}
+$$
+
+
+
+因此有 
+$$
+f_1(t) f_2(t) = \frac{1}{2\pi} IF [F_1(\omega) * F_2(\omega)] = IF \left[ \frac{1}{2\pi} F_1(\omega) * F_2(\omega) \right]
+$$
+
+
+
+## early out
 
 使用**快速退出**, 避免对一些明显不被覆盖的点进行无用的检查
 
@@ -747,6 +850,8 @@ $$
 
 ![image-20251210012836310](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210012836310.png)
 
+
+
 ## Texture
 
 纹理映射
@@ -774,6 +879,14 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210015245032.png" alt="image-20251210015245032" style="zoom:33%;" />
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210015220216.png" alt="image-20251210015220216" style="zoom:50%;" />
+
+### 摩尔纹
+
+纹理插值会模糊网格的锐利边缘，因为它的设计是平滑过渡的，而网格需要像素级精确。
+
+网格它是高频周期信号，在3D透视中容易被屏幕像素欠采样，导致信号混叠成低频条纹, 即摩尔纹。
+
+对网格类纹理使用**最近邻（Nearest Neighbor）滤波**，并配合正确的**Mipmap**与**各向异性过滤**来抗走样。
 
 ## mipmap
 
@@ -875,6 +988,12 @@ $f$ 相邻取值点之间两两配对, 插值出点 $g$, $g$ 再两两配对, �
 
 解决方法是别取正方形的, 取多个低level的mipmap组合而成....
 
+
+
+
+
+
+
 # Geometry
 
 显式表示
@@ -965,7 +1084,7 @@ $$
 
 可以表示任何几何体
 
-对点的采样如果足够密集 ( $>>1 \cdot poxel$ ), 则可以达到比较好的效果
+对点的采样如果足够密集 ( $\gg 1 \cdot poxel$ ), 则可以达到比较好的效果
 
 如果采集不够密集, 则考虑如何填充空白空间
 
@@ -995,9 +1114,86 @@ $$
 
 贝塞尔曲线
 
-### 样条运算与构建
+### Hermite 样条
 
-[TODO](贝塞尔曲线的构造)
+设参数区间 $ u_0 = 0, \; u_1 = 1 $ 在端点处给定位置和导数值 $x(u_0) = x_0, \; x(u_1) = x_1$
+$$
+\frac{\partial}{\partial u} x(u) \bigg|_{u_0} = d_0, \;
+\frac{\partial}{\partial u} x(u) \bigg|_{u_1} = d_1
+$$
+
+多项式系数向量 $\mathbf{P}$ 与 Hermite 数据向量 $\mathbf{h}$ 之间的关系为：
+
+$$
+\mathbf{h} = \begin{bmatrix}
+x_0 & x_1  & d_0  & d_1 
+\end{bmatrix}^T
+$$
+
+
+三次多项式可表示为：
+$$
+x(u) = c_0 + c_1 u + c_2 u^2 + c_3 u^3
+$$
+
+定义基向量：
+$$
+\mathscr{P}_3(u) = \begin{bmatrix} 1 & u & u^2 & u^3 \end{bmatrix}
+$$
+
+矩阵 $ \beta_H $ 为将 Hermite 形式（端点位置与导数）转换为三次贝塞尔曲线多项式系数的转换矩阵
+$$
+\beta_H = \begin{bmatrix} 
+1 & 0 & 0 & 0 \\ 
+0 & 0 & 1 & 0 \\
+-3 & 3 & -2 & -1 \\ 
+2 & -2 & 1 & 1 
+\end{bmatrix} 
+$$
+
+则：
+$$
+x(u) = \mathscr{P}_3(u) \cdot \beta_H \cdot \mathbf{h}
+$$
+
+如果把 $\mathcal{P}_3(u) \cdot \beta_H$ 提出来, 可以获取Hermite 样条
+$$
+\left\{\begin{aligned}
+H_0(t) \;&=\; 2t^3-3t^2+1\\
+H_1(t) \;&=\; -2t^3+3t^2\\
+H_2(t) \;&=\; t^3-2t^2+t\\
+H_3(t) \;&=\; t^3-t^2\\
+
+\end{aligned}\right.
+$$
+那么多项式 $P(t)$ 可以写成
+$$
+P(t) = h_0H_0(t)+h_1H_1(t)+h_2H_2(t)+h_3H_3(t)
+$$
+
+### Catmull-Rom
+
+点的导数往往难以获取, 故可以使用 Catmull-Rom 的生成切线
+
+对于**连续** (间隔 $\Delta = 1$ ) 控制点 $\mathbf{P}_0, \mathbf{P}_1, \mathbf{P}_2, \mathbf{P}_3$ 定义的曲线段，实际插值的是从 $\mathbf{P}_1$ 到 $\mathbf{P}_2$ 的部分
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251217230329526.png" alt="image-20251217230329526" style="zoom: 25%;" />
+
+可以使用以下方式生成切线: 
+$$
+\begin{aligned}
+\mathbf{T}_1 &= \frac{\mathbf{P}_2 - \mathbf{P}_0}{2} \quad &\text{(起点 } \mathbf{P}_1 \text{ 处的切线)} \\
+\mathbf{T}_2 &= \frac{\mathbf{P}_3 - \mathbf{P}_1}{2} \quad &\text{(终点 } \mathbf{P}_2 \text{ 处的切线)}
+\end{aligned}
+$$
+
+将上述切线代入 Hermite 曲线公式：
+
+$$
+\mathbf{C}(t) = H_0(t) \mathbf{P}_1 + H_1(t) \mathbf{P}_2 + H_2(t) \mathbf{T}_1 + H_3(t) \mathbf{T}_2
+$$
+
+
 
 ### 伯恩斯坦基底
 
@@ -1012,6 +1208,8 @@ $$
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210165144789.png" alt="image-20251210165144789" style="zoom: 50%;" />
 
 贝塞尔曲线就是使用伯恩斯坦基底构造的曲线
+
+### 分段贝塞尔
 
 定义控制点$p_k$
 
@@ -1037,6 +1235,8 @@ $$
 
 一般偏向于使用多个分段的三次贝塞尔曲线拼接起来
 
+
+
 ### 构建分段三次贝塞尔曲线/曲面
 
 目标, 连续平滑的曲线
@@ -1060,19 +1260,87 @@ $$
 S(u,v) := \sum_{i=0}^3\sum_{j=0}^3B^3_{i,j}(u,v)p_{i,j}
 $$
 
+### Cubic Bézier
+
+三次贝塞尔曲线由 4 个控制点 $\mathbf{P}_0, \mathbf{P}_1, \mathbf{P}_2, \mathbf{P}_3$ 定义，是参数 $t \in [0, 1]$ 下的向量函数。
+
+$\mathbf{P}_0, \mathbf{P}_3$ 定义曲线的起点和终点
+
+$\mathbf{T}_0 = 3(\mathbf{P}_1 - \mathbf{P}_0)$， $\mathbf{T}_3 = 3(\mathbf{P}_3 - \mathbf{P}_2)$ 定义曲线在两段的切线
+
+曲线用三次伯恩斯坦多项式作为混合函数：
+
+$$
+\mathbf{C}(t) = \sum_{i=0}^{3} B_i^3(t) \, \mathbf{P}_i
+$$
+
+其中：
+
+$$
+\begin{aligned}
+B_0^3(t) &= (1-t)^3 \\
+B_1^3(t) &= 3t(1-t)^2 \\
+B_2^3(t) &= 3t^2(1-t) \\
+B_3^3(t) &= t^3
+\end{aligned}
+$$
+
+给定 Hermite 端点 $\mathbf{P}_0, \mathbf{P}_3$ 及切向量 $\mathbf{T}_0, \mathbf{T}_3$，对应贝塞尔控制为：
+
+$$
+\mathbf{P}_1 = \mathbf{P}_0 + \frac{\mathbf{T}_0}{3}, \quad \mathbf{P}_2 = \mathbf{P}_3 - \frac{\mathbf{T}_3}{3}
+$$
+
+矩阵形式
+$$
+\mathbf{B}(u) = \mathcal{P}_3(u) \cdot \beta_z \cdot \mathbf{p}
+$$
+
+其中：
+
+
+$$
+M_{Z \to H} = \begin{bmatrix} 
+1 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & 1 \\ 
+-3 & 3 & 0 & 0 \\ 
+0 & 0 & -3 & 3 
+\end{bmatrix}
+$$
+
+以及
+$$
+\beta_z =\beta_H\times M_{Z \to H} = \begin{bmatrix} 
+1 & 0 & 0 & 0 \\ 
+-3 & 3 & 0 & 0 \\ 
+3 & -6 & 3 & 0 \\ 
+-1 & 3 & -3 & 1 
+\end{bmatrix}
+$$
+
+### de Casteljau's算法
+
+对于伯恩斯坦基底存在高次运算, 容易造成精度丢失
+
+de Casteljau's 算法避免了高次运算造成的精度丢失
+
+见算法
+
 ### 细分
 
 可以采用的细分比例是杨辉三角中的 $\frac{1}{4},\frac{2}{4},\frac{1}{4}$
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210171912242.png" alt="image-20251210171912242" style="zoom:50%;" />
 
-迭代得去做, 就可以极限出一条比较平滑的曲线/曲面
+迭代地去做, 就可以极限出一条比较平滑的曲线/曲面
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210171950173.png" alt="image-20251210171950173" style="zoom: 50%;" />
 
 曲面也可以近似
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251210172034587.png" alt="image-20251210172034587" style="zoom: 50%;" />
+
+
 
 # 网格表示
 
@@ -1443,7 +1711,13 @@ $$
 
 原来位置是 $p$ , 目标位置是 $p'$, 为例保证网格描述的几何体的形状不变,那么在移动时的方向应当移除法线方向上的分量
 
-==TODO 这里提到的法线是哪个面的法线????==
+==这里提到的法线是哪个面的法线????==
+
+是周边三角形平面的法线的加权平均, 权重是对应三角形的面积
+
+三角形面越大, 法线占比越大, 法线指向偏多的那个三角形
+
+消除法线方向上的分量, 就是向中心移
 
  ### 策略
 
@@ -2262,47 +2536,7 @@ $$
 
 查询击中点算法
 
-```cpp
-struct BVHNode {
-    BBox bbox;
-    BVHNode* child1;
-    BVHNode* child2; // nullable
-    list<Primitive*> primList; // 列表. 对于叶子有效, 存储对象, 比如三角形
-    bool leaf() const { return !child1 && !child2; }
-};
-struct HitInfo {
-    Primitive* prim;
-    float t;
-    static HitInfo NOT_HIT = { nullptr, FLT_INF };
-    bool hit() const { return !prim; }
-    bool closer(const HitInfo& info) const {
-        return !hit() || info.hit() && info.t < this->t;
-    }
-    HitInfo& operator =(const HitInfo& info){
-        if(this != &info){
-            this->prim = info.prim;
-            this->t = info.t;
-        }
-        return this;
-    }
-}
-HitInfo fin_closest_hit(const Ray& ray, BVHNode* node){
-    if (!node->bbox.test(ray)) return HitInfo::NOT_HIT; // 测试无接触, 返回
-    if (!node->leaf()){
-        HitInfo hit1 = fin_closest_hit(ray, node->child1);
-        HitInfo hit2 = fin_closest_hit(ray, node->child2);
-        return hit1.closer(hit2) ? hit1 : hit2;
-    }
-    HitInfo closest = HitInfo::NOT_HIT;
-    for(Primitive* item: primList){
-        HitInfo hitInfo = item->test_hit(ray);
-        if(hitInfo.hit() && hitInfo.closer(closet)){
-            closest = hitInfo;
-        }
-    }
-    return closest;
-}
-```
+
 
 ### 构建
 
@@ -2540,7 +2774,6 @@ $$
 $$
 令 $(\xi_1,\xi_2)$ 在 $[0,1)^2$ 上均匀取值, 则可取
 $$
-
 \left\{\begin{align}
 \theta\;&=\;\arccos(\xi_1) \\
 \phi \;&=\; 2\pi\xi_2
@@ -2668,77 +2901,6 @@ E[X'] = p_{rr} \cdot \frac{E[X]}{p_{rr}} + (1-p_{rr})\cdot 0 = E[X]
 $$
 
 
-```cpp
-// 计算从位置 position 在方向 omega 传入的辐射
-float ComputeRadianceIn(const Vector3& position, const Vector3& omega) {
-    Intersection intersection = intersectScene(position, omega);  // 计算交点
-    // 返回零次反射辐射与至少一次反射辐射之和
-    return ZeroBounceRadiance(intersection, -omega) + 
-        AtLeastOneBounceRadiance(intersection, -omega);
-}
-
-// 计算零次反射辐射（直接由表面自身发射）
-float ZeroBounceRadiance(const Intersection& intersection, const Vector3& outgoingDirection) {
-    // 返回交点处表面向外发射的光
-    return intersection.emittedLight(outgoingDirection);
-}
-
-// 计算至少一次反射的辐射（包括间接光照）
-float AtLeastOneBounceRadiance(
-    const Intersection& intersection, const Vector3& outgoingDirection, int bounceCount = 0) {
-    if (bounceCount > MAX_BOUNCE_COUNT) return 0.0f;  // 限制最大反射次数，防止无限递归
-    
-    // 计算直接光照（一次反射）
-    float radiance = OneBounceRadiance(intersection, outgoingDirection);
-    
-    // 重要性采样，获取反射方向 omega_i 及其概率密度 pdf
-    Vector3 omega_i;
-    float pdf;
-    std::tie(omega_i, pdf) = intersection.brdf.sampleDirection(outgoingDirection);
-    
-    // 计算沿 omega_i 方向的下一个交点
-    Intersection nextIntersection = intersectScene(intersection, omega_i);
-    
-    // 计算俄罗斯轮盘法的连续概率
-    float continuationPdf = continuationProbability(
-        intersection.brdf, omega_i, outgoingDirection
-    );
-    
-    // 俄罗斯轮盘法递归估计间接光
-    if (random01() < continuationPdf) {
-        radiance += AtLeastOneBounceRadiance(nextIntersection, -omega_i, bounceCount + 1)
-                    * intersection.brdf(omega_i, outgoingDirection)
-                    * cosTheta(omega_i, intersection.normal) / pdf / continuationPdf;
-    }
-    
-    return radiance;
-}
-
-// 计算一次反射辐射（直接光照）
-float OneBounceRadiance(const Intersection& intersection, const Vector3& outgoingDirection) {
-    // 从光源采样直接照明
-    return DirectLightingSampleLights(intersection, outgoingDirection);
-}
-
-// 计算直接光照采样
-float DirectLightingSampleLights(const Intersection& intersection, const Vector3& outgoingDirection) {
-    Vector3 omega_i;
-    float pdf;
-    
-    // 重要性采样，从光源获取入射方向 omega_i 及其概率密度 pdf
-    LightSample lightSample = lights.sampleDirection(intersection);
-    
-    // 判断是否被遮挡（阴影检测）
-    if (scene.shadowIntersection(intersection, omega_i)) {
-        return 0.0f;  // 若被遮挡则无光照贡献
-    }
-    
-    // 若无遮挡，计算光源贡献
-    return lightSample.intensity * intersection.brdf(omega_i, outgoingDirection)
-           * cosTheta(omega_i, intersection.normal) / pdf;
-}
-
-```
 
 
 
