@@ -213,7 +213,6 @@ Origin频率高于采样频率太多, 将导致采样结果反而接近低频下
    \end{aligned}
    $$
    
-   
 5. 三个 $L$ 的值同号, 则表示在三角形内
 
 
@@ -327,12 +326,11 @@ $$
 \mathcal{F}^{-1}[F(\omega)] = f(t) = \frac{1}{2\pi} \int_{-\infty}^{\infty} F(\omega) e^{j\omega t} d\omega
 $$
 
-
 设 $ F_1(\omega) = F[f_1(t)] $，$ F_2(\omega) = F[f_2(t)] $，则 
-
 $$
 \begin{align*}
-\mathcal{F}^{-1} [F_1(\omega) * F_2(\omega)] &= \mathcal{F}^{-1} \left[ \int_{-\infty}^{+\infty} F_1(\mu) F_2(\omega - \mu) d\mu \right] \\
+\mathcal{F}^{-1} [F_1(\omega) * F_2(\omega)] 
+&= \mathcal{F}^{-1} \left[ \int_{-\infty}^{+\infty} F_1(\mu) F_2(\omega - \mu) d\mu \right] \\
 &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} \left[ \int_{-\infty}^{+\infty} F_1(\mu) F_2(\omega - \mu) d\mu \right] e^{j\omega t} d\omega \\
 &= \frac{1}{2\pi} \int_{-\infty}^{+\infty} F_1(\mu) \left[ \int_{-\infty}^{+\infty}  F_2(\omega - \mu) e^{j(\omega - \mu)t} d(\omega-\mu) \right] e^{j\mu t}  d\mu \\
 &= f_2(t) \int_{-\infty}^{+\infty} F_1(\mu) e^{j\mu t} d\mu \\
@@ -2322,7 +2320,9 @@ $$
 4. 对于每个碰到的点, 都向光源发送 Shadow Rays 以测试光线可见度
 5. 当遇到非镜面表面（或达到最大期望的递归水平）, 停止递归, 进入5, 否则, 对于每个射线, 返回2
 
-## 检查光线和三角形网格的交集
+## 检查和光线的交集
+
+### 三角形面
 
 <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215035215159.png" alt="image-20251215035215159" style="zoom:50%;" />
 
@@ -2406,9 +2406,26 @@ $$
 
 这一次只要看 $t \in [0, \infty ), u + v \in(0,1)$ 即表示在三角形内了
 
+### 球面
 
+转换成球心和射线的距离公式
 
-## 包围体
+- 从球心作垂直光线的垂线, 垂足为V, 设$\vec{P_{ro}V} = k\cdot\vec{d}$ , $P_{ro}$ 为射线原点
+
+  
+  $$
+  (k\cdot \vec{d} + \vec{OP_{ro}})\cdot \vec{OP_{so}} = 0
+  $$
+
+- 球心和射线的距离d
+
+  - 小于r, 两个交点
+  - 大于r, 无交点
+  - 等于r, 一个交点
+
+- 对于几个交点, 使用V和r, 判断交点是否在射线路径上, 哪个离射线原点更近
+
+### 包围体
 
 要测试光线是否打到一个网格的某个(或某些)三角形上
 
@@ -2458,11 +2475,15 @@ $$
 
 假设 $p: (x,y,z)$ 是包围盒内一点, 且 $x\in (x_{min},x_{max}), y \in (y_{min},y_{max}), z \in (z_{min},z_{max})$
 
+在于六个面分别测试相交的过程中, 六个面的 t 的范围一定是存在交集的
+
+如果不存在交集, 就是不与包围盒相交
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215110647801.png" alt="image-20251215110647801" style="zoom:50%;" />
+
 
 
 我们还需要获取到射线与包围盒相交的 $t$ 的取值范围, 用于检查不同的包围盒之间的重叠问题
-
-<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/cg/CG/image-20251215110647801.png" alt="image-20251215110647801" style="zoom:50%;" />
 
 ## 均匀空间划分
 

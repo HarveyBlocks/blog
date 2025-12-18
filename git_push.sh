@@ -3,6 +3,9 @@
 # Git auto commit and push script
 # Usage: ./git_auto.sh
 
+# generate json file for file tree
+python ./json_file_tree_generator.py
+
 # Check if current directory is a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
     echo "Error: Not a git repository"
