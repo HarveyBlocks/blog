@@ -5,7 +5,7 @@
 
 # generate json file for file tree
 python ./json_file_tree_generator.py
-
+echo "[INFO]: successfully update json file tree"
 # Check if current directory is a git repository
 if ! git rev-parse --git-dir > /dev/null 2>&1; then
     echo "Error: Not a git repository"
@@ -34,5 +34,5 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-echo "Success: Commit and push completed"
+echo "[INFO]: Success: Commit and push completed"
 exit 0
