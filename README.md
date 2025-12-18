@@ -1,284 +1,279 @@
-# blog
+# 📚 Blog 
 
-```txt
-https://github.com/HarveyBlocks/blog
-|   dir-tree.txt
-|   LICENSE
-+---android
-|   +---kotlin
-|   |   +---advanced
-|   |   \---basic
-|   \---view
-|       +---activity
-|       +---broudcast
-|       +---ContentProvider
-|       +---fragment
-|       +---glide
-|       +---Jetpack
-|       +---layout
-|       +---Material Design
-|       +---Multimedia
-|       +---persistent
-|       +---service
-|       \---web
-+---C&Cpp&Embedded
-|   +---c
-|   +---cpp
-|   +---embedded
-|   \---qt
-+---c-sharp
-|   +---基础
-|   +---面向对象
-|   \---高级
-+---cg
-+---compiler
-+---Design
-|   +---algorithm
-|   |   +---random
-|   |   +---search
-|   |   \---sort
-|   +---Data-Structure
-|   |   +---container
-|   |   \---tree
-|   \---Design-Pattern
-|       +---Spring-Framework
-|       +---创建者
-|       +---概述
-|       +---结构型
-|       \---行为型
-+---ES
-|   \---elasticsearch
-+---Front-end
-|   +---css
-|   +---fore
-|   +---html
-|   +---js
-|   |   +---front
-|   |   +---ts
-|   |   +---vue
-|   |   |   +---pinia
-|   |   |   +---基础
-|   |   |   +---通用型组件
-|   |   |   \---项目实例
-|   |   +---基础
-|   |   \---高级
-|   \---scss
-|           Day08-@mixin和@include
-+---Git
-|   \---GitBlog
-|       +---Git与IDEA
-|       +---Git基础
-|       \---Git远程仓库
-+---Go
-|   +---Gin
-|   +---基础
-|   \---高级
-+---Java
-|   +---blog
-|   |   +---javaIO流
-|   |   +---Java单元测试
-|   |   +---java反射
-|   |   +---java基础
-|   |   +---java多綫程
-|   |   |   +---ExecutorLearning
-|   |   |   +---LearnLock
-|   |   |   \---RestaurantSimulation
-|   |   +---java常用类
-|   |   +---java异常机制
-|   |   +---java泛型
-|   |   +---java注解
-|   |   |   \---LearnAnnotation
-|   |   +---java特殊文件
-|   |   |   \---learnSpecialDoc
-|   |   +---java玩儿
-|   |   +---java简化代码的方式
-|   |   +---java网络
-|   |   |   +---java简易聊天室
-|   |   |   +---JSP和AJAX
-|   |   |   +---会话跟踪技术
-|   |   |   +---网络
-|   |   |   \---网络编程
-|   |   +---java集合
-|   |   +---java面向对象
-|   |   +---JDBC与MyBits
-|   |   |       logback.xml
-|   |   \---Redis的Java客户端
-|   +---juc
-|   |   +---juc
-|   |   +---不可变模型
-|   |   +---共享模型
-|   |   +---内存模型
-|   |   +---第三方依赖之于多线程
-|   |   +---线程与进程
-|   |   +---线程池
-|   |   \---设计模式
-|   +---jvm
-|   |   +---GraalVM
-|   |   +---java-agent
-|   |   +---内存溢出和泄漏
-|   |   +---原理
-|   |   +---垃圾回收机制
-|   |   +---基础
-|   |   +---性能调优
-|   |   +---类加载
-|   |   \---运行时数据区域
-|   +---maven
-|   +---spring-blog
-|   |   +---AOP开发
-|   |   |   +---AOP声明式事务控制
-|   |   |   +---AOP概念及解释
-|   |   |   +---xml配置AOP
-|   |   |   \---注解配置AOP
-|   |   +---Spring的诞生
-|   |   +---Spring集成Web环境
-|   |   +---基于XML文件的Spring应用
-|   |   |   +---Spring-Bean的生命周期
-|   |   |   +---Spring后处理器
-|   |   |   +---xml与Spring基础应用
-|   |   |   \---整合第三方框架
-|   |   \---基于注解的Spring应用
-|   |       +---Bean基本注解开发
-|   |       +---整合第三方
-|   |       \---注解解析原理
-|   +---spring-boot
-|   |   +---mybatis-plus
-|   |   +---原理分析
-|   |   +---整合
-|   |   +---监控
-|   |   +---简介
-|   |   +---配置
-|   |   \---项目部署
-|   +---spring-data
-|   |   +---jdbc
-|   |   \---redis
-|   |       \---Redis项目实践
-|   |           +---GeoHash与地理坐标
-|   |           +---好友关注
-|   |           +---查询缓存
-|   |           +---短信登录
-|   |           +---秒杀
-|   |           +---笔记发布与点赞
-|   |           \---签到与统计
-|   +---spring-mvc
-|   |   +---SpringMVC全注解开发
-|   |   +---SpringMVC异常处理机制
-|   |   +---SpringMVC拦截器
-|   |   +---SpringMVC简介
-|   |   +---SpringMVC组件原理
-|   |   \---SpringMVC请求与响应
-|   +---swagger
-|   +---其他Spring全家桶
-|   |   \---SpringTask
-|   +---安全,认证,授权
-|   |   +---OAuth2.0和SpringCloudSecurity
-|   |   +---shiro
-|   |   +---Spring-Security
-|   |   \---分布式系统认证方案
-|   \---微服务和分布式
-|       +---Dubbo
-|       +---gRPC
-|       +---Hessian
-|       +---RPC概述
-|       +---skywalking
-|       +---spring-cloud
-|       |   +---微服务简述
-|       |   +---服务保护
-|       |   |   +---Hystrix
-|       |   |   \---Sentinel
-|       |   +---服务治理
-|       |   \---网关与配置管理
-|       \---zookeeper
-+---Kubernetes
-|   +---基础使用
-|   \---资源管理
-+---Linux
-|   +---Linux基础
-|   +---shell脚本
-|   +---指令
-|   +---文件编辑器
-|   +---权限与用户
-|   +---系统
-|   +---网络
-|   \---软件
-+---MongoDB
-|   +---Basic
-|   +---JavaClient
-|   +---schematic
-|   +---search
-|   \---slice
-+---MQ
-|   +---Kafka
-|   \---RabbitMQ
-|       +---Java客户端
-|       +---可靠性
-|       +---基本介绍
-|       \---延迟消息
-+---MySQL
-|   +---MySQL存储过程
-|   +---MySQL管理
-|   +---SQL其他优化
-|   +---SQL基础
-|   |   +---DCL
-|   |   +---DDL
-|   |   +---DML
-|   |   +---DQL
-|   |   +---事务
-|   |   +---函数
-|   |   +---多表查询
-|   |   |   \---子查询
-|   |   \---约束
-|   +---SQL引擎
-|   +---SQL概述
-|   +---SQL索引
-|   +---中间件Docker
-|   +---分库分表与MyCat
-|   +---存储函数
-|   +---触发器
-|   +---运维
-|   \---锁
-+---nginx
-|   +---代理
-|   +---基础
-|   +---核心配置文件结构与简述
-|   +---缓存集成
-|   +---负载均衡
-|   +---资源部署
-|   +---重写
-|   \---集群及其他
-+---NIO和Netty
-|   +---Netty
-|   +---NIO
-|   +---优化
-|   +---源码与流程
-|   \---聊天业务
-+---Python
-|   +---pytorch
-|   +---基础
-|   +---机器学习
-|   \---深度学习
-+---Redis&Cache
-|   +---优化
-|   +---分布式缓存
-|   +---原理
-|   +---基础
-|   +---多级缓存
-|   \---非关系型数据库
-+---testing
-|   \---JMeter
-+---unity
-|   +---2DRPG基础
-|   \---shader graph
-+---WebSocket
-+---其他
-|   \---解决MP分页全查
-\---其他文件的语法
-    +---DTD
-    +---properties
-    +---xml
-    +---XSD
-    |   +---复合元素
-    |   +---数据类型
-    |   \---简单类型
-    \---yaml
-```
+> Comprehensive Technical Knowledge Base
 
+A meticulously organized repository of programming notes, tutorials, and documentation covering a wide range of technologies across software development, mobile development, system design, and DevOps.
+
+## 📁 Repository Structure
+
+### 📱 **Android Development**
+- **Kotlin**
+  - Basic: Hello World, control flow, types, functions, classes
+  - Advanced: Extensions, generics, coroutines, DSLs, delegates
+- **View Layer**
+  - Activity lifecycle, Intents, Fragments
+  - Layouts, RecyclerView, Custom Controls
+  - ViewBinding, Material Design components
+- **Jetpack Components**
+  - Lifecycles, ViewModel, LiveData
+  - Room database, WorkManager
+- **Persistent Storage**
+  - SharedPreferences, SQLite, File storage
+- **Multimedia & Network**
+  - Camera, Notifications, MediaPlayer
+  - WebView, Retrofit, HTTP requests
+- **Services & Broadcasts**
+  - Service lifecycle, Broadcast receivers
+  - Content providers, Multi-threading
+
+### 💻 **C/C++ & Embedded Systems**
+- **C Programming**
+  - Pointers, arrays, library functions
+  - Operators, header files
+- **C++ Programming**
+  - OOP concepts: classes, inheritance, polymorphism
+  - Templates, STL, streams, exception handling
+- **Embedded Systems**
+  - RISC-V architecture overview
+- **Qt Framework**
+  - Basic components, QString, signals and slots
+
+### 🔷 **C# Development**
+- **Fundamentals**
+  - Variables, data types, control structures
+  - Arrays, collections, operators
+- **Object-Oriented Programming**
+  - Polymorphism, instantiation, access modifiers
+  - Generics, exception handling
+- **Advanced Concepts**
+  - Delegates, lambda expressions, LINQ
+  - Pattern matching, extension methods
+
+### 🎮 **Computer Graphics (CG)**
+- Vector spaces, sampling, transformations
+- Textures, geometry processing, grids
+- Radiance, rendering equations
+- Light tracing, Monte Carlo rendering
+
+### 🧩 **Compiler Design**
+- File I/O operations
+- Import mechanisms
+- Declaration handling
+
+### 🏗️ **Design & Architecture**
+- **Algorithms**
+  - Sorting algorithms (quick sort, merge sort, heap sort)
+  - Searching algorithms, probability and randomness
+- **Data Structures**
+  - Containers: arrays, linked lists, hash tables, strings
+  - Trees: BST, AVL, Red-Black, Heaps, Treap
+- **Design Patterns**
+  - Creational: Singleton, Factory, Builder, Prototype
+  - Structural: Adapter, Decorator, Proxy, Composite
+  - Behavioral: Observer, Strategy, Command, State
+  - Spring Framework analysis
+
+### 🔍 **Elasticsearch**
+- ES introduction and installation
+- Indexing, document operations, REST client
+- DSL queries, data aggregation, auto-completion
+- Data synchronization, clustering
+
+### 🌐 **Frontend Development**
+- **HTML/CSS**
+  - Basic HTML elements, CSS selectors, box model
+  - Layouts, responsive design, animations
+- **JavaScript/TypeScript**
+  - Fundamentals, data types, functions, OOP
+  - DOM manipulation, AJAX, BOM
+  - TypeScript types, interfaces, namespaces
+- **Vue.js Ecosystem**
+  - Vue basics, directives, components, events
+  - Vue Router, state management with Pinia
+  - ElementPlus components, project structure
+- **SCSS/SASS**
+  - Variables, mixins, imports, styling
+
+### 🔧 **Git & Version Control**
+- Git basics, branching strategies
+- Local and remote repository management
+- Git with IDEA, commit message formats
+- SSH key management
+
+### ⚡ **Go Language**
+- **Fundamentals**
+  - Variables, data types, control flow
+  - Pointers, arrays, slices, maps
+  - Functions, error handling
+- **Advanced Topics**
+  - File I/O, concurrency, packages
+  - Unit testing, Gin web framework
+
+### ☕ **Java Ecosystem**
+- **Core Java**
+  - Basics: syntax, OOP, collections, generics
+  - Advanced: reflection, annotations, lambda expressions
+  - Stream API, Optional, Lombok
+- **Java Virtual Machine (JVM)**
+  - JVM architecture, class loading, memory management
+  - Garbage collection, performance tuning
+  - Java agents, GraalVM
+- **Concurrency (JUC)**
+  - Threads, synchronization, locks
+  - Concurrent collections, thread pools
+  - Memory model, atomic operations
+- **Spring Framework**
+  - Spring Core: IoC, DI, AOP
+  - Spring Boot: auto-configuration, starters
+  - Spring MVC, Spring Data, Security
+- **Microservices & Distributed Systems**
+  - Spring Cloud, service discovery
+  - RPC frameworks (Dubbo, gRPC)
+  - Service mesh (SkyWalking), API gateways
+- **Database Integration**
+  - JDBC, MyBatis, JPA
+  - Connection pooling, transaction management
+
+### 🐳 **Kubernetes & Containerization**
+- Kubernetes overview and components
+- Resource management: Pods, Deployments, Services
+- Labeling, namespaces, cluster management
+
+### 🐧 **Linux & System Administration**
+- Linux basics and command line
+- File operations, permissions, user management
+- Shell scripting, system monitoring
+- Network configuration, software installation
+- Process management, environment variables
+
+### 🍃 **MongoDB**
+- Basic operations: CRUD, collections, documents
+- Schema validation, BSON format
+- Java client integration, queries, aggregation
+- Indexes, transactions, geographical queries
+
+### 📨 **Message Queues (MQ)**
+- **RabbitMQ**
+  - Basic concepts, exchanges, queues
+  - Reliability, message persistence
+  - Delayed messages, dead letter exchanges
+- **Kafka**
+  - Topics, partitions, consumer groups
+  - Performance benchmarking
+
+### 🗄️ **MySQL & Database Management**
+- SQL fundamentals: DDL, DML, DQL, DCL
+- Database design, normalization, constraints
+- Indexing strategies, query optimization
+- Transactions, locking mechanisms
+- Stored procedures, functions, triggers
+- Database administration, replication
+- MyCat middleware, sharding strategies
+- Docker deployment for databases
+
+### 🔄 **Nginx Web Server**
+- Installation and basic configuration
+- Reverse proxy, load balancing
+- SSL/TLS configuration, caching
+- Rewrite rules, access control
+- High availability with Keepalived
+
+### 🔌 **NIO & Netty**
+- Java NIO: buffers, channels, selectors
+- Netty framework: event loops, handlers
+- ByteBuf, pipeline architecture
+- Protocol design, chat application example
+- RPC implementation, serialization
+
+### 🐍 **Python & Machine Learning**
+- **Python Basics**
+  - Syntax, data structures, OOP
+  - File I/O, modules, packages
+- **Machine Learning**
+  - Datasets, feature engineering
+  - Classification, regression, clustering algorithms
+  - Model evaluation, overfitting/underfitting
+- **Deep Learning with PyTorch**
+  - Tensors, neural networks, CNNs, RNNs
+  - Model training, transfer learning
+
+### 🗂️ **Redis & Caching**
+- **Redis Fundamentals**
+  - Data types: strings, hashes, lists, sets, sorted sets
+  - Streams, BitMaps, HyperLogLog, Geo data
+- **Advanced Features**
+  - Persistence: RDB and AOF
+  - Clustering: replication, sentinel, sharding
+- **Multi-level Caching**
+  - JVM cache, Lua scripting with OpenResty
+  - Cache synchronization strategies
+
+### 🧪 **Testing**
+- **JMeter Performance Testing**
+  - Thread groups, parameterization
+  - Assertions, timers, logic controllers
+  - Database testing, reporting
+
+### 🎮 **Unity Game Development**
+- 2D RPG basics: editor, characters, animations
+- Combat systems, enemy AI
+- UGUI, camera systems, audio
+- Scene management, start screens
+- Shader Graph for visual effects
+
+### 🌐 **WebSocket & Real-time Communication**
+- WebSocket protocol basics
+- Real-time messaging systems
+- Online chat room implementation
+
+### 📄 **Other Resources**
+- Documentation formats: Markdown, LaTeX
+- Regular expressions
+- Windows/DOS commands
+- Configuration file formats: XML, YAML, Properties
+- DTD and XSD schema definitions
+
+## 🚀 Quick Start
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/HarveyBlocks/blog.git
+   ```
+
+2. **Navigate to specific technology:**
+   ```bash
+   cd blog
+   ```
+
+3. **View documentation:**
+   - Most files are in Markdown format
+   - Use any Markdown viewer or text editor
+
+## 🛠️ Prerequisites
+
+- Basic programming knowledge
+- Understanding of specific technology domains
+- Relevant development environments for code examples
+
+## 📖 Usage
+
+This repository serves as:
+- **Learning Resource**: Structured learning paths for various technologies
+- **Reference Guide**: Quick lookups for specific concepts
+- **Code Examples**: Practical implementations and patterns
+- **Interview Preparation**: Comprehensive coverage of topics
+
+## 🔍 Search Tips
+
+- Use the table of contents above to navigate
+- Search by technology stack (e.g., "Java", "Spring", "Database")
+- Look for specific patterns or algorithms
+- Check the "Design" section for architecture patterns
+
+## 🤝 Contributing
+
+While this appears to be a personal knowledge base, contributions in the form of suggestions or corrections are welcome through issues or pull requests.
+
+## 📄 License
+
+See the [LICENSE](./LICENSE) file for details.
