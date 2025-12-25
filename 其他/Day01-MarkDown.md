@@ -148,15 +148,11 @@ gantt
 
 ## 数学公式
 
-[MarkDown数学公式](https://zhuanlan.zhihu.com/p/441454622)
-
-[Markdown 数学公式详细总结](https://zhuanlan.zhihu.com/p/679557799#:~:text=Markdown 中的数学公式也分为「行中公式」和「独立公式」两种。 1.行内公式%3A将公式插入到本行内，符号%3A %24公式内容 %24,，如%3A xyz 2.独行公式%3A将公式插入到新的一行内，并且居中，符号%3A %24%24公式内容%24%24 如%3A)
 $$
 score(Q,d) = \sum_i^n{
 	[ \log(1+\frac{N-n+0.5}{n+0.1})
 	\times 
 	\frac{f_i}{f_i+k_i \cdot (1-b+b \cdot \frac{dl}{avgdl} )}]
-}\\
-BM25算法
+}
 $$
 
