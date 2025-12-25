@@ -267,6 +267,35 @@
 
 ![image-20250730170536063](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day03-表格/image-20250730170536063.png)
 
+<table>
+    <tr>
+        <th>标题1</th>
+        <td>内容1.1</td>
+        <td>内容1.2</td>
+    </tr>
+    <tr>
+        <th rowspan="4">标题2</th>
+        <td>内容2.1</td>
+        <td>内容2.2</td>
+    </tr>
+    <tr>
+        <th rowspan="2">标题2.2</th>
+        <td>内容2.2.1</td>
+    </tr>
+    <tr>
+        <td>内容2.2.2</td>
+    </tr>
+    <tr>
+        <td>内容2.3</td>
+        <td>内容2.4</td>
+    </tr>
+    <tr>
+        <th>标题3</th>
+        <td>内容2.6</td>
+        <td>内容2.7</td>
+    </tr>
+</table>
+
 ## 二维表
 
 ```html
@@ -333,7 +362,7 @@
             行1，列1<br>
             你可以嵌套任意文本<br>
             甚至一张图片:<br>
-            <img src="..\assets\Day01-基础\javascript.svg" alt="图片失效" >
+            <img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day03-表格/javascript.svg" alt="图片失效" >
         </td>
         <td>行1，列2的表格
             <table border="2">

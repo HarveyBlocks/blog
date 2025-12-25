@@ -127,8 +127,8 @@
         开机自启动
     </label>
 </form>
-
 复选框有半选状态`indeterminate`
+
 ![image-20250827064908685](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/html/Day04-表单/image-20250827064908685.png)
 
 ```html
@@ -201,6 +201,7 @@ form 的method 为get时, 会将**提交的参数**放在**URL的参数**上
 <textarea rows="10" cols="30">
 一个文本框
 </textarea>
+
 
 ## 按钮
 

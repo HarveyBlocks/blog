@@ -20,6 +20,12 @@ bool RasterizerImp::is_point_in_triangle(
 }
 ```
 
+```xml
+
+```
+
+
+
 ## 包围盒
 
 ```cpp

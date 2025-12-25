@@ -7,7 +7,7 @@
 -   inline 行级元素的display属性默认值
 -   none 与 JavaScript 一起使用，以隐藏和显示元素
 -   inline-block 允许在元素上设置宽度和高度
--   `visibility`属性的`hidden` 与 none 的区别在于 hidden 依旧占用元素原本的空间
+-   `visibility`属性的`hidden` 与 display 属性 的 `none` 值的区别在于 hidden 依旧占用元素原本的空间
 
 ### inline-block
 
