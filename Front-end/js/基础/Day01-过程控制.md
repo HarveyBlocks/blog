@@ -167,7 +167,7 @@ switch(expression) {
 -   允许default不再最后
 -   上面的条件先符合的优先匹配上一条条件
 -   总会先匹配default
--    case 使用严格比较（===）
+-    case 使用严格比较（`===`）
 -   
 
 ```js

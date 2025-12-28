@@ -8,7 +8,7 @@
 
 底层用Linked, 保证写入顺序和读出顺序一致
 
-### 空==
+### 空`==`
 
 `emptyListOf<String>()`
 

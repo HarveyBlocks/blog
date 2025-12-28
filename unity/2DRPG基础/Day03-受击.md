@@ -331,7 +331,7 @@ public class CharacterFeature : MonoBehaviour {
 
 3.   设置状态转换关系
 
-     AnyState->isDead\==true->Death Animation->isDead\==false->Exit
+     AnyState->`isDead==true`->Death Animation->`isDead==false`->Exit
 
      如果Death Animation直接到Exit, 就会跳回上一层的动画
 
@@ -359,7 +359,7 @@ public class CharacterFeature : MonoBehaviour {
      }
      ```
 
-5.   死亡动画只播放一次, 死亡动画播放完毕后, 再次回到AnyState判断, isDead==true依旧成立
+5.   死亡动画只播放一次, 死亡动画播放完毕后, 再次回到AnyState判断, `isDead==true`依旧成立
 
      点击动画素材
 

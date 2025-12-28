@@ -1,4 +1,4 @@
-```java
+```xml
 <!--lombok-->
 <dependency>
     <groupId>org.projectlombok</groupId>
@@ -7,7 +7,7 @@
 </dependency>
 ```
 
-~~~
+~~~java
 @Data == 无参构造+getter+setter+tostring+hashcode+equals
 @AllArgsConstructor
 @NoArgsConstructor

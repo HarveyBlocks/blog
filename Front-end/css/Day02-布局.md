@@ -482,6 +482,10 @@ div.sticky {
 
 > display: flex;
 
+float 一开始是为了解决文字环绕图片的需求, 但却被滥用于块元素之间的布局
+
+于是CSS推出Flex box, 专门用于布局, 声明式布局、响应式友好
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -515,6 +519,10 @@ div.sticky {
 弹性布局中必须有一个 **display** 属性设置为 **flex** 的**父元素**。
 
 弹性容器的直接子元素会自动成为弹性项目。
+
+
+
+
 
 ### 属性
 
@@ -576,4 +584,95 @@ div.sticky {
   flex-flow: row wrap;
 }
 ```
+
+### justify-content
+
+`justify-content` 属性用于对齐 flex 项目
+
+- `center` 值将 flex 项目在容器的中心对齐
+- `flex-start` 值将 flex 项目在容器的开头对齐（默认）
+- `flex-end` 值将 flex 项目在容器的末端对齐
+- `space-around` 值显示行之前、之间和之后带有空格的 flex 项目
+- `space-between` 值显示行之间有空格的 flex 项目
+
+```html
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: DodgerBlue;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .flex-start {
+            justify-content: flex-start;
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-around {
+            justify-content: space-around;
+        }
+
+        .flex-between {
+            justify-content: space-between;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>justify-content: center;</h1>
+<div class="flex-container flex-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h1>justify-content: flex-start;</h1>
+<div class="flex-container flex-start">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h1>justify-content: flex-end;</h1>
+<div class="flex-container flex-end">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h1>justify-content: space-around;</h1>
+<div class="flex-container flex-around">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+<h1>justify-content: space-between;</h1>
+<div class="flex-container flex-between">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+</body>
+</html>
+
+```
+
+
+
+<img src="https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Front-end/css/Day02-布局/image-20251228160354932.png" alt="image-20251228160354932" style="zoom:50%;" />
 
