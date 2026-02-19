@@ -90,7 +90,9 @@ public final class GuardedSuspensionNotifyPattern<R> extends AbstractNotifiedSta
     @Setter
     private Supplier<R> supplier;
 
-    public GuardedSuspensionNotifyPattern(WaitStandardPattern waitPattern, FutureResponse<R> futureResponse) {
+    public GuardedSuspensionNotifyPattern(
+        WaitStandardPattern waitPattern, 
+        FutureResponse<R> futureResponse) {
         super(waitPattern);
         this.futureResponse = futureResponse;
     }
@@ -154,7 +156,8 @@ public class GuardedSuspension<R> {
 
     @SuppressWarnings("unchecked")
     public R getResult() {
-        new GuardedSuspensionWaitPattern<>(futureResponse).setListener((Consumer<R>) DEFAULT_LISTENER).run();
+        new GuardedSuspensionWaitPattern<>(futureResponse)
+            .setListener((Consumer<R>) DEFAULT_LISTENER).run();
         return futureResponse.getResult();
     }
 }

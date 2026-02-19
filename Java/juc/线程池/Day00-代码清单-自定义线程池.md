@@ -139,23 +139,25 @@ public class ActivePool {
         this.close(false, clog);
     }
 
-    private static class Sum {
-        int value = 0;
-
-        void add(int plus) {
-            this.value += plus;
-        }
-
-        public int get() {
-            return value;
-        }
-    }
+    
 }
 ```
 
 ## 使用Demo
 
 ```java
+private static class Sum {
+    int value = 0;
+
+    void add(int plus) {
+        this.value += plus;
+    }
+
+    public int get() {
+        return value;
+    }
+}
+
 public static void demo() {
     final Random random = new Random(System.currentTimeMillis());
     final Sum sum = new Sum();

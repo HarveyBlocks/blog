@@ -110,8 +110,6 @@ public Long createOrder(OrderFormDTO orderFormDTO) {
     1.  各参与者接收到`abort`请求后, 执行事务回滚操作
     2.  各参与者完成事务回滚后, 向发送者反馈ACK, 完成事务回滚
 
-####
-
 ## 分布式事务框架
 
 ### Seata

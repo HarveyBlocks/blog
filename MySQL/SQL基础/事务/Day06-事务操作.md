@@ -70,7 +70,7 @@ SET @@autocommit = 1;
 -   开启事务
 
 ```mysql
-START TRANSCATION;
+START Transaction;
 ```
 
 或

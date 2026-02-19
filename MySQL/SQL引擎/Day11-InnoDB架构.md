@@ -15,7 +15,7 @@
 
 #### Free Page
 
-申请了,但没有被使用的空闲Page
+申请了内存空间,但没有被使用的空闲Page
 
 #### Clean Page
 
@@ -76,11 +76,11 @@ show variables like '%flush_log%';
 
 ### Redo log
 
-[事务原理](./Day11-InnoDB引擎事务原理)
+[事务原理](./Day11-InnoDB事务原理.md)
 
 ### Undo log
 
-[事务原理](./Day11-InnoDB引擎事务原理)
+[事务原理](./Day11-InnoDB事务原理.md)
 
 # 磁盘架构
 

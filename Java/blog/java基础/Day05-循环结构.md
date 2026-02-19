@@ -51,8 +51,6 @@ public class Main {
 ## break和continue和标签
 
 ```java
-//标签，太脏啦！！！！！！！！！！！
-
 public class Main {
     public static void main(String[] args) {
         //接下来输出500-5000的所有质数
@@ -77,7 +75,7 @@ public class Main {
 public class Main {
     public static void main(String[] args) {
         for(int i =0;i<10;i++){
-            fuck:for(int j=0;j<=i;j++){			//**
+            fuck:for(int j = 0;j <= i;j++) {//** continue -> j++ -> j<=i -> 进入循环体
                 if (j==0){					
                     continue fuck;				//**
                 }

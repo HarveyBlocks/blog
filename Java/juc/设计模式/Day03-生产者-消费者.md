@@ -2,7 +2,7 @@
 
 -   和保护性暂停模式不同的是, 不需要产生结果和消费结果的线程一一对应
 -   生产者-消费者模式可以用来平衡消费和生产的线程资源
--   生产者仅赋值产生结果数据,不管数据如何处理, 消费者专心处理结果数据
+-   生产者仅赋值产生结果数据,不管数据如何处理; 消费者专心处理结果数据, 而不关注数据如何生产
 
 ## 实现
 
@@ -156,7 +156,7 @@ public class ProducerConsumerRegistryImpl<P> implements ProducerConsumerRegistry
 
 在消息队列的服务端, 各Producer生产消息, 然后发送给消息队列中间件
 
-然后消息队列中间件发送消息给客户端的网卡, 客户端上可能由多个Customer, 而且客户端也可能有消息堆积
+然后消息队列中间件发送消息给客户端的网卡, 客户端上可能有多个Customer, 而且客户端也可能有消息堆积
 
 故服务端和客户端都使用消息队列
 
@@ -176,7 +176,7 @@ private static void registerProducer(
 }
 ```
 
-### 组测消费者(服务端->客户端数据传输)
+### 注册消费者(服务端->客户端数据传输)
 
 ```java
 private static void registerCustomer(String customerName, ProducerConsumerRegistry<String> registry) {

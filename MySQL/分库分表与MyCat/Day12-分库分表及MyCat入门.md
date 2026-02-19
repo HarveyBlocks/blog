@@ -232,7 +232,9 @@ CREATE TABLE TB_ORDER(
 
 安装下
 
-![image-20231210173229031](../../../cg/assets/Day12-分库分表及MyCat入门/image-20231210173229031.png)
+![image-20231210173229031](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表及MyCat入门/image-20231210173229031.png)
+
+
 
 使用**Show NppFTP Window**
 

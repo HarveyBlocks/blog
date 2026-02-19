@@ -86,7 +86,7 @@ encoding以`11`开头, 表示content是字符串, 剩余6个比特位用来表�
 ## 缺陷
 
 1.  不得不遍历才能查找
-2.  `previious_emtry_length`导致的连锁更新问题
+2.  `previous_emtry_length`导致的连锁更新问题
 
 ### 连锁更新
 

@@ -2,7 +2,7 @@
 
 ![image-20240907003307780](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/juc/共享模型/Day03-wait-notfy/image-20240907003307780.png)
 
-在wait-notify中, Owner线程调用`wait()`, 将存入Monitor的`WaitSet`字段, 而后将临界区开放给EntryList中的其他线程
+在wait-notify中, Owner线程调用`wait()`, 将Owner存入Monitor的`WaitSet`字段, 而后将临界区开放给EntryList中的其他线程
 
 待到新进入临界区的线程使用`notify()`的方法时, 再唤醒`WaitSet`中的线程
 
@@ -136,7 +136,7 @@ private static void notifyMethod() {
 
 -   sleep是Thread的静态方法, wait的Object的方法
 -   sleep不需要强制和synchronized配合使用, 但wait和synchronized一起使用
--   sleep在睡眠的同时不会释放对象锁, 不会释放对象锁, 但wait在等待的时候会释放对象锁
+-   sleep在睡眠的同时不会释放对象锁, 但wait在等待的时候会释放对象锁
 -   wait会被notify唤醒, sleep会等到睡眠时间结束, 或interrupt才会被唤醒
 
 ## wait-notify使用规范
@@ -213,7 +213,7 @@ private static void task2() {
 }
 ```
 
-如果是需要其他前置任务的线程被唤醒了, 那么那个需要这个前置任务的线程没有被唤醒, 那这一条线程将永远处于等待
+如果是需要其他前置任务的线程被唤醒了, 那么那个需要这个前置任务的线程无法被唤醒, 那这一条线程将永远处于等待
 
 解决方法: ==唤醒所有等待线程, 则必定唤醒需要当前前置任务的线程==
 

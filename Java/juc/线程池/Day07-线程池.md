@@ -37,6 +37,10 @@ private void advanceRunState(int targetState) {
 }
 ```
 
+
+
+
+
 | 状态       | 高3位二进制 | 接收新任务 | 处理阻塞任务队列 | 说明                                            |
 | ---------- | ----------- | ---------- | ---------------- | ----------------------------------------------- |
 | RUNNING    | 111         | Y          | Y                |                                                 |
@@ -44,6 +48,8 @@ private void advanceRunState(int targetState) {
 | STOP       | 001         | N          | N                | 中断正在执行的任务, 并抛弃任务队列中的任务      |
 | TIDYING    | 010         | -          | -                | 任务全执行完毕吗活动线程状态全部为0即将进入终结 |
 | TERMINATED | 011         | -          | -                | 终结状态, 所有线程都不再运行                    |
+
+
 
 ### 状态获取
 
@@ -143,7 +149,7 @@ public ThreadPoolExecutor(int corePoolSize,  // 核心线程数
 
         包装类`FinalizableDelegatedExecutorService`是一个私有内部类
 
-        直接返回一个ThreadPoolExecutor, 即使返回值类型是ExecutorService, 也可以用强制类型转换转成ThreadPoolExecutor
+        假设直接返回一个 ThreadPoolExecutor对象, 即使返回值类型标注成 ExecutorService, 也可以用强制类型转换转成ThreadPoolExecutor
 
         但是`FinalizableDelegatedExecutorService`封装之后, 就不能转化成ThreadPoolExecutor了, 只能是ExecutorService了
 

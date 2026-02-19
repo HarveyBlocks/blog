@@ -65,7 +65,7 @@
 ## 复制算法
 
 1.  准备两片空间From-To, 在对象分配时只能使用其中之一(From)
-2.  对于存货的对象, 从From移到To
+2.  对于存活的对象, 从From移到To
 3.  互换两片空间的名字
 
 ### 优缺点
@@ -152,7 +152,7 @@ arthuas中`memory`查看得到`eden_space`, `survicor_space`, `tenured_gen`就�
 
     1.  执行Minor GC, 执行了之后还不够, 放入老年代
 
-3.  老年代存满, 执行MinorGC, 尝试放入年轻代
+3.  老年代存满, 执行MajorGC, 尝试放入年轻代
 
 4.  年轻代依旧存满, 执行Full GC, 对整个堆进行垃圾回收, STW会比较久
 

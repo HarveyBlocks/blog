@@ -39,5 +39,5 @@
         -   `ThreadLocal`=>`FastThreadLocal`
         -   `ByteBuffer`=>`ByteBuf`
 -   Netty自2004年的2.x版本经受考验至今
--   比Mina迭代更快, API更简洁, 文档更优秀(棒子的自买自夸)
+-   比Mina迭代更快, API更简洁, 文档更优秀(棒子的自卖自夸这一块)
 

@@ -62,9 +62,9 @@ Thread t1 = new Thread(() -> {
         ```cpp
         public void method(List<Integer> list) {
             new Thread(()->{
-                // 实际上进入了匿名内部类Runnable的子实现类, 是
+                // 实际上进入了匿名内部类Runnable的子实现类, 是不安全的
                 list.remove(0);
-            }).start;
+            }).start();
         }
         ```
 

@@ -238,6 +238,7 @@ t2 --x  l1 : 尝试获取锁
 ```mermaid
 sequenceDiagram
 
+
 participant t1 as 线程1
 participant t2 as 线程2
 participant l1 as 锁对象1
@@ -259,6 +260,10 @@ Note over t2,l2: 拥有锁对象2
 t2 -->>- l2 : 释放锁
 t2 -->>- l1 : 释放锁
 ```
+
+
+
+
 
 ```java
 public static void demo() {

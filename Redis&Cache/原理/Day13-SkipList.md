@@ -41,3 +41,9 @@ typedef struct zskiplist{
     -   比目标大, 重复1
     -   比目标小, 选择小一级跨度的, 尝试一下
 
+
+
+
+
+
+

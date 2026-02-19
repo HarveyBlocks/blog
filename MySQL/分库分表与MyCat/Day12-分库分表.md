@@ -22,6 +22,8 @@
 
 ![image-20231028144602317](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/分库分表与MyCat/Day12-分库分表/image-20231028144602317.png)
 
+
+
 ### 垂直拆分
 
 -   垂直分库

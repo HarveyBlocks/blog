@@ -32,6 +32,8 @@
 protected abstract boolean tryAcquire(int arg);
 ```
 
+
+
 ```java
 /**
  * @return true if 成功释放锁
@@ -39,13 +41,19 @@ protected abstract boolean tryAcquire(int arg);
 protected abstract boolean tryRelease(int arg);
 ```
 
+
+
 ```java
 protected abstract int tryAcquireShared(int arg);
 ```
 
+
+
 ```java
 protected abstract boolean tryReleaseShared(int arg);
 ```
+
+
 
 ```java
 /**

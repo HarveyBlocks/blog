@@ -10,7 +10,7 @@
 
 对我们的日常操作,如:
 
-​	`select...lock in share  mode`(共享锁)
+​	`select...lock in share mode`(共享锁)
 
 ​	`select...for update` `update` `insert` `delete`(排他锁)
 
@@ -58,7 +58,8 @@ ibd2sdi 文件名.ibd
 -   绝对路径不好用
 
 ```Json
-  "columns": [
+{
+    "columns": [
       		{
           		......
             },
@@ -74,11 +75,14 @@ ibd2sdi 文件名.ibd
             {
                 "name": "DB_ROLL_PTR",
 				........
+            }
+      ]
+}
 ```
 
 -   因为section表的主键是我后期加的,因此,**"DB_ROW_ID"**还存在
 
-###
+
 
 ### DB_TRX_ID 事务ID
 
@@ -119,15 +123,15 @@ ptr->point
 -   链表的头部是最新的记录
 -   链表的尾部是最旧的记录
 
-**那么 , 返回那一条记录是由谁来绝对的呢 ?**
+**那么 , 返回那一条记录是由谁来决定的呢 ?**
 
 ​								---- ***READ VIEW***
 
-## readView读视图
+## ReadView 读视图
 
 >   readView 是**快照读** SQL 执行时MVCC提取数据的依据 , **记录并维护系统当前活跃的事务** ( 并未提交时 ) id
 
-### readView 的核心字段
+### ReadView 的核心字段
 
 ![image-20231027175849727](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL引擎/Day11-InnoDBMVCC/image-20231027175849727.png)
 

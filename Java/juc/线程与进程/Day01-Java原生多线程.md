@@ -23,7 +23,7 @@ thread1.start();
 thread2.start();
 ```
 
-虽然IDLE都会推荐化为
+虽然IDEA都会推荐化为
 
 ```java
 Thread thread2 = new Thread(() -> log.info("Run"));

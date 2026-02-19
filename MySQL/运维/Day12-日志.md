@@ -33,12 +33,33 @@ show variables '%log_bin%';
 
 ## 格式
 
--   Statement
-    -   **记录DDL和DML语句**,对数据进行修改的语句会记录在日志中
+- Statement
+
+  -   **记录DDL和DML语句**,对数据进行修改的语句会记录在日志中
+
+  Statement 存在问题
+
+  SQL中出现 `now` 函数, 在恢复的时候就不能正确恢复了
+
+  解决方法是在执行now之前先执行设置 `TIMESTAMP` 
+
+  ```sql
+  SET TIMESTAMP=173910829390890213
+  INSERT INTO `user` (`id`, `name`, `create_time`) VALUES(5, 'aaa', now());
+  ```
+
 -   Row(**默认**)
+    
     -   记录每一行数据的变更前后的样子
+    -   对于insert操作, 将导致全表重新生成binlog
+    
 -   Mixed
+    
     -   混合二者,默认Statement,某些状态下会自动切换成Row记录
+
+
+
+
 
 ### 语法
 

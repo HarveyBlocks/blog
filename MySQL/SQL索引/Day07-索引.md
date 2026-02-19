@@ -68,6 +68,8 @@ Hash冲突->在Hash值处增加链表->Hash树
 
 ![image-20231021170700912](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MySQL/SQL索引/Day07-索引/image-20231021170700912.png)
 
+
+
 1.  拿到这列的记录
 
 2.  取得对应聚集索引
