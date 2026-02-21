@@ -62,9 +62,9 @@
 
 ![homeschool-f10a98](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/其他/Day01-MarkDown/homeschool-f10a98.png)
 
-这是一个网页图片文件(转自https://i0.hdslb.com/bfs/new_dyn/5af0ddea6370c05b54e36a5bfa63b91e168687092.jpg)：
+这是一个网页图片文件(转自[B](https://i0.hdslb.com/bfs/new_dyn/5af0ddea6370c05b54e36a5bfa63b91e168687092.jpg))：
 
-![图片2](https://i0.hdslb.com/bfs/new_dyn/5af0ddea6370c05b54e36a5bfa63b91e168687092.jpg)
+<img src="https://i0.hdslb.com/bfs/new_dyn/5af0ddea6370c05b54e36a5bfa63b91e168687092.jpg" alt="图片2" style="zoom:5%;" />
 
 ## 超链接
 
@@ -148,7 +148,38 @@ gantt
 
 ```
 
+## PlantUML
+
+
+
+```plantUML
+@startuml
+participant Participant as Foo
+actor       Actor       as Foo1
+boundary    Boundary    as Foo2
+control     Control     as Foo3
+entity      Entity      as Foo4
+database    Database    as Foo5
+collections Collections as Foo6
+queue       Queue       as Foo7
+Foo -> Foo1 : To actor 
+Foo -> Foo2 : To boundary
+Foo -> Foo3 : To control
+Foo -> Foo4 : To entity
+Foo -> Foo5 : To database
+Foo -> Foo6 : To collections
+Foo -> Foo7: To queue
+@enduml
+```
+
+
+
+
+
 ## 数学公式
+
+
+
 
 $$
 score(Q,d) = \sum_i^n{

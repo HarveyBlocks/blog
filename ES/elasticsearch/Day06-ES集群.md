@@ -31,7 +31,7 @@ services:
       - node.name=es01 # 集群唯一的节点名, 自己随意取
       - cluster.name=es-docker-cluster # 指定集群名称, 只要集群名称一样, 他们就能形成集群
       - discovery.seed_hosts=es02,es03 
-      # 另外两个节点的IP地址, Dokcer同一网络下容联,可以用容器名代替IP
+      # 另外两个节点的IP地址, Dokcer同一网络下容联, 可以用容器名代替IP
       - cluster.initial_master_nodes=es01,es02,es03
       # 初始化的主节点,通过选举得到的主节点(以上三个节点将赋予选举的资格)
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
@@ -123,7 +123,7 @@ docker-compose up -d
 
 所以使用[cerebro-0.9.4](https://github.com/lmenezes/cerebro)的管理工具
 
-启动(.\cerebro-0.9.4\bin\cerebro.bat)
+启动(`.\cerebro-0.9.4\bin\cerebro.bat`)
 
 ![image-20240115192614798](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/ES/elasticsearch/Day06-ES集群/image-20240115192614798.png)
 
@@ -277,8 +277,8 @@ $$
     2.  `Node1`依据Hash算法指定文档落于哪个分片
     3.  文档落于分片的主分片
     4.  主分片将文档同步到另一节点的副本分片
-    5.  副本分片将新增结果返回`Node1``
-    6.  ``Node1`返回用新增结果
+    5.  副本分片将新增结果返回`Node1`
+    6.  `Node1`返回用新增结果
 
 -   查询所有
 
