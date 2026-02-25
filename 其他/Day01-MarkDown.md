@@ -62,7 +62,7 @@
 
 ## 超链接
 
-[这是一个超链接，点击跳转到课程目录](https://www.kuangstudy.com/course?cid=1)
+[这是一个超链接，点击跳转到课程目录](https://www.bilibili.com/c/knowledge/)
 
 [又是一个超链接，尝试能不能链接到本地文件夹，看来可行](.)
 
