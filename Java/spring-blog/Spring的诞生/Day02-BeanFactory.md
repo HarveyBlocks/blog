@@ -1,6 +1,6 @@
 ![image-20231030001822732](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-BeanFactory/image-20231030001822732.png)
 
-1.    第三方->BeanFactory,导入Jar包或Maven坐标
+1.    第三方->BeanFactory, 导入Jar包或Maven坐标
 
 2.    定义UserService接口及其UserServiceImpl实现类
 
@@ -57,7 +57,7 @@ public void testFactory() {
 
 加上
 
-```java
+```xml
 <bean id="userDao" class="com.harvey.Impl.UserDaoImpl"/>
 ```
 
@@ -99,7 +99,7 @@ TestLogger.LOGGER.info(""+userDao);
     public class UserServiceImpl implements UserService {
         private UserDao userDao;
 
-        //Bean工厂去调用 从容器中获取userDao设置到此处
+        // Bean工厂去调用 从容器中获取userDao设置到此处
         public void setUserDao(UserDao userDao){
             this.userDao = userDao;
             System.out.println("BeanFactory去调用该方法获取userDao设置到此处" + userDao);
@@ -109,7 +109,6 @@ TestLogger.LOGGER.info(""+userDao);
     ```
 
 然后,运行测试类....setUserDao怎么没有启动啊?
-**废话!你都没有给userService调用setUserDao了吗???啊???**
 
 #### 用BeanFactory实现
 

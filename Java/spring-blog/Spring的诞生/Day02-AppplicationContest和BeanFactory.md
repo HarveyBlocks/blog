@@ -14,7 +14,7 @@
 	    DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 	reader.loadBeanDefinitions("beans.xml");
-  	UserService userService =(UserService) beanFactory.getBean("userService");
+    	UserService userService =(UserService) beanFactory.getBean("userService");
 
 	    UserDao userDao =(UserDao) beanFactory.getBean("userDao");//	这一步创建对象
 	}
@@ -64,6 +64,4 @@ private final Map<String, BeanDefinition> beanDefinitionMap;
 
 ![image-20231030022015315](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/Spring的诞生/Day02-AppplicationContest和BeanFactory/image-20231030022015315.png)
 
--   配置文件放在D盘了,你用FileSystemXMLApplicationContext
-    -   翻译:一辈子用不到几回
-
+-   配置文件放在D盘了,即可用FileSystemXMLApplicationContext

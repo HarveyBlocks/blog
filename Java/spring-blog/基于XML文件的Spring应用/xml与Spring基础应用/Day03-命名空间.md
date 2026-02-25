@@ -25,8 +25,6 @@
 System.setProperty("spring.profiles.active","testContest");
 ```
 
-####
-
 ```java
 //指定环境
 System.setProperty("spring.profiles.active","testContest");

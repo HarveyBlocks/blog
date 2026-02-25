@@ -4,7 +4,7 @@
 
 ## 需求的产生
 
-不同的微服务想要收到不同的消息
+不同的服务想要收到不同的消息
 
 ![Final routing: putting it all together.](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/MQ/RabbitMQ/Java客户端/Day02-Direct交换机/python-four.png)
 

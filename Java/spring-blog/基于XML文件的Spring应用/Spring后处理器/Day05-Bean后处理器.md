@@ -1,4 +1,4 @@
-# Bean后处理器
+# BeanPostProcessorBean后处理器
 
 >   BeanPostProcessor接口
 
@@ -141,5 +141,5 @@ public class TimeLogBeanProcessor implements BeanPostProcessor {
 
 ## 生命周期
 
--   ![image-20231104022943450](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Bean后处理器/image-20231104022943450.png)
+![image-20231104022943450](https://raw.githubusercontent.com/HarveyBlocks/blog_assets/refs/heads/main/Java/spring-blog/基于XML文件的Spring应用/Spring后处理器/Day05-Bean后处理器/image-20231104022943450.png)
 

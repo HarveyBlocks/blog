@@ -4,7 +4,7 @@
 
 -   List结构
     -   基于List结构模拟消息队列模型
--   RubSub
+-   PubSub
     -   发布订阅模型, 基本的点对点消息模型
 -   Stream
     -   比较完善的消息队列模型
@@ -219,6 +219,8 @@ Redis支持的通配符有
 
         消费者处理消息如果超时, 下一条消息纷至沓来, 超出上限就会丢失
 
+对于Pub/Sub的消息丢失, 可以利用Seq, 主动向生产者请求被丢失的数据
+
 ## 数据类型Stream
 
 -   与`PubSub`**模式**不同, 是数据类型, 支持持久化
@@ -266,7 +268,7 @@ xRead [Count count] [Block milliseconds] Straems key1 [key2 ...] ID1 [ID2 ...]
 ```
 
 -   `count`读取消息的数量
--   `millioseconds`阻塞的时常
+-   `millioseconds`阻塞的时长
 -   `key` Stream 的Key
 -   `ID`从ID为哪个的消息开始读
     -   `0`表示从第一个消息开始读

@@ -53,7 +53,6 @@
                 <value >ooo</value>
                 <value >ppp</value>
                 <value >qqq</value>
-
             </list>
         </property>
     </bean>
@@ -191,7 +190,7 @@ public void setMap(Map<String, UserService> map) {
 -   byType
     -   通过Bean的类型从容器中匹配,匹配出多个相同的Bean类型时**报错**
 
-[感觉有点关系](Day03🥱-get方法.md)
+[感觉有点关系](Day03-get方法.md)
 
 ### byName的使用
 
@@ -211,7 +210,7 @@ public void setMap(Map<String, UserService> map) {
 
 -   Beans.xml
 
-    ```java
+    ```xml
     <bean id="userService" class="com.harvey.Impl.UserServiceImpl" autowire="byName"/>
 
     <bean id="userDao" class="com.harvey.Impl.UserDaoImpl"/>

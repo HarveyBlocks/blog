@@ -10,7 +10,7 @@
 
 >   Spring帮我们配好的东西,不能满足我们的需求,就需要我们自己接入Bean的实例化过程之中
 
--   目的: 动态注册/修改BeanDefinition以及动态修改Bean\
+-   目的: 动态注册/修改BeanDefinition以及动态修改Bean
 -   方式: 动态代理
 
 ### 后处理器
@@ -146,9 +146,8 @@ public void postProcessBeanFactory(ConfigurableListableBeanFactory factory) thro
     //动态注册BeanDefinition-RootDao
     System.out.println("postProcessBeanFactory,启动!");
     Class<RootDaoImpl> clazz = RootDaoImpl.class;
-    BeanDefinition beanDefinition =
-            new RootBeanDefinition();
-            //这个Root可是和我一点关系够没有哦
+    BeanDefinition beanDefinition = new RootBeanDefinition();
+            // 这个Root可是和我一点关系够没有哦
     beanDefinition.setBeanClassName(clazz.getName());
     System.out.println(clazz);
 

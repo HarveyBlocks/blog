@@ -137,9 +137,9 @@ public static UserService getUserService(){
 
 	```java
 public class MyBeanFactory {
-    public UserService getUserService(){
-        return new UserServiceImpl();
-    }
+        public UserService getUserService(){
+            return new UserServiceImpl();
+        }
 }
 	```
 
@@ -219,7 +219,7 @@ public interface FactoryBean<T> {
 ```java
 public class MyBeanFactory implements FactoryBean<UserService> {
     public MyBeanFactory(){
-        System.out.println("工厂类惨遭实例化");
+        System.out.println("工厂类实例化");
     }
 
     public UserService getObject() throws Exception {
@@ -236,7 +236,7 @@ public class MyBeanFactory implements FactoryBean<UserService> {
 
 -   xml
 
-    ```java
+    ```xml
     <bean id="myBeanFactory" class="com.harvey.factory.MyBeanFactory" />
     ```
 
@@ -245,7 +245,7 @@ public class MyBeanFactory implements FactoryBean<UserService> {
 -   输出结果
 
     ```
-    工厂类惨遭实例化
+    工厂类遭实例化
     getObject(),启动
     UserService无参构造
     23-10-30 16:25 [main] INFO  TestSpring - 成功创建com.harvey.Impl.UserServiceImpl@290dbf45
@@ -260,7 +260,7 @@ public class MyBeanFactory implements FactoryBean<UserService> {
 -   此乃真身😀
 
 ```markdown
-工厂类惨遭实例化 **这一步的存在,导致其产生了替身**
+工厂类遭实例化 **这一步的存在,导致其产生了替身**
 getObject(),启动 
 UserService无参构造
 23-10-30 16:25 [main] INFO  TestSpring - 成功创建com.harvey.Impl.UserServiceImpl@290dbf45
@@ -279,18 +279,15 @@ UserService无参构造
             XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);
 
             reader.loadBeanDefinitions("beans.xml");
-
-            //这一步做了所有的事情:
+        //这一步做了所有的事情:
             /*
-            工厂类惨遭实例化
+            工厂类遭实例化
     		getObject(),启动
     		UserService无参构造
             */
             UserService userService = (UserService) beanFactory.getBean("myBeanFactory");
-
             TestLogger.LOGGER.info("成功创建"+userService);
-
-        }
+    }
     ```
 
 延迟了调用

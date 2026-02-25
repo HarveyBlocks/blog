@@ -103,8 +103,8 @@
 
 ## lazy-init 延迟加载
 
--   **对BeanFactory无效,因为BeanFactory在getBean创建对象,没救了**
--   否则,会把在`new xxx(aaa.xml)`时候创建的对象延迟到`getBean("xxx")`创建
+-   **对BeanFactory无效,因为BeanFactory在getBean创建对象, 已经是lazy-init**
+-   否则,会把在`new xxx(aaa.xml)`时候创建的对象延迟到`getBean("xxx")`时创建
 
 ```xml
 <bean id="userService"  class="com.harvey.Impl.UserServiceImpl" lazy-init="true">
@@ -134,7 +134,7 @@ public class UserServiceImpl implements UserService {
 
 ### 在xml文件:
 
-```java
+```xml
 <bean id="userService"  
       class="com.harvey.Impl.UserServiceImpl" 
       init-method="init114514" destroy-method="destroy114514"
@@ -203,5 +203,5 @@ BeanFactory去调用该方法获取userDao设置到此处com.harvey.Impl.UserDao
 
 ## factory-method和factory-bean
 
-     [Spring实例化的方式](Day02😘-Spring实例化的方式.md)
+ [Spring实例化的方式](Day02-Spring实例化的方式.md)
 

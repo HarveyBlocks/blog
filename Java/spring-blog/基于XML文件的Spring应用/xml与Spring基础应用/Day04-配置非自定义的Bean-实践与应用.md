@@ -2,15 +2,16 @@
 
 -   第三方Jar包中的对象配成Bean
 
-1.  想想实例化方式
-    -   构造方法
-        -   有参构造
-        -   无参构造
-    -   工厂方式
-        -   静态工厂方式
-        -   实例工厂方式
-        -   FactoryBean规范延迟实例化Bean
-2.  是否需要必要的注入
+想想实例化方式
+-   构造方法
+    -   有参构造
+    -   无参构造
+-   工厂方式
+    -   静态工厂方式
+    -   实例工厂方式
+    -   FactoryBean规范延迟实例化Bean
+
+是否需要必要的注入
 
 ##  配实例化对象-以Druid为例
 
@@ -178,14 +179,14 @@
         <constructor-arg name="resource" value="mybatis-config.xml"/>
     </bean>
     <!--
-        //无参构造实例化
+        // 无参构造实例化
         SqlSessionFactoryBuilder builder = new SqlSessionFactoryBuilder();
     -->
     <bean id="builder"
           class="org.apache.ibatis.session.SqlSessionFactoryBuilder"
           lazy-init="true"/>
     <!--
-        //实例工厂方法
+        // 实例工厂方法
         SqlSessionFactory factory = builder.build(resource);
         SqlSession session = factory.openSession();
         UserMapper userMapper = session.getMapper(UserMapper.class);
