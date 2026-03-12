@@ -1,6 +1,41 @@
 # MarkDown 语法的学习
 
-<span style='color:white;background:black;font-size:50px;font-family:华文新魏;'>文字示例</span>
+<span style='color:white;background:black;font-size:50px;font-family:华文新魏;'>华文新魏</span>
+
+
+
+<div class="fancy-title">这是一个华丽的文本</div>
+
+  <button id="loadFontBtn">加载华文新魏字体</button>
+
+  <script>
+    let fontLoaded = false;
+      document.getElementById('loadFontBtn').addEventListener('click', () => {
+  if (fontLoaded) return;
+
+  // 动态创建 style 标签
+  const style = document.createElement('style');
+  style.textContent = `
+    @font-face {
+      font-family: 'HuaWenXinWei';
+      src: url('/fonts/huawenxinwei.woff2') format('woff2'),
+           url('/fonts/huawenxinwei.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap; /* 加载期间先显示后备字体 */
+    }
+    .fancy-title {
+      font-family: 'HuaWenXinWei', 'Microsoft YaHei', '宋体', sans-serif;
+    }
+  `;
+  document.head.appendChild(style);
+
+  fontLoaded = true;
+  console.log('华文新魏字体开始加载');
+});
+</script>
+
+
 
 ## 目录
 
