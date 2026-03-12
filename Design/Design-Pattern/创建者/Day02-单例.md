@@ -130,61 +130,63 @@ public class HungrySingletonObject {
     private static LazySingletonObject singleton = null; // 显式写null是为了笔记
     ```
 
-3.  提供一个公共的访问方式`instance`, 让外界获取该对象, 同时创建对象
+3. 提供一个公共的访问方式`instance`, 让外界获取该对象, 同时创建对象
 
-    ```java
-    public static LazySingletonObject getInstance() {
-    }
-    ```
+   ```java
+   public static LazySingletonObject getInstance() {
+   }
+   ```
 
-    -   线程不安全
+   -   线程不安全
 
-        ```java
-        if (singleton == null) {
-            // 线程不安全
-            singleton = new LazySingletonObject();
-        }
-        return singleton;
-        ```
+       ```java
+       if (singleton == null) {
+           // 线程不安全
+           singleton = new LazySingletonObject();
+       }
+       return singleton;
+       ```
 
-    -   悲观锁有性能问题, 而且很大, 因为只要锁住最开始的一次创建的过程就像了, 但是直接上悲观锁会导致后面所有`getInstance`都会走悲观锁
+   -   悲观锁有性能问题, 而且很大, 因为只要锁住最开始的一次创建的过程就像了, 但是直接上悲观锁会导致后面所有`getInstance`都会走悲观锁
 
-    -   双重检查锁, 线程安全, 且改善悲观锁性能问题
+   -   双重检查锁, 线程安全, 且改善悲观锁性能问题
 
-        ```java
-        //第一次判断，如果instance不为null，不进入抢锁阶段，直接返回实际
-        if(singleton == null) {
-            synchronized (LazySingletonObject.class) {
-                //抢到锁之后再次判断是否为空
-                if(singleton == null) {
-                    singleton = new LazySingletonObject();
-                }
-            }
-        }
-        return singleton;
-        ```
+       ```java
+       //第一次判断，如果instance不为null，不进入抢锁阶段，直接返回实际
+       if(singleton == null) {
+           synchronized (LazySingletonObject.class) {
+               //抢到锁之后再次判断是否为空
+               if(singleton == null) {
+                   singleton = new LazySingletonObject();
+               }
+           }
+       }
+       return singleton;
+       ```
 
-        JVM多线程环境下, 在实例化对象的时候会进行优化和指令重排序操作, 使用简单的**双重检查锁可能导致空指针**
+       JVM多线程环境下, 在实例化对象的时候会进行优化和指令重排序操作, 使用简单的**双重检查锁可能导致空指针**
 
-    -    `volatile` 关键字+双重检查锁,解决空指针问题,  `volatile` 关键字可以保证可见性和有序性。
+   -    `volatile` 关键字+双重检查锁,解决空指针问题,  `volatile` 关键字可以保证可见性和有序性。
 
-        ```java
-        private static volatile LazySingletonObject singleton = null;
+       ```java
+       private static volatile LazySingletonObject singleton = null;
 
-        public synchronized static LazySingletonObject getInstance() {
-            //第一次判断，如果instance不为null，不进入抢锁阶段，直接返回实际
-            if (singleton == null) {
-                synchronized (LazySingletonObject.class) {
-                    //抢到锁之后再次判断是否为空
-                    if (singleton == null) {
-                        singleton = new LazySingletonObject();
-                    }
-                }
-            }
+       public synchronized static LazySingletonObject getInstance() {
+           //第一次判断，如果instance不为null，不进入抢锁阶段，直接返回实际
+           if (singleton == null) {
+               synchronized (LazySingletonObject.class) {
+                   //抢到锁之后再次判断是否为空
+                   if (singleton == null) {
+                       singleton = new LazySingletonObject();
+                   }
+               }
+           }
 
-            return singleton;
-        }
-        ```
+           return singleton;
+       }
+       ```
+       
+       
 
 4.  使用运行
 
