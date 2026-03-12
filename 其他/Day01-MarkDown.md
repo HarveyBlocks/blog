@@ -6,17 +6,12 @@
 
 <div class="fancy-title">这是一个华丽的文本</div>
 
-  <button id="loadFontBtn">加载华文新魏字体</button>
+  
 
-  <script>
-    let fontLoaded = false;
-      document.getElementById('loadFontBtn').addEventListener('click', () => {
-  if (fontLoaded) return;
+<button id="loadFontBtn">加载华文新魏字体</button>  
 
-  // 动态创建 style 标签
-  const style = document.createElement('style');
-  style.textContent = `
-    @font-face {
+<script>let fontLoaded = false;document.getElementById('loadFontBtn').addEventListener('click', () => {
+  if (fontLoaded) return;const style=document.createElement('style');style.textContent = `@font-face {
       font-family: 'HuaWenXinWei';
       src: url('/fonts/huawenxinwei.woff2') format('woff2'),
            url('/fonts/huawenxinwei.woff') format('woff');
@@ -27,12 +22,7 @@
     .fancy-title {
       font-family: 'HuaWenXinWei', 'Microsoft YaHei', '宋体', sans-serif;
     }
-  `;
-  document.head.appendChild(style);
-
-  fontLoaded = true;
-  console.log('华文新魏字体开始加载');
-});
+  `;document.head.appendChild(style);fontLoaded = true;});
 </script>
 
 
