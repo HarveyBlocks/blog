@@ -51,21 +51,21 @@ all -- 符号表处理
 
 例子
 $$
-\begin{array} {1}
+\begin{align} {1}
     list &\to list + digit\\
     list &\to list - digit\\
     list &\to digit\\
     digit &\to 0\mid 1\mid 2\mid 3\mid 4\mid 5\mid 6\mid 7\mid 8\mid 9
-\end{array}
+\end{align}
 $$
 比如 $9-5+2$ 就是符合上述 $list$ 文法的
 $$
-\begin{array} {1}
+\begin{align} {1}
     list &\to list + digit\\
          &\to list - digit + digit\\
          &\to digit - digit + digit \\
          &\to 9 - 5 + 2
-\end{array}
+\end{align}
 $$
  构成了语法树
 
@@ -123,16 +123,16 @@ $$
 
 用文法规则定义数学运算符的优先级, 例如 $9+5\times2$
 $$
-\begin{array}{1}
+\begin{align}{1}
     expr &\to expr + term\mid expr - term\mid term \\
     expr &\to term \times factor \mid term / factor \mid factor \\
     factor &\to digit | (expr) \\
     digit &\to 0\mid 1\mid 2\mid 3\mid 4\mid 5\mid 6\mid 7\mid 8\mid 9
-\end{array}
+\end{align}
 $$
 对于简单的编程语言的文法
 $$
-\begin{array}{1}
+\begin{align}{1}
     stmt &\to& id\; = \;expression; \\ 
         &|& if(expression)\;stmt  \\
         &|& if(expression)\;stmt\; else\; stmt \\
@@ -141,7 +141,7 @@ $$
         &|& \{stmts\}\\
     stmts &\to& stmts\; stmt\\
     	&|& \epsilon
-\end{array}
+\end{align}
 $$
 
 
@@ -290,7 +290,7 @@ switch(*forward++){
 ### 描述token
 
 $$
-\begin{array}{1}
+\begin{align}{1}
 	if &\to& if \\
 	else &\to& else \\
 	then &\to& then \\
@@ -300,7 +300,7 @@ $$
 	digit &\to& 0| posdigit  \\
 	id &\to& letter(letter|digit)* \\
 	num &\to& (+|-)?posdigit\;digit^+(.digit^+)?((E|e)(+|-)?digit^+)? \\
-\end{array}
+\end{align}
 $$
 
 ## 状态转换图
