@@ -35,5 +35,5 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "[INFO]: Success: Commit and push completed"
-read var
+read empty_read_to_sync
 exit 0
