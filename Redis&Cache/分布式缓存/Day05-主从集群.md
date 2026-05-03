@@ -125,6 +125,21 @@ docker run \
 | redis | 6380 | Slave  |
 | redis | 6381 | Slave  |
 
+```shell
+docker run \
+	-p 6379:6379\
+    --name redis\
+    --privileged=true\
+    -v /etc/docker/redis/conf:/etc/redis\
+    -v /etc/docker/redis/data:/var/lib/redis\
+    -v /etc/docker/redis/logs:/logs\
+    --restart=always\
+    -d redis:latest\
+    redis-server /etc/redis/redis.conf
+```
+
+
+
 ## 测试读写
 
 ```bash

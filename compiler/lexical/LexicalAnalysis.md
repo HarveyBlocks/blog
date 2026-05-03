@@ -1,154 +1,3 @@
-# 结构
-
-## 过程
-
-1. 词法 *lexical* 分析: 字符流改成单词流, 给标识符以编号
-
-2. 语法 *syntax* 分析: 转换成语法树, 使用标识符编号
-
-3. 语义 *semantic* 分析: 查找语义错误(类型计算), 此阶段结束后已经允许中间代码生成
-
-4. 中间代码生成  *intermediate code generator*: 生成中间代码(指令), 中间代码只有最多四个词元
-
-   ```
-   temp2 := id3 + temp1
-   ```
-
-5. 代码优化
-
-   - 常量计算(包括常量的算术计算和类型转换)
-   - 等价指令合并
-
-6. 目标代码生成
-
-   - 目标程序(汇编/机器码/中间码)
-
-all -- 出错处理
-all -- 符号表处理
-
-## 符号表
-
-存储**标识符**及其相关属性
-
-# 简单的单遍编译程序
-
-> 一趟式
-
-## 文法
-
->  Context free Grammer CFG 上下文无关语法 
->
-> 用于定义程序语言的语法
-
-- A Set of Token 终结符集
-
-- A Set of Non-terminals 非终结符集
-
-- A Set of Production Rule 产生式, 左边产生右边, 右边反推左边
-  $$
-  NT \to \{T,NT\}^{*}
-  $$
-
-例子
-$$
-\begin{align} {1}
-    list &\to list + digit\\
-    list &\to list - digit\\
-    list &\to digit\\
-    digit &\to 0\mid 1\mid 2\mid 3\mid 4\mid 5\mid 6\mid 7\mid 8\mid 9
-\end{align}
-$$
-比如 $9-5+2$ 就是符合上述 $list$ 文法的
-$$
-\begin{align} {1}
-    list &\to list + digit\\
-         &\to list - digit + digit\\
-         &\to digit - digit + digit \\
-         &\to 9 - 5 + 2
-\end{align}
-$$
- 构成了语法树
-
-```mermaid
-graph TD;
-list1(list)
-list2(list)
-list3(list)
-plus1("+")
-sub1("-")
-digit1(digit)
-digit2(digit)
-digit3(digit)
-num1(2);
-num2(5);
-num3(9);
-
-list1-->list2;
-list1-->plus1;
-list1-->digit1;
-digit1 --> num1;
-list2-->list3;
-list2-->sub1;
-list2-->digit2;
-digit2-->num2;
-list3 --> digit3;
-digit3-->num3;
-
-```
-
-递归定义, 自己定义自己
-
-$\epsilon$ 表示空串
-
-### 语法分析树
-
-- 树根用 Start Symbol (开始符号), 来标记
-- 叶子节点是 Token 或 $\epsilon$ 表示空串
-- 内节点( 非叶子 ) 是Non-Terminial (非终结符)
-- 例如 $A \to x1x2...n$, 那么 $A$ 是内节点, $x1x2...n$ 是 $A$ 的儿子, 可以 是 Token|Non-Terminals
-
-文法的二义性
-
-> Two dervations (Parse Trees) for the same token string
-
-是文法太过简单导致的
-
-例如文法如果是
-$$
-string \to string + string \mid string - string\mid 0\mid 1\mid ...\mid 9
-$$
-那么 $9-5+2$ 可以被理解成两种形式
-
-
-
-用文法规则定义数学运算符的优先级, 例如 $9+5\times2$
-$$
-\begin{align}{1}
-    expr &\to expr + term\mid expr - term\mid term \\
-    expr &\to term \times factor \mid term / factor \mid factor \\
-    factor &\to digit | (expr) \\
-    digit &\to 0\mid 1\mid 2\mid 3\mid 4\mid 5\mid 6\mid 7\mid 8\mid 9
-\end{align}
-$$
-对于简单的编程语言的文法
-$$
-\begin{align}{1}
-    stmt &\to& id\; = \;expression; \\ 
-        &|& if(expression)\;stmt  \\
-        &|& if(expression)\;stmt\; else\; stmt \\
-        &|& while(expression)\; stmt \\
-        &|& do \; stmt \; while(expression); \\
-        &|& \{stmts\}\\
-    stmts &\to& stmts\; stmt\\
-    	&|& \epsilon
-\end{align}
-$$
-
-
-## 语法指导翻译
-
-> Syntax-Directed Translation
-
 # 词法分析
 
 > lexical analysis
@@ -258,7 +107,7 @@ switch(*forward++){
 
       特别的, $r^0=\{\epsilon\}$
 
-   3.  $r^*$ 是正则表达式 $\to (L(r))^*$, $r^*$ 是闭包, 等价于 $r^0 \cup r^1 \cup r^2 \cup r^3 \cup ...$ 
+   3. $r^*$ 是正则表达式 $\to (L(r))^*$, $r^*$ 是闭包, 等价于 $r^0 \cup r^1 \cup r^2 \cup r^3 \cup ...$ 
 
    4. $(r)$ 是正则表达式 $\to L(r)$
 
@@ -290,16 +139,16 @@ switch(*forward++){
 ### 描述token
 
 $$
-\begin{align}{1}
-	if &\to& if \\
-	else &\to& else \\
-	then &\to& then \\
-	relop &\to& <|>|<=|>=|=|<> \\
-	letter &\to& [A-Z]|[a-z] \\
-	posdigit &\to& [1-9] \\
-	digit &\to& 0| posdigit  \\
-	id &\to& letter(letter|digit)* \\
-	num &\to& (+|-)?posdigit\;digit^+(.digit^+)?((E|e)(+|-)?digit^+)? \\
+\begin{align}
+	if &\to\; if \\
+	else &\to\; else \\
+	then &\to\; then \\
+	relop &\to\; <|>|<=|>=|=|<> \\
+	letter &\to\; [A-Z]|[a-z] \\
+	posdigit &\to\; [1-9] \\
+	digit &\to\; 0| posdigit  \\
+	id &\to\; letter(letter|digit)* \\
+	num &\to\; (+|-)?posdigit\;digit^+(.digit^+)?((E|e)(+|-)?digit^+)? \\
 \end{align}
 $$
 
@@ -392,7 +241,7 @@ return s in F; // F 是终止状态
 3. 计算 $\epsilon-Closure(move(A, a))$ 和 $\epsilon-Closure(move(A, b))$
    - a: 得出 $\epsilon-Closure(\{3, 8\})$, 然后得出 $\{1,2,3,4,6,7,8\}$, 是新状态, 定义为 $B$
    - b: 得出 $\epsilon-Closure(\{5\})$, 然后得出 $\{1,2,4,5,6,7\}$ 是新状态, 定义为 $C$
-4.  $B$ 和 $C$ 分别执行 步骤3, 直到没有新的状态产生
+4. $B$ 和 $C$ 分别执行 步骤3, 直到没有新的状态产生
    - 所谓没有新的状态产生, 指的是状态集合经过步骤三之后产生的状态集合, 是之前出现过的状态集合. 例如 $B$ 进行步骤 3.a 之后, 计算出状态 $B$
 
 上述状态 $A,B,C$ 是 DFA 中的状态, 转移方式及是  然后可以构成状态转换图
@@ -476,6 +325,26 @@ NFA $\to$ REs
 
 
 105 3.7.3 REs->NFA->DFA->最小化
+
+## 复杂度分析
+
+对于由r构造的NFA(定义为 $N(r)$)
+
+- $N(r)$ 的状态数至多是 
+- $N(r)$ 只有一个初态和一个终态
+- $N(r)$ 的每个状态, 至多有一条标记为 $a \in \Sigma$ 的出边或者至多有两条标记为 $\epsilon$ 的出边
+
+
+
+空间复杂度
+
+定义 $|r|$ 是 REs 的长度
+
+| AutMaton         | Initial                 | Pre String        |
+| ---------------- | ----------------------- | ----------------- |
+| NFA              | $O(|r|\times|x|)$       | $O(|r|\times|x|)$ |
+| DFA typical case | $O(|r|^3)$              | $O(|x|)$          |
+| DFA worst case   | $O(|r|^2\cdot 2^{|r|})$ | $O(|x|)$          |
 
 
 
