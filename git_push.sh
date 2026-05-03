@@ -35,4 +35,5 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "[INFO]: Success: Commit and push completed"
+read var
 exit 0
